@@ -1,7 +1,7 @@
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
-import { formatZeny } from '../utils/format.js';
+import { formatVerified, formatZeny, verifiedTooltip } from '../utils/format.js';
 
 /**
  * One loot item shown as a card: name, what to do with it, what it's for,
@@ -17,7 +17,7 @@ export default function ItemCard({ item, onSelectUse }) {
       <header className="flex flex-wrap items-start justify-between gap-2">
         <h2 className="text-base font-semibold text-gray-900">
           {item.name}
-          <span className="ml-2 text-xs font-normal text-gray-400">
+          <span className="ml-2 text-[13px] font-normal text-gray-600">
             {item.itemType}
             {item.itemId && ` · #${item.itemId}`}
           </span>
@@ -42,7 +42,7 @@ export default function ItemCard({ item, onSelectUse }) {
         <Stat label="Avg. whobuy" value={formatZeny(item.avgWhobuy)} />
         <Stat label="NPC sell (OC 10)" value={formatZeny(item.npcSellPrice)} />
         <Stat label="Buy from NPC" value={NPC_BUYABLE_LABELS[item.npcBuyable] ?? '—'} />
-        <Stat label="Last verified" value={item.lastVerified ?? 'Never'} title={item.verificationNotes} />
+        <Stat label="Last verified" value={formatVerified(item.lastVerified)} title={verifiedTooltip(item)} />
       </dl>
     </article>
   );
@@ -52,7 +52,7 @@ export default function ItemCard({ item, onSelectUse }) {
 function Stat({ label, value, title }) {
   return (
     <div title={title || undefined}>
-      <dt className="text-gray-400">{label}</dt>
+      <dt className="text-gray-500">{label}</dt>
       <dd className="font-medium text-gray-800">{value}</dd>
     </div>
   );

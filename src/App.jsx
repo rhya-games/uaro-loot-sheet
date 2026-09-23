@@ -5,17 +5,19 @@ import FilterSidebar from './components/FilterSidebar.jsx';
 import ActiveFilters from './components/ActiveFilters.jsx';
 import ItemList from './components/ItemList.jsx';
 import { createSearch } from './utils/search.js';
+import { nextSort, sortItems } from './utils/sort.js';
 import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue } from './utils/filter.js';
 
 export default function App() {
   const [query, setQuery] = useState('');
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sort, setSort] = useState(null);
 
-  // Build the search index once, then: search box first, sidebar filters second.
+  // Build the search index once, then: search box, then sidebar filters, then sorting.
   const search = useMemo(() => createSearch(loot), []);
   const searched = useMemo(() => search(query), [search, query]);
-  const results = useMemo(() => filterItems(searched, filters), [searched, filters]);
+  const results = useMemo(() => sortItems(filterItems(searched, filters), sort), [searched, filters, sort]);
 
   const activeFilterCount = countActiveFilters(filters);
 
@@ -89,7 +91,12 @@ export default function App() {
             </aside>
           )}
           <div className="min-w-0 flex-1">
-            <ItemList items={results} onSelectUse={showItemsUsedFor} />
+            <ItemList
+              items={results}
+              sort={sort}
+              onSort={(key) => setSort((current) => nextSort(current, key))}
+              onSelectUse={showItemsUsedFor}
+            />
           </div>
         </div>
       </main>

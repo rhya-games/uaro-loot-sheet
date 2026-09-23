@@ -8,25 +8,27 @@ import ItemTable from './ItemTable.jsx';
  * so opening the filter sidebar on a small laptop switches to cards
  * instead of making the page scroll sideways.
  *
- * 1040px is just above the table's narrowest possible width (about 1030px).
+ * 1060px is just above the table's narrowest possible width (about 1042px).
  * If you add a column or widen one, measure again and raise it.
  *
  * Props:
- *   items       - items to display (already searched/filtered)
+ *   items       - items to display (already searched, filtered and sorted)
+ *   sort        - current sort (the table shows it on its headers)
+ *   onSort      - called with a column's sortKey when a table header is clicked
  *   onSelectUse - called when a "Used For" target is clicked
  */
-export default function ItemList({ items, onSelectUse }) {
+export default function ItemList({ items, sort, onSort, onSelectUse }) {
   if (items.length === 0) {
     return <p className="py-12 text-center text-gray-500">No items match your search or filters.</p>;
   }
 
   return (
     <div className="@container">
-      <div className="hidden @min-[1040px]:block">
-        <ItemTable items={items} onSelectUse={onSelectUse} />
+      <div className="hidden @min-[1060px]:block">
+        <ItemTable items={items} sort={sort} onSort={onSort} onSelectUse={onSelectUse} />
       </div>
 
-      <ul className="space-y-3 @min-[1040px]:hidden">
+      <ul className="space-y-3 @min-[1060px]:hidden">
         {items.map((item) => (
           <li key={item.id}>
             <ItemCard item={item} onSelectUse={onSelectUse} />

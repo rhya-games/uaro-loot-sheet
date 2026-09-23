@@ -2,7 +2,7 @@ import Badge from './Badge.jsx';
 import { ACTIONS, FALLBACK_ACTION, categoryStyle } from '../utils/labels.js';
 
 /**
- * Colored pill badges for an item's actions (Keep, Vend, NPC, ...).
+ * Dark chips for an item's actions (Keep, Vend, NPC, ...).
  * Hovering a badge shows what the action means.
  */
 export function ActionBadges({ actions }) {
@@ -10,7 +10,7 @@ export function ActionBadges({ actions }) {
   return actions.map((action) => <ActionBadge key={action} action={action} />);
 }
 
-/** One action pill. */
+/** One action chip. */
 export function ActionBadge({ action }) {
   const style = ACTIONS[action] ?? FALLBACK_ACTION;
   return (
@@ -20,15 +20,15 @@ export function ActionBadge({ action }) {
   );
 }
 
-/** Rainbow-colored tag badges for an item's categories. */
+/** Rainbow-colored chips for an item's categories. */
 export function CategoryBadges({ categories }) {
   return categories.map((category) => <CategoryBadge key={category} category={category} />);
 }
 
-/** One category tag. */
+/** One category chip. */
 export function CategoryBadge({ category }) {
   return (
-    <Badge shape="tag" style={categoryStyle(category)}>
+    <Badge style={categoryStyle(category)}>
       {category}
     </Badge>
   );

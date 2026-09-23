@@ -71,12 +71,12 @@ export default function CheckboxGroup({ title, options, counts, selected, onTogg
                   className="size-4 shrink-0 accent-emerald-700"
                 />
                 <span className="flex-1 text-gray-800">{renderLabel ? renderLabel(option) : option}</span>
-                <span className="text-xs text-gray-400 tabular-nums">{count}</span>
+                <span className="text-xs text-gray-500 tabular-nums">{count}</span>
               </label>
             </li>
           );
         })}
-        {visible.length === 0 && <li className="px-1 py-1 text-sm text-gray-400">No matches</li>}
+        {visible.length === 0 && <li className="px-1 py-1 text-sm text-gray-500">No matches</li>}
       </ul>
     </details>
   );

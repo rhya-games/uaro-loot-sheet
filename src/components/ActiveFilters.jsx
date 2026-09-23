@@ -1,4 +1,16 @@
+import Badge from './Badge.jsx';
+import { ACTIONS, FALLBACK_ACTION, categoryStyle } from '../utils/labels.js';
 import { FILTER_GROUPS } from '../utils/filter.js';
+
+/** Neutral chip color, for filters that don't have their own color. */
+const NEUTRAL = 'bg-gray-200 text-gray-800';
+
+/** Chip colors for one filter: match the action/category colors where there are some. */
+function chipColors(groupKey, value) {
+  if (groupKey === 'actions') return { className: (ACTIONS[value] ?? FALLBACK_ACTION).className };
+  if (groupKey === 'categories') return { style: categoryStyle(value) };
+  return { className: NEUTRAL };
+}
 
 /**
  * A row of removable chips showing what's currently narrowing the list:
@@ -13,10 +25,17 @@ import { FILTER_GROUPS } from '../utils/filter.js';
  */
 export default function ActiveFilters({ query, filters, onClearQuery, onRemove, onClearAll }) {
   const chips = [];
-  if (query) chips.push({ key: 'search', label: 'Search', value: `“${query}”`, onRemove: onClearQuery });
+  if (query) {
+    chips.push({ key: 'search', text: `Search: “${query}”`, colors: { className: NEUTRAL }, onRemove: onClearQuery });
+  }
   for (const group of FILTER_GROUPS) {
     for (const value of filters[group.key]) {
-      chips.push({ key: `${group.key}:${value}`, label: group.title, value, onRemove: () => onRemove(group.key, value) });
+      chips.push({
+        key: `${group.key}:${value}`,
+        text: `${group.title}: ${value}`,
+        colors: chipColors(group.key, value),
+        onRemove: () => onRemove(group.key, value),
+      });
     }
   }
   if (chips.length === 0) return null;
@@ -24,19 +43,10 @@ export default function ActiveFilters({ query, filters, onClearQuery, onRemove, 
   return (
     <ul className="flex flex-wrap items-center gap-2" aria-label="Active filters">
       {chips.map((chip) => (
-        <li
-          key={chip.key}
-          className="flex items-center gap-1 rounded-full border border-emerald-600 bg-emerald-50 py-0.5 pr-1 pl-3 text-sm text-emerald-900"
-        >
-          <span className="text-emerald-700">{chip.label}:</span> {chip.value}
-          <button
-            type="button"
-            onClick={chip.onRemove}
-            aria-label={`Remove ${chip.label} ${chip.value}`}
-            className="flex size-6 items-center justify-center rounded-full leading-none hover:bg-emerald-100"
-          >
-            ×
-          </button>
+        <li key={chip.key}>
+          <Badge {...chip.colors} onRemove={chip.onRemove} removeLabel={`Remove ${chip.text}`}>
+            {chip.text}
+          </Badge>
         </li>
       ))}
       {chips.length > 1 && (
