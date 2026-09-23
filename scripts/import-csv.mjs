@@ -17,6 +17,8 @@ import { loadItemDb } from './hercules.mjs';
 import {
   RENAMES,
   DETAIL_FIXES,
+  ACTION_FIXES,
+  USE_TARGET_FIXES,
   CATEGORY_FIXES,
   REFINING_ONLY,
   ITEM_IDS,
@@ -96,7 +98,10 @@ function parseDetails(text) {
     const match = part.match(/^x(\d+|varies)\s+for\s+(.+)$/i);
     if (match) {
       const qty = /^\d+$/.test(match[1]) ? Number(match[1]) : null;
-      uses.push({ for: match[2].trim(), qty });
+      const target = match[2].trim();
+      const fix = USE_TARGET_FIXES[target] ?? target;
+      const use = typeof fix === 'string' ? { for: fix, qty } : { for: fix.for, qty, note: fix.note };
+      if (!uses.some((existing) => existing.for === use.for)) uses.push(use);
     } else if (part !== '-') {
       notes.push(part);
     }
@@ -138,20 +143,22 @@ for (const row of rows.slice(headerIndex + 1)) {
   const name = RENAMES[sheetName] ?? sheetName;
   const sheetCategories = splitList(categories);
   const finalItemId = ITEM_IDS[name] ?? toNumber(itemId);
+  const finalCategories = fixCategories(name, sheetCategories);
 
   const item = {
     id: toSlug(name),
     name,
     itemId: finalItemId,
     itemType: getItemType(finalItemId, sheetCategories, itemDb),
-    actions: splitList(actions),
-    categories: fixCategories(name, sheetCategories),
+    actions: [...new Set(splitList(actions).map((a) => ACTION_FIXES[a] ?? a))],
+    categories: finalCategories,
     ...parseDetails(details),
     links: [],
     avgVend: toPrice(avgVend),
     avgWhobuy: toPrice(avgWhobuy),
     npcSellPrice: toNumber(npcSellPrice),
-    npcBuyable: toNpcBuyable(npcBuyable),
+    // NPCs never sell cards.
+    npcBuyable: finalCategories.includes('Card') ? 'no' : toNpcBuyable(npcBuyable),
     lastVerified: null,
     verificationNotes: '',
   };

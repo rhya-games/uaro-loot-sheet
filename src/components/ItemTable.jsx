@@ -15,6 +15,7 @@ import { formatZeny } from '../utils/format.js';
 const COLUMNS = [
   {
     label: 'Item Name',
+    className: 'min-w-48',
     render: (item) => (
       <>
         <div className="font-medium text-gray-900">{item.name}</div>
@@ -43,7 +44,7 @@ const COLUMNS = [
   },
   {
     label: 'Used For',
-    className: 'min-w-56',
+    className: 'min-w-44',
     render: (item, { onSelectUse }) => <ItemUses item={item} onSelectUse={onSelectUse} />,
   },
   {
@@ -88,7 +89,7 @@ const COLUMNS = [
  */
 export default function ItemTable({ items, onSelectUse }) {
   return (
-    <table className="w-full border-separate border-spacing-0 text-sm">
+    <table className="panel w-full border-separate border-spacing-0 text-sm">
       <thead>
         <tr>
           {COLUMNS.map((column) => (
@@ -96,8 +97,12 @@ export default function ItemTable({ items, onSelectUse }) {
               key={column.label}
               scope="col"
               title={column.title}
-              className={`sticky top-0 z-10 bg-emerald-800 px-2 py-2 font-semibold whitespace-nowrap text-white
-                first:rounded-tl-lg last:rounded-tr-lg ${column.numeric ? 'text-right' : 'text-left'} ${column.className ?? ''}`}
+              // Sticks 1rem below the top of the window (lined up with the sidebar).
+              // The shadow paints the page background above it, so rows scrolling
+              // past don't show through that gap.
+              className={`sticky top-4 z-10 bg-emerald-800 px-3 py-3 font-semibold whitespace-nowrap text-white
+                shadow-[0_-1rem_0_0_var(--color-gray-50)] first:rounded-tl-lg last:rounded-tr-lg
+                ${column.numeric ? 'text-right' : 'text-left'} ${column.className ?? ''}`}
             >
               {column.label}
             </th>
@@ -106,11 +111,11 @@ export default function ItemTable({ items, onSelectUse }) {
       </thead>
       <tbody className="bg-white">
         {items.map((item) => (
-          <tr key={item.id} className="even:bg-gray-50 hover:bg-emerald-50">
+          <tr key={item.id} className="group even:bg-gray-50 hover:bg-emerald-50">
             {COLUMNS.map((column) => (
               <td
                 key={column.label}
-                className={`border-b border-gray-200 px-2 py-2 align-top ${
+                className={`border-b border-gray-200 px-3 py-3 align-top group-last:border-b-0 ${
                   column.numeric ? 'text-right whitespace-nowrap tabular-nums' : ''
                 }`}
               >

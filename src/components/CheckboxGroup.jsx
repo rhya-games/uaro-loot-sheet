@@ -47,7 +47,7 @@ export default function CheckboxGroup({ title, options, counts, selected, onTogg
           onChange={(event) => setFilterText(event.target.value)}
           placeholder={`Find ${title.toLowerCase()}…`}
           aria-label={`Find ${title.toLowerCase()}`}
-          className="mt-2 w-full rounded border border-gray-300 px-2 py-1 text-sm focus:border-emerald-600 focus:outline-none"
+          className="mt-2 w-full rounded border border-gray-300 px-2 py-1 text-sm"
         />
       )}
 

@@ -60,6 +60,29 @@ for (const [itemId, names] of findDuplicates('itemId')) {
   warnings.push(`Same itemId ${itemId} used by: ${names.join(', ')}`);
 }
 
+// "Used for" targets must be spelled the same everywhere to group together
+// in the filter. Catch ones that differ only by capitals, spaces or punctuation.
+const targetSpellings = new Map();
+for (const item of items) {
+  for (const use of item.uses ?? []) {
+    const key = use.for.toLowerCase().replace(/[^a-z0-9]/g, '');
+    targetSpellings.set(key, new Set([...(targetSpellings.get(key) ?? []), use.for]));
+  }
+  const targets = (item.uses ?? []).map((use) => use.for);
+  const repeated = targets.filter((target, i) => targets.indexOf(target) !== i);
+  if (repeated.length) warnings.push(`${item.name} lists the same use twice: ${repeated.join(', ')}`);
+}
+for (const spellings of targetSpellings.values()) {
+  if (spellings.size > 1) warnings.push(`"Used for" spelled different ways: ${[...spellings].join(' / ')}`);
+}
+
+// Rules about the game itself.
+for (const item of items) {
+  if (item.categories?.includes('Card') && item.npcBuyable !== 'no') {
+    errors.push(`${item.name}: cards can't be bought from NPCs, so npcBuyable must be "no"`);
+  }
+}
+
 // 3. Gentle reminders.
 const noAction = items.filter((item) => item.actions?.length === 0).map((item) => item.name);
 if (noAction.length) warnings.push(`${noAction.length} items have no action yet: ${noAction.join(', ')}`);

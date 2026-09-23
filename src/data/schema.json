@@ -58,7 +58,7 @@
           }
         },
         "uses": {
-          "description": "What this item is needed for, and how many. e.g. [{ \"for\": \"Mystic Rose\", \"qty\": 10 }]. Use \"qty\": null when the amount varies.",
+          "description": "What this item is needed for, and how many. e.g. [{ \"for\": \"Mystic Rose\", \"qty\": 10 }]. Use \"qty\": null when the amount varies. Optional \"note\" adds a short detail, e.g. \"each try\".",
           "type": "array",
           "items": {
             "type": "object",
@@ -80,6 +80,11 @@
                   "null"
                 ],
                 "minimum": 1
+              },
+              "note": {
+                "description": "Optional short detail shown after the target, e.g. \"each try\".",
+                "type": "string",
+                "minLength": 1
               }
             }
           }
@@ -165,7 +170,6 @@
         "Vend",
         "Whobuy",
         "NPC",
-        "Card Recycler",
         "Junk"
       ]
     },
@@ -179,15 +183,11 @@
         "Job Quest",
         "Official Hat Quest",
         "Other Quest",
-        "Pet Accessory",
+        "Pet",
         "Pet Evolution",
-        "Pet Food",
-        "Pet Taming Item",
-        "Pet Taming Item Ingredient",
         "Repeatable Quest",
         "Server Hat Quest",
-        "Skill Crafting",
-        "Skill Use",
+        "Skills",
         "uaRO"
       ]
     },

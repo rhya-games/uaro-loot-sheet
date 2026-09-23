@@ -8,8 +8,8 @@ import ItemTable from './ItemTable.jsx';
  * so opening the filter sidebar on a small laptop switches to cards
  * instead of making the page scroll sideways.
  *
- * 920px is just above the table's narrowest possible width. If you add a
- * column, you may need to raise it.
+ * 1040px is just above the table's narrowest possible width (about 1030px).
+ * If you add a column or widen one, measure again and raise it.
  *
  * Props:
  *   items       - items to display (already searched/filtered)
@@ -22,11 +22,11 @@ export default function ItemList({ items, onSelectUse }) {
 
   return (
     <div className="@container">
-      <div className="hidden @min-[920px]:block">
+      <div className="hidden @min-[1040px]:block">
         <ItemTable items={items} onSelectUse={onSelectUse} />
       </div>
 
-      <ul className="space-y-3 @min-[920px]:hidden">
+      <ul className="space-y-3 @min-[1040px]:hidden">
         {items.map((item) => (
           <li key={item.id}>
             <ItemCard item={item} onSelectUse={onSelectUse} />

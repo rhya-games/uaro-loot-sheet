@@ -13,7 +13,7 @@ import { formatZeny } from '../utils/format.js';
  */
 export default function ItemCard({ item, onSelectUse }) {
   return (
-    <article className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+    <article className="panel p-4">
       <header className="flex flex-wrap items-start justify-between gap-2">
         <h2 className="text-base font-semibold text-gray-900">
           {item.name}

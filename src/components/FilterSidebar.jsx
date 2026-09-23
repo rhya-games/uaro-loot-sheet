@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import Badge from './Badge.jsx';
 import CheckboxGroup from './CheckboxGroup.jsx';
-import { ACTIONS, ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES, FALLBACK_ACTION } from '../utils/labels.js';
+import { ActionBadge, CategoryBadge } from './ItemBadges.jsx';
+import { ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES } from '../utils/labels.js';
 import { countActiveFilters, countOptions, listOptions, toggleValue } from '../utils/filter.js';
 
 /**
@@ -40,19 +40,16 @@ export default function FilterSidebar({ allItems, items, filters, onChange, onCl
       <CheckboxGroup
         title="Action"
         {...groupProps('actions', ALL_ACTIONS)}
-        renderLabel={(action) => {
-          const style = ACTIONS[action] ?? FALLBACK_ACTION;
-          return (
-            <Badge className={style.className} title={style.description}>
-              {action}
-            </Badge>
-          );
-        }}
+        renderLabel={(action) => <ActionBadge action={action} />}
       />
 
       <CheckboxGroup title="Item Type" {...groupProps('itemTypes', ALL_ITEM_TYPES)} />
 
-      <CheckboxGroup title="Category" {...groupProps('categories', ALL_CATEGORIES)} />
+      <CheckboxGroup
+        title="Category"
+        {...groupProps('categories', ALL_CATEGORIES)}
+        renderLabel={(category) => <CategoryBadge category={category} />}
+      />
 
       <CheckboxGroup title="Used For" searchable {...groupProps('usedFor', usedForOptions)} />
     </div>

@@ -27,6 +27,28 @@ export const RENAMES = {
   'Witch Starsand': 'Witched Starsand',
 };
 
+/**
+ * "Used for" targets that were spelled differently in different rows:
+ * "sheet text" -> "correct name", or { for, note } to keep extra detail.
+ */
+export const USE_TARGET_FIXES = {
+  'for Little Isis Pet Evolution': 'Little Isis Pet Evolution',
+  'new world quest': 'New World Quest',
+  'Baophomet Jr Pet Evolution': 'Baphomet Jr Pet Evolution',
+  'Diabloic Pet Evolution': 'Diabolic Pet Evolution',
+  'Diabolic Pet evolution': 'Diabolic Pet Evolution',
+  'Rigid Nightmare Terror Pet evolution': 'Rigid Nightmare Terror Pet Evolution',
+  'Finding the Moving Island (Moscovia Dungeon)': 'Finding the Moving Island Quest (Moscovia Dungeon Access)',
+  'Finding the Moving Island Quest (Moscovia Dungeon)': 'Finding the Moving Island Quest (Moscovia Dungeon Access)',
+  "Wikibine's Black Cat Ears": "Wickebine's Black Cat Ears",
+  'Veins Sibling Quest (each try)': { for: 'Veins Siblings Quest', note: 'each try' },
+};
+
+/** Actions to rename or merge: "old" -> "new". */
+export const ACTION_FIXES = {
+  'Card Recycler': 'Vend',
+};
+
 /** Misspellings inside the Details text: "wrong" -> "right". */
 export const DETAIL_FIXES = {
   Bahpomet: 'Baphomet',
@@ -43,11 +65,25 @@ export const DETAIL_FIXES = {
  */
 export const CATEGORY_FIXES = {
   'Alchemy / Brewing / Potions': ['Brewing'],
-  'Arrow Crafting': ['Skill Crafting'],
-  'Refining / Ore / Forging': ['Skill Crafting'], // Except the refining items below.
+
+  'Skill Use': ['Skills'],
+  'Skill Crafting': ['Skills'],
+  'Arrow Crafting': ['Skills'],
+  'Refining / Ore / Forging': ['Skills'], // Except the refining items below.
+
+  'Pet Taming Item': ['Pet'],
+  'Pet Taming Item Ingredient': ['Pet'],
+  'Pet Food': ['Pet'],
+  'Pet Accessory': ['Pet'],
+  'Pet Evolution': ['Pet Evolution', 'Pet', 'uaRO'],
+
+  // Server-specific content is also tagged "uaRO".
+  'Server Hat Quest': ['Server Hat Quest', 'uaRO'],
+  'Repeatable Quest': ['Repeatable Quest', 'uaRO'],
   'Server Currency': ['uaRO'],
   'Server Quest Crafting': ['uaRO'],
   'Event Item Currency': ['uaRO'],
+
   'Valuable Consumable': [],
   Consumable: [],
   Equipment: [],
@@ -55,7 +91,7 @@ export const CATEGORY_FIXES = {
   Misc: [],
 };
 
-/** Refining items: they drop "Refining / Ore / Forging" without becoming Skill Crafting. */
+/** Refining items: they drop "Refining / Ore / Forging" without becoming Skills. */
 export const REFINING_ONLY = ['Elunium', 'Rough Elunium', 'Rough Oridecon'];
 
 /**

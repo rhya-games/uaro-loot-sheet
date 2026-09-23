@@ -1,27 +1,35 @@
 import Badge from './Badge.jsx';
-import { ACTIONS, FALLBACK_ACTION } from '../utils/labels.js';
+import { ACTIONS, CATEGORY_COLORS, FALLBACK_ACTION, FALLBACK_CATEGORY_COLOR } from '../utils/labels.js';
 
 /**
- * Colored badges for an item's actions (Keep, Vend, NPC, ...).
+ * Colored pill badges for an item's actions (Keep, Vend, NPC, ...).
  * Hovering a badge shows what the action means.
  */
 export function ActionBadges({ actions }) {
-  if (actions.length === 0) return <Badge>No action yet</Badge>;
-  return actions.map((action) => {
-    const style = ACTIONS[action] ?? FALLBACK_ACTION;
-    return (
-      <Badge key={action} className={style.className} title={style.description}>
-        {action}
-      </Badge>
-    );
-  });
+  if (actions.length === 0) return '—'; // Same blank marker as the price columns.
+  return actions.map((action) => <ActionBadge key={action} action={action} />);
 }
 
-/** Gray badges for an item's categories. */
+/** One action pill. */
+export function ActionBadge({ action }) {
+  const style = ACTIONS[action] ?? FALLBACK_ACTION;
+  return (
+    <Badge className={style.className} title={style.description}>
+      {action}
+    </Badge>
+  );
+}
+
+/** Colored tag badges for an item's categories. */
 export function CategoryBadges({ categories }) {
-  return categories.map((category) => (
-    <Badge key={category} className="bg-gray-100 text-gray-600">
+  return categories.map((category) => <CategoryBadge key={category} category={category} />);
+}
+
+/** One category tag. */
+export function CategoryBadge({ category }) {
+  return (
+    <Badge shape="tag" className={CATEGORY_COLORS[category] ?? FALLBACK_CATEGORY_COLOR}>
       {category}
     </Badge>
-  ));
+  );
 }
