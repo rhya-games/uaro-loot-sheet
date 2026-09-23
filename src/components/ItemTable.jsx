@@ -1,6 +1,6 @@
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
-import ReportLink from './ReportLink.jsx';
+import RowActions from './RowActions.jsx';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
 import { formatVerified, formatZeny, verifiedTooltip } from '../utils/format.js';
 
@@ -8,7 +8,9 @@ import { formatVerified, formatZeny, verifiedTooltip } from '../utils/format.js'
  * Table columns, in display order. To add a column, add an entry here.
  *
  *   label     - header text
- *   sortKey   - which sort rule clicking the header uses (see utils/sort.js)
+ *   hideLabel - keep the label for screen readers only
+ *   sortKey   - which sort rule clicking the header uses (see utils/sort.js);
+ *               leave out for columns that can't be sorted
  *   title     - optional header tooltip
  *   numeric   - right-align (for numbers); also keeps the value on one line
  *   nowrap    - keep the value on one line
@@ -26,8 +28,6 @@ const COLUMNS = [
         <div className="mt-0.5 text-[13px] text-gray-600">
           {item.itemType}
           {item.itemId && ` · #${item.itemId}`}
-          {' · '}
-          <ReportLink item={item} />
         </div>
       </>
     ),
@@ -92,6 +92,12 @@ const COLUMNS = [
     title: 'When this entry was last checked on the live server',
     render: (item) => <span title={verifiedTooltip(item)}>{formatVerified(item.lastVerified)}</span>,
   },
+  {
+    label: 'Actions',
+    hideLabel: true,
+    numeric: true, // right-aligned
+    render: (item) => <RowActions item={item} />,
+  },
 ];
 
 /**
@@ -110,12 +116,14 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
       <thead>
         <tr>
           {COLUMNS.map((column) => {
-            const direction = sort?.key === column.sortKey ? sort.direction : null;
+            const direction = column.sortKey && sort?.key === column.sortKey ? sort.direction : null;
             return (
               <th
                 key={column.label}
                 scope="col"
-                aria-sort={direction === 'asc' ? 'ascending' : direction === 'desc' ? 'descending' : 'none'}
+                aria-sort={
+                  !column.sortKey ? undefined : direction === 'asc' ? 'ascending' : direction === 'desc' ? 'descending' : 'none'
+                }
                 // Sticks 1rem below the top of the window (lined up with the sidebar).
                 // The shadow paints the page background above it, so rows scrolling
                 // past don't show through that gap.
@@ -123,7 +131,11 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
                   shadow-[0_-1rem_0_0_var(--color-gray-50)] first:rounded-tl-lg last:rounded-tr-lg
                   ${column.numeric ? 'text-right' : 'text-left'} ${column.className ?? ''}`}
               >
-                <SortButton column={column} direction={direction} onSort={onSort} />
+                {column.sortKey ? (
+                  <SortButton column={column} direction={direction} onSort={onSort} />
+                ) : (
+                  <span className={column.hideLabel ? 'sr-only' : ''}>{column.label}</span>
+                )}
               </th>
             );
           })}

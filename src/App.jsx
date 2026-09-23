@@ -3,24 +3,31 @@ import SkipLink from './components/SkipLink.jsx';
 import SiteHeader from './components/SiteHeader.jsx';
 import LootPage from './pages/LootPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
+import FeedbackPage from './pages/FeedbackPage.jsx';
+import ContributePage from './pages/ContributePage.jsx';
+import ChangelogPage from './pages/ChangelogPage.jsx';
 import { useRoute } from './utils/route.js';
 
-const PAGE_TITLES = {
-  loot: 'uaRO Loot Sheet',
-  about: 'About · uaRO Loot Sheet',
+/** Every page except the loot page: route name -> title and component. */
+const PAGES = {
+  about: { title: 'About', Component: AboutPage },
+  feedback: { title: 'Feedback', Component: FeedbackPage },
+  contribute: { title: 'Contribute', Component: ContributePage },
+  changelog: { title: 'Changelog', Component: ChangelogPage },
 };
 
 /**
  * The page frame: skip link, header, and the current page.
- * The loot page stays mounted (just hidden) while About is open, so your
- * search, filters and sort are still there when you come back.
+ * The loot page stays mounted (just hidden) while another page is open, so
+ * your search, filters and sort are still there when you come back.
  */
 export default function App() {
   const route = useRoute();
+  const page = PAGES[route];
 
   useEffect(() => {
-    document.title = PAGE_TITLES[route];
-  }, [route]);
+    document.title = page ? `${page.title} · uaRO Loot Sheet` : 'uaRO Loot Sheet';
+  }, [page]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -32,7 +39,7 @@ export default function App() {
         <div hidden={route !== 'loot'}>
           <LootPage />
         </div>
-        {route === 'about' && <AboutPage />}
+        {page && <page.Component />}
       </main>
     </div>
   );

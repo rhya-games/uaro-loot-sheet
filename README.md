@@ -22,14 +22,15 @@ Then open http://localhost:5173/uaro-loot-sheet/
 
 ```
 src/
-  config.js           Site links: GitHub repo, Discord, issue report links
+  config.js           Site links (GitHub, Discord) and the per-row actions (Report)
   data/loot.json      All items (edit this to update the sheet)
   data/schema.json    Rules for what an item looks like
-  pages/              LootPage (the item list) and AboutPage
+  data/changelog.js   Changelog entries (template at the top)
+  pages/              Loot Sheet, About, Feedback, Contribute, Changelog
   components/         UI pieces (SearchBar, FilterSidebar, ItemTable, ItemCard, ...)
   utils/              Search, filters, sorting, page switching, labels/colors, formatting
 scripts/              Data import and validation tools
 .github/              Data check on every PR, and the item report form
 ```
 
-Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? Use the **Report** link under any item on the site.
+Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? Use **Report** at the end of any item's row, or see the site's Feedback page.

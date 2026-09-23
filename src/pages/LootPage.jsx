@@ -7,7 +7,8 @@ import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
 import { createSearch } from '../utils/search.js';
 import { nextSort, sortItems } from '../utils/sort.js';
-import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue } from '../utils/filter.js';
+import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue, withoutKeep } from '../utils/filter.js';
+import { readPreference, writePreference } from '../utils/preferences.js';
 
 /** The main page: search box, filter sidebar, and the item table. */
 export default function LootPage() {
@@ -15,13 +16,24 @@ export default function LootPage() {
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sort, setSort] = useState(null);
+  const [ignoreKeep, setIgnoreKeep] = useState(() => readPreference('ignoreKeep', false));
 
-  // Build the search index once, then: search box, then sidebar filters, then sorting.
-  const search = useMemo(() => createSearch(loot), []);
+  // "I don't keep items" changes the items themselves (no Keep), so every
+  // count, chip and sort below sees the same thing the table shows.
+  const baseItems = useMemo(() => (ignoreKeep ? withoutKeep(loot) : loot), [ignoreKeep]);
+
+  const changeIgnoreKeep = (value) => {
+    setIgnoreKeep(value);
+    writePreference('ignoreKeep', value);
+    if (value) setFilters((current) => ({ ...current, actions: current.actions.filter((a) => a !== 'Keep') }));
+  };
+
+  // Build the search index, then: search box, then sidebar filters, then sorting.
+  const search = useMemo(() => createSearch(baseItems), [baseItems]);
   const searched = useMemo(() => search(query), [search, query]);
   const results = useMemo(() => sortItems(filterItems(searched, filters), sort), [searched, filters, sort]);
 
-  const activeFilterCount = countActiveFilters(filters);
+  const activeFilterCount = countActiveFilters(filters) + (ignoreKeep ? 1 : 0);
 
   // Clicking a "Used For" target shows only items used for that target.
   const showItemsUsedFor = (target) => {
@@ -60,11 +72,15 @@ export default function LootPage() {
         <ActiveFilters
           query={query}
           filters={filters}
+          ignoreKeep={ignoreKeep}
           onClearQuery={() => setQuery('')}
+          onClearIgnoreKeep={() => changeIgnoreKeep(false)}
           onRemove={(key, value) => setFilters({ ...filters, [key]: toggleValue(filters[key], value) })}
+          onRemoveGroup={(key) => setFilters({ ...filters, [key]: [] })}
           onClearAll={() => {
             setQuery('');
             setFilters(EMPTY_FILTERS);
+            changeIgnoreKeep(false);
           }}
         />
       </div>
@@ -81,7 +97,9 @@ export default function LootPage() {
               Skip to table
             </SkipLink>
             <FilterSidebar
-              allItems={loot}
+              allItems={baseItems}
+              ignoreKeep={ignoreKeep}
+              onIgnoreKeepChange={changeIgnoreKeep}
               items={searched}
               filters={filters}
               onChange={setFilters}

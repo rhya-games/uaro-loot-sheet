@@ -4,6 +4,9 @@ import { ROUTES } from '../utils/route.js';
 const NAV_LINKS = [
   { route: 'loot', label: 'Loot Sheet' },
   { route: 'about', label: 'About' },
+  { route: 'feedback', label: 'Feedback' },
+  { route: 'contribute', label: 'Contribute' },
+  { route: 'changelog', label: 'Changelog' },
 ];
 
 /**

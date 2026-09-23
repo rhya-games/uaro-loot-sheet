@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 /**
  * A titled, collapsible list of checkboxes with a count next to each option.
@@ -13,8 +13,21 @@ import { useState } from 'react';
  *   renderLabel - optional: (option) => what to show instead of plain text
  *   searchable  - optional: for long lists. Adds a search box, hides options
  *                 with no matches, and lists checked options first.
+ *   onSetAll    - optional: adds a "Select all" checkbox. Called with the new
+ *                 list of checked options (all of them, or none).
+ *   selectAllLabel - text for that checkbox, e.g. "Select all categories"
  */
-export default function CheckboxGroup({ title, options, counts, selected, onToggle, renderLabel, searchable = false }) {
+export default function CheckboxGroup({
+  title,
+  options,
+  counts,
+  selected,
+  onToggle,
+  renderLabel,
+  searchable = false,
+  onSetAll,
+  selectAllLabel = 'Select all',
+}) {
   const [filterText, setFilterText] = useState('');
 
   let visible = options;
@@ -52,6 +65,11 @@ export default function CheckboxGroup({ title, options, counts, selected, onTogg
       )}
 
       <ul className={`mt-2 space-y-0.5 ${searchable ? 'max-h-72 overflow-y-auto' : ''}`}>
+        {onSetAll && (
+          <li className="border-b border-gray-100 pb-1">
+            <SelectAll label={selectAllLabel} options={options} selected={selected} onSetAll={onSetAll} />
+          </li>
+        )}
         {visible.map((option) => {
           const count = counts.get(option) ?? 0;
           const checked = selected.includes(option);
@@ -79,5 +97,34 @@ export default function CheckboxGroup({ title, options, counts, selected, onTogg
         {visible.length === 0 && <li className="px-1 py-1 text-sm text-gray-500">No matches</li>}
       </ul>
     </details>
+  );
+}
+
+/**
+ * "Select all" checkbox. Shows a dash (indeterminate) when only some options
+ * are checked. Clicking it checks everything, or clears everything if all
+ * were already checked.
+ */
+function SelectAll({ label, options, selected, onSetAll }) {
+  const ref = useRef(null);
+  const allChecked = options.length > 0 && options.every((option) => selected.includes(option));
+  const someChecked = selected.length > 0 && !allChecked;
+
+  // "indeterminate" can only be set from code, not as an HTML attribute.
+  useEffect(() => {
+    if (ref.current) ref.current.indeterminate = someChecked;
+  }, [someChecked]);
+
+  return (
+    <label className="flex cursor-pointer items-center gap-2 rounded px-1 py-1 text-sm font-medium text-gray-800 hover:bg-gray-100">
+      <input
+        ref={ref}
+        type="checkbox"
+        checked={allChecked}
+        onChange={() => onSetAll(allChecked ? [] : [...options])}
+        className="size-4 shrink-0 accent-emerald-700"
+      />
+      {label}
+    </label>
   );
 }

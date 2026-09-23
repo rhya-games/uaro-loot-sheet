@@ -1,6 +1,6 @@
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
-import ReportLink from './ReportLink.jsx';
+import RowActions from './RowActions.jsx';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
 import { formatVerified, formatZeny, verifiedTooltip } from '../utils/format.js';
 
@@ -21,12 +21,13 @@ export default function ItemCard({ item, onSelectUse }) {
           <span className="ml-2 text-[13px] font-normal text-gray-600">
             {item.itemType}
             {item.itemId && ` · #${item.itemId}`}
-            {' · '}
-            <ReportLink item={item} />
           </span>
         </h2>
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap items-center gap-1">
           <ActionBadges actions={item.actions} />
+          <span className="ml-2">
+            <RowActions item={item} />
+          </span>
         </div>
       </header>
 

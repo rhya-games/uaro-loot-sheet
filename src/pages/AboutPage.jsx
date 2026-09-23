@@ -1,38 +1,12 @@
 import { ActionBadge, CategoryBadge } from '../components/ItemBadges.jsx';
+import { BulletList, ExternalLink, Page, PageLink, Section, SubHeading } from '../components/Page.jsx';
 import { ACTIONS, ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES } from '../utils/labels.js';
-import { DISCORD_URL, GENERAL_ISSUE_URL, GITHUB_REPO_URL } from '../config.js';
+import { ROUTES } from '../utils/route.js';
 
-/** Link that opens in a new tab, and says so to screen readers. */
-function ExternalLink({ href, children }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-emerald-800 underline decoration-emerald-800/30 underline-offset-2 hover:decoration-emerald-800"
-    >
-      {children}
-      <span className="sr-only"> (opens in a new tab)</span>
-    </a>
-  );
-}
-
-/** One titled block of the About page. */
-function Section({ title, children }) {
-  return (
-    <section className="panel space-y-3 p-6">
-      <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
-      {children}
-    </section>
-  );
-}
-
-/** What the site is, how to read it, where the data comes from, and how to help. */
+/** What the site is, how to read it, and where the data comes from. */
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl space-y-6 text-gray-700">
-      <h1 className="text-2xl font-bold text-gray-900">About</h1>
-
+    <Page title="About">
       <Section title="What this is">
         <p>
           A quick lookup for loot on the uaRO server: search for an item to see whether to keep it, sell it to
@@ -42,7 +16,7 @@ export default function AboutPage() {
       </Section>
 
       <Section title="Reading the table">
-        <h3 className="font-semibold text-gray-900">Actions: what to do with it</h3>
+        <SubHeading>Actions: what to do with it</SubHeading>
         <dl className="grid grid-cols-[auto_1fr] items-center gap-x-4 gap-y-2">
           {ALL_ACTIONS.map((action) => (
             <div key={action} className="contents">
@@ -54,7 +28,7 @@ export default function AboutPage() {
           ))}
         </dl>
 
-        <h3 className="pt-2 font-semibold text-gray-900">Categories: what it's used for</h3>
+        <SubHeading>Categories: what it's used for</SubHeading>
         <ul className="flex flex-wrap gap-1.5">
           {ALL_CATEGORIES.map((category) => (
             <li key={category}>
@@ -67,8 +41,8 @@ export default function AboutPage() {
           <strong>uaRO</strong> mean content added by this server.
         </p>
 
-        <h3 className="pt-2 font-semibold text-gray-900">Other columns</h3>
-        <ul className="list-disc space-y-1 pl-5">
+        <SubHeading>Other columns</SubHeading>
+        <BulletList>
           <li>
             <strong>Item Type</strong>: {ALL_ITEM_TYPES.join(', ')}.
           </li>
@@ -76,58 +50,58 @@ export default function AboutPage() {
             <strong>Used For</strong>: how many you need and for what. Click one to see every item it needs.
           </li>
           <li>
-            <strong>Vend / Whobuy</strong>: average player prices. <strong>NPC Sell</strong>: what an NPC pays with
-            Overcharge level 10. <strong>NPC Buy</strong>: whether an NPC sells it.
+            <strong>Vend</strong>: average price players sell it for in vending shops.
+          </li>
+          <li>
+            <strong>Whobuy</strong>: average price players pay for it through @whobuy.
+          </li>
+          <li>
+            <strong>NPC Sell</strong>: zeny an NPC pays for one, with Overcharge level 10.
+          </li>
+          <li>
+            <strong>NPC Buy</strong>: whether an NPC sells it.
           </li>
           <li>
             <strong>Verified</strong>: when someone last checked the entry on the live server.
           </li>
+        </BulletList>
+
+        <SubHeading>Tips</SubHeading>
+        <BulletList>
           <li>Click a column header to sort by it. Click again to reverse, and a third time to reset.</li>
-        </ul>
+          <li>
+            Don't do quests? Turn on <strong>I don't keep items</strong> in the filters to see only what to sell.
+          </li>
+          <li>
+            Use <strong>Select all</strong> under Category, then untick the ones you don't care about.
+          </li>
+        </BulletList>
       </Section>
 
       <Section title="Where the data comes from">
-        <ul className="list-disc space-y-1 pl-5">
+        <BulletList>
           <li>Rhya's original loot sheet and in-game checks by players.</li>
           <li>
-            Item IDs and types from the <ExternalLink href="https://github.com/HerculesWS/Hercules">Hercules emulator</ExternalLink>{' '}
-            (pre-renewal).
+            Item IDs and types from the{' '}
+            <ExternalLink href="https://github.com/HerculesWS/Hercules">Hercules emulator</ExternalLink> (pre-renewal).
           </li>
           <li>
             Server-specific quests and pet evolutions from the{' '}
             <ExternalLink href="https://wiki.uaro.net/">uaRO wiki</ExternalLink>.
           </li>
-        </ul>
+        </BulletList>
       </Section>
 
-      <Section title="Found a mistake?">
-        <p>Prices change and quests get updated, so reports are very welcome.</p>
-        <ul className="list-disc space-y-1 pl-5">
-          <li>
-            Use the <strong>Report</strong> link under any item's name. It opens a GitHub form with the item already
-            filled in.
-          </li>
-          {DISCORD_URL && (
-            <li>
-              Or message Rhya on <ExternalLink href={DISCORD_URL}>Discord</ExternalLink>.
-            </li>
-          )}
-          <li>
-            For anything else (bugs, ideas), <ExternalLink href={GENERAL_ISSUE_URL}>open an issue on GitHub</ExternalLink>.
-          </li>
-        </ul>
-      </Section>
-
-      <Section title="Help out">
+      <Section title="Found a mistake or want to help?">
         <p>
-          The item data is one file anyone can edit, no coding needed. See the{' '}
-          <ExternalLink href={`${GITHUB_REPO_URL}/blob/main/CONTRIBUTING.md`}>contributing guide</ExternalLink>.
+          See <PageLink href={ROUTES.feedback}>Feedback</PageLink> for ways to report problems, and{' '}
+          <PageLink href={ROUTES.contribute}>Contribute</PageLink> to edit the data yourself.
         </p>
         <p>
           Want to support this work? You can mail in-game hat quest materials to <strong>Rhya</strong> the Sniper.
           Cheers!
         </p>
       </Section>
-    </div>
+    </Page>
   );
 }

@@ -5,13 +5,11 @@
 /** The GitHub repository for this project. */
 export const GITHUB_REPO_URL = 'https://github.com/rhya-ragnarok/uaro-loot-sheet';
 
-/**
- * Where players can reach you on Discord (a server invite or profile link).
- * Set to null to hide Discord links.
- *
- * TODO: add the real Discord link.
- */
-export const DISCORD_URL = null;
+/** Discord thread for feedback and questions. Set to null to hide it. */
+export const DISCORD_FEEDBACK_THREAD_URL = 'https://discord.com/channels/702960460168953946/1552378187885838428';
+
+/** Discord username for direct messages. Set to null to hide it. */
+export const DISCORD_USERNAME = 'pizzabreaths';
 
 /** Name of the issue form in .github/ISSUE_TEMPLATE/ used for item reports. */
 const ITEM_REPORT_TEMPLATE = 'item-report.yml';
@@ -30,6 +28,19 @@ export function itemReportUrl(item) {
   });
   return `${GITHUB_REPO_URL}/issues/new?${params}`;
 }
+
+/**
+ * Actions at the far right of each table row (and top right of each card).
+ * With one action it shows as a link; with two or more they collapse into a
+ * ⋮ menu. To add one, add an entry:
+ *
+ *   label    - text shown to the user
+ *   href     - (item) => URL the action opens
+ *   external - true to open in a new tab
+ */
+export const ROW_ACTIONS = [
+  { id: 'report', label: 'Report', href: itemReportUrl, external: true },
+];
 
 /** Link to a new GitHub issue that isn't about one item (bugs, ideas, ...). */
 export const GENERAL_ISSUE_URL = `${GITHUB_REPO_URL}/issues/new/choose`;

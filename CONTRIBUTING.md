@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping keep the loot sheet accurate! Most contributions are **data edits**, and you don't need to know how to code to make one.
+Thanks for helping keep the loot sheet accurate! (A shorter version of this guide is on the site's **Contribute** page.) Most contributions are **data edits**, and you don't need to know how to code to make one.
 
 ## Editing item data
 
@@ -64,3 +64,9 @@ npm run validate
 
 ## Wording
 When referring to the original game, use **"Official"** (e.g. "Official Hat Quest") or **"Game"**. Please don't use other names for it anywhere in the repo.
+
+## Changelog
+When you make a noticeable change, add an entry at the top of [`src/data/changelog.js`](src/data/changelog.js). There's a copy-and-paste template at the top of that file.
+
+## Questions
+Post in the Discord feedback thread or message `pizzabreaths` on Discord. See the site's **Feedback** page for links.
