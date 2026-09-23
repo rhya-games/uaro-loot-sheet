@@ -9,63 +9,59 @@ export const ALL_ITEM_TYPES = schema.$defs.itemType.enum;
 export const ALL_CATEGORIES = schema.$defs.category.enum;
 
 /**
- * How each action looks in the UI.
+ * How each action looks in the UI: dark pills with white text, so they
+ * stand apart from the light category tags.
  *
  * The keys must match the "action" list in src/data/schema.json.
  * `description` shows as a tooltip when you hover a badge.
- * `className` uses Tailwind color classes, similar to the old Google Sheet.
  */
 export const ACTIONS = {
   Keep: {
     description: 'Keep it: needed for a quest, hat, or pet.',
-    className: 'bg-green-100 text-green-800',
+    className: 'bg-green-700 text-white',
   },
   Vend: {
     description: 'Sell it to players from a vending shop.',
-    className: 'bg-yellow-100 text-yellow-800',
+    className: 'bg-amber-700 text-white',
   },
   Whobuy: {
     description: 'Sell it to a player who is buying it (check @whobuy).',
-    className: 'bg-purple-100 text-purple-800',
+    className: 'bg-purple-700 text-white',
   },
   NPC: {
     description: 'Sell it to an NPC shop.',
-    className: 'bg-blue-100 text-blue-800',
+    className: 'bg-blue-700 text-white',
   },
   Junk: {
     description: 'Not worth anything. Drop it or sell it to an NPC.',
-    className: 'bg-gray-200 text-gray-700',
+    className: 'bg-gray-600 text-white',
   },
 };
 
 /** Used for any action that isn't listed above. */
-export const FALLBACK_ACTION = { description: '', className: 'bg-gray-100 text-gray-700' };
+export const FALLBACK_ACTION = { description: '', className: 'bg-gray-600 text-white' };
 
 /**
- * Color for each category tag. Quests use warm colors, pets use greens,
- * crafting uses cool colors.
+ * Category tag colors: a rainbow running red -> violet down the A-Z
+ * category list in schema.json. Colors are calculated from each category's
+ * position, so adding or removing a category keeps the rainbow intact.
  *
- * The keys must match the "category" list in src/data/schema.json.
- * Any category not listed here shows in gray.
+ * Uses OKLCH colors (lightness, chroma, hue), so every hue looks equally
+ * light and the text stays readable.
  */
-export const CATEGORY_COLORS = {
-  'Official Hat Quest': 'bg-orange-100 text-orange-800',
-  'Server Hat Quest': 'bg-amber-100 text-amber-800',
-  'Dungeon Quest': 'bg-red-100 text-red-800',
-  'Job Quest': 'bg-pink-100 text-pink-800',
-  'Repeatable Quest': 'bg-rose-100 text-rose-800',
-  'Other Quest': 'bg-fuchsia-100 text-fuchsia-800',
-  Pet: 'bg-lime-100 text-lime-800',
-  'Pet Evolution': 'bg-emerald-100 text-emerald-800',
-  Cooking: 'bg-sky-100 text-sky-800',
-  Brewing: 'bg-indigo-100 text-indigo-800',
-  Skills: 'bg-violet-100 text-violet-800',
-  Card: 'bg-slate-200 text-slate-700',
-  uaRO: 'bg-cyan-100 text-cyan-800',
-};
+const RAINBOW_START_HUE = 25; // red
+const RAINBOW_END_HUE = 300; // violet
 
-/** Used for any category that isn't listed above. */
-export const FALLBACK_CATEGORY_COLOR = 'bg-gray-100 text-gray-700';
+export function categoryStyle(category) {
+  const index = ALL_CATEGORIES.indexOf(category);
+  if (index === -1) return { backgroundColor: 'var(--color-gray-100)', color: 'var(--color-gray-700)' };
+  const step = (RAINBOW_END_HUE - RAINBOW_START_HUE) / Math.max(ALL_CATEGORIES.length - 1, 1);
+  const hue = RAINBOW_START_HUE + index * step;
+  return {
+    backgroundColor: `oklch(0.94 0.06 ${hue})`,
+    color: `oklch(0.42 0.12 ${hue})`,
+  };
+}
 
 /** Human-friendly text for the npcBuyable field. */
 export const NPC_BUYABLE_LABELS = {

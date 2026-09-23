@@ -1,5 +1,5 @@
 import Badge from './Badge.jsx';
-import { ACTIONS, CATEGORY_COLORS, FALLBACK_ACTION, FALLBACK_CATEGORY_COLOR } from '../utils/labels.js';
+import { ACTIONS, FALLBACK_ACTION, categoryStyle } from '../utils/labels.js';
 
 /**
  * Colored pill badges for an item's actions (Keep, Vend, NPC, ...).
@@ -20,7 +20,7 @@ export function ActionBadge({ action }) {
   );
 }
 
-/** Colored tag badges for an item's categories. */
+/** Rainbow-colored tag badges for an item's categories. */
 export function CategoryBadges({ categories }) {
   return categories.map((category) => <CategoryBadge key={category} category={category} />);
 }
@@ -28,7 +28,7 @@ export function CategoryBadges({ categories }) {
 /** One category tag. */
 export function CategoryBadge({ category }) {
   return (
-    <Badge shape="tag" className={CATEGORY_COLORS[category] ?? FALLBACK_CATEGORY_COLOR}>
+    <Badge shape="tag" style={categoryStyle(category)}>
       {category}
     </Badge>
   );
