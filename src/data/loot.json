@@ -1,0 +1,10181 @@
+[
+  {
+    "id": "2carat-diamond",
+    "name": "2carat Diamond",
+    "itemId": 731,
+    "actions": [
+      "NPC",
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "x10 for Mystic Rose",
+    "links": [],
+    "npcSellPrice": 15500,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "3carat-diamond",
+    "name": "3carat Diamond",
+    "itemId": 732,
+    "actions": [
+      "NPC",
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Other Quest",
+      "Misc"
+    ],
+    "details": "Diamond Gambling, x6 for Little Isis Pet Evolution",
+    "links": [],
+    "npcSellPrice": 34100,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "abysmal-knight-card",
+    "name": "Abysmal Knight Card",
+    "itemId": 4140,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "details": "x3 for Abysmal Knight Pet Evolution, x3 for White Knight Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "acorn",
+    "name": "Acorn",
+    "itemId": 1026,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 60,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "agate",
+    "name": "Agate",
+    "itemId": 7291,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 1860,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "agav-card",
+    "name": "Agav Card",
+    "itemId": 4409,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Gloom Under Night Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "alcohol",
+    "name": "Alcohol",
+    "itemId": 970,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Skill Crafting",
+      "Cooking",
+      "Alchemy / Brewing / Potions",
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x1 for Giant Band Aid, x1 for Headset, x50 for Beer Hat",
+    "links": [],
+    "npcSellPrice": 248,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "alice-card",
+    "name": "Alice Card",
+    "itemId": 4253,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for Aliza Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "alices-apron",
+    "name": "Alice's Apron",
+    "itemId": 7047,
+    "actions": [
+      "Vend",
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x100 for Blush, x500 for Alice Doll, x500 for Glaris Doll, x500 for Defolty Doll, x500 for Aliza Pet Evolution",
+    "links": [],
+    "npcSellPrice": 1502,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "alicel-card",
+    "name": "Alicel Card",
+    "itemId": 4401,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Kiel D-01 Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "aliot-card",
+    "name": "Aliot Card",
+    "itemId": 4402,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Kiel D-01 Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "aliza-card",
+    "name": "Aliza Card",
+    "itemId": 4400,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Kiel D-01 Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "aloe",
+    "name": "Aloe",
+    "itemId": 704,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 310,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "aloe-leaflet",
+    "name": "Aloe Leaflet",
+    "itemId": 521,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 223,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "aloevera",
+    "name": "Aloevera",
+    "itemId": 606,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Pet Evolution",
+      "Consumable"
+    ],
+    "details": "x150 for Earth Deleter Pet Evolution",
+    "links": [],
+    "npcSellPrice": 930,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "amethyst",
+    "name": "Amethyst",
+    "itemId": 719,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 3720,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "amulet",
+    "name": "Amulet",
+    "itemId": 609,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 62,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ancient-lips",
+    "name": "Ancient Lips",
+    "itemId": 1054,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Official Hat Quest",
+      "Other Quest",
+      "Misc",
+      "Server Hat Quest"
+    ],
+    "details": "x450 for Magician Hat, x2 for Bride Mask, x350 for Fish in Mouth",
+    "links": [],
+    "npcSellPrice": 620,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ancient-mummy-card",
+    "name": "Ancient Mummy Card",
+    "itemId": 4248,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for Ancient Mummy Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ancient-tooth",
+    "name": "Ancient Tooth",
+    "itemId": 1053,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Other Quest",
+      "Misc"
+    ],
+    "details": "x2 for Mythical Lion Mask",
+    "links": [],
+    "npcSellPrice": 339,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "angel-wing-0",
+    "name": "Angel Wing [0]",
+    "itemId": 2254,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Helm of Angel, x1 for Santa Poring Hat",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "angel-wing-ears-0",
+    "name": "Angel Wing Ears [0]",
+    "itemId": 5074,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Dark Randgris Helm",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "animal-gore",
+    "name": "Animal Gore",
+    "itemId": 702,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Pet Taming Item Ingredient",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 279,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "animal-skin",
+    "name": "Animal Skin",
+    "itemId": 919,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Misc"
+    ],
+    "details": "x20 for Desert Wolf Pet Evolution",
+    "links": [],
+    "npcSellPrice": 22,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "anodyne",
+    "name": "Anodyne",
+    "itemId": 605,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Consumable",
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 1240,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "anolian-skin",
+    "name": "Anolian Skin",
+    "itemId": 7003,
+    "actions": [
+      "Whobuy",
+      "Vend",
+      "Keep"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "x300 for Blue Hairband",
+    "links": [],
+    "npcSellPrice": 600,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ant-jaw",
+    "name": "Ant Jaw",
+    "itemId": 1014,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 143,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "antelope-horn",
+    "name": "Antelope Horn",
+    "itemId": 7106,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Dungeon Quest",
+      "Misc"
+    ],
+    "details": "x20 for Finding the Moving Island Quest (Moscovia Dungeon Access)",
+    "links": [],
+    "npcSellPrice": 416,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "anvil",
+    "name": "Anvil",
+    "itemId": 986,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 18600,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "itemId": 512,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Cooking",
+      "Other Quest",
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 8,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "apple-juice",
+    "name": "Apple Juice",
+    "itemId": 531,
+    "actions": [
+      "NPC",
+      "Keep"
+    ],
+    "categories": [
+      "Pet Food",
+      "Cooking",
+      "Pet Evolution",
+      "Consumable"
+    ],
+    "details": "x3 for Eggring Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "apple-of-archer-0",
+    "name": "Apple of Archer [0]",
+    "itemId": 2285,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Well-Chewed Pencil",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "apple-pudding",
+    "name": "Apple Pudding",
+    "itemId": 6108,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 620,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "aquamarine",
+    "name": "Aquamarine",
+    "itemId": 720,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x70 for Pisces Crown",
+    "links": [],
+    "npcSellPrice": 3720,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "armlet-of-obedience",
+    "name": "Armlet of Obedience",
+    "itemId": 639,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Isis Taming Item, x3 for Little Isis Pet Evolution",
+    "links": [],
+    "npcSellPrice": 11160,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "armor-piece-of-dullahan",
+    "name": "Armor Piece of Dullahan",
+    "itemId": 7210,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 489,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "assassin-mask",
+    "name": "Assassin Mask",
+    "itemId": 5054,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Advanced Assassin Mask",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "authoritative-badge",
+    "name": "Authoritative Badge",
+    "itemId": 662,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 899,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bacillus",
+    "name": "Bacillus",
+    "itemId": 7119,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Cooking",
+      "Misc"
+    ],
+    "details": "+10 DEX Food",
+    "links": [],
+    "npcSellPrice": 634,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "backpack",
+    "name": "Backpack",
+    "itemId": 10013,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 930,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "bag-of-grain",
+    "name": "Bag of Grain",
+    "itemId": 577,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Cooking",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 124,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "banana",
+    "name": "Banana",
+    "itemId": 513,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Cooking",
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 8,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "banana-juice",
+    "name": "Banana Juice",
+    "itemId": 532,
+    "actions": [],
+    "categories": [
+      "Pet Food",
+      "Consumable"
+    ],
+    "details": "Yoyo Pet food",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bandana-0",
+    "name": "Bandana [0]",
+    "itemId": 2211,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Hot-blooded Headband, x1 for Blue Hairband",
+    "links": [],
+    "npcSellPrice": 248,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "baphomet-doll",
+    "name": "Baphomet Doll",
+    "itemId": 750,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest",
+      "Misc"
+    ],
+    "details": "xVaries for Sign Quest",
+    "links": [],
+    "npcSellPrice": 11160,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "baphomet-jr-card",
+    "name": "Baphomet Jr Card",
+    "itemId": 4129,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card",
+      "Pet Evolution"
+    ],
+    "details": "x5 for Baphomet Pet Evolution, x2 for Chaotic Baphomet Jr Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bark-shorts",
+    "name": "Bark Shorts",
+    "itemId": 10017,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bat-cage",
+    "name": "Bat Cage",
+    "itemId": 7214,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Misc"
+    ],
+    "details": "x500 for Blue Moon Loli Ruri Pet Evolution",
+    "links": [],
+    "npcSellPrice": 545,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "battered-kettle",
+    "name": "Battered Kettle",
+    "itemId": 7323,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 158,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "battered-pot",
+    "name": "Battered Pot",
+    "itemId": 10010,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bears-footskin",
+    "name": "Bear's Footskin",
+    "itemId": 948,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest",
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 107,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "beautiful-badges",
+    "name": "Beautiful Badges",
+    "itemId": 10028,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "bee-sting",
+    "name": "Bee Sting",
+    "itemId": 939,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Skill Crafting",
+      "Misc"
+    ],
+    "details": "Create Deadly Poison",
+    "links": [],
+    "npcSellPrice": 19,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "beret-0",
+    "name": "Beret [0]",
+    "itemId": 5172,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Feather Beret",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "big-cell",
+    "name": "Big Cell",
+    "itemId": 6104,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "big-ribbon-0",
+    "name": "Big Ribbon [0]",
+    "itemId": 2244,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Red Ribbon",
+    "links": [],
+    "npcSellPrice": 9300,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bill-of-birds",
+    "name": "Bill of Birds",
+    "itemId": 925,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 39,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "biotite",
+    "name": "Biotite",
+    "itemId": 7297,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 1860,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bitter-herb",
+    "name": "Bitter Herb",
+    "itemId": 621,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Cooking"
+    ],
+    "details": "+10 AGI Food, Poporing Taming Item",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "black-bear-skin",
+    "name": "Black Bear Skin",
+    "itemId": 7161,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "x300 for Teddy Bear Hat",
+    "links": [],
+    "npcSellPrice": 238,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "black-butterfly-mask",
+    "name": "Black Butterfly Mask",
+    "itemId": 10037,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "Sucubus Pet accessory",
+    "links": [],
+    "npcSellPrice": 0,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "black-cat-doll",
+    "name": "Black Cat Doll",
+    "itemId": 7206,
+    "actions": [
+      "Keep",
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "x200 for Wild Rose Pet Evolution, x500 for Wikibine's Black Cat Ears",
+    "links": [],
+    "npcSellPrice": 892,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "black-dyestuffs",
+    "name": "Black Dyestuffs",
+    "itemId": 983,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x1 for Black Cat Ears, x1 for Skull Cap, x1 for Censor Bar",
+    "links": [],
+    "npcSellPrice": 4960,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "blade-lost-in-darkness",
+    "name": "Blade Lost in Darkness",
+    "itemId": 7023,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Misc"
+    ],
+    "details": "x100 for Abysmal Knight Pet Evolution, x100 for White Knight Pet Evolution",
+    "links": [],
+    "npcSellPrice": 7440,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "blank-scroll",
+    "name": "Blank Scroll",
+    "itemId": 7433,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Skill Crafting"
+    ],
+    "details": "Create Elemental Converter",
+    "links": [],
+    "npcSellPrice": 2480,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "blood-red",
+    "name": "Blood Red",
+    "itemId": null,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Skill Crafting",
+      "Arrow Crafting",
+      "Misc"
+    ],
+    "details": "x50 for Fire Golem Pet Evolution",
+    "links": [],
+    "npcSellPrice": 620,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bloody-page",
+    "name": "Bloody Page",
+    "itemId": 7449,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Misc"
+    ],
+    "details": "x50 for Alicel Pet Evolution",
+    "links": [],
+    "npcSellPrice": 421,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bloody-rune",
+    "name": "Bloody Rune",
+    "itemId": 7563,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 1249,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "blue-bijou",
+    "name": "Blue Bijou",
+    "itemId": 7446,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "x7 for Magistrate Hat [1], x7 for A-Yam Hat [1]",
+    "links": [],
+    "npcSellPrice": 549,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "blue-feather",
+    "name": "Blue Feather",
+    "itemId": 7441,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest",
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x25 for Filir's Pinions, x10 for Rainbow Scarf, x300 for Orc Hero Headdress",
+    "links": [],
+    "npcSellPrice": 704,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "blue-gemstone",
+    "name": "Blue Gemstone",
+    "itemId": 717,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Skill Use",
+      "Job Quest",
+      "Misc"
+    ],
+    "details": "Wizard Job Quest, Blacksmith Job Quest",
+    "links": [],
+    "npcSellPrice": 279,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "blue-hair",
+    "name": "Blue Hair",
+    "itemId": 1034,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 212,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "blue-herb",
+    "name": "Blue Herb",
+    "itemId": 510,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Alchemy / Brewing / Potions",
+      "Consumable"
+    ],
+    "details": "x100 for Rigid Nightmare Terror Pet Evolution, x50 for Blue Moon Loli Ruri Pet Evolution",
+    "links": [],
+    "npcSellPrice": 37,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "blue-potion",
+    "name": "Blue Potion",
+    "itemId": 505,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Consumable",
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 3100,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "blue-vital-flower",
+    "name": "Blue Vital Flower",
+    "itemId": null,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 620,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "blush-0",
+    "name": "Blush [0]",
+    "itemId": 5040,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Wickebine's Black Cat Ears, x1 for Blush of Groom",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bomb-wick-0",
+    "name": "Bomb Wick [0]",
+    "itemId": 2279,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "x1 for Candle Hat",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bone-helm-1",
+    "name": "Bone Helm [1]",
+    "itemId": 5162,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Darkness Helm",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "book-of-the-devil",
+    "name": "Book of the Devil",
+    "itemId": 642,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Baphomet Jr. Taming Item",
+    "links": [],
+    "npcSellPrice": 1116,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bookclip-in-memory",
+    "name": "Bookclip in Memory",
+    "itemId": 7015,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x20 for Hahoe Mask, x200 for Rideword Hat (RWH)",
+    "links": [],
+    "npcSellPrice": 1860,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bouquet",
+    "name": "Bouquet",
+    "itemId": 744,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Other Quest",
+      "Misc"
+    ],
+    "details": "x1 for Cursed Spirit Quest",
+    "links": [],
+    "npcSellPrice": 1240,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "boys-pure-heart",
+    "name": "Boy's Pure Heart",
+    "itemId": 12373,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Succubus Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "itemId": 580,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "brigan",
+    "name": "Brigan",
+    "itemId": 7054,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x300 for Chaotic Baphomet Jr Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "broken-farming-utensil",
+    "name": "Broken Farming Utensil",
+    "itemId": 7753,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 204,
+    "npcBuyable": null
+  },
+  {
+    "id": "brooch-0",
+    "name": "Brooch [0]",
+    "itemId": 2605,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "brooch-1",
+    "name": "Brooch [1]",
+    "itemId": 2625,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "brown-root",
+    "name": "Brown Root",
+    "itemId": 7188,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 347,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bun",
+    "name": "Bun",
+    "itemId": 6115,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "burning-heart",
+    "name": "Burning Heart",
+    "itemId": 7097,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x300 for Hot-blooded Headband",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "burning-horseshoe",
+    "name": "Burning Horseshoe",
+    "itemId": 7120,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1000 for Rigid Nightmare Terror Pet Evolution, x4 for Cowboy Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "burnt-tree",
+    "name": "Burnt Tree",
+    "itemId": 7068,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x300 for Spore Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cacao",
+    "name": "Cacao",
+    "itemId": 7182,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x300 for Choco Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cactus-needle",
+    "name": "Cactus Needle",
+    "itemId": 952,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Skill Crafting",
+      "Official Hat Quest"
+    ],
+    "details": "Create Deadly Poison, x50 for Sombrero, x100 for Hahoe Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "candle-0",
+    "name": "Candle [0]",
+    "itemId": 5028,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Mine Helmet",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "candy",
+    "name": "Candy",
+    "itemId": 529,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food",
+      "Official Hat Quest"
+    ],
+    "details": "x10 for Cake Hat, x50 for Sweet Drops Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "candy-cane",
+    "name": "Candy Cane",
+    "itemId": 530,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x5 for Cake Hat, x50 for Sweet Drops Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "cap-0",
+    "name": "Cap [0]",
+    "itemId": 2226,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Beanie",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "cap-1",
+    "name": "Cap [1]",
+    "itemId": 2227,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Sunday Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "carrot",
+    "name": "Carrot",
+    "itemId": 515,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "carrot-juice",
+    "name": "Carrot Juice",
+    "itemId": 534,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "Lunatic Pet food",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cats-eye",
+    "name": "Cat's Eye",
+    "itemId": 7263,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "celebrants-mitten-0",
+    "name": "Celebrant's Mitten [0]",
+    "itemId": 2617,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Equipment"
+    ],
+    "details": "x3 for Anubis Helm",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "chain-3",
+    "name": "Chain [3]",
+    "itemId": 1520,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "charming-lotus",
+    "name": "Charming Lotus",
+    "itemId": 12365,
+    "actions": [],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Evil Nymph Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "cheese",
+    "name": "Cheese",
+    "itemId": 548,
+    "actions": [
+      "Keep",
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "x50 for Crunch Toast",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "chivalry-emblem",
+    "name": "Chivalry Emblem",
+    "itemId": 1004,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item Ingredient"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "chonchon-doll",
+    "name": "Chonchon Doll",
+    "itemId": 742,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "chrysalis",
+    "name": "Chrysalis",
+    "itemId": 915,
+    "actions": [
+      "Whobuy",
+      "NPC"
+    ],
+    "categories": [
+      "Repeatable Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "cigarette-0",
+    "name": "Cigarette [0]",
+    "itemId": 2267,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x1 for High Orc Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "circlet-1",
+    "name": "Circlet [1]",
+    "itemId": 2233,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Bulb Band, x1 for Grief for Greed",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "citrin",
+    "name": "Citrin",
+    "itemId": 7295,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Refining / Ore / Forging"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "clam-flesh",
+    "name": "Clam Flesh",
+    "itemId": 966,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Cooking",
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "clam-shell",
+    "name": "Clam Shell",
+    "itemId": 965,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest",
+      "Pet Evolution"
+    ],
+    "details": "x100 for Rigid Nightmare Terror Pet evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "clattering-skull",
+    "name": "Clattering Skull",
+    "itemId": 7752,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x250 for Satanic Bone Helm",
+    "links": [],
+    "npcSellPrice": 520,
+    "npcBuyable": null
+  },
+  {
+    "id": "claw-of-desert-wolf",
+    "name": "Claw of Desert Wolf",
+    "itemId": 7030,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest"
+    ],
+    "details": "x108 for Cowboy Hat, x50 for Rainbow Eggshell, x300 for Desert Wolf Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "clock-hands",
+    "name": "Clock Hands",
+    "itemId": null,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "clover",
+    "name": "Clover",
+    "itemId": 705,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x25 for Leaf Lunatic Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "coal",
+    "name": "Coal",
+    "itemId": 1003,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "x50 for Hat of the Sun God, x1 for Headset",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "cobaltblue-dyestuffs",
+    "name": "Cobaltblue Dyestuffs",
+    "itemId": 978,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Blue Hairband, x1 for Rainbow Eggshell, x1 for Parcel Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "cobweb",
+    "name": "Cobweb",
+    "itemId": 1025,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Skill Use"
+    ],
+    "details": "Professor skill",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "concentration-potion",
+    "name": "Concentration Potion",
+    "itemId": 645,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Consumable",
+      "Cooking"
+    ],
+    "details": "+10 DEX Food",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "conch",
+    "name": "Conch",
+    "itemId": 961,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest",
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "contract-in-shadow",
+    "name": "Contract in Shadow",
+    "itemId": 641,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution"
+    ],
+    "details": "Deviruchi Taming Item, x3 for Diabloic Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "cookie-bat",
+    "name": "Cookie Bat",
+    "itemId": 11605,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x100 for Skelion Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "cooking-oil",
+    "name": "Cooking Oil",
+    "itemId": 7457,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "coral-reef",
+    "name": "Coral Reef",
+    "itemId": 7013,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x1200 for Heart Hairpin",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "corsair",
+    "name": "Corsair",
+    "itemId": 5019,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Purple Cowboy Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "cotton-tufts",
+    "name": "Cotton Tufts",
+    "itemId": 25233,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "crab-shell",
+    "name": "Crab Shell",
+    "itemId": 964,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "cracked-diamond",
+    "name": "Cracked Diamond",
+    "itemId": 733,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Doctor Band",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "crest-piece",
+    "name": "Crest Piece",
+    "itemId": 7356,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "crown-0",
+    "name": "Crown [0]",
+    "itemId": 2235,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Pisces Crown",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "crystal-blue",
+    "name": "Crystal Blue",
+    "itemId": 991,
+    "actions": [
+      "Keep",
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Skill Use"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "crystal-fragment",
+    "name": "Crystal Fragment",
+    "itemId": 7321,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Skill Use"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "crystal-mirror",
+    "name": "Crystal Mirror",
+    "itemId": 747,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest",
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Mine Helmet",
+    "links": [],
+    "npcSellPrice": 6500,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "crystal-of-darkness",
+    "name": "Crystal of Darkness",
+    "itemId": 7799,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x500 for Darkness Helm",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "crystal-pumps-0",
+    "name": "Crystal Pumps [0]",
+    "itemId": 2407,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "crystalized-teardrop",
+    "name": "Crystalized Teardrop",
+    "itemId": 6075,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 403,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cultish-masque",
+    "name": "Cultish Masque",
+    "itemId": 1045,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x1000 for Anubis Helm",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cursed-ruby",
+    "name": "Cursed Ruby",
+    "itemId": 724,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest"
+    ],
+    "details": "x50 for Abandoned Teddy Bear Pet Evolution, x1 for Ear Muffs",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cursed-seal",
+    "name": "Cursed Seal",
+    "itemId": 7442,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Server Hat Quest"
+    ],
+    "details": "x10 for Necromancer's Hood, x300 for Abandoned Teddy Bear Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cyfar",
+    "name": "Cyfar",
+    "itemId": 7053,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "daenggie",
+    "name": "Daenggie",
+    "itemId": 901,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Taming Item Ingredient"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dark-crystal-fragment",
+    "name": "Dark Crystal Fragment",
+    "itemId": 7315,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x369 for Zealotus Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dead-branch-db",
+    "name": "Dead Branch (DB)",
+    "itemId": 604,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 31,
+    "npcBuyable": null
+  },
+  {
+    "id": "deadly-noxious-herb",
+    "name": "Deadly Noxious Herb",
+    "itemId": 631,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Poison Spore Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "delicious-meat",
+    "name": "Delicious Meat",
+    "itemId": null,
+    "actions": [],
+    "categories": [
+      "Pet Food",
+      "Pet Evolution"
+    ],
+    "details": "x100 for Skelion Pet Evolution, Skelion Pet Food",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "delicious-shaved-ice",
+    "name": "Delicious Shaved Ice",
+    "itemId": 12361,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Marionette Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "desert-wolf-card",
+    "name": "Desert Wolf Card",
+    "itemId": 4082,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for Desert Wolf Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "destroyed-armor",
+    "name": "Destroyed Armor",
+    "itemId": 7069,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x500 for Cross Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "detonator",
+    "name": "Detonator",
+    "itemId": 1051,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "detrimindexta",
+    "name": "Detrimindexta",
+    "itemId": 971,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Other Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "deviruchi-card",
+    "name": "Deviruchi Card",
+    "itemId": 4122,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for Diabloic Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dew-laden-moss",
+    "name": "Dew Laden Moss",
+    "itemId": 630,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Spore Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "diamond-ring-0",
+    "name": "Diamond Ring [0]",
+    "itemId": 2613,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 12500,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "dokebi-horn",
+    "name": "Dokebi Horn",
+    "itemId": 1021,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Pet Evolution"
+    ],
+    "details": "x300 for Am Mut Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dragon-canine",
+    "name": "Dragon Canine",
+    "itemId": 1035,
+    "actions": [
+      "Keep",
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 300,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dragon-scale",
+    "name": "Dragon Scale",
+    "itemId": 1036,
+    "actions": [
+      "Keep",
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x400 for Mage Hat, x450 for Chef Hat, x20 for Raccoon Hat",
+    "links": [],
+    "npcSellPrice": 310,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dragon-skin",
+    "name": "Dragon Skin",
+    "itemId": 7123,
+    "actions": [],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 634,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dragon-tail",
+    "name": "Dragon Tail",
+    "itemId": 1037,
+    "actions": [],
+    "categories": [
+      "Cooking",
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 744,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dragons-mane",
+    "name": "Dragon's Mane",
+    "itemId": 6073,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 279,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "drooping-cat-0",
+    "name": "Drooping Cat [0]",
+    "itemId": 5058,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Koneko Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "drops-card",
+    "name": "Drops Card",
+    "itemId": 4004,
+    "actions": [
+      "Card Recycler",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for Sweet Drops Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dust-pollutant",
+    "name": "Dust Pollutant",
+    "itemId": 7320,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "earth-deleter-card",
+    "name": "Earth Deleter Card",
+    "itemId": 4279,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Card",
+      "Pet Evolution"
+    ],
+    "details": "x1 for Earth Deleter Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "earthworm-peeling",
+    "name": "Earthworm Peeling",
+    "itemId": 1055,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ectoplasm",
+    "name": "Ectoplasm",
+    "itemId": 7220,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x400 for X Hairpin",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "edible-mushroom",
+    "name": "Edible Mushroom",
+    "itemId": 581,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "egg-shell-0",
+    "name": "Egg Shell [0]",
+    "itemId": 5015,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Rainbow Eggshell, x1 for Chick Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "eggring-card",
+    "name": "Eggring Card",
+    "itemId": 4659,
+    "actions": [
+      "Vend",
+      "Card Recycler"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for Eggring Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elastic-band",
+    "name": "Elastic Band",
+    "itemId": 7200,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x10 for Hahoe Mask, x10 for Mythical Lion Mask, x10 for Bride Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elder-pixies-moustache",
+    "name": "Elder Pixie's Moustache",
+    "itemId": 1040,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elder-willow-card",
+    "name": "Elder Willow Card",
+    "itemId": 4052,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Mage Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elunium",
+    "name": "Elunium",
+    "itemId": 985,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Refining / Ore / Forging"
+    ],
+    "details": "x30 for Aliza Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "emblem-of-the-sun-god",
+    "name": "Emblem of the Sun God",
+    "itemId": 7086,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Hat of the Sun God",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "emerald",
+    "name": "Emerald",
+    "itemId": 721,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x70 for Pisces Crown",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "emperium",
+    "name": "Emperium",
+    "itemId": 714,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Arrow Crafting",
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Decorative Golden Bell, x1 for Crown of Ancient Queen, x1 for Crown of Mistress",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "empty-bottle",
+    "name": "Empty Bottle",
+    "itemId": 713,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Skill Crafting",
+      "Skill Use",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "evil-druid-card",
+    "name": "Evil Druid Card",
+    "itemId": 4141,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Dark Lord Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "evil-horn",
+    "name": "Evil Horn",
+    "itemId": 923,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest"
+    ],
+    "details": "x300 for Baophomet Jr Pet Evolution, x50 for Necromancer's Hood, x20 for Antlers",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "evil-wing-ears-0",
+    "name": "Evil Wing Ears [0]",
+    "itemId": 5068,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Dark Randgris Helm",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "expanded-token-fragment",
+    "name": "Expanded Token Fragment",
+    "itemId": 35661,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Server Quest Crafting",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fabric",
+    "name": "Fabric",
+    "itemId": 1059,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Pet Evolution",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "x150 for Parcel Hat, x250 for Sunday Hat, x500 for Bride Mask, x100 for Contaminated Wanderer Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fan-of-wind",
+    "name": "Fan of Wind",
+    "itemId": 12358,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Civil Servant Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fang",
+    "name": "Fang",
+    "itemId": 1063,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fang-of-garm-fang-of-hatii",
+    "name": "Fang of Garm / Fang of Hatii",
+    "itemId": 7036,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x5 for Helm of Angel",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fantastic-cooking-kit",
+    "name": "Fantastic Cooking Kit",
+    "itemId": 12129,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fatty-chubby-earthworm",
+    "name": "Fatty Chubby Earthworm",
+    "itemId": 632,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution",
+      "Cooking"
+    ],
+    "details": "Peco Peco Taming Item, x3 for Grand Peco Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "feather",
+    "name": "Feather",
+    "itemId": 949,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x330 for Chef Hat, x80 for Grief for Greed, x50 for Savage Pet Evolution, x100 for Bunny Band, x200 for Ear Muffs, x1000 for Beer Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "feather-of-birds",
+    "name": "Feather of Birds",
+    "itemId": 916,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x300 for Feather Bonnet, x500 for Chick Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fig-leaf",
+    "name": "Fig Leaf",
+    "itemId": 7298,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 333,
+    "npcBuyable": null
+  },
+  {
+    "id": "fin",
+    "name": "Fin",
+    "itemId": 951,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fine-grit",
+    "name": "Fine Grit",
+    "itemId": 7041,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fine-sand",
+    "name": "Fine Sand",
+    "itemId": 7043,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fine-grained-trunk",
+    "name": "Fine-grained Trunk",
+    "itemId": 1066,
+    "actions": [
+      "Junk",
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fish-tail",
+    "name": "Fish Tail",
+    "itemId": 1023,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x200 for Wild Rose Pet Evolution",
+    "links": [],
+    "npcSellPrice": 121,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fish-with-blue-back",
+    "name": "Fish with Blue Back",
+    "itemId": 6096,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "flail-goblin-ring",
+    "name": "Flail Goblin Ring",
+    "itemId": 14570,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Flail Goblin Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "flame-gemstone",
+    "name": "Flame Gemstone",
+    "itemId": 6114,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "flame-heart",
+    "name": "Flame Heart",
+    "itemId": 994,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Arrow Crafting",
+      "Refining / Ore / Forging",
+      "Server Hat Quest"
+    ],
+    "details": "x20 for Vanilmirth Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "flavored-alcohol",
+    "name": "Flavored Alcohol",
+    "itemId": 6095,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "flexible-tube",
+    "name": "Flexible Tube",
+    "itemId": 7325,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Other Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x20 for Factory Quest, x5 for Finding the Moving Island Quest (Moscovia Dungeon Access)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fluff",
+    "name": "Fluff",
+    "itemId": 914,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Official Hat Quest"
+    ],
+    "details": "x200 for Black Cat Ears",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fluorescent-liquid",
+    "name": "Fluorescent Liquid",
+    "itemId": 7326,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "forbidden-red-candle",
+    "name": "Forbidden Red Candle",
+    "itemId": 660,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Zealotus Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "four-leaf-clover",
+    "name": "Four Leaf Clover",
+    "itemId": 706,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x30 for Leaf Lunatic Pet Evolution, x1 for Hahoe Mask, x1 for Mythical Lion Mask, x1 for Bride Mask, x20 for Festival Pumpkin Hat, x1 for Bunny Band",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fragment",
+    "name": "Fragment",
+    "itemId": 7094,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "fragment-of-agony",
+    "name": "Fragment of Agony",
+    "itemId": 7436,
+    "actions": [],
+    "categories": [],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fragment-of-despair",
+    "name": "Fragment of Despair",
+    "itemId": 7439,
+    "actions": [],
+    "categories": [],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fragment-of-hatred",
+    "name": "Fragment of Hatred",
+    "itemId": 7438,
+    "actions": [],
+    "categories": [],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fragment-of-misery",
+    "name": "Fragment of Misery",
+    "itemId": 7437,
+    "actions": [],
+    "categories": [],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fresh-fish",
+    "name": "Fresh Fish",
+    "itemId": 579,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Food",
+      "Consumable",
+      "Server Hat Quest"
+    ],
+    "details": "x300 for Fish Head Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "fresh-plant",
+    "name": "Fresh Plant",
+    "itemId": 6112,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "frill",
+    "name": "Frill",
+    "itemId": 1012,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "frozen-rose",
+    "name": "Frozen Rose",
+    "itemId": 749,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 14500,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fur",
+    "name": "Fur",
+    "itemId": 6020,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x50 for Little Angel Doll, x200 for Puppy Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "gangster-mask-0",
+    "name": "Gangster Mask [0]",
+    "itemId": 2265,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Equipment"
+    ],
+    "details": "x5 for Gangster Scarf",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "garlet",
+    "name": "Garlet",
+    "itemId": 910,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Alchemy / Brewing / Potions",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "garnet",
+    "name": "Garnet",
+    "itemId": 718,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "geek-glasses",
+    "name": "Geek Glasses",
+    "itemId": 2243,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Dungeon Quest",
+      "Other Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Cursed Spirit Quest, x1 for Binoculars",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "gemstone",
+    "name": "Gemstone",
+    "itemId": 7300,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ghost-coffin",
+    "name": "Ghost Coffin",
+    "itemId": null,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Whisper Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "ghoul-card",
+    "name": "Ghoul Card",
+    "itemId": 4110,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Dark Lord Pet Evolution, x5 for Dark Illusion Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "giant-butterfly-wing",
+    "name": "Giant Butterfly Wing",
+    "itemId": 7168,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "gift-box",
+    "name": "Gift Box",
+    "itemId": 644,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "gill",
+    "name": "Gill",
+    "itemId": 956,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "girls-diary",
+    "name": "Girl's Diary",
+    "itemId": 1558,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "girls-doll",
+    "name": "Girl's Doll",
+    "itemId": 12366,
+    "actions": [],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Miyabi Doll Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "girls-naivety",
+    "name": "Girl's Naivety",
+    "itemId": 12370,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "glacial-heart",
+    "name": "Glacial Heart",
+    "itemId": 7561,
+    "actions": [
+      "Keep",
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Other Quest",
+      "Dungeon Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x40 for Ice Necklace Quest, x350 for Satanic Bone Helm",
+    "links": [],
+    "npcSellPrice": 375,
+    "npcBuyable": null
+  },
+  {
+    "id": "glass-bead",
+    "name": "Glass Bead",
+    "itemId": 746,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x20 for Bulb Band",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "itemId": 969,
+    "actions": [
+      "Vend",
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Other Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Grief for Greed, x10 for Hat of the Sun God, x3 for Decorative Golden Bell, x3 for Crown of Ancient Queen, x3 for Crown of Mistress, x1 for Cursed Spirit Quest, x20 for Orc Hero Headdress, x30 for Ancient Mummy Pet Evolution, x3 for Am Mut Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "gold-ring-0",
+    "name": "Gold Ring [0]",
+    "itemId": 2610,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 7500,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "golden-bell",
+    "name": "Golden Bell",
+    "itemId": 10016,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Accessory",
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Decorative Golden Bell",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "golden-earring",
+    "name": "Golden Earring",
+    "itemId": 10022,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "golden-hair",
+    "name": "Golden Hair",
+    "itemId": 1060,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "golem-card",
+    "name": "Golem Card",
+    "itemId": 4072,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x3 for Fire Golem Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "grandpa-beard",
+    "name": "Grandpa Beard",
+    "itemId": 2241,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Dungeon Quest",
+      "Other Quest"
+    ],
+    "details": "x1 for Cursed Spirit Quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "grape",
+    "name": "Grape",
+    "itemId": 514,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "grape-juice",
+    "name": "Grape Juice",
+    "itemId": 533,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Valuable Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "grasshoppers-leg",
+    "name": "Grasshopper's Leg",
+    "itemId": 940,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x777 for Metaller Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "grave-keepers-sword",
+    "name": "Grave Keeper's Sword",
+    "itemId": 10020,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "great-nature",
+    "name": "Great Nature",
+    "itemId": 997,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Arrow Crafting",
+      "Refining / Ore / Forging"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "green-apple",
+    "name": "Green Apple",
+    "itemId": 7821,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "green-bijou",
+    "name": "Green Bijou",
+    "itemId": 7445,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x7 for Magistrate Hat [1], x7 for A-Yam Hat [1]",
+    "links": [],
+    "npcSellPrice": 549,
+    "npcBuyable": null
+  },
+  {
+    "id": "green-dyestuffs",
+    "name": "Green Dyestuffs",
+    "itemId": null,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "green-herb",
+    "name": "Green Herb",
+    "itemId": 511,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Food",
+      "Pet Evolution",
+      "Cooking",
+      "Dungeon Quest"
+    ],
+    "details": "x10 for Veins Sibling Quest (each try), x200 for Aliza Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "green-jewel-bag",
+    "name": "Green Jewel Bag",
+    "itemId": 10023,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "green-lace",
+    "name": "Green Lace",
+    "itemId": 10015,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Accessory",
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Red Bonnet",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "green-live",
+    "name": "Green Live",
+    "itemId": 993,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Skill Use"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "green-salad",
+    "name": "Green Salad",
+    "itemId": 12065,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 2000,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "grilled-rice-cake",
+    "name": "Grilled Rice Cake",
+    "itemId": 6099,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "grit",
+    "name": "Grit",
+    "itemId": 1056,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "guitar-0",
+    "name": "Guitar [0]",
+    "itemId": 1907,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Sombrero",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "hairband-of-stars",
+    "name": "Hairband of Stars",
+    "itemId": 10025,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "halo-0",
+    "name": "Halo [0]",
+    "itemId": 2282,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Pet Evolution"
+    ],
+    "details": "x1 for Angeling Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "hammer-goblin-ring",
+    "name": "Hammer Goblin Ring",
+    "itemId": 14571,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Hammer Gobling Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "hammer-of-blacksmith",
+    "name": "Hammer of Blacksmith",
+    "itemId": 1005,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Other Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "hand-of-god",
+    "name": "Hand of God",
+    "itemId": 1009,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x50 for Diabolic Pet evolution, x50 for Contaminated Wanderer Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "handcuffs",
+    "name": "Handcuffs",
+    "itemId": 7345,
+    "actions": [
+      "Vend",
+      "Keep"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x1000 for Mitra [1]",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hard-feeler",
+    "name": "Hard Feeler",
+    "itemId": 7163,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "harpy-feather",
+    "name": "Harpy Feather",
+    "itemId": 7115,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 708,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hat-1",
+    "name": "Hat [1]",
+    "itemId": 2221,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Sunday Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "headset-0",
+    "name": "Headset [0]",
+    "itemId": 5001,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "heart-hairpin",
+    "name": "Heart Hairpin",
+    "itemId": 5041,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Cresent Hairpin",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "heart-of-mermaid",
+    "name": "Heart of Mermaid",
+    "itemId": 950,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "hell-contract",
+    "name": "Hell Contract",
+    "itemId": 12372,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Nightmare Terror Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "helm-1",
+    "name": "Helm [1]",
+    "itemId": 2229,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Helm of Angel",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "her-heart",
+    "name": "Her Heart",
+    "itemId": 659,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Bongun Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "heroic-emblem",
+    "name": "Heroic Emblem",
+    "itemId": 968,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x100 for Orc Hero Pet Evolution, x50 for Bao Bao, x100 for Orc Hero Headdress",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "hinalle",
+    "name": "Hinalle",
+    "itemId": 703,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "hinalle-leaflet",
+    "name": "Hinalle Leaflet",
+    "itemId": 520,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Dungeon Quest",
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 93,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hodremlin-card",
+    "name": "Hodremlin Card",
+    "itemId": 4413,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Gloom Under Night Pet Evolution, x1 for Hodremlin Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "holy-water",
+    "name": "Holy Water",
+    "itemId": 523,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Skill Use",
+      "Dungeon Quest",
+      "Other Quest",
+      "Consumable"
+    ],
+    "details": "x5 for Cursed Spirit Quest, x3 for Ayothaya Dungeon Entrance Quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "home-cooking-kit",
+    "name": "Home Cooking Kit",
+    "itemId": 12126,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "itemId": 518,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Valuable Consumable",
+      "Pet Food",
+      "Pet Evolution",
+      "Cooking"
+    ],
+    "details": "x100 for Alicel Pet Evolution, x100 for Aliot Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "honey-pot",
+    "name": "Honey Pot",
+    "itemId": 7121,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "horn",
+    "name": "Horn",
+    "itemId": 947,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Skill Crafting"
+    ],
+    "details": "Create Elemental Converter",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "horn-barrier",
+    "name": "Horn Barrier",
+    "itemId": 10038,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "horn-of-hell",
+    "name": "Horn of Hell",
+    "itemId": 10036,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "horn-of-hillslion",
+    "name": "Horn of Hillslion",
+    "itemId": 6032,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "horrendous-hair",
+    "name": "Horrendous Hair",
+    "itemId": 1048,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x50 for Opera Phantom Mask, x500 for Mythical Lion Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "horrendous-mouth",
+    "name": "Horrendous Mouth",
+    "itemId": 958,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Taming Item Ingredient"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 241,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "horseshoe",
+    "name": "Horseshoe",
+    "itemId": 944,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "huge-leaf",
+    "name": "Huge Leaf",
+    "itemId": 7198,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Pet Evolution",
+      "Cooking"
+    ],
+    "details": "x500 for Wild Rose Pet Evolution, x100 for Leaf Lunatic Pet Evolution",
+    "links": [],
+    "npcSellPrice": 378,
+    "npcBuyable": null
+  },
+  {
+    "id": "hydra-card",
+    "name": "Hydra Card",
+    "itemId": 4035,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Card"
+    ],
+    "details": "x1 for Alice Doll",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "hyegun-hat-1-yao-jun",
+    "name": "Hyegun Hat [1] (Yao Jun)",
+    "itemId": 5367,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Equipment"
+    ],
+    "details": "x1 for Yao Jun Pet Evolution (Hyegun)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ice-cream",
+    "name": "Ice Cream",
+    "itemId": 536,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "ice-cubic",
+    "name": "Ice Cubic",
+    "itemId": 7066,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "+10 DEX Food",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "ice-fireworks",
+    "name": "Ice Fireworks",
+    "itemId": 12374,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Imp Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "ice-scale",
+    "name": "Ice Scale",
+    "itemId": 7562,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x5 for Satanic Bone Helm",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "illusion-flower",
+    "name": "Illusion Flower",
+    "itemId": 710,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking",
+      "Server Hat Quest"
+    ],
+    "details": "+10 DEX Food, x10 for Crimson Rose, x10 for Pecopeco Wing Ears",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "immortal-heart",
+    "name": "Immortal Heart",
+    "itemId": 929,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Pet Food",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "infiltrator-0",
+    "name": "Infiltrator [0]",
+    "itemId": 1261,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "insect-feeler",
+    "name": "Insect Feeler",
+    "itemId": 928,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "insect-leg",
+    "name": "Insect Leg",
+    "itemId": 7316,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "iron",
+    "name": "Iron",
+    "itemId": 998,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x50 for Doctor Band, x20 for Opera Masque",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "iron-hammer",
+    "name": "Iron Hammer",
+    "itemId": 613,
+    "actions": [],
+    "categories": [
+      "Refining / Ore / Forging"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "iron-ore",
+    "name": "Iron Ore",
+    "itemId": 1002,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "isilla-card",
+    "name": "Isilla Card",
+    "itemId": 4412,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Gloom Under Night Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "izidor",
+    "name": "Izidor",
+    "itemId": 709,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Job Quest"
+    ],
+    "details": "x1 for Bard Job Quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "jack-be-dandy",
+    "name": "Jack be Dandy",
+    "itemId": 2271,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Fashionable Glasses",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "jack-o-pumpkin",
+    "name": "Jack o' Pumpkin",
+    "itemId": 1062,
+    "actions": [
+      "NPC",
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "jellopy",
+    "name": "Jellopy",
+    "itemId": 909,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x10,000 for Orc Hero Helm, x10 for Veins Sibling Quest (each try), x200 for Angeling Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "jewel-crown-0",
+    "name": "Jewel Crown [0]",
+    "itemId": 5002,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Pisces Diadem",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "jing-guai-card",
+    "name": "Jing Guai Card",
+    "itemId": 4265,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Bascojin Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "jubilee",
+    "name": "Jubilee",
+    "itemId": 7312,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "x10 for Finding the Moving Island (Moscovia Dungeon)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "karvodailnirol",
+    "name": "Karvodailnirol",
+    "itemId": 972,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Skill Crafting",
+      "Other Quest"
+    ],
+    "details": "Create Deadly Poison",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "khukri-0",
+    "name": "Khukri [0]",
+    "itemId": 13006,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 25000,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "kitty-band-0",
+    "name": "Kitty Band [0]",
+    "itemId": 2213,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Black Cat Ears, x1 for Raccoon Hat, x1 for Bunny Band, x1 for Wikibine's Black Cat Ears",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "knife-goblin-ring",
+    "name": "Knife Goblin Ring",
+    "itemId": 14569,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "kuloren",
+    "name": "Kuloren",
+    "itemId": 12362,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Shinobi Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "lantern",
+    "name": "Lantern",
+    "itemId": 1041,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "large-jellopy",
+    "name": "Large Jellopy",
+    "itemId": 7126,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Alchemy / Brewing / Potions",
+      "Server Hat Quest"
+    ],
+    "details": "x300 for Vanilmirth Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "leaf-cat-card",
+    "name": "Leaf Cat Card",
+    "itemId": 4195,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Eddga Pet Evolution, x10 for Wild Rose Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lemon",
+    "name": "Lemon",
+    "itemId": 568,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "+10 INT Food",
+    "links": [],
+    "npcSellPrice": 37,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lemon-dyestuffs",
+    "name": "Lemon Dyestuffs",
+    "itemId": 976,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "level-5-fire-wall-scroll",
+    "name": "Level 5 Fire Wall Scroll",
+    "itemId": 699,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "little-evil-horn",
+    "name": "Little Evil Horn",
+    "itemId": 1038,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x600 for Deviruchi Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "little-evil-wing",
+    "name": "Little Evil Wing",
+    "itemId": 1039,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x250 for Diabolic Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "log",
+    "name": "Log",
+    "itemId": 7201,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x500 for Hahoe Mask, x500 for Mythical Lion Mask, x500 for Bride Mask, x30 for Finding the Moving Island Quest (Moscovia Dungeon Access)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lokis-whispers",
+    "name": "Loki's Whispers",
+    "itemId": 7019,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x1 for Blue Moon Loli Ruri Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "loli-ruri-card",
+    "name": "Loli Ruri Card",
+    "itemId": 4191,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lunatic-card",
+    "name": "Lunatic Card",
+    "itemId": 4006,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x5 for Leaf Lunatic Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "luxurious-pet-food",
+    "name": "Luxurious Pet Food",
+    "itemId": 25377,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "luxury-whisky-bottle",
+    "name": "Luxury Whisky Bottle",
+    "itemId": 12367,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Dullahan Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "magical-lithography",
+    "name": "Magical Lithography",
+    "itemId": 12371,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution"
+    ],
+    "details": "Golem Taming Item, x1 for Fire Golem Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "magician-hat-0",
+    "name": "Magician Hat [0]",
+    "itemId": 5045,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Bunny Ears Hat, x1 for Dress Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "majestic-goat-0",
+    "name": "Majestic Goat [0]",
+    "itemId": 2256,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Pet Evolution"
+    ],
+    "details": "x1 for Gigantic Majestic Goat (DEF)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "majestic-goat-1",
+    "name": "Majestic Goat [1]",
+    "itemId": 5160,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Gigantic Majestic Goat (DEF), x1 for Baphomet Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "mane",
+    "name": "Mane",
+    "itemId": 1028,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "x100 for Hahoe Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "maneater-blossom",
+    "name": "Maneater Blossom",
+    "itemId": 1032,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "maneater-root",
+    "name": "Maneater Root",
+    "itemId": 1033,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "mantis-scythe",
+    "name": "Mantis Scythe",
+    "itemId": 1031,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "mao-guai-card",
+    "name": "Mao Guai Card",
+    "itemId": 4202,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Bascojin Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "marionette-doll-1",
+    "name": "Marionette Doll [1]",
+    "itemId": 5141,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Alice Doll, x1 for Glaris Doll, x1 for Defolty Doll",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "masked-ball",
+    "name": "Masked Ball",
+    "itemId": 10034,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "mastela-fruit",
+    "name": "Mastela Fruit",
+    "itemId": 522,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Valuable Consumable",
+      "Cooking"
+    ],
+    "details": "x10 for Grand Peco Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "matchstick",
+    "name": "Matchstick",
+    "itemId": 7035,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x50 for Candle Hat, x5 for Antique Smoking Pipe",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "meat",
+    "name": "Meat",
+    "itemId": 517,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Consumable",
+      "Pet Evolution",
+      "Cooking"
+    ],
+    "details": "x100 for Savage Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "memento",
+    "name": "Memento",
+    "itemId": 934,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "+10 VIT Food",
+    "links": [],
+    "npcSellPrice": 372,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "ment",
+    "name": "Ment",
+    "itemId": 708,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "metaller-card",
+    "name": "Metaller Card",
+    "itemId": 4057,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for Metaller Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "milk",
+    "name": "Milk",
+    "itemId": 519,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "x2 for Veins Sibling Quest (each try), x50 for Crunch Toast",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "mini-furnace",
+    "name": "Mini Furnace",
+    "itemId": 612,
+    "actions": [],
+    "categories": [
+      "Dungeon Quest",
+      "Refining / Ore / Forging"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "mixture",
+    "name": "Mixture",
+    "itemId": 974,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "mole-whiskers",
+    "name": "Mole Whiskers",
+    "itemId": 1017,
+    "actions": [],
+    "categories": [
+      "Alchemy / Brewing / Potions",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "monster-juice",
+    "name": "Monster Juice",
+    "itemId": 626,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Hunter Fly Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "monster-oxygen-mask",
+    "name": "Monster Oxygen Mask",
+    "itemId": 10002,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "monsters-feed",
+    "name": "Monster's Feed",
+    "itemId": 528,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest",
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "morning-dew",
+    "name": "Morning Dew",
+    "itemId": 6105,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Food",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "moth-dust",
+    "name": "Moth Dust",
+    "itemId": 1057,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "moth-wings",
+    "name": "Moth Wings",
+    "itemId": 1058,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "mould-powder",
+    "name": "Mould Powder",
+    "itemId": 7001,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "x40 for Mage Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "mr-scream-0",
+    "name": "Mr. Scream [0]",
+    "itemId": 2288,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for Alarm Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "munak-card",
+    "name": "Munak Card",
+    "itemId": 4090,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Moonlight Flower Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "munak-doll",
+    "name": "Munak Doll",
+    "itemId": 7277,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Misc"
+    ],
+    "details": "x100 for Yao Jun Pet Evolution (Hyegun)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "muscovite",
+    "name": "Muscovite",
+    "itemId": 7292,
+    "actions": [],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "mushroom-spore",
+    "name": "Mushroom Spore",
+    "itemId": 921,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Misc",
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "x300 for Decorative Mushroom",
+    "links": [],
+    "npcSellPrice": 22,
+    "npcBuyable": null
+  },
+  {
+    "id": "mystic-frozen",
+    "name": "Mystic Frozen",
+    "itemId": 995,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Server Hat Quest"
+    ],
+    "details": "x50 for Fish in Mouth",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "mystic-horn",
+    "name": "Mystic Horn",
+    "itemId": 6023,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "mystic-stone",
+    "name": "Mystic Stone",
+    "itemId": 6111,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "needle-of-alarm",
+    "name": "Needle of Alarm",
+    "itemId": 1095,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x3000 for Alarm Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "needle-packet",
+    "name": "Needle Packet",
+    "itemId": 7213,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x1 for Ayothaya Dungeon Entrance Quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "nine-tail-card",
+    "name": "Nine Tail Card",
+    "itemId": 4159,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Moonlight Flower Pet Evolution, x1 for Cat o' Nine Tails Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "nine-tails",
+    "name": "Nine Tails",
+    "itemId": 1022,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Cooking",
+      "Server Hat Quest"
+    ],
+    "details": "x500 for Moonlight Flower Hat, x999 for Cat o' Nine Tails Pet Evolution, x999 for Kitsune Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "no-recipient",
+    "name": "No Recipient",
+    "itemId": 636,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Munak Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "nose-ring",
+    "name": "Nose Ring",
+    "itemId": 941,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Baby Pacifier",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "nursing-bottle",
+    "name": "Nursing Bottle",
+    "itemId": 7270,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Baby Pacifier",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "nut-shell-0",
+    "name": "Nut Shell [0]",
+    "itemId": 5037,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Wonder Nutshell",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "oil-paper",
+    "name": "Oil Paper",
+    "itemId": 7151,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x100 for Party Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "oilpalm-coconut",
+    "name": "Oilpalm Coconut",
+    "itemId": 12369,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Stone Shooter Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "old-blue-box",
+    "name": "Old Blue Box",
+    "itemId": 603,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "Open it, silly!",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "old-broom",
+    "name": "Old Broom",
+    "itemId": 637,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution"
+    ],
+    "details": "Dokebi Taming Item, x3 for Am Mut Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "old-frying-pan",
+    "name": "Old Frying Pan",
+    "itemId": 7031,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Cooking"
+    ],
+    "details": "x50 for Crunch Toast, x10 for Eggring Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "old-magic-book",
+    "name": "Old Magic Book",
+    "itemId": 1006,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Pet Taming Item Ingredient"
+    ],
+    "details": "x2 for Rideword Hat (RWH)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "old-pick",
+    "name": "Old Pick",
+    "itemId": 7318,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "old-portrait",
+    "name": "Old Portrait",
+    "itemId": 7014,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x50 for Yao Jun Pet Evolution (Hyegun)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "old-purple-box",
+    "name": "Old Purple Box",
+    "itemId": 617,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "Open it, silly!",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "old-trees-dew",
+    "name": "Old Tree's Dew",
+    "itemId": null,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Willow Pet Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "opal",
+    "name": "Opal",
+    "itemId": 727,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x10 for Aliot Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "opera-masque-0",
+    "name": "Opera Masque [0]",
+    "itemId": 2281,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Opera Phantom Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ora-ora",
+    "name": "Ora Ora",
+    "itemId": 701,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orange",
+    "name": "Orange",
+    "itemId": 582,
+    "actions": [
+      "Whobuy",
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orange-dyestuffs",
+    "name": "Orange Dyestuffs",
+    "itemId": 980,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Mythical Lion Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orange-juice",
+    "name": "Orange Juice",
+    "itemId": 620,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Drops Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orc-baby-card",
+    "name": "Orc Baby Card",
+    "itemId": 4375,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x5 for Orc Hero Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orc-claw",
+    "name": "Orc Claw",
+    "itemId": 1043,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orc-trophy",
+    "name": "Orc Trophy",
+    "itemId": 635,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution"
+    ],
+    "details": "Orc Warrior Taming Item, x3 for High Orc Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orc-warrior-card",
+    "name": "Orc Warrior Card",
+    "itemId": 4066,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for High Orc Pet Evolution, x10 for Orc Hero Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orcs-fang",
+    "name": "Orc's Fang",
+    "itemId": 922,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orcish-sword-0",
+    "name": "Orcish Sword [0]",
+    "itemId": 1124,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x1 for High Orc Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "orcish-voucher",
+    "name": "Orcish Voucher",
+    "itemId": 931,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest"
+    ],
+    "details": "x500 for High Orc Pet Evolution, x10,000 for Orc Hero Helm",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "oridecon",
+    "name": "Oridecon",
+    "itemId": 984,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Alchemy / Brewing / Potions",
+      "Official Hat Quest"
+    ],
+    "details": "x2 for Hat of the Sun God, x1 for Headset",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "outdoor-cooking-kit",
+    "name": "Outdoor Cooking Kit",
+    "itemId": 12125,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pacifier",
+    "name": "Pacifier",
+    "itemId": 10004,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Accessory",
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Baby Pacifier",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pantie-0",
+    "name": "Pantie [0]",
+    "itemId": 2339,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "partizan",
+    "name": "Partizan",
+    "itemId": 1457,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "peaked-hat",
+    "name": "Peaked Hat",
+    "itemId": 6021,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "pearl",
+    "name": "Pearl",
+    "itemId": 722,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Bunny Band",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "peco-peco-card",
+    "name": "Peco Peco Card",
+    "itemId": 4031,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card",
+      "Pet Evolution"
+    ],
+    "details": "x1 for Grand Peco Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "peco-peco-feather",
+    "name": "Peco Peco Feather",
+    "itemId": 7101,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x500 for Pecopeco Wing Ears",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pencil-case",
+    "name": "Pencil Case",
+    "itemId": 738,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x7 for Well-Chewed Pencil",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "peridot",
+    "name": "Peridot",
+    "itemId": 7289,
+    "actions": [],
+    "categories": [
+      "Refining / Ore / Forging"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pet-food",
+    "name": "Pet Food",
+    "itemId": 537,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Food",
+      "Pet Evolution"
+    ],
+    "details": "x10 for Savage Pet Evolution, x10 for Grand Peco Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "petites-tail",
+    "name": "Petite's Tail",
+    "itemId": 6260,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x100 for Earth Deleter Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "phlogopite",
+    "name": "Phlogopite",
+    "itemId": 7290,
+    "actions": [],
+    "categories": [
+      "Refining / Ore / Forging"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "piece-of-bamboo",
+    "name": "Piece of Bamboo",
+    "itemId": 7150,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x300 for Straw Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "piece-of-black-cloth",
+    "name": "Piece of Black Cloth",
+    "itemId": 7205,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "piece-of-cake",
+    "name": "Piece of Cake",
+    "itemId": 539,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "x120 for Chef Hat, x50 for Crunch Toast",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "piece-of-egg-shell",
+    "name": "Piece of Egg Shell",
+    "itemId": 7032,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x20 for Eggring Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pincher-of-beetle",
+    "name": "Pincher of Beetle",
+    "itemId": 7202,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 179,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "pipe",
+    "name": "Pipe",
+    "itemId": 2268,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Antique Smoking Pipe",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "plant-neutrient",
+    "name": "Plant Neutrient",
+    "itemId": 6109,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pocket-watch",
+    "name": "Pocket Watch",
+    "itemId": 2717,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x2 for Gangster Scarf",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pointed-scale",
+    "name": "Pointed Scale",
+    "itemId": 906,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 42,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "poison-spore",
+    "name": "Poison Spore",
+    "itemId": 7033,
+    "actions": [
+      "Keep",
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Skill Crafting",
+      "Official Hat Quest",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "x850 for Spore Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "porcupine-quill",
+    "name": "Porcupine Quill",
+    "itemId": 1027,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "poring-coin",
+    "name": "Poring Coin",
+    "itemId": 7539,
+    "actions": [
+      "Keep",
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Server Currency"
+    ],
+    "details": "Used for Server Hats, Pet Evolutions, and more! Check the uaRO wiki for more details.",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "pot",
+    "name": "Pot",
+    "itemId": 7482,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "potato",
+    "name": "Potato",
+    "itemId": 516,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "powder-of-butterfly",
+    "name": "Powder of Butterfly",
+    "itemId": 924,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "prickly-fruit",
+    "name": "Prickly Fruit",
+    "itemId": 576,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Server Hat Quest"
+    ],
+    "details": "+10 DEX Food, x250 for Tropical Fruit Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "professional-cooking-kit",
+    "name": "Professional Cooking Kit",
+    "itemId": 12127,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pumpkin",
+    "name": "Pumpkin",
+    "itemId": 535,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "pumpkin-lantern",
+    "name": "Pumpkin Lantern",
+    "itemId": 7225,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x1000 for Festival Pumpkin Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pumpkin-pie",
+    "name": "Pumpkin Pie",
+    "itemId": 6097,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "punisher",
+    "name": "Punisher",
+    "itemId": 10008,
+    "actions": [
+      "Vend",
+      "Keep"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "Keep 1",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "puppet",
+    "name": "Puppet",
+    "itemId": 740,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "puppy-headband-0",
+    "name": "Puppy Headband [0]",
+    "itemId": 5118,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Equipment"
+    ],
+    "details": "x5 for Puppy Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "pyroxene",
+    "name": "Pyroxene",
+    "itemId": 7296,
+    "actions": [],
+    "categories": [
+      "Refining / Ore / Forging"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "queens-coronet",
+    "name": "Queen's Coronet",
+    "itemId": 10032,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "queens-hair-ornament",
+    "name": "Queen's Hair Ornament",
+    "itemId": 10006,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Accessory",
+      "Pet Evolution",
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Crown of Ancient Queen, x1 for Little Isis Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "raccoon-leaf",
+    "name": "Raccoon Leaf",
+    "itemId": 945,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rainbow-carrot",
+    "name": "Rainbow Carrot",
+    "itemId": 622,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Cooking"
+    ],
+    "details": "Lunatic Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rainbow-shell",
+    "name": "Rainbow Shell",
+    "itemId": 1013,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Skill Crafting"
+    ],
+    "details": "Create Elemental Converter",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "red-bandana-0",
+    "name": "Red Bandana [0]",
+    "itemId": 2275,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Doctor Band",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "red-bijou",
+    "name": "Red Bijou",
+    "itemId": 7447,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x7 for Magistrate Hat [1], x7 for A-Yam Hat [1]",
+    "links": [],
+    "npcSellPrice": 549,
+    "npcBuyable": null
+  },
+  {
+    "id": "red-chile",
+    "name": "Red Chile",
+    "itemId": 7286,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "red-feather",
+    "name": "Red Feather",
+    "itemId": 7440,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x25 for Filir's Pinions, x10 for Rainbow Scarf, x300 for Little Angel Doll",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "red-gemstone",
+    "name": "Red Gemstone",
+    "itemId": 716,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Food",
+      "Skill Use",
+      "Job Quest"
+    ],
+    "details": "Wizard Job Quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "red-herb",
+    "name": "Red Herb",
+    "itemId": 507,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Food",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "red-muffler",
+    "name": "Red Muffler",
+    "itemId": 7216,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x300 for Hot-blooded Headband",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "red-prickly-fruit",
+    "name": "Red Prickly Fruit",
+    "itemId": 587,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x250 for Tropical Fruit Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "red-scarf",
+    "name": "Red Scarf",
+    "itemId": 10019,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "Smokie Pet accessory",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "red-spice",
+    "name": "Red Spice",
+    "itemId": 7456,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "refined-bradium",
+    "name": "Refined Bradium",
+    "itemId": 6090,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "reins",
+    "name": "Reins",
+    "itemId": 1064,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x1000 for Abysmal Knight Pet Evolution, x1000 for White Knight Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "reptile-tongue",
+    "name": "Reptile Tongue",
+    "itemId": 903,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "research-chart",
+    "name": "Research Chart",
+    "itemId": 7347,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x500 for Love Guard [1]",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "resin",
+    "name": "Resin",
+    "itemId": 907,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x100 for Parcel Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "ribbon-1",
+    "name": "Ribbon [1]",
+    "itemId": 2209,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Red Ribbon",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ring-of-death",
+    "name": "Ring of Death",
+    "itemId": 10031,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rocker-doll",
+    "name": "Rocker Doll",
+    "itemId": 752,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rocker-glasses",
+    "name": "Rocker Glasses",
+    "itemId": 10014,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "romantic-flower-0",
+    "name": "Romantic Flower [0]",
+    "itemId": 2269,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Flower Hairpin",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "romantic-gent-0",
+    "name": "Romantic Gent [0]",
+    "itemId": 2247,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Feather Bonnet",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rosary-0",
+    "name": "Rosary [0]",
+    "itemId": 2608,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Cross Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "rose-quartz",
+    "name": "Rose Quartz",
+    "itemId": 7293,
+    "actions": [
+      "Vend",
+      "Keep"
+    ],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Server Hat Quest"
+    ],
+    "details": "x10 for Crimson Rose",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rotten-bandage",
+    "name": "Rotten Bandage",
+    "itemId": 930,
+    "actions": [
+      "NPC",
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x500 for Giant Band Aid",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rotten-fish",
+    "name": "Rotten Fish",
+    "itemId": 624,
+    "actions": [],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Chonchon Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rotten-meat",
+    "name": "Rotten Meat",
+    "itemId": 7564,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rouge",
+    "name": "Rouge",
+    "itemId": 739,
+    "actions": [
+      "NPC",
+      "Keep"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x10 for Blush of Groom",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rough-elunium",
+    "name": "Rough Elunium",
+    "itemId": 757,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Skill Crafting"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "rough-oridecon",
+    "name": "Rough Oridecon",
+    "itemId": 756,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Skill Crafting"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 341,
+    "npcBuyable": null
+  },
+  {
+    "id": "rough-wind",
+    "name": "Rough Wind",
+    "itemId": 996,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Server Hat Quest"
+    ],
+    "details": "x50 for Fish in Mouth",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "royal-cooking-kit",
+    "name": "Royal Cooking Kit",
+    "itemId": 12128,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "royal-jelly",
+    "name": "Royal Jelly",
+    "itemId": 526,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Valuable Consumable",
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "+10 DEX Food, x100 for Candle Hat, x2 for Baby Pacifier",
+    "links": [],
+    "npcSellPrice": 4300,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "rune-of-darkness",
+    "name": "Rune of Darkness",
+    "itemId": 7511,
+    "actions": [
+      "Vend",
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest",
+      "Other Quest"
+    ],
+    "details": "x5 for Odin's Temple Excavation Quest, x30 for Ancient Mummy Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "rusty-iron",
+    "name": "Rusty Iron",
+    "itemId": 625,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Steel Chonchon Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "rusty-screw",
+    "name": "Rusty Screw",
+    "itemId": 7317,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Other Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x10 for Factory Quest, x10 for Finding the Moving Island Quest (Moscovia Dungeon Access), x500 for Alicel Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "safety-helmet-0",
+    "name": "Safety Helmet [0]",
+    "itemId": 5009,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Mine Helmet",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sakkat-0",
+    "name": "Sakkat [0]",
+    "itemId": 2280,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Straw Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sand-clump",
+    "name": "Sand Clump",
+    "itemId": 7124,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "santa-hat-0",
+    "name": "Santa Hat [0]",
+    "itemId": 2236,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Party Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sap-jelly",
+    "name": "Sap Jelly",
+    "itemId": 23187,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Nine Tail Taming Item, x3 for Cat o' Nine Tails Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sapphire",
+    "name": "Sapphire",
+    "itemId": 726,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sardonyx",
+    "name": "Sardonyx",
+    "itemId": 725,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "x1 for new world quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "savory-sauce",
+    "name": "Savory Sauce",
+    "itemId": 7454,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "scarlet-dyestuffs",
+    "name": "Scarlet Dyestuffs",
+    "itemId": 975,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x1 for Fashionable Glasses, x20 for Gangster Scarf, x1 for Red Bonnet",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "scatleton-memory",
+    "name": "Scatleton Memory",
+    "itemId": null,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x2 for Skelion Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "scell",
+    "name": "Scell",
+    "itemId": 911,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "scorpion-nipper",
+    "name": "Scorpion Nipper",
+    "itemId": 1046,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "+10 AGI Food",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "scorpion-tail",
+    "name": "Scorpion Tail",
+    "itemId": 904,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Skill Crafting",
+      "Cooking"
+    ],
+    "details": "Create Elemental Converter, +10 AGI Food",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sea-otter-fur",
+    "name": "Sea-otter Fur",
+    "itemId": 7065,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x300 for Raccoon Hat, x10 for Finding the Moving Island Quest (Moscovia Dungeon)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sharp-leaf",
+    "name": "Sharp Leaf",
+    "itemId": 7100,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Cooking"
+    ],
+    "details": "Green Salad",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sharp-scale",
+    "name": "Sharp Scale",
+    "itemId": 963,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "shell",
+    "name": "Shell",
+    "itemId": 935,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x100 for Rigid Nightmare Terror Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "shining-scale",
+    "name": "Shining Scale",
+    "itemId": 954,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "x300 for for Little Isis Pet Evolution, x300 for Magistrate Hat [1], x300 for A-Yam Hat [1]",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "shining-stone",
+    "name": "Shining Stone",
+    "itemId": 640,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution"
+    ],
+    "details": "Petite Taming Item, x3 for Earth Deleter Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "shoot",
+    "name": "Shoot",
+    "itemId": 711,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Pet Food",
+      "Cooking",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "short-daenggie",
+    "name": "Short Daenggie",
+    "itemId": 1094,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "shoulder-protector",
+    "name": "Shoulder Protector",
+    "itemId": 7196,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "shrimp",
+    "name": "Shrimp",
+    "itemId": 567,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Consumable"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 310,
+    "npcBuyable": null
+  },
+  {
+    "id": "sidewinder-card",
+    "name": "Sidewinder Card",
+    "itemId": 4117,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Card"
+    ],
+    "details": "x1 for Chick Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "silk-ribbon",
+    "name": "Silk Ribbon",
+    "itemId": 10007,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Accessory",
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Bao Bao, x1 for Red Ribbon",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "silk-robe",
+    "name": "Silk Robe",
+    "itemId": 2322,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "silver-knife-of-chastity",
+    "name": "Silver Knife of Chastity",
+    "itemId": 638,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Sohee Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "singing-flower",
+    "name": "Singing Flower",
+    "itemId": 629,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Rocker Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "singing-plant",
+    "name": "Singing Plant",
+    "itemId": 707,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Opera Masque, x3 for Metaller Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "single-cell",
+    "name": "Single Cell",
+    "itemId": 1052,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "skel-bone",
+    "name": "Skel-Bone",
+    "itemId": 932,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "skirt-of-virgin",
+    "name": "Skirt of Virgin",
+    "itemId": 1049,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x20 for Bride Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "skull",
+    "name": "Skull",
+    "itemId": 7005,
+    "actions": [
+      "Vend",
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Server Hat Quest"
+    ],
+    "details": "x500 for Skull Cap, x1000 for Dark Illusion Pet Evolution, x500 for Contaminated Wanderer Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "skull-helm",
+    "name": "Skull Helm",
+    "itemId": 10001,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "slick-paper",
+    "name": "Slick Paper",
+    "itemId": 7111,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x100 for Party Hat, x100 for Censor Bar",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "small-doll-needle",
+    "name": "Small Doll Needle",
+    "itemId": 23189,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Teddy Bear Taming Item, x3 for Abandoned Teddy Bear Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "small-snow-flower",
+    "name": "Small Snow Flower",
+    "itemId": 6098,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "smokie-doll",
+    "name": "Smokie Doll",
+    "itemId": null,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "snails-shell",
+    "name": "Snail's Shell",
+    "itemId": 946,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Skill Crafting"
+    ],
+    "details": "Create Elemental Converter",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "snake-scale",
+    "name": "Snake Scale",
+    "itemId": 926,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "soft-apron",
+    "name": "Soft Apron",
+    "itemId": 661,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Server Hat Quest"
+    ],
+    "details": "x3 for Alice Doll, x3 for Defolty Doll, x3 for Glaris Doll, Alice Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "soft-blade-of-grass",
+    "name": "Soft Blade of Grass",
+    "itemId": 7194,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "x108 for Cowboy Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "soft-feather",
+    "name": "Soft Feather",
+    "itemId": 7063,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x100 for Feather Beret, x200 for Skull Cap, x250 for Dress Hat, x300 for Purple Cowboy Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "soft-silk",
+    "name": "Soft Silk",
+    "itemId": 7166,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x500 for Rainbow Scarf",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sohee-card",
+    "name": "Sohee Card",
+    "itemId": 4100,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Moonlight Flower Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "solid-husk",
+    "name": "Solid Husk",
+    "itemId": 7190,
+    "actions": [
+      "NPC",
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "x1 for Ayothaya Dungeon Entrance Quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "solid-iron-piece",
+    "name": "Solid Iron Piece",
+    "itemId": 7507,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "solid-peach",
+    "name": "Solid Peach",
+    "itemId": 7164,
+    "actions": [
+      "Whobuy",
+      "NPC"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "solid-shell",
+    "name": "Solid Shell",
+    "itemId": 943,
+    "actions": [
+      "Keep",
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1200 for Magician Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "solid-trunk",
+    "name": "Solid Trunk",
+    "itemId": 1067,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "spawn",
+    "name": "Spawn",
+    "itemId": 908,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "spicy-sauce",
+    "name": "Spicy Sauce",
+    "itemId": 7455,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "spiritual-bandage",
+    "name": "Spiritual Bandage",
+    "itemId": null,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Mummy Taming Item, x3 for Ancient Mummy Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "splendid-mirror",
+    "name": "Splendid Mirror",
+    "itemId": 12368,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Medusa Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "spool",
+    "name": "Spool",
+    "itemId": 7217,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Dungeon Quest"
+    ],
+    "details": "x1 for Ayothaya Dungeon Entrance Quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "spring",
+    "name": "Spring",
+    "itemId": 10035,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "spring-rabbit-card",
+    "name": "Spring Rabbit Card",
+    "itemId": 4227,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Card"
+    ],
+    "details": "x1 for Bunny Ears Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "squid-ink",
+    "name": "Squid Ink",
+    "itemId": 1024,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Cooking",
+      "Official Hat Quest",
+      "Job Quest",
+      "Misc"
+    ],
+    "details": "x1 for Sage Job Quest, x100 for Bride Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "staff-of-leader",
+    "name": "Staff of Leader",
+    "itemId": 12364,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Goblin Leader Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "star-crumb",
+    "name": "Star Crumb",
+    "itemId": 1000,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Misc"
+    ],
+    "details": "x50 for Advanced Assassin Mask",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "star-dust",
+    "name": "Star Dust",
+    "itemId": 1001,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "steel",
+    "name": "Steel",
+    "itemId": 999,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Arrow Crafting",
+      "Alchemy / Brewing / Potions",
+      "Misc"
+    ],
+    "details": "x10 for Cake Hat, x25 for Mine Helmet, x20 for Grief for Greed, x10 for Cresent Hairpin, x40 for Hat of the Sun God, x10 for Flower Hairpin, x100 for Binoculars, x40 for Headset",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "stellar",
+    "name": "Stellar",
+    "itemId": 2294,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Equipment"
+    ],
+    "details": "x1 for X Hairpin",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "stellar-hairpin",
+    "name": "Stellar Hairpin",
+    "itemId": 10011,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Accessory",
+      "Official Hat Quest",
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "stem",
+    "name": "Stem",
+    "itemId": 905,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Alchemy / Brewing / Potions",
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sticky-mucus",
+    "name": "Sticky Mucus",
+    "itemId": 938,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Misc"
+    ],
+    "details": "x800 for Grief for Greed, x99 for Censor Bar",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sticky-poison",
+    "name": "Sticky Poison",
+    "itemId": 7565,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sticky-webfoot",
+    "name": "Sticky Webfoot",
+    "itemId": 918,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "stiletto-2",
+    "name": "Stiletto [2]",
+    "itemId": 1216,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 7200,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "stinky-scale",
+    "name": "Stinky Scale",
+    "itemId": 959,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "stone-heart",
+    "name": "Stone Heart",
+    "itemId": 953,
+    "actions": [
+      "Whobuy",
+      "Vend"
+    ],
+    "categories": [
+      "Repeatable Quest",
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "strange-steel-piece",
+    "name": "Strange Steel Piece",
+    "itemId": 7167,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "x10 for Finding the Moving Island Quest (Moscovia Dungeon)",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "straw-basket",
+    "name": "Straw Basket",
+    "itemId": 7299,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "straw-hat-0",
+    "name": "Straw Hat [0]",
+    "itemId": 5062,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Sombrero",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "strawberry",
+    "name": "Strawberry",
+    "itemId": 578,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Valuable Consumable"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "summer-fan",
+    "name": "Summer Fan",
+    "itemId": 10030,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sunday-hat-0",
+    "name": "Sunday Hat [0]",
+    "itemId": 5032,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Red Bonnet",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sunflower-0",
+    "name": "Sunflower [0]",
+    "itemId": 2253,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Equipment"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sunset-on-the-rock",
+    "name": "Sunset on the Rock",
+    "itemId": 6107,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sushi",
+    "name": "Sushi",
+    "itemId": 551,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "suspicious-bottle",
+    "name": "Suspicious Bottle",
+    "itemId": 25231,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sweet-milk",
+    "name": "Sweet Milk",
+    "itemId": 627,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution"
+    ],
+    "details": "Savage Babe Taming Item, x3 for Savage Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sweet-potato",
+    "name": "Sweet Potato",
+    "itemId": 633,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Smokie Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sweet-sauce",
+    "name": "Sweet Sauce",
+    "itemId": 7453,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "sweets-festival-coin",
+    "name": "Sweets Festival Coin",
+    "itemId": null,
+    "actions": [
+      "Keep",
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Event Item Currency"
+    ],
+    "details": "Item only drops seasonally. x500 for Sweet Drops Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "talon",
+    "name": "Talon",
+    "itemId": 917,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "talon-of-griffon",
+    "name": "Talon of Griffon",
+    "itemId": 7048,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x40 for Deviruchi Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tangled-chains",
+    "name": "Tangled Chains",
+    "itemId": 7221,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tantan-noodle",
+    "name": "Tantan Noodle",
+    "itemId": 12395,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Green Maiden Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tassel",
+    "name": "Tassel",
+    "itemId": 7301,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1,887 for Renown Detective's Cap [1]",
+    "links": [],
+    "npcSellPrice": 494,
+    "npcBuyable": null
+  },
+  {
+    "id": "tassel-for-durumagi",
+    "name": "Tassel for Durumagi",
+    "itemId": 10026,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "teddy-bear-card",
+    "name": "Teddy Bear Card",
+    "itemId": 4340,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for Alicel Pet Evolution, x1 for Aliot Pet Evolution, x1 for Abandoned Teddy Bear Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tendon",
+    "name": "Tendon",
+    "itemId": 1050,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tentacle",
+    "name": "Tentacle",
+    "itemId": 962,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "thara-frog-card",
+    "name": "Thara Frog Card",
+    "itemId": 4058,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "Card"
+    ],
+    "details": "x1 for Defolty Doll, x1 for Glaris Doll",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "three-headed-dragons-head",
+    "name": "Three-Headed Dragon's Head",
+    "itemId": 7443,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 592,
+    "npcBuyable": null
+  },
+  {
+    "id": "tiger-panty",
+    "name": "Tiger Panty",
+    "itemId": 7267,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tigers-footskin",
+    "name": "Tiger's Footskin",
+    "itemId": 1030,
+    "actions": [
+      "Vend",
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest"
+    ],
+    "details": "x10 for Boy's Cap, x20 for Eddga Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tiny-egg-shell",
+    "name": "Tiny Egg Shell",
+    "itemId": 10012,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tongue",
+    "name": "Tongue",
+    "itemId": 1015,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "+10 STR Food, x1 for Spore Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tooth-of-bat",
+    "name": "Tooth of Bat",
+    "itemId": 913,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "topaz",
+    "name": "Topaz",
+    "itemId": 728,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x250 for Moonlight Flower Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "torn-paper-piece",
+    "name": "Torn Paper Piece",
+    "itemId": null,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tough-scalelike-stem",
+    "name": "Tough Scalelike Stem",
+    "itemId": 7012,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x200 for Raccoon Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tough-vines",
+    "name": "Tough Vines",
+    "itemId": 7197,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Dungeon Quest",
+      "Other Quest"
+    ],
+    "details": "x300 for Straw Hat, x20 for Finding the Moving Island Quest (Moscovia Dungeon Access), x20 for New Surroundings Quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "toxic-gas",
+    "name": "Toxic Gas",
+    "itemId": 7322,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "transparent-head-protector",
+    "name": "Transparent Head Protector",
+    "itemId": 10003,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "transparent-plate",
+    "name": "Transparent Plate",
+    "itemId": 7352,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "tree-root",
+    "name": "Tree Root",
+    "itemId": 902,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "tropical-banana",
+    "name": "Tropical Banana",
+    "itemId": 634,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution",
+      "Cooking"
+    ],
+    "details": "Yoyo Taming Item, x3 for Choco Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "trunk",
+    "name": "Trunk",
+    "itemId": 1019,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Cooking",
+      "Official Hat Quest"
+    ],
+    "details": "x120 for Sakkat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "turquoise",
+    "name": "Turquoise",
+    "itemId": 7294,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Refining / Ore / Forging",
+      "Server Hat Quest"
+    ],
+    "details": "x20 for Santa Poring Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "turtle-shell",
+    "name": "Turtle Shell",
+    "itemId": 967,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "unripe-apple",
+    "name": "Unripe Apple",
+    "itemId": 619,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution",
+      "Cooking",
+      "Dungeon Quest"
+    ],
+    "details": "x1 for Veins Siblings Quest, Poring Taming Item, x3 for Mastering Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "used-iron-plate",
+    "name": "Used Iron Plate",
+    "itemId": 7319,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Other Quest"
+    ],
+    "details": "x10 for Factory Quest",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "vagabonds-skull",
+    "name": "Vagabond's Skull",
+    "itemId": 14574,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Wanderer Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "valhallas-flower",
+    "name": "Valhalla's Flower",
+    "itemId": 7510,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x50 for Dark Randgris Helm",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "venom-canine",
+    "name": "Venom Canine",
+    "itemId": 937,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Skill Crafting",
+      "Official Hat Quest"
+    ],
+    "details": "Create Deadly Poison",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "very-red-juice",
+    "name": "Very Red Juice",
+    "itemId": 12360,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Loli Ruri Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "very-soft-plant",
+    "name": "Very Soft Plant",
+    "itemId": 12359,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item"
+    ],
+    "details": "Leaf Cat Taming Item",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "violet-dyestuffs",
+    "name": "Violet Dyestuffs",
+    "itemId": 981,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Official Hat Quest"
+    ],
+    "details": "x3 for Am Mut Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "wanderer-card",
+    "name": "Wanderer Card",
+    "itemId": 4210,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x3 for Contaminated Wanderer Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": null
+  },
+  {
+    "id": "wedding-bouquet",
+    "name": "Wedding Bouquet",
+    "itemId": 745,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "well-ripened-berry",
+    "name": "Well Ripened Berry",
+    "itemId": 6106,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "well-baked-cookie",
+    "name": "Well-baked Cookie",
+    "itemId": 538,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Consumable"
+    ],
+    "details": "x15 for Cake Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "well-dried-bone",
+    "name": "Well-Dried Bone",
+    "itemId": 628,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Taming Item",
+      "Pet Evolution",
+      "Server Hat Quest"
+    ],
+    "details": "x20 for Pirate Dagger, Baby Desert Wolf Taming Item, x3 for Desert Wolf Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "western-grace-0",
+    "name": "Western Grace [0]",
+    "itemId": 2248,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Cowboy Hat",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "white-dyestuffs",
+    "name": "White Dyestuffs",
+    "itemId": 982,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Chef Hat, x1 for Hot-blooded Headband, x1 for Feather Beret, x1 for Mystic Rose",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "white-herb",
+    "name": "White Herb",
+    "itemId": 509,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "x50 for Angeling Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "white-mask",
+    "name": "White Mask",
+    "itemId": 7568,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "white-potion",
+    "name": "White Potion",
+    "itemId": 504,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Consumable",
+      "Pet Food"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "wig",
+    "name": "Wig",
+    "itemId": 10005,
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "Dokebi Pet accessory",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wild-flower",
+    "name": "Wild Flower",
+    "itemId": 10009,
+    "actions": [],
+    "categories": [
+      "Pet Accessory"
+    ],
+    "details": "Orc Warror pet accessory",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wild-rose-card",
+    "name": "Wild Rose Card",
+    "itemId": 4257,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x10 for Eddga Pet Evolution",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "will-of-red-darkness",
+    "name": "Will of Red Darkness",
+    "itemId": 7566,
+    "actions": [],
+    "categories": [],
+    "details": "",
+    "links": [],
+    "npcSellPrice": null,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "will-of-the-darkness",
+    "name": "Will of the Darkness",
+    "itemId": 7340,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x200 for Hodremlin Pet Evolution",
+    "links": [],
+    "npcSellPrice": 455,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wind-of-verdure",
+    "name": "Wind of Verdure",
+    "itemId": 992,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Skill Use"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 620,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wing-of-dragonfly",
+    "name": "Wing of Dragonfly",
+    "itemId": 7064,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest",
+      "Server Hat Quest"
+    ],
+    "details": "x500 for Wonder Nutshell, x350 for Bunny Ears Hat",
+    "links": [],
+    "npcSellPrice": 322,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wing-of-red-bat",
+    "name": "Wing of Red Bat",
+    "itemId": 7006,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Cooking",
+      "Job Quest"
+    ],
+    "details": "Knight Job Quest",
+    "links": [],
+    "npcSellPrice": 104,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "witched-starsand",
+    "name": "Witched Starsand",
+    "itemId": 1061,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Alchemy / Brewing / Potions",
+      "Cooking"
+    ],
+    "details": "Used for creating Slim Potions",
+    "links": [],
+    "npcSellPrice": 300,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "witherless-rose",
+    "name": "Witherless Rose",
+    "itemId": 748,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x3 for Mystic Rose",
+    "links": [],
+    "npcSellPrice": 7500,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "wizard-hat-0",
+    "name": "Wizard Hat [0]",
+    "itemId": 2252,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1 for Mage Hat, x1 for Magician Hat",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wolf-claw",
+    "name": "Wolf Claw",
+    "itemId": 920,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 35,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wooden-gnarl",
+    "name": "Wooden Gnarl",
+    "itemId": 7222,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x450 for Well-Chewed Pencil",
+    "links": [],
+    "npcSellPrice": 290,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wooden-heart",
+    "name": "Wooden Heart",
+    "itemId": 7189,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Server Hat Quest"
+    ],
+    "details": "x20 for Pirate Dagger, x500 for Umbala Spirit",
+    "links": [],
+    "npcSellPrice": 421,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "worm-peeling",
+    "name": "Worm Peeling",
+    "itemId": 955,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 121,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "worn-out-page",
+    "name": "Worn Out Page",
+    "itemId": 1097,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 587,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "worn-out-scroll",
+    "name": "Worn Out Scroll",
+    "itemId": 618,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 31,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "worn-out-kimono",
+    "name": "Worn-out Kimono",
+    "itemId": 7153,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 365,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "worn-out-magic-scroll",
+    "name": "Worn-out Magic Scroll",
+    "itemId": 7099,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 478,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "worn-out-prison-uniform",
+    "name": "Worn-out Prison Uniform",
+    "itemId": 1099,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x1500 for Striped Hairband",
+    "links": [],
+    "npcSellPrice": 421,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wraith-card",
+    "name": "Wraith Card",
+    "itemId": 4190,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Dark Lord Pet Evolution, x5 for Dark Illusion Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yam",
+    "name": "Yam",
+    "itemId": 549,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 111,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yao-jun-card-hyegun",
+    "name": "Yao Jun Card (Hyegun)",
+    "itemId": 4328,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "x1 for Yao Jun Pet Evolution (Hyegun)",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yarn",
+    "name": "Yarn",
+    "itemId": 7038,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x500 for Beanie",
+    "links": [],
+    "npcSellPrice": 62,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yellow-bijou",
+    "name": "Yellow Bijou",
+    "itemId": 7448,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "details": "x7 for Magistrate Hat [1], x7 for A-Yam Hat [1]",
+    "links": [],
+    "npcSellPrice": 549,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yellow-gemstone",
+    "name": "Yellow Gemstone",
+    "itemId": 715,
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skill Use",
+      "Job Quest"
+    ],
+    "details": "Wizard Job Quest",
+    "links": [],
+    "npcSellPrice": 372,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yellow-herb",
+    "name": "Yellow Herb",
+    "itemId": 508,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Pet Food",
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "x100 for Chaotic Baphomet Jr Pet Evolution, x200 for Metaller Pet Evolution",
+    "links": [],
+    "npcSellPrice": 24,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yellow-potion",
+    "name": "Yellow Potion",
+    "itemId": 503,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 111,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "yellow-spice",
+    "name": "Yellow Spice",
+    "itemId": 7452,
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "+10 DEX Food",
+    "links": [],
+    "npcSellPrice": 620,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "yellow-vital-flower",
+    "name": "Yellow Vital Flower",
+    "itemId": 6110,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet Food"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 620,
+    "npcBuyable": "npc-only"
+  },
+  {
+    "id": "yggdrasil-berry",
+    "name": "Yggdrasil Berry",
+    "itemId": 607,
+    "actions": [
+      "Keep",
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking"
+    ],
+    "details": "+10 DEX Food",
+    "links": [],
+    "npcSellPrice": 3100,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yggdrasil-leaf",
+    "name": "Yggdrasil Leaf",
+    "itemId": 610,
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Consumable",
+      "Pet Evolution",
+      "Cooking"
+    ],
+    "details": "x3 for Mastering Pet Evolution",
+    "links": [],
+    "npcSellPrice": 2480,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "yggdrasil-seed",
+    "name": "Yggdrasil Seed",
+    "itemId": 608,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Cooking",
+      "Valuable Consumable"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 3100,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yoyo-card",
+    "name": "Yoyo Card",
+    "itemId": 4051,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x1 for Choco Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "yoyo-doll",
+    "name": "Yoyo Doll",
+    "itemId": 753,
+    "actions": [
+      "Vend",
+      "NPC"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Dungeon Quest"
+    ],
+    "details": "x2 for Choco Pet Evolution, xVaries for Sign Quest",
+    "links": [],
+    "npcSellPrice": 3720,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "zargon",
+    "name": "Zargon",
+    "itemId": 912,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 297,
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "zenorc-card",
+    "name": "Zenorc Card",
+    "itemId": 4096,
+    "actions": [
+      "Card Recycler",
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "zenorcs-fang",
+    "name": "Zenorc's Fang",
+    "itemId": 1044,
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Alchemy / Brewing / Potions"
+    ],
+    "details": "",
+    "links": [],
+    "npcSellPrice": 132,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "zhu-po-long-card-dancing-dragon",
+    "name": "Zhu Po Long Card (Dancing Dragon)",
+    "itemId": 4272,
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Card"
+    ],
+    "details": "x10 for Bascojin Pet Evolution",
+    "links": [],
+    "npcSellPrice": 12,
+    "npcBuyable": "no"
+  },
+  {
+    "id": "zircon",
+    "name": "Zircon",
+    "itemId": 729,
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Misc"
+    ],
+    "details": "-",
+    "links": [],
+    "npcSellPrice": 3720,
+    "npcBuyable": "yes"
+  }
+]
