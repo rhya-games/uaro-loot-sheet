@@ -1,4 +1,6 @@
 import { useMemo } from 'react';
+import { XMarkIcon } from '@heroicons/react/24/outline';
+import Tooltip from './Tooltip.jsx';
 import CheckboxGroup from './CheckboxGroup.jsx';
 import { ActionBadge, CategoryBadge } from './ItemBadges.jsx';
 import { ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES } from '../utils/labels.js';
@@ -16,8 +18,20 @@ import { countActiveFilters, countOptions, listOptions, toggleValue } from '../u
  *   onClear    - called when "Clear all" is clicked
  *   ignoreKeep - true when "I don't keep items" is on
  *   onIgnoreKeepChange - called with true/false when that switch changes
+ *   onClose    - optional: shows a close (×) button that calls this
+ *   closeButtonRef - optional ref for that button (so it can be focused)
  */
-export default function FilterSidebar({ allItems, items, filters, onChange, onClear, ignoreKeep, onIgnoreKeepChange }) {
+export default function FilterSidebar({
+  allItems,
+  items,
+  filters,
+  onChange,
+  onClear,
+  ignoreKeep,
+  onIgnoreKeepChange,
+  onClose,
+  closeButtonRef,
+}) {
   const usedForOptions = useMemo(() => listOptions(allItems, 'usedFor'), [allItems]);
 
   /** Shared props for one group's CheckboxGroup. */
@@ -32,12 +46,28 @@ export default function FilterSidebar({ allItems, items, filters, onChange, onCl
 
   return (
     <div>
-      <div className="flex items-center justify-between pb-1">
-        <h2 className="text-sm font-bold tracking-wide text-gray-500 uppercase">Filters</h2>
+      {/* Stays pinned to the top of the panel while the filters scroll underneath. */}
+      <div className="sticky top-0 z-10 -mx-4 flex items-center gap-3 border-b border-gray-200 bg-white px-4 pt-3 pb-2">
+        <h2 className="text-sm font-bold tracking-wide text-gray-600 uppercase">Filters</h2>
         {countActiveFilters(filters) > 0 && (
-          <button type="button" onClick={onClear} className="text-sm text-emerald-700 hover:underline">
+          <button type="button" onClick={onClear} className="ml-auto text-sm text-emerald-700 hover:underline">
             Clear all
           </button>
+        )}
+        {onClose && (
+          <span className={countActiveFilters(filters) > 0 ? '' : 'ml-auto'}>
+            <Tooltip text="Close filters" placement="bottom">
+              <button
+                ref={closeButtonRef}
+                type="button"
+                onClick={onClose}
+                aria-label="Close filters"
+                className="flex size-8 items-center justify-center rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+              >
+                <XMarkIcon className="size-5" aria-hidden="true" />
+              </button>
+            </Tooltip>
+          </span>
         )}
       </div>
 

@@ -27,7 +27,7 @@ export default function SiteHeader({ route }) {
         </div>
 
         <nav aria-label="Site">
-          <ul className="flex gap-1">
+          <ul className="flex flex-wrap gap-1">
             {NAV_LINKS.map((link) => {
               const current = link.route === route;
               return (
@@ -36,7 +36,7 @@ export default function SiteHeader({ route }) {
                     href={ROUTES[link.route]}
                     aria-current={current ? 'page' : undefined}
                     // The header is dark green, so the focus ring is white here.
-                    className={`block rounded-lg px-3 py-2 text-sm font-medium focus-visible:outline-white ${
+                    className={`block rounded-lg px-3 py-2 text-sm font-medium whitespace-nowrap focus-visible:outline-white ${
                       current ? 'bg-emerald-900 text-white' : 'text-emerald-50 hover:bg-emerald-700'
                     }`}
                   >

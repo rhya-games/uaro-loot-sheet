@@ -8,7 +8,7 @@ import ItemTable from './ItemTable.jsx';
  * so opening the filter sidebar on a small laptop switches to cards
  * instead of making the page scroll sideways.
  *
- * 1120px is just above the table's narrowest possible width (about 1110px).
+ * 1120px is just above the table's narrowest possible width (about 1100px).
  * If you add a column or widen one, measure again and raise it.
  *
  * Props:

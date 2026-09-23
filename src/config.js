@@ -1,3 +1,5 @@
+import { FlagIcon } from '@heroicons/react/24/outline';
+
 /**
  * Site-wide links and settings. Edit these here; the rest of the app reads them.
  */
@@ -31,15 +33,16 @@ export function itemReportUrl(item) {
 
 /**
  * Actions at the far right of each table row (and top right of each card).
- * With one action it shows as a link; with two or more they collapse into a
- * ⋮ menu. To add one, add an entry:
+ * With one action it shows as its icon (with a tooltip); with two or more
+ * they collapse into a ⋮ menu. To add one, add an entry:
  *
- *   label    - text shown to the user
+ *   label    - text for the tooltip / menu item
+ *   icon     - icon shown when it's the only action (https://heroicons.com)
  *   href     - (item) => URL the action opens
  *   external - true to open in a new tab
  */
 export const ROW_ACTIONS = [
-  { id: 'report', label: 'Report', href: itemReportUrl, external: true },
+  { id: 'report', label: 'Report Issue', icon: FlagIcon, href: itemReportUrl, external: true },
 ];
 
 /** Link to a new GitHub issue that isn't about one item (bugs, ideas, ...). */

@@ -1,5 +1,14 @@
 @import 'tailwindcss';
 
+/*
+ * Extra screen size: `wide:` = 1420px and up. That's where the filter panel
+ * has room to sit beside the table (see pages/LootPage.jsx).
+ * Named breakpoints are ordered correctly with sm/md/lg/xl, unlike min-[...] ones.
+ */
+@theme {
+  --breakpoint-wide: 88.75rem;
+}
+
 @layer base {
   /* One focus ring for everything you can tab to (buttons, links, inputs, checkboxes). */
   :focus-visible {

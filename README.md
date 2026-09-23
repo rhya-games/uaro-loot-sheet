@@ -33,4 +33,4 @@ scripts/              Data import and validation tools
 .github/              Data check on every PR, and the item report form
 ```
 
-Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? Use **Report** at the end of any item's row, or see the site's Feedback page.
+Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? Click the flag (Report Issue) at the end of any item's row, or see the site's Feedback page.

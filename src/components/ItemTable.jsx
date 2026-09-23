@@ -1,8 +1,10 @@
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
 import RowActions from './RowActions.jsx';
+import Tooltip from './Tooltip.jsx';
+import VerifiedText from './VerifiedText.jsx';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
-import { formatVerified, formatZeny, verifiedTooltip } from '../utils/format.js';
+import { formatZeny } from '../utils/format.js';
 
 /**
  * Table columns, in display order. To add a column, add an entry here.
@@ -90,7 +92,7 @@ const COLUMNS = [
     sortKey: 'lastVerified',
     nowrap: true,
     title: 'When this entry was last checked on the live server',
-    render: (item) => <span title={verifiedTooltip(item)}>{formatVerified(item.lastVerified)}</span>,
+    render: (item) => <VerifiedText item={item} />,
   },
   {
     label: 'Actions',
@@ -125,10 +127,12 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
                   !column.sortKey ? undefined : direction === 'asc' ? 'ascending' : direction === 'desc' ? 'descending' : 'none'
                 }
                 // Sticks 1rem below the top of the window (lined up with the sidebar).
-                // The shadow paints the page background above it, so rows scrolling
-                // past don't show through that gap.
+                // Two shadows: the first paints the page background above it, so rows
+                // scrolling past don't show through that gap; the second paints 1px of
+                // green to the right, hiding hairline seams between header cells.
                 className={`sticky top-4 z-10 bg-emerald-800 px-3 py-3 font-semibold whitespace-nowrap text-white
-                  shadow-[0_-1rem_0_0_var(--color-gray-50)] first:rounded-tl-lg last:rounded-tr-lg
+                  shadow-[0_-1rem_0_0_var(--color-gray-50),1px_0_0_0_var(--color-emerald-800)]
+                  first:rounded-tl-lg last:rounded-tr-lg last:shadow-[0_-1rem_0_0_var(--color-gray-50)]
                   ${column.numeric ? 'text-right' : 'text-left'} ${column.className ?? ''}`}
               >
                 {column.sortKey ? (
@@ -172,11 +176,10 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
 function SortButton({ column, direction, onSort }) {
   const arrow = direction === 'asc' ? '↑' : direction === 'desc' ? '↓' : '↕';
 
-  return (
+  const button = (
     <button
       type="button"
       onClick={() => onSort(column.sortKey)}
-      title={column.title}
       // The header is dark green, so the focus ring is white here (same size and shape).
       className="group/sort relative rounded font-semibold focus-visible:outline-white"
     >
@@ -190,5 +193,14 @@ function SortButton({ column, direction, onSort }) {
         {arrow}
       </span>
     </button>
+  );
+
+  // Headers stick to the top of the window, so their tooltips open below.
+  return column.title ? (
+    <Tooltip text={column.title} placement="bottom">
+      {button}
+    </Tooltip>
+  ) : (
+    button
   );
 }

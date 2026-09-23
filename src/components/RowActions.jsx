@@ -1,9 +1,11 @@
 import { useEffect, useId, useRef, useState } from 'react';
+import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
+import Tooltip from './Tooltip.jsx';
 import { ROW_ACTIONS } from '../config.js';
 
-/** Shared look for action links, both on their own and inside the menu. */
-const LINK_STYLE =
-  'text-sm text-gray-700 underline decoration-gray-400 underline-offset-2 hover:text-emerald-800 hover:decoration-emerald-800';
+/** Round icon button look, shared by the single action and the ⋮ menu button. */
+const ICON_BUTTON_STYLE =
+  'flex size-8 items-center justify-center rounded-full text-gray-600 hover:bg-gray-200 hover:text-gray-900';
 
 /** Props an <a> needs to open one row action. */
 function linkProps(action, item) {
@@ -15,7 +17,7 @@ function linkProps(action, item) {
 
 /**
  * The actions for one item (see ROW_ACTIONS in config.js).
- * One action: shown as a link. Two or more: a ⋮ menu button.
+ * One action: shown as its icon, with a tooltip. Two or more: a ⋮ menu button.
  *
  * Props:
  *   item - one entry from loot.json
@@ -23,15 +25,17 @@ function linkProps(action, item) {
 export default function RowActions({ item }) {
   if (ROW_ACTIONS.length === 1) {
     const [action] = ROW_ACTIONS;
+    const Icon = action.icon;
     return (
-      <a {...linkProps(action, item)} className={LINK_STYLE}>
-        {action.label}
-        <span className="sr-only">
-          {' '}
-          {item.name}
-          {action.external && ' (opens in a new tab)'}
-        </span>
-      </a>
+      <Tooltip text={action.label}>
+        <a
+          {...linkProps(action, item)}
+          aria-label={`${action.label}: ${item.name}${action.external ? ' (opens in a new tab)' : ''}`}
+          className={ICON_BUTTON_STYLE}
+        >
+          <Icon className="size-5" aria-hidden="true" />
+        </a>
+      </Tooltip>
     );
   }
   return <ActionsMenu item={item} />;
@@ -97,19 +101,21 @@ function ActionsMenu({ item }) {
 
   return (
     <div className="relative inline-block">
-      <button
-        ref={buttonRef}
-        type="button"
-        onClick={() => setOpen((isOpen) => !isOpen)}
-        onKeyDown={onButtonKeyDown}
-        aria-haspopup="menu"
-        aria-expanded={open}
-        aria-controls={menuId}
-        aria-label={`Actions for ${item.name}`}
-        className="flex size-8 items-center justify-center rounded-full text-lg leading-none text-gray-600 hover:bg-gray-200 hover:text-gray-900"
-      >
-        ⋮
-      </button>
+      <Tooltip text="More actions">
+        <button
+          ref={buttonRef}
+          type="button"
+          onClick={() => setOpen((isOpen) => !isOpen)}
+          onKeyDown={onButtonKeyDown}
+          aria-haspopup="menu"
+          aria-expanded={open}
+          aria-controls={menuId}
+          aria-label={`Actions for ${item.name}`}
+          className={ICON_BUTTON_STYLE}
+        >
+          <EllipsisVerticalIcon className="size-5" aria-hidden="true" />
+        </button>
+      </Tooltip>
       {open && (
         <ul
           ref={menuRef}

@@ -2,7 +2,8 @@ import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
 import RowActions from './RowActions.jsx';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
-import { formatVerified, formatZeny, verifiedTooltip } from '../utils/format.js';
+import VerifiedText from './VerifiedText.jsx';
+import { formatZeny } from '../utils/format.js';
 
 /**
  * One loot item shown as a card: name, what to do with it, what it's for,
@@ -46,16 +47,16 @@ export default function ItemCard({ item, onSelectUse }) {
         <Stat label="Avg. whobuy" value={formatZeny(item.avgWhobuy)} />
         <Stat label="NPC sell (OC 10)" value={formatZeny(item.npcSellPrice)} />
         <Stat label="Buy from NPC" value={NPC_BUYABLE_LABELS[item.npcBuyable] ?? '—'} />
-        <Stat label="Last verified" value={formatVerified(item.lastVerified)} title={verifiedTooltip(item)} />
+        <Stat label="Last verified" value={<VerifiedText item={item} />} />
       </dl>
     </article>
   );
 }
 
 /** One label/value pair in the price row. */
-function Stat({ label, value, title }) {
+function Stat({ label, value }) {
   return (
-    <div title={title || undefined}>
+    <div>
       <dt className="text-gray-500">{label}</dt>
       <dd className="font-medium text-gray-800">{value}</dd>
     </div>

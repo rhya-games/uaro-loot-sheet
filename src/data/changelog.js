@@ -27,7 +27,7 @@ export const CHANGELOG = [
     changes: [
       { type: 'Added', text: 'Searchable, sortable table of 643 items from the original Google Sheet.' },
       { type: 'Added', text: 'Filters for action, item type, category, and what an item is used for.' },
-      { type: 'Added', text: 'Report link on every item, plus About, Feedback, and Contribute pages.' },
+      { type: 'Added', text: 'Report Issue flag on every item, plus About, Feedback, and Contribute pages.' },
       { type: 'Changed', text: 'Items that NPCs sell are marked NPC instead of Vend or Whobuy.' },
       { type: 'Fixed', text: 'Five items had the wrong item ID (for example, Peaked Hat used Fly Wing’s ID).' },
       { type: 'Removed', text: 'The Junk and Card Recycler actions. Those items now show NPC or Vend.' },
