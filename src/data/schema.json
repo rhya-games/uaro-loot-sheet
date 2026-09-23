@@ -50,12 +50,13 @@
           }
         },
         "categories": {
-          "description": "What the item is used for. An item can be in several categories.",
+          "description": "What the item is used for. An item can be in several categories. Use [\"Uncategorized\"] if none fit.",
           "type": "array",
           "uniqueItems": true,
           "items": {
             "$ref": "#/$defs/category"
-          }
+          },
+          "minItems": 1
         },
         "uses": {
           "description": "What this item is needed for, and how many. e.g. [{ \"for\": \"Mystic Rose\", \"qty\": 10 }]. Use \"qty\": null when the amount varies. Optional \"note\" adds a short detail, e.g. \"each try\".",
@@ -169,12 +170,11 @@
         "Keep",
         "Vend",
         "Whobuy",
-        "NPC",
-        "Junk"
+        "NPC"
       ]
     },
     "category": {
-      "description": "Allowed categories: what the item is used for. To add a new one, add it here. (Consumable / Equipment / Misc are item types, not categories.)",
+      "description": "Allowed categories: what the item is used for. To add a new one, add it here (keep A-Z order; the colors follow it). \"Uncategorized\" stays last. (Consumable / Equipment / Misc are item types, not categories.)",
       "enum": [
         "Brewing",
         "Card",
@@ -188,7 +188,8 @@
         "Repeatable Quest",
         "Server Hat Quest",
         "Skills",
-        "uaRO"
+        "uaRO",
+        "Uncategorized"
       ]
     },
     "itemType": {

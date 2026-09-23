@@ -1,5 +1,6 @@
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
+import ReportLink from './ReportLink.jsx';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
 import { formatVerified, formatZeny, verifiedTooltip } from '../utils/format.js';
 
@@ -25,6 +26,8 @@ const COLUMNS = [
         <div className="mt-0.5 text-[13px] text-gray-600">
           {item.itemType}
           {item.itemId && ` · #${item.itemId}`}
+          {' · '}
+          <ReportLink item={item} />
         </div>
       </>
     ),

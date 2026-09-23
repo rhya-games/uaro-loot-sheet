@@ -81,6 +81,13 @@ for (const item of items) {
   if (item.categories?.includes('Card') && item.npcBuyable !== 'no') {
     errors.push(`${item.name}: cards can't be bought from NPCs, so npcBuyable must be "no"`);
   }
+  const soldByNpc = item.npcBuyable === 'yes' || item.npcBuyable === 'npc-only';
+  if (soldByNpc && item.actions?.some((action) => action === 'Vend' || action === 'Whobuy')) {
+    errors.push(`${item.name}: NPCs sell this, so use the "NPC" action instead of "Vend" or "Whobuy"`);
+  }
+  if (item.categories?.length > 1 && item.categories.includes('Uncategorized')) {
+    warnings.push(`${item.name}: has categories, so "Uncategorized" can be removed`);
+  }
 }
 
 // 3. Gentle reminders.

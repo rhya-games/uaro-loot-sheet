@@ -386,7 +386,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -642,7 +644,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -655,7 +659,7 @@
     "itemId": 7106,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Repeatable Quest",
@@ -829,7 +833,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -868,7 +874,9 @@
       "Vend",
       "Whobuy"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -901,7 +909,7 @@
     "itemId": 10013,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -1046,7 +1054,7 @@
     "itemId": 10017,
     "itemType": "Misc",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -1090,7 +1098,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -1103,7 +1113,7 @@
     "itemId": 10010,
     "itemType": "Misc",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -1138,7 +1148,7 @@
     "itemId": 10028,
     "itemType": "Misc",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -1234,8 +1244,7 @@
     "itemId": 925,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Repeatable Quest",
@@ -1585,7 +1594,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -1693,7 +1704,9 @@
       "Keep",
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [
       {
         "for": "Candle Hat",
@@ -1864,7 +1877,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -1879,7 +1894,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -1894,7 +1911,9 @@
     "actions": [
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -1909,7 +1928,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -2266,7 +2287,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -2991,7 +3014,9 @@
     "actions": [
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -3006,7 +3031,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -3103,7 +3130,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -3160,7 +3189,9 @@
       "Vend",
       "Whobuy"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -3357,7 +3388,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -3481,7 +3514,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -3545,7 +3580,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -3729,7 +3766,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4043,7 +4082,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4214,7 +4255,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4229,7 +4272,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4244,7 +4289,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4257,10 +4304,11 @@
     "itemId": 1066,
     "itemType": "Misc",
     "actions": [
-      "Junk",
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4443,7 +4491,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4522,7 +4572,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4535,7 +4587,9 @@
     "itemId": 7436,
     "itemType": "Misc",
     "actions": [],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4548,7 +4602,9 @@
     "itemId": 7439,
     "itemType": "Misc",
     "actions": [],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4561,7 +4617,9 @@
     "itemId": 7438,
     "itemType": "Misc",
     "actions": [],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4574,7 +4632,9 @@
     "itemId": 7437,
     "itemType": "Misc",
     "actions": [],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4735,7 +4795,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4778,7 +4840,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4839,7 +4903,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4855,7 +4921,9 @@
       "Vend",
       "Whobuy"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4870,7 +4938,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -4886,7 +4956,9 @@
       "Vend",
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -5047,7 +5119,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -5101,7 +5175,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -5301,7 +5377,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -5404,7 +5482,9 @@
     "actions": [
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -5436,7 +5516,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -5601,7 +5683,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -5616,7 +5700,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -5695,7 +5781,9 @@
       "Vend",
       "Whobuy"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -5940,7 +6028,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6002,7 +6092,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6062,7 +6154,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6157,7 +6251,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6278,7 +6374,9 @@
     "actions": [
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6293,7 +6391,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6308,7 +6408,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6364,7 +6466,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6427,7 +6531,7 @@
     "itemType": "Equipment",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Official Hat Quest"
@@ -6594,7 +6698,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6679,7 +6785,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6766,7 +6874,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -6781,7 +6891,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -7149,7 +7261,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -7234,7 +7348,7 @@
     "itemId": 522,
     "itemType": "Consumable",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Pet Evolution",
@@ -7313,7 +7427,7 @@
     "itemId": 934,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -7466,7 +7580,7 @@
     "itemId": 10002,
     "itemType": "Misc",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -7537,7 +7651,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -7712,7 +7828,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -7981,7 +8099,9 @@
       "Keep",
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "Open it, silly!",
     "links": [],
@@ -8075,7 +8195,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -8116,7 +8238,9 @@
       "Keep",
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "Open it, silly!",
     "links": [],
@@ -8295,7 +8419,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -8365,7 +8491,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -8501,9 +8629,11 @@
     "itemId": 2339,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -8518,7 +8648,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -8533,7 +8665,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -8750,7 +8884,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -8817,7 +8953,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -8897,7 +9035,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -8993,7 +9133,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -9070,7 +9212,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -9144,7 +9288,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -9509,7 +9655,9 @@
     "actions": [
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -9653,7 +9801,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -9666,7 +9816,7 @@
     "itemId": 10014,
     "itemType": "Misc",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -9816,7 +9966,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10088,7 +10240,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10149,7 +10303,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10164,7 +10320,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [
       {
         "for": "New World Quest",
@@ -10358,7 +10516,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10477,7 +10637,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10492,7 +10654,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10507,7 +10671,9 @@
     "actions": [
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10575,7 +10741,9 @@
     "actions": [
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10653,7 +10821,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10668,7 +10838,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -10855,7 +11027,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -11094,7 +11268,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -11208,7 +11384,7 @@
     "itemId": 10035,
     "itemType": "Misc",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -11321,7 +11497,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -11475,7 +11653,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -11507,7 +11687,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -11581,7 +11763,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -11672,9 +11856,11 @@
     "itemId": 2253,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -11823,7 +12009,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -11860,7 +12048,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -11981,7 +12171,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -12025,7 +12217,9 @@
     "actions": [
       "Vend"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -12085,7 +12279,7 @@
     "itemId": 10012,
     "itemType": "Misc",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -12127,7 +12321,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -12166,7 +12362,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -12237,7 +12435,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -12250,7 +12450,7 @@
     "itemId": 10003,
     "itemType": "Misc",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -12286,7 +12486,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -12374,7 +12576,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -12757,7 +12961,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -12787,7 +12993,7 @@
     "itemId": 10005,
     "itemType": "Misc",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -12843,7 +13049,9 @@
     "itemId": 7566,
     "itemType": "Misc",
     "actions": [],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -13015,7 +13223,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -13082,7 +13292,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -13114,7 +13326,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -13129,7 +13343,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -13526,7 +13742,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],
@@ -13601,7 +13819,9 @@
     "actions": [
       "NPC"
     ],
-    "categories": [],
+    "categories": [
+      "Uncategorized"
+    ],
     "uses": [],
     "notes": "",
     "links": [],

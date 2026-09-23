@@ -1,0 +1,41 @@
+# Form used by the "Report" link next to each item on the site.
+# The site fills in the "item" field automatically.
+name: Item report
+description: Something about an item is wrong or missing.
+title: "[Item] "
+labels: ["data"]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: Item
+      description: Item name and ID (filled in for you when you use the site's Report link).
+      placeholder: "2carat Diamond (#731)"
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What's wrong?
+      multiple: true
+      options:
+        - Action (Keep / Vend / Whobuy / NPC)
+        - Category
+        - Used For (quests, hats, pet evolutions)
+        - Prices
+        - Item type or ID
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What should it say instead?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: How do you know?
+      description: e.g. checked in game on a date, a uaRO wiki link, a vend price you saw.

@@ -32,8 +32,8 @@ All items live in one file: [`src/data/loot.json`](src/data/loot.json). Each ite
 | `name` | Item name as shown in the game. |
 | `itemId` | The game's numeric item ID, or `null` if unknown. |
 | `itemType` | `Consumable`, `Equipment`, or `Misc`. |
-| `actions` | What to do with it. Allowed: `Keep`, `Vend`, `Whobuy`, `NPC`, `Junk`. |
-| `categories` | What it's used for. See the allowed list in [`schema.json`](src/data/schema.json). Can be empty: `[]`. |
+| `actions` | What to do with it. Allowed: `Keep`, `Vend`, `Whobuy`, `NPC`. If NPCs sell the item (`npcBuyable` is `"yes"` or `"npc-only"`), use `NPC` instead of `Vend` or `Whobuy`. |
+| `categories` | What it's used for. See the allowed list in [`schema.json`](src/data/schema.json). Use `["Uncategorized"]` if none fit. |
 | `uses` | What it's needed for and how many: `{ "for": "Mystic Rose", "qty": 10 }`. Use `"qty": null` if it varies. Spell `for` exactly the same on every item, so the "Used For" filter groups them together. |
 | `notes` | Anything else, e.g. `Isis Taming Item` or `+10 DEX Food`. |
 | `links` | Helpful links (`label` + `url`). Can be empty: `[]`. |

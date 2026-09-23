@@ -32,30 +32,30 @@ export const ACTIONS = {
     description: 'Sell it to an NPC shop.',
     className: 'bg-blue-700 text-white',
   },
-  Junk: {
-    description: 'Not worth anything. Drop it or sell it to an NPC.',
-    className: 'bg-gray-600 text-white',
-  },
 };
 
 /** Used for any action that isn't listed above. */
 export const FALLBACK_ACTION = { description: '', className: 'bg-gray-600 text-white' };
 
 /**
- * Category tag colors: a rainbow running red -> violet down the A-Z
+ * Category chip colors: a rainbow running red -> violet down the A-Z
  * category list in schema.json. Colors are calculated from each category's
  * position, so adding or removing a category keeps the rainbow intact.
+ * "Uncategorized" is always gray and isn't part of the rainbow.
  *
  * Uses OKLCH colors (lightness, chroma, hue), so every hue looks equally
  * light and the text stays readable.
  */
 const RAINBOW_START_HUE = 25; // red
 const RAINBOW_END_HUE = 300; // violet
+const GRAY_CATEGORIES = ['Uncategorized'];
+const RAINBOW_CATEGORIES = ALL_CATEGORIES.filter((category) => !GRAY_CATEGORIES.includes(category));
+const GRAY = { backgroundColor: 'var(--color-gray-200)', color: 'var(--color-gray-700)' };
 
 export function categoryStyle(category) {
-  const index = ALL_CATEGORIES.indexOf(category);
-  if (index === -1) return { backgroundColor: 'var(--color-gray-100)', color: 'var(--color-gray-700)' };
-  const step = (RAINBOW_END_HUE - RAINBOW_START_HUE) / Math.max(ALL_CATEGORIES.length - 1, 1);
+  const index = RAINBOW_CATEGORIES.indexOf(category);
+  if (index === -1) return GRAY;
+  const step = (RAINBOW_END_HUE - RAINBOW_START_HUE) / Math.max(RAINBOW_CATEGORIES.length - 1, 1);
   const hue = RAINBOW_START_HUE + index * step;
   return {
     backgroundColor: `oklch(0.94 0.06 ${hue})`,

@@ -109,12 +109,24 @@ function parseDetails(text) {
   return { uses, notes: notes.join(', ') };
 }
 
-/** Applies CATEGORY_FIXES: renames, merges and removals. */
+/** Applies CATEGORY_FIXES: renames, merges and removals. No categories left -> "Uncategorized". */
 function fixCategories(name, categories) {
   const fixed = categories.flatMap((category) => {
     if (category === 'Refining / Ore / Forging' && REFINING_ONLY.includes(name)) return [];
     return CATEGORY_FIXES[category] ?? [category];
   });
+  return fixed.length ? [...new Set(fixed)] : ['Uncategorized'];
+}
+
+/**
+ * Applies ACTION_FIXES, then: if an NPC sells the item, players won't pay
+ * more than the NPC price, so Vend/Whobuy become NPC.
+ */
+function fixActions(actions, npcBuyable) {
+  let fixed = splitList(actions).map((action) => ACTION_FIXES[action] ?? action);
+  if (npcBuyable === 'yes' || npcBuyable === 'npc-only') {
+    fixed = fixed.map((action) => (action === 'Vend' || action === 'Whobuy' ? 'NPC' : action));
+  }
   return [...new Set(fixed)];
 }
 
@@ -144,21 +156,22 @@ for (const row of rows.slice(headerIndex + 1)) {
   const sheetCategories = splitList(categories);
   const finalItemId = ITEM_IDS[name] ?? toNumber(itemId);
   const finalCategories = fixCategories(name, sheetCategories);
+  // NPCs never sell cards.
+  const finalNpcBuyable = finalCategories.includes('Card') ? 'no' : toNpcBuyable(npcBuyable);
 
   const item = {
     id: toSlug(name),
     name,
     itemId: finalItemId,
     itemType: getItemType(finalItemId, sheetCategories, itemDb),
-    actions: [...new Set(splitList(actions).map((a) => ACTION_FIXES[a] ?? a))],
+    actions: fixActions(actions, finalNpcBuyable),
     categories: finalCategories,
     ...parseDetails(details),
     links: [],
     avgVend: toPrice(avgVend),
     avgWhobuy: toPrice(avgWhobuy),
     npcSellPrice: toNumber(npcSellPrice),
-    // NPCs never sell cards.
-    npcBuyable: finalCategories.includes('Card') ? 'no' : toNpcBuyable(npcBuyable),
+    npcBuyable: finalNpcBuyable,
     lastVerified: null,
     verificationNotes: '',
   };
@@ -176,6 +189,7 @@ for (const row of rows.slice(headerIndex + 1)) {
 function mergeInto(target, extra) {
   target.actions = [...new Set([...target.actions, ...extra.actions])];
   target.categories = [...new Set([...target.categories, ...extra.categories])];
+  if (target.categories.length > 1) target.categories = target.categories.filter((c) => c !== 'Uncategorized');
   target.uses = [...target.uses, ...extra.uses];
   target.notes = [target.notes, extra.notes].filter(Boolean).join(', ');
   for (const key of ['itemId', 'avgVend', 'avgWhobuy', 'npcSellPrice', 'npcBuyable']) {

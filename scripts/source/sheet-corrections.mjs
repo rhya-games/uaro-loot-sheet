@@ -47,6 +47,7 @@ export const USE_TARGET_FIXES = {
 /** Actions to rename or merge: "old" -> "new". */
 export const ACTION_FIXES = {
   'Card Recycler': 'Vend',
+  Junk: 'NPC',
 };
 
 /** Misspellings inside the Details text: "wrong" -> "right". */
