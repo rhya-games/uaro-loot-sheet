@@ -4,13 +4,20 @@
   "title": "Loot Items",
   "description": "The list of loot items. Each entry describes one item and what to do with it. Run `npm run validate` after editing loot.json to check your changes.",
   "type": "array",
-  "items": { "$ref": "#/$defs/item" },
-
+  "items": {
+    "$ref": "#/$defs/item"
+  },
   "$defs": {
     "item": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name", "actions", "categories"],
+      "required": [
+        "id",
+        "name",
+        "itemType",
+        "actions",
+        "categories"
+      ],
       "properties": {
         "id": {
           "description": "Unique key for this entry. Lowercase letters, numbers and dashes only. Usually the name in lowercase with dashes, e.g. \"Cap [1]\" -> \"cap-1\".",
@@ -24,23 +31,61 @@
         },
         "itemId": {
           "description": "The item's numeric ID in the game database. Use null if unknown.",
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 1
+        },
+        "itemType": {
+          "description": "What kind of item it is in game. Filled in from the Hercules item database.",
+          "$ref": "#/$defs/itemType"
         },
         "actions": {
           "description": "What to do with this item. An item can have several actions. Leave empty ([]) if not decided yet.",
           "type": "array",
           "uniqueItems": true,
-          "items": { "$ref": "#/$defs/action" }
+          "items": {
+            "$ref": "#/$defs/action"
+          }
         },
         "categories": {
           "description": "What the item is used for. An item can be in several categories.",
           "type": "array",
           "uniqueItems": true,
-          "items": { "$ref": "#/$defs/category" }
+          "items": {
+            "$ref": "#/$defs/category"
+          }
         },
-        "details": {
-          "description": "Free text: what it's used for and how many, e.g. \"x10 for Mystic Rose, x6 for Little Isis Pet Evolution\".",
+        "uses": {
+          "description": "What this item is needed for, and how many. e.g. [{ \"for\": \"Mystic Rose\", \"qty\": 10 }]. Use \"qty\": null when the amount varies.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "for",
+              "qty"
+            ],
+            "properties": {
+              "for": {
+                "description": "The headgear, quest, pet evolution, etc.",
+                "type": "string",
+                "minLength": 1
+              },
+              "qty": {
+                "description": "How many are needed, or null if it varies.",
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 1
+              }
+            }
+          }
+        },
+        "notes": {
+          "description": "Anything else worth knowing that isn't a 'use', e.g. \"Isis Taming Item\" or \"+10 DEX Food\".",
           "type": "string"
         },
         "links": {
@@ -49,35 +94,62 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["label", "url"],
+            "required": [
+              "label",
+              "url"
+            ],
             "properties": {
-              "label": { "type": "string", "minLength": 1 },
-              "url": { "type": "string", "format": "uri", "pattern": "^https://" }
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https://"
+              }
             }
           }
         },
         "avgVend": {
           "description": "Average price (zeny) players sell this for in vending shops. null = no data yet (don't use 0).",
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0
         },
         "avgWhobuy": {
           "description": "Average price (zeny) players pay when buying this through @whobuy. null = no data yet (don't use 0).",
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0
         },
         "npcSellPrice": {
           "description": "Zeny you get selling one to an NPC with Overcharge level 10. null = unknown.",
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "minimum": 0
         },
         "npcBuyable": {
           "description": "Can you buy this from an NPC? \"yes\", \"no\", \"npc-only\" (only obtainable from an NPC), or null if unknown.",
-          "enum": ["yes", "no", "npc-only", null]
+          "enum": [
+            "yes",
+            "no",
+            "npc-only",
+            null
+          ]
         },
         "lastVerified": {
           "description": "Date (YYYY-MM-DD) someone last checked this entry on the live server. null = never verified.",
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date"
         },
         "verificationNotes": {
@@ -86,25 +158,25 @@
         }
       }
     },
-
     "action": {
       "description": "Allowed actions. To add a new one, add it here AND in src/utils/labels.js (for its display name and color).",
-      "enum": ["Keep", "Vend", "Whobuy", "NPC", "Card Recycler", "Junk"]
-    },
-
-    "category": {
-      "description": "Allowed categories. To add a new one, add it here.",
       "enum": [
-        "Alchemy / Brewing / Potions",
-        "Arrow Crafting",
+        "Keep",
+        "Vend",
+        "Whobuy",
+        "NPC",
+        "Card Recycler",
+        "Junk"
+      ]
+    },
+    "category": {
+      "description": "Allowed categories: what the item is used for. To add a new one, add it here. (Consumable / Equipment / Misc are item types, not categories.)",
+      "enum": [
+        "Brewing",
         "Card",
-        "Consumable",
         "Cooking",
         "Dungeon Quest",
-        "Equipment",
-        "Event Item Currency",
         "Job Quest",
-        "Misc",
         "Official Hat Quest",
         "Other Quest",
         "Pet Accessory",
@@ -112,14 +184,19 @@
         "Pet Food",
         "Pet Taming Item",
         "Pet Taming Item Ingredient",
-        "Refining / Ore / Forging",
         "Repeatable Quest",
-        "Server Currency",
         "Server Hat Quest",
-        "Server Quest Crafting",
         "Skill Crafting",
         "Skill Use",
-        "Valuable Consumable"
+        "uaRO"
+      ]
+    },
+    "itemType": {
+      "description": "Allowed item types.",
+      "enum": [
+        "Consumable",
+        "Equipment",
+        "Misc"
       ]
     }
   }

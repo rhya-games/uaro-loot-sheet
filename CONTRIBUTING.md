@@ -11,9 +11,11 @@ All items live in one file: [`src/data/loot.json`](src/data/loot.json). Each ite
   "id": "2carat-diamond",
   "name": "2carat Diamond",
   "itemId": 731,
+  "itemType": "Misc",
   "actions": ["NPC", "Keep"],
-  "categories": ["Official Hat Quest", "Misc"],
-  "details": "x10 for Mystic Rose",
+  "categories": ["Official Hat Quest"],
+  "uses": [{ "for": "Mystic Rose", "qty": 10 }],
+  "notes": "",
   "links": [{ "label": "Mystic Rose", "url": "https://wiki.uaro.net/..." }],
   "avgVend": null,
   "avgWhobuy": null,
@@ -29,9 +31,11 @@ All items live in one file: [`src/data/loot.json`](src/data/loot.json). Each ite
 | `id` | Unique key: the name in lowercase with dashes (`Cap [1]` → `cap-1`). |
 | `name` | Item name as shown in the game. |
 | `itemId` | The game's numeric item ID, or `null` if unknown. |
+| `itemType` | `Consumable`, `Equipment`, or `Misc`. |
 | `actions` | What to do with it. Allowed: `Keep`, `Vend`, `Whobuy`, `NPC`, `Card Recycler`, `Junk`. |
-| `categories` | What it's used for. See the allowed list in [`schema.json`](src/data/schema.json). |
-| `details` | Free text: uses and quantities, e.g. `x10 for Mystic Rose`. |
+| `categories` | What it's used for. See the allowed list in [`schema.json`](src/data/schema.json). Can be empty: `[]`. |
+| `uses` | What it's needed for and how many: `{ "for": "Mystic Rose", "qty": 10 }`. Use `"qty": null` if it varies. Spell `for` exactly the same on every item, so the "Used For" filter groups them together. |
+| `notes` | Anything else, e.g. `Isis Taming Item` or `+10 DEX Food`. |
 | `links` | Helpful links (`label` + `url`). Can be empty: `[]`. |
 | `avgVend` | Average vending price in zeny, or `null` if unknown. |
 | `avgWhobuy` | Average @whobuy price in zeny, or `null` if unknown. |

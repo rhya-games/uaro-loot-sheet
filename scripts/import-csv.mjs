@@ -5,18 +5,47 @@
  *   npm run import:csv                      (uses scripts/source/loot-sheet.csv)
  *   npm run import:csv -- path/to/file.csv  (uses a different export)
  *
+ * Needs an internet connection the first time, to download item types
+ * from the Hercules emulator (see scripts/hercules.mjs).
+ *
  * WARNING: this overwrites src/data/loot.json. Once the site is live,
  * edit loot.json directly instead of re-importing.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import Papa from 'papaparse';
-import { RENAMES, DETAIL_FIXES, CATEGORY_FIXES, ITEM_IDS } from './source/sheet-corrections.mjs';
+import { loadItemDb } from './hercules.mjs';
+import {
+  RENAMES,
+  DETAIL_FIXES,
+  CATEGORY_FIXES,
+  REFINING_ONLY,
+  ITEM_IDS,
+} from './source/sheet-corrections.mjs';
 
 const SOURCE = process.argv[2] ?? 'scripts/source/loot-sheet.csv';
 const OUTPUT = 'src/data/loot.json';
 
 // The sheet has two banner rows before the real header row.
 const HEADER_ROW = 'Item Name';
+
+/** Hercules item type -> our itemType. Anything not listed is "Misc". */
+const HERCULES_ITEM_TYPES = {
+  IT_HEALING: 'Consumable',
+  IT_USABLE: 'Consumable',
+  IT_DELAYCONSUME: 'Consumable',
+  IT_CASH: 'Consumable',
+  IT_WEAPON: 'Equipment',
+  IT_ARMOR: 'Equipment',
+  IT_AMMO: 'Equipment',
+};
+
+/** Sheet categories that meant an item type, for items Hercules doesn't have. */
+const SHEET_ITEM_TYPES = {
+  Consumable: 'Consumable',
+  'Valuable Consumable': 'Consumable',
+  Equipment: 'Equipment',
+  Gear: 'Equipment',
+};
 
 /** "a, b, c" -> ["a", "b", "c"] (drops empty parts) */
 const splitList = (text) =>
@@ -48,13 +77,53 @@ const toNpcBuyable = (text) => {
   return null;
 };
 
-/** Removes stray trailing commas/spaces, e.g. "x1 for Aliza Pet Evolution," */
-const cleanDetails = (text) => {
-  let result = text.trim().replace(/[,\s]+$/, '');
-  for (const [wrong, right] of Object.entries(DETAIL_FIXES)) result = result.replaceAll(wrong, right);
-  return result;
-};
+/**
+ * Splits the sheet's Details text into structured uses and leftover notes.
+ *
+ *   "x10 for Mystic Rose, Isis Taming Item, xVaries for Sign Quest"
+ *   -> uses:  [{ for: "Mystic Rose", qty: 10 }, { for: "Sign Quest", qty: null }]
+ *      notes: "Isis Taming Item"
+ */
+function parseDetails(text) {
+  let cleaned = text;
+  for (const [wrong, right] of Object.entries(DETAIL_FIXES)) cleaned = cleaned.replaceAll(wrong, right);
+  // "x10,000" -> "x10000", so the comma isn't mistaken for a separator.
+  cleaned = cleaned.replace(/x(\d{1,3}(?:,\s?\d{3})+)\b/g, (_, digits) => `x${digits.replace(/,\s?/g, '')}`);
 
+  const uses = [];
+  const notes = [];
+  for (const part of splitList(cleaned)) {
+    const match = part.match(/^x(\d+|varies)\s+for\s+(.+)$/i);
+    if (match) {
+      const qty = /^\d+$/.test(match[1]) ? Number(match[1]) : null;
+      uses.push({ for: match[2].trim(), qty });
+    } else if (part !== '-') {
+      notes.push(part);
+    }
+  }
+  return { uses, notes: notes.join(', ') };
+}
+
+/** Applies CATEGORY_FIXES: renames, merges and removals. */
+function fixCategories(name, categories) {
+  const fixed = categories.flatMap((category) => {
+    if (category === 'Refining / Ore / Forging' && REFINING_ONLY.includes(name)) return [];
+    return CATEGORY_FIXES[category] ?? [category];
+  });
+  return [...new Set(fixed)];
+}
+
+/** Item type from Hercules, or from the sheet's categories if Hercules doesn't have the item. */
+function getItemType(itemId, sheetCategories, itemDb) {
+  const herculesItem = itemDb.get(itemId);
+  if (herculesItem) return HERCULES_ITEM_TYPES[herculesItem.type] ?? 'Misc';
+  for (const category of sheetCategories) {
+    if (SHEET_ITEM_TYPES[category]) return SHEET_ITEM_TYPES[category];
+  }
+  return 'Misc';
+}
+
+const itemDb = await loadItemDb();
 const rows = Papa.parse(readFileSync(SOURCE, 'utf8'), { skipEmptyLines: true }).data;
 const headerIndex = rows.findIndex((row) => row[0] === HEADER_ROW);
 if (headerIndex === -1) throw new Error(`Could not find the "${HEADER_ROW}" header row.`);
@@ -67,14 +136,17 @@ for (const row of rows.slice(headerIndex + 1)) {
     row.map((cell) => (cell ?? '').trim());
   if (!sheetName) continue;
   const name = RENAMES[sheetName] ?? sheetName;
+  const sheetCategories = splitList(categories);
+  const finalItemId = ITEM_IDS[name] ?? toNumber(itemId);
 
   const item = {
     id: toSlug(name),
     name,
-    itemId: ITEM_IDS[name] ?? toNumber(itemId),
+    itemId: finalItemId,
+    itemType: getItemType(finalItemId, sheetCategories, itemDb),
     actions: splitList(actions),
-    categories: [...new Set(splitList(categories).map((c) => CATEGORY_FIXES[c] ?? c))],
-    details: cleanDetails(details),
+    categories: fixCategories(name, sheetCategories),
+    ...parseDetails(details),
     links: [],
     avgVend: toPrice(avgVend),
     avgWhobuy: toPrice(avgWhobuy),
@@ -97,7 +169,8 @@ for (const row of rows.slice(headerIndex + 1)) {
 function mergeInto(target, extra) {
   target.actions = [...new Set([...target.actions, ...extra.actions])];
   target.categories = [...new Set([...target.categories, ...extra.categories])];
-  target.details = [target.details, extra.details].filter(Boolean).join(', ');
+  target.uses = [...target.uses, ...extra.uses];
+  target.notes = [target.notes, extra.notes].filter(Boolean).join(', ');
   for (const key of ['itemId', 'avgVend', 'avgWhobuy', 'npcSellPrice', 'npcBuyable']) {
     target[key] ??= extra[key];
   }

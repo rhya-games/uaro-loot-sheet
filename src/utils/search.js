@@ -7,7 +7,8 @@ import Fuse from 'fuse.js';
 const FUSE_OPTIONS = {
   keys: [
     { name: 'name', weight: 3 },
-    { name: 'details', weight: 1 },
+    { name: 'uses.for', weight: 1 },
+    { name: 'notes', weight: 1 },
     { name: 'categories', weight: 1 },
   ],
   // 0 = exact match only, 1 = match anything. 0.3 forgives small typos.

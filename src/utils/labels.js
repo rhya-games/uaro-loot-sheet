@@ -1,3 +1,13 @@
+import schema from '../data/schema.json';
+
+/**
+ * Every allowed action and category, read from src/data/schema.json so
+ * there is only one list to update.
+ */
+export const ALL_ACTIONS = schema.$defs.action.enum;
+export const ALL_ITEM_TYPES = schema.$defs.itemType.enum;
+export const ALL_CATEGORIES = schema.$defs.category.enum;
+
 /**
  * How each action looks in the UI.
  *

@@ -24,8 +24,8 @@ Then open http://localhost:5173/uaro-loot-sheet/
 src/
   data/loot.json      All items (edit this to update the sheet)
   data/schema.json    Rules for what an item looks like
-  components/         UI pieces (SearchBar, ItemList, ItemTable, ItemCard, badges)
-  utils/              Search, labels/colors, number formatting
+  components/         UI pieces (SearchBar, FilterSidebar, ItemTable, ItemCard, ...)
+  utils/              Search, filters, labels/colors, number formatting
 scripts/              Data import and validation tools
 ```
 

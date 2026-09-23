@@ -10,7 +10,7 @@ export default function Badge({ children, className = 'bg-gray-100 text-gray-700
   return (
     <span
       title={title}
-      className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap ${className}`}
+      className={`inline-block rounded-xl px-2.5 py-0.5 text-xs font-medium ${className}`}
     >
       {children}
     </span>

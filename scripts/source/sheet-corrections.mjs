@@ -30,12 +30,33 @@ export const RENAMES = {
 /** Misspellings inside the Details text: "wrong" -> "right". */
 export const DETAIL_FIXES = {
   Bahpomet: 'Baphomet',
+  // Split the sentence from the use so the use is recognized.
+  'seasonally. x500 for': 'seasonally, x500 for',
 };
 
-/** Categories to replace: "old" -> "new". */
+/**
+ * Sheet categories to rename, merge, or remove: "old" -> [new categories].
+ * An empty list removes the category. Categories not listed stay as-is.
+ *
+ * "Consumable", "Equipment" and "Misc" are not categories anymore; they
+ * became the separate `itemType` field (see import-csv.mjs).
+ */
 export const CATEGORY_FIXES = {
-  Gear: 'Equipment', // Only used once (Crystal Pumps); same meaning as Equipment.
+  'Alchemy / Brewing / Potions': ['Brewing'],
+  'Arrow Crafting': ['Skill Crafting'],
+  'Refining / Ore / Forging': ['Skill Crafting'], // Except the refining items below.
+  'Server Currency': ['uaRO'],
+  'Server Quest Crafting': ['uaRO'],
+  'Event Item Currency': ['uaRO'],
+  'Valuable Consumable': [],
+  Consumable: [],
+  Equipment: [],
+  Gear: [],
+  Misc: [],
 };
+
+/** Refining items: they drop "Refining / Ore / Forging" without becoming Skill Crafting. */
+export const REFINING_ONLY = ['Elunium', 'Rough Elunium', 'Rough Oridecon'];
 
 /**
  * Item IDs to set, keyed by the (corrected) item name.

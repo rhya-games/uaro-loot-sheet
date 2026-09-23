@@ -430,3 +430,6 @@ FodyWeavers.xsd
 
 # Vite build output
 dist/
+
+# Downloaded Hercules files (see scripts/hercules.mjs)
+scripts/.cache/

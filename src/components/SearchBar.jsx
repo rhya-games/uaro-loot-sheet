@@ -1,5 +1,5 @@
 /**
- * Text box for searching items by name, details, category, or item ID.
+ * Text box for searching items by name, uses, notes, category, or item ID.
  *
  * Props:
  *   value    - current search text
