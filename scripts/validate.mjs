@@ -86,6 +86,9 @@ for (const item of items) {
   if (soldByNpc && item.actions?.some((action) => action === 'Vend' || action === 'Whobuy')) {
     errors.push(`${item.name}: NPCs sell this, so use the "NPC" action instead of "Vend" or "Whobuy"`);
   }
+  if (soldByNpc && (item.avgVend != null || item.avgWhobuy != null)) {
+    errors.push(`${item.name}: NPCs sell this, so avgVend and avgWhobuy should be null (the site shows ✕)`);
+  }
   if (item.categories?.length > 1 && item.categories.includes('Uncategorized')) {
     warnings.push(`${item.name}: has categories, so "Uncategorized" can be removed`);
   }

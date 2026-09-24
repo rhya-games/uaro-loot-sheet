@@ -55,7 +55,8 @@ export default function AboutPage() {
             <strong>Vend</strong>: average price players sell it for in vending shops.
           </li>
           <li>
-            <strong>Whobuy</strong>: average price players pay for it through @whobuy.
+            <strong>Whobuy</strong>: average price players pay for it through @whobuy. ✕ in Vend or Whobuy means
+            NPCs sell it, so players don't trade it.
           </li>
           <li>
             <strong>NPC Sell</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+
@@ -63,10 +64,10 @@ export default function AboutPage() {
             won't buy it.
           </li>
           <li>
-            <strong>NPC Buy</strong>: whether an NPC sells it.
+            <strong>NPC Buy</strong>: whether an NPC sells it (✓ or ✕).
           </li>
           <li>
-            <strong>Verified</strong>: when someone last checked the entry on the live server.
+            <strong>Verified</strong>: when someone last checked the vend or @whobuy price on the live server.
           </li>
         </BulletList>
 

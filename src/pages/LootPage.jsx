@@ -145,7 +145,7 @@ export default function LootPage() {
             aria-controls="filter-sidebar"
             aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
             className="flex h-full shrink-0 items-center gap-2 rounded-lg border border-line-strong bg-surface px-3 text-sm
-              font-medium text-body shadow-sm hover:bg-hover md:px-4"
+              font-medium text-body shadow-sm hover:bg-hover md:min-w-44 md:px-4"
           >
             <FunnelIcon className="size-5" aria-hidden="true" />
             <span className="hidden md:inline">{sidebarOpen ? 'Hide filters' : 'Show filters'}</span>

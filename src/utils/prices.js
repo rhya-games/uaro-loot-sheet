@@ -39,6 +39,9 @@ export function npcSellInfo(item) {
   return { kind: 'overcharge', price: withOvercharge(base) };
 }
 
+/** NPCs sell this item (so players don't vend or @whobuy it). */
+export const isSoldByNpc = (item) => item.npcBuyable === 'yes' || item.npcBuyable === 'npc-only';
+
 /** Just the number (for sorting). null when it can't be sold or is unknown. */
 export function npcSellPrice(item) {
   const info = npcSellInfo(item);

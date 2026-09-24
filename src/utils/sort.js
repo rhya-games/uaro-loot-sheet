@@ -1,5 +1,5 @@
 import { ALL_ACTIONS } from './labels.js';
-import { npcSellPrice } from './prices.js';
+import { isSoldByNpc, npcSellPrice } from './prices.js';
 
 /**
  * Table sorting. The sort state is either null (default order: A-Z, or best
@@ -25,8 +25,9 @@ export const SORT_VALUES = {
   categories: (item) => (item.categories.length ? [...item.categories].sort().join(', ') : null),
   // How many things the item is used for.
   uses: (item) => (item.uses.length ? item.uses.length : null),
-  avgVend: (item) => item.avgVend,
-  avgWhobuy: (item) => item.avgWhobuy,
+  // Items NPCs sell have no player price (shown as ✕).
+  avgVend: (item) => (isSoldByNpc(item) ? null : item.avgVend),
+  avgWhobuy: (item) => (isSoldByNpc(item) ? null : item.avgWhobuy),
   npcSellPrice: (item) => npcSellPrice(item),
   npcBuyable: (item) => NPC_BUYABLE_ORDER[item.npcBuyable] ?? null,
   lastVerified: (item) => item.lastVerified, // "YYYY-MM-DD" sorts correctly as text.

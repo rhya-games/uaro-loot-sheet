@@ -3,8 +3,7 @@ import ItemUses from './ItemUses.jsx';
 import RowActions from './RowActions.jsx';
 import Tooltip from './Tooltip.jsx';
 import VerifiedText from './VerifiedText.jsx';
-import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
-import { formatZeny } from '../utils/format.js';
+import { NpcBuyable, PlayerPrice } from './StatusIcons.jsx';
 import NpcSellPrice from './NpcSellPrice.jsx';
 import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 
@@ -64,16 +63,16 @@ const COLUMNS = [
   {
     label: 'Vend',
     sortKey: 'avgVend',
-    title: 'Average price in player vending shops',
+    title: 'Average price in player vending shops. ✕ means NPCs sell it.',
     numeric: true,
-    render: (item) => formatZeny(item.avgVend),
+    render: (item) => <PlayerPrice item={item} field="avgVend" />,
   },
   {
     label: 'Whobuy',
     sortKey: 'avgWhobuy',
-    title: 'Average price players pay through @whobuy',
+    title: 'Average price players pay through @whobuy. ✕ means NPCs sell it.',
     numeric: true,
-    render: (item) => formatZeny(item.avgWhobuy),
+    render: (item) => <PlayerPrice item={item} field="avgWhobuy" />,
   },
   {
     label: 'NPC Sell',
@@ -87,13 +86,13 @@ const COLUMNS = [
     sortKey: 'npcBuyable',
     nowrap: true,
     title: 'Can you buy this from an NPC?',
-    render: (item) => NPC_BUYABLE_LABELS[item.npcBuyable] ?? '—',
+    render: (item) => <NpcBuyable item={item} />,
   },
   {
     label: 'Verified',
     sortKey: 'lastVerified',
     nowrap: true,
-    title: 'When this entry was last checked on the live server',
+    title: 'When the vend or @whobuy price was last checked on the live server',
     render: (item) => <VerifiedText item={item} />,
   },
   {

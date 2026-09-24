@@ -43,6 +43,7 @@ export const CHANGELOG = [
         text: 'Item names that differ in game: Green Dyestuffs is now Darkgreen Dyestuffs, Smokie Doll is Raccoon Doll, and Spiritual Bandage is Miracle Bandage. Clock Hands was a duplicate of Needle of Alarm.',
       },
       { type: 'Removed', text: 'Ghost Coffin and Torn Paper Piece, which couldn’t be found in game.' },
+      { type: 'Changed', text: 'NPC Buy shows ✓ or ✕. Vend and Whobuy show ✕ for items NPCs sell.' },
     ],
   },
   {

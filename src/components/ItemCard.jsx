@@ -1,9 +1,8 @@
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
 import RowActions from './RowActions.jsx';
-import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
+import { NpcBuyable, PlayerPrice } from './StatusIcons.jsx';
 import VerifiedText from './VerifiedText.jsx';
-import { formatZeny } from '../utils/format.js';
 import NpcSellPrice from './NpcSellPrice.jsx';
 import { OVERCHARGE_LEVEL } from '../utils/prices.js';
 
@@ -45,10 +44,10 @@ export default function ItemCard({ item, onSelectUse }) {
       </div>
 
       <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-5">
-        <Stat label="Avg. vend" value={formatZeny(item.avgVend)} />
-        <Stat label="Avg. whobuy" value={formatZeny(item.avgWhobuy)} />
+        <Stat label="Avg. vend" value={<PlayerPrice item={item} field="avgVend" />} />
+        <Stat label="Avg. whobuy" value={<PlayerPrice item={item} field="avgWhobuy" />} />
         <Stat label={`NPC sell (OC ${OVERCHARGE_LEVEL})`} value={<NpcSellPrice item={item} />} />
-        <Stat label="Buy from NPC" value={NPC_BUYABLE_LABELS[item.npcBuyable] ?? '—'} />
+        <Stat label="Buy from NPC" value={<NpcBuyable item={item} />} />
         <Stat label="Last verified" value={<VerifiedText item={item} />} />
       </dl>
     </article>
