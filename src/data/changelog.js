@@ -23,6 +23,32 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-24',
+    title: 'Cooking',
+    changes: [
+      {
+        type: 'Added',
+        text: 'All 60 foods (levels 1–10), with their stat bonus. NPCs don’t sell food, so they’re marked Vend.',
+      },
+      {
+        type: 'Added',
+        text: 'Ingredients list each food they’re for and what it does, like “x10 Morroc Fruit Wine (+4 INT food)”. Also added: the cookbooks and eight missing ingredients (Bao, Bug Leg, China, Live Coal, Nipper, Scale Shell, Scorpion Claw, Yoyo Tail).',
+      },
+      { type: 'Changed', text: 'Flame Heart, Mystic Frozen, Rough Wind and Great Nature are tagged Other Quest.' },
+      {
+        type: 'Fixed',
+        text: 'Level 1–5 Cookbooks and the Outdoor and Home Cooking Kits are sold by NPCs in Prontera Castle. The items you trade for the cookbooks list them too.',
+      },
+      { type: 'Added', text: 'Click an item ID (like #7539) to copy it.' },
+      { type: 'Added', text: 'A back to top button appears after you scroll down.' },
+      {
+        type: 'Changed',
+        text: 'The Report Issue flag shows over the Verified column when you point at a row, so the table has more room.',
+      },
+      { type: 'Fixed', text: 'Filter checkboxes line up with the first line of long labels.' },
+    ],
+  },
+  {
+    date: '2026-09-24',
     title: 'Items used by skills',
     changes: [
       {

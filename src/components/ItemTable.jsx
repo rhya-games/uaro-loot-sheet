@@ -1,5 +1,6 @@
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
+import CopyItemId from './CopyItemId.jsx';
 import RowActions from './RowActions.jsx';
 import Tooltip from './Tooltip.jsx';
 import VerifiedText from './VerifiedText.jsx';
@@ -31,7 +32,12 @@ const COLUMNS = [
         <div className="font-medium text-fg">{item.name}</div>
         <div className="mt-0.5 text-sm text-muted">
           {item.itemType}
-          {item.itemId && ` · #${item.itemId}`}
+          {item.itemId && (
+            <>
+              {' · '}
+              <CopyItemId itemId={item.itemId} />
+            </>
+          )}
         </div>
       </>
     ),
@@ -99,13 +105,21 @@ const COLUMNS = [
     sortKey: 'lastVerified',
     nowrap: true,
     title: 'When the vend or @whobuy price was last checked in game',
-    render: (item) => <VerifiedText item={item} />,
-  },
-  {
-    label: 'Actions',
-    hideLabel: true,
-    numeric: true, // right-aligned
-    render: (item) => <RowActions item={item} />,
+    render: (item) => (
+      // Report Issue floats over the right of this cell when the row is hovered or
+      // focused (always on touch screens, which can't hover). Reports are mostly
+      // about prices, so it sits by the "last checked" date, and takes no room.
+      <div className="relative">
+        <VerifiedText item={item} />
+        <div
+          className="absolute -top-1.5 right-0 rounded-full bg-surface opacity-0 shadow-sm transition-opacity duration-150
+            group-hover:opacity-100 focus-within:opacity-100 motion-reduce:transition-none
+            [@media(hover:none)]:opacity-100"
+        >
+          <RowActions item={item} />
+        </div>
+      </div>
+    ),
   },
 ];
 

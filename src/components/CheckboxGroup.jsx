@@ -79,7 +79,9 @@ export default function CheckboxGroup({
           return (
             <li key={option}>
               <label
-                className={`flex items-center gap-2 rounded px-1 py-1 text-sm ${
+                // items-start + mt-0.5: the box and the count line up with the label's
+                // first line (20px tall) even when a long label wraps.
+                className={`flex items-start gap-2 rounded px-1 py-1 text-sm ${
                   disabled ? 'cursor-default opacity-40' : 'cursor-pointer hover:bg-hover'
                 }`}
               >
@@ -88,10 +90,10 @@ export default function CheckboxGroup({
                   checked={checked}
                   disabled={disabled}
                   onChange={() => onToggle(option)}
-                  className="size-4 shrink-0 accent-emerald-700"
+                  className="mt-0.5 size-4 shrink-0 accent-emerald-700"
                 />
                 <span className="flex-1 text-body">{renderLabel ? renderLabel(option) : option}</span>
-                <span className="text-xs text-muted tabular-nums">{count}</span>
+                <span className="mt-0.5 text-xs text-muted tabular-nums">{count}</span>
               </label>
             </li>
           );
@@ -118,13 +120,13 @@ function SelectAll({ label, options, selected, onSetAll }) {
   }, [someChecked]);
 
   return (
-    <label className="flex cursor-pointer items-center gap-2 rounded px-1 py-1 text-sm font-medium text-body hover:bg-hover">
+    <label className="flex cursor-pointer items-start gap-2 rounded px-1 py-1 text-sm font-medium text-body hover:bg-hover">
       <input
         ref={ref}
         type="checkbox"
         checked={allChecked}
         onChange={() => onSetAll(allChecked ? [] : [...options])}
-        className="size-4 shrink-0 accent-emerald-700"
+        className="mt-0.5 size-4 shrink-0 accent-emerald-700"
       />
       {label}
     </label>

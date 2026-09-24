@@ -1,5 +1,6 @@
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
+import CopyItemId from './CopyItemId.jsx';
 import RowActions from './RowActions.jsx';
 import { NpcBuyable, PlayerPrice } from './StatusIcons.jsx';
 import VerifiedText from './VerifiedText.jsx';
@@ -23,7 +24,12 @@ export default function ItemCard({ item, onSelectUse, highlightUses }) {
           {item.name}
           <span className="ml-2 text-sm font-normal text-muted">
             {item.itemType}
-            {item.itemId && ` · #${item.itemId}`}
+            {item.itemId && (
+              <>
+                {' · '}
+                <CopyItemId itemId={item.itemId} />
+              </>
+            )}
           </span>
         </h2>
         <div className="flex flex-wrap items-center gap-1">
