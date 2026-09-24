@@ -3342,6 +3342,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "bradium",
+    "name": "Bradium",
+    "itemId": 6224,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Dolomedes (uaRO).",
+    "links": [],
+    "sellValue": 1000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "bradium-brooch-1",
     "name": "Bradium Brooch [1]",
     "itemId": 2790,
@@ -6463,6 +6479,24 @@
     "links": [],
     "sellValue": 146,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dolomedes-card",
+    "name": "Dolomedes Card",
+    "itemId": 4506,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "Dropped by Dolomedes (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -10985,6 +11019,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "harp-of-nepenthes-2",
+    "name": "Harp of Nepenthes [2]",
+    "itemId": 1926,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Nepenthes (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "harpy-card",
     "name": "Harpy Card",
     "itemId": 4325,
@@ -12392,6 +12442,22 @@
     "links": [],
     "sellValue": 50000,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "imperial-guard-1",
+    "name": "Imperial Guard [1]",
+    "itemId": 2153,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Rake Scaraba Egg (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -14184,6 +14250,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "luciola-vespa-card",
+    "name": "Luciola Vespa Card",
+    "itemId": 4445,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "Dropped by Luciola Vespa (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "luciuss-fierce-armor-of-volcano-0",
     "name": "Lucius's Fierce Armor of Volcano [0]",
     "itemId": 2344,
@@ -14560,6 +14644,22 @@
       }
     ],
     "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "mandragora-cap-1",
+    "name": "Mandragora Cap [1]",
+    "itemId": 5399,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Nepenthes (uaRO).",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -16134,6 +16234,22 @@
     "notes": "",
     "links": [],
     "sellValue": 416,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "nepenthes-bow-2",
+    "name": "Nepenthes Bow [2]",
+    "itemId": 1740,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Nepenthes (uaRO).",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -21838,18 +21954,18 @@
     "npcBuyable": "no"
   },
   {
-    "id": "small-bottle",
-    "name": "Small Bottle",
-    "itemId": 12353,
-    "itemType": "Consumable",
+    "id": "small-bradium",
+    "name": "Small Bradium",
+    "itemId": 6319,
+    "itemType": "Misc",
     "actions": [],
     "categories": [
       "Uncategorized"
     ],
     "uses": [],
-    "notes": "Dropped by Aqua Elemental.",
+    "notes": "Dropped by Dolomedes (uaRO).",
     "links": [],
-    "sellValue": 400,
+    "sellValue": 162,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -21893,6 +22009,22 @@
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "small-water-bottle",
+    "name": "Small Water Bottle",
+    "itemId": 12353,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Aqua Elemental.",
+    "links": [],
+    "sellValue": 400,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "smokie-card",
@@ -22688,6 +22820,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "sprint-ring-0",
+    "name": "Sprint Ring [0]",
+    "itemId": 2744,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Luciola Vespa (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "sprint-shoes-1",
     "name": "Sprint Shoes [1]",
     "itemId": 2440,
@@ -23328,6 +23476,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "stem-of-nepenthes-2",
+    "name": "Stem of Nepenthes [2]",
+    "itemId": 1979,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Nepenthes (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "stem-worm-card",
     "name": "Stem Worm Card",
     "itemId": 4224,
@@ -23724,6 +23888,22 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "strong-vine",
+    "name": "Strong Vine",
+    "itemId": 6041,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Nepenthes (uaRO).",
+    "links": [],
+    "sellValue": 15,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -25780,6 +25960,22 @@
     "sellValue": 600,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "white-spider-limb",
+    "name": "White Spider Limb",
+    "itemId": 6325,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Dolomedes (uaRO).",
+    "links": [],
+    "sellValue": 502,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "whole-roast",

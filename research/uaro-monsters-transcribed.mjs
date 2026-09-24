@@ -1,6 +1,6 @@
 /**
  * Monster info transcribed by hand from in-game @mi screenshots on uaRO
- * (2026-09-24). These are renewal monsters uaRO added; their drops differ
+ * (2026-09-24, two batches). These are renewal monsters uaRO added; their drops differ
  * from the emulators (every one drops Poring Coin, most drop Expanded Token
  * Fragment).
  *
@@ -130,5 +130,68 @@ export const MONSTERS = [
     stats: { str: 1, agi: 1, vit: 56, int: 34, dex: 1, luk: 63 },
     atk: [1, 2], range: 0, size: 'Medium', race: 'Dragon', element: 'Earth', elementLevel: 4,
     drops: [['Poring Coin', 5], ['Piece of Egg Shell', 100], ['Egg Shell', 1]],
+  },
+  {
+    id: 1988, name: 'Nepenthes', sprite: 'NEPENTHES', mvp: false,
+    level: 76, hp: 10350, baseExp: 25875, jobExp: 12935, hit: 141, flee: 96, def: 25, mdef: 10,
+    stats: { str: 75, agi: 20, vit: 30, int: 5, dex: 65, luk: 5 },
+    atk: [415, 565], range: 7, size: 'Medium', race: 'Plant', element: 'Poison', elementLevel: 2,
+    drops: [['Poring Coin', 5], ['Expanded Token Fragment', 3], ['Mandragora Cap [1]', 0.05], ['Stem of Nepenthes [2]', 0.05], ['Harp of Nepenthes [2]', 0.05], ['Nepenthes Bow [2]', 0.05], ['Strong Vine', 100], ['Green Live', 2.5], ['Stem', 100]],
+  },
+  {
+    id: 2092, name: 'Dolomedes', sprite: 'DOLOMEDES', mvp: false,
+    level: 104, hp: 72253, baseExp: 132620, jobExp: 84270, hit: 228, flee: 141, def: 44, mdef: 17,
+    stats: { str: 12, agi: 37, vit: 56, int: 55, dex: 124, luk: 46 },
+    atk: [3604, 6563], range: 3, size: 'Large', race: 'Insect', element: 'Water', elementLevel: 3,
+    drops: [['Poring Coin', 5], ['Small Bradium', 75], ['White Spider Limb', 25], ['Expanded Token Fragment', 3], ['Refined Bradium', 12.5], ['Bradium', 12.5], ['Dolomedes Card', 0.05]],
+  },
+  {
+    id: 2018, name: 'Duneyrr', sprite: 'DUNEYRR', mvp: false,
+    level: 107, hp: 265100, baseExp: 415150, jobExp: 260000, hit: 212, flee: 167, def: 39, mdef: 35,
+    stats: { str: 1, agi: 60, vit: 45, int: 89, dex: 105, luk: 15 },
+    atk: [16000, 19000], range: 1, size: 'Medium', race: 'Demi-Human', element: 'Earth', elementLevel: 3,
+    drops: [['Poring Coin', 5], ['Carrot', 100], ['Fur', 100], ['Dark Piece', 25], ['Eye Stone Ring [1]', 0.05], ['Veteran Sword [1]', 0.5], ['Veteran Axe [2]', 5]],
+  },
+  {
+    id: 2016, name: 'Aqua Elemental', sprite: 'AQUA_ELEMENTAL', mvp: false,
+    level: 83, hp: 33220, baseExp: 27150, jobExp: 76500, hit: 160, flee: 106, def: 8, mdef: 12,
+    stats: { str: 1, agi: 23, vit: 19, int: 87, dex: 77, luk: 2 },
+    atk: [400, 1600], range: 1, size: 'Large', race: 'Formless', element: 'Water', elementLevel: 4,
+    drops: [['Poring Coin', 5], ['Expanded Token Fragment', 3], ['Crystalized Teardrop', 50], ['Fluorescent Liquid', 100], ['Small Water Bottle', 5], ['Aqua Elemental Card', 0.05]],
+  },
+  {
+    id: 2089, name: 'Two-Horned Scaraba Egg', sprite: 'HORN_SCARABA2_EGG', mvp: false,
+    level: 98, hp: 11113, baseExp: 13000, jobExp: 14130, hit: 99, flee: 99, def: 36, mdef: 27,
+    stats: { str: 1, agi: 1, vit: 54, int: 17, dex: 1, luk: 51 },
+    atk: [1, 1], range: 0, size: 'Small', race: 'Insect', element: 'Neutral', elementLevel: 1,
+    drops: [['Poring Coin', 5], ['Piece of Egg Shell', 50], ['Honey', 2.5], ['Elunium', 0.25]],
+  },
+  {
+    id: 2088, name: 'One-Horned Scaraba Egg', sprite: 'HORN_SCARABA_EGG', mvp: false,
+    level: 97, hp: 56432, baseExp: 13000, jobExp: 11450, hit: 98, flee: 98, def: 33, mdef: 24,
+    stats: { str: 1, agi: 1, vit: 54, int: 12, dex: 1, luk: 51 },
+    atk: [1, 1], range: 0, size: 'Small', race: 'Insect', element: 'Neutral', elementLevel: 1,
+    drops: [['Poring Coin', 5], ['Piece of Egg Shell', 50], ['Honey', 2.5], ['Elunium', 0.25]],
+  },
+  {
+    id: 2091, name: 'Rake Scaraba Egg', sprite: 'RAKE_SCARABA_EGG', mvp: false,
+    level: 100, hp: 7072, baseExp: 13000, jobExp: 15995, hit: 101, flee: 101, def: 42, mdef: 19,
+    stats: { str: 1, agi: 1, vit: 54, int: 14, dex: 1, luk: 51 },
+    atk: [1, 1], range: 0, size: 'Small', race: 'Insect', element: 'Neutral', elementLevel: 1,
+    drops: [['Poring Coin', 5], ['Piece of Egg Shell', 50], ['Honey', 2.5], ['Elunium', 0.25], ['Imperial Guard [1]', 0.05]],
+  },
+  {
+    id: 2090, name: 'Antler Scaraba Egg', sprite: 'ANTLER_SCARABA_EGG', mvp: false,
+    level: 99, hp: 69000, baseExp: 13000, jobExp: 9590, hit: 100, flee: 100, def: 34, mdef: 42,
+    stats: { str: 1, agi: 1, vit: 79, int: 30, dex: 1, luk: 51 },
+    atk: [1, 1], range: 0, size: 'Small', race: 'Insect', element: 'Neutral', elementLevel: 1,
+    drops: [['Poring Coin', 5], ['Piece of Egg Shell', 50], ['Honey', 2.5], ['Elunium', 0.25]],
+  },
+  {
+    id: 1994, name: 'Luciola Vespa', sprite: 'LUCIOLA_VESPA', mvp: false,
+    level: 104, hp: 32600, baseExp: 81500, jobExp: 57050, hit: 220, flee: 160, def: 29, mdef: 5,
+    stats: { str: 104, agi: 56, vit: 30, int: 20, dex: 116, luk: 4 },
+    atk: [9000, 9900], range: 1, size: 'Medium', race: 'Insect', element: 'Wind', elementLevel: 1,
+    drops: [['Poring Coin', 5], ['Expanded Token Fragment', 3], ['Sprint Ring', 0.1], ['Worm Peeling', 100], ['Bee Sting', 100], ['Honey', 15], ['Wind of Verdure', 8], ['Royal Jelly', 10], ['Solid Shell', 100], ['Luciola Vespa Card', 0.05]],
   },
 ];

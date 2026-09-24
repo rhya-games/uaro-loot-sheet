@@ -27,6 +27,8 @@ const ITEM_IDS = {
   'Forbidden Grimoire [1]': 28628, // the book (28984 is a special variant)
   'Horn of Hillslion [3]': 1825, // the knuckle weapon (6032 is the misc item)
   'Hillslion Card': 4453, // rAthena: Hillsrion Card
+  'Horn of Hillslion': 6032, // the misc item (1825 is the knuckle weapon)
+  'Small Water Bottle': 12353, // rAthena: Small Bottle
 };
 
 const simplify = (name) => name.toLowerCase().replace(/\[\d\]/g, '').replace(/[^a-z0-9]/g, '');
