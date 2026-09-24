@@ -42,9 +42,12 @@ export default function LootPage() {
   const resultsRef = useRef(null);
   const resultsLeftBefore = useRef(null);
   const [sort, setSort] = useState(null);
-  const [ignoreKeep, setIgnoreKeep] = useState(() => readPreference('ignoreKeep', false));
+  const [ignoreKeepSetting, setIgnoreKeep] = useState(() => readPreference('ignoreKeep', false));
   // loot.json, plus any prices saved in admin mode since the page loaded.
-  const { items: loot } = useAdmin();
+  const { items: loot, enabled: adminOn } = useAdmin();
+  // Admin mode needs the real actions (to compare with suggestions), so
+  // "I don't keep items" is off while it's on. The setting is remembered.
+  const ignoreKeep = ignoreKeepSetting && !adminOn;
 
   // "I don't keep items" changes the items themselves (no Keep), so every
   // count, chip and sort below sees the same thing the table shows.
@@ -263,6 +266,7 @@ export default function LootPage() {
             closeButtonRef={closeButtonRef}
             allItems={baseItems}
             ignoreKeep={ignoreKeep}
+            ignoreKeepDisabled={adminOn}
             onIgnoreKeepChange={changeIgnoreKeep}
             items={searched}
             filters={filters}

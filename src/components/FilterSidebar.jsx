@@ -17,6 +17,7 @@ import { countActiveFilters, countOptions, listOptions, toggleValue } from '../u
  *   onChange   - called with the new filter state
  *   onClear    - called when "Clear all" is clicked
  *   ignoreKeep - true when "I don't keep items" is on
+ *   ignoreKeepDisabled - true in admin mode, where that switch is off
  *   onIgnoreKeepChange - called with true/false when that switch changes
  *   onClose    - optional: shows a close (×) button that calls this
  *   closeButtonRef - optional ref for that button (so it can be focused)
@@ -32,6 +33,7 @@ export default memo(function FilterSidebar({
   onChange,
   onClear,
   ignoreKeep,
+  ignoreKeepDisabled,
   onIgnoreKeepChange,
   onClose,
   closeButtonRef,
@@ -76,10 +78,15 @@ export default memo(function FilterSidebar({
         )}
       </div>
 
-      <label className="my-2 flex cursor-pointer items-start gap-2 rounded-lg bg-subtle p-2 text-sm hover:bg-hover">
+      <label
+        className={`my-2 flex items-start gap-2 rounded-lg bg-subtle p-2 text-sm ${
+          ignoreKeepDisabled ? 'opacity-60' : 'cursor-pointer hover:bg-hover'
+        }`}
+      >
         <input
           type="checkbox"
           checked={ignoreKeep}
+          disabled={ignoreKeepDisabled}
           onChange={(event) => onIgnoreKeepChange(event.target.checked)}
           aria-describedby="ignore-keep-hint"
           className="mt-0.5 size-4 shrink-0 accent-emerald-700"
@@ -87,7 +94,9 @@ export default memo(function FilterSidebar({
         <span>
           <span className="font-medium text-fg">I don't keep items</span>
           <span id="ignore-keep-hint" className="block text-muted">
-            Skip quests, hats and pets: hides Keep so you only see what to sell.
+            {ignoreKeepDisabled
+              ? 'Off in admin mode, so you see every action.'
+              : 'Skip quests, hats and pets: hides Keep so you only see what to sell.'}
           </span>
         </span>
       </label>
