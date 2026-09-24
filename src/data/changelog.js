@@ -22,6 +22,72 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    date: '2026-09-24',
+    title: 'Which items NPCs sell',
+    changes: [
+      {
+        type: 'Added',
+        text: 'NPC Shop for every item, from the emulators’ NPC shops. About 290 items that were blank are now filled in.',
+      },
+      {
+        type: 'Fixed',
+        text: 'Items NPCs sell that were marked Vend (for example, Chonchon Doll and Topaz) now say NPC.',
+      },
+      { type: 'Changed', text: 'Renamed the NPC Sell column to NPC and NPC Buy to NPC Shop. NPC Only shows as ✓.' },
+      { type: 'Fixed', text: 'Blood Red is now Red Blood, with its item ID and NPC price.' },
+      { type: 'Changed', text: 'Green Apple is sold by the Pet Dealer, so it now says NPC instead of Vend.' },
+      { type: 'Changed', text: 'Cotton Tufts is now Cotton Wads, its name in game.' },
+      {
+        type: 'Changed',
+        text: 'New vend prices for Peaked Hat, Phlogopite, Red Herb, Rose Quartz, Valhalla’s Flower and Expanded Token Fragment.',
+      },
+      {
+        type: 'Added',
+        text: 'Temporal Crystal, Coagulated Spell, Contaminated Magic, Lever Action Rifle, Hatii Claw and Santa’s Bag, with vend prices.',
+      },
+      { type: 'Changed', text: 'Grape is sold by the Tool Dealer, so it now shows ✓ under NPC Shop.' },
+      { type: 'Added', text: 'Trident, which uaRO’s NPCs no longer sell, so players vend it.' },
+      {
+        type: 'Fixed',
+        text: 'Dimonka headgear quest materials now match the uaRO wiki (for example, Pirate Dagger needs 120 Wooden Heart, not 20).',
+      },
+      { type: 'Added', text: 'Margaretha Sorin Card (for Mitra) and Errende Ebecee Card (for Love Guard).' },
+      { type: 'Added', text: 'Poring Coin now lists the 41 Dimonka headgears it’s used for.' },
+      { type: 'Changed', text: 'Long Used For lists show the first 6, with a “+N more” button that opens the full list.' },
+      { type: 'Changed', text: 'Filtering by Used For moves the matching use to the front and fades the rest.' },
+      { type: 'Added', text: 'A GitHub link in the header and a footer at the bottom of every page.' },
+      { type: 'Changed', text: 'Clearer column descriptions, and tooltips wait a moment before showing on hover.' },
+      {
+        type: 'Fixed',
+        text: 'Pet evolution materials now match the uaRO wiki’s Pet System page (for example, Leaf Lunatic needs 250 Clover, not 25).',
+      },
+      {
+        type: 'Added',
+        text: '12 pet items: evolution cards and materials (like Airship Part and Young Twig), Earthworm the Dude, and four pet accessories.',
+      },
+      { type: 'Added', text: 'Beehive Box (Hornet) and Ghost Coffin (Whisper) taming items.' },
+      {
+        type: 'Changed',
+        text: 'Used For is sorted A-Z, and anything you search for moves to the front (search “Headset” and Coal lists Headset first).',
+      },
+      { type: 'Changed', text: 'Fewer shades of gray text, so dark mode is easier to read.' },
+      {
+        type: 'Fixed',
+        text: 'Official headgear quests now match the pre-renewal quest scripts: 88 missing materials added, and quantities fixed (for example, Mage Hat needs 50 Mould Powder).',
+      },
+      {
+        type: 'Added',
+        text: '16 headgear quest items, like Elven Ears, Coronet, Panda Hat and Transparent Celestial Robe.',
+      },
+      { type: 'Fixed', text: 'Items no official headgear uses are no longer tagged Official Hat Quest.' },
+      {
+        type: 'Added',
+        text: 'Zealotus Mask and Orc Hero Helm materials, and the Cute Ribbon color changes (any Cute Ribbon + a dye).',
+      },
+      { type: 'Changed', text: 'Headgears use their in-game names: Ayam, Mine Hat, Candle and Teddybear Hat.' },
+    ],
+  },
+  {
     date: '2026-09-23',
     title: 'NPC sell prices from Hercules',
     changes: [

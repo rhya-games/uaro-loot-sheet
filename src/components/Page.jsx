@@ -12,7 +12,7 @@ export function Page({ title, intro, children }) {
   return (
     <div className="mx-auto max-w-3xl space-y-6 text-body">
       <header className="space-y-2">
-        <h1 className="text-3xl font-bold text-fg">{title}</h1>
+        <h1 className="text-3xl font-semibold text-fg">{title}</h1>
         {intro && <p className="text-lg text-muted">{intro}</p>}
       </header>
       {children}
@@ -37,7 +37,7 @@ export function SubHeading({ children }) {
 
 /** A bulleted list with consistent spacing. */
 export function BulletList({ children }) {
-  return <ul className="list-disc space-y-1.5 pl-5 marker:text-faint">{children}</ul>;
+  return <ul className="list-disc space-y-1.5 pl-5 marker:text-muted">{children}</ul>;
 }
 
 /** Link that opens in a new tab, and says so to screen readers. */

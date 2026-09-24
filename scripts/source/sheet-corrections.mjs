@@ -12,6 +12,8 @@
 /** Misspelled item names in the sheet: "sheet name" -> "correct name". */
 export const RENAMES = {
   'Baphoment Jr Card': 'Baphomet Jr Card',
+  'Blood Red': 'Red Blood',
+  'Cotton Tufts': 'Cotton Wads', // uaRO's in-game name
   'Clock Hands': 'Needle of Alarm', // listed twice; merged on import
   'Fluroscent Liquid': 'Fluorescent Liquid',
   "Loki's Whisper": "Loki's Whispers",
@@ -33,7 +35,7 @@ export const RENAMES = {
 };
 
 /** Sheet rows to skip: items that couldn't be found in game. */
-export const REMOVED = ['Ghost Coffin', 'Torn Paper Piece'];
+export const REMOVED = ['Torn Paper Piece'];
 
 /**
  * "Used for" targets that were spelled differently in different rows:
@@ -133,7 +135,7 @@ export const ITEM_IDS = {
   'Cigarette [0]': 2267,
   'Circlet [1]': 2233,
   'Cookie Bat': 11605,
-  'Cotton Tufts': 25233,
+  'Cotton Wads': 25233,
   'Crown [0]': 2235,
   'Cultish Masque': 1045,
   'Cursed Ruby': 724,
@@ -191,4 +193,7 @@ export const ITEM_IDS = {
   // use the ID for another item).
   'Miracle Bandage': 23256,
   'Scatleton Memory': 25408,
+  'Red Blood': 990,
+  'Ghost Coffin': 12363, // the emulators call it Fit Pipe
+  'Blue Vital Flower': 6113, // rAthena calls it "Vital Flower"
 };

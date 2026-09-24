@@ -23,12 +23,13 @@ import { useMediaQuery } from '../utils/useMediaQuery.js';
  *   sort        - current sort (the table shows it on its headers)
  *   onSort      - called with a column's sortKey when a table header is clicked
  *   onSelectUse - called when a "Used For" target is clicked
+ *   highlightUses - "Used For" targets being filtered by (highlighted in each item)
  */
-export default memo(function ItemList({ items, sort, onSort, onSelectUse }) {
+export default memo(function ItemList({ items, sort, onSort, onSelectUse, highlightUses }) {
   const showTable = useMediaQuery('(min-width: 768px)');
 
   if (items.length === 0) {
-    return <p className="py-12 text-center text-subtle-fg">No items match your search or filters.</p>;
+    return <p className="py-12 text-center text-muted">No items match your search or filters.</p>;
   }
 
   return (
@@ -38,13 +39,19 @@ export default memo(function ItemList({ items, sort, onSort, onSelectUse }) {
           className="@max-table-fit:max-h-[calc(100vh-2rem)] @max-table-fit:overflow-auto @max-table-fit:rounded-lg
             @max-table-fit:shadow-sm"
         >
-          <ItemTable items={items} sort={sort} onSort={onSort} onSelectUse={onSelectUse} />
+          <ItemTable
+            items={items}
+            sort={sort}
+            onSort={onSort}
+            onSelectUse={onSelectUse}
+            highlightUses={highlightUses}
+          />
         </div>
       ) : (
         <ul className="space-y-3">
           {items.map((item) => (
             <li key={item.id}>
-              <ItemCard item={item} onSelectUse={onSelectUse} />
+              <ItemCard item={item} onSelectUse={onSelectUse} highlightUses={highlightUses} />
             </li>
           ))}
         </ul>

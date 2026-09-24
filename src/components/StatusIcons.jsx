@@ -25,11 +25,13 @@ export function NoIcon({ label }) {
   );
 }
 
-/** "Can you buy this from an NPC?": ✓, ✕, "NPC Only", or "—" (unknown). */
+/** "Can you buy this from an NPC?": ✓ (yes, or NPC only), ✕, or "—" (unknown). */
 export function NpcBuyable({ item }) {
-  if (item.npcBuyable === 'yes') return <YesIcon label="Yes" />;
+  if (item.npcBuyable === 'yes' || item.npcBuyable === 'npc-only') {
+    return <YesIcon label={NPC_BUYABLE_LABELS[item.npcBuyable]} />;
+  }
   if (item.npcBuyable === 'no') return <NoIcon label="No" />;
-  return NPC_BUYABLE_LABELS[item.npcBuyable] ?? '—';
+  return '—';
 }
 
 /**

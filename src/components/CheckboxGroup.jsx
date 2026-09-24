@@ -42,13 +42,16 @@ export default function CheckboxGroup({
   }
 
   return (
-    <details open className="group border-b border-line py-3">
-      <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-fg">
+    <details open className="group border-b border-line py-2">
+      <summary
+        className="-mx-2 flex cursor-pointer list-none items-center justify-between rounded-md px-2 py-1 text-sm
+          font-semibold text-fg hover:bg-hover"
+      >
         {title}
         {selected.length > 0 && (
           <span className="mr-2 ml-auto text-xs font-normal text-accent">{selected.length} selected</span>
         )}
-        <span className="text-faint transition-transform group-open:rotate-90" aria-hidden="true">
+        <span className="text-muted transition-transform group-open:rotate-90" aria-hidden="true">
           ›
         </span>
       </summary>
@@ -89,12 +92,12 @@ export default function CheckboxGroup({
                   className="size-4 shrink-0 accent-emerald-700"
                 />
                 <span className="flex-1 text-body">{renderLabel ? renderLabel(option) : option}</span>
-                <span className="text-xs text-subtle-fg tabular-nums">{count}</span>
+                <span className="text-xs text-muted tabular-nums">{count}</span>
               </label>
             </li>
           );
         })}
-        {visible.length === 0 && <li className="px-1 py-1 text-sm text-subtle-fg">No matches</li>}
+        {visible.length === 0 && <li className="px-1 py-1 text-sm text-muted">No matches</li>}
       </ul>
     </details>
   );

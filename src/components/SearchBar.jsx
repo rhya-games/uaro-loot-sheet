@@ -22,7 +22,7 @@ export default function SearchBar({ value, onChange }) {
       <MagnifyingGlassIcon
         aria-hidden="true"
         className={`pointer-events-none absolute top-1/2 left-3 size-5 -translate-y-1/2 ${
-          active ? 'text-accent' : 'text-faint'
+          active ? 'text-accent' : 'text-muted'
         }`}
       />
       <input
@@ -39,7 +39,7 @@ export default function SearchBar({ value, onChange }) {
         }}
         placeholder="Search by name, use, or item ID…"
         autoComplete="off"
-        className={`w-full rounded-lg border py-2.5 pr-11 pl-10 text-base shadow-sm placeholder:text-subtle-fg ${
+        className={`w-full rounded-lg border py-2.5 pr-11 pl-10 text-base shadow-sm placeholder:text-muted ${
           active ? 'border-accent-line bg-accent-soft' : 'border-line-strong bg-surface'
         }`}
       />

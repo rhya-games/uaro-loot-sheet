@@ -134,7 +134,7 @@
           "minimum": 0
         },
         "sellValue": {
-          "description": "Zeny an NPC pays for one, before any skills (the item's base sell price). Filled in by `npm run sync:prices`. The NPC Sell column adds the Overcharge bonus from game-rules.json, unless uaro-overrides.json says otherwise.",
+          "description": "Zeny an NPC pays for one, before any skills (the item's base sell price). Filled in by `npm run sync:prices`. The NPC column adds the Overcharge bonus from game-rules.json, unless uaro-overrides.json says otherwise.",
           "type": [
             "integer",
             "null"

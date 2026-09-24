@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import SkipLink from './components/SkipLink.jsx';
+import SiteFooter from './components/SiteFooter.jsx';
 import SiteHeader from './components/SiteHeader.jsx';
 import LootPage from './pages/LootPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
@@ -28,17 +29,20 @@ export default function App() {
   }, [page]);
 
   return (
-    <div className="min-h-screen bg-page text-body">
+    // A column as tall as the window: the footer sits at the bottom of the
+    // window on short pages, and after the content on long ones.
+    <div className="flex min-h-screen flex-col bg-page text-body">
       <SkipLink targetId="main" className="focus:fixed focus:top-4 focus:left-4 focus:z-50">
         Skip to main content
       </SkipLink>
       <SiteHeader route={route} />
-      <main id="main" tabIndex={-1} className="mx-auto max-w-screen-2xl px-4 py-6 focus:outline-none">
+      <main id="main" tabIndex={-1} className="mx-auto w-full max-w-screen-2xl flex-1 px-4 py-6 focus:outline-none">
         <div hidden={route !== 'loot'}>
           <LootPage />
         </div>
         {page && <page.Component />}
       </main>
+      <SiteFooter />
     </div>
   );
 }

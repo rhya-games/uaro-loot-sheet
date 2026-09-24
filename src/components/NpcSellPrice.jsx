@@ -4,7 +4,7 @@ import { formatZeny } from '../utils/format.js';
 import { OVERCHARGE_LEVEL, npcSellInfo } from '../utils/prices.js';
 
 /**
- * The NPC Sell value for one item (see utils/prices.js):
+ * The NPC (sell price) value for one item (see utils/prices.js):
  *   normal price    "15,500z"
  *   uaRO fixed      "2,000z" + lock icon (tooltip explains Overcharge doesn't apply)
  *   can't be sold   ✕ icon (tooltip explains why)
@@ -30,7 +30,7 @@ export default function NpcSellPrice({ item }) {
     return (
       <Tooltip text={`uaRO price: the most an NPC pays. Overcharge ${OVERCHARGE_LEVEL} doesn't raise it.`}>
         <span tabIndex={0} className="inline-flex items-center gap-1 rounded">
-          <LockClosedIcon className="size-3.5 text-subtle-fg" aria-hidden="true" />
+          <LockClosedIcon className="size-3.5 text-muted" aria-hidden="true" />
           {formatZeny(info.price)}
           <span className="sr-only"> (fixed uaRO price)</span>
         </span>

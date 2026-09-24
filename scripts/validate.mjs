@@ -111,10 +111,27 @@ for (const listName of ['modifiedSellPrices', 'customSellValues', 'notSellableTo
     overriddenIds.set(entry.itemId, listName);
   }
 }
-for (const entry of overrides.renewalContent.reviewedPrices.items) {
-  const item = itemsById.get(entry.itemId);
-  if (item?.name !== entry.name) {
-    errors.push(`${OVERRIDES_FILE} reviewedPrices: itemId ${entry.itemId} is ${item ? `"${item.name}"` : 'not in loot.json'}, not "${entry.name}"`);
+const otherLists = { reviewedPrices: overrides.renewalContent.reviewedPrices };
+// Shop lists don't have to be in loot.json, but if an item is, names must match.
+const shopLists = [
+  ...overrides.npcShops.uaroShops.shops.map((shop) => [`uaroShops ${shop.name}`, shop.items]),
+  ['soldByNpc', overrides.npcShops.soldByNpc.items],
+  ['notSoldByNpc', overrides.npcShops.notSoldByNpc.items],
+];
+for (const [listName, entries] of shopLists) {
+  for (const entry of entries) {
+    const item = itemsById.get(entry.itemId);
+    if (item && item.name !== entry.name) {
+      errors.push(`${OVERRIDES_FILE} ${listName}: itemId ${entry.itemId} is "${item.name}", not "${entry.name}"`);
+    }
+  }
+}
+for (const [listName, list] of Object.entries(otherLists)) {
+  for (const entry of list.items) {
+    const item = itemsById.get(entry.itemId);
+    if (item?.name !== entry.name) {
+      errors.push(`${OVERRIDES_FILE} ${listName}: itemId ${entry.itemId} is ${item ? `"${item.name}"` : 'not in loot.json'}, not "${entry.name}"`);
+    }
   }
 }
 

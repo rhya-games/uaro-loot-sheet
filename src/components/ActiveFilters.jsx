@@ -97,7 +97,7 @@ export default function ActiveFilters({
       ))}
       {chips.length > 1 && (
         <li>
-          <button type="button" onClick={onClearAll} className="text-sm text-accent hover:underline">
+          <button type="button" onClick={onClearAll} className="button-small">
             Clear all
           </button>
         </li>

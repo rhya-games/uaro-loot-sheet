@@ -24,11 +24,12 @@ const COLUMNS = [
   {
     label: 'Item Name',
     sortKey: 'name',
+    title: 'Item name, type and ID',
     className: 'min-w-48',
     render: (item) => (
       <>
         <div className="font-medium text-fg">{item.name}</div>
-        <div className="mt-0.5 text-[13px] text-muted">
+        <div className="mt-0.5 text-sm text-muted">
           {item.itemType}
           {item.itemId && ` · #${item.itemId}`}
         </div>
@@ -38,6 +39,7 @@ const COLUMNS = [
   {
     label: 'Action',
     sortKey: 'actions',
+    title: 'What to do with the item',
     render: (item) => (
       <div className="flex flex-wrap gap-1">
         <ActionBadges actions={item.actions} />
@@ -47,6 +49,7 @@ const COLUMNS = [
   {
     label: 'Category',
     sortKey: 'categories',
+    title: 'Where the item is used',
     render: (item) => (
       <div className="flex flex-wrap gap-1">
         <CategoryBadges categories={item.categories} />
@@ -56,43 +59,46 @@ const COLUMNS = [
   {
     label: 'Used For',
     sortKey: 'uses',
-    title: 'Sorts by how many things the item is used for',
+    title: 'What the item is needed for, and how many',
     className: 'min-w-44',
-    render: (item, { onSelectUse }) => <ItemUses item={item} onSelectUse={onSelectUse} />,
+    render: (item, { onSelectUse, highlightUses }) => (
+      <ItemUses item={item} onSelectUse={onSelectUse} highlight={highlightUses} />
+    ),
   },
   {
     label: 'Vend',
     sortKey: 'avgVend',
-    title: 'Average price in player vending shops. ✕ means NPCs sell it.',
+    title: 'Average price in player vending shops (✕: NPCs sell it)',
     numeric: true,
     render: (item) => <PlayerPrice item={item} field="avgVend" />,
   },
   {
     label: 'Whobuy',
     sortKey: 'avgWhobuy',
-    title: 'Average price players pay through @whobuy. ✕ means NPCs sell it.',
+    title: 'Average price players pay through @whobuy (✕: NPCs sell it)',
     numeric: true,
     render: (item) => <PlayerPrice item={item} field="avgWhobuy" />,
   },
   {
-    label: 'NPC Sell',
+    label: 'NPC',
     sortKey: 'npcSellPrice',
-    title: `Zeny from selling to an NPC with Overcharge level ${OVERCHARGE_LEVEL} (+${OVERCHARGE_PERCENT}%)`,
+    title: `What an NPC pays you, with Overcharge ${OVERCHARGE_LEVEL} (+${OVERCHARGE_PERCENT}%)`,
     numeric: true,
     render: (item) => <NpcSellPrice item={item} />,
   },
   {
-    label: 'NPC Buy',
+    label: 'NPC Shop',
     sortKey: 'npcBuyable',
-    nowrap: true,
-    title: 'Can you buy this from an NPC?',
+    numeric: true, // right-aligned, like the price columns
+    className: 'w-px', // as narrow as the header text allows
+    title: 'Whether NPC shops sell the item',
     render: (item) => <NpcBuyable item={item} />,
   },
   {
     label: 'Verified',
     sortKey: 'lastVerified',
     nowrap: true,
-    title: 'When the vend or @whobuy price was last checked on the live server',
+    title: 'When the vend or @whobuy price was last checked in game',
     render: (item) => <VerifiedText item={item} />,
   },
   {
@@ -112,8 +118,9 @@ const COLUMNS = [
  *   sort        - current sort, e.g. { key: 'avgVend', direction: 'desc' }, or null
  *   onSort      - called with a column's sortKey when its header is clicked
  *   onSelectUse - called when a "Used For" target is clicked
+ *   highlightUses - "Used For" targets being filtered by (highlighted in each row)
  */
-export default function ItemTable({ items, sort, onSort, onSelectUse }) {
+export default function ItemTable({ items, sort, onSort, onSelectUse, highlightUses }) {
   return (
     <table className="panel w-full border-separate border-spacing-0 text-sm">
       <thead>
@@ -160,7 +167,7 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
                   column.numeric ? 'text-right whitespace-nowrap tabular-nums' : ''
                 } ${column.nowrap ? 'whitespace-nowrap' : ''}`}
               >
-                {column.render(item, { onSelectUse })}
+                {column.render(item, { onSelectUse, highlightUses })}
               </td>
             ))}
           </tr>
@@ -173,12 +180,23 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
 /**
  * A column header you can click (or focus and press Enter/Space) to sort.
  * The button fills the whole header cell, so the focus ring outlines the cell.
- * The arrow always sits to the right of the label: shown while sorted by this
- * column, or faintly on hover/focus as a hint. Its space is always reserved,
- * so labels don't shift when it appears.
+ * The arrow shows while sorted by this column, or faintly on hover/focus as a
+ * hint. Its space is always reserved, so labels don't shift when it appears.
+ * It sits on the side away from the column's alignment: after the label in
+ * left-aligned columns, before it in right-aligned (number) columns, so the
+ * label's edge lines up with the values below.
  */
 function SortButton({ column, direction, onSort }) {
-  const arrow = direction === 'asc' ? '↑' : direction === 'desc' ? '↓' : '↕';
+  const arrow = (
+    <span
+      aria-hidden="true"
+      className={`w-3 text-center text-xs transition-opacity duration-150 ease-smooth ${
+        direction ? 'opacity-100' : 'opacity-0 group-hover/sort:opacity-70 group-focus-visible/sort:opacity-70'
+      }`}
+    >
+      {direction === 'asc' ? '↑' : direction === 'desc' ? '↓' : '↕'}
+    </span>
+  );
 
   const button = (
     <button
@@ -189,15 +207,9 @@ function SortButton({ column, direction, onSort }) {
       className={`group/sort flex h-11 w-full items-center gap-1 rounded-md px-3 font-semibold
         focus-visible:outline-white focus-visible:-outline-offset-4 ${column.numeric ? 'justify-end' : 'justify-start'}`}
     >
+      {column.numeric && arrow}
       {column.label}
-      <span
-        aria-hidden="true"
-        className={`w-3 text-center text-xs transition-opacity duration-150 ease-smooth ${
-          direction ? 'opacity-100' : 'opacity-0 group-hover/sort:opacity-70 group-focus-visible/sort:opacity-70'
-        }`}
-      >
-        {arrow}
-      </span>
+      {!column.numeric && arrow}
     </button>
   );
 

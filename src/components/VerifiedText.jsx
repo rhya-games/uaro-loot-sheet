@@ -13,7 +13,7 @@ export default function VerifiedText({ item }) {
   if (!item.lastVerified) return text;
   return (
     <Tooltip text={verifiedTooltip(item)}>
-      <span tabIndex={0} className="rounded underline decoration-faint decoration-dotted underline-offset-2">
+      <span tabIndex={0} className="rounded underline decoration-muted decoration-dotted underline-offset-2">
         {text}
       </span>
     </Tooltip>

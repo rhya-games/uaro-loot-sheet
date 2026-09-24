@@ -89,12 +89,36 @@
     ],
     "categories": [
       "Repeatable Quest",
-      "uaRO"
+      "uaRO",
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Lazy Smokie",
+        "qty": 1000
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 49,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "afro",
+    "name": "Afro",
+    "itemId": 10033,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Stone Shooter Pet accessory",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -140,6 +164,32 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "airship-part",
+    "name": "Airship Part",
+    "itemId": 23188,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "Hodremlin Pet Evolution",
+        "qty": 3
+      }
+    ],
+    "notes": "Gremlin Taming Item",
+    "links": [],
+    "sellValue": 5,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -292,7 +342,7 @@
     "uses": [
       {
         "for": "Kiel D-01 Pet Evolution",
-        "qty": 10
+        "qty": 5
       }
     ],
     "notes": "",
@@ -338,9 +388,15 @@
     ],
     "categories": [
       "Cooking",
-      "Brewing"
+      "Brewing",
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Ph.D Hat",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 250,
@@ -537,6 +593,10 @@
       },
       {
         "for": "Santa Poring Hat",
+        "qty": 1
+      },
+      {
+        "for": "Angel Wing Ears",
         "qty": 1
       }
     ],
@@ -780,11 +840,16 @@
     ],
     "categories": [
       "Server Hat Quest",
-      "uaRO"
+      "uaRO",
+      "Official Hat Quest"
     ],
     "uses": [
       {
         "for": "Well-Chewed Pencil",
+        "qty": 1
+      },
+      {
+        "for": "Model Training Hat",
         "qty": 1
       }
     ],
@@ -879,6 +944,30 @@
     "npcBuyable": "no"
   },
   {
+    "id": "arrow",
+    "name": "Arrow",
+    "itemId": 1750,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Apple of Archer",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "assassin-mask",
     "name": "Assassin Mask",
     "itemId": 5054,
@@ -918,6 +1007,30 @@
     "notes": "",
     "links": [],
     "sellValue": 725,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "axe-4",
+    "name": "Axe [4]",
+    "itemId": 1302,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Hair Brush",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -1032,6 +1145,10 @@
       },
       {
         "for": "Blue Hairband",
+        "qty": 1
+      },
+      {
+        "for": "Fairy Flower",
         "qty": 1
       }
     ],
@@ -1209,7 +1326,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "bee-sting",
@@ -1228,6 +1345,24 @@
     "links": [],
     "sellValue": 16,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "beehive-box",
+    "name": "Beehive Box",
+    "itemId": 102723,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Hornet Taming Item",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -1269,7 +1404,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "big-ribbon-0",
@@ -1364,7 +1499,7 @@
     ],
     "uses": [
       {
-        "for": "Teddy Bear Hat",
+        "for": "Teddybear Hat",
         "qty": 300
       }
     ],
@@ -1416,6 +1551,10 @@
       {
         "for": "Wickebine's Black Cat Ears",
         "qty": 500
+      },
+      {
+        "for": "Drooping Cat",
+        "qty": 300
       }
     ],
     "notes": "",
@@ -1449,6 +1588,22 @@
       },
       {
         "for": "Censor Bar",
+        "qty": 1
+      },
+      {
+        "for": "Drooping Cat",
+        "qty": 1
+      },
+      {
+        "for": "Magistrate Hat [1]",
+        "qty": 1
+      },
+      {
+        "for": "Stop Post",
+        "qty": 1
+      },
+      {
+        "for": "Winter Hat",
         "qty": 1
       }
     ],
@@ -1506,33 +1661,6 @@
     "npcBuyable": "yes"
   },
   {
-    "id": "blood-red",
-    "name": "Blood Red",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Vend",
-      "Whobuy"
-    ],
-    "categories": [
-      "Pet Evolution",
-      "Pet",
-      "uaRO",
-      "Skills"
-    ],
-    "uses": [
-      {
-        "for": "Fire Golem Pet Evolution",
-        "qty": 50
-      }
-    ],
-    "notes": "",
-    "links": [],
-    "sellValue": 500,
-    "sellSource": "manual",
-    "npcBuyable": "no"
-  },
-  {
     "id": "bloody-page",
     "name": "Bloody Page",
     "itemId": 7449,
@@ -1567,7 +1695,7 @@
       "Keep"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Uncategorized"
     ],
     "uses": [],
     "notes": "",
@@ -1593,7 +1721,7 @@
         "qty": 7
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 7
       }
     ],
@@ -1614,7 +1742,6 @@
     ],
     "categories": [
       "Dungeon Quest",
-      "Official Hat Quest",
       "Server Hat Quest",
       "uaRO"
     ],
@@ -1626,10 +1753,6 @@
       {
         "for": "Rainbow Scarf",
         "qty": 10
-      },
-      {
-        "for": "Orc Hero Headdress",
-        "qty": 300
       }
     ],
     "notes": "",
@@ -1727,7 +1850,7 @@
   {
     "id": "blue-vital-flower",
     "name": "Blue Vital Flower",
-    "itemId": null,
+    "itemId": 6113,
     "itemType": "Misc",
     "actions": [
       "NPC"
@@ -1739,7 +1862,7 @@
     "notes": "",
     "links": [],
     "sellValue": 500,
-    "sellSource": "manual",
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -1756,10 +1879,6 @@
       "uaRO"
     ],
     "uses": [
-      {
-        "for": "Wickebine's Black Cat Ears",
-        "qty": 1
-      },
       {
         "for": "Blush of Groom",
         "qty": 1
@@ -1781,11 +1900,11 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
     "uses": [
       {
-        "for": "Candle Hat",
+        "for": "Candle",
         "qty": 1
       }
     ],
@@ -1817,6 +1936,30 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "book-3",
+    "name": "Book [3]",
+    "itemId": 1550,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Model Training Hat",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -1969,7 +2112,7 @@
     "links": [],
     "sellValue": 165,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "brooch-0",
@@ -2022,6 +2165,30 @@
     "notes": "",
     "links": [],
     "sellValue": 280,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bucket-hat-1",
+    "name": "Bucket Hat [1]",
+    "itemId": 5120,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Renown Detective's Cap [1]",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -2187,7 +2354,7 @@
     ],
     "uses": [
       {
-        "for": "Mine Helmet",
+        "for": "Mine Hat",
         "qty": 1
       }
     ],
@@ -2223,7 +2390,7 @@
     "links": [],
     "sellValue": 5,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "candy-cane",
@@ -2251,7 +2418,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "cap-0",
@@ -2351,7 +2518,12 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 477,
@@ -2414,7 +2586,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "cheese",
@@ -2467,7 +2639,7 @@
     "itemId": 742,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Dungeon Quest"
@@ -2477,7 +2649,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "chrysalis",
@@ -2497,7 +2669,7 @@
     "links": [],
     "sellValue": 4,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "cigarette-0",
@@ -2523,7 +2695,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "circlet-1",
@@ -2544,13 +2716,17 @@
       {
         "for": "Grief for Greed",
         "qty": 1
+      },
+      {
+        "for": "Drooping Cat",
+        "qty": 1
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 3750,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "citrin",
@@ -2568,7 +2744,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "clam-flesh",
@@ -2587,7 +2763,7 @@
     "links": [],
     "sellValue": 79,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "clam-shell",
@@ -2598,17 +2774,9 @@
       "NPC"
     ],
     "categories": [
-      "Dungeon Quest",
-      "Pet Evolution",
-      "Pet",
-      "uaRO"
+      "Dungeon Quest"
     ],
-    "uses": [
-      {
-        "for": "Rigid Nightmare Terror Pet Evolution",
-        "qty": 100
-      }
-    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 28,
@@ -2631,14 +2799,14 @@
     "uses": [
       {
         "for": "Satanic Bone Helm",
-        "qty": 250
+        "qty": 350
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 420,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "claw-of-desert-wolf",
@@ -2667,13 +2835,29 @@
       {
         "for": "Desert Wolf Pet Evolution",
         "qty": 300
+      },
+      {
+        "for": "Blue Fish",
+        "qty": 1
+      },
+      {
+        "for": "Drooping Cat",
+        "qty": 1
+      },
+      {
+        "for": "Lazy Smokie",
+        "qty": 1
+      },
+      {
+        "for": "Smokie Leaf",
+        "qty": 1
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 104,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "clover",
@@ -2687,19 +2871,42 @@
     "categories": [
       "Pet Evolution",
       "Pet",
-      "uaRO"
+      "uaRO",
+      "Official Hat Quest"
     ],
     "uses": [
       {
         "for": "Leaf Lunatic Pet Evolution",
-        "qty": 25
+        "qty": 250
+      },
+      {
+        "for": "Mr. Smile",
+        "qty": 10
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 5,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "coagulated-spell",
+    "name": "Coagulated Spell",
+    "itemId": 6608,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "uaRO"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
   },
   {
     "id": "coal",
@@ -2728,7 +2935,7 @@
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "cobaltblue-dyestuffs",
@@ -2754,13 +2961,21 @@
       {
         "for": "Parcel Hat",
         "qty": 1
+      },
+      {
+        "for": "Necktie",
+        "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "cobweb",
@@ -2778,7 +2993,7 @@
     "links": [],
     "sellValue": 92,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "concentration-potion",
@@ -2796,7 +3011,7 @@
     "links": [],
     "sellValue": 400,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "conch",
@@ -2815,7 +3030,25 @@
     "links": [],
     "sellValue": 79,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "contaminated-magic",
+    "name": "Contaminated Magic",
+    "itemId": 6755,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "uaRO"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
   },
   {
     "id": "contract-in-shadow",
@@ -2840,7 +3073,7 @@
     "links": [],
     "sellValue": 50,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "cookie-bat",
@@ -2865,7 +3098,7 @@
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "cooking-oil",
@@ -2907,7 +3140,31 @@
     "links": [],
     "sellValue": 386,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "coronet-0",
+    "name": "Coronet [0]",
+    "itemId": 2249,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Crown of Mistress",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "corsair",
@@ -2932,11 +3189,11 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
-    "id": "cotton-tufts",
-    "name": "Cotton Tufts",
+    "id": "cotton-wads",
+    "name": "Cotton Wads",
     "itemId": 25233,
     "itemType": "Misc",
     "actions": [
@@ -2985,13 +3242,21 @@
       {
         "for": "Doctor Band",
         "qty": 1
+      },
+      {
+        "for": "Ayam [1]",
+        "qty": 5
+      },
+      {
+        "for": "Magistrate Hat [1]",
+        "qty": 5
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 5,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "crest-piece",
@@ -3010,7 +3275,7 @@
     "links": [],
     "sellValue": 2500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "crown-0",
@@ -3035,7 +3300,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "crystal-blue",
@@ -3055,7 +3320,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "crystal-fragment",
@@ -3073,7 +3338,7 @@
     "links": [],
     "sellValue": 276,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "crystal-mirror",
@@ -3089,7 +3354,7 @@
     ],
     "uses": [
       {
-        "for": "Mine Helmet",
+        "for": "Mine Hat",
         "qty": 1
       }
     ],
@@ -3122,7 +3387,7 @@
     "links": [],
     "sellValue": 5,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "crystal-pumps-0",
@@ -3246,6 +3511,186 @@
     "npcBuyable": "no"
   },
   {
+    "id": "cute-blue-ribbon-0",
+    "name": "Cute Blue Ribbon [0]",
+    "itemId": 5440,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute White Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cute-green-ribbon-0",
+    "name": "Cute Green Ribbon [0]",
+    "itemId": 5438,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute White Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cute-red-ribbon-0",
+    "name": "Cute Red Ribbon [0]",
+    "itemId": 5439,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute White Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cute-ribbon-0",
+    "name": "Cute Ribbon [0]",
+    "itemId": 2250,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute White Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cute-white-ribbon-0",
+    "name": "Cute White Ribbon [0]",
+    "itemId": 5441,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "cyfar",
     "name": "Cyfar",
     "itemId": 7053,
@@ -3283,6 +3728,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "damp-darkness",
+    "name": "Damp Darkness",
+    "itemId": 6100,
+    "itemType": "Misc",
+    "actions": [
+      "Keep"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "Hodremlin Pet Evolution",
+        "qty": 50
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "dark-crystal-fragment",
     "name": "Dark Crystal Fragment",
     "itemId": 7315,
@@ -3315,14 +3785,19 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "dead-branch-db",
@@ -3341,7 +3816,7 @@
     "links": [],
     "sellValue": 25,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "deadly-noxious-herb",
@@ -3382,7 +3857,7 @@
     "links": [],
     "sellValue": 700,
     "sellSource": "rathena-renewal",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "delicious-shaved-ice",
@@ -3685,6 +4160,33 @@
     "npcBuyable": "no"
   },
   {
+    "id": "driller-card",
+    "name": "Driller Card",
+    "itemId": 4180,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Card",
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "Misteress Pet Evolution",
+        "qty": 10
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "drooping-cat-0",
     "name": "Drooping Cat [0]",
     "itemId": 5058,
@@ -3801,6 +4303,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "earthworm-the-dude",
+    "name": "Earthworm the Dude",
+    "itemId": 623,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Picky Taming Item",
+    "links": [],
+    "sellValue": 2000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "ectoplasm",
     "name": "Ectoplasm",
     "itemId": 7220,
@@ -3870,7 +4390,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "eggring-card",
@@ -3982,17 +4502,50 @@
     "categories": [
       "Pet Evolution",
       "Pet",
-      "uaRO"
+      "uaRO",
+      "Official Hat Quest"
     ],
     "uses": [
       {
         "for": "Aliza Pet Evolution",
         "qty": 30
+      },
+      {
+        "for": "Hair Brush",
+        "qty": 5
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 550,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elven-ears-0",
+    "name": "Elven Ears [0]",
+    "itemId": 2286,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Angel Wing Ears",
+        "qty": 1
+      },
+      {
+        "for": "Evil Wing Ears",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -4027,7 +4580,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Server Hat Quest",
@@ -4043,7 +4596,7 @@
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "emperium",
@@ -4097,6 +4650,32 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "errende-ebecee-card",
+    "name": "Errende Ebecee Card",
+    "itemId": 4349,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO",
+      "Card"
+    ],
+    "uses": [
+      {
+        "for": "Love Guard [1]",
+        "qty": 3
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "evil-druid-card",
     "name": "Evil Druid Card",
     "itemId": 4141,
@@ -4138,7 +4717,7 @@
     ],
     "uses": [
       {
-        "for": "Baphomet Jr Pet Evolution",
+        "for": "Chaotic Baphomet Jr Pet Evolution",
         "qty": 300
       },
       {
@@ -4154,7 +4733,31 @@
     "links": [],
     "sellValue": 600,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "evil-wing-0",
+    "name": "Evil Wing [0]",
+    "itemId": 2255,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Evil Wing Ears",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "evil-wing-ears-0",
@@ -4179,7 +4782,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "expanded-token-fragment",
@@ -4232,13 +4835,17 @@
       {
         "for": "Contaminated Wanderer Pet Evolution",
         "qty": 100
+      },
+      {
+        "for": "Necktie",
+        "qty": 100
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 153,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fan-of-wind",
@@ -4256,7 +4863,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fang",
@@ -4274,7 +4881,7 @@
     "links": [],
     "sellValue": 340,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fang-of-garm-fang-of-hatii",
@@ -4297,7 +4904,7 @@
     "links": [],
     "sellValue": 50,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fantastic-cooking-kit",
@@ -4316,7 +4923,25 @@
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fashionable-glasses",
+    "name": "Fashionable Glasses",
+    "itemId": 10024,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Loli Ruri Pet accessory",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "fatty-chubby-earthworm",
@@ -4342,7 +4967,7 @@
     "links": [],
     "sellValue": 2500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "feather",
@@ -4389,7 +5014,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "feather-of-birds",
@@ -4411,13 +5036,17 @@
       {
         "for": "Chick Hat",
         "qty": 500
+      },
+      {
+        "for": "Statue Of Baby Angel",
+        "qty": 500
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 5,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fig-leaf",
@@ -4436,7 +5065,7 @@
     "links": [],
     "sellValue": 269,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fin",
@@ -4454,7 +5083,7 @@
     "links": [],
     "sellValue": 206,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fine-grit",
@@ -4472,7 +5101,7 @@
     "links": [],
     "sellValue": 60,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fine-sand",
@@ -4490,7 +5119,7 @@
     "links": [],
     "sellValue": 50,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fine-grained-trunk",
@@ -4508,7 +5137,7 @@
     "links": [],
     "sellValue": 1,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fish-tail",
@@ -4521,12 +5150,17 @@
     "categories": [
       "Pet Evolution",
       "Pet",
-      "uaRO"
+      "uaRO",
+      "Official Hat Quest"
     ],
     "uses": [
       {
         "for": "Wild Rose Pet Evolution",
         "qty": 200
+      },
+      {
+        "for": "Blue Fish",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -4551,7 +5185,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "flail-goblin-ring",
@@ -4569,7 +5203,7 @@
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "flame-gemstone",
@@ -4613,7 +5247,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "flavored-alcohol",
@@ -4631,7 +5265,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "flexible-tube",
@@ -4659,7 +5293,7 @@
     "links": [],
     "sellValue": 51,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fluff",
@@ -4678,13 +5312,17 @@
       {
         "for": "Black Cat Ears",
         "qty": 200
+      },
+      {
+        "for": "Mr. Smile",
+        "qty": 10
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 4,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fluorescent-liquid",
@@ -4702,7 +5340,7 @@
     "links": [],
     "sellValue": 356,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "forbidden-red-candle",
@@ -4713,14 +5351,20 @@
       "Vend"
     ],
     "categories": [
-      "Pet"
+      "Pet",
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 1
+      }
+    ],
     "notes": "Zealotus Taming Item",
     "links": [],
     "sellValue": 10000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "four-leaf-clover",
@@ -4768,7 +5412,7 @@
     "links": [],
     "sellValue": 40000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fragment",
@@ -4786,7 +5430,7 @@
     "links": [],
     "sellValue": 672,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "fragment-of-agony",
@@ -4893,7 +5537,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "frill",
@@ -4927,7 +5571,12 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Winter Hat",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 17500,
@@ -4985,7 +5634,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "garlet",
@@ -5003,7 +5652,7 @@
     "links": [],
     "sellValue": 20,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "garnet",
@@ -5021,7 +5670,7 @@
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "geek-glasses",
@@ -5071,6 +5720,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "ghost-coffin",
+    "name": "Ghost Coffin",
+    "itemId": 12363,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Whisper Taming Item. The emulators call this item Fit Pipe.",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "ghoul-card",
     "name": "Ghoul Card",
     "itemId": 4110,
@@ -5116,7 +5783,7 @@
     "links": [],
     "sellValue": 307,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "gift-box",
@@ -5135,7 +5802,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "gill",
@@ -5153,7 +5820,7 @@
     "links": [],
     "sellValue": 171,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "girls-diary",
@@ -5172,7 +5839,7 @@
     "links": [],
     "sellValue": 750,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "girls-doll",
@@ -5188,7 +5855,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "girls-naivety",
@@ -5206,7 +5873,7 @@
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "glacial-heart",
@@ -5238,7 +5905,7 @@
     "links": [],
     "sellValue": 303,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "glass-bead",
@@ -5323,7 +5990,7 @@
     "links": [],
     "sellValue": 100000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "gold-ring-0",
@@ -5366,7 +6033,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "golden-earring",
@@ -5382,7 +6049,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "golden-hair",
@@ -5468,7 +6135,7 @@
     "links": [],
     "sellValue": 100,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "grape-juice",
@@ -5487,7 +6154,7 @@
     "links": [],
     "sellValue": 125,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "grasshoppers-leg",
@@ -5513,7 +6180,7 @@
     "links": [],
     "sellValue": 18,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "grave-keepers-sword",
@@ -5529,7 +6196,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "great-nature",
@@ -5548,7 +6215,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "green-apple",
@@ -5556,7 +6223,7 @@
     "itemId": 7821,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -5566,7 +6233,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "green-bijou",
@@ -5586,7 +6253,7 @@
         "qty": 7
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 7
       }
     ],
@@ -5594,7 +6261,7 @@
     "links": [],
     "sellValue": 443,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "green-herb",
@@ -5627,7 +6294,7 @@
     "links": [],
     "sellValue": 5,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "green-jewel-bag",
@@ -5643,7 +6310,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "green-lace",
@@ -5667,7 +6334,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "green-live",
@@ -5686,7 +6353,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "green-salad",
@@ -5722,7 +6389,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "grit",
@@ -5740,7 +6407,7 @@
     "links": [],
     "sellValue": 153,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "guitar-0",
@@ -5764,7 +6431,7 @@
     "links": [],
     "sellValue": 23500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "hairband-of-stars",
@@ -5780,7 +6447,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "halo-0",
@@ -5800,13 +6467,17 @@
       {
         "for": "Angeling Pet Evolution",
         "qty": 1
+      },
+      {
+        "for": "Statue Of Baby Angel",
+        "qty": 1
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "hammer-goblin-ring",
@@ -5824,7 +6495,7 @@
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "hammer-of-blacksmith",
@@ -5843,7 +6514,7 @@
     "links": [],
     "sellValue": 1,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "hand-of-god",
@@ -5861,7 +6532,7 @@
     "uses": [
       {
         "for": "Diabolic Pet Evolution",
-        "qty": 50
+        "qty": 30
       },
       {
         "for": "Contaminated Wanderer Pet Evolution",
@@ -5951,11 +6622,33 @@
       {
         "for": "Sunday Hat",
         "qty": 1
+      },
+      {
+        "for": "Magistrate Hat [1]",
+        "qty": 1
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hatii-claw-1",
+    "name": "Hatii Claw [1]",
+    "itemId": 1815,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -5971,7 +6664,12 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Ear Muffs",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -6018,7 +6716,7 @@
     "links": [],
     "sellValue": 132,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "hell-contract",
@@ -6036,7 +6734,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "helm-1",
@@ -6077,7 +6775,7 @@
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "heroic-emblem",
@@ -6107,13 +6805,17 @@
       {
         "for": "Orc Hero Headdress",
         "qty": 100
+      },
+      {
+        "for": "Orc Hero Helm",
+        "qty": 100
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "hinalle",
@@ -6126,12 +6828,17 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Ph.D Hat",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "hinalle-leaflet",
@@ -6194,7 +6901,8 @@
     "categories": [
       "Skills",
       "Dungeon Quest",
-      "Other Quest"
+      "Other Quest",
+      "Official Hat Quest"
     ],
     "uses": [
       {
@@ -6204,13 +6912,17 @@
       {
         "for": "Ayothaya Dungeon Entrance Quest",
         "qty": 3
+      },
+      {
+        "for": "Statue Of Baby Angel",
+        "qty": 1
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "home-cooking-kit",
@@ -6228,7 +6940,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "honey",
@@ -6258,7 +6970,7 @@
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "honey-pot",
@@ -6276,7 +6988,7 @@
     "links": [],
     "sellValue": 311,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "horn",
@@ -6294,7 +7006,7 @@
     "links": [],
     "sellValue": 58,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "horn-barrier",
@@ -6310,7 +7022,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "horn-of-hell",
@@ -6326,7 +7038,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "horn-of-hillslion",
@@ -6343,6 +7055,33 @@
     "notes": "",
     "links": [],
     "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hornet-card",
+    "name": "Hornet Card",
+    "itemId": 4019,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Card",
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "Giant Hornet Pet Evolution",
+        "qty": 5
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -6409,7 +7148,7 @@
     "links": [],
     "sellValue": 294,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "huge-leaf",
@@ -6430,17 +7169,13 @@
       {
         "for": "Wild Rose Pet Evolution",
         "qty": 500
-      },
-      {
-        "for": "Leaf Lunatic Pet Evolution",
-        "qty": 100
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 305,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "hydra-card",
@@ -6528,7 +7263,7 @@
     "links": [],
     "sellValue": 330,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "ice-fireworks",
@@ -6546,7 +7281,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "ice-scale",
@@ -6571,7 +7306,7 @@
     "links": [],
     "sellValue": 1510,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "illusion-flower",
@@ -6584,7 +7319,8 @@
     "categories": [
       "Cooking",
       "Server Hat Quest",
-      "uaRO"
+      "uaRO",
+      "Official Hat Quest"
     ],
     "uses": [
       {
@@ -6594,13 +7330,17 @@
       {
         "for": "Pecopeco Wing Ears",
         "qty": 10
+      },
+      {
+        "for": "Ph.D Hat",
+        "qty": 1
       }
     ],
     "notes": "+10 DEX Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "immortal-heart",
@@ -6621,7 +7361,31 @@
     "links": [],
     "sellValue": 187,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "indian-fillet-0",
+    "name": "Indian Fillet [0]",
+    "itemId": 5010,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Indian Headband",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "infiltrator-0",
@@ -6657,7 +7421,7 @@
     "links": [],
     "sellValue": 57,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "insect-leg",
@@ -6675,7 +7439,7 @@
     "links": [],
     "sellValue": 329,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "iron",
@@ -6702,7 +7466,7 @@
     "links": [],
     "sellValue": 50,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "iron-hammer",
@@ -6718,7 +7482,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "iron-ore",
@@ -6729,14 +7493,14 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Steel Chonchon Pet Food",
     "links": [],
     "sellValue": 25,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "isilla-card",
@@ -6833,6 +7597,24 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "jade-trinket",
+    "name": "Jade Trinket",
+    "itemId": 10029,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Evil Nymph Pet accessory",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "jellopy",
     "name": "Jellopy",
     "itemId": 909,
@@ -6860,6 +7642,10 @@
       {
         "for": "Angeling Pet Evolution",
         "qty": 200
+      },
+      {
+        "for": "Mr. Smile",
+        "qty": 10
       }
     ],
     "notes": "",
@@ -6891,7 +7677,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "jing-guai-card",
@@ -6910,6 +7696,10 @@
     "uses": [
       {
         "for": "Bascojin Pet Evolution",
+        "qty": 10
+      },
+      {
+        "for": "Bacsojin Pet Evolution",
         "qty": 10
       }
     ],
@@ -6940,7 +7730,7 @@
     "links": [],
     "sellValue": 16,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "karvodailnirol",
@@ -6960,7 +7750,7 @@
     "links": [],
     "sellValue": 200,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "khukri-0",
@@ -7033,7 +7823,7 @@
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "kuloren",
@@ -7051,7 +7841,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "lantern",
@@ -7069,7 +7859,7 @@
     "links": [],
     "sellValue": 125,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "large-jellopy",
@@ -7095,7 +7885,7 @@
     "links": [],
     "sellValue": 420,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "leaf-cat-card",
@@ -7155,9 +7945,14 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 4000,
@@ -7179,6 +7974,24 @@
     "notes": "",
     "links": [],
     "sellValue": 1000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lever-action-rifle-2",
+    "name": "Lever Action Rifle [2]",
+    "itemId": 13170,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -7308,7 +8121,12 @@
       "uaRO",
       "Card"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Blue Moon Loli Ruri Pet Evolution",
+        "qty": 3
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -7375,7 +8193,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "magical-lithography",
@@ -7393,14 +8211,14 @@
     "uses": [
       {
         "for": "Fire Golem Pet Evolution",
-        "qty": 1
+        "qty": 3
       }
     ],
     "notes": "Golem Taming Item",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "magician-hat-0",
@@ -7429,7 +8247,31 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "magnifier",
+    "name": "Magnifier",
+    "itemId": 611,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Renown Detective's Cap [1]",
+        "qty": 10
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 20,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "majestic-goat-0",
@@ -7456,7 +8298,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "majestic-goat-1",
@@ -7485,7 +8327,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "mane",
@@ -7510,7 +8352,7 @@
     "links": [],
     "sellValue": 98,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "maneater-blossom",
@@ -7524,12 +8366,17 @@
       "Official Hat Quest",
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Bride's Corolla",
+        "qty": 1000
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 98,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "maneater-root",
@@ -7548,7 +8395,34 @@
     "links": [],
     "sellValue": 104,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "mantis-card",
+    "name": "Mantis Card",
+    "itemId": 4079,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Card",
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "Misteress Pet Evolution",
+        "qty": 10
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "mantis-scythe",
@@ -7566,7 +8440,7 @@
     "links": [],
     "sellValue": 98,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "mao-guai-card",
@@ -7586,6 +8460,36 @@
       {
         "for": "Bascojin Pet Evolution",
         "qty": 10
+      },
+      {
+        "for": "Bacsojin Pet Evolution",
+        "qty": 10
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "margaretha-sorin-card",
+    "name": "Margaretha Sorin Card",
+    "itemId": 4364,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO",
+      "Card"
+    ],
+    "uses": [
+      {
+        "for": "Mitra [1]",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -7625,7 +8529,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "masked-ball",
@@ -7685,7 +8589,7 @@
     ],
     "uses": [
       {
-        "for": "Candle Hat",
+        "for": "Candle",
         "qty": 50
       },
       {
@@ -7734,10 +8638,11 @@
       "NPC"
     ],
     "categories": [
-      "Cooking"
+      "Cooking",
+      "Pet"
     ],
     "uses": [],
-    "notes": "+10 VIT Food",
+    "notes": "+10 VIT Food, Mummy Pet Food",
     "links": [],
     "sellValue": 300,
     "sellSource": "hercules",
@@ -7753,14 +8658,20 @@
       "Whobuy"
     ],
     "categories": [
-      "Brewing"
+      "Brewing",
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Ph.D Hat",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "metaller-card",
@@ -7797,7 +8708,8 @@
       "Keep"
     ],
     "categories": [
-      "Cooking"
+      "Cooking",
+      "Official Hat Quest"
     ],
     "uses": [
       {
@@ -7831,7 +8743,7 @@
     "links": [],
     "sellValue": 75,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "miracle-bandage",
@@ -7854,7 +8766,7 @@
     "links": [],
     "sellValue": 5,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "mixture",
@@ -7867,12 +8779,41 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Hair Brush",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 400,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "model-training-hat-0",
+    "name": "Model Training Hat [0]",
+    "itemId": 5073,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Apple of Archer",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "mole-whiskers",
@@ -7888,7 +8829,25 @@
     "links": [],
     "sellValue": 53,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "monkey-circlet",
+    "name": "Monkey Circlet",
+    "itemId": 10018,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Yoyo Pet accessory",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "monster-juice",
@@ -7907,7 +8866,7 @@
     "links": [],
     "sellValue": 750,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "monster-oxygen-mask",
@@ -7925,7 +8884,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "monsters-feed",
@@ -7951,7 +8910,7 @@
     "itemId": 6105,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Pet",
@@ -7962,7 +8921,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "moth-dust",
@@ -7980,7 +8939,7 @@
     "links": [],
     "sellValue": 69,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "moth-wings",
@@ -7998,7 +8957,7 @@
     "links": [],
     "sellValue": 100,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "mould-powder",
@@ -8015,14 +8974,14 @@
     "uses": [
       {
         "for": "Mage Hat",
-        "qty": 40
+        "qty": 50
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 233,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "mr-scream-0",
@@ -8045,6 +9004,30 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "mr-smile-0",
+    "name": "Mr. Smile [0]",
+    "itemId": 2278,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Tulip Hairpin",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 30,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -8099,7 +9082,7 @@
     "links": [],
     "sellValue": 4450,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "muscovite",
@@ -8108,14 +9091,20 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Skills"
+      "Skills",
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Statue Of Baby Angel",
+        "qty": 10
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "mushroom-spore",
@@ -8139,7 +9128,7 @@
     "links": [],
     "sellValue": 18,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "mystic-frozen",
@@ -8165,7 +9154,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "mystic-horn",
@@ -8201,7 +9190,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "needle-of-alarm",
@@ -8244,13 +9233,44 @@
       {
         "for": "Ayothaya Dungeon Entrance Quest",
         "qty": 1
+      },
+      {
+        "for": "Teddybear Hat",
+        "qty": 100
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 416,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "nightmare-terror-card",
+    "name": "Nightmare Terror Card",
+    "itemId": 4166,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Card",
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "Rigid Nightmare Terror Pet Evolution",
+        "qty": 10
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "nine-tail-card",
@@ -8311,13 +9331,17 @@
       {
         "for": "Kitsune Mask",
         "qty": 999
+      },
+      {
+        "for": "Shafka",
+        "qty": 20
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 325,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "no-recipient",
@@ -8336,7 +9360,7 @@
     "links": [],
     "sellValue": 50,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "nose-ring",
@@ -8359,7 +9383,7 @@
     "links": [],
     "sellValue": 284,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "nursing-bottle",
@@ -8382,7 +9406,7 @@
     "links": [],
     "sellValue": 550,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "nut-shell-0",
@@ -8406,7 +9430,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "oil-paper",
@@ -8423,13 +9447,17 @@
       {
         "for": "Party Hat",
         "qty": 100
+      },
+      {
+        "for": "Necktie",
+        "qty": 30
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 105,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "oilpalm-coconut",
@@ -8447,7 +9475,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "old-blue-box",
@@ -8466,7 +9494,7 @@
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "old-broom",
@@ -8491,7 +9519,7 @@
     "links": [],
     "sellValue": 175,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "old-frying-pan",
@@ -8522,7 +9550,7 @@
     "links": [],
     "sellValue": 98,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "old-magic-book",
@@ -8548,7 +9576,7 @@
     "links": [],
     "sellValue": 1,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "old-pick",
@@ -8566,7 +9594,7 @@
     "links": [],
     "sellValue": 256,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "old-portrait",
@@ -8592,7 +9620,7 @@
     "links": [],
     "sellValue": 750,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "old-purple-box",
@@ -8611,7 +9639,7 @@
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "old-trees-dew",
@@ -8629,7 +9657,7 @@
     "links": [],
     "sellValue": 1250,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "opal",
@@ -8655,7 +9683,7 @@
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "opera-masque-0",
@@ -8691,12 +9719,17 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Oxygen Mask",
+        "qty": 5
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 27500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "orange",
@@ -8715,7 +9748,7 @@
     "links": [],
     "sellValue": 150,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "orange-dyestuffs",
@@ -8738,7 +9771,7 @@
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "orange-juice",
@@ -8756,7 +9789,7 @@
     "links": [],
     "sellValue": 750,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "orc-baby-card",
@@ -8801,7 +9834,7 @@
     "links": [],
     "sellValue": 84,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "orc-trophy",
@@ -8827,7 +9860,7 @@
     "links": [],
     "sellValue": 150,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "orc-warrior-card",
@@ -8876,7 +9909,7 @@
     "links": [],
     "sellValue": 110,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "orcish-sword-0",
@@ -8902,7 +9935,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "orcish-voucher",
@@ -8933,7 +9966,7 @@
     "links": [],
     "sellValue": 71,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "oridecon",
@@ -8961,7 +9994,7 @@
     "links": [],
     "sellValue": 550,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "outdoor-cooking-kit",
@@ -8979,7 +10012,7 @@
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "pacifier",
@@ -9004,7 +10037,31 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "panda-hat-0",
+    "name": "Panda Hat [0]",
+    "itemId": 5030,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Teddybear Hat",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "pantie-0",
@@ -9022,7 +10079,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "partizan",
@@ -9040,7 +10097,7 @@
     "links": [],
     "sellValue": 13500,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "peaked-hat",
@@ -9081,7 +10138,7 @@
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "peco-peco-card",
@@ -9128,13 +10185,21 @@
       {
         "for": "Pecopeco Wing Ears",
         "qty": 500
+      },
+      {
+        "for": "Grand Peco Pet Evolution",
+        "qty": 300
+      },
+      {
+        "for": "Indian Headband",
+        "qty": 10
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 227,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "pencil-case",
@@ -9159,7 +10224,7 @@
     "links": [],
     "sellValue": 200,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "peridot",
@@ -9175,7 +10240,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "pet-food",
@@ -9204,7 +10269,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "petites-tail",
@@ -9230,7 +10295,7 @@
     "links": [],
     "sellValue": 50,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "phlogopite",
@@ -9246,7 +10311,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "piece-of-bamboo",
@@ -9269,7 +10334,7 @@
     "links": [],
     "sellValue": 155,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "piece-of-black-cloth",
@@ -9287,7 +10352,7 @@
     "links": [],
     "sellValue": 263,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "piece-of-cake",
@@ -9310,13 +10375,17 @@
       {
         "for": "Crunch Toast",
         "qty": 50
+      },
+      {
+        "for": "Cake Hat",
+        "qty": 20
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "piece-of-egg-shell",
@@ -9341,7 +10410,7 @@
     "links": [],
     "sellValue": 84,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "pincher-of-beetle",
@@ -9384,7 +10453,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "plant-neutrient",
@@ -9402,7 +10471,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "pocket-watch",
@@ -9427,7 +10496,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "pointed-scale",
@@ -9505,9 +10574,233 @@
       "Whobuy"
     ],
     "categories": [
-      "uaRO"
+      "Server Hat Quest",
+      "uaRO",
+      "Pet Evolution",
+      "Pet"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Mitra [1]",
+        "qty": 1500
+      },
+      {
+        "for": "Love Guard [1]",
+        "qty": 1500
+      },
+      {
+        "for": "Advanced Assassin Mask",
+        "qty": 1000
+      },
+      {
+        "for": "Beer Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Anubis Helm",
+        "qty": 1500
+      },
+      {
+        "for": "Puppy Hat",
+        "qty": 1000
+      },
+      {
+        "for": "Umbala Spirit",
+        "qty": 1500
+      },
+      {
+        "for": "Wickebine's Black Cat Ears",
+        "qty": 1000
+      },
+      {
+        "for": "Blush of Groom",
+        "qty": 1500
+      },
+      {
+        "for": "Antique Smoking Pipe",
+        "qty": 1500
+      },
+      {
+        "for": "Crimson Rose",
+        "qty": 2000
+      },
+      {
+        "for": "Vanilmirth Hat",
+        "qty": 1000
+      },
+      {
+        "for": "Gigantic Majestic Goat (DEF)",
+        "qty": 1200
+      },
+      {
+        "for": "Filir's Pinions",
+        "qty": 1500
+      },
+      {
+        "for": "Pecopeco Wing Ears",
+        "qty": 1000
+      },
+      {
+        "for": "Darkness Helm",
+        "qty": 1500
+      },
+      {
+        "for": "Chick Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Rainbow Scarf",
+        "qty": 1200
+      },
+      {
+        "for": "Skull Cap",
+        "qty": 3000
+      },
+      {
+        "for": "Gangster Scarf",
+        "qty": 1200
+      },
+      {
+        "for": "Satanic Bone Helm",
+        "qty": 2000
+      },
+      {
+        "for": "Dark Randgris Helm",
+        "qty": 2000
+      },
+      {
+        "for": "Orc Hero Headdress",
+        "qty": 4000
+      },
+      {
+        "for": "Little Angel Doll",
+        "qty": 2000
+      },
+      {
+        "for": "Bunny Ears Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Well-Chewed Pencil",
+        "qty": 700
+      },
+      {
+        "for": "Fish in Mouth",
+        "qty": 700
+      },
+      {
+        "for": "Alice Doll",
+        "qty": 2000
+      },
+      {
+        "for": "Glaris Doll",
+        "qty": 2000
+      },
+      {
+        "for": "Defolty Doll",
+        "qty": 2000
+      },
+      {
+        "for": "Tropical Fruit Hat",
+        "qty": 2000
+      },
+      {
+        "for": "Dress Hat",
+        "qty": 2000
+      },
+      {
+        "for": "Rideword Hat (RWH)",
+        "qty": 2000
+      },
+      {
+        "for": "Festival Pumpkin Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Pirate Dagger",
+        "qty": 1200
+      },
+      {
+        "for": "Purple Cowboy Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Santa Poring Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Necromancer's Hood",
+        "qty": 1200
+      },
+      {
+        "for": "Koneko Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Moonlight Flower Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Fish Head Hat",
+        "qty": 700
+      },
+      {
+        "for": "Orc Hero Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Bacsojin Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Moonlight Flower Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Gloom Under Night Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Kiel D-01 Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Baphomet Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "White Knight Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Abysmal Knight Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Eddga Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Dark Illusion Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Dark Lord Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Fire Golem Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Giant Hornet Pet Evolution",
+        "qty": 1000
+      },
+      {
+        "for": "Misteress Pet Evolution",
+        "qty": 2000
+      }
+    ],
     "notes": "Used for Server Hats, Pet Evolutions, and more! Check the uaRO wiki for more details.",
     "links": [],
     "sellValue": 0,
@@ -9530,7 +10823,7 @@
     "links": [],
     "sellValue": 100,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "potato",
@@ -9568,7 +10861,7 @@
     "links": [],
     "sellValue": 45,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "prickly-fruit",
@@ -9594,7 +10887,7 @@
     "links": [],
     "sellValue": 270,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "professional-cooking-kit",
@@ -9613,7 +10906,7 @@
     "links": [],
     "sellValue": 1000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "pumpkin",
@@ -9656,7 +10949,7 @@
     "links": [],
     "sellValue": 243,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "pumpkin-pie",
@@ -9674,7 +10967,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "punisher",
@@ -9686,14 +10979,21 @@
       "Keep"
     ],
     "categories": [
-      "Pet"
+      "Pet",
+      "Pet Evolution",
+      "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cat o' Nine Tails Pet Evolution",
+        "qty": 1
+      }
+    ],
     "notes": "Keep 1",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "puppet",
@@ -9711,7 +11011,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "puppy-headband-0",
@@ -9735,7 +11035,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "pyroxene",
@@ -9751,7 +11051,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "queens-coronet",
@@ -9767,7 +11067,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "queens-hair-ornament",
@@ -9797,7 +11097,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "raccoon-doll",
@@ -9815,7 +11115,31 @@
     "links": [],
     "sellValue": 2500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "raccoon-hat-0",
+    "name": "Raccoon Hat [0]",
+    "itemId": 5033,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Sea-Otter Hat",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "raccoon-leaf",
@@ -9829,12 +11153,21 @@
       "Official Hat Quest",
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Lazy Smokie",
+        "qty": 10
+      },
+      {
+        "for": "Smokie Leaf",
+        "qty": 600
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 53,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rainbow-carrot",
@@ -9853,7 +11186,7 @@
     "links": [],
     "sellValue": 1250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rainbow-shell",
@@ -9871,7 +11204,7 @@
     "links": [],
     "sellValue": 45,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "red-bandana-0",
@@ -9895,7 +11228,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "red-bijou",
@@ -9915,7 +11248,7 @@
         "qty": 7
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 7
       }
     ],
@@ -9923,7 +11256,34 @@
     "links": [],
     "sellValue": 443,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "red-blood",
+    "name": "Red Blood",
+    "itemId": 990,
+    "itemType": "Misc",
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Pet",
+      "uaRO",
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Fire Golem Pet Evolution",
+        "qty": 50
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "red-chile",
@@ -9968,14 +11328,14 @@
       },
       {
         "for": "Little Angel Doll",
-        "qty": 300
+        "qty": 50
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 667,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "red-gemstone",
@@ -9995,7 +11355,7 @@
     "links": [],
     "sellValue": 300,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "red-herb",
@@ -10014,7 +11374,7 @@
     "links": [],
     "sellValue": 9,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "red-muffler",
@@ -10037,7 +11397,7 @@
     "links": [],
     "sellValue": 330,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "red-prickly-fruit",
@@ -10062,7 +11422,7 @@
     "links": [],
     "sellValue": 440,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "red-scarf",
@@ -10078,7 +11438,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "red-spice",
@@ -10114,7 +11474,7 @@
     "links": [],
     "sellValue": 550,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "reins",
@@ -10143,7 +11503,7 @@
     "links": [],
     "sellValue": 401,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "reptile-tongue",
@@ -10162,7 +11522,7 @@
     "links": [],
     "sellValue": 70,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "research-chart",
@@ -10186,7 +11546,7 @@
     "links": [],
     "sellValue": 420,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "resin",
@@ -10209,7 +11569,7 @@
     "links": [],
     "sellValue": 60,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "ribbon-1",
@@ -10249,7 +11609,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rocker-doll",
@@ -10267,7 +11627,7 @@
     "links": [],
     "sellValue": 2000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rocker-glasses",
@@ -10285,7 +11645,7 @@
     "links": [],
     "sellValue": 1000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "romantic-flower-0",
@@ -10309,7 +11669,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "romantic-gent-0",
@@ -10333,7 +11693,7 @@
     "links": [],
     "sellValue": 7500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rosary-0",
@@ -10382,7 +11742,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rotten-bandage",
@@ -10406,7 +11766,7 @@
     "links": [],
     "sellValue": 175,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rotten-fish",
@@ -10415,14 +11775,20 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Pet"
+      "Pet",
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Blue Fish",
+        "qty": 1
+      }
+    ],
     "notes": "Chonchon Taming Item",
     "links": [],
     "sellValue": 1250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rotten-meat",
@@ -10440,7 +11806,7 @@
     "links": [],
     "sellValue": 51,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rouge",
@@ -10465,7 +11831,7 @@
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rough-elunium",
@@ -10483,7 +11849,7 @@
     "links": [],
     "sellValue": 325,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rough-oridecon",
@@ -10501,7 +11867,7 @@
     "links": [],
     "sellValue": 275,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "rough-wind",
@@ -10527,7 +11893,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "royal-cooking-kit",
@@ -10546,7 +11912,7 @@
     "links": [],
     "sellValue": 2500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "royal-jelly",
@@ -10559,16 +11925,23 @@
     ],
     "categories": [
       "Cooking",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
     ],
     "uses": [
       {
-        "for": "Candle Hat",
+        "for": "Candle",
         "qty": 100
       },
       {
         "for": "Baby Pacifier",
-        "qty": 2
+        "qty": 1
+      },
+      {
+        "for": "Giant Hornet Pet Evolution",
+        "qty": 200
       }
     ],
     "notes": "+10 DEX Food",
@@ -10590,7 +11963,6 @@
       "Pet Evolution",
       "Pet",
       "uaRO",
-      "Official Hat Quest",
       "Other Quest"
     ],
     "uses": [
@@ -10600,7 +11972,7 @@
       },
       {
         "for": "Ancient Mummy Pet Evolution",
-        "qty": 30
+        "qty": 200
       }
     ],
     "notes": "",
@@ -10655,6 +12027,10 @@
       {
         "for": "Alicel Pet Evolution",
         "qty": 500
+      },
+      {
+        "for": "Aliot Pet Evolution",
+        "qty": 500
       }
     ],
     "notes": "",
@@ -10677,7 +12053,7 @@
     ],
     "uses": [
       {
-        "for": "Mine Helmet",
+        "for": "Mine Hat",
         "qty": 1
       }
     ],
@@ -10738,18 +12114,42 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "uaRO"
     ],
     "uses": [
       {
         "for": "Party Hat",
         "qty": 1
+      },
+      {
+        "for": "Santa Poring Hat",
+        "qty": 10
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "santas-bag",
+    "name": "Santa's Bag",
+    "itemId": 12132,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -10792,7 +12192,7 @@
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "sardonyx",
@@ -10861,6 +12261,22 @@
       {
         "for": "Red Bonnet",
         "qty": 1
+      },
+      {
+        "for": "Ayam [1]",
+        "qty": 1
+      },
+      {
+        "for": "Hair Brush",
+        "qty": 1
+      },
+      {
+        "for": "Tulip Hairpin",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -10910,7 +12326,7 @@
     "links": [],
     "sellValue": 80,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "scorpion-nipper",
@@ -10970,6 +12386,14 @@
       {
         "for": "Finding the Moving Island Quest (Moscovia Dungeon Access)",
         "qty": 10
+      },
+      {
+        "for": "Lazy Smokie",
+        "qty": 100
+      },
+      {
+        "for": "Shafka",
+        "qty": 20
       }
     ],
     "notes": "",
@@ -11069,7 +12493,7 @@
         "qty": 300
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 300
       }
     ],
@@ -11090,12 +12514,17 @@
     "categories": [
       "Pet",
       "Pet Evolution",
-      "uaRO"
+      "uaRO",
+      "Official Hat Quest"
     ],
     "uses": [
       {
         "for": "Earth Deleter Pet Evolution",
         "qty": 3
+      },
+      {
+        "for": "Statue Of Baby Angel",
+        "qty": 1
       }
     ],
     "notes": "Petite Taming Item",
@@ -11177,7 +12606,7 @@
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "sidewinder-card",
@@ -11191,12 +12620,18 @@
     "categories": [
       "Server Hat Quest",
       "uaRO",
-      "Card"
+      "Card",
+      "Pet Evolution",
+      "Pet"
     ],
     "uses": [
       {
         "for": "Chick Hat",
         "qty": 1
+      },
+      {
+        "for": "Misteress Pet Evolution",
+        "qty": 10
       }
     ],
     "notes": "",
@@ -11226,13 +12661,21 @@
       {
         "for": "Red Ribbon",
         "qty": 1
+      },
+      {
+        "for": "Bride's Corolla",
+        "qty": 1
+      },
+      {
+        "for": "Red Bonnet",
+        "qty": 1
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "silk-robe",
@@ -11250,7 +12693,7 @@
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "silver-knife-of-chastity",
@@ -11268,7 +12711,7 @@
     "links": [],
     "sellValue": 6000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "singing-flower",
@@ -11286,7 +12729,7 @@
     "links": [],
     "sellValue": 150,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "singing-plant",
@@ -11316,7 +12759,7 @@
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "single-cell",
@@ -11352,7 +12795,7 @@
     "links": [],
     "sellValue": 116,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "skirt-of-virgin",
@@ -11370,13 +12813,17 @@
       {
         "for": "Bride Mask",
         "qty": 20
+      },
+      {
+        "for": "Pretend Murdered",
+        "qty": 4
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 850,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "skull",
@@ -11411,7 +12858,7 @@
     "links": [],
     "sellValue": 522,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "skull-helm",
@@ -11427,7 +12874,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "slick-paper",
@@ -11455,7 +12902,7 @@
     "links": [],
     "sellValue": 353,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "small-doll-needle",
@@ -11478,7 +12925,7 @@
     "links": [],
     "sellValue": 5,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "small-snow-flower",
@@ -11496,7 +12943,31 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "smokie-leaf-0",
+    "name": "Smokie Leaf [0]",
+    "itemId": 5064,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Sea-Otter Hat",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "snails-shell",
@@ -11514,7 +12985,7 @@
     "links": [],
     "sellValue": 32,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "snake-scale",
@@ -11532,7 +13003,7 @@
     "links": [],
     "sellValue": 41,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "soft-apron",
@@ -11565,7 +13036,7 @@
     "links": [],
     "sellValue": 10000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "soft-blade-of-grass",
@@ -11589,7 +13060,7 @@
     "links": [],
     "sellValue": 200,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "soft-feather",
@@ -11616,18 +13087,22 @@
       },
       {
         "for": "Dress Hat",
-        "qty": 250
+        "qty": 500
       },
       {
         "for": "Purple Cowboy Hat",
         "qty": 300
+      },
+      {
+        "for": "Sunday Hat",
+        "qty": 600
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 140,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "soft-silk",
@@ -11647,13 +13122,25 @@
       {
         "for": "Rainbow Scarf",
         "qty": 500
+      },
+      {
+        "for": "Ayam [1]",
+        "qty": 50
+      },
+      {
+        "for": "Fairy Flower",
+        "qty": 100
+      },
+      {
+        "for": "Shafka",
+        "qty": 10
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 600,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "sohee-card",
@@ -11721,7 +13208,7 @@
     "links": [],
     "sellValue": 421,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "solid-peach",
@@ -11740,7 +13227,7 @@
     "links": [],
     "sellValue": 200,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "solid-shell",
@@ -11759,13 +13246,17 @@
       {
         "for": "Magician Hat",
         "qty": 1200
+      },
+      {
+        "for": "Hair Brush",
+        "qty": 50
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 224,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "solid-trunk",
@@ -11783,7 +13274,7 @@
     "links": [],
     "sellValue": 1,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "spawn",
@@ -11795,15 +13286,14 @@
       "NPC"
     ],
     "categories": [
-      "Cooking",
-      "Official Hat Quest"
+      "Cooking"
     ],
     "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 70,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "spicy-sauce",
@@ -11822,7 +13312,7 @@
     "links": [],
     "sellValue": 350,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "splendid-mirror",
@@ -11841,7 +13331,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "spool",
@@ -11860,13 +13350,25 @@
       {
         "for": "Ayothaya Dungeon Entrance Quest",
         "qty": 1
+      },
+      {
+        "for": "Necktie",
+        "qty": 20
+      },
+      {
+        "for": "Shafka",
+        "qty": 1
+      },
+      {
+        "for": "Teddybear Hat",
+        "qty": 100
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 212,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "spring",
@@ -11884,7 +13386,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "spring-rabbit-card",
@@ -11940,7 +13442,7 @@
     "links": [],
     "sellValue": 132,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "staff-of-leader",
@@ -11958,7 +13460,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "star-crumb",
@@ -11982,7 +13484,7 @@
     "links": [],
     "sellValue": 2250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "star-dust",
@@ -12000,7 +13502,7 @@
     "links": [],
     "sellValue": 750,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "steel",
@@ -12021,7 +13523,7 @@
         "qty": 10
       },
       {
-        "for": "Mine Helmet",
+        "for": "Mine Hat",
         "qty": 25
       },
       {
@@ -12047,13 +13549,17 @@
       {
         "for": "Headset",
         "qty": 40
+      },
+      {
+        "for": "Welding Mask",
+        "qty": 50
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "stellar",
@@ -12077,7 +13583,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "stellar-hairpin",
@@ -12089,15 +13595,14 @@
       "Vend"
     ],
     "categories": [
-      "Pet",
-      "Official Hat Quest"
+      "Pet"
     ],
     "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "stem",
@@ -12116,7 +13621,7 @@
     "links": [],
     "sellValue": 23,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "sticky-mucus",
@@ -12138,13 +13643,17 @@
       {
         "for": "Censor Bar",
         "qty": 99
+      },
+      {
+        "for": "Blue Fish",
+        "qty": 100
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 35,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "sticky-poison",
@@ -12162,7 +13671,7 @@
     "links": [],
     "sellValue": 175,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "sticky-webfoot",
@@ -12211,7 +13720,12 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Blue Fish",
+        "qty": 300
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 84,
@@ -12278,7 +13792,7 @@
     "links": [],
     "sellValue": 316,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "straw-hat-0",
@@ -12301,7 +13815,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "strawberry",
@@ -12323,6 +13837,30 @@
     "npcBuyable": "no"
   },
   {
+    "id": "striped-hairband-0",
+    "name": "Striped Hairband [0]",
+    "itemId": 5049,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Indian Headband",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "summer-fan",
     "name": "Summer Fan",
     "itemId": 10030,
@@ -12336,7 +13874,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "sunday-hat-0",
@@ -12378,7 +13916,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "sunset-on-the-rock",
@@ -12396,7 +13934,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "sushi",
@@ -12409,12 +13947,17 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Blue Fish",
+        "qty": 50
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 0,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "suspicious-bottle",
@@ -12432,7 +13975,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "sweet-milk",
@@ -12458,7 +14001,7 @@
     "links": [],
     "sellValue": 3500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "sweet-potato",
@@ -12494,7 +14037,7 @@
     "links": [],
     "sellValue": 350,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "sweets-festival-coin",
@@ -12537,7 +14080,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "talon-of-griffon",
@@ -12560,7 +14103,7 @@
     "links": [],
     "sellValue": 2709,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tangled-chains",
@@ -12578,7 +14121,7 @@
     "links": [],
     "sellValue": 370,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tantan-noodle",
@@ -12596,7 +14139,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tassel",
@@ -12620,7 +14163,7 @@
     "links": [],
     "sellValue": 399,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tassel-for-durumagi",
@@ -12636,7 +14179,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "teddy-bear-card",
@@ -12673,6 +14216,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "temporal-crystal",
+    "name": "Temporal Crystal",
+    "itemId": 6607,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "uaRO"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "tendon",
     "name": "Tendon",
     "itemId": 1050,
@@ -12689,7 +14250,7 @@
     "links": [],
     "sellValue": 110,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tentacle",
@@ -12707,7 +14268,7 @@
     "links": [],
     "sellValue": 35,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "thara-frog-card",
@@ -12755,7 +14316,7 @@
     "links": [],
     "sellValue": 478,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tiger-panty",
@@ -12768,12 +14329,17 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Winter Hat",
+        "qty": 999
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 149,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tigers-footskin",
@@ -12804,7 +14370,7 @@
     "links": [],
     "sellValue": 750,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tiny-egg-shell",
@@ -12822,7 +14388,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tongue",
@@ -12834,7 +14400,8 @@
       "Vend"
     ],
     "categories": [
-      "Cooking"
+      "Cooking",
+      "Official Hat Quest"
     ],
     "uses": [
       {
@@ -12846,7 +14413,7 @@
     "links": [],
     "sellValue": 264,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tooth-of-bat",
@@ -12864,7 +14431,7 @@
     "links": [],
     "sellValue": 17,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "topaz",
@@ -12873,7 +14440,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Server Hat Quest",
@@ -12889,7 +14456,7 @@
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "yes"
   },
   {
     "id": "tough-scalelike-stem",
@@ -12913,7 +14480,7 @@
     "links": [],
     "sellValue": 206,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tough-vines",
@@ -12947,7 +14514,7 @@
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "toxic-gas",
@@ -12965,7 +14532,31 @@
     "links": [],
     "sellValue": 333,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
+  },
+  {
+    "id": "transparent-celestial-robe",
+    "name": "Transparent Celestial Robe",
+    "itemId": 7165,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Fairy Flower",
+        "qty": 100
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 325,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "transparent-head-protector",
@@ -12983,7 +14574,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "transparent-plate",
@@ -13001,7 +14592,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "tree-root",
@@ -13020,6 +14611,24 @@
     "sellValue": 6,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "trident-2",
+    "name": "Trident [2]",
+    "itemId": 1460,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 25500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "tropical-banana",
@@ -13045,7 +14654,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "trunk",
@@ -13063,13 +14672,17 @@
       {
         "for": "Sakkat",
         "qty": 120
+      },
+      {
+        "for": "Stop Post",
+        "qty": 50
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 30,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "turquoise",
@@ -13095,7 +14708,7 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "turtle-shell",
@@ -13113,7 +14726,7 @@
     "links": [],
     "sellValue": 340,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "unripe-apple",
@@ -13145,7 +14758,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "used-iron-plate",
@@ -13168,7 +14781,7 @@
     "links": [],
     "sellValue": 512,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "vagabonds-skull",
@@ -13186,7 +14799,7 @@
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "valhallas-flower",
@@ -13211,7 +14824,7 @@
     "links": [],
     "sellValue": 100000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "venom-canine",
@@ -13222,15 +14835,14 @@
       "Keep"
     ],
     "categories": [
-      "Skills",
-      "Official Hat Quest"
+      "Skills"
     ],
     "uses": [],
     "notes": "Create Deadly Poison",
     "links": [],
     "sellValue": 74,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "very-red-juice",
@@ -13248,7 +14860,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "very-soft-plant",
@@ -13266,7 +14878,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "violet-dyestuffs",
@@ -13287,13 +14899,17 @@
       {
         "for": "Am Mut Pet Evolution",
         "qty": 3
+      },
+      {
+        "for": "Fairy Flower",
+        "qty": 1
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
-    "npcBuyable": null
+    "npcBuyable": "no"
   },
   {
     "id": "wanderer-card",
@@ -13334,7 +14950,12 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Fairy Flower",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 6000,
@@ -13357,7 +14978,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "well-baked-cookie",
@@ -13406,6 +15027,10 @@
       {
         "for": "Desert Wolf Pet Evolution",
         "qty": 3
+      },
+      {
+        "for": "Umbala Spirit",
+        "qty": 5
       }
     ],
     "notes": "Baby Desert Wolf Taming Item",
@@ -13463,6 +15088,10 @@
       },
       {
         "for": "Mystic Rose",
+        "qty": 1
+      },
+      {
+        "for": "Cute White Ribbon",
         "qty": 1
       }
     ],
@@ -13833,7 +15462,7 @@
     "uses": [
       {
         "for": "Pirate Dagger",
-        "qty": 20
+        "qty": 120
       },
       {
         "for": "Umbala Spirit",
@@ -13930,7 +15559,12 @@
     "categories": [
       "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 30
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 386,
@@ -14051,6 +15685,10 @@
       {
         "for": "Beanie",
         "qty": 500
+      },
+      {
+        "for": "Shafka",
+        "qty": 10
       }
     ],
     "notes": "",
@@ -14077,7 +15715,7 @@
         "qty": 7
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 7
       }
     ],
@@ -14151,7 +15789,12 @@
       "Pet",
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Angeling Pet Evolution",
+        "qty": 20
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 275,
@@ -14232,7 +15875,7 @@
     "uses": [
       {
         "for": "Mastering Pet Evolution",
-        "qty": 3
+        "qty": 10
       }
     ],
     "notes": "",
@@ -14257,6 +15900,32 @@
     "notes": "",
     "links": [],
     "sellValue": 2500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "young-twig",
+    "name": "Young Twig",
+    "itemId": 7018,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "Misteress Pet Evolution",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -14389,6 +16058,10 @@
     "uses": [
       {
         "for": "Bascojin Pet Evolution",
+        "qty": 10
+      },
+      {
+        "for": "Bacsojin Pet Evolution",
         "qty": 10
       }
     ],

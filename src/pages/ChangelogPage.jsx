@@ -33,7 +33,7 @@ export default function ChangelogPage() {
                 <SubHeading>
                   <span className={TYPE_COLORS[type]}>{type}</span>
                 </SubHeading>
-                <ul className="mt-1 list-disc space-y-1.5 pl-5 marker:text-faint">
+                <ul className="mt-1 list-disc space-y-1.5 pl-5 marker:text-muted">
                   {changes.map((change) => (
                     <li key={change.text}>{change.text}</li>
                   ))}

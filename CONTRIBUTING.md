@@ -54,7 +54,7 @@ You only need a free GitHub account.
 | `avgWhobuy` | Average @whobuy price in zeny, or `null` if unknown. |
 | `sellValue` | Zeny an NPC pays for one **before** Overcharge (the site adds the Overcharge bonus). Filled in by `npm run sync:prices`; only edit it for items neither emulator has. |
 | `sellSource` | Where `sellValue` came from: `hercules`, `rathena-renewal`, or `manual`. Set by the sync. |
-| `npcBuyable` | `"yes"`, `"no"`, `"npc-only"`, or `null` if unknown. |
+| `npcBuyable` | `"yes"`, `"no"`, `"npc-only"`, or `null` if unknown. Filled in by `npm run sync:shops`. |
 | `lastVerified` | Date you last checked its **vend or @whobuy price** on the live server (`YYYY-MM-DD`), or `null`. |
 | `verificationNotes` | How it was checked. |
 
@@ -102,7 +102,20 @@ Edit this file (not loot.json) when uaRO differs from the emulators:
 - **`notSellableToNpc`**: items NPCs won't buy on purpose (currencies, event coins). Shown as ✕.
 - **`renewalContent`**: renewal areas uaRO added. Their drops are **not** added automatically; the sync only lists items from these areas whose renewal price differs, for review. The pre-renewal price wins; once reviewed, add the item to `reviewedPrices` so the sync stops listing it.
 
+- **`npcShops`**: which items you can buy from NPCs (see below).
+
 Each entry needs the item's `itemId` and `name` exactly as in loot.json; `npm run validate` checks this.
+
+## Items sold by NPCs
+
+`npcBuyable` comes from the NPC shops in Hercules' pre-renewal scripts, plus the renewal shops uaRO added (read from rAthena, listed under `npcShops.renewalShops`). Items not in any zeny shop are `"no"`.
+
+```bash
+npm run sync:shops            # update npcBuyable in loot.json
+npm run sync:shops -- --check # only list differences
+```
+
+When an item turns out to be sold by NPCs, the sync changes its Vend/Whobuy actions to NPC and clears its player prices, and lists every change. Shops checked in game go in `npcShops.uaroShops` (shop name, date checked, and each item's ID, name and normal price). Anything else uaRO sells that the emulators don't goes in `npcShops.soldByNpc`, and anything it doesn't sell goes in `notSoldByNpc`.
 
 ## Changelog
 
