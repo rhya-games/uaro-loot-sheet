@@ -23,6 +23,20 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-24',
+    title: 'Cooking',
+    changes: [
+      {
+        type: 'Added',
+        text: 'Level 4–10 foods (42), with their stat bonus. NPCs don’t sell food, so they’re marked Vend.',
+      },
+      {
+        type: 'Added',
+        text: 'Ingredients list each food they’re for, like “x10 Morroc Fruit Wine (Cooking Lv 4)”. Also added: the Level 4–10 Cookbooks and five missing ingredients (Bao, Bug Leg, Live Coal, Scale Shell, Scorpion Claw).',
+      },
+    ],
+  },
+  {
+    date: '2026-09-24',
     title: 'Items used by skills',
     changes: [
       {
