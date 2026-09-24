@@ -13,7 +13,7 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import Papa from 'papaparse';
-import { loadItemDb } from './hercules.mjs';
+import { loadItemDb, loadOverchargePercent } from './hercules.mjs';
 import {
   RENAMES,
   DETAIL_FIXES,
@@ -58,6 +58,22 @@ const toNumber = (text) => {
   const cleaned = text.replace(/,/g, '').trim();
   return cleaned === '' ? null : Number(cleaned);
 };
+
+/**
+ * The sheet's "NPC Overcharge 10" column already includes the Overcharge
+ * bonus. We store the base price instead (`sellValue`), so undo the bonus:
+ * find the base price that gives the sheet's number after +percent%.
+ * `npm run sync:hercules` then replaces it with Hercules' value where it can.
+ */
+function toSellValue(text, overchargePercent) {
+  const withBonus = toNumber(text);
+  if (withBonus == null) return null;
+  const guess = Math.floor((withBonus * 100) / (100 + overchargePercent));
+  for (const base of [guess, guess + 1]) {
+    if (Math.floor((base * (100 + overchargePercent)) / 100) === withBonus) return base;
+  }
+  return Math.round((withBonus * 100) / (100 + overchargePercent));
+}
 
 /** Price columns: in the sheet, 0 means "no data", so treat it like a blank. */
 const toPrice = (text) => toNumber(text) || null;
@@ -141,6 +157,7 @@ function getItemType(itemId, sheetCategories, itemDb) {
 }
 
 const itemDb = await loadItemDb();
+const overchargePercent = await loadOverchargePercent(10);
 const rows = Papa.parse(readFileSync(SOURCE, 'utf8'), { skipEmptyLines: true }).data;
 const headerIndex = rows.findIndex((row) => row[0] === HEADER_ROW);
 if (headerIndex === -1) throw new Error(`Could not find the "${HEADER_ROW}" header row.`);
@@ -170,7 +187,7 @@ for (const row of rows.slice(headerIndex + 1)) {
     links: [],
     avgVend: toPrice(avgVend),
     avgWhobuy: toPrice(avgWhobuy),
-    npcSellPrice: toNumber(npcSellPrice),
+    sellValue: toSellValue(npcSellPrice, overchargePercent),
     npcBuyable: finalNpcBuyable,
     lastVerified: null,
     verificationNotes: '',
@@ -192,7 +209,7 @@ function mergeInto(target, extra) {
   if (target.categories.length > 1) target.categories = target.categories.filter((c) => c !== 'Uncategorized');
   target.uses = [...target.uses, ...extra.uses];
   target.notes = [target.notes, extra.notes].filter(Boolean).join(', ');
-  for (const key of ['itemId', 'avgVend', 'avgWhobuy', 'npcSellPrice', 'npcBuyable']) {
+  for (const key of ['itemId', 'avgVend', 'avgWhobuy', 'sellValue', 'npcBuyable']) {
     target[key] ??= extra[key];
   }
 }
@@ -202,4 +219,4 @@ writeFileSync(OUTPUT, JSON.stringify(items, null, 2) + '\n');
 
 console.log(`Wrote ${items.length} items to ${OUTPUT}`);
 if (merged.length) console.log(`Merged duplicate rows: ${merged.join(', ')}`);
-console.log('Next: run `npm run validate` to check the result.');
+console.log('Next: run `npm run sync:hercules`, then `npm run validate`.');

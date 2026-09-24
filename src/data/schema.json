@@ -133,8 +133,8 @@
           ],
           "minimum": 0
         },
-        "npcSellPrice": {
-          "description": "Zeny you get selling one to an NPC with Overcharge level 10. null = unknown.",
+        "sellValue": {
+          "description": "Zeny an NPC pays for one, before any skills (the item's base sell price). Filled in from Hercules by `npm run sync:hercules`. The NPC Sell column adds the Overcharge bonus from game-rules.json.",
           "type": [
             "integer",
             "null"

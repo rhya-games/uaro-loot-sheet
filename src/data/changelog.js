@@ -23,6 +23,21 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-23',
+    title: 'NPC sell prices from Hercules',
+    changes: [
+      {
+        type: 'Changed',
+        text: 'NPC Sell now uses each item’s sell price from the Hercules emulator plus the Overcharge level 10 bonus (+24%), also read from Hercules.',
+      },
+      { type: 'Added', text: 'NPC Sell prices for 481 items that were blank in the original sheet.' },
+      {
+        type: 'Fixed',
+        text: '17 NPC Sell prices that didn’t match the game (for example, Blue Feather was missing the Overcharge bonus).',
+      },
+    ],
+  },
+  {
+    date: '2026-09-23',
     title: 'First version of the site (sample entry)',
     changes: [
       { type: 'Added', text: 'Searchable, sortable table of 643 items from the original Google Sheet.' },

@@ -23,7 +23,9 @@ export function usePresence(open, duration = 250) {
   useEffect(() => {
     if (open) {
       setMounted(true);
-      // Wait two frames so the browser draws the hidden state first.
+      // Wait two frames (~30ms, not noticeable) so the browser has drawn the
+      // hidden state before switching to "shown"; with one frame it can skip
+      // the transition.
       let frame = requestAnimationFrame(() => {
         frame = requestAnimationFrame(() => setVisible(true));
       });

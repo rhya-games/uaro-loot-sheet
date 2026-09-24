@@ -5,6 +5,7 @@ import Tooltip from './Tooltip.jsx';
 import VerifiedText from './VerifiedText.jsx';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
 import { formatZeny } from '../utils/format.js';
+import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT, npcSellPrice } from '../utils/prices.js';
 
 /**
  * Table columns, in display order. To add a column, add an entry here.
@@ -76,9 +77,9 @@ const COLUMNS = [
   {
     label: 'NPC Sell',
     sortKey: 'npcSellPrice',
-    title: 'Zeny from selling to an NPC with Overcharge level 10',
+    title: `Zeny from selling to an NPC with Overcharge level ${OVERCHARGE_LEVEL} (+${OVERCHARGE_PERCENT}%)`,
     numeric: true,
-    render: (item) => formatZeny(item.npcSellPrice),
+    render: (item) => formatZeny(npcSellPrice(item)),
   },
   {
     label: 'NPC Buy',
@@ -133,7 +134,7 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
                 // In the narrow scroll box (see ItemList) it sticks to the box's top instead.
                 // Sortable headers have no padding: their button fills the cell (see SortButton).
                 className={`sticky top-4 z-10 bg-header font-semibold whitespace-nowrap text-white
-                  ${column.sortKey ? 'p-0' : 'px-3 py-3'}
+                  ${column.sortKey ? 'p-0' : 'h-11 px-3'}
                   shadow-[0_-1rem_0_0_var(--color-page),1px_0_0_0_var(--color-header)]
                   first:rounded-tl-lg last:rounded-tr-lg last:shadow-[0_-1rem_0_0_var(--color-page)]
                   @max-table-fit:top-0 @max-table-fit:shadow-[1px_0_0_0_var(--color-header)]
@@ -184,7 +185,8 @@ function SortButton({ column, direction, onSort }) {
       type="button"
       onClick={() => onSort(column.sortKey)}
       // The header is dark green, so the focus ring is white and drawn inside the cell.
-      className={`group/sort flex w-full items-center gap-1 rounded-md px-3 py-3 font-semibold
+      // h-11 (44px) matches the filter panel's header height.
+      className={`group/sort flex h-11 w-full items-center gap-1 rounded-md px-3 font-semibold
         focus-visible:outline-white focus-visible:-outline-offset-4 ${column.numeric ? 'justify-end' : 'justify-start'}`}
     >
       {column.label}

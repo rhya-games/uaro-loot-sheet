@@ -46,8 +46,9 @@ export default function FilterSidebar({
 
   return (
     <div>
-      {/* Stays pinned to the top of the panel while the filters scroll underneath. */}
-      <div className="sticky top-0 z-10 -mx-4 flex items-center gap-3 border-b border-line bg-surface px-4 pt-3 pb-2">
+      {/* Stays pinned to the top of the panel while the filters scroll underneath.
+          Same height as the table header (h-11, 44px) so the two line up side by side. */}
+      <div className="sticky top-0 z-10 -mx-4 flex h-11 items-center gap-3 border-b border-line bg-surface px-4">
         <h2 className="text-sm font-bold tracking-wide text-muted uppercase">Filters</h2>
         {countActiveFilters(filters) > 0 && (
           <button type="button" onClick={onClear} className="ml-auto text-sm text-accent hover:underline">

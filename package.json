@@ -10,6 +10,7 @@
     "build": "npm run validate && vite build",
     "preview": "vite preview",
     "import:csv": "node scripts/import-csv.mjs",
+    "sync:hercules": "node scripts/sync-hercules.mjs",
     "validate": "node scripts/validate.mjs"
   },
   "devDependencies": {

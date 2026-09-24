@@ -91,6 +91,13 @@ for (const item of items) {
 }
 
 // 3. Gentle reminders.
+const noSellValue = items.filter((item) => item.sellValue == null).map((item) => item.name);
+if (noSellValue.length) {
+  warnings.push(
+    `${noSellValue.length} items have no sellValue (NPC Sell shows "—"), and aren't in Hercules: ${noSellValue.join(', ')}`,
+  );
+}
+
 const noAction = items.filter((item) => item.actions?.length === 0).map((item) => item.name);
 if (noAction.length) warnings.push(`${noAction.length} items have no action yet: ${noAction.join(', ')}`);
 

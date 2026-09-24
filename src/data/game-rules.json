@@ -1,0 +1,5 @@
+{
+  "overchargeLevel": 10,
+  "overchargePercent": 24,
+  "source": "Hercules src/map/pc.cpp, pc_modifysellvalue()"
+}

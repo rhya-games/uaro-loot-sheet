@@ -32,7 +32,7 @@ You only need a free GitHub account.
   "links": [{ "label": "Mystic Rose", "url": "https://wiki.uaro.net/..." }],
   "avgVend": null,
   "avgWhobuy": null,
-  "npcSellPrice": 15500,
+  "sellValue": 12500,
   "npcBuyable": "no",
   "lastVerified": "2026-09-23",
   "verificationNotes": "Checked NPC price with Overcharge 10"
@@ -52,7 +52,7 @@ You only need a free GitHub account.
 | `links` | Helpful links (`label` + `url`). Can be empty: `[]`. |
 | `avgVend` | Average vending price in zeny, or `null` if unknown. |
 | `avgWhobuy` | Average @whobuy price in zeny, or `null` if unknown. |
-| `npcSellPrice` | Zeny from selling to an NPC with Overcharge 10, or `null`. |
+| `sellValue` | Zeny an NPC pays for one **before** Overcharge (the site adds the Overcharge bonus). Filled in from Hercules; only edit it for items Hercules doesn't have. |
 | `npcBuyable` | `"yes"`, `"no"`, `"npc-only"`, or `null` if unknown. |
 | `lastVerified` | Date you checked it on the live server (`YYYY-MM-DD`), or `null`. |
 | `verificationNotes` | How it was checked. |
@@ -82,6 +82,15 @@ npm run validate   # check loot.json for mistakes
 ```
 
 `validate` lists any **errors** (must fix) and **warnings** (worth a look).
+
+## Syncing with Hercules
+
+Base sell prices and the Overcharge bonus come from the [Hercules emulator](https://github.com/HerculesWS/Hercules) (pre-renewal):
+
+```bash
+npm run sync:hercules            # update loot.json and game-rules.json
+npm run sync:hercules -- --check # only list differences
+```
 
 ## Changelog
 

@@ -4,6 +4,7 @@ import RowActions from './RowActions.jsx';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
 import VerifiedText from './VerifiedText.jsx';
 import { formatZeny } from '../utils/format.js';
+import { OVERCHARGE_LEVEL, npcSellPrice } from '../utils/prices.js';
 
 /**
  * One loot item shown as a card: name, what to do with it, what it's for,
@@ -45,7 +46,7 @@ export default function ItemCard({ item, onSelectUse }) {
       <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-5">
         <Stat label="Avg. vend" value={formatZeny(item.avgVend)} />
         <Stat label="Avg. whobuy" value={formatZeny(item.avgWhobuy)} />
-        <Stat label="NPC sell (OC 10)" value={formatZeny(item.npcSellPrice)} />
+        <Stat label={`NPC sell (OC ${OVERCHARGE_LEVEL})`} value={formatZeny(npcSellPrice(item))} />
         <Stat label="Buy from NPC" value={NPC_BUYABLE_LABELS[item.npcBuyable] ?? '—'} />
         <Stat label="Last verified" value={<VerifiedText item={item} />} />
       </dl>

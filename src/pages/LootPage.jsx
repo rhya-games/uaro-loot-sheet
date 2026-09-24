@@ -14,8 +14,8 @@ import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
 import { usePresence } from '../utils/usePresence.js';
 
-/** How long the panel takes to slide in or out (ms). Matches `duration-300` below. */
-const PANEL_ANIMATION_MS = 300;
+/** How long the panel takes to slide in or out (ms). Matches `duration-200` below. */
+const PANEL_ANIMATION_MS = 200;
 
 /**
  * The filter panel has three layouts, by window width:
@@ -151,16 +151,19 @@ export default function LootPage() {
       </div>
 
       {/* Panel and table share one grid cell (so the panel floats over the table)
-          until 1470px (`wide:`), where the grid gets a second column and the panel sits beside it. */}
+          until 1470px (`wide:`). From there the grid has a panel column that grows from 0 to
+          15rem (and back) in step with the panel's slide, so the table glides over instead of jumping. */}
       <div
-        className={`md:grid md:items-start ${panel.mounted ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''}`}
+        style={{ '--panel-column': panel.visible ? '15rem' : '0rem', '--panel-gap': panel.visible ? '1.5rem' : '0rem' }}
+        className="md:grid md:items-start wide:grid-cols-[var(--panel-column)_minmax(0,1fr)] wide:gap-x-[var(--panel-gap)]
+          wide:transition-[grid-template-columns,column-gap] wide:duration-200 wide:ease-smooth motion-reduce:transition-none"
       >
         {panel.mounted && (
           // Small screens only: dims the page behind the sheet; clicking it closes the panel.
           <div
             aria-hidden="true"
             onClick={closePanel}
-            className={`fixed inset-0 z-40 cursor-pointer bg-black/50 transition-opacity duration-300 ease-smooth
+            className={`fixed inset-0 z-40 cursor-pointer bg-black/50 transition-opacity duration-200 ease-smooth
               motion-reduce:transition-none md:hidden dark:bg-black/70 ${panel.visible ? 'opacity-100' : 'opacity-0'}`}
           />
         )}
@@ -171,7 +174,7 @@ export default function LootPage() {
             // Slides and fades in from the left, and back out when closed
             // (instant when the system asks for reduced motion).
             className={`fixed inset-y-0 right-12 left-0 z-50 overflow-y-auto bg-surface px-4 pb-4 shadow-xl
-              transition duration-300 ease-smooth motion-reduce:transition-none
+              transition duration-200 ease-smooth motion-reduce:transition-none
               ${panel.visible ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}
               md:panel md:sticky md:inset-auto md:top-4 md:z-30 md:col-start-1 md:row-start-1 md:max-h-[calc(100vh-2rem)]
               md:w-60 md:justify-self-start md:pb-3 md:shadow-xl wide:shadow-sm`}
@@ -197,7 +200,7 @@ export default function LootPage() {
         <div
           id="results"
           tabIndex={-1}
-          className={`min-w-0 focus:outline-none md:col-start-1 md:row-start-1 ${panel.mounted ? 'wide:col-start-2' : ''}`}
+          className="min-w-0 focus:outline-none md:col-start-1 md:row-start-1 wide:col-start-2"
         >
           <ItemList
             items={results}

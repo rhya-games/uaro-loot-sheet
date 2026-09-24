@@ -3,6 +3,7 @@ import { BulletList, ExternalLink, Page, PageLink, Section, SubHeading } from '.
 import { ACTIONS, ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES } from '../utils/labels.js';
 import { ROUTES } from '../utils/route.js';
 import { CONTRIBUTING_URL } from '../config.js';
+import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 
 /** What the site is, how to read it, and where the data comes from. */
 export default function AboutPage() {
@@ -57,7 +58,8 @@ export default function AboutPage() {
             <strong>Whobuy</strong>: average price players pay for it through @whobuy.
           </li>
           <li>
-            <strong>NPC Sell</strong>: zeny an NPC pays for one, with Overcharge level 10.
+            <strong>NPC Sell</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+
+            {OVERCHARGE_PERCENT}%). Base prices and the bonus come from the Hercules emulator.
           </li>
           <li>
             <strong>NPC Buy</strong>: whether an NPC sells it.
