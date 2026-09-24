@@ -173,4 +173,9 @@ export const ITEM_IDS = {
   'Suspicious Bottle': 25231,
   "Tiger's Footskin": 1030,
   'Western Grace [0]': 2248,
+
+  // Renewal items that aren't in Hercules; IDs from rAthena's renewal database.
+  'Delicious Meat': 11616,
+  "Old Tree's Dew": 23257,
+  'Sweets Festival Coin': 25290,
 };

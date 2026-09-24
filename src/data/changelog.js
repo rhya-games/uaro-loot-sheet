@@ -31,8 +31,12 @@ export const CHANGELOG = [
       },
       { type: 'Added', text: 'NPC Sell prices for 481 items that were blank in the original sheet.' },
       {
+        type: 'Added',
+        text: 'uaRO’s modified NPC prices (lock icon, no Overcharge) and a ✕ for items NPCs won’t buy, like Poring Coin.',
+      },
+      {
         type: 'Fixed',
-        text: '17 NPC Sell prices that didn’t match the game (for example, Blue Feather was missing the Overcharge bonus).',
+        text: 'NPC Sell prices that didn’t match the game (for example, Blue Feather was missing the Overcharge bonus).',
       },
     ],
   },

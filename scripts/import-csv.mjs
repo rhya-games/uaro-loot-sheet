@@ -63,7 +63,7 @@ const toNumber = (text) => {
  * The sheet's "NPC Overcharge 10" column already includes the Overcharge
  * bonus. We store the base price instead (`sellValue`), so undo the bonus:
  * find the base price that gives the sheet's number after +percent%.
- * `npm run sync:hercules` then replaces it with Hercules' value where it can.
+ * `npm run sync:prices` then replaces it with the emulators' value where it can.
  */
 function toSellValue(text, overchargePercent) {
   const withBonus = toNumber(text);
@@ -219,4 +219,4 @@ writeFileSync(OUTPUT, JSON.stringify(items, null, 2) + '\n');
 
 console.log(`Wrote ${items.length} items to ${OUTPUT}`);
 if (merged.length) console.log(`Merged duplicate rows: ${merged.join(', ')}`);
-console.log('Next: run `npm run sync:hercules`, then `npm run validate`.');
+console.log('Next: run `npm run sync:prices`, then `npm run validate`.');

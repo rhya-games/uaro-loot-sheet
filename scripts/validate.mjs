@@ -12,6 +12,7 @@ import addFormats from 'ajv-formats';
 
 const DATA_FILE = 'src/data/loot.json';
 const SCHEMA_FILE = 'src/data/schema.json';
+const OVERRIDES_FILE = 'src/data/uaro-overrides.json';
 
 const errors = [];
 const warnings = [];
@@ -90,11 +91,35 @@ for (const item of items) {
   }
 }
 
+// uaRO overrides (src/data/uaro-overrides.json) must point at real items.
+const overrides = JSON.parse(readFileSync(OVERRIDES_FILE, 'utf8'));
+const itemsById = new Map(items.filter((item) => item.itemId != null).map((item) => [item.itemId, item]));
+const overriddenIds = new Map(); // itemId -> which list it's in
+for (const listName of ['modifiedSellPrices', 'customSellValues', 'notSellableToNpc']) {
+  for (const entry of overrides[listName].items) {
+    const item = itemsById.get(entry.itemId);
+    if (!item) errors.push(`${OVERRIDES_FILE} ${listName}: no item with itemId ${entry.itemId} (${entry.name})`);
+    else if (item.name !== entry.name) {
+      errors.push(`${OVERRIDES_FILE} ${listName}: itemId ${entry.itemId} is "${item.name}", not "${entry.name}"`);
+    }
+    if (overriddenIds.has(entry.itemId)) {
+      errors.push(`${OVERRIDES_FILE}: ${entry.name} is in both ${overriddenIds.get(entry.itemId)} and ${listName}`);
+    }
+    overriddenIds.set(entry.itemId, listName);
+  }
+}
+
 // 3. Gentle reminders.
-const noSellValue = items.filter((item) => item.sellValue == null).map((item) => item.name);
+const noSellValue = items.filter((item) => item.sellValue == null && !overriddenIds.has(item.itemId));
 if (noSellValue.length) {
   warnings.push(
-    `${noSellValue.length} items have no sellValue (NPC Sell shows "—"), and aren't in Hercules: ${noSellValue.join(', ')}`,
+    `${noSellValue.length} items have no sell price (NPC Sell shows "—"). Add a sellValue, or list them in ${OVERRIDES_FILE}: ${noSellValue.map((item) => item.name).join(', ')}`,
+  );
+}
+const sellsForZero = items.filter((item) => item.sellValue === 0 && !overriddenIds.has(item.itemId));
+if (sellsForZero.length) {
+  warnings.push(
+    `${sellsForZero.length} items sell to NPCs for 0z per the emulators. If NPCs won't buy them, add them to notSellableToNpc; if they have a price, add it to customSellValues: ${sellsForZero.map((item) => item.name).join(', ')}`,
   );
 }
 

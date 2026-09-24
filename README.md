@@ -16,7 +16,7 @@ Then open http://localhost:5173/uaro-loot-sheet/
 | --- | --- |
 | `npm run dev` | Starts the site locally and reloads as you edit. |
 | `npm run validate` | Checks `src/data/loot.json` for mistakes. |
-| `npm run sync:hercules` | Updates NPC sell prices and the Overcharge bonus from the Hercules emulator. Add `-- --check` to only list differences. |
+| `npm run sync:prices` | Updates NPC sell prices (Hercules pre-renewal, rAthena renewal for renewal-only items) and the Overcharge bonus. Add `-- --check` to only list differences. |
 | `npm run build` | Validates the data, then builds the public site into `dist/`. |
 
 ## Deploying
@@ -46,6 +46,7 @@ src/
   data/loot.json      All items (edit this to update the sheet)
   data/schema.json    Rules for what an item looks like
   data/changelog.js   Changelog entries (template at the top)
+  data/uaro-overrides.json  Where uaRO differs from the emulators (prices, unsellable items, renewal areas)
   pages/              Loot Sheet, About, Feedback, Changelog
   components/         UI pieces (SearchBar, FilterSidebar, ItemTable, ItemCard, ...)
   utils/              Search, filters, sorting, page switching, labels/colors, formatting

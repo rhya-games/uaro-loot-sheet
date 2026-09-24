@@ -134,12 +134,21 @@
           "minimum": 0
         },
         "sellValue": {
-          "description": "Zeny an NPC pays for one, before any skills (the item's base sell price). Filled in from Hercules by `npm run sync:hercules`. The NPC Sell column adds the Overcharge bonus from game-rules.json.",
+          "description": "Zeny an NPC pays for one, before any skills (the item's base sell price). Filled in by `npm run sync:prices`. The NPC Sell column adds the Overcharge bonus from game-rules.json, unless uaro-overrides.json says otherwise.",
           "type": [
             "integer",
             "null"
           ],
           "minimum": 0
+        },
+        "sellSource": {
+          "description": "Where sellValue came from: \"hercules\" (pre-renewal, uaRO's base), \"rathena-renewal\" (renewal-only items), or \"manual\" (entered by hand; neither emulator has the item). Set by `npm run sync:prices`.",
+          "enum": [
+            "hercules",
+            "rathena-renewal",
+            "manual",
+            null
+          ]
         },
         "npcBuyable": {
           "description": "Can you buy this from an NPC? \"yes\", \"no\", \"npc-only\" (only obtainable from an NPC), or null if unknown.",

@@ -59,7 +59,8 @@ export default function AboutPage() {
           </li>
           <li>
             <strong>NPC Sell</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+
-            {OVERCHARGE_PERCENT}%). Base prices and the bonus come from the Hercules emulator.
+            {OVERCHARGE_PERCENT}%). A lock means uaRO set a fixed price that Overcharge doesn't raise; ✕ means NPCs
+            won't buy it.
           </li>
           <li>
             <strong>NPC Buy</strong>: whether an NPC sells it.
@@ -89,8 +90,13 @@ export default function AboutPage() {
             <ExternalLink href="https://github.com/HerculesWS/Hercules">Hercules emulator</ExternalLink> (pre-renewal).
           </li>
           <li>
-            Server-specific quests and pet evolutions from the{' '}
-            <ExternalLink href="https://wiki.uaro.net/">uaRO wiki</ExternalLink>.
+            Prices for renewal items uaRO added, from the{' '}
+            <ExternalLink href="https://github.com/rathena/rathena">rAthena emulator</ExternalLink> (renewal).
+          </li>
+          <li>
+            Server-specific quests, pet evolutions, and{' '}
+            <ExternalLink href="https://wiki.uaro.net/Modified_Sales_Prices/">modified NPC prices</ExternalLink> from
+            the <ExternalLink href="https://wiki.uaro.net/">uaRO wiki</ExternalLink>.
           </li>
         </BulletList>
       </Section>

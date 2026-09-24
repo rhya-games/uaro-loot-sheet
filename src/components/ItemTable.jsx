@@ -5,7 +5,8 @@ import Tooltip from './Tooltip.jsx';
 import VerifiedText from './VerifiedText.jsx';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
 import { formatZeny } from '../utils/format.js';
-import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT, npcSellPrice } from '../utils/prices.js';
+import NpcSellPrice from './NpcSellPrice.jsx';
+import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 
 /**
  * Table columns, in display order. To add a column, add an entry here.
@@ -79,7 +80,7 @@ const COLUMNS = [
     sortKey: 'npcSellPrice',
     title: `Zeny from selling to an NPC with Overcharge level ${OVERCHARGE_LEVEL} (+${OVERCHARGE_PERCENT}%)`,
     numeric: true,
-    render: (item) => formatZeny(npcSellPrice(item)),
+    render: (item) => <NpcSellPrice item={item} />,
   },
   {
     label: 'NPC Buy',

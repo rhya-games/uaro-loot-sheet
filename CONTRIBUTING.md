@@ -52,7 +52,8 @@ You only need a free GitHub account.
 | `links` | Helpful links (`label` + `url`). Can be empty: `[]`. |
 | `avgVend` | Average vending price in zeny, or `null` if unknown. |
 | `avgWhobuy` | Average @whobuy price in zeny, or `null` if unknown. |
-| `sellValue` | Zeny an NPC pays for one **before** Overcharge (the site adds the Overcharge bonus). Filled in from Hercules; only edit it for items Hercules doesn't have. |
+| `sellValue` | Zeny an NPC pays for one **before** Overcharge (the site adds the Overcharge bonus). Filled in by `npm run sync:prices`; only edit it for items neither emulator has. |
+| `sellSource` | Where `sellValue` came from: `hercules`, `rathena-renewal`, or `manual`. Set by the sync. |
 | `npcBuyable` | `"yes"`, `"no"`, `"npc-only"`, or `null` if unknown. |
 | `lastVerified` | Date you checked it on the live server (`YYYY-MM-DD`), or `null`. |
 | `verificationNotes` | How it was checked. |
@@ -83,14 +84,25 @@ npm run validate   # check loot.json for mistakes
 
 `validate` lists any **errors** (must fix) and **warnings** (worth a look).
 
-## Syncing with Hercules
+## NPC sell prices
 
-Base sell prices and the Overcharge bonus come from the [Hercules emulator](https://github.com/HerculesWS/Hercules) (pre-renewal):
+uaRO is a pre-renewal server, so prices follow the [Hercules emulator](https://github.com/HerculesWS/Hercules)'s pre-renewal data. Renewal items uaRO added (that Hercules doesn't price) use [rAthena](https://github.com/rathena/rathena)'s renewal data. The Overcharge bonus is read from Hercules' code.
 
 ```bash
-npm run sync:hercules            # update loot.json and game-rules.json
-npm run sync:hercules -- --check # only list differences
+npm run sync:prices            # update loot.json and game-rules.json
+npm run sync:prices -- --check # only list differences
 ```
+
+### uaRO's own changes: `src/data/uaro-overrides.json`
+
+Edit this file (not loot.json) when uaRO differs from the emulators:
+
+- **`modifiedSellPrices`**: prices uaRO lowered ([wiki](https://wiki.uaro.net/Modified_Sales_Prices/)). The most an NPC pays; Overcharge doesn't raise it.
+- **`customSellValues`**: a different base price. Overcharge still applies.
+- **`notSellableToNpc`**: items NPCs won't buy on purpose (currencies, event coins). Shown as ✕.
+- **`renewalContent`**: renewal areas uaRO added. Their drops are **not** added automatically; the sync only lists items from these areas whose renewal price differs, for review.
+
+Each entry needs the item's `itemId` and `name` exactly as in loot.json; `npm run validate` checks this.
 
 ## Changelog
 

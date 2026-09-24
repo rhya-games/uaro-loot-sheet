@@ -2,37 +2,21 @@
  * Helpers for reading data from the Hercules emulator
  * (https://github.com/HerculesWS/Hercules).
  *
- * uaRO is a pre-renewal server, so pre-renewal files are used first.
- * Some newer items only exist in the renewal files, so those are used
- * as a fallback.
- *
- * Files are downloaded once and cached in scripts/.cache/ (not committed).
- * Delete that folder to download fresh copies.
+ * uaRO is a pre-renewal server, so Hercules' pre-renewal data is the main
+ * source. (Renewal content uaRO added is read from rAthena, see rathena.mjs.)
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import path from 'node:path';
+import { fetchGitHubFile } from './github-files.mjs';
 
-const BRANCH = 'stable';
-const BASE_URL = `https://raw.githubusercontent.com/HerculesWS/Hercules/${BRANCH}/`;
-const CACHE_DIR = 'scripts/.cache';
-
-/** Downloads a file from the Hercules repo (or reads the cached copy). */
-export async function fetchHerculesFile(repoPath) {
-  const cachePath = path.join(CACHE_DIR, repoPath.replaceAll('/', '__'));
-  if (existsSync(cachePath)) return readFileSync(cachePath, 'utf8');
-
-  console.log(`Downloading ${repoPath} from Hercules...`);
-  const response = await fetch(BASE_URL + repoPath);
-  if (!response.ok) throw new Error(`Could not download ${repoPath} (HTTP ${response.status})`);
-  const text = await response.text();
-  mkdirSync(CACHE_DIR, { recursive: true });
-  writeFileSync(cachePath, text);
-  return text;
+/** Downloads a file from the Hercules repo ("stable" branch), cached. */
+export function fetchHerculesFile(repoPath) {
+  return fetchGitHubFile('HerculesWS/Hercules', 'stable', repoPath);
 }
 
 /**
  * Reads the fields we need from a Hercules item_db.conf file.
- * Returns a Map: item ID -> { id, aegisName, name, type, slots, sellValue }.
+ * Returns a Map: item ID -> { id, aegisName, name, type, slots, sellValue, hasPrice }.
+ * hasPrice is false when the entry sets neither Buy nor Sell (Hercules then
+ * treats it as 0z, but usually it just means nobody filled the price in).
  *
  * Each entry in the file looks like:
  *   {
@@ -57,6 +41,7 @@ export function parseItemDb(text) {
       type: field(body, 'Type') ?? 'IT_ETC', // Hercules' default when Type is left out.
       slots: Number(field(body, 'Slots') ?? 0),
       sellValue: sellValue(field(body, 'Buy'), field(body, 'Sell')),
+      hasPrice: field(body, 'Buy') != null || field(body, 'Sell') != null,
     });
   }
   return items;
@@ -96,6 +81,11 @@ export async function loadOverchargePercent(level) {
   }
   const [, base, perLevel, specialLevel, specialPenalty] = match.map(Number);
   return base + level * perLevel - (level === specialLevel ? specialPenalty : 0);
+}
+
+/** Pre-renewal items only: Map item ID -> { id, aegisName, name, type, slots, sellValue }. */
+export async function loadPreRenewalItemDb() {
+  return parseItemDb(await fetchHerculesFile('db/pre-re/item_db.conf'));
 }
 
 /** All items: pre-renewal entries, plus renewal-only entries as a fallback. */
