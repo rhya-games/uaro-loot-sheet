@@ -52,7 +52,7 @@ export default function CheckboxGroup({
         {selected.length > 0 && (
           <span className="mr-2 ml-auto text-xs font-normal text-accent">{selected.length} selected</span>
         )}
-        <ChevronRightIcon className="size-4 text-muted transition-transform group-open:rotate-90" aria-hidden="true" />
+        <ChevronRightIcon className="size-5 text-muted transition-transform group-open:rotate-90" aria-hidden="true" />
       </summary>
 
       {searchable && (

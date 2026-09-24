@@ -54,7 +54,11 @@ export const CHANGELOG = [
         type: 'Added',
         text: 'Crafted items skills use, like Acid Bottle, Glistening Coat, Embryo and the four Elemental Converters (now named by element).',
       },
-      { type: 'Changed', text: 'Bigger ✓ and ✕ marks in the table, and bigger arrows on the filter sections.' },
+      { type: 'Changed', text: 'Bigger, bolder icons, all in the same style and two sizes.' },
+      {
+        type: 'Added',
+        text: 'Flame Heart, Mystic Frozen, Rough Wind and Great Nature: the Utan Shaman in Umbala turns each into 6–10 Red Blood, Crystal Blue, Wind of Verdure or Green Live.',
+      },
     ],
   },
   {
