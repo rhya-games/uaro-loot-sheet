@@ -55,8 +55,12 @@ export default function AboutPage() {
             <strong>Vend</strong>: average price players sell it for in vending shops.
           </li>
           <li>
-            <strong>Whobuy</strong>: average price players pay for it through @whobuy. ✕ in Vend or Whobuy means
-            NPCs sell it (so players don't pay for it) or it can't be traded.
+            <strong>Whobuy</strong>: average price players pay for it through @whobuy.
+          </li>
+          <li>
+            In Vend and Whobuy, <strong>✕</strong> means it can't be sold that way: NPCs sell it, it can't be
+            traded, or it's a card or equipment (@whobuy doesn't buy those). <strong>None</strong> means someone
+            checked and nobody was selling or buying. <strong>—</strong> means nobody has checked yet.
           </li>
           <li>
             <strong>NPC</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+

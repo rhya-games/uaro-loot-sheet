@@ -29,7 +29,10 @@ export const CHANGELOG = [
         type: 'Changed',
         text: '“I don’t keep items” is now “I keep items for”: tick the things you do (hats, pets, cooking, crafting and skills, quests). Items you’d only keep for the others show how to sell them instead.',
       },
-      { type: 'Changed', text: 'Vend and Whobuy show ✕ when nobody was buying or selling, and Whobuy always shows ✕ for cards and equipment.' },
+      {
+        type: 'Changed',
+        text: 'Vend and Whobuy tell three things apart: ✕ can’t be sold that way (Whobuy on cards and equipment, for one), None means nobody was buying or selling when checked, and — means not checked yet.',
+      },
       { type: 'Changed', text: 'Ingredients only used for level 1–3 cooking aren’t marked Keep any more, like Banana and Yoyo Tail.' },
       { type: 'Fixed', text: 'Every card says Vend. Armeyer Dinze Card said NPC.' },
       {

@@ -10,8 +10,8 @@ const CHECK_NOTES = {
   avgWhobuy: '@whobuy price in game',
 };
 
-/** What a saved price looks like in the box: 12000 -> "12,000", null -> "". */
-const asText = (price) => (price == null ? '' : price.toLocaleString('en-US'));
+/** What a saved price looks like in the box: 12000 -> "12,000", 0 -> "None", null -> "". */
+const asText = (price) => (price == null ? '' : price === 0 ? 'None' : price.toLocaleString('en-US'));
 
 /**
  * Adds thousands commas to what's typed so far: "12000" -> "12,000",
@@ -25,8 +25,8 @@ function withCommas(text) {
 /**
  * A Vend or Whobuy price cell. In admin mode it's a text box: type a price
  * and press Enter (or leave the box) to save it. That also marks the item
- * as verified today. Escape puts the old price back. 0 means "checked, and
- * nobody was buying (or selling)". Outside admin mode, and where there
+ * as verified today. Escape puts the old price back. 0 (or "none") means
+ * "checked, and nobody was buying (or selling)", and shows as "None". Outside admin mode, and where there
  * can't be a price (see PlayerPrice), it's the normal read-only cell.
  *
  * Props:
@@ -126,7 +126,10 @@ function PriceInput({ item, field }) {
       />
       {/* Typed "12k"? Show what it means. */}
       {value > 0 && text.trim() !== asText(value) && <span className="text-xs text-muted">{asText(value)}z</span>}
-      {value === 0 && <span className="text-xs text-muted">{field === 'avgWhobuy' ? 'No buyers' : 'No sellers'}</span>}
+      {/* Typed 0? It saves as "None". */}
+      {value === 0 && text.trim().toLowerCase() !== 'none' && (
+        <span className="text-xs text-muted">None: nobody {field === 'avgWhobuy' ? 'buying' : 'selling'}</span>
+      )}
       {status?.error && <span className="text-xs text-red-700 dark:text-red-400">{status.error}</span>}
     </div>
   );
