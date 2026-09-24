@@ -98,9 +98,9 @@ npm run sync:prices -- --check # only list differences
 Edit this file (not loot.json) when uaRO differs from the emulators:
 
 - **`modifiedSellPrices`**: prices uaRO lowered ([wiki](https://wiki.uaro.net/Modified_Sales_Prices/)). The most an NPC pays; Overcharge doesn't raise it.
-- **`customSellValues`**: a different base price. Overcharge still applies.
+- **`customSellValues`**: a base price checked by hand, when the emulators are wrong or unsure. Also use it to confirm an item really sells for 0z. Overcharge still applies.
 - **`notSellableToNpc`**: items NPCs won't buy on purpose (currencies, event coins). Shown as ✕.
-- **`renewalContent`**: renewal areas uaRO added. Their drops are **not** added automatically; the sync only lists items from these areas whose renewal price differs, for review.
+- **`renewalContent`**: renewal areas uaRO added. Their drops are **not** added automatically; the sync only lists items from these areas whose renewal price differs, for review. The pre-renewal price wins; once reviewed, add the item to `reviewedPrices` so the sync stops listing it.
 
 Each entry needs the item's `itemId` and `name` exactly as in loot.json; `npm run validate` checks this.
 

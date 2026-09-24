@@ -19,22 +19,43 @@
   },
 
   "customSellValues": {
-    "about": "Items uaRO prices differently from both emulators. This is the base price: Overcharge applies on top, like normal items.",
+    "about": "NPC sell prices checked by hand for uaRO, where the emulators are wrong or unsure (including items confirmed to sell for 0z). This is the base price: Overcharge applies on top, like normal items.",
     "items": [
-      { "itemId": 6075, "name": "Crystalized Teardrop", "sellValue": 325, "note": "Renewal drop added by uaRO; the emulators list it at 0z." }
+      { "itemId": 6075, "name": "Crystalized Teardrop", "sellValue": 325, "note": "Renewal drop added by uaRO; the emulators list it at 0z." },
+      { "itemId": 6073, "name": "Dragon's Mane", "sellValue": 225, "note": "The emulators list it at 0z." },
+      { "itemId": 12361, "name": "Delicious Shaved Ice", "sellValue": 0, "note": "0z. Not confirmed whether NPCs buy it." },
+      { "itemId": 7086, "name": "Emblem of the Sun God", "sellValue": 0, "note": "0z. Not confirmed whether NPCs buy it." },
+      { "itemId": 35661, "name": "Expanded Token Fragment", "sellValue": 0, "note": "uaRO item, not in the emulators." },
+      { "itemId": 14570, "name": "Flail Goblin Ring", "sellValue": 0 },
+      { "itemId": 12370, "name": "Girl's Naivety", "sellValue": 0 },
+      { "itemId": 14571, "name": "Hammer Goblin Ring", "sellValue": 0 },
+      { "itemId": 14569, "name": "Knife Goblin Ring", "sellValue": 0 },
+      { "itemId": 25408, "name": "Scatleton Memory", "sellValue": 0, "note": "uaRO custom item. The emulators use this ID for a different item." },
+      { "itemId": 551, "name": "Sushi", "sellValue": 0 },
+      { "itemId": 14574, "name": "Vagabond's Skull", "sellValue": 0 }
     ]
   },
 
   "notSellableToNpc": {
     "about": "Items NPCs won't buy on purpose (currencies, event coins). The NPC Sell column shows ✕ instead of a price.",
     "items": [
+      { "itemId": 11605, "name": "Cookie Bat", "reason": "uaRO rule" },
       { "itemId": 7539, "name": "Poring Coin", "reason": "uaRO currency" },
       { "itemId": 25290, "name": "Sweets Festival Coin", "reason": "Event coin" }
     ]
   },
 
   "renewalContent": {
-    "about": "Renewal areas uaRO added. Drops here may be tweaked by uaRO, so they are NOT added automatically. `npm run sync:prices` only checks the prices of items dropped here against rAthena's renewal data and lists differences for review.",
+    "about": "Renewal areas uaRO added. Drops here may be tweaked by uaRO, so they are NOT added automatically. `npm run sync:prices` only checks the prices of items dropped here against rAthena's renewal data and lists differences for review. When they differ, the pre-renewal price is used.",
+    "reviewedPrices": {
+      "about": "Renewal-area items whose renewal price differs, already reviewed: they keep their pre-renewal price. The sync stops listing these.",
+      "items": [
+        { "itemId": 579, "name": "Fresh Fish" },
+        { "itemId": 969, "name": "Gold" },
+        { "itemId": 716, "name": "Red Gemstone" },
+        { "itemId": 912, "name": "Zargon" }
+      ]
+    },
     "areas": [
       { "name": "Splendide", "spawnFile": "npc/re/mobs/fields/splendide.txt", "maps": ["spl_fild01", "spl_fild02", "spl_fild03"] },
       { "name": "Manuk", "spawnFile": "npc/re/mobs/fields/manuk.txt", "maps": ["man_fild01", "man_fild02", "man_fild03"] },

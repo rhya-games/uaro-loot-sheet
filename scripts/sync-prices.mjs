@@ -14,7 +14,8 @@
  *
  * It also checks items dropped in uaRO's renewal areas (listed in
  * uaro-overrides.json) and lists any whose pre-renewal and renewal prices
- * differ, for a person to review. It never adds drops.
+ * differ, for a person to review (skipping ones already listed under
+ * renewalContent.reviewedPrices). It never adds drops.
  *
  * Usage:
  *   npm run sync:prices             (update the files)
@@ -87,9 +88,11 @@ for (const area of overrides.renewalContent.areas) {
     }
   }
 }
+const reviewedIds = new Set(overrides.renewalContent.reviewedPrices.items.map((entry) => entry.itemId));
 const priceDifferences = [];
 for (const item of updatedItems) {
   const areas = areasByItemId.get(item.itemId);
+  if (reviewedIds.has(item.itemId)) continue;
   const renewalPrice = renewal.get(item.itemId)?.sellValue;
   if (!areas || renewalPrice == null || renewalPrice === item.sellValue) continue;
   priceDifferences.push(
@@ -103,7 +106,7 @@ console.log(`\n${changed.length} prices ${checkOnly ? 'would change' : 'changed'
 changed.forEach((line) => console.log(`  ${line}`));
 console.log(`\n${kept.length} items aren't in either emulator (kept as-is):`);
 kept.forEach((line) => console.log(`  ${line}`));
-console.log(`\n${areasByItemId.size} item types drop in uaRO's renewal areas; ${priceDifferences.length} of ours have a different renewal price (review, not changed):`);
+console.log(`\n${areasByItemId.size} item types drop in uaRO's renewal areas; ${priceDifferences.length} of ours have a new, unreviewed renewal price (not changed; ${reviewedIds.size} already reviewed):`);
 priceDifferences.forEach((line) => console.log(`  ${line}`));
 
 if (!checkOnly) {

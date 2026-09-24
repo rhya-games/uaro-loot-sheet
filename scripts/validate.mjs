@@ -108,6 +108,12 @@ for (const listName of ['modifiedSellPrices', 'customSellValues', 'notSellableTo
     overriddenIds.set(entry.itemId, listName);
   }
 }
+for (const entry of overrides.renewalContent.reviewedPrices.items) {
+  const item = itemsById.get(entry.itemId);
+  if (item?.name !== entry.name) {
+    errors.push(`${OVERRIDES_FILE} reviewedPrices: itemId ${entry.itemId} is ${item ? `"${item.name}"` : 'not in loot.json'}, not "${entry.name}"`);
+  }
+}
 
 // 3. Gentle reminders.
 const noSellValue = items.filter((item) => item.sellValue == null && !overriddenIds.has(item.itemId));

@@ -16,6 +16,7 @@ import Papa from 'papaparse';
 import { loadItemDb, loadOverchargePercent } from './hercules.mjs';
 import {
   RENAMES,
+  REMOVED,
   DETAIL_FIXES,
   ACTION_FIXES,
   USE_TARGET_FIXES,
@@ -168,7 +169,7 @@ const merged = [];
 for (const row of rows.slice(headerIndex + 1)) {
   const [sheetName, actions, categories, details, itemId, avgVend, avgWhobuy, npcSellPrice, npcBuyable] =
     row.map((cell) => (cell ?? '').trim());
-  if (!sheetName) continue;
+  if (!sheetName || REMOVED.includes(sheetName)) continue;
   const name = RENAMES[sheetName] ?? sheetName;
   const sheetCategories = splitList(categories);
   const finalItemId = ITEM_IDS[name] ?? toNumber(itemId);

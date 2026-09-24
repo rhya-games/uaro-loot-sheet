@@ -2676,25 +2676,6 @@
     "npcBuyable": null
   },
   {
-    "id": "clock-hands",
-    "name": "Clock Hands",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Keep",
-      "NPC"
-    ],
-    "categories": [
-      "Official Hat Quest"
-    ],
-    "uses": [],
-    "notes": "",
-    "links": [],
-    "sellValue": null,
-    "sellSource": null,
-    "npcBuyable": null
-  },
-  {
     "id": "clover",
     "name": "Clover",
     "itemId": 705,
@@ -3324,6 +3305,24 @@
     "sellValue": 211,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "darkgreen-dyestuffs",
+    "name": "Darkgreen Dyestuffs",
+    "itemId": 979,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 4000,
+    "sellSource": "hercules",
+    "npcBuyable": null
   },
   {
     "id": "dead-branch-db",
@@ -4197,8 +4196,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "sellValue": null,
-    "sellSource": null,
+    "sellValue": 0,
+    "sellSource": "manual",
     "npcBuyable": "no"
   },
   {
@@ -5072,24 +5071,6 @@
     "npcBuyable": "no"
   },
   {
-    "id": "ghost-coffin",
-    "name": "Ghost Coffin",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Vend"
-    ],
-    "categories": [
-      "Pet"
-    ],
-    "uses": [],
-    "notes": "Whisper Taming Item",
-    "links": [],
-    "sellValue": null,
-    "sellSource": null,
-    "npcBuyable": null
-  },
-  {
     "id": "ghoul-card",
     "name": "Ghoul Card",
     "itemId": 4110,
@@ -5613,24 +5594,6 @@
     "links": [],
     "sellValue": 443,
     "sellSource": "hercules",
-    "npcBuyable": null
-  },
-  {
-    "id": "green-dyestuffs",
-    "name": "Green Dyestuffs",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "NPC"
-    ],
-    "categories": [
-      "Uncategorized"
-    ],
-    "uses": [],
-    "notes": "",
-    "links": [],
-    "sellValue": null,
-    "sellSource": null,
     "npcBuyable": null
   },
   {
@@ -7871,6 +7834,29 @@
     "npcBuyable": null
   },
   {
+    "id": "miracle-bandage",
+    "name": "Miracle Bandage",
+    "itemId": 23256,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [
+      {
+        "for": "Ancient Mummy Pet Evolution",
+        "qty": 3
+      }
+    ],
+    "notes": "Mummy Taming Item",
+    "links": [],
+    "sellValue": 5,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": null
+  },
+  {
     "id": "mixture",
     "name": "Mixture",
     "itemId": 974,
@@ -9814,6 +9800,24 @@
     "npcBuyable": null
   },
   {
+    "id": "raccoon-doll",
+    "name": "Raccoon Doll",
+    "itemId": 754,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 2500,
+    "sellSource": "hercules",
+    "npcBuyable": null
+  },
+  {
     "id": "raccoon-leaf",
     "name": "Raccoon Leaf",
     "itemId": 945,
@@ -10868,7 +10872,7 @@
   {
     "id": "scatleton-memory",
     "name": "Scatleton Memory",
-    "itemId": null,
+    "itemId": 25408,
     "itemType": "Misc",
     "actions": [
       "Vend"
@@ -10886,8 +10890,8 @@
     ],
     "notes": "",
     "links": [],
-    "sellValue": null,
-    "sellSource": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -11495,24 +11499,6 @@
     "npcBuyable": null
   },
   {
-    "id": "smokie-doll",
-    "name": "Smokie Doll",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Vend"
-    ],
-    "categories": [
-      "Dungeon Quest"
-    ],
-    "uses": [],
-    "notes": "",
-    "links": [],
-    "sellValue": null,
-    "sellSource": null,
-    "npcBuyable": null
-  },
-  {
     "id": "snails-shell",
     "name": "Snail's Shell",
     "itemId": 946,
@@ -11836,29 +11822,6 @@
     "links": [],
     "sellValue": 350,
     "sellSource": "hercules",
-    "npcBuyable": null
-  },
-  {
-    "id": "spiritual-bandage",
-    "name": "Spiritual Bandage",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Vend"
-    ],
-    "categories": [
-      "Pet"
-    ],
-    "uses": [
-      {
-        "for": "Ancient Mummy Pet Evolution",
-        "qty": 3
-      }
-    ],
-    "notes": "Mummy Taming Item",
-    "links": [],
-    "sellValue": null,
-    "sellSource": null,
     "npcBuyable": null
   },
   {
@@ -12926,24 +12889,6 @@
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
-    "npcBuyable": null
-  },
-  {
-    "id": "torn-paper-piece",
-    "name": "Torn Paper Piece",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "NPC"
-    ],
-    "categories": [
-      "Uncategorized"
-    ],
-    "uses": [],
-    "notes": "",
-    "links": [],
-    "sellValue": null,
-    "sellSource": null,
     "npcBuyable": null
   },
   {
