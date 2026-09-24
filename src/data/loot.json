@@ -1499,7 +1499,7 @@
     ],
     "uses": [
       {
-        "for": "Teddy Bear Hat",
+        "for": "Teddybear Hat",
         "qty": 300
       }
     ],
@@ -1721,7 +1721,7 @@
         "qty": 7
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 7
       }
     ],
@@ -1904,7 +1904,7 @@
     ],
     "uses": [
       {
-        "for": "Candle Hat",
+        "for": "Candle",
         "qty": 1
       }
     ],
@@ -2354,7 +2354,7 @@
     ],
     "uses": [
       {
-        "for": "Mine Helmet",
+        "for": "Mine Hat",
         "qty": 1
       }
     ],
@@ -2516,9 +2516,14 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 477,
@@ -2960,6 +2965,10 @@
       {
         "for": "Necktie",
         "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -3235,7 +3244,7 @@
         "qty": 1
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 5
       },
       {
@@ -3345,7 +3354,7 @@
     ],
     "uses": [
       {
-        "for": "Mine Helmet",
+        "for": "Mine Hat",
         "qty": 1
       }
     ],
@@ -3502,6 +3511,186 @@
     "npcBuyable": "no"
   },
   {
+    "id": "cute-blue-ribbon-0",
+    "name": "Cute Blue Ribbon [0]",
+    "itemId": 5440,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute White Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cute-green-ribbon-0",
+    "name": "Cute Green Ribbon [0]",
+    "itemId": 5438,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute White Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cute-red-ribbon-0",
+    "name": "Cute Red Ribbon [0]",
+    "itemId": 5439,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute White Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cute-ribbon-0",
+    "name": "Cute Ribbon [0]",
+    "itemId": 2250,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute White Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cute-white-ribbon-0",
+    "name": "Cute White Ribbon [0]",
+    "itemId": 5441,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Official Hat Quest"
+    ],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Blue Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
+        "qty": 1
+      },
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "cyfar",
     "name": "Cyfar",
     "itemId": 7053,
@@ -3596,9 +3785,14 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cute Green Ribbon",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 4000,
@@ -5157,9 +5351,15 @@
       "Vend"
     ],
     "categories": [
-      "Pet"
+      "Pet",
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 1
+      }
+    ],
     "notes": "Zealotus Taming Item",
     "links": [],
     "sellValue": 10000,
@@ -6053,7 +6253,7 @@
         "qty": 7
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 7
       }
     ],
@@ -6604,6 +6804,10 @@
       },
       {
         "for": "Orc Hero Headdress",
+        "qty": 100
+      },
+      {
+        "for": "Orc Hero Helm",
         "qty": 100
       }
     ],
@@ -7741,9 +7945,14 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cute Ribbon",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 4000,
@@ -8380,7 +8589,7 @@
     ],
     "uses": [
       {
-        "for": "Candle Hat",
+        "for": "Candle",
         "qty": 50
       },
       {
@@ -9026,7 +9235,7 @@
         "qty": 1
       },
       {
-        "for": "Teddy Bear Hat",
+        "for": "Teddybear Hat",
         "qty": 100
       }
     ],
@@ -9844,7 +10053,7 @@
     ],
     "uses": [
       {
-        "for": "Teddy Bear Hat",
+        "for": "Teddybear Hat",
         "qty": 1
       }
     ],
@@ -11039,7 +11248,7 @@
         "qty": 7
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 7
       }
     ],
@@ -11723,7 +11932,7 @@
     ],
     "uses": [
       {
-        "for": "Candle Hat",
+        "for": "Candle",
         "qty": 100
       },
       {
@@ -11844,7 +12053,7 @@
     ],
     "uses": [
       {
-        "for": "Mine Helmet",
+        "for": "Mine Hat",
         "qty": 1
       }
     ],
@@ -12054,7 +12263,7 @@
         "qty": 1
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 1
       },
       {
@@ -12063,6 +12272,10 @@
       },
       {
         "for": "Tulip Hairpin",
+        "qty": 1
+      },
+      {
+        "for": "Cute Red Ribbon",
         "qty": 1
       }
     ],
@@ -12280,7 +12493,7 @@
         "qty": 300
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 300
       }
     ],
@@ -12911,7 +13124,7 @@
         "qty": 500
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 50
       },
       {
@@ -13147,7 +13360,7 @@
         "qty": 1
       },
       {
-        "for": "Teddy Bear Hat",
+        "for": "Teddybear Hat",
         "qty": 100
       }
     ],
@@ -13310,7 +13523,7 @@
         "qty": 10
       },
       {
-        "for": "Mine Helmet",
+        "for": "Mine Hat",
         "qty": 25
       },
       {
@@ -14876,6 +15089,10 @@
       {
         "for": "Mystic Rose",
         "qty": 1
+      },
+      {
+        "for": "Cute White Ribbon",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -15340,9 +15557,14 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 30
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 386,
@@ -15493,7 +15715,7 @@
         "qty": 7
       },
       {
-        "for": "A-Yam Hat [1]",
+        "for": "Ayam [1]",
         "qty": 7
       }
     ],

@@ -28,9 +28,4 @@ export const TARGET_ALIASES = {
   'Defolty Doll Hat [1]': 'Defolty Doll',
   'Bacsojin/White Lady': 'Bacsojin Pet Evolution',
   'Chaotic Bapho Jr': 'Chaotic Baphomet Jr Pet Evolution',
-  // Official hats the sheet lists under another name (emulator name -> sheet).
-  Ayam: 'A-Yam Hat [1]',
-  'Mine Hat': 'Mine Helmet',
-  Candle: 'Candle Hat',
-  'Teddybear Hat': 'Teddy Bear Hat',
 };

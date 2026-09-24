@@ -80,6 +80,11 @@ export const CHANGELOG = [
         text: '16 headgear quest items, like Elven Ears, Coronet, Panda Hat and Transparent Celestial Robe.',
       },
       { type: 'Fixed', text: 'Items no official headgear uses are no longer tagged Official Hat Quest.' },
+      {
+        type: 'Added',
+        text: 'Zealotus Mask and Orc Hero Helm materials, and the Cute Ribbon color changes (any Cute Ribbon + a dye).',
+      },
+      { type: 'Changed', text: 'Headgears use their in-game names: Ayam, Mine Hat, Candle and Teddybear Hat.' },
     ],
   },
   {
