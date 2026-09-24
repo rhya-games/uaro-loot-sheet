@@ -209,6 +209,13 @@
     "soldByNpc": {
       "about": "Items uaRO NPCs sell that aren't in the emulators' shops (use uaroShops when you know the shop). Items don't need to be in loot.json.",
       "items": [
+        { "itemId": 7472, "name": "Level 1 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
+        { "itemId": 7473, "name": "Level 2 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
+        { "itemId": 7474, "name": "Level 3 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
+        { "itemId": 7475, "name": "Level 4 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
+        { "itemId": 7476, "name": "Level 5 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
+        { "itemId": 12125, "name": "Outdoor Cooking Kit", "note": "Madeleine Chu in Prontera Castle sells it for zeny (script menu, not a shop window)." },
+        { "itemId": 12126, "name": "Home Cooking Kit", "note": "Madeleine Chu in Prontera Castle sells it for zeny (script menu, not a shop window)." },
         { "itemId": 732, "name": "3carat Diamond", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
         { "itemId": 2605, "name": "Brooch [0]", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
         { "itemId": 713, "name": "Empty Bottle", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },

@@ -6,7 +6,7 @@ Thanks for helping keep the loot sheet accurate! Most contributions are **data e
 
 - **Check prices in game** and update Vend, Whobuy, and the Verified date.
 - **Fill in gaps**: items with no action, missing item IDs, or uses that aren't listed yet.
-- **Report problems** if you'd rather not edit anything yourself: click the flag (Report Issue) next to any item's name on the site, or see the site's **Feedback** page.
+- **Report problems** if you'd rather not edit anything yourself: point at an item's row on the site and click the flag (Report Issue) in the Verified column, or see the site's **Feedback** page.
 
 ## Edit the data on GitHub (no coding needed)
 

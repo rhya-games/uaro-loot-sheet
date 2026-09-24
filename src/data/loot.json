@@ -1586,6 +1586,11 @@
         "for": "Spicy Fried Bao",
         "qty": 20,
         "note": "+5 VIT food"
+      },
+      {
+        "for": "Level 4 Cookbook",
+        "qty": 5,
+        "note": "trade at Charles Orleans"
       }
     ],
     "notes": "",
@@ -9340,7 +9345,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "honey",
@@ -10870,7 +10875,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "level-10-cookbook",
@@ -10968,7 +10973,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "level-3-cookbook",
@@ -11017,7 +11022,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "level-4-cookbook",
@@ -11066,7 +11071,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "level-5-cookbook",
@@ -11115,7 +11120,7 @@
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "level-5-fire-wall-scroll",
@@ -13987,7 +13992,7 @@
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "pacifier",
@@ -15105,9 +15110,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Level 1 Cookbook",
+        "qty": 10,
+        "note": "trade at Charles Orleans"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 7,
@@ -17368,6 +17379,11 @@
         "for": "Special Meat Stew",
         "qty": 20,
         "note": "+9 AGI food"
+      },
+      {
+        "for": "Level 5 Cookbook",
+        "qty": 10,
+        "note": "trade at Charles Orleans"
       }
     ],
     "notes": "",
@@ -19411,12 +19427,18 @@
       "Keep"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Cooking"
     ],
     "uses": [
       {
         "for": "Blue Fish",
         "qty": 50
+      },
+      {
+        "for": "Level 3 Cookbook",
+        "qty": 5,
+        "note": "trade at Charles Orleans"
       }
     ],
     "notes": "",
@@ -20759,12 +20781,18 @@
       "NPC"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Cooking"
     ],
     "uses": [
       {
         "for": "Cake Hat",
         "qty": 15
+      },
+      {
+        "for": "Level 2 Cookbook",
+        "qty": 5,
+        "note": "trade at Charles Orleans"
       }
     ],
     "notes": "",

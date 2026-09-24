@@ -26,30 +26,20 @@ const COLUMNS = [
     label: 'Item Name',
     sortKey: 'name',
     title: 'Item name, type and ID',
-    className: 'min-w-56', // room for the name plus the Report Issue flag
+    className: 'min-w-48',
     render: (item) => (
-      <div className="flex items-start justify-between gap-2">
-        <div>
-          <div className="font-medium text-fg">{item.name}</div>
-          <div className="mt-0.5 text-sm text-muted">
-            {item.itemType}
-            {item.itemId && (
-              <>
-                {' · '}
-                <CopyItemId itemId={item.itemId} />
-              </>
-            )}
-          </div>
+      <>
+        <div className="font-medium text-fg">{item.name}</div>
+        <div className="mt-0.5 text-sm text-muted">
+          {item.itemType}
+          {item.itemId && (
+            <>
+              {' · '}
+              <CopyItemId itemId={item.itemId} />
+            </>
+          )}
         </div>
-        {/* Report Issue (and any other row actions): shown when the row is hovered
-            or focused, and always on touch screens, which can't hover. */}
-        <div
-          className="-mt-1.5 -mr-1.5 opacity-0 transition-opacity duration-150 group-hover:opacity-100
-            focus-within:opacity-100 motion-reduce:transition-none [@media(hover:none)]:opacity-100"
-        >
-          <RowActions item={item} />
-        </div>
-      </div>
+      </>
     ),
   },
   {
@@ -115,7 +105,21 @@ const COLUMNS = [
     sortKey: 'lastVerified',
     nowrap: true,
     title: 'When the vend or @whobuy price was last checked in game',
-    render: (item) => <VerifiedText item={item} />,
+    render: (item) => (
+      // Report Issue floats over the right of this cell when the row is hovered or
+      // focused (always on touch screens, which can't hover). Reports are mostly
+      // about prices, so it sits by the "last checked" date, and takes no room.
+      <div className="relative">
+        <VerifiedText item={item} />
+        <div
+          className="absolute -top-1.5 right-0 rounded-full bg-surface opacity-0 shadow-sm transition-opacity duration-150
+            group-hover:opacity-100 focus-within:opacity-100 motion-reduce:transition-none
+            [@media(hover:none)]:opacity-100"
+        >
+          <RowActions item={item} />
+        </div>
+      </div>
+    ),
   },
 ];
 
