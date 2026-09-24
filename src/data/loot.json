@@ -9594,9 +9594,175 @@
       "Whobuy"
     ],
     "categories": [
+      "Server Hat Quest",
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Mitra [1]",
+        "qty": 1500
+      },
+      {
+        "for": "Love Guard [1]",
+        "qty": 1500
+      },
+      {
+        "for": "Advanced Assassin Mask",
+        "qty": 1000
+      },
+      {
+        "for": "Beer Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Anubis Helm",
+        "qty": 1500
+      },
+      {
+        "for": "Puppy Hat",
+        "qty": 1000
+      },
+      {
+        "for": "Umbala Spirit",
+        "qty": 1500
+      },
+      {
+        "for": "Wickebine's Black Cat Ears",
+        "qty": 1000
+      },
+      {
+        "for": "Blush of Groom",
+        "qty": 1500
+      },
+      {
+        "for": "Antique Smoking Pipe",
+        "qty": 1500
+      },
+      {
+        "for": "Crimson Rose",
+        "qty": 2000
+      },
+      {
+        "for": "Vanilmirth Hat",
+        "qty": 1000
+      },
+      {
+        "for": "Gigantic Majestic Goat (DEF)",
+        "qty": 1200
+      },
+      {
+        "for": "Filir's Pinions",
+        "qty": 1500
+      },
+      {
+        "for": "Pecopeco Wing Ears",
+        "qty": 1000
+      },
+      {
+        "for": "Darkness Helm",
+        "qty": 1500
+      },
+      {
+        "for": "Chick Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Rainbow Scarf",
+        "qty": 1200
+      },
+      {
+        "for": "Skull Cap",
+        "qty": 3000
+      },
+      {
+        "for": "Gangster Scarf",
+        "qty": 1200
+      },
+      {
+        "for": "Satanic Bone Helm",
+        "qty": 2000
+      },
+      {
+        "for": "Dark Randgris Helm",
+        "qty": 2000
+      },
+      {
+        "for": "Orc Hero Headdress",
+        "qty": 4000
+      },
+      {
+        "for": "Little Angel Doll",
+        "qty": 2000
+      },
+      {
+        "for": "Bunny Ears Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Well-Chewed Pencil",
+        "qty": 700
+      },
+      {
+        "for": "Fish in Mouth",
+        "qty": 700
+      },
+      {
+        "for": "Alice Doll",
+        "qty": 2000
+      },
+      {
+        "for": "Glaris Doll",
+        "qty": 2000
+      },
+      {
+        "for": "Defolty Doll",
+        "qty": 2000
+      },
+      {
+        "for": "Tropical Fruit Hat",
+        "qty": 2000
+      },
+      {
+        "for": "Dress Hat",
+        "qty": 2000
+      },
+      {
+        "for": "Rideword Hat (RWH)",
+        "qty": 2000
+      },
+      {
+        "for": "Festival Pumpkin Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Pirate Dagger",
+        "qty": 1200
+      },
+      {
+        "for": "Purple Cowboy Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Santa Poring Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Necromancer's Hood",
+        "qty": 1200
+      },
+      {
+        "for": "Koneko Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Moonlight Flower Hat",
+        "qty": 1200
+      },
+      {
+        "for": "Fish Head Hat",
+        "qty": 700
+      }
+    ],
     "notes": "Used for Server Hats, Pet Evolutions, and more! Check the uaRO wiki for more details.",
     "links": [],
     "sellValue": 0,

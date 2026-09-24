@@ -52,6 +52,8 @@ export const CHANGELOG = [
         text: 'Dimonka headgear quest materials now match the uaRO wiki (for example, Pirate Dagger needs 120 Wooden Heart, not 20).',
       },
       { type: 'Added', text: 'Margaretha Sorin Card (for Mitra) and Errende Ebecee Card (for Love Guard).' },
+      { type: 'Added', text: 'Poring Coin now lists the 41 Dimonka headgears it’s used for.' },
+      { type: 'Changed', text: 'Long Used For lists show the first 6, with a “+N more” button that opens the full list.' },
     ],
   },
   {
