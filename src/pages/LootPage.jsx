@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FunnelIcon } from '@heroicons/react/24/outline';
-import loot from '../data/loot.json' with { type: 'json' };
 import SearchBar from '../components/SearchBar.jsx';
 import FilterSidebar from '../components/FilterSidebar.jsx';
 import ActiveFilters from '../components/ActiveFilters.jsx';
@@ -12,6 +11,7 @@ import { nextSort, sortItems } from '../utils/sort.js';
 import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue, withoutKeep } from '../utils/filter.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
+import { useAdmin } from '../admin/AdminContext.jsx';
 
 
 /** How long the panel takes to slide in or out (ms). Matches `duration-200` below. */
@@ -43,10 +43,12 @@ export default function LootPage() {
   const resultsLeftBefore = useRef(null);
   const [sort, setSort] = useState(null);
   const [ignoreKeep, setIgnoreKeep] = useState(() => readPreference('ignoreKeep', false));
+  // loot.json, plus any prices saved in admin mode since the page loaded.
+  const { items: loot } = useAdmin();
 
   // "I don't keep items" changes the items themselves (no Keep), so every
   // count, chip and sort below sees the same thing the table shows.
-  const baseItems = useMemo(() => (ignoreKeep ? withoutKeep(loot) : loot), [ignoreKeep]);
+  const baseItems = useMemo(() => (ignoreKeep ? withoutKeep(loot) : loot), [loot, ignoreKeep]);
 
   const changeIgnoreKeep = useCallback((value) => {
     setIgnoreKeep(value);

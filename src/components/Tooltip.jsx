@@ -24,7 +24,7 @@ const HOVER_DELAY_MS = 300;
  *   </Tooltip>
  *
  * Props:
- *   text      - tooltip text
+ *   text      - tooltip text ("\n" starts a new line)
  *   placement - preferred side: "top" (default) or "bottom"
  *   className - layout of the wrapper around the element (default "inline-flex").
  *               Use "" for text that should wrap like a sentence, "flex w-full"
@@ -93,7 +93,7 @@ function FloatingLabel({ reference, text, placement, visible }) {
       ref={refs.setFloating}
       style={floatingStyles}
       aria-hidden="true"
-      className={`pointer-events-none z-[60] rounded-md bg-gray-900 px-2 py-1 text-xs font-medium whitespace-nowrap
+      className={`pointer-events-none z-[60] rounded-md bg-gray-900 px-2 py-1 text-xs font-medium whitespace-pre
         text-white shadow-md transition-opacity duration-150 ease-smooth dark:border dark:border-line-strong
         dark:bg-hover dark:text-fg motion-reduce:transition-none ${visible ? 'opacity-100' : 'opacity-0'}`}
     >

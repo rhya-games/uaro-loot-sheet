@@ -4,8 +4,10 @@ import CopyItemId from './CopyItemId.jsx';
 import RowActions from './RowActions.jsx';
 import Tooltip from './Tooltip.jsx';
 import VerifiedText from './VerifiedText.jsx';
-import { NpcBuyable, PlayerPrice } from './StatusIcons.jsx';
+import { NpcBuyable } from './StatusIcons.jsx';
 import NpcSellPrice from './NpcSellPrice.jsx';
+import PriceCell from '../admin/PriceCell.jsx';
+import SuggestedActions from '../admin/SuggestedActions.jsx';
 import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 
 /**
@@ -47,9 +49,12 @@ const COLUMNS = [
     sortKey: 'actions',
     title: 'What to do with the item',
     render: (item) => (
-      <div className="flex flex-wrap gap-1">
-        <ActionBadges actions={item.actions} />
-      </div>
+      <>
+        <div className="flex flex-wrap gap-1">
+          <ActionBadges actions={item.actions} />
+        </div>
+        <SuggestedActions item={item} />
+      </>
     ),
   },
   {
@@ -76,14 +81,14 @@ const COLUMNS = [
     sortKey: 'avgVend',
     title: 'Average price in player vending shops (✕: NPCs sell it)',
     numeric: true,
-    render: (item) => <PlayerPrice item={item} field="avgVend" />,
+    render: (item) => <PriceCell item={item} field="avgVend" />,
   },
   {
     label: 'Whobuy',
     sortKey: 'avgWhobuy',
     title: 'Average price players pay through @whobuy (✕: NPCs sell it)',
     numeric: true,
-    render: (item) => <PlayerPrice item={item} field="avgWhobuy" />,
+    render: (item) => <PriceCell item={item} field="avgWhobuy" />,
   },
   {
     label: 'NPC',
