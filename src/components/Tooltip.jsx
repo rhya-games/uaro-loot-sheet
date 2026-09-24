@@ -1,4 +1,4 @@
-import { cloneElement, useId, useState } from 'react';
+import { cloneElement, useId, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { autoUpdate, flip, offset, shift, useFloating } from '@floating-ui/react-dom';
 import { usePresence } from '../utils/usePresence.js';
@@ -30,16 +30,11 @@ export default function Tooltip({ text, placement = 'top', className = 'inline-f
   const [open, setOpen] = useState(false);
   const { mounted, visible } = usePresence(open, 150);
   const id = useId();
-  const { refs, floatingStyles } = useFloating({
-    placement,
-    strategy: 'fixed',
-    middleware: [offset(8), flip({ padding: 8 }), shift({ padding: 8 })],
-    whileElementsMounted: autoUpdate,
-  });
+  const referenceRef = useRef(null);
 
   return (
     <span
-      ref={refs.setReference}
+      ref={referenceRef}
       className={className}
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
@@ -58,20 +53,36 @@ export default function Tooltip({ text, placement = 'top', className = 'inline-f
       <span id={id} hidden>
         {text}
       </span>
-      {mounted &&
-        createPortal(
-          <span
-            ref={refs.setFloating}
-            style={floatingStyles}
-            aria-hidden="true"
-            className={`pointer-events-none z-[60] rounded-md bg-gray-900 px-2 py-1 text-xs font-medium whitespace-nowrap
-              text-white shadow-md transition-opacity duration-150 ease-smooth dark:border dark:border-line-strong
-              dark:bg-hover dark:text-fg motion-reduce:transition-none ${visible ? 'opacity-100' : 'opacity-0'}`}
-          >
-            {text}
-          </span>,
-          document.body,
-        )}
+      {mounted && <FloatingLabel reference={referenceRef.current} text={text} placement={placement} visible={visible} />}
     </span>
+  );
+}
+
+/**
+ * The visible tooltip. Only exists while shown, so the positioning work
+ * (Floating UI) happens for the one tooltip on screen, not for every
+ * tooltip in the table.
+ */
+function FloatingLabel({ reference, text, placement, visible }) {
+  const { refs, floatingStyles } = useFloating({
+    elements: { reference },
+    placement,
+    strategy: 'fixed',
+    middleware: [offset(8), flip({ padding: 8 }), shift({ padding: 8 })],
+    whileElementsMounted: autoUpdate,
+  });
+
+  return createPortal(
+    <span
+      ref={refs.setFloating}
+      style={floatingStyles}
+      aria-hidden="true"
+      className={`pointer-events-none z-[60] rounded-md bg-gray-900 px-2 py-1 text-xs font-medium whitespace-nowrap
+        text-white shadow-md transition-opacity duration-150 ease-smooth dark:border dark:border-line-strong
+        dark:bg-hover dark:text-fg motion-reduce:transition-none ${visible ? 'opacity-100' : 'opacity-0'}`}
+    >
+      {text}
+    </span>,
+    document.body,
   );
 }

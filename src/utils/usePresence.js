@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -19,9 +19,11 @@ const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: r
 export function usePresence(open, duration = 250) {
   const [mounted, setMounted] = useState(open);
   const [visible, setVisible] = useState(open);
+  const wasOpen = useRef(open);
 
   useEffect(() => {
     if (open) {
+      wasOpen.current = true;
       setMounted(true);
       // Wait two frames (~30ms, not noticeable) so the browser has drawn the
       // hidden state before switching to "shown"; with one frame it can skip
@@ -32,6 +34,9 @@ export function usePresence(open, duration = 250) {
       return () => cancelAnimationFrame(frame);
     }
     setVisible(false);
+    // Nothing to animate out if it was never shown (e.g. a tooltip on page load).
+    if (!wasOpen.current) return;
+    wasOpen.current = false;
     const timer = setTimeout(() => setMounted(false), prefersReducedMotion() ? 0 : duration);
     return () => clearTimeout(timer);
   }, [open, duration]);

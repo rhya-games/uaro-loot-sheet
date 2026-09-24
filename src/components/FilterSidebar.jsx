@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
 import CheckboxGroup from './CheckboxGroup.jsx';
@@ -21,7 +21,11 @@ import { countActiveFilters, countOptions, listOptions, toggleValue } from '../u
  *   onClose    - optional: shows a close (×) button that calls this
  *   closeButtonRef - optional ref for that button (so it can be focused)
  */
-export default function FilterSidebar({
+/*
+ * Wrapped in `memo` so it only redraws when its own props change (not when
+ * the panel opens or closes). The parent passes stable functions (useCallback).
+ */
+export default memo(function FilterSidebar({
   allItems,
   items,
   filters,
@@ -107,4 +111,4 @@ export default function FilterSidebar({
       <CheckboxGroup title="Used For" searchable {...groupProps('usedFor', usedForOptions)} />
     </div>
   );
-}
+});

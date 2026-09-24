@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FunnelIcon } from '@heroicons/react/24/outline';
 import loot from '../data/loot.json';
 import SearchBar from '../components/SearchBar.jsx';
@@ -12,7 +12,6 @@ import { nextSort, sortItems } from '../utils/sort.js';
 import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue, withoutKeep } from '../utils/filter.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
-import { usePresence } from '../utils/usePresence.js';
 
 /** How long the panel takes to slide in or out (ms). Matches `duration-200` below. */
 const PANEL_ANIMATION_MS = 200;
@@ -37,9 +36,10 @@ export default function LootPage() {
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const panelBesideTable = useMediaQuery(PANEL_BESIDE_TABLE);
   const [sidebarOpen, setSidebarOpen] = useState(() => window.matchMedia(PANEL_BESIDE_TABLE).matches);
-  const panel = usePresence(sidebarOpen, PANEL_ANIMATION_MS); // keeps it on screen while it animates out
   const toggleButtonRef = useRef(null);
   const closeButtonRef = useRef(null);
+  const resultsRef = useRef(null);
+  const resultsLeftBefore = useRef(null);
   const [sort, setSort] = useState(null);
   const [ignoreKeep, setIgnoreKeep] = useState(() => readPreference('ignoreKeep', false));
 
@@ -47,11 +47,11 @@ export default function LootPage() {
   // count, chip and sort below sees the same thing the table shows.
   const baseItems = useMemo(() => (ignoreKeep ? withoutKeep(loot) : loot), [ignoreKeep]);
 
-  const changeIgnoreKeep = (value) => {
+  const changeIgnoreKeep = useCallback((value) => {
     setIgnoreKeep(value);
     writePreference('ignoreKeep', value);
     if (value) setFilters((current) => ({ ...current, actions: current.actions.filter((a) => a !== 'Keep') }));
-  };
+  }, []);
 
   // Build the search index, then: search box, then sidebar filters, then sorting.
   const search = useMemo(() => createSearch(baseItems), [baseItems]);
@@ -64,13 +64,39 @@ export default function LootPage() {
   // it, and closing it returns focus to the toggle button.
   const panelCovers = sidebarOpen && !panelBesideTable;
   useEffect(() => {
-    if (panelCovers && panel.mounted) closeButtonRef.current?.focus();
-  }, [panelCovers, panel.mounted]);
+    if (panelCovers) closeButtonRef.current?.focus();
+  }, [panelCovers]);
 
-  const closePanel = () => {
-    setSidebarOpen(false);
+  /** Opens or closes the panel. Remembers where the table was, for the slide below. */
+  const changePanel = useCallback((open) => {
+    resultsLeftBefore.current = resultsRef.current?.getBoundingClientRect().left ?? null;
+    setSidebarOpen(open);
+  }, []);
+
+  const closePanel = useCallback(() => {
+    changePanel(false);
     toggleButtonRef.current?.focus();
-  };
+  }, [changePanel]);
+
+  const clearFilters = useCallback(() => setFilters(EMPTY_FILTERS), []);
+
+  // On wide screens the panel pushes the table over. Instead of animating the
+  // table's width (which re-lays-out every row on every frame and stutters),
+  // the layout changes in one step and the table *slides* from where it was to
+  // where it is now. This is the "FLIP" technique: First, Last, Invert, Play.
+  const panelTakesSpace = sidebarOpen;
+  useLayoutEffect(() => {
+    const before = resultsLeftBefore.current;
+    resultsLeftBefore.current = null;
+    const results = resultsRef.current;
+    if (before == null || !results) return;
+    const distance = before - results.getBoundingClientRect().left;
+    if (distance === 0 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    results.animate([{ transform: `translateX(${distance}px)` }, { transform: 'translateX(0)' }], {
+      duration: PANEL_ANIMATION_MS,
+      easing: 'cubic-bezier(0.22, 1, 0.36, 1)', // same as `ease-smooth` in index.css
+    });
+  }, [panelTakesSpace]);
 
   // Escape closes the panel whenever it's covering the table, wherever focus
   // is. Things that use Escape themselves first (clearing the search box,
@@ -96,11 +122,14 @@ export default function LootPage() {
 
   // Clicking a "Used For" target shows only items used for that target.
   // (The filter chips above the table show it; the panel stays as it was.)
-  const showItemsUsedFor = (target) => {
+  // useCallback keeps these the same function between renders, so the item
+  // list (which is memoized) doesn't redraw for unrelated changes.
+  const showItemsUsedFor = useCallback((target) => {
     setFilters({ ...EMPTY_FILTERS, usedFor: [target] });
     setQuery('');
     window.scrollTo({ top: 0 });
-  };
+  }, []);
+  const changeSort = useCallback((key) => setSort((current) => nextSort(current, key)), []);
 
   return (
     <div className="space-y-4">
@@ -111,7 +140,7 @@ export default function LootPage() {
           <button
             ref={toggleButtonRef}
             type="button"
-            onClick={() => setSidebarOpen((open) => !open)}
+            onClick={() => changePanel(!sidebarOpen)}
             aria-expanded={sidebarOpen}
             aria-controls="filter-sidebar"
             aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
@@ -151,61 +180,75 @@ export default function LootPage() {
       </div>
 
       {/* Panel and table share one grid cell (so the panel floats over the table)
-          until 1470px (`wide:`). From there the grid has a panel column that grows from 0 to
-          15rem (and back) in step with the panel's slide, so the table glides over instead of jumping. */}
+          until 1470px (`wide:`), where the grid gets a second column for the panel.
+          overflow-x-clip hides the table's edge while it slides (see the FLIP effect above)
+          without breaking the sticky header; the clip margin keeps the panel's shadow. */}
       <div
-        style={{ '--panel-column': panel.visible ? '15rem' : '0rem', '--panel-gap': panel.visible ? '1.5rem' : '0rem' }}
-        className="md:grid md:items-start wide:grid-cols-[var(--panel-column)_minmax(0,1fr)] wide:gap-x-[var(--panel-gap)]
-          wide:transition-[grid-template-columns,column-gap] wide:duration-200 wide:ease-smooth motion-reduce:transition-none"
+        className={`md:grid md:items-start wide:overflow-x-clip wide:[overflow-clip-margin:1rem] ${
+          panelTakesSpace ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''
+        }`}
       >
-        {panel.mounted && (
-          // Small screens only: dims the page behind the sheet; clicking it closes the panel.
-          <div
-            aria-hidden="true"
-            onClick={closePanel}
-            className={`fixed inset-0 z-40 cursor-pointer bg-black/50 transition-opacity duration-200 ease-smooth
-              motion-reduce:transition-none md:hidden dark:bg-black/70 ${panel.visible ? 'opacity-100' : 'opacity-0'}`}
-          />
-        )}
-        {panel.mounted && (
-          <aside
-            id="filter-sidebar"
-            aria-label="Filters"
-            // Slides and fades in from the left, and back out when closed
-            // (instant when the system asks for reduced motion).
-            className={`fixed inset-y-0 right-12 left-0 z-50 overflow-y-auto bg-surface px-4 pb-4 shadow-xl
-              transition duration-200 ease-smooth motion-reduce:transition-none
-              ${panel.visible ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}
-              md:panel md:sticky md:inset-auto md:top-4 md:z-30 md:col-start-1 md:row-start-1 md:max-h-[calc(100vh-2rem)]
-              md:w-60 md:justify-self-start md:pb-3 md:shadow-xl wide:shadow-sm`}
-          >
-            <div className="hidden md:block">
-              <SkipLink targetId="results" className="focus:absolute focus:top-2 focus:left-2 focus:z-20">
-                Skip to table
-              </SkipLink>
-            </div>
-            <FilterSidebar
-              onClose={panelBesideTable ? undefined : closePanel}
-              closeButtonRef={closeButtonRef}
-              allItems={baseItems}
-              ignoreKeep={ignoreKeep}
-              onIgnoreKeepChange={changeIgnoreKeep}
-              items={searched}
-              filters={filters}
-              onChange={setFilters}
-              onClear={() => setFilters(EMPTY_FILTERS)}
-            />
-          </aside>
-        )}
+        {/* The panel and scrim are always on the page; closing just hides them.
+            Building the panel's ~250 checkboxes on every open was a big part of
+            the delay, so now opening and closing only switch a few classes.
+            `inert` makes the closed panel unreachable (no Tab, no screen reader).
+            Visibility turns on instantly when opening (so focus can move in), and
+            only turns off after the fade-out when closing: that's why `visibility`
+            is in the transition list only for the closed state. */}
+
+        {/* Small screens only: dims the page behind the sheet; clicking it closes the panel. */}
         <div
+          aria-hidden="true"
+          onClick={closePanel}
+          className={`fixed inset-0 z-40 cursor-pointer bg-black/50 duration-200 ease-smooth
+            motion-reduce:transition-none md:hidden dark:bg-black/70 ${
+              sidebarOpen
+                ? 'visible opacity-100 transition-opacity'
+                : 'pointer-events-none invisible opacity-0 transition-[opacity,visibility]'
+            }`}
+        />
+        <aside
+          id="filter-sidebar"
+          aria-label="Filters"
+          inert={!sidebarOpen}
+          // Slides and fades in from the left, and back out when closed
+          // (instant when the system asks for reduced motion).
+          className={`fixed inset-y-0 right-12 left-0 z-50 overflow-y-auto bg-surface px-4 pb-4 shadow-xl
+            duration-200 ease-smooth motion-reduce:transition-none ${
+              sidebarOpen
+                ? 'visible translate-x-0 opacity-100 transition-[opacity,translate]'
+                : 'pointer-events-none invisible -translate-x-4 opacity-0 transition-[opacity,translate,visibility]'
+            }
+            md:panel md:sticky md:inset-auto md:top-4 md:z-30 md:col-start-1 md:row-start-1 md:max-h-[calc(100vh-2rem)]
+            md:w-60 md:justify-self-start md:pb-3 md:shadow-xl wide:shadow-sm`}
+        >
+          <div className="hidden md:block">
+            <SkipLink targetId="results" className="focus:absolute focus:top-2 focus:left-2 focus:z-20">
+              Skip to table
+            </SkipLink>
+          </div>
+          <FilterSidebar
+            onClose={panelBesideTable ? undefined : closePanel}
+            closeButtonRef={closeButtonRef}
+            allItems={baseItems}
+            ignoreKeep={ignoreKeep}
+            onIgnoreKeepChange={changeIgnoreKeep}
+            items={searched}
+            filters={filters}
+            onChange={setFilters}
+            onClear={clearFilters}
+          />
+        </aside>
+        <div
+          ref={resultsRef}
           id="results"
           tabIndex={-1}
-          className="min-w-0 focus:outline-none md:col-start-1 md:row-start-1 wide:col-start-2"
+          className={`min-w-0 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
         >
           <ItemList
             items={results}
             sort={sort}
-            onSort={(key) => setSort((current) => nextSort(current, key))}
+            onSort={changeSort}
             onSelectUse={showItemsUsedFor}
           />
         </div>
