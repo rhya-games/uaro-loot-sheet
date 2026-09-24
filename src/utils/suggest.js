@@ -18,11 +18,20 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  * worth with what all its parts would sell for. If the finished thing is
  * worth more, its parts are worth keeping. Keep is suggested next to the
  * sell action ("keep it if you want, sell it if you want money").
+ * Cooking levels 1-3 don't count: those foods are too weak to be worth
+ * keeping ingredients for (see isLowLevelCooking).
  *
  * Junk: nothing uses it, and nobody pays anything for it.
  */
 export const WHOBUY_MARGIN = 0.15;
 export const VEND_MARGIN = 0.15;
+
+/**
+ * A use for level 1-3 cooking: a food whose note says "+1" to "+3"
+ * ("+3 VIT food"), or the trade for a Level 1-3 Cookbook. Not a reason to Keep.
+ */
+export const isLowLevelCooking = (use) =>
+  /^\+[1-3] [A-Z]{3} food$/.test(use.note ?? '') || /^Level [1-3] Cookbook$/.test(use.for);
 
 const TARGET_VALUES = new Map(targetData.items.map((entry) => [entry.for, entry.value]));
 const withoutSlots = (name) => name.replace(/\s*\[\d\]$/, '');
@@ -129,7 +138,7 @@ export function createSuggester(items) {
 
   return function suggest(item) {
     const sale = saleOf(item);
-    const uses = item.uses.map(judgeUse);
+    const uses = item.uses.filter((use) => !isLowLevelCooking(use)).map(judgeUse);
     const reasons = [];
     const actions = [];
 
@@ -142,6 +151,8 @@ export function createSuggester(items) {
           : `Keep for ${use.for}: worth ${fmt(use.value)}, parts sell for ${fmt(use.partsValue)}${use.missingPrices ? ` (${use.missingPrices} parts have no price)` : ''}`);
       }
     }
+    const lowCooking = item.uses.filter(isLowLevelCooking).length;
+    if (lowCooking) reasons.push(`Level 1–3 cooking (${lowCooking} uses) isn’t a reason to keep it`);
     for (const use of uses.filter((use) => !use.worthIt)) {
       reasons.push(`Not worth making ${use.for}: worth ${fmt(use.value)}, parts sell for ${fmt(use.partsValue)}`);
     }
@@ -149,7 +160,7 @@ export function createSuggester(items) {
     if (sale?.action) {
       actions.push(sale.action);
       reasons.push(sale.reason);
-    } else if (sale && !item.uses.length) {
+    } else if (sale && !uses.length) {
       actions.push('Junk');
       reasons.push(sale.reason);
     } else if (!sale) {

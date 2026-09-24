@@ -168,7 +168,9 @@ Match similar existing items. Look them up in loot.json first.
 
 - `src/utils/suggest.js` works out actions from prices (margins, Keep when
   a finished thing is worth more than its parts). `src/data/use-targets.json`
-  holds values for "Used For" targets that aren't loot.
+  holds values for "Used For" targets that aren't loot. Cards always
+  suggest Vend; level 1-3 cooking (use notes "+1".."+3 ... food", Level 1-3
+  Cookbook trades) is never a reason to Keep.
 - Admin mode (`src/admin/`) only exists under `npm run dev`
   (`import.meta.env.DEV`). Saves POST to the Vite plugin in
   `scripts/admin-server.mjs`, which writes loot.json; only the fields in its
