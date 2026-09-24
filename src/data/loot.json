@@ -1275,6 +1275,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "beehive-box",
+    "name": "Beehive Box",
+    "itemId": 102723,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Hornet Taming Item",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "beret-0",
     "name": "Beret [0]",
     "itemId": 5172,
@@ -5219,6 +5237,24 @@
     "links": [],
     "sellValue": 710,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ghost-coffin",
+    "name": "Ghost Coffin",
+    "itemId": 12363,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Whisper Taming Item. The emulators call this item Fit Pipe.",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {

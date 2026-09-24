@@ -131,41 +131,49 @@ export default function LootPage() {
   }, []);
   const changeSort = useCallback((key) => setSort((current) => nextSort(current, key)), []);
 
+
+  const filtersButton = (
+    <button
+      ref={toggleButtonRef}
+      type="button"
+      onClick={() => changePanel(!sidebarOpen)}
+      aria-expanded={sidebarOpen}
+      aria-controls="filter-sidebar"
+      aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
+      className="flex h-full shrink-0 items-center gap-2 rounded-lg border border-line-strong bg-surface px-3 text-sm
+        font-medium text-body shadow-sm hover:bg-hover md:justify-center md:px-4"
+    >
+      <FunnelIcon className="size-5" aria-hidden="true" />
+      {/* Both labels share one grid cell, so the button is always as wide as the
+          longer one and doesn't change size when the label switches. */}
+      <span className="hidden md:grid">
+        {['Show filters', 'Hide filters'].map((label) => (
+          <span
+            key={label}
+            aria-hidden="true"
+            className={`col-start-1 row-start-1 ${(label === 'Hide filters') === sidebarOpen ? '' : 'invisible'}`}
+          >
+            {label}
+          </span>
+        ))}
+      </span>
+      {activeFilterCount > 0 && (
+        <span className="rounded-full bg-emerald-700 px-2 py-0.5 text-xs text-white">{activeFilterCount}</span>
+      )}
+    </button>
+  );
   return (
     <div className="space-y-4">
       <h1 className="sr-only">Loot items</h1>
       <div className="flex gap-3">
-        {/* Small screens: filter icon only (with tooltip). Larger: icon and text. */}
-        <Tooltip text={sidebarOpen ? 'Hide filters' : 'Show filters'} placement="bottom">
-          <button
-            ref={toggleButtonRef}
-            type="button"
-            onClick={() => changePanel(!sidebarOpen)}
-            aria-expanded={sidebarOpen}
-            aria-controls="filter-sidebar"
-            aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
-            className="flex h-full shrink-0 items-center gap-2 rounded-lg border border-line-strong bg-surface px-3 text-sm
-              font-medium text-body shadow-sm hover:bg-hover md:justify-center md:px-4"
-          >
-            <FunnelIcon className="size-5" aria-hidden="true" />
-            {/* Both labels share one grid cell, so the button is always as wide as the
-                longer one and doesn't change size when the label switches. */}
-            <span className="hidden md:grid">
-              {['Show filters', 'Hide filters'].map((label) => (
-                <span
-                  key={label}
-                  aria-hidden="true"
-                  className={`col-start-1 row-start-1 ${(label === 'Hide filters') === sidebarOpen ? '' : 'invisible'}`}
-                >
-                  {label}
-                </span>
-              ))}
-            </span>
-            {activeFilterCount > 0 && (
-              <span className="rounded-full bg-emerald-700 px-2 py-0.5 text-xs text-white">{activeFilterCount}</span>
-            )}
-          </button>
-        </Tooltip>
+        {/* Small screens: filter icon only, so it gets a tooltip. Larger: icon and text (no tooltip needed). */}
+        {smallScreen ? (
+          <Tooltip text={sidebarOpen ? 'Hide filters' : 'Show filters'} placement="bottom">
+            {filtersButton}
+          </Tooltip>
+        ) : (
+          filtersButton
+        )}
         <div className="flex-1">
           <SearchBar value={query} onChange={setQuery} />
         </div>

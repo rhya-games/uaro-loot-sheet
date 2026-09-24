@@ -42,8 +42,11 @@ export default function CheckboxGroup({
   }
 
   return (
-    <details open className="group border-b border-line py-3">
-      <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-fg">
+    <details open className="group border-b border-line py-2">
+      <summary
+        className="-mx-2 flex cursor-pointer list-none items-center justify-between rounded-md px-2 py-1 text-sm
+          font-semibold text-fg hover:bg-hover"
+      >
         {title}
         {selected.length > 0 && (
           <span className="mr-2 ml-auto text-xs font-normal text-accent">{selected.length} selected</span>

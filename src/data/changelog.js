@@ -65,6 +65,7 @@ export const CHANGELOG = [
         type: 'Added',
         text: '12 pet items: evolution cards and materials (like Airship Part and Young Twig), Earthworm the Dude, and four pet accessories.',
       },
+      { type: 'Added', text: 'Beehive Box (Hornet) and Ghost Coffin (Whisper) taming items.' },
     ],
   },
   {

@@ -35,7 +35,7 @@ export const RENAMES = {
 };
 
 /** Sheet rows to skip: items that couldn't be found in game. */
-export const REMOVED = ['Ghost Coffin', 'Torn Paper Piece'];
+export const REMOVED = ['Torn Paper Piece'];
 
 /**
  * "Used for" targets that were spelled differently in different rows:
@@ -194,5 +194,6 @@ export const ITEM_IDS = {
   'Miracle Bandage': 23256,
   'Scatleton Memory': 25408,
   'Red Blood': 990,
+  'Ghost Coffin': 12363, // the emulators call it Fit Pipe
   'Blue Vital Flower': 6113, // rAthena calls it "Vital Flower"
 };
