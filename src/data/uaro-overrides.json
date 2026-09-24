@@ -48,9 +48,9 @@
   "npcShops": {
     "about": "Which items NPCs sell (npcBuyable in loot.json), filled in by `npm run sync:shops`. By default that's every item in a zeny shop in Hercules' pre-renewal NPC scripts. The lists below add uaRO's renewal shops and its differences.",
     "renewalShops": {
-      "about": "Renewal NPC shops uaRO added, read from rAthena: every zeny shop on these maps, plus these shops by name (shops that other NPCs open, like the pet groomer's).",
+      "about": "Renewal NPC shops uaRO added, read from rAthena: every zeny shop on these maps, plus any shops listed by name (shops that other NPCs open). Once a shop is checked in game, put it in uaroShops instead.",
       "maps": ["mid_camp", "spl_in01", "spl_in02", "man_in01", "dic_in01"],
-      "shops": ["Pet_Items"]
+      "shops": []
     },
     "uaroShops": {
       "about": "NPC shops checked in game on uaRO. Every item listed here is sold by NPCs. `price` is the shop's normal price in zeny (before Discount). Items don't need to be in loot.json. Not shown on the site yet.",
@@ -92,6 +92,42 @@
           { "itemId": 13253, "name": "Sharp Leaf Shuriken", "price": 10 },
           { "itemId": 13254, "name": "Thorn Needle Shuriken", "price": 20 },
           { "itemId": 1771, "name": "Venom Knife", "price": 50 }
+          ]
+        },
+        {
+          "name": "Pet Dealer",
+          "checked": "2026-09-24",
+          "items": [
+            { "itemId": 537, "name": "Pet Food", "price": 1000 },
+            { "itemId": 643, "name": "Pet Incubator", "price": 3000 },
+            { "itemId": 10013, "name": "Backpack", "price": 1500 },
+            { "itemId": 10014, "name": "Rocker Glasses", "price": 2000 },
+            { "itemId": 554, "name": "Mochi", "price": 400 },
+            { "itemId": 6114, "name": "Flame Gemstone", "price": 1000 },
+            { "itemId": 6110, "name": "Yellow Vital Flower", "price": 1000, "note": "Shown in game as \"Vital Flower\" (the yellow one)." },
+            { "itemId": 6113, "name": "Blue Vital Flower", "price": 1000, "note": "Shown in game as \"Vital Flower\" (the blue one)." },
+            { "itemId": 6115, "name": "Bun", "price": 1000 },
+            { "itemId": 6100, "name": "Damp Darkness", "price": 1000 },
+            { "itemId": 6098, "name": "Small Snow Flower", "price": 1000 },
+            { "itemId": 6112, "name": "Fresh Plant", "price": 1000 },
+            { "itemId": 6104, "name": "Big Cell", "price": 1000 },
+            { "itemId": 6108, "name": "Apple Pudding", "price": 1000 },
+            { "itemId": 6111, "name": "Mystic Stone", "price": 1000 },
+            { "itemId": 6095, "name": "Flavored Alcohol", "price": 1000 },
+            { "itemId": 6099, "name": "Grilled Rice Cake", "price": 20 },
+            { "itemId": 6096, "name": "Fish with Blue Back", "price": 20 },
+            { "itemId": 6097, "name": "Pumpkin Pie", "price": 20, "note": "Shown in game as \"Pumpkin Pie(Pet Food)\"." },
+            { "itemId": 7822, "name": "Whole Barbecue", "price": 1200 },
+            { "itemId": 7823, "name": "Meat Veg Skewer", "price": 1200 },
+            { "itemId": 6107, "name": "Sunset on the Rock", "price": 1200 },
+            { "itemId": 6105, "name": "Morning Dew", "price": 1200 },
+            { "itemId": 6106, "name": "Well Ripened Berry", "price": 1200 },
+            { "itemId": 6109, "name": "Plant Neutrient", "price": 1200 },
+            { "itemId": 11616, "name": "Delicious Meat", "price": 1400 },
+            { "itemId": 25231, "name": "Suspicious Bottle", "price": 4000 },
+            { "itemId": 25377, "name": "Luxurious Pet Food", "price": 5000 },
+            { "itemId": 25233, "name": "Cotton Wads", "price": 2500 },
+            { "itemId": 7821, "name": "Green Apple", "price": 2500 }
           ]
         }
       ]

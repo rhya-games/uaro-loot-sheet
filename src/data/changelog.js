@@ -35,6 +35,12 @@ export const CHANGELOG = [
       },
       { type: 'Changed', text: 'Renamed the NPC Sell column to NPC and NPC Buy to NPC Buyable. NPC Only shows as ✓.' },
       { type: 'Fixed', text: 'Blood Red is now Red Blood, with its item ID and NPC price.' },
+      { type: 'Changed', text: 'Green Apple is sold by the Pet Dealer, so it now says NPC instead of Vend.' },
+      { type: 'Changed', text: 'Cotton Tufts is now Cotton Wads, its name in game.' },
+      {
+        type: 'Changed',
+        text: 'New vend prices for Peaked Hat, Phlogopite, Red Herb, Rose Quartz, Valhalla’s Flower and Expanded Token Fragment.',
+      },
     ],
   },
   {

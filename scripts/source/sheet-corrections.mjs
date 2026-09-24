@@ -13,6 +13,7 @@
 export const RENAMES = {
   'Baphoment Jr Card': 'Baphomet Jr Card',
   'Blood Red': 'Red Blood',
+  'Cotton Tufts': 'Cotton Wads', // uaRO's in-game name
   'Clock Hands': 'Needle of Alarm', // listed twice; merged on import
   'Fluroscent Liquid': 'Fluorescent Liquid',
   "Loki's Whisper": "Loki's Whispers",
@@ -134,7 +135,7 @@ export const ITEM_IDS = {
   'Cigarette [0]': 2267,
   'Circlet [1]': 2233,
   'Cookie Bat': 11605,
-  'Cotton Tufts': 25233,
+  'Cotton Wads': 25233,
   'Crown [0]': 2235,
   'Cultish Masque': 1045,
   'Cursed Ruby': 724,

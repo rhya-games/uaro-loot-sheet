@@ -2908,8 +2908,8 @@
     "npcBuyable": "no"
   },
   {
-    "id": "cotton-tufts",
-    "name": "Cotton Tufts",
+    "id": "cotton-wads",
+    "name": "Cotton Wads",
     "itemId": 25233,
     "itemType": "Misc",
     "actions": [
@@ -5529,7 +5529,7 @@
     "itemId": 7821,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -5539,7 +5539,7 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "green-bijou",
