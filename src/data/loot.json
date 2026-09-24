@@ -305,6 +305,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "alca-bringer-0",
+    "name": "Alca Bringer [0]",
+    "itemId": 1191,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Queen Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "alcohol",
     "name": "Alcohol",
     "itemId": 970,
@@ -974,6 +990,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "angelic-ring-0",
+    "name": "Angelic Ring [0]",
+    "itemId": 2743,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Cornus (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "angled-glasses-0",
     "name": "Angled Glasses [0]",
     "itemId": 2276,
@@ -1187,6 +1219,22 @@
     "notes": "Dropped by Goat.",
     "links": [],
     "sellValue": 378,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "antler-helm",
+    "name": "Antler Helm",
+    "itemId": 6322,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Antler Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 400,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -1405,6 +1453,22 @@
     "notes": "Isis Taming Item",
     "links": [],
     "sellValue": 9000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "armor-of-naga-1",
+    "name": "Armor of Naga [1]",
+    "itemId": 2389,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Naga (uaRO).",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -2025,6 +2089,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "battle-fork-4",
+    "name": "Battle Fork [4]",
+    "itemId": 1485,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Naga (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "bears-footskin",
     "name": "Bear's Footskin",
     "itemId": 948,
@@ -2406,6 +2486,22 @@
     ],
     "uses": [],
     "notes": "Sucubus Pet accessory",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "black-cat-0",
+    "name": "Black Cat [0]",
+    "itemId": 2747,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Centipede (uaRO).",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -3035,6 +3131,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "bone-plate-1",
+    "name": "Bone Plate [1]",
+    "itemId": 15000,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Rake Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "book-3",
     "name": "Book [3]",
     "itemId": 1550,
@@ -3103,6 +3215,22 @@
     "notes": "",
     "links": [],
     "sellValue": 1500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "boots-1",
+    "name": "Boots [1]",
+    "itemId": 2406,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Centipede Larva (uaRO).",
+    "links": [],
+    "sellValue": 9000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -3208,6 +3336,38 @@
     ],
     "uses": [],
     "notes": "Succubus Taming Item",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bradium-brooch-1",
+    "name": "Bradium Brooch [1]",
+    "itemId": 2790,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Bradium Golem (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bradium-shield-1",
+    "name": "Bradium Shield [1]",
+    "itemId": 2138,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Bradium Golem (uaRO).",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -3968,6 +4128,58 @@
     "npcBuyable": "no"
   },
   {
+    "id": "cello-3",
+    "name": "Cello [3]",
+    "itemId": 1925,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Tatacho (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "centipede-card",
+    "name": "Centipede Card",
+    "itemId": 4447,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "Dropped by Centipede (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "centipede-larva-card",
+    "name": "Centipede Larva Card",
+    "itemId": 4452,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "Dropped by Centipede Larva (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "chain-3",
     "name": "Chain [3]",
     "itemId": 1520,
@@ -4199,6 +4411,22 @@
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "chrome-metal-two-handed-sword-0",
+    "name": "Chrome Metal Two-Handed Sword [0]",
+    "itemId": 1196,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Queen Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
   },
   {
     "id": "chrysalis",
@@ -4749,6 +4977,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "cold-heart-0",
+    "name": "Cold Heart [0]",
+    "itemId": 2746,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Centipede (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "concentration-potion",
     "name": "Concentration Potion",
     "itemId": 645,
@@ -5023,6 +5267,24 @@
     "notes": "",
     "links": [],
     "sellValue": 386,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cornus-card",
+    "name": "Cornus Card",
+    "itemId": 4448,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "Dropped by Cornus (uaRO).",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -5431,6 +5693,22 @@
     "notes": "",
     "links": [],
     "sellValue": 206,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cursed-lyre-1",
+    "name": "Cursed Lyre [1]",
+    "itemId": 1741,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Centipede (uaRO).",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -6753,6 +7031,22 @@
     "notes": "",
     "links": [],
     "sellValue": 190,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elder-branch",
+    "name": "Elder Branch",
+    "itemId": 7939,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Two-Horned Scaraba, Antler Scaraba, One-Horned Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -8350,6 +8644,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "forbidden-grimoire-1",
+    "name": "Forbidden Grimoire [1]",
+    "itemId": 28628,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Two-Horned Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "forbidden-red-candle",
     "name": "Forbidden Red Candle",
     "itemId": 660,
@@ -9120,6 +9430,22 @@
     ],
     "uses": [],
     "notes": "Whisper Taming Item. The emulators call this item Fit Pipe.",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ghost-whisper-1",
+    "name": "Ghost Whisper [1]",
+    "itemId": 400396,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Antler Scaraba (uaRO).",
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
@@ -11015,6 +11341,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "hillslion-card",
+    "name": "Hillslion Card",
+    "itemId": 4453,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "Dropped by Hillslion (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "hinalle",
     "name": "Hinalle",
     "itemId": 703,
@@ -11428,6 +11772,22 @@
     "notes": "",
     "links": [],
     "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "horn-of-hillslion-3",
+    "name": "Horn of Hillslion [3]",
+    "itemId": 1825,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Hillslion (uaRO).",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -12032,6 +12392,22 @@
     "links": [],
     "sellValue": 50000,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "imperial-spear-1",
+    "name": "Imperial Spear [1]",
+    "itemId": 1433,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by One-Horned Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -13792,6 +14168,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "long-horn-1",
+    "name": "Long Horn [1]",
+    "itemId": 1420,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Cornus (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "luciuss-fierce-armor-of-volcano-0",
     "name": "Lucius's Fierce Armor of Volcano [0]",
     "itemId": 2344,
@@ -13852,6 +14244,22 @@
     ],
     "uses": [],
     "notes": "Dropped by Bow Guardian.",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lunakaligo-3",
+    "name": "Lunakaligo [3]",
+    "itemId": 1544,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Tatacho (uaRO).",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -14822,8 +15230,8 @@
     "npcBuyable": "no"
   },
   {
-    "id": "meteo-plate-armor-1",
-    "name": "Meteo Plate Armor [1]",
+    "id": "meteor-plate-1",
+    "name": "Meteor Plate [1]",
     "itemId": 2364,
     "itemType": "Equipment",
     "actions": [],
@@ -17423,6 +17831,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "piece-of-queens-wing",
+    "name": "Piece of Queen's Wing",
+    "itemId": 6326,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Queen Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 815,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "piercing-staff-0",
     "name": "Piercing Staff [0]",
     "itemId": 1626,
@@ -17469,6 +17893,22 @@
     "notes": "",
     "links": [],
     "sellValue": 145,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "pinguicula-corsage-1",
+    "name": "Pinguicula Corsage [1]",
+    "itemId": 2745,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Pinguicula (uaRO).",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -18381,6 +18821,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "queen-scaraba-card",
+    "name": "Queen Scaraba Card",
+    "itemId": 4507,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "Dropped by Queen Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "queens-coronet",
     "name": "Queen's Coronet",
     "itemId": 10032,
@@ -18547,6 +19005,22 @@
     "notes": "",
     "links": [],
     "sellValue": 45,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "rake-horn-helm",
+    "name": "Rake Horn Helm",
+    "itemId": 6321,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Rake Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 411,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -20327,6 +20801,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "scaraba-card",
+    "name": "Scaraba Card",
+    "itemId": 4505,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "Dropped by Rake Scaraba, Two-Horned Scaraba, Antler Scaraba, One-Horned Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "scarlet-dyestuffs",
     "name": "Scarlet Dyestuffs",
     "itemId": 975,
@@ -20749,6 +21241,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "shield-of-naga-1",
+    "name": "Shield of Naga [1]",
+    "itemId": 2134,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Naga (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "shining-scale",
     "name": "Shining Scale",
     "itemId": 954,
@@ -21137,6 +21645,22 @@
     "sellValue": 23,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "single-horn-helm",
+    "name": "Single Horn Helm",
+    "itemId": 6324,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by One-Horned Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 351,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "skel-bone",
@@ -22142,6 +22666,38 @@
       }
     ],
     "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sprint-mail-1",
+    "name": "Sprint Mail [1]",
+    "itemId": 2387,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Cornus (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sprint-shoes-1",
+    "name": "Sprint Shoes [1]",
+    "itemId": 2440,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Hillslion (uaRO).",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -23687,6 +24243,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "tatacho-card",
+    "name": "Tatacho Card",
+    "itemId": 4442,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "Dropped by Tatacho (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "teddy-bear-card",
     "name": "Teddy Bear Card",
     "itemId": 4340,
@@ -24485,6 +25059,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "twin-horn-helm",
+    "name": "Twin Horn Helm",
+    "itemId": 6323,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Two-Horned Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 364,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "two-handed-sword-2",
     "name": "Two-Handed Sword [2]",
     "itemId": 1158,
@@ -24511,6 +25101,22 @@
     ],
     "uses": [],
     "notes": "Dropped by Diabolic.",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "unicorn-horn-0",
+    "name": "Unicorn Horn [0]",
+    "itemId": 2257,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Cornus (uaRO).",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -25009,6 +25615,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "whip-of-balance-3",
+    "name": "Whip of Balance [3]",
+    "itemId": 1980,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Pinguicula (uaRO).",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "white-dyestuffs",
     "name": "White Dyestuffs",
     "itemId": 982,
@@ -25208,6 +25830,22 @@
     ],
     "uses": [],
     "notes": "Dokebi Pet accessory",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wild-beast-claw-1",
+    "name": "Wild Beast Claw [1]",
+    "itemId": 1268,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Hillslion (uaRO).",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -26409,6 +27047,22 @@
     "sellValue": 240,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "zelunium",
+    "name": "Zelunium",
+    "itemId": 25731,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "Dropped by Queen Scaraba (uaRO).",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
   },
   {
     "id": "zenorc-card",

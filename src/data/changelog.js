@@ -40,6 +40,11 @@ export const CHANGELOG = [
       { type: 'Fixed', text: 'Acorn is sold by the Acorn Dealer in Moscovia.' },
       {
         type: 'Added',
+        text: '40 drops from uaRO’s renewal monsters (Scarabas, Queen Scaraba, Hillslion, Tatacho, Centipede, Bradium Golem, Naga, Cornus and more), checked in game.',
+      },
+      { type: 'Changed', text: 'Meteo Plate Armor is now Meteor Plate, its name in game.' },
+      {
+        type: 'Added',
         text: 'A Junk action for items nothing uses and nobody pays for, like Unripe Acorn (NPCs won’t buy it either).',
       },
     ],

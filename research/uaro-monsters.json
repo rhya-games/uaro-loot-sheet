@@ -1,0 +1,1227 @@
+{
+  "source": "In-game @mi screenshots on uaRO, 2026-09-24",
+  "monsters": [
+    {
+      "id": 2086,
+      "name": "Rake Scaraba",
+      "sprite": "RAKE_SCARABA",
+      "mvp": false,
+      "level": 111,
+      "hp": 54094,
+      "baseExp": 81090,
+      "jobExp": 97340,
+      "hit": 220,
+      "flee": 158,
+      "def": 63,
+      "mdef": 23,
+      "stats": {
+        "str": 1,
+        "agi": 47,
+        "vit": 74,
+        "int": 52,
+        "dex": 109,
+        "luk": 66
+      },
+      "atk": [
+        5361,
+        5521
+      ],
+      "range": 1,
+      "size": "Medium",
+      "race": "Insect",
+      "element": "Earth",
+      "elementLevel": 2,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Rake Horn Helm",
+          "itemId": 6321,
+          "chance": 32.5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Green Live",
+          "itemId": 993,
+          "chance": 2.5
+        },
+        {
+          "item": "Apple",
+          "itemId": 512,
+          "chance": 1
+        },
+        {
+          "item": "Bone Plate [1]",
+          "itemId": 15000,
+          "chance": 0.1
+        },
+        {
+          "item": "Scaraba Card",
+          "itemId": 4505,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 2087,
+      "name": "Queen Scaraba",
+      "sprite": "QUEEN_SCARABA",
+      "mvp": true,
+      "mvpBonusExp": 375000,
+      "level": 112,
+      "hp": 1304459,
+      "baseExp": 750000,
+      "jobExp": 312500,
+      "hit": 298,
+      "flee": 158,
+      "def": 29,
+      "mdef": 25,
+      "stats": {
+        "str": 55,
+        "agi": 46,
+        "vit": 28,
+        "int": 96,
+        "dex": 186,
+        "luk": 131
+      },
+      "atk": [
+        4236,
+        5259
+      ],
+      "range": 3,
+      "size": "Large",
+      "race": "Insect",
+      "element": "Earth",
+      "elementLevel": 3,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 3
+        },
+        {
+          "item": "Piece of Queen's Wing",
+          "itemId": 6326,
+          "chance": 35.01
+        },
+        {
+          "item": "Alca Bringer",
+          "itemId": 1191,
+          "chance": 15
+        },
+        {
+          "item": "Meteor Plate [1]",
+          "itemId": 2364,
+          "chance": 15
+        },
+        {
+          "item": "Chrome Metal Two-Handed Sword",
+          "itemId": 1196,
+          "chance": 6
+        },
+        {
+          "item": "Zelunium",
+          "itemId": 25731,
+          "chance": 1.5
+        },
+        {
+          "item": "Queen Scaraba Card",
+          "itemId": 4507,
+          "chance": 0.01
+        }
+      ]
+    },
+    {
+      "id": 2084,
+      "name": "Two-Horned Scaraba",
+      "sprite": "HORN_SCARABA2",
+      "mvp": false,
+      "level": 106,
+      "hp": 41735,
+      "baseExp": 63040,
+      "jobExp": 33890,
+      "hit": 227,
+      "flee": 154,
+      "def": 41,
+      "mdef": 11,
+      "stats": {
+        "str": 5,
+        "agi": 48,
+        "vit": 71,
+        "int": 26,
+        "dex": 121,
+        "luk": 51
+      },
+      "atk": [
+        2437,
+        3684
+      ],
+      "range": 1,
+      "size": "Small",
+      "race": "Insect",
+      "element": "Earth",
+      "elementLevel": 1,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Twin Horn Helm",
+          "itemId": 6323,
+          "chance": 32.5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Elder Branch",
+          "itemId": 7939,
+          "chance": 2.5
+        },
+        {
+          "item": "Green Live",
+          "itemId": 993,
+          "chance": 2.5
+        },
+        {
+          "item": "Forbidden Grimoire [1]",
+          "itemId": 28628,
+          "chance": 0.05
+        },
+        {
+          "item": "Scaraba Card",
+          "itemId": 4505,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 2085,
+      "name": "Antler Scaraba",
+      "sprite": "ANTLER_SCARABA",
+      "mvp": false,
+      "level": 108,
+      "hp": 61268,
+      "baseExp": 143910,
+      "jobExp": 45250,
+      "hit": 207,
+      "flee": 203,
+      "def": 35,
+      "mdef": 18,
+      "stats": {
+        "str": 6,
+        "agi": 95,
+        "vit": 29,
+        "int": 108,
+        "dex": 99,
+        "luk": 27
+      },
+      "atk": [
+        2716,
+        5016
+      ],
+      "range": 1,
+      "size": "Medium",
+      "race": "Insect",
+      "element": "Earth",
+      "elementLevel": 2,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Antler Helm",
+          "itemId": 6322,
+          "chance": 32.5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Ghost Whisper [1]",
+          "itemId": 400396,
+          "chance": 0.05
+        },
+        {
+          "item": "Elder Branch",
+          "itemId": 7939,
+          "chance": 2.5
+        },
+        {
+          "item": "Green Live",
+          "itemId": 993,
+          "chance": 2.5
+        },
+        {
+          "item": "Scaraba Card",
+          "itemId": 4505,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 2083,
+      "name": "One-Horned Scaraba",
+      "sprite": "HORN_SCARABA",
+      "mvp": false,
+      "level": 102,
+      "hp": 28480,
+      "baseExp": 51170,
+      "jobExp": 25130,
+      "hit": 197,
+      "flee": 152,
+      "def": 30,
+      "mdef": 5,
+      "stats": {
+        "str": 3,
+        "agi": 50,
+        "vit": 47,
+        "int": 6,
+        "dex": 95,
+        "luk": 36
+      },
+      "atk": [
+        1538,
+        1756
+      ],
+      "range": 1,
+      "size": "Small",
+      "race": "Insect",
+      "element": "Earth",
+      "elementLevel": 1,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Single Horn Helm",
+          "itemId": 6324,
+          "chance": 32.5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Imperial Spear [1]",
+          "itemId": 1433,
+          "chance": 0.1
+        },
+        {
+          "item": "Elder Branch",
+          "itemId": 7939,
+          "chance": 2.5
+        },
+        {
+          "item": "Green Live",
+          "itemId": 993,
+          "chance": 2.5
+        },
+        {
+          "item": "Scaraba Card",
+          "itemId": 4505,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 1989,
+      "name": "Hillslion",
+      "sprite": "HILLSRION",
+      "mvp": false,
+      "level": 105,
+      "hp": 34600,
+      "baseExp": 103800,
+      "jobExp": 60550,
+      "hit": 220,
+      "flee": 165,
+      "def": 28,
+      "mdef": 15,
+      "stats": {
+        "str": 105,
+        "agi": 60,
+        "vit": 30,
+        "int": 15,
+        "dex": 115,
+        "luk": 5
+      },
+      "atk": [
+        5000,
+        5500
+      ],
+      "range": 1,
+      "size": "Small",
+      "race": "Beast",
+      "element": "Earth",
+      "elementLevel": 1,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Sprint Shoes [1]",
+          "itemId": 2440,
+          "chance": 0.5
+        },
+        {
+          "item": "Horn of Hillslion [3]",
+          "itemId": 1825,
+          "chance": 1
+        },
+        {
+          "item": "Horn of Hillslion",
+          "itemId": 6032,
+          "chance": 100
+        },
+        {
+          "item": "Fur",
+          "itemId": 6020,
+          "chance": 100
+        },
+        {
+          "item": "Wild Beast Claw [1]",
+          "itemId": 1268,
+          "chance": 0.5
+        },
+        {
+          "item": "Soft Feather",
+          "itemId": 7063,
+          "chance": 6
+        },
+        {
+          "item": "Brigan",
+          "itemId": 7054,
+          "chance": 100
+        },
+        {
+          "item": "Hillslion Card",
+          "itemId": 4453,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 1986,
+      "name": "Tatacho",
+      "sprite": "TATACHO",
+      "mvp": false,
+      "level": 106,
+      "hp": 39500,
+      "baseExp": 118500,
+      "jobExp": 69125,
+      "hit": 221,
+      "flee": 146,
+      "def": 20,
+      "mdef": 17,
+      "stats": {
+        "str": 106,
+        "agi": 40,
+        "vit": 30,
+        "int": 25,
+        "dex": 115,
+        "luk": 6
+      },
+      "atk": [
+        10000,
+        11000
+      ],
+      "range": 2,
+      "size": "Medium",
+      "race": "Beast",
+      "element": "Earth",
+      "elementLevel": 1,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Lunakaligo [3]",
+          "itemId": 1544,
+          "chance": 1
+        },
+        {
+          "item": "Cello [3]",
+          "itemId": 1925,
+          "chance": 0.5
+        },
+        {
+          "item": "Fur",
+          "itemId": 6020,
+          "chance": 100
+        },
+        {
+          "item": "Peaked Hat",
+          "itemId": 6021,
+          "chance": 100
+        },
+        {
+          "item": "Fresh Fish",
+          "itemId": 579,
+          "chance": 100
+        },
+        {
+          "item": "Potato",
+          "itemId": 516,
+          "chance": 100
+        },
+        {
+          "item": "Tatacho Card",
+          "itemId": 4442,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 1987,
+      "name": "Centipede",
+      "sprite": "CENTIPEDE",
+      "mvp": false,
+      "level": 110,
+      "hp": 45662,
+      "baseExp": 136985,
+      "jobExp": 79910,
+      "hit": 241,
+      "flee": 153,
+      "def": 40,
+      "mdef": 25,
+      "stats": {
+        "str": 112,
+        "agi": 43,
+        "vit": 30,
+        "int": 5,
+        "dex": 131,
+        "luk": 12
+      },
+      "atk": [
+        15000,
+        16000
+      ],
+      "range": 2,
+      "size": "Medium",
+      "race": "Insect",
+      "element": "Poison",
+      "elementLevel": 2,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Cold Heart",
+          "itemId": 2746,
+          "chance": 0.1
+        },
+        {
+          "item": "Black Cat",
+          "itemId": 2747,
+          "chance": 0.1
+        },
+        {
+          "item": "Cursed Lyre [1]",
+          "itemId": 1741,
+          "chance": 0.5
+        },
+        {
+          "item": "Bug Leg",
+          "itemId": 1042,
+          "chance": 100
+        },
+        {
+          "item": "Zargon",
+          "itemId": 912,
+          "chance": 100
+        },
+        {
+          "item": "Worm Peeling",
+          "itemId": 955,
+          "chance": 100
+        },
+        {
+          "item": "Solid Shell",
+          "itemId": 943,
+          "chance": 100
+        },
+        {
+          "item": "Centipede Card",
+          "itemId": 4447,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 1999,
+      "name": "Centipede Larva",
+      "sprite": "CENTIPEDE_LARVA",
+      "mvp": false,
+      "level": 80,
+      "hp": 12000,
+      "baseExp": 18000,
+      "jobExp": 24000,
+      "hit": 155,
+      "flee": 113,
+      "def": 20,
+      "mdef": 20,
+      "stats": {
+        "str": 80,
+        "agi": 33,
+        "vit": 15,
+        "int": 3,
+        "dex": 75,
+        "luk": 10
+      },
+      "atk": [
+        948,
+        1115
+      ],
+      "range": 2,
+      "size": "Small",
+      "race": "Insect",
+      "element": "Poison",
+      "elementLevel": 1,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Boots [1]",
+          "itemId": 2406,
+          "chance": 0.45
+        },
+        {
+          "item": "3carat Diamond",
+          "itemId": 732,
+          "chance": 2.5
+        },
+        {
+          "item": "Bug Leg",
+          "itemId": 1042,
+          "chance": 100
+        },
+        {
+          "item": "Zargon",
+          "itemId": 912,
+          "chance": 100
+        },
+        {
+          "item": "Worm Peeling",
+          "itemId": 955,
+          "chance": 100
+        },
+        {
+          "item": "Solid Shell",
+          "itemId": 943,
+          "chance": 100
+        },
+        {
+          "item": "Centipede Larva Card",
+          "itemId": 4452,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 2024,
+      "name": "Bradium Golem",
+      "sprite": "BRADIUM_GOLEM",
+      "mvp": false,
+      "level": 101,
+      "hp": 45200,
+      "baseExp": 70000,
+      "jobExp": 94600,
+      "hit": 161,
+      "flee": 111,
+      "def": 78,
+      "mdef": 22,
+      "stats": {
+        "str": 1,
+        "agi": 10,
+        "vit": 82,
+        "int": 25,
+        "dex": 60,
+        "luk": 12
+      },
+      "atk": [
+        12000,
+        13000
+      ],
+      "range": 1,
+      "size": "Large",
+      "race": "Formless",
+      "element": "Earth",
+      "elementLevel": 2,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Stone Fragment",
+          "itemId": 7067,
+          "chance": 100
+        },
+        {
+          "item": "Stone Heart",
+          "itemId": 953,
+          "chance": 100
+        },
+        {
+          "item": "Refined Bradium",
+          "itemId": 6090,
+          "chance": 25
+        },
+        {
+          "item": "Bradium Shield [1]",
+          "itemId": 2138,
+          "chance": 0.5
+        },
+        {
+          "item": "Bradium Brooch [1]",
+          "itemId": 2790,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 1993,
+      "name": "Naga",
+      "sprite": "NAGA",
+      "mvp": false,
+      "level": 111,
+      "hp": 46708,
+      "baseExp": 151800,
+      "jobExp": 81740,
+      "hit": 233,
+      "flee": 153,
+      "def": 38,
+      "mdef": 15,
+      "stats": {
+        "str": 113,
+        "agi": 42,
+        "vit": 30,
+        "int": 108,
+        "dex": 122,
+        "luk": 13
+      },
+      "atk": [
+        8000,
+        8800
+      ],
+      "range": 3,
+      "size": "Large",
+      "race": "Beast",
+      "element": "Earth",
+      "elementLevel": 2,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Armor of Naga [1]",
+          "itemId": 2389,
+          "chance": 0.5
+        },
+        {
+          "item": "Shield of Naga [1]",
+          "itemId": 2134,
+          "chance": 0.5
+        },
+        {
+          "item": "Battle Fork [4]",
+          "itemId": 1485,
+          "chance": 0.5
+        },
+        {
+          "item": "Snake Scale",
+          "itemId": 926,
+          "chance": 100
+        },
+        {
+          "item": "Scale Shell",
+          "itemId": 936,
+          "chance": 100
+        },
+        {
+          "item": "Shining Scale",
+          "itemId": 954,
+          "chance": 100
+        },
+        {
+          "item": "Pike [4]",
+          "itemId": 1408,
+          "chance": 1
+        }
+      ]
+    },
+    {
+      "id": 1992,
+      "name": "Cornus",
+      "sprite": "CORNUS",
+      "mvp": false,
+      "level": 108,
+      "hp": 41220,
+      "baseExp": 154270,
+      "jobExp": 22135,
+      "hit": 213,
+      "flee": 153,
+      "def": 35,
+      "mdef": 80,
+      "stats": {
+        "str": 110,
+        "agi": 45,
+        "vit": 80,
+        "int": 200,
+        "dex": 105,
+        "luk": 10
+      },
+      "atk": [
+        12000,
+        13000
+      ],
+      "range": 2,
+      "size": "Medium",
+      "race": "Beast",
+      "element": "Holy",
+      "elementLevel": 3,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Sprint Mail [1]",
+          "itemId": 2387,
+          "chance": 0.5
+        },
+        {
+          "item": "Angelic Ring",
+          "itemId": 2743,
+          "chance": 0.05
+        },
+        {
+          "item": "Mystic Horn",
+          "itemId": 6023,
+          "chance": 100
+        },
+        {
+          "item": "Soft Feather",
+          "itemId": 7063,
+          "chance": 100
+        },
+        {
+          "item": "Horseshoe",
+          "itemId": 944,
+          "chance": 100
+        },
+        {
+          "item": "Unicorn Horn",
+          "itemId": 2257,
+          "chance": 0.1
+        },
+        {
+          "item": "Long Horn [1]",
+          "itemId": 1420,
+          "chance": 0.05
+        },
+        {
+          "item": "Cornus Card",
+          "itemId": 4448,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 2017,
+      "name": "Rata",
+      "sprite": "RATA",
+      "mvp": false,
+      "level": 107,
+      "hp": 216600,
+      "baseExp": 350060,
+      "jobExp": 170000,
+      "hit": 206,
+      "flee": 158,
+      "def": 32,
+      "mdef": 52,
+      "stats": {
+        "str": 1,
+        "agi": 51,
+        "vit": 22,
+        "int": 132,
+        "dex": 99,
+        "luk": 15
+      },
+      "atk": [
+        8000,
+        15000
+      ],
+      "range": 1,
+      "size": "Medium",
+      "race": "Demi-Human",
+      "element": "Earth",
+      "elementLevel": 3,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Unripe Acorn",
+          "itemId": 12346,
+          "chance": 100
+        },
+        {
+          "item": "Acorn",
+          "itemId": 1026,
+          "chance": 100
+        },
+        {
+          "item": "Dark Piece",
+          "itemId": 6089,
+          "chance": 25
+        },
+        {
+          "item": "Veteran Hammer [2]",
+          "itemId": 1548,
+          "chance": 5
+        }
+      ]
+    },
+    {
+      "id": 1995,
+      "name": "Pinguicula",
+      "sprite": "PINGUICULA",
+      "mvp": false,
+      "level": 80,
+      "hp": 13680,
+      "baseExp": 34200,
+      "jobExp": 17100,
+      "hit": 166,
+      "flee": 103,
+      "def": 25,
+      "mdef": 5,
+      "stats": {
+        "str": 102,
+        "agi": 23,
+        "vit": 30,
+        "int": 10,
+        "dex": 86,
+        "luk": 2
+      },
+      "atk": [
+        600,
+        720
+      ],
+      "range": 1,
+      "size": "Medium",
+      "race": "Plant",
+      "element": "Earth",
+      "elementLevel": 3,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Pinguicula Corsage [1]",
+          "itemId": 2745,
+          "chance": 0.05
+        },
+        {
+          "item": "Whip of Balance [3]",
+          "itemId": 1980,
+          "chance": 0.5
+        },
+        {
+          "item": "Romantic Leaf",
+          "itemId": 2270,
+          "chance": 0.5
+        },
+        {
+          "item": "Sharp Leaf",
+          "itemId": 7100,
+          "chance": 100
+        },
+        {
+          "item": "Huge Leaf",
+          "itemId": 7198,
+          "chance": 100
+        },
+        {
+          "item": "Brown Root",
+          "itemId": 7188,
+          "chance": 100
+        },
+        {
+          "item": "Flower",
+          "itemId": 712,
+          "chance": 50
+        }
+      ]
+    },
+    {
+      "id": 2015,
+      "name": "Dark Pinguicula",
+      "sprite": "PINGUICULA_D",
+      "mvp": false,
+      "level": 83,
+      "hp": 8780,
+      "baseExp": 38700,
+      "jobExp": 26000,
+      "hit": 172,
+      "flee": 106,
+      "def": 15,
+      "mdef": 5,
+      "stats": {
+        "str": 1,
+        "agi": 23,
+        "vit": 22,
+        "int": 12,
+        "dex": 89,
+        "luk": 2
+      },
+      "atk": [
+        600,
+        1450
+      ],
+      "range": 1,
+      "size": "Medium",
+      "race": "Plant",
+      "element": "Poison",
+      "elementLevel": 2,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Sharp Leaf",
+          "itemId": 7100,
+          "chance": 100
+        },
+        {
+          "item": "Huge Leaf",
+          "itemId": 7198,
+          "chance": 100
+        },
+        {
+          "item": "Brown Root",
+          "itemId": 7188,
+          "chance": 100
+        },
+        {
+          "item": "Karvodailnirol",
+          "itemId": 972,
+          "chance": 0.5
+        },
+        {
+          "item": "Withered Flower",
+          "itemId": 6086,
+          "chance": 50
+        }
+      ]
+    },
+    {
+      "id": 2013,
+      "name": "Draco",
+      "sprite": "DRACO",
+      "mvp": false,
+      "level": 82,
+      "hp": 18300,
+      "baseExp": 30500,
+      "jobExp": 20500,
+      "hit": 144,
+      "flee": 105,
+      "def": 10,
+      "mdef": 5,
+      "stats": {
+        "str": 1,
+        "agi": 23,
+        "vit": 30,
+        "int": 34,
+        "dex": 62,
+        "luk": 2
+      },
+      "atk": [
+        410,
+        710
+      ],
+      "range": 1,
+      "size": "Medium",
+      "race": "Dragon",
+      "element": "Earth",
+      "elementLevel": 1,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Expanded Token Fragment",
+          "itemId": 35661,
+          "chance": 3
+        },
+        {
+          "item": "Dragon's Mane",
+          "itemId": 6073,
+          "chance": 100
+        },
+        {
+          "item": "Dragon Skin",
+          "itemId": 7123,
+          "chance": 5
+        },
+        {
+          "item": "Dragon Canine",
+          "itemId": 1035,
+          "chance": 5
+        },
+        {
+          "item": "Dragon Tail",
+          "itemId": 1037,
+          "chance": 50
+        },
+        {
+          "item": "Dragon Scale",
+          "itemId": 1036,
+          "chance": 50
+        },
+        {
+          "item": "Honey",
+          "itemId": 518,
+          "chance": 25
+        },
+        {
+          "item": "Draco Card",
+          "itemId": 4444,
+          "chance": 0.05
+        }
+      ]
+    },
+    {
+      "id": 2014,
+      "name": "Draco Egg",
+      "sprite": "DRACO_EGG",
+      "mvp": false,
+      "level": 67,
+      "hp": 9822,
+      "baseExp": 6000,
+      "jobExp": 8000,
+      "hit": 68,
+      "flee": 68,
+      "def": 56,
+      "mdef": 40,
+      "stats": {
+        "str": 1,
+        "agi": 1,
+        "vit": 56,
+        "int": 34,
+        "dex": 1,
+        "luk": 63
+      },
+      "atk": [
+        1,
+        2
+      ],
+      "range": 0,
+      "size": "Medium",
+      "race": "Dragon",
+      "element": "Earth",
+      "elementLevel": 4,
+      "drops": [
+        {
+          "item": "Poring Coin",
+          "itemId": 7539,
+          "chance": 5
+        },
+        {
+          "item": "Piece of Egg Shell",
+          "itemId": 7032,
+          "chance": 100
+        },
+        {
+          "item": "Egg Shell",
+          "itemId": 5015,
+          "chance": 1
+        }
+      ]
+    }
+  ]
+}
