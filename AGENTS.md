@@ -133,7 +133,9 @@ Match similar existing items. Look them up in loot.json first.
 ## Code
 
 - Vite + React 19 + Tailwind v4. No router library: hash routes in
-  `src/utils/route.js`. No state library.
+  `src/utils/route.js`. No state library. The loot page keeps its view
+  (search, filters, sort) after a `?` in the hash (`src/utils/viewUrl.js`);
+  new filter groups need adding there too so links carry them.
 - Floating UI (`@floating-ui/react-dom`) positions tooltips, menus and
   popovers in portals so scroll boxes can't clip them.
 - Performance matters: the table has 600+ rows. `ItemList` and

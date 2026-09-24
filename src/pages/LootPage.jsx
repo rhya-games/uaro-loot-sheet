@@ -5,6 +5,7 @@ import FilterSidebar from '../components/FilterSidebar.jsx';
 import ActiveFilters from '../components/ActiveFilters.jsx';
 import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
+import CopyLinkButton from '../components/CopyLinkButton.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 import { createSearch, wordMatcher } from '../utils/search.js';
 import { nextSort, sortItems } from '../utils/sort.js';
@@ -13,6 +14,7 @@ import { ALL_ACTIVITY_IDS, keepOnlyFor, keepsEverything } from '../utils/activit
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
 import { useAdmin } from '../admin/AdminContext.jsx';
+import { EMPTY_VIEW, cleanView, hashToView, isLootHash, viewToHash } from '../utils/viewUrl.js';
 
 
 /** How long the panel takes to slide in or out (ms). Matches `duration-200` below. */
@@ -32,17 +34,30 @@ const PANEL_ANIMATION_MS = 200;
  */
 const PANEL_BESIDE_TABLE = '(min-width: 1470px)';
 
+/**
+ * The view to start with: the one in the link if there is one, otherwise
+ * the last one this browser used, otherwise nothing.
+ */
+function startingView() {
+  return hashToView(window.location.hash) ?? cleanView(readPreference('lastView', EMPTY_VIEW));
+}
+
 /** The main page: search box, filter sidebar, and the item table. */
 export default function LootPage() {
-  const [query, setQuery] = useState('');
-  const [filters, setFilters] = useState(EMPTY_FILTERS);
+  const [start] = useState(startingView);
+  const [query, setQuery] = useState(start.query);
+  const [filters, setFilters] = useState(start.filters);
   const panelBesideTable = useMediaQuery(PANEL_BESIDE_TABLE);
-  const [sidebarOpen, setSidebarOpen] = useState(() => window.matchMedia(PANEL_BESIDE_TABLE).matches);
+  // Beside the table, the panel remembers whether it was open. Where it
+  // covers the table, it always starts closed.
+  const [sidebarOpen, setSidebarOpen] = useState(
+    () => window.matchMedia(PANEL_BESIDE_TABLE).matches && readPreference('panelOpen', true),
+  );
   const toggleButtonRef = useRef(null);
   const closeButtonRef = useRef(null);
   const resultsRef = useRef(null);
   const resultsLeftBefore = useRef(null);
-  const [sort, setSort] = useState(null);
+  const [sort, setSort] = useState(start.sort);
   // What the player keeps items for (hats, pets, ...). Everything by default.
   // Older visits saved "I don't keep items" instead; that means nothing picked.
   const [keepForSetting, setKeepFor] = useState(
@@ -78,6 +93,37 @@ export default function LootPage() {
 
   const activeFilterCount = countActiveFilters(filters) + (keepsEverything(keepFor) ? 0 : 1);
 
+  // Keep the link in step with the view, so it can be copied or bookmarked,
+  // and remember the view for next time. replaceState changes the address
+  // without adding a Back step for every letter typed. Other pages' links
+  // (#/about) are left alone.
+  const viewHash = viewToHash({ query, filters, sort });
+  useEffect(() => {
+    writePreference('lastView', { query, filters, sort });
+    const syncLink = () => {
+      const current = window.location.hash;
+      if (!isLootHash(current) || current === viewHash) return;
+      if (viewHash === '#/' && !current.startsWith('#/?')) return; // "" and "#/" are the same page
+      window.history.replaceState(null, '', viewHash);
+    };
+    syncLink();
+    // Coming back to the loot page (the "Loot Sheet" link is plain "#/")
+    // puts the view back in the link. Opening a link with a view in it
+    // switches to that view.
+    const onHashChange = () => {
+      const linked = hashToView(window.location.hash);
+      if (linked && viewToHash(linked) !== viewHash) {
+        setQuery(linked.query);
+        setFilters(linked.filters);
+        setSort(linked.sort);
+      } else {
+        syncLink();
+      }
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, [viewHash]);
+
   // When the panel floats or takes over the screen, opening it moves focus into
   // it, and closing it returns focus to the toggle button.
   const panelCovers = sidebarOpen && !panelBesideTable;
@@ -89,6 +135,7 @@ export default function LootPage() {
   const changePanel = useCallback((open) => {
     resultsLeftBefore.current = resultsRef.current?.getBoundingClientRect().left ?? null;
     setSidebarOpen(open);
+    if (window.matchMedia(PANEL_BESIDE_TABLE).matches) writePreference('panelOpen', open);
   }, []);
 
   const closePanel = useCallback(() => {
@@ -201,6 +248,7 @@ export default function LootPage() {
         <p className="text-sm text-muted">
           Showing {results.length} of {loot.length} items
         </p>
+        <CopyLinkButton />
         <ActiveFilters
           query={query}
           filters={filters}
