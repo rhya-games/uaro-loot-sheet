@@ -6,9 +6,9 @@ const sameActions = (a, b) => a.length === b.length && a.every((action) => b.inc
 
 /**
  * In admin mode, shows under the Action chips what src/utils/suggest.js
- * would pick from the prices. Hover or focus it to see why. "Use" saves
- * the suggestion as the item's actions. (Items with no actions get it
- * automatically when a price is saved; see AdminContext.)
+ * would pick from the prices. Hover or focus it to see why. Saving a price
+ * takes the suggestion automatically (see AdminContext); "Use" is for
+ * items whose suggestion changed because of other items' prices.
  *
  * Props:
  *   item - one entry from loot.json

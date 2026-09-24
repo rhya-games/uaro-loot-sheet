@@ -42,8 +42,9 @@ export function AdminProvider({ children }) {
   const latest = useRef(items);
 
   /**
-   * Saves changes to one item. If the item has no actions yet, the actions
-   * its new prices suggest are saved too (nothing set by hand to override).
+   * Saves changes to one item. When a price changes, the actions its new
+   * prices suggest are saved too, replacing the old ones, so entering prices
+   * is all it takes to keep actions up to date.
    */
   const saveItem = useCallback(async (id, changes) => {
     const replace = (saved) => {
@@ -52,9 +53,10 @@ export function AdminProvider({ children }) {
       return saved;
     };
     const saved = replace(await postItem(id, changes));
-    if (saved.actions.length === 0) {
+    if ('avgVend' in changes || 'avgWhobuy' in changes) {
       const { actions } = createSuggester(latest.current)(saved);
-      if (actions.length) replace(await postItem(id, { actions }));
+      const same = actions.length === saved.actions.length && actions.every((action) => saved.actions.includes(action));
+      if (actions.length && !same) replace(await postItem(id, { actions }));
     }
   }, []);
 

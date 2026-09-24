@@ -29,8 +29,8 @@ on to type vend and @whobuy prices straight into the table: press Enter (or
 click away) to save to `src/data/loot.json`, which also marks the item as
 verified today. Shorthand works: `12k`, `1.5m`. Escape puts the old price
 back. Each item also shows the action suggested by its prices (hover it to
-see why). Items with no action yet take the suggestion when you save a
-price; for the rest, click **Use** to take it. Run `npm run validate` and commit as usual when you're done.
+see why). Saving a price also saves the suggested action. If a suggestion
+changes because of another item's price, click **Use** to take it. Run `npm run validate` and commit as usual when you're done.
 
 The published site has no server, so it never shows admin mode.
 
