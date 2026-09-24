@@ -75,16 +75,17 @@ const COLUMNS = [
     render: (item) => <PlayerPrice item={item} field="avgWhobuy" />,
   },
   {
-    label: 'NPC Sell',
+    label: 'NPC',
     sortKey: 'npcSellPrice',
     title: `Zeny from selling to an NPC with Overcharge level ${OVERCHARGE_LEVEL} (+${OVERCHARGE_PERCENT}%)`,
     numeric: true,
     render: (item) => <NpcSellPrice item={item} />,
   },
   {
-    label: 'NPC Buy',
+    label: 'NPC Buyable',
     sortKey: 'npcBuyable',
     nowrap: true,
+    className: 'w-px', // as narrow as the header text allows
     title: 'Can you buy this from an NPC?',
     render: (item) => <NpcBuyable item={item} />,
   },

@@ -23,6 +23,21 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-23',
+    title: 'Which items NPCs sell',
+    changes: [
+      {
+        type: 'Added',
+        text: 'NPC Buyable for every item, from the emulators’ NPC shops. About 290 items that were blank are now filled in.',
+      },
+      {
+        type: 'Fixed',
+        text: 'Items NPCs sell that were marked Vend (for example, Chonchon Doll and Topaz) now say NPC.',
+      },
+      { type: 'Changed', text: 'Renamed the NPC Sell column to NPC and NPC Buy to NPC Buyable. NPC Only shows as ✓.' },
+    ],
+  },
+  {
+    date: '2026-09-23',
     title: 'NPC sell prices from Hercules',
     changes: [
       {

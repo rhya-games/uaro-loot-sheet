@@ -111,10 +111,17 @@ for (const listName of ['modifiedSellPrices', 'customSellValues', 'notSellableTo
     overriddenIds.set(entry.itemId, listName);
   }
 }
-for (const entry of overrides.renewalContent.reviewedPrices.items) {
-  const item = itemsById.get(entry.itemId);
-  if (item?.name !== entry.name) {
-    errors.push(`${OVERRIDES_FILE} reviewedPrices: itemId ${entry.itemId} is ${item ? `"${item.name}"` : 'not in loot.json'}, not "${entry.name}"`);
+const otherLists = {
+  reviewedPrices: overrides.renewalContent.reviewedPrices,
+  soldByNpc: overrides.npcShops.soldByNpc,
+  notSoldByNpc: overrides.npcShops.notSoldByNpc,
+};
+for (const [listName, list] of Object.entries(otherLists)) {
+  for (const entry of list.items) {
+    const item = itemsById.get(entry.itemId);
+    if (item?.name !== entry.name) {
+      errors.push(`${OVERRIDES_FILE} ${listName}: itemId ${entry.itemId} is ${item ? `"${item.name}"` : 'not in loot.json'}, not "${entry.name}"`);
+    }
   }
 }
 

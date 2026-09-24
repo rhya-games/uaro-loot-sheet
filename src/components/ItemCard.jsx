@@ -46,8 +46,8 @@ export default function ItemCard({ item, onSelectUse }) {
       <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-5">
         <Stat label="Avg. vend" value={<PlayerPrice item={item} field="avgVend" />} />
         <Stat label="Avg. whobuy" value={<PlayerPrice item={item} field="avgWhobuy" />} />
-        <Stat label={`NPC sell (OC ${OVERCHARGE_LEVEL})`} value={<NpcSellPrice item={item} />} />
-        <Stat label="Buy from NPC" value={<NpcBuyable item={item} />} />
+        <Stat label={`NPC (OC ${OVERCHARGE_LEVEL})`} value={<NpcSellPrice item={item} />} />
+        <Stat label="NPC Buyable" value={<NpcBuyable item={item} />} />
         <Stat label="Last verified" value={<VerifiedText item={item} />} />
       </dl>
     </article>

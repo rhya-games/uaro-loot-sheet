@@ -191,4 +191,5 @@ export const ITEM_IDS = {
   // use the ID for another item).
   'Miracle Bandage': 23256,
   'Scatleton Memory': 25408,
+  'Blue Vital Flower': 6113, // rAthena calls it "Vital Flower"
 };

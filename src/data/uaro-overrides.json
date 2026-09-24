@@ -37,12 +37,35 @@
   },
 
   "notSellableToNpc": {
-    "about": "Items NPCs won't buy on purpose (currencies, event coins). The NPC Sell column shows ✕ instead of a price.",
+    "about": "Items NPCs won't buy on purpose (currencies, event coins). The NPC column shows ✕ instead of a price.",
     "items": [
       { "itemId": 11605, "name": "Cookie Bat", "reason": "uaRO rule" },
       { "itemId": 7539, "name": "Poring Coin", "reason": "uaRO currency" },
       { "itemId": 25290, "name": "Sweets Festival Coin", "reason": "Event coin" }
     ]
+  },
+
+  "npcShops": {
+    "about": "Which items NPCs sell (npcBuyable in loot.json), filled in by `npm run sync:shops`. By default that's every item in a zeny shop in Hercules' pre-renewal NPC scripts. The lists below add uaRO's renewal shops and its differences.",
+    "renewalShops": {
+      "about": "Renewal NPC shops uaRO added, read from rAthena: every zeny shop on these maps, plus these shops by name (shops that other NPCs open, like the pet groomer's).",
+      "maps": ["mid_camp", "spl_in01", "spl_in02", "man_in01", "dic_in01"],
+      "shops": ["Pet_Items"]
+    },
+    "soldByNpc": {
+      "about": "Items uaRO NPCs sell that aren't in the emulators' shops.",
+      "items": [
+        { "itemId": 732, "name": "3carat Diamond", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
+        { "itemId": 505, "name": "Blue Potion", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
+        { "itemId": 2605, "name": "Brooch [0]", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
+        { "itemId": 713, "name": "Empty Bottle", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
+        { "itemId": 2271, "name": "Jack be Dandy", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." }
+      ]
+    },
+    "notSoldByNpc": {
+      "about": "Items the emulators' shops sell but uaRO's NPCs don't.",
+      "items": []
+    }
   },
 
   "renewalContent": {

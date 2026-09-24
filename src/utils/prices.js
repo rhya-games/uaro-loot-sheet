@@ -4,7 +4,7 @@ import overrides from '../data/uaro-overrides.json';
 /**
  * NPC sell prices.
  *
- * Items store `sellValue` (what an NPC pays before skills). The NPC Sell
+ * Items store `sellValue` (what an NPC pays before skills). The NPC
  * column normally shows the price with Overcharge, using the same math as
  * Hercules (src/map/pc.cpp, pc_modifysellvalue): value * (100 + bonus%) / 100,
  * rounded down. The level and bonus come from src/data/game-rules.json.

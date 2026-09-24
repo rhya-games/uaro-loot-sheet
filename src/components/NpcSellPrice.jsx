@@ -4,7 +4,7 @@ import { formatZeny } from '../utils/format.js';
 import { OVERCHARGE_LEVEL, npcSellInfo } from '../utils/prices.js';
 
 /**
- * The NPC Sell value for one item (see utils/prices.js):
+ * The NPC (sell price) value for one item (see utils/prices.js):
  *   normal price    "15,500z"
  *   uaRO fixed      "2,000z" + lock icon (tooltip explains Overcharge doesn't apply)
  *   can't be sold   ✕ icon (tooltip explains why)

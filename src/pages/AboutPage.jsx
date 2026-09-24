@@ -59,12 +59,12 @@ export default function AboutPage() {
             NPCs sell it, so players don't trade it.
           </li>
           <li>
-            <strong>NPC Sell</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+
+            <strong>NPC</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+
             {OVERCHARGE_PERCENT}%). A lock means uaRO set a fixed price that Overcharge doesn't raise; ✕ means NPCs
             won't buy it.
           </li>
           <li>
-            <strong>NPC Buy</strong>: whether an NPC sells it (✓ or ✕).
+            <strong>NPC Buyable</strong>: whether you can buy it from an NPC shop (✓ or ✕).
           </li>
           <li>
             <strong>Verified</strong>: when someone last checked the vend or @whobuy price on the live server.
