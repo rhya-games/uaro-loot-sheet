@@ -45,6 +45,7 @@ function PriceInput({ item, field }) {
   const saved = item[field];
   const [text, setText] = useState(asText(saved));
   const [status, setStatus] = useState(null); // null | 'saving' | { error }
+  const [focused, setFocused] = useState(false);
   const inputRef = useRef(null);
   const caret = useRef(null); // where the cursor goes after commas are added
 
@@ -103,7 +104,11 @@ function PriceInput({ item, field }) {
         value={text}
         ref={inputRef}
         onChange={onChange}
-        onBlur={save}
+        onFocus={() => setFocused(true)}
+        onBlur={() => {
+          setFocused(false);
+          save();
+        }}
         onKeyDown={(event) => {
           if (event.key === 'Enter') event.currentTarget.blur();
           if (event.key === 'Escape') {
@@ -111,7 +116,8 @@ function PriceInput({ item, field }) {
             setText(asText(saved));
           }
         }}
-        placeholder="—"
+        // Empty means "no price"; while typing, hint that shorthand works.
+        placeholder={focused ? 'e.g. 1.5m' : '—'}
         aria-label={label}
         aria-invalid={invalid || undefined}
         className={`w-24 rounded-md border bg-surface px-2 py-1 text-right tabular-nums text-fg
