@@ -23,6 +23,15 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-24',
+    title: 'Share what you see',
+    changes: [
+      { type: 'Added', text: 'Copy link: the address now holds your search, filters and sort, so a link opens the same view.' },
+      { type: 'Added', text: 'Your last search, filters and sort come back on your next visit. Clear all starts fresh.' },
+      { type: 'Added', text: 'On wide screens, the filter panel stays open or closed the way you left it.' },
+    ],
+  },
+  {
+    date: '2026-09-24',
     title: 'Keep only what you use',
     changes: [
       {

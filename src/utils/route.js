@@ -19,7 +19,9 @@ export const ROUTES = {
 };
 
 function readRoute() {
-  const match = Object.entries(ROUTES).find(([, hash]) => hash === window.location.hash);
+  // The loot page keeps its search and filters after a "?" (see utils/viewUrl.js).
+  const path = window.location.hash.split('?')[0];
+  const match = Object.entries(ROUTES).find(([, hash]) => hash === path);
   return match ? match[0] : 'loot';
 }
 
