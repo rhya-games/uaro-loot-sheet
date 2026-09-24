@@ -1,7 +1,8 @@
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { formatZeny } from '../utils/format.js';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
-import { isSoldByNpc } from '../utils/prices.js';
+import { isSoldByNpc, isTradeable } from '../utils/prices.js';
+import Tooltip from './Tooltip.jsx';
 
 /**
  * Small ✓ / ✕ icons used in place of "Yes" / "No" text. `label` is read by
@@ -35,10 +36,20 @@ export function NpcBuyable({ item }) {
 }
 
 /**
- * A player price (avgVend or avgWhobuy). Items NPCs sell show ✕: players
- * don't trade them, so there's no player price.
+ * A player price (avgVend or avgWhobuy), or ✕ when players don't trade it:
+ *   - items that can't be traded at all (with a tooltip, since it's rare)
+ *   - items NPCs sell (explained in the column header's tooltip)
  */
 export function PlayerPrice({ item, field }) {
+  if (!isTradeable(item)) {
+    return (
+      <Tooltip text="Can't be traded">
+        <span tabIndex={0} className="inline-flex rounded">
+          <NoIcon label="None: can't be traded" />
+        </span>
+      </Tooltip>
+    );
+  }
   if (isSoldByNpc(item)) return <NoIcon label="None: NPCs sell this" />;
   return formatZeny(item[field]);
 }

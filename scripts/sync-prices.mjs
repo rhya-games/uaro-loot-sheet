@@ -100,6 +100,19 @@ for (const item of updatedItems) {
   );
 }
 
+// 3. Trade flags: the emulator marks some items as untradeable or unsellable,
+// but uaRO often allows them. List flagged items nobody has checked yet.
+const checkedIds = new Set([
+  ...overrides.tradeRestrictions.checked.items,
+  ...overrides.tradeRestrictions.notTradeable.items,
+  ...overrides.notSellableToNpc.items,
+].map((entry) => entry.itemId));
+const FLAGS = { notrade: "can't trade", nodrop: "can't drop", noselltonpc: "can't sell to NPCs" };
+const unchecked = updatedItems
+  .filter((item) => !checkedIds.has(item.itemId))
+  .map((item) => ({ item, flags: (preRenewal.get(item.itemId)?.trade ?? []).filter((flag) => FLAGS[flag]) }))
+  .filter(({ flags }) => flags.length);
+
 // Report.
 console.log(`Overcharge level ${OVERCHARGE_LEVEL}: +${overchargePercent}%`);
 console.log(`\n${changed.length} prices ${checkOnly ? 'would change' : 'changed'}.`);
@@ -108,6 +121,8 @@ console.log(`\n${kept.length} items aren't in either emulator (kept as-is):`);
 kept.forEach((line) => console.log(`  ${line}`));
 console.log(`\n${areasByItemId.size} item types drop in uaRO's renewal areas; ${priceDifferences.length} of ours have a new, unreviewed renewal price (not changed; ${reviewedIds.size} already reviewed):`);
 priceDifferences.forEach((line) => console.log(`  ${line}`));
+console.log(`\n${unchecked.length} items the emulator flags as restricted, not checked on uaRO yet (add them to tradeRestrictions in ${OVERRIDES_FILE}):`);
+unchecked.forEach(({ item, flags }) => console.log(`  ${item.name}: ${flags.map((flag) => FLAGS[flag]).join(', ')}`));
 
 if (!checkOnly) {
   const rules = { overchargeLevel: OVERCHARGE_LEVEL, overchargePercent, source: 'Hercules src/map/pc.cpp, pc_modifysellvalue()' };

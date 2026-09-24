@@ -139,8 +139,8 @@
     "itemId": 1026,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
-      "Vend"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Repeatable Quest",
@@ -151,11 +151,32 @@
       {
         "for": "Lazy Smokie",
         "qty": 1000
+      },
+      {
+        "for": "Nutters Repeatable Quest",
+        "qty": 25,
+        "note": "each turn-in"
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 49,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "adventurers-suit-1",
+    "name": "Adventurer's Suit [1]",
+    "itemId": 2306,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -280,6 +301,22 @@
     "notes": "Gremlin Taming Item",
     "links": [],
     "sellValue": 5,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "alca-bringer-0",
+    "name": "Alca Bringer [0]",
+    "itemId": 1191,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
@@ -523,6 +560,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "alligator-card",
+    "name": "Alligator Card",
+    "itemId": 4252,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "aloe",
     "name": "Aloe",
     "itemId": 704,
@@ -756,6 +811,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "ancient-mimic-card",
+    "name": "Ancient Mimic Card",
+    "itemId": 4387,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "ancient-mummy-card",
     "name": "Ancient Mummy Card",
     "itemId": 4248,
@@ -803,6 +876,42 @@
     "notes": "",
     "links": [],
     "sellValue": 274,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "andre-card",
+    "name": "Andre Card",
+    "itemId": 4043,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "andre-egg-card",
+    "name": "Andre Egg Card",
+    "itemId": 4013,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -858,6 +967,54 @@
         "qty": 1
       }
     ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "angels-reincarnation-1",
+    "name": "Angel's Reincarnation [1]",
+    "itemId": 2420,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "angelic-ring-0",
+    "name": "Angelic Ring [0]",
+    "itemId": 2743,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "angled-glasses-0",
+    "name": "Angled Glasses [0]",
+    "itemId": 2276,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -970,11 +1127,34 @@
         "for": "Steamed Alligator with Vegetable",
         "qty": 10,
         "note": "+7 AGI food"
+      },
+      {
+        "for": "Cuir Repeatable Quest",
+        "qty": 20,
+        "note": "each turn-in"
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 484,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "anopheles-card",
+    "name": "Anopheles Card",
+    "itemId": 4344,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -1013,13 +1193,50 @@
       {
         "for": "Finding the Moving Island Quest (Moscovia Dungeon Access)",
         "qty": 20
+      },
+      {
+        "for": "Vegetable Farmer Repeatable Quest",
+        "qty": 50,
+        "note": "each turn-in"
       }
     ],
-    "notes": "",
+    "notes": "NPCs sell it (Niflheim Tool Dealer). It can't be vended, and Discount doesn't work on it.",
     "links": [],
     "sellValue": 336,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "antelope-skin",
+    "name": "Antelope Skin",
+    "itemId": 7107,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 378,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "antler-helm",
+    "name": "Antler Helm",
+    "itemId": 6322,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 400,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "anvil",
@@ -1150,6 +1367,24 @@
     "npcBuyable": "npc-only"
   },
   {
+    "id": "aqua-elemental-card",
+    "name": "Aqua Elemental Card",
+    "itemId": 4443,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "aquamarine",
     "name": "Aquamarine",
     "itemId": 720,
@@ -1181,6 +1416,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "armeyer-dinze-card",
+    "name": "Armeyer Dinze Card",
+    "itemId": 4347,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "armlet-of-obedience",
     "name": "Armlet of Obedience",
     "itemId": 639,
@@ -1200,6 +1453,22 @@
     "notes": "Isis Taming Item",
     "links": [],
     "sellValue": 9000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "armor-of-naga-1",
+    "name": "Armor of Naga [1]",
+    "itemId": 2389,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -1246,6 +1515,22 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "arrow-of-shadow",
+    "name": "Arrow of Shadow",
+    "itemId": 1767,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "ascending-dragon-soup",
     "name": "Ascending Dragon Soup",
     "itemId": 12084,
@@ -1257,7 +1542,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+9 VIT for 20 minutes.",
+    "notes": "+9 VIT for 20 minutes",
     "links": [],
     "sellValue": 40000,
     "sellSource": "hercules",
@@ -1288,6 +1573,40 @@
     "npcBuyable": "no"
   },
   {
+    "id": "assassin-mask-0",
+    "name": "Assassin Mask [0]",
+    "itemId": 5096,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "assaulter-card",
+    "name": "Assaulter Card",
+    "itemId": 4246,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "assorted-seafood",
     "name": "Assorted Seafood",
     "itemId": 12052,
@@ -1299,7 +1618,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+2 VIT for 20 minutes.",
+    "notes": "+2 VIT for 20 minutes",
     "links": [],
     "sellValue": 2000,
     "sellSource": "hercules",
@@ -1317,7 +1636,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+7 LUK for 20 minutes.",
+    "notes": "+7 LUK for 20 minutes",
     "links": [],
     "sellValue": 20000,
     "sellSource": "hercules",
@@ -1354,7 +1673,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+2 INT for 20 minutes.",
+    "notes": "+2 INT for 20 minutes",
     "links": [],
     "sellValue": 2000,
     "sellSource": "hercules",
@@ -1372,7 +1691,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+6 VIT for 20 minutes.",
+    "notes": "+6 VIT for 20 minutes",
     "links": [],
     "sellValue": 10000,
     "sellSource": "hercules",
@@ -1421,6 +1740,11 @@
         "for": "Hwergelmir's Tonic",
         "qty": 10,
         "note": "+10 DEX food"
+      },
+      {
+        "for": "Local Villager Repeatable Quest",
+        "qty": 50,
+        "note": "each turn-in"
       }
     ],
     "notes": "",
@@ -1521,6 +1845,22 @@
     "sellValue": 7,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "banana-hat-0",
+    "name": "Banana Hat [0]",
+    "itemId": 5116,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "banana-juice",
@@ -1733,6 +2073,38 @@
     "npcBuyable": "no"
   },
   {
+    "id": "battle-axe-4",
+    "name": "Battle Axe [4]",
+    "itemId": 1352,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 2700,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "battle-fork-4",
+    "name": "Battle Fork [4]",
+    "itemId": 1485,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "bears-footskin",
     "name": "Bear's Footskin",
     "itemId": 948,
@@ -1769,7 +2141,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+8 STR for 20 minutes.",
+    "notes": "+8 STR for 20 minutes",
     "links": [],
     "sellValue": 30000,
     "sellSource": "hercules",
@@ -1860,6 +2232,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "berserk-guitar-0",
+    "name": "Berserk Guitar [0]",
+    "itemId": 1920,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "berserk-potion",
     "name": "Berserk Potion",
     "itemId": 657,
@@ -1942,12 +2330,34 @@
       "Repeatable Quest",
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Gregor Repeatable Quest",
+        "qty": 25,
+        "note": "each turn-in"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 32,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "binoculars-0",
+    "name": "Binoculars [0]",
+    "itemId": 2296,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "biotite",
@@ -1990,6 +2400,22 @@
     "notes": "",
     "links": [],
     "sellValue": 1500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "biretta-1",
+    "name": "Biretta [1]",
+    "itemId": 2217,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 4500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -2060,6 +2486,22 @@
     ],
     "uses": [],
     "notes": "Sucubus Pet accessory",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "black-cat-0",
+    "name": "Black Cat [0]",
+    "itemId": 2747,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -2152,6 +2594,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "black-ladle",
+    "name": "Black Ladle",
+    "itemId": 737,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 200,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "blade-lost-in-darkness",
     "name": "Blade Lost in Darkness",
     "itemId": 7023,
@@ -2220,6 +2680,24 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "blazer-card",
+    "name": "Blazer Card",
+    "itemId": 4215,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "blood-flavored-soda",
     "name": "Blood Flavored Soda",
     "itemId": 12099,
@@ -2231,7 +2709,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+9 LUK for 20 minutes.",
+    "notes": "+9 LUK for 20 minutes",
     "links": [],
     "sellValue": 40000,
     "sellSource": "hercules",
@@ -2278,6 +2756,24 @@
     "notes": "",
     "links": [],
     "sellValue": 1008,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "blue-acidus-card",
+    "name": "Blue Acidus Card",
+    "itemId": 4379,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -2603,7 +3099,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+3 STR for 20 minutes.",
+    "notes": "+3 STR for 20 minutes",
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
@@ -2628,6 +3124,22 @@
         "qty": 1
       }
     ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bone-plate-1",
+    "name": "Bone Plate [1]",
+    "itemId": 15000,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -2707,6 +3219,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "boots-1",
+    "name": "Boots [1]",
+    "itemId": 2406,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 9000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "bottle-grenade",
     "name": "Bottle Grenade",
     "itemId": 7135,
@@ -2760,6 +3288,42 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "bow-3",
+    "name": "Bow [3]",
+    "itemId": 1701,
+    "itemType": "Equipment",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "bow-guardian-card",
+    "name": "Bow Guardian Card",
+    "itemId": 4428,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "boys-pure-heart",
     "name": "Boy's Pure Heart",
     "itemId": 12373,
@@ -2772,6 +3336,54 @@
     ],
     "uses": [],
     "notes": "Succubus Taming Item",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bradium",
+    "name": "Bradium",
+    "itemId": 6224,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bradium-brooch-1",
+    "name": "Bradium Brooch [1]",
+    "itemId": 2790,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bradium-shield-1",
+    "name": "Bradium Shield [1]",
+    "itemId": 2138,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -2852,6 +3464,38 @@
     "notes": "",
     "links": [],
     "sellValue": 165,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "broken-shell",
+    "name": "Broken Shell",
+    "itemId": 7070,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 450,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "broken-sword",
+    "name": "Broken Sword",
+    "itemId": 7110,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 294,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -2983,6 +3627,38 @@
     "npcBuyable": "npc-only"
   },
   {
+    "id": "burning-bow-1",
+    "name": "Burning Bow [1]",
+    "itemId": 1730,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "burning-hair",
+    "name": "Burning Hair",
+    "itemId": 7122,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 487,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "burning-heart",
     "name": "Burning Heart",
     "itemId": 7097,
@@ -3055,6 +3731,74 @@
     "notes": "",
     "links": [],
     "sellValue": 361,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "buster-2",
+    "name": "Buster [2]",
+    "itemId": 1358,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 17000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "butcher-1",
+    "name": "Butcher [1]",
+    "itemId": 13159,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 65000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "butterfly-wing",
+    "name": "Butterfly Wing",
+    "itemId": 602,
+    "itemType": "Consumable",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 150,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "byorgue-card",
+    "name": "Byorgue Card",
+    "itemId": 4426,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -3258,6 +4002,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "caramel-card",
+    "name": "Caramel Card",
+    "itemId": 4063,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "carrot",
     "name": "Carrot",
     "itemId": 515,
@@ -3382,6 +4144,58 @@
     "npcBuyable": "no"
   },
   {
+    "id": "cello-3",
+    "name": "Cello [3]",
+    "itemId": 1925,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "centipede-card",
+    "name": "Centipede Card",
+    "itemId": 4447,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "centipede-larva-card",
+    "name": "Centipede Larva Card",
+    "itemId": 4452,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "chain-3",
     "name": "Chain [3]",
     "itemId": 1520,
@@ -3396,6 +4210,22 @@
     "notes": "",
     "links": [],
     "sellValue": 11500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "chain-mail-1",
+    "name": "Chain Mail [1]",
+    "itemId": 2315,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 32500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -3467,6 +4297,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "chemeti-whip-0",
+    "name": "Chemeti Whip [0]",
+    "itemId": 1964,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "chile-shrimp-gratin",
     "name": "Chile Shrimp Gratin",
     "itemId": 12086,
@@ -3478,7 +4324,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+6 AGI for 20 minutes.",
+    "notes": "+6 AGI for 20 minutes",
     "links": [],
     "sellValue": 10000,
     "sellSource": "hercules",
@@ -3540,9 +4386,27 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+2 DEX for 20 minutes.",
+    "notes": "+2 DEX for 20 minutes",
     "links": [],
     "sellValue": 2000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "chonchon-card",
+    "name": "Chonchon Card",
+    "itemId": 4009,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -3565,6 +4429,22 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "chrome-metal-two-handed-sword-0",
+    "name": "Chrome Metal Two-Handed Sword [0]",
+    "itemId": 1196,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "chrysalis",
     "name": "Chrysalis",
     "itemId": 915,
@@ -3577,7 +4457,13 @@
       "Repeatable Quest",
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Halgus Repeatable Quest",
+        "qty": 25,
+        "note": "each turn-in"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 4,
@@ -3760,7 +4646,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+3 VIT for 20 minutes.",
+    "notes": "+3 VIT for 20 minutes",
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
@@ -3843,6 +4729,38 @@
     "npcBuyable": "no"
   },
   {
+    "id": "claymore-0",
+    "name": "Claymore [0]",
+    "itemId": 1163,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 37000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "clip-1",
+    "name": "Clip [1]",
+    "itemId": 2607,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "clover",
     "name": "Clover",
     "itemId": 705,
@@ -3876,6 +4794,40 @@
     "notes": "",
     "links": [],
     "sellValue": 5,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "club-3",
+    "name": "Club [3]",
+    "itemId": 1501,
+    "itemType": "Equipment",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 60,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "club-4",
+    "name": "Club [4]",
+    "itemId": 1502,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 60,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -3943,6 +4895,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "coat-1",
+    "name": "Coat [1]",
+    "itemId": 2310,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 11000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "cobaltblue-dyestuffs",
     "name": "Cobaltblue Dyestuffs",
     "itemId": 978,
@@ -4003,6 +4971,40 @@
     "notes": "",
     "links": [],
     "sellValue": 92,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "coco-card",
+    "name": "Coco Card",
+    "itemId": 4041,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cold-heart-0",
+    "name": "Cold Heart [0]",
+    "itemId": 2746,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -4190,7 +5192,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+10 LUK for 20 minutes.",
+    "notes": "+10 LUK for 20 minutes",
     "links": [],
     "sellValue": 50000,
     "sellSource": "hercules",
@@ -4285,6 +5287,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "cornus-card",
+    "name": "Cornus Card",
+    "itemId": 4448,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "coronet-0",
     "name": "Coronet [0]",
     "itemId": 2249,
@@ -4334,6 +5354,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "cotton-shirt-1",
+    "name": "Cotton Shirt [1]",
+    "itemId": 2302,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "cotton-wads",
     "name": "Cotton Wads",
     "itemId": 25233,
@@ -4350,6 +5386,22 @@
     "sellValue": 500,
     "sellSource": "rathena-renewal",
     "npcBuyable": "npc-only"
+  },
+  {
+    "id": "cowardice-blade-2",
+    "name": "Cowardice Blade [2]",
+    "itemId": 13004,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 26000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "crab-shell",
@@ -4418,9 +5470,27 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+4 DEX for 20 minutes.",
+    "notes": "+4 DEX for 20 minutes",
     "links": [],
     "sellValue": 4000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "creamy-card",
+    "name": "Creamy Card",
+    "itemId": 4040,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -4440,6 +5510,22 @@
     "notes": "",
     "links": [],
     "sellValue": 2500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "crimson-bolt-2",
+    "name": "Crimson Bolt [2]",
+    "itemId": 13103,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -4623,6 +5709,22 @@
     "notes": "",
     "links": [],
     "sellValue": 206,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cursed-lyre-1",
+    "name": "Cursed Lyre [1]",
+    "itemId": 1741,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -4874,6 +5976,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "cutter-4",
+    "name": "Cutter [4]",
+    "itemId": 1205,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 625,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "cyfar",
     "name": "Cyfar",
     "itemId": 7053,
@@ -4956,6 +6074,22 @@
     "notes": "",
     "links": [],
     "sellValue": 211,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dark-piece",
+    "name": "Dark Piece",
+    "itemId": 6089,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -5049,7 +6183,9 @@
     "name": "Delicious Meat",
     "itemId": 11616,
     "itemType": "Consumable",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "Pet",
       "Pet Evolution",
@@ -5083,6 +6219,24 @@
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "demon-pungus-card",
+    "name": "Demon Pungus Card",
+    "itemId": 4173,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5132,6 +6286,24 @@
     "notes": "",
     "links": [],
     "sellValue": 521,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "detardeurus-card",
+    "name": "Detardeurus Card",
+    "itemId": 4386,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -5224,6 +6396,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "diabolic-card",
+    "name": "Diabolic Card",
+    "itemId": 4182,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "diamond-ring-0",
     "name": "Diamond Ring [0]",
     "itemId": 2613,
@@ -5240,6 +6430,24 @@
     "sellValue": 22500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "dokebi-card",
+    "name": "Dokebi Card",
+    "itemId": 4098,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "dokebi-horn",
@@ -5260,11 +6468,68 @@
       {
         "for": "Am Mut Pet Evolution",
         "qty": 300
+      },
+      {
+        "for": "Li Repeatable Quest",
+        "qty": 50,
+        "note": "each turn-in"
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 146,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dolomedes-card",
+    "name": "Dolomedes Card",
+    "itemId": 4506,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "doom-slayer-0",
+    "name": "Doom Slayer [0]",
+    "itemId": 1370,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "draco-card",
+    "name": "Draco Card",
+    "itemId": 4444,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -5280,7 +6545,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+10 INT for 20 minutes.",
+    "notes": "+10 INT for 20 minutes",
     "links": [],
     "sellValue": 50000,
     "sellSource": "hercules",
@@ -5303,6 +6568,24 @@
     "notes": "",
     "links": [],
     "sellValue": 242,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dragon-egg-card",
+    "name": "Dragon Egg Card",
+    "itemId": 4385,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -5404,6 +6687,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "drill-katar-1",
+    "name": "Drill Katar [1]",
+    "itemId": 1270,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "driller-card",
     "name": "Driller Card",
     "itemId": 4180,
@@ -5482,6 +6781,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "dryad-card",
+    "name": "Dryad Card",
+    "itemId": 4177,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "dust-pollutant",
     "name": "Dust Pollutant",
     "itemId": 7320,
@@ -5496,6 +6813,24 @@
     "notes": "",
     "links": [],
     "sellValue": 128,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "dustiness-card",
+    "name": "Dustiness Card",
+    "itemId": 4056,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -5539,7 +6874,13 @@
       "Repeatable Quest",
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Shone Repeatable Quest",
+        "qty": 25,
+        "note": "each turn-in"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 98,
@@ -5679,6 +7020,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "egnigem-cenia-card",
+    "name": "Egnigem Cenia Card",
+    "itemId": 4346,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "elastic-band",
     "name": "Elastic Band",
     "itemId": 7200,
@@ -5706,6 +7065,22 @@
     "notes": "",
     "links": [],
     "sellValue": 190,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elder-branch",
+    "name": "Elder Branch",
+    "itemId": 7939,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -5745,6 +7120,22 @@
         "qty": 1
       }
     ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "electric-fist-3",
+    "name": "Electric Fist [3]",
+    "itemId": 1820,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -6331,6 +7722,22 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "emveretarcon",
+    "name": "Emveretarcon",
+    "itemId": 1011,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "errende-ebecee-card",
     "name": "Errende Ebecee Card",
     "itemId": 4349,
@@ -6491,6 +7898,58 @@
     "npcBuyable": "no"
   },
   {
+    "id": "explosion-card",
+    "name": "Explosion Card",
+    "itemId": 4267,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "eye-stone-ring-1",
+    "name": "Eye Stone Ring [1]",
+    "itemId": 2783,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fabre-card",
+    "name": "Fabre Card",
+    "itemId": 4002,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "fabric",
     "name": "Fabric",
     "itemId": 1059,
@@ -6552,6 +8011,22 @@
     ],
     "uses": [],
     "notes": "Civil Servant Taming Item",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fancy-flower-0",
+    "name": "Fancy Flower [0]",
+    "itemId": 2207,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -6854,6 +8329,54 @@
     "npcBuyable": "no"
   },
   {
+    "id": "finger-2",
+    "name": "Finger [2]",
+    "itemId": 1812,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 29000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fire-dragon-scale",
+    "name": "Fire Dragon Scale",
+    "itemId": 7451,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 926,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fireblend-0",
+    "name": "Fireblend [0]",
+    "itemId": 1133,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "fish-tail",
     "name": "Fish Tail",
     "itemId": 1023,
@@ -7051,6 +8574,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "flower",
+    "name": "Flower",
+    "itemId": 712,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "fluff",
     "name": "Fluff",
     "itemId": 914,
@@ -7071,6 +8612,11 @@
       {
         "for": "Mr. Smile",
         "qty": 10
+      },
+      {
+        "for": "Langry Repeatable Quest",
+        "qty": 25,
+        "note": "each turn-in"
       }
     ],
     "notes": "",
@@ -7098,6 +8644,56 @@
     "npcBuyable": "no"
   },
   {
+    "id": "fly-wing",
+    "name": "Fly Wing",
+    "itemId": 601,
+    "itemType": "Consumable",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 30,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "foolishness-of-the-blind",
+    "name": "Foolishness of the Blind",
+    "itemId": 7021,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "forbidden-grimoire-1",
+    "name": "Forbidden Grimoire [1]",
+    "itemId": 28628,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "forbidden-red-candle",
     "name": "Forbidden Red Candle",
     "itemId": 660,
@@ -7118,6 +8714,22 @@
     "notes": "Zealotus Taming Item",
     "links": [],
     "sellValue": 10000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "fortune-sword-0",
+    "name": "Fortune Sword [0]",
+    "itemId": 1223,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -7258,6 +8870,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "freezer-card",
+    "name": "Freezer Card",
+    "itemId": 4319,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "fresh-fish",
     "name": "Fresh Fish",
     "itemId": 579,
@@ -7317,6 +8947,38 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "friccas-circlet-0",
+    "name": "Fricca's Circlet [0]",
+    "itemId": 5124,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "friccos-shoes-0",
+    "name": "Fricco's Shoes [0]",
+    "itemId": 2417,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "fried-grasshopper-legs",
     "name": "Fried Grasshopper Legs",
     "itemId": 12041,
@@ -7328,7 +8990,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+1 STR for 20 minutes.",
+    "notes": "+1 STR for 20 minutes",
     "links": [],
     "sellValue": 1000,
     "sellSource": "hercules",
@@ -7346,7 +9008,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+1 LUK for 20 minutes.",
+    "notes": "+1 LUK for 20 minutes",
     "links": [],
     "sellValue": 1000,
     "sellSource": "hercules",
@@ -7364,7 +9026,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+5 LUK for 20 minutes.",
+    "notes": "+5 LUK for 20 minutes",
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
@@ -7382,7 +9044,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+3 LUK for 20 minutes.",
+    "notes": "+3 LUK for 20 minutes",
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
@@ -7407,11 +9069,34 @@
         "for": "Fireproof Potion",
         "qty": 2,
         "note": "Prepare Potion"
+      },
+      {
+        "for": "Lemly Repeatable Quest",
+        "qty": 25,
+        "note": "each turn-in"
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 125,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "frilldora-card",
+    "name": "Frilldora Card",
+    "itemId": 4088,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -7427,9 +9112,25 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+1 AGI for 20 minutes.",
+    "notes": "+1 AGI for 20 minutes",
     "links": [],
     "sellValue": 1000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "frozen-bow-1",
+    "name": "Frozen Bow [1]",
+    "itemId": 1731,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -7468,9 +9169,43 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+3 DEX for 20 minutes.",
+    "notes": "+3 DEX for 20 minutes",
     "links": [],
     "sellValue": 3000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "full-plate-0",
+    "name": "Full Plate [0]",
+    "itemId": 2316,
+    "itemType": "Equipment",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 40000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "full-plate-1",
+    "name": "Full Plate [1]",
+    "itemId": 2317,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -7499,6 +9234,22 @@
     "notes": "",
     "links": [],
     "sellValue": 352,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "gakkung-bow-2",
+    "name": "Gakkung Bow [2]",
+    "itemId": 1716,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 21000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -7570,6 +9321,40 @@
     "npcBuyable": "no"
   },
   {
+    "id": "gas-mask-0",
+    "name": "Gas Mask [0]",
+    "itemId": 5005,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "gazeti-card",
+    "name": "Gazeti Card",
+    "itemId": 4418,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "geek-glasses",
     "name": "Geek Glasses",
     "itemId": 2243,
@@ -7599,6 +9384,40 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "gemini-s58-card",
+    "name": "Gemini-S58 Card",
+    "itemId": 4354,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "gemmed-sallet-1",
+    "name": "Gemmed Sallet [1]",
+    "itemId": 2231,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 25000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "gemstone",
     "name": "Gemstone",
     "itemId": 7300,
@@ -7617,6 +9436,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "gentle-breeze-guitar-0",
+    "name": "Gentle Breeze Guitar [0]",
+    "itemId": 1917,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "ghost-coffin",
     "name": "Ghost Coffin",
     "itemId": 12363,
@@ -7629,6 +9464,22 @@
     ],
     "uses": [],
     "notes": "Whisper Taming Item. The emulators call this item Fit Pipe.",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ghost-whisper-1",
+    "name": "Ghost Whisper [1]",
+    "itemId": 400396,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
@@ -7676,7 +9527,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+8 VIT for 20 minutes.",
+    "notes": "+8 VIT for 20 minutes",
     "links": [],
     "sellValue": 30000,
     "sellSource": "hercules",
@@ -7701,6 +9552,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "giearth-card",
+    "name": "Giearth Card",
+    "itemId": 4087,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "gift-box",
     "name": "Gift Box",
     "itemId": 644,
@@ -7716,6 +9585,24 @@
     "notes": "",
     "links": [],
     "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "gig-card",
+    "name": "Gig Card",
+    "itemId": 4165,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -7834,6 +9721,56 @@
     "npcBuyable": "no"
   },
   {
+    "id": "gladius-3",
+    "name": "Gladius [3]",
+    "itemId": 1220,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 21500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "glaive-2",
+    "name": "Glaive [2]",
+    "itemId": 1454,
+    "itemType": "Equipment",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "glaive-3",
+    "name": "Glaive [3]",
+    "itemId": 1455,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "glass-bead",
     "name": "Glass Bead",
     "itemId": 746,
@@ -7924,6 +9861,24 @@
     "notes": "",
     "links": [],
     "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "goat-card",
+    "name": "Goat Card",
+    "itemId": 4150,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -8110,6 +10065,24 @@
     "notes": "",
     "links": [],
     "sellValue": 100000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "gold-acidus-card",
+    "name": "Gold Acidus Card",
+    "itemId": 4378,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -8321,7 +10294,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+1 INT for 20 minutes.",
+    "notes": "+1 INT for 20 minutes",
     "links": [],
     "sellValue": 1000,
     "sellSource": "hercules",
@@ -8376,6 +10349,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "great-bow-3",
+    "name": "Great Bow [3]",
+    "itemId": 1708,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "great-nature",
     "name": "Great Nature",
     "itemId": 997,
@@ -8397,6 +10386,40 @@
     "notes": "",
     "links": [],
     "sellValue": 1500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "greatest-general-card",
+    "name": "Greatest General Card",
+    "itemId": 4283,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "green-acre-guitar-0",
+    "name": "Green Acre Guitar [0]",
+    "itemId": 1916,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -8443,6 +10466,40 @@
     "notes": "",
     "links": [],
     "sellValue": 443,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "green-feeler-0",
+    "name": "Green Feeler [0]",
+    "itemId": 2298,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "green-ferus-card",
+    "name": "Green Ferus Card",
+    "itemId": 4381,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -8591,7 +10648,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+5 DEX for 20 minutes.",
+    "notes": "+5 DEX for 20 minutes",
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
@@ -8630,6 +10687,74 @@
     "notes": "",
     "links": [],
     "sellValue": 153,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "grizzly-card",
+    "name": "Grizzly Card",
+    "itemId": 4162,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "guard-1",
+    "name": "Guard [1]",
+    "itemId": 2102,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "guisarme-2",
+    "name": "Guisarme [2]",
+    "itemId": 1451,
+    "itemType": "Equipment",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 6500,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "guisarme-3",
+    "name": "Guisarme [3]",
+    "itemId": 1452,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 6500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -8894,6 +11019,40 @@
     "npcBuyable": "no"
   },
   {
+    "id": "harp-of-nepenthes-2",
+    "name": "Harp of Nepenthes [2]",
+    "itemId": 1926,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "harpy-card",
+    "name": "Harpy Card",
+    "itemId": 4325,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "harpy-feather",
     "name": "Harpy Feather",
     "itemId": 7115,
@@ -8908,6 +11067,22 @@
     "notes": "",
     "links": [],
     "sellValue": 571,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "harpy-talon",
+    "name": "Harpy Talon",
+    "itemId": 7116,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 605,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -9041,6 +11216,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "heater-card",
+    "name": "Heater Card",
+    "itemId": 4331,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "heavenly-fruit-juice",
     "name": "Heavenly Fruit Juice",
     "itemId": 12094,
@@ -9052,7 +11245,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+9 DEX for 20 minutes.",
+    "notes": "+9 DEX for 20 minutes",
     "links": [],
     "sellValue": 40000,
     "sellSource": "hercules",
@@ -9071,6 +11264,22 @@
     ],
     "uses": [],
     "notes": "Nightmare Terror Taming Item",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hellfire-0",
+    "name": "Hellfire [0]",
+    "itemId": 1471,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -9129,7 +11338,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+4 STR for 20 minutes.",
+    "notes": "+4 STR for 20 minutes",
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
@@ -9178,6 +11387,24 @@
     "notes": "",
     "links": [],
     "sellValue": 1500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hillslion-card",
+    "name": "Hillslion Card",
+    "itemId": 4453,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -9252,6 +11479,24 @@
     "notes": "",
     "links": [],
     "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hode-card",
+    "name": "Hode Card",
+    "itemId": 4081,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -9430,7 +11675,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+1 DEX for 20 minutes.",
+    "notes": "+1 DEX for 20 minutes",
     "links": [],
     "sellValue": 1000,
     "sellSource": "hercules",
@@ -9448,7 +11693,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+3 INT for 20 minutes.",
+    "notes": "+3 INT for 20 minutes",
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
@@ -9469,6 +11714,22 @@
     "notes": "",
     "links": [],
     "sellValue": 311,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hood-1",
+    "name": "Hood [1]",
+    "itemId": 2502,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -9513,6 +11774,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "horn-card",
+    "name": "Horn Card",
+    "itemId": 4045,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "horn-of-hell",
     "name": "Horn of Hell",
     "itemId": 10036,
@@ -9543,6 +11822,22 @@
     "notes": "",
     "links": [],
     "sellValue": 250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "horn-of-hillslion-3",
+    "name": "Horn of Hillslion [3]",
+    "itemId": 1825,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -9674,11 +11969,32 @@
         "for": "Fried Scorpion Tails",
         "qty": 10,
         "note": "+5 LUK food"
+      },
+      {
+        "for": "Lella Repeatable Quest",
+        "qty": 50,
+        "note": "each turn-in"
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 305,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "huuma-wing-shuriken-0",
+    "name": "Huuma Wing Shuriken [0]",
+    "itemId": 13300,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 45000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -9694,7 +12010,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+10 DEX for 20 minutes.",
+    "notes": "+10 DEX for 20 minutes",
     "links": [],
     "sellValue": 50000,
     "sellSource": "hercules",
@@ -9720,6 +12036,24 @@
         "qty": 1
       }
     ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hydrolancer-card",
+    "name": "Hydrolancer Card",
+    "itemId": 4384,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -9871,6 +12205,74 @@
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "ice-titan-card",
+    "name": "Ice Titan Card",
+    "itemId": 4417,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "icicle-fist-3",
+    "name": "Icicle Fist [3]",
+    "itemId": 1819,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "icicle-whip-0",
+    "name": "Icicle Whip [0]",
+    "itemId": 1966,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ifrit-card",
+    "name": "Ifrit Card",
+    "itemId": 4430,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "illusion-flower",
@@ -10036,10 +12438,42 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+10 VIT for 20 minutes.",
+    "notes": "+10 VIT for 20 minutes",
     "links": [],
     "sellValue": 50000,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "imperial-guard-1",
+    "name": "Imperial Guard [1]",
+    "itemId": 2153,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "imperial-spear-1",
+    "name": "Imperial Spear [1]",
+    "itemId": 1433,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -10054,7 +12488,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+8 AGI for 20 minutes.",
+    "notes": "+8 AGI for 20 minutes",
     "links": [],
     "sellValue": 30000,
     "sellSource": "hercules",
@@ -10135,6 +12569,22 @@
     "notes": "",
     "links": [],
     "sellValue": 329,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "inverse-scale-0",
+    "name": "Inverse Scale [0]",
+    "itemId": 1269,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -10256,7 +12706,7 @@
       "Skills"
     ],
     "uses": [],
-    "notes": "Used up to forge level 1 weapons.",
+    "notes": "Used up to forge level 1 weapons",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -10441,6 +12891,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "javelin-4",
+    "name": "Javelin [4]",
+    "itemId": 1402,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "jellopy",
     "name": "Jellopy",
     "itemId": 909,
@@ -10527,10 +12993,6 @@
     ],
     "uses": [
       {
-        "for": "Bascojin Pet Evolution",
-        "qty": 10
-      },
-      {
         "for": "Bacsojin Pet Evolution",
         "qty": 10
       }
@@ -10565,6 +13027,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "kaho-card",
+    "name": "Kaho Card",
+    "itemId": 4065,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "karvodailnirol",
     "name": "Karvodailnirol",
     "itemId": 972,
@@ -10587,6 +13067,58 @@
     "notes": "",
     "links": [],
     "sellValue": 200,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "kasa-card",
+    "name": "Kasa Card",
+    "itemId": 4431,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "katzbalger-0",
+    "name": "Katzbalger [0]",
+    "itemId": 1170,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "kavach-icarus-card",
+    "name": "Kavach Icarus Card",
+    "itemId": 4351,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -10642,6 +13174,22 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "knife-4",
+    "name": "Knife [4]",
+    "itemId": 1202,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -10727,6 +13275,58 @@
     "notes": "",
     "links": [],
     "sellValue": 420,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "laurell-weinder-card",
+    "name": "Laurell Weinder Card",
+    "itemId": 4350,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lava",
+    "name": "Lava",
+    "itemId": 7096,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 554,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lava-golem-card",
+    "name": "Lava Golem Card",
+    "itemId": 4184,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -10825,6 +13425,22 @@
     "notes": "",
     "links": [],
     "sellValue": 4000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lesser-elemental-ring-0",
+    "name": "Lesser Elemental Ring [0]",
+    "itemId": 2680,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -11025,6 +13641,54 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "level-3-earth-spike",
+    "name": "Level 3 Earth Spike",
+    "itemId": 686,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "level-3-fire-bolt",
+    "name": "Level 3 Fire Bolt",
+    "itemId": 690,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "level-3-lightening-bolt",
+    "name": "Level 3 Lightening Bolt",
+    "itemId": 692,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "level-4-cookbook",
     "name": "Level 4 Cookbook",
     "itemId": 7475,
@@ -11072,6 +13736,22 @@
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "level-5-cold-bolt",
+    "name": "Level 5 Cold Bolt",
+    "itemId": 689,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "level-5-cookbook",
@@ -11123,6 +13803,22 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "level-5-fire-ball",
+    "name": "Level 5 Fire Ball",
+    "itemId": 697,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "level-5-fire-wall-scroll",
     "name": "Level 5 Fire Wall Scroll",
     "itemId": 699,
@@ -11130,6 +13826,22 @@
     "actions": [
       "NPC"
     ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "level-5-soul-strike",
+    "name": "Level 5 Soul Strike",
+    "itemId": 695,
+    "itemType": "Consumable",
+    "actions": [],
     "categories": [
       "Uncategorized"
     ],
@@ -11518,6 +14230,72 @@
     "npcBuyable": "no"
   },
   {
+    "id": "long-horn-1",
+    "name": "Long Horn [1]",
+    "itemId": 1420,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "luciola-vespa-card",
+    "name": "Luciola Vespa Card",
+    "itemId": 4445,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "luciuss-fierce-armor-of-volcano-0",
+    "name": "Lucius's Fierce Armor of Volcano [0]",
+    "itemId": 2344,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 68000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "luciuss-fierce-armor-of-volcano-1",
+    "name": "Lucius's Fierce Armor of Volcano [1]",
+    "itemId": 2345,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 68000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "lucky-soup",
     "name": "Lucky Soup",
     "itemId": 12096,
@@ -11529,9 +14307,41 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+6 LUK for 20 minutes.",
+    "notes": "+6 LUK for 20 minutes",
     "links": [],
     "sellValue": 10000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "luna-bow-2",
+    "name": "Luna Bow [2]",
+    "itemId": 1723,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lunakaligo-3",
+    "name": "Lunakaligo [3]",
+    "itemId": 1544,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -11573,7 +14383,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+4 AGI for 20 minutes.",
+    "notes": "+4 AGI for 20 minutes",
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
@@ -11591,7 +14401,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+5 STR for 20 minutes.",
+    "notes": "+5 STR for 20 minutes",
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
@@ -11688,6 +14498,38 @@
     "npcBuyable": "no"
   },
   {
+    "id": "magma-fist-3",
+    "name": "Magma Fist [3]",
+    "itemId": 1818,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "magnis-cap-0",
+    "name": "Magni's Cap [0]",
+    "itemId": 5122,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "magnifier",
     "name": "Magnifier",
     "itemId": 611,
@@ -11708,6 +14550,42 @@
     "notes": "",
     "links": [],
     "sellValue": 20,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "magnolia-card",
+    "name": "Magnolia Card",
+    "itemId": 4076,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "main-gauche-3",
+    "name": "Main Gauche [3]",
+    "itemId": 1207,
+    "itemType": "Equipment",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1200,
     "sellSource": "hercules",
     "npcBuyable": "yes"
   },
@@ -11761,6 +14639,22 @@
         "qty": 1
       }
     ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "mandragora-cap-1",
+    "name": "Mandragora Cap [1]",
+    "itemId": 5399,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -11862,6 +14756,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "manteau-1",
+    "name": "Manteau [1]",
+    "itemId": 2506,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 16000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "mantis-card",
     "name": "Mantis Card",
     "itemId": 4079,
@@ -11907,6 +14817,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "mantle-1",
+    "name": "Mantle [1]",
+    "itemId": 2308,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "mao-guai-card",
     "name": "Mao Guai Card",
     "itemId": 4202,
@@ -11921,10 +14847,6 @@
       "Card"
     ],
     "uses": [
-      {
-        "for": "Bascojin Pet Evolution",
-        "qty": 10
-      },
       {
         "for": "Bacsojin Pet Evolution",
         "qty": 10
@@ -12037,6 +14959,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "masquerade-0",
+    "name": "Masquerade [0]",
+    "itemId": 2291,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "mastela-fruit",
     "name": "Mastela Fruit",
     "itemId": 522,
@@ -12089,7 +15027,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+5 INT for 20 minutes.",
+    "notes": "+5 INT for 20 minutes",
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
@@ -12243,6 +15181,24 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "medusa-card",
+    "name": "Medusa Card",
+    "itemId": 4124,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "memento",
     "name": "Memento",
     "itemId": 934,
@@ -12304,6 +15260,42 @@
     "npcBuyable": "no"
   },
   {
+    "id": "merman-card",
+    "name": "Merman Card",
+    "itemId": 4199,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "metaling-card",
+    "name": "Metaling Card",
+    "itemId": 4341,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "metaller-card",
     "name": "Metaller Card",
     "itemId": 4057,
@@ -12323,6 +15315,38 @@
         "qty": 1
       }
     ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "meteor-plate-1",
+    "name": "Meteor Plate [1]",
+    "itemId": 2364,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "mighty-staff-0",
+    "name": "Mighty Staff [0]",
+    "itemId": 1613,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -12374,6 +15398,24 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "mimic-card",
+    "name": "Mimic Card",
+    "itemId": 4205,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "mini-furnace",
     "name": "Mini Furnace",
     "itemId": 612,
@@ -12384,9 +15426,25 @@
       "Skills"
     ],
     "uses": [],
-    "notes": "Used up to make Iron, Steel and elemental stones (Iron Tempering, Steel Tempering, Enchanted Stone Craft).",
+    "notes": "Used up to make Iron, Steel and elemental stones (Iron Tempering, Steel Tempering, Enchanted Stone Craft)",
     "links": [],
     "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "mink-coat-1",
+    "name": "Mink Coat [1]",
+    "itemId": 2311,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -12425,7 +15483,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+2 LUK for 20 minutes.",
+    "notes": "+2 LUK for 20 minutes",
     "links": [],
     "sellValue": 2000,
     "sellSource": "hercules",
@@ -12618,6 +15676,86 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "morning-star-2",
+    "name": "Morning Star [2]",
+    "itemId": 1514,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 20500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "morpheuss-bracelet-0",
+    "name": "Morpheus's Bracelet [0]",
+    "itemId": 2649,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "morpheuss-hood-0",
+    "name": "Morpheus's Hood [0]",
+    "itemId": 5126,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "morpheuss-ring-0",
+    "name": "Morpheus's Ring [0]",
+    "itemId": 2648,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "morriganes-helm-0",
+    "name": "Morrigane's Helm [0]",
+    "itemId": 5127,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "morroc-fruit-wine",
     "name": "Morroc Fruit Wine",
     "itemId": 12049,
@@ -12629,7 +15767,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+4 INT for 20 minutes.",
+    "notes": "+4 INT for 20 minutes",
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
@@ -12750,6 +15888,40 @@
     "npcBuyable": "no"
   },
   {
+    "id": "muffler-1",
+    "name": "Muffler [1]",
+    "itemId": 2504,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 2500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "muka-card",
+    "name": "Muka Card",
+    "itemId": 4036,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "munak-card",
     "name": "Munak Card",
     "itemId": 4090,
@@ -12799,6 +15971,22 @@
     "notes": "",
     "links": [],
     "sellValue": 4450,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "muscle-cutter-2",
+    "name": "Muscle Cutter [2]",
+    "itemId": 1176,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -12957,6 +16145,38 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "necklace-of-oblivion",
+    "name": "Necklace of Oblivion",
+    "itemId": 1008,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "necklace-of-wisdom",
+    "name": "Necklace of Wisdom",
+    "itemId": 1007,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "needle-of-alarm",
     "name": "Needle of Alarm",
     "itemId": 1095,
@@ -13006,6 +16226,40 @@
     "notes": "",
     "links": [],
     "sellValue": 416,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "nepenthes-bow-2",
+    "name": "Nepenthes Bow [2]",
+    "itemId": 1740,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "nereid-card",
+    "name": "Nereid Card",
+    "itemId": 4167,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -13316,6 +16570,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "old-card-album",
+    "name": "Old Card Album",
+    "itemId": 616,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "old-frying-pan",
     "name": "Old Frying Pan",
     "itemId": 7031,
@@ -13457,6 +16727,22 @@
     "notes": "Open it, silly!",
     "links": [],
     "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "old-shuriken",
+    "name": "Old Shuriken",
+    "itemId": 7072,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 890,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -13977,6 +17263,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "orleanss-glove-1",
+    "name": "Orleans's Glove [1]",
+    "itemId": 2701,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "outdoor-cooking-kit",
     "name": "Outdoor Cooking Kit",
     "itemId": 12125,
@@ -14016,6 +17318,38 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "padded-armor-1",
+    "name": "Padded Armor [1]",
+    "itemId": 2313,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 24000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "panacea",
+    "name": "Panacea",
+    "itemId": 525,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -14091,7 +17425,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+6 DEX for 20 minutes.",
+    "notes": "+6 DEX for 20 minutes",
     "links": [],
     "sellValue": 10000,
     "sellSource": "hercules",
@@ -14164,6 +17498,24 @@
         "qty": 1
       }
     ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "peco-peco-egg-card",
+    "name": "Peco Peco Egg Card",
+    "itemId": 4007,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -14271,6 +17623,42 @@
     "notes": "",
     "links": [],
     "sellValue": 1500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "permeter-card",
+    "name": "Permeter Card",
+    "itemId": 4311,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "pest-card",
+    "name": "Pest Card",
+    "itemId": 4315,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -14390,6 +17778,58 @@
     "npcBuyable": "no"
   },
   {
+    "id": "phracon",
+    "name": "Phracon",
+    "itemId": 1010,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "phreeoni-card",
+    "name": "Phreeoni Card",
+    "itemId": 4121,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "picky-card",
+    "name": "Picky Card",
+    "itemId": 4008,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "piece-of-bamboo",
     "name": "Piece of Bamboo",
     "itemId": 7150,
@@ -14499,6 +17939,54 @@
     "npcBuyable": "no"
   },
   {
+    "id": "piece-of-queens-wing",
+    "name": "Piece of Queen's Wing",
+    "itemId": 6326,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 815,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "piercing-staff-0",
+    "name": "Piercing Staff [0]",
+    "itemId": 1626,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "pike-4",
+    "name": "Pike [4]",
+    "itemId": 1408,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1725,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "pincher-of-beetle",
     "name": "Pincher of Beetle",
     "itemId": 7202,
@@ -14513,6 +18001,22 @@
     "notes": "",
     "links": [],
     "sellValue": 145,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "pinguicula-corsage-1",
+    "name": "Pinguicula Corsage [1]",
+    "itemId": 2745,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -14583,6 +18087,22 @@
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "platinum-shield-0",
+    "name": "Platinum Shield [0]",
+    "itemId": 2122,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "pocket-watch",
@@ -14690,6 +18210,58 @@
     "npcBuyable": "no"
   },
   {
+    "id": "poison-spore-card",
+    "name": "Poison Spore Card",
+    "itemId": 4048,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "pole-axe-1",
+    "name": "Pole Axe [1]",
+    "itemId": 1417,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "poporing-card",
+    "name": "Poporing Card",
+    "itemId": 4033,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "porcupine-quill",
     "name": "Porcupine Quill",
     "itemId": 1027,
@@ -14702,10 +18274,34 @@
       "Repeatable Quest",
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Yullo Repeatable Quest",
+        "qty": 25,
+        "note": "each turn-in"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 79,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "poring-card",
+    "name": "Poring Card",
+    "itemId": 4001,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -14947,7 +18543,7 @@
         "qty": 2000
       }
     ],
-    "notes": "Used for Server Hats, Pet Evolutions, and more! Check the uaRO wiki for more details.",
+    "notes": "Used for Server Hats, Pet Evolutions, and more! Check the uaRO wiki for more details",
     "links": [],
     "sellValue": 0,
     "sellSource": "rathena-renewal",
@@ -15034,7 +18630,13 @@
       "Repeatable Quest",
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Laertes Repeatable Quest",
+        "qty": 25,
+        "note": "each turn-in"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 45,
@@ -15195,6 +18797,42 @@
     "npcBuyable": "no"
   },
   {
+    "id": "punk-card",
+    "name": "Punk Card",
+    "itemId": 4313,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "pupa-card",
+    "name": "Pupa Card",
+    "itemId": 4003,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "puppet",
     "name": "Puppet",
     "itemId": 740,
@@ -15288,6 +18926,24 @@
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "queen-scaraba-card",
+    "name": "Queen Scaraba Card",
+    "itemId": 4507,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -15461,6 +19117,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "rake-horn-helm",
+    "name": "Rake Horn Helm",
+    "itemId": 6321,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 411,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "red-bandana-0",
     "name": "Red Bandana [0]",
     "itemId": 2275,
@@ -15613,6 +19285,40 @@
     "npcBuyable": "no"
   },
   {
+    "id": "red-ferus-card",
+    "name": "Red Ferus Card",
+    "itemId": 4380,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "red-flame-whip-0",
+    "name": "Red Flame Whip [0]",
+    "itemId": 1965,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "red-gemstone",
     "name": "Red Gemstone",
     "itemId": 716,
@@ -15745,7 +19451,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+6 INT for 20 minutes.",
+    "notes": "+6 INT for 20 minutes",
     "links": [],
     "sellValue": 10000,
     "sellSource": "hercules",
@@ -15931,6 +19637,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "remover-card",
+    "name": "Remover Card",
+    "itemId": 4353,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "reptile-tongue",
     "name": "Reptile Tongue",
     "itemId": 903,
@@ -16027,6 +19751,38 @@
     "npcBuyable": "no"
   },
   {
+    "id": "rider-insignia-1",
+    "name": "Rider Insignia [1]",
+    "itemId": 2530,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ring-1",
+    "name": "Ring [1]",
+    "itemId": 2621,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "ring-of-death",
     "name": "Ring of Death",
     "itemId": 10031,
@@ -16034,6 +19790,56 @@
     "actions": [],
     "categories": [
       "Pet"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ring-of-flame-lord-0",
+    "name": "Ring Of Flame Lord [0]",
+    "itemId": 2678,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ring-of-resonance-0",
+    "name": "Ring Of Resonance [0]",
+    "itemId": 2679,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "rocker-card",
+    "name": "Rocker Card",
+    "itemId": 4021,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
     ],
     "uses": [],
     "notes": "",
@@ -16077,6 +19883,56 @@
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "rod-4",
+    "name": "Rod [4]",
+    "itemId": 1602,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 25,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "roda-frog-card",
+    "name": "Roda Frog Card",
+    "itemId": 4014,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "rogues-treasure-0",
+    "name": "Rogue's Treasure [0]",
+    "itemId": 2620,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "romantic-flower-0",
@@ -16127,6 +19983,38 @@
     "npcBuyable": "no"
   },
   {
+    "id": "romantic-leaf-0",
+    "name": "Romantic Leaf [0]",
+    "itemId": 2270,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "rope-4",
+    "name": "Rope [4]",
+    "itemId": 1951,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "rosary-0",
     "name": "Rosary [0]",
     "itemId": 2608,
@@ -16148,6 +20036,22 @@
     "sellValue": 7500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "rosary-1",
+    "name": "Rosary [1]",
+    "itemId": 2626,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 7500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "rose-quartz",
@@ -16409,7 +20313,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+8 INT for 20 minutes.",
+    "notes": "+8 INT for 20 minutes",
     "links": [],
     "sellValue": 30000,
     "sellSource": "hercules",
@@ -16626,6 +20530,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "saber-3",
+    "name": "Saber [3]",
+    "itemId": 1127,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 24500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "safety-helmet-0",
     "name": "Safety Helmet [0]",
     "itemId": 5009,
@@ -16646,6 +20566,22 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "saints-robe-1",
+    "name": "Saint's Robe [1]",
+    "itemId": 2326,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 27000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -16673,6 +20609,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "salamander-card",
+    "name": "Salamander Card",
+    "itemId": 4429,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "sand-clump",
     "name": "Sand Clump",
     "itemId": 7124,
@@ -16687,6 +20641,22 @@
     "notes": "",
     "links": [],
     "sellValue": 353,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sandals-1",
+    "name": "Sandals [1]",
+    "itemId": 2402,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -16810,6 +20780,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "savage-card",
+    "name": "Savage Card",
+    "itemId": 4078,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "savory-sauce",
     "name": "Savory Sauce",
     "itemId": 7454,
@@ -16886,6 +20874,56 @@
     "links": [],
     "sellValue": 233,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "scalpel-3",
+    "name": "Scalpel [3]",
+    "itemId": 13027,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "scapulare-1",
+    "name": "Scapulare [1]",
+    "itemId": 2324,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 3250,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "scaraba-card",
+    "name": "Scaraba Card",
+    "itemId": 4505,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -16989,6 +21027,24 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "scorpion-card",
+    "name": "Scorpion Card",
+    "itemId": 4068,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "scorpion-claw",
     "name": "Scorpion Claw",
     "itemId": 7125,
@@ -17068,6 +21124,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "sea-witchs-foot-1",
+    "name": "Sea Witch's Foot [1]",
+    "itemId": 1973,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "sea-otter-fur",
     "name": "Sea-otter Fur",
     "itemId": 7065,
@@ -17115,7 +21187,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+4 VIT for 20 minutes.",
+    "notes": "+4 VIT for 20 minutes",
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
@@ -17133,7 +21205,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+2 STR for 20 minutes.",
+    "notes": "+2 STR for 20 minutes",
     "links": [],
     "sellValue": 2000,
     "sellSource": "hercules",
@@ -17213,9 +21285,14 @@
         "for": "Cooked Nine Tail's Tails",
         "qty": 10,
         "note": "+10 LUK food"
+      },
+      {
+        "for": "Lilla Repeatable Quest",
+        "qty": 50,
+        "note": "each turn-in"
       }
     ],
-    "notes": "Green Salad",
+    "notes": "",
     "links": [],
     "sellValue": 403,
     "sellSource": "hercules",
@@ -17268,6 +21345,22 @@
     "notes": "",
     "links": [],
     "sellValue": 7,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "shield-of-naga-1",
+    "name": "Shield of Naga [1]",
+    "itemId": 2134,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -17354,9 +21447,25 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+6 STR for 20 minutes.",
+    "notes": "+6 STR for 20 minutes",
     "links": [],
     "sellValue": 10000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "shoes-1",
+    "name": "Shoes [1]",
+    "itemId": 2404,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1750,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -17558,6 +21667,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "silver-robe-1",
+    "name": "Silver Robe [1]",
+    "itemId": 2333,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 3500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "singing-flower",
     "name": "Singing Flower",
     "itemId": 629,
@@ -17630,6 +21755,22 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "single-horn-helm",
+    "name": "Single Horn Helm",
+    "itemId": 6324,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 351,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "skel-bone",
     "name": "Skel-Bone",
     "itemId": 932,
@@ -17644,6 +21785,22 @@
     "notes": "",
     "links": [],
     "sellValue": 116,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "skipping-rope-0",
+    "name": "Skipping Rope [0]",
+    "itemId": 1968,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -17727,6 +21884,40 @@
     "npcBuyable": "no"
   },
   {
+    "id": "sky-deleter-card",
+    "name": "Sky Deleter Card",
+    "itemId": 4158,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "slayer-3",
+    "name": "Slayer [3]",
+    "itemId": 1152,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 7500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "slick-paper",
     "name": "Slick Paper",
     "itemId": 7111,
@@ -17751,6 +21942,22 @@
     "notes": "",
     "links": [],
     "sellValue": 353,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "small-bradium",
+    "name": "Small Bradium",
+    "itemId": 6319,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 162,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -17796,6 +22003,40 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "small-water-bottle",
+    "name": "Small Water Bottle",
+    "itemId": 12353,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 400,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "smokie-card",
+    "name": "Smokie Card",
+    "itemId": 4044,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "smokie-leaf-0",
     "name": "Smokie Leaf [0]",
     "itemId": 5064,
@@ -17831,7 +22072,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+2 AGI for 20 minutes.",
+    "notes": "+2 AGI for 20 minutes",
     "links": [],
     "sellValue": 2000,
     "sellSource": "hercules",
@@ -17876,6 +22117,40 @@
     "notes": "",
     "links": [],
     "sellValue": 41,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sniping-suit-1",
+    "name": "Sniping Suit [1]",
+    "itemId": 2367,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "snowier-card",
+    "name": "Snowier Card",
+    "itemId": 4415,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -18178,9 +22453,25 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+7 DEX for 20 minutes.",
+    "notes": "+7 DEX for 20 minutes",
     "links": [],
     "sellValue": 20000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "soul-staff-0",
+    "name": "Soul Staff [0]",
+    "itemId": 1472,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -18210,6 +22501,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "spear-4",
+    "name": "Spear [4]",
+    "itemId": 1405,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 850,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "special-meat-stew",
     "name": "Special Meat Stew",
     "itemId": 12089,
@@ -18221,7 +22528,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+9 AGI for 20 minutes.",
+    "notes": "+9 AGI for 20 minutes",
     "links": [],
     "sellValue": 40000,
     "sellSource": "hercules",
@@ -18239,7 +22546,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+7 INT for 20 minutes.",
+    "notes": "+7 INT for 20 minutes",
     "links": [],
     "sellValue": 20000,
     "sellSource": "hercules",
@@ -18257,7 +22564,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+8 DEX for 20 minutes.",
+    "notes": "+8 DEX for 20 minutes",
     "links": [],
     "sellValue": 30000,
     "sellSource": "hercules",
@@ -18275,7 +22582,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+5 VIT for 20 minutes.",
+    "notes": "+5 VIT for 20 minutes",
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
@@ -18355,6 +22662,38 @@
     "sellValue": 350,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "spike-0",
+    "name": "Spike [0]",
+    "itemId": 1523,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "spiritual-ring-0",
+    "name": "Spiritual Ring [0]",
+    "itemId": 2677,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "splendid-mirror",
@@ -18457,6 +22796,54 @@
     "npcBuyable": "no"
   },
   {
+    "id": "sprint-mail-1",
+    "name": "Sprint Mail [1]",
+    "itemId": 2387,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sprint-ring-0",
+    "name": "Sprint Ring [0]",
+    "itemId": 2744,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sprint-shoes-1",
+    "name": "Sprint Shoes [1]",
+    "itemId": 2440,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "squid-ink",
     "name": "Squid Ink",
     "itemId": 1024,
@@ -18502,6 +22889,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "staff-3",
+    "name": "Staff [3]",
+    "itemId": 1608,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 4750,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "staff-of-leader",
     "name": "Staff of Leader",
     "itemId": 12364,
@@ -18514,6 +22917,24 @@
     ],
     "uses": [],
     "notes": "Goblin Leader Taming Item",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "stainer-card",
+    "name": "Stainer Card",
+    "itemId": 4039,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -18579,7 +23000,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+7 AGI for 20 minutes.",
+    "notes": "+7 AGI for 20 minutes",
     "links": [],
     "sellValue": 20000,
     "sellSource": "hercules",
@@ -18597,7 +23018,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+4 LUK for 20 minutes.",
+    "notes": "+4 LUK for 20 minutes",
     "links": [],
     "sellValue": 4000,
     "sellSource": "hercules",
@@ -18615,7 +23036,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+5 AGI for 20 minutes.",
+    "notes": "+5 AGI for 20 minutes",
     "links": [],
     "sellValue": 5000,
     "sellSource": "hercules",
@@ -18633,7 +23054,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+1 VIT for 20 minutes.",
+    "notes": "+1 VIT for 20 minutes",
     "links": [],
     "sellValue": 1000,
     "sellSource": "hercules",
@@ -18651,7 +23072,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+10 AGI for 20 minutes.",
+    "notes": "+10 AGI for 20 minutes",
     "links": [],
     "sellValue": 50000,
     "sellSource": "hercules",
@@ -18669,7 +23090,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+10 STR for 20 minutes.",
+    "notes": "+10 STR for 20 minutes",
     "links": [],
     "sellValue": 50000,
     "sellSource": "hercules",
@@ -18939,6 +23360,40 @@
     "npcBuyable": "no"
   },
   {
+    "id": "steel-arrow-quiver",
+    "name": "Steel Arrow Quiver",
+    "itemId": 12006,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "steel-chonchon-card",
+    "name": "Steel Chonchon Card",
+    "itemId": 4042,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "stellar",
     "name": "Stellar",
     "itemId": 2294,
@@ -19009,6 +23464,40 @@
     "notes": "",
     "links": [],
     "sellValue": 23,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "stem-of-nepenthes-2",
+    "name": "Stem of Nepenthes [2]",
+    "itemId": 1979,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "stem-worm-card",
+    "name": "Stem Worm Card",
+    "itemId": 4224,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -19153,6 +23642,38 @@
     "npcBuyable": "no"
   },
   {
+    "id": "stone-buckler-1",
+    "name": "Stone Buckler [1]",
+    "itemId": 2114,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "stone-fragment",
+    "name": "Stone Fragment",
+    "itemId": 7067,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 320,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "stone-heart",
     "name": "Stone Heart",
     "itemId": 953,
@@ -19166,10 +23687,48 @@
       "uaRO",
       "Dungeon Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Private Jeremy Repeatable Quest",
+        "qty": 25,
+        "note": "each turn-in"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 92,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "stone-of-sage",
+    "name": "Stone of Sage",
+    "itemId": 12040,
+    "itemType": "Consumable",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 50000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "stop-post-0",
+    "name": "Stop Post [0]",
+    "itemId": 2272,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -19294,7 +23853,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+8 LUK for 20 minutes.",
+    "notes": "+8 LUK for 20 minutes",
     "links": [],
     "sellValue": 30000,
     "sellSource": "hercules",
@@ -19318,6 +23877,72 @@
         "qty": 1
       }
     ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "strong-vine",
+    "name": "Strong Vine",
+    "itemId": 6041,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 15,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "succubus-card",
+    "name": "Succubus Card",
+    "itemId": 4218,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "succubus-horn-0",
+    "name": "Succubus Horn [0]",
+    "itemId": 5066,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sucsamad-0",
+    "name": "Sucsamad [0]",
+    "itemId": 1236,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -19352,7 +23977,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+7 VIT for 20 minutes.",
+    "notes": "+7 VIT for 20 minutes",
     "links": [],
     "sellValue": 20000,
     "sellSource": "hercules",
@@ -19621,6 +24246,40 @@
     "npcBuyable": "no"
   },
   {
+    "id": "sword-guardian-card",
+    "name": "Sword Guardian Card",
+    "itemId": 4427,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "sword-mace-1",
+    "name": "Sword Mace [1]",
+    "itemId": 1517,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 25000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "talon",
     "name": "Talon",
     "itemId": 917,
@@ -19698,6 +24357,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "tao-gunka-card",
+    "name": "Tao Gunka Card",
+    "itemId": 4302,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "tassel",
     "name": "Tassel",
     "itemId": 7301,
@@ -19729,6 +24406,24 @@
     "actions": [],
     "categories": [
       "Pet"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "tatacho-card",
+    "name": "Tatacho Card",
+    "itemId": 4442,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
     ],
     "uses": [],
     "notes": "",
@@ -19832,7 +24527,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+9 STR for 20 minutes.",
+    "notes": "+9 STR for 20 minutes",
     "links": [],
     "sellValue": 40000,
     "sellSource": "hercules",
@@ -19879,7 +24574,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+3 AGI for 20 minutes.",
+    "notes": "+3 AGI for 20 minutes",
     "links": [],
     "sellValue": 3000,
     "sellSource": "hercules",
@@ -20159,6 +24854,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "town-sword-2",
+    "name": "Town Sword [2]",
+    "itemId": 1147,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 21000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "toxic-gas",
     "name": "Toxic Gas",
     "itemId": 7322,
@@ -20307,6 +25018,22 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "treasure-box",
+    "name": "Treasure Box",
+    "itemId": 7444,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 150000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "tree-root",
     "name": "Tree Root",
     "itemId": 902,
@@ -20354,7 +25081,7 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+9 INT for 20 minutes.",
+    "notes": "+9 INT for 20 minutes",
     "links": [],
     "sellValue": 40000,
     "sellSource": "hercules",
@@ -20501,6 +25228,88 @@
     "links": [],
     "sellValue": 340,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "twin-horn-helm",
+    "name": "Twin Horn Helm",
+    "itemId": 6323,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 364,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "two-handed-sword-2",
+    "name": "Two-Handed Sword [2]",
+    "itemId": 1158,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 30000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "unholy-touch-0",
+    "name": "Unholy Touch [0]",
+    "itemId": 1263,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "unicorn-horn-0",
+    "name": "Unicorn Horn [0]",
+    "itemId": 2257,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "unripe-acorn",
+    "name": "Unripe Acorn",
+    "itemId": 12346,
+    "itemType": "Consumable",
+    "actions": [
+      "Junk"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -20672,6 +25481,54 @@
     "npcBuyable": "no"
   },
   {
+    "id": "veteran-axe-2",
+    "name": "Veteran Axe [2]",
+    "itemId": 1384,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "veteran-hammer-2",
+    "name": "Veteran Hammer [2]",
+    "itemId": 1548,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "veteran-sword-1",
+    "name": "Veteran Sword [1]",
+    "itemId": 1188,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "violet-dyestuffs",
     "name": "Violet Dyestuffs",
     "itemId": 981,
@@ -20701,6 +25558,60 @@
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "vocal-card",
+    "name": "Vocal Card",
+    "itemId": 4211,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "waghnak-3",
+    "name": "Waghnak [3]",
+    "itemId": 1801,
+    "itemType": "Equipment",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 4000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "wand-2",
+    "name": "Wand [2]",
+    "itemId": 1604,
+    "itemType": "Equipment",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 1250,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "wanderer-card",
@@ -20752,6 +25663,22 @@
     "sellValue": 6000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "weihna-2",
+    "name": "Weihna [2]",
+    "itemId": 13047,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "well-ripened-berry",
@@ -20856,6 +25783,22 @@
     "notes": "",
     "links": [],
     "sellValue": 7500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "whip-of-balance-3",
+    "name": "Whip of Balance [3]",
+    "itemId": 1980,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -21011,6 +25954,22 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "white-spider-limb",
+    "name": "White Spider Limb",
+    "itemId": 6325,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 502,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "whole-roast",
     "name": "Whole Roast",
     "itemId": 12072,
@@ -21022,9 +25981,27 @@
       "Cooking"
     ],
     "uses": [],
-    "notes": "+7 STR for 20 minutes.",
+    "notes": "+7 STR for 20 minutes",
     "links": [],
     "sellValue": 20000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wickebine-tres-card",
+    "name": "Wickebine Tres Card",
+    "itemId": 4348,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -21041,6 +26018,22 @@
     ],
     "uses": [],
     "notes": "Dokebi Pet accessory",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wild-beast-claw-1",
+    "name": "Wild Beast Claw [1]",
+    "itemId": 1268,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -21188,6 +26181,22 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "windhawk-0",
+    "name": "Windhawk [0]",
+    "itemId": 1307,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 9000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "wing-of-dragonfly",
     "name": "Wing of Dragonfly",
     "itemId": 7064,
@@ -21243,6 +26252,22 @@
     "npcBuyable": "no"
   },
   {
+    "id": "wing-staff-0",
+    "name": "Wing Staff [0]",
+    "itemId": 1616,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "witched-starsand",
     "name": "Witched Starsand",
     "itemId": 1061,
@@ -21270,6 +26295,22 @@
     "notes": "Used for creating Slim Potions",
     "links": [],
     "sellValue": 242,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "withered-flower",
+    "name": "Withered Flower",
+    "itemId": 6086,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 445,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -21400,6 +26441,24 @@
     "notes": "",
     "links": [],
     "sellValue": 340,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "wootan-fighter-card",
+    "name": "Wootan Fighter Card",
+    "itemId": 4261,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -22178,6 +27237,22 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "zelunium",
+    "name": "Zelunium",
+    "itemId": 25731,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "zenorc-card",
     "name": "Zenorc Card",
     "itemId": 4096,
@@ -22236,10 +27311,6 @@
     ],
     "uses": [
       {
-        "for": "Bascojin Pet Evolution",
-        "qty": 10
-      },
-      {
         "for": "Bacsojin Pet Evolution",
         "qty": 10
       }
@@ -22273,5 +27344,21 @@
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "zweihander-0",
+    "name": "Zweihander [0]",
+    "itemId": 1168,
+    "itemType": "Equipment",
+    "actions": [],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   }
 ]

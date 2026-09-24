@@ -3,7 +3,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
 import CheckboxGroup from './CheckboxGroup.jsx';
 import { ActionBadge, CategoryBadge } from './ItemBadges.jsx';
-import { ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES } from '../utils/labels.js';
+import { ALL_CATEGORIES, ALL_ITEM_TYPES, FILTER_ACTIONS } from '../utils/labels.js';
 import { countActiveFilters, countOptions, listOptions, toggleValue } from '../utils/filter.js';
 
 /**
@@ -46,7 +46,7 @@ export default memo(function FilterSidebar({
     onToggle: (value) => onChange({ ...filters, [key]: toggleValue(filters[key], value) }),
   });
 
-  const actionOptions = ignoreKeep ? ALL_ACTIONS.filter((action) => action !== 'Keep') : ALL_ACTIONS;
+  const actionOptions = ignoreKeep ? FILTER_ACTIONS.filter((action) => action !== 'Keep') : FILTER_ACTIONS;
 
   return (
     <div>

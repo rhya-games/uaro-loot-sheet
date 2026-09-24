@@ -56,7 +56,7 @@ export default function AboutPage() {
           </li>
           <li>
             <strong>Whobuy</strong>: average price players pay for it through @whobuy. ✕ in Vend or Whobuy means
-            NPCs sell it, so players don't trade it.
+            NPCs sell it (so players don't pay for it) or it can't be traded.
           </li>
           <li>
             <strong>NPC</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+

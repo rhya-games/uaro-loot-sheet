@@ -46,6 +46,7 @@ export const USE_TARGET_FIXES = {
   'new world quest': 'New World Quest',
   'Baophomet Jr Pet Evolution': 'Baphomet Jr Pet Evolution',
   'Diabloic Pet Evolution': 'Diabolic Pet Evolution',
+  'Bascojin Pet Evolution': 'Bacsojin Pet Evolution',
   'Diabolic Pet evolution': 'Diabolic Pet Evolution',
   'Rigid Nightmare Terror Pet evolution': 'Rigid Nightmare Terror Pet Evolution',
   'Finding the Moving Island (Moscovia Dungeon)': 'Finding the Moving Island Quest (Moscovia Dungeon Access)',

@@ -23,6 +23,36 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-24',
+    title: 'Repeatable quests',
+    changes: [
+      {
+        type: 'Added',
+        text: 'The 15 turn-in items list their repeatable quest, like “x25 Langry Repeatable Quest (each turn-in)”, and are tagged uaRO.',
+      },
+      {
+        type: 'Added',
+        text: '248 drops from the hunting-quest monsters and every monster on the repeatable-quest maps (cards, equipment and more).',
+      },
+      {
+        type: 'Changed',
+        text: 'New cards start as Vend; the other new drops have no action yet until they’re sorted. Items NPCs sell say NPC.',
+      },
+      { type: 'Fixed', text: 'Acorn is sold by the Acorn Dealer in Moscovia.' },
+      { type: 'Changed', text: '“Used For” only says what an item is for. Notes about which monsters drop an item are gone.' },
+      { type: 'Fixed', text: 'Three pet cards listed Bacsojin’s evolution twice, once misspelled.' },
+      {
+        type: 'Added',
+        text: '52 drops from uaRO’s renewal monsters (Scarabas, Queen Scaraba, Hillslion, Tatacho, Centipede, Bradium Golem, Naga, Cornus, Nepenthes, Dolomedes, Luciola Vespa and more), checked in game.',
+      },
+      { type: 'Changed', text: 'Meteo Plate Armor is now Meteor Plate, and Small Bottle is Small Water Bottle, their names in game.' },
+      {
+        type: 'Added',
+        text: 'A Junk action for items nothing uses and nobody pays for, like Unripe Acorn (NPCs won’t buy it either).',
+      },
+    ],
+  },
+  {
+    date: '2026-09-24',
     title: 'Cooking',
     changes: [
       {

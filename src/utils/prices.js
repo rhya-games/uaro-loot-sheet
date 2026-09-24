@@ -42,6 +42,11 @@ export function npcSellInfo(item) {
 /** NPCs sell this item (so players don't vend or @whobuy it). */
 export const isSoldByNpc = (item) => item.npcBuyable === 'yes' || item.npcBuyable === 'npc-only';
 
+const NOT_TRADEABLE = new Set(overrides.tradeRestrictions.notTradeable.items.map((entry) => entry.itemId));
+
+/** Players can trade this item (uaro-overrides.json, tradeRestrictions.notTradeable). */
+export const isTradeable = (item) => !NOT_TRADEABLE.has(item.itemId);
+
 /** Just the number (for sorting). null when it can't be sold or is unknown. */
 export function npcSellPrice(item) {
   const info = npcSellInfo(item);

@@ -5,6 +5,9 @@ import schema from '../data/schema.json';
  * there is only one list to update.
  */
 export const ALL_ACTIONS = schema.$defs.action.enum;
+
+/** Actions offered in the filter panel. Junk is left out: nobody filters for it. */
+export const FILTER_ACTIONS = ALL_ACTIONS.filter((action) => action !== 'Junk');
 export const ALL_ITEM_TYPES = schema.$defs.itemType.enum;
 export const ALL_CATEGORIES = schema.$defs.category.enum;
 
@@ -31,6 +34,10 @@ export const ACTIONS = {
   NPC: {
     description: 'Sell it to an NPC shop.',
     className: 'bg-blue-700 text-white dark:bg-blue-800 dark:text-blue-50',
+  },
+  Junk: {
+    description: 'Throw it away: nothing uses it and nobody pays for it.',
+    className: 'bg-gray-600 text-white dark:bg-gray-700 dark:text-gray-50',
   },
 };
 

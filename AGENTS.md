@@ -55,6 +55,9 @@ unit tests or formatter yet.
     doesn't apply.
   - `customSellValues`: base prices checked by hand, including confirmed 0z.
   - `notSellableToNpc`: shown as ✕.
+  - `tradeRestrictions`: `notTradeable` (✕ in Vend/Whobuy) and `checked`
+    (emulator trade flags confirmed on uaRO). Don't trust the emulators'
+    Trade flags: every one checked so far was wrong for uaRO.
   - `npcShops`: `uaroShops` (shops checked in game or on the wiki, with
     prices), `soldByNpc`, `notSoldByNpc`, and `renewalShops`.
   - `renewalContent`: uaRO's renewal areas, and renewal price differences
@@ -117,6 +120,11 @@ Match similar existing items. Look them up in loot.json first.
   spawns, shops and pets.
 - **Divine Pride**: only for items that are in none of the above.
 - In-game screenshots from the maintainer beat everything else.
+- `research/uaro-monsters.json`: uaRO monsters transcribed from in-game
+  `@mi` screenshots (stats and drop rates). uaRO changes renewal monsters'
+  drops, so for these monsters this beats the emulators' monster data.
+  Add new ones to `research/uaro-monsters-transcribed.mjs` and run
+  `node research/build-monsters.mjs`. The site doesn't read this folder.
 
 ## Code
 
