@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rhya's uaRO Loot Sheet: quickly determine what to do with your loot." />
+    <title>uaRO Loot Sheet</title>
+    <script>
+      // Pick light or dark before the page draws, so there's no white flash.
+      // Uses the choice saved by the header's theme toggle, or the system setting.
+      // Keep in sync with src/utils/theme.js.
+      try {
+        var saved = JSON.parse(localStorage.getItem('uaro-loot-sheet:theme'));
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

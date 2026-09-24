@@ -1,0 +1,31 @@
+{
+  "name": "uaro-loot-sheet",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Rhya's uaRO Loot Sheet: quickly determine what to do with your loot.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate && vite build",
+    "preview": "vite preview",
+    "import:csv": "node scripts/import-csv.mjs",
+    "validate": "node scripts/validate.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "papaparse": "^5.7.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "@floating-ui/react-dom": "^2.1.9",
+    "@heroicons/react": "^2.2.0",
+    "fuse.js": "^7.5.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}
