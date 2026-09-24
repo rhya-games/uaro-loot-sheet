@@ -23,6 +23,25 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-24',
+    title: 'Repeatable quests',
+    changes: [
+      {
+        type: 'Added',
+        text: 'The 15 turn-in items list their repeatable quest, like “x25 Langry Repeatable Quest (each turn-in)”, and are tagged uaRO.',
+      },
+      {
+        type: 'Added',
+        text: '248 drops from the hunting-quest monsters and every monster on the repeatable-quest maps (cards, equipment and more). Each note says which monsters drop it.',
+      },
+      {
+        type: 'Changed',
+        text: 'New cards start as Vend; the other new drops have no action yet until they’re sorted. Items NPCs sell say NPC.',
+      },
+      { type: 'Fixed', text: 'Acorn is sold by the Acorn Dealer in Moscovia.' },
+    ],
+  },
+  {
+    date: '2026-09-24',
     title: 'Cooking',
     changes: [
       {
