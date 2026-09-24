@@ -2675,6 +2675,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "coagulated-spell",
+    "name": "Coagulated Spell",
+    "itemId": 6608,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "uaRO"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "coal",
     "name": "Coal",
     "itemId": 1003,
@@ -2788,6 +2806,24 @@
     "links": [],
     "sellValue": 79,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "contaminated-magic",
+    "name": "Contaminated Magic",
+    "itemId": 6755,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "uaRO"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -5441,7 +5477,7 @@
     "links": [],
     "sellValue": 100,
     "sellSource": "hercules",
-    "npcBuyable": "no"
+    "npcBuyable": "yes"
   },
   {
     "id": "grape-juice",
@@ -5929,6 +5965,24 @@
     "notes": "",
     "links": [],
     "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hatii-claw-1",
+    "name": "Hatii Claw [1]",
+    "itemId": 1815,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -7152,6 +7206,24 @@
     "notes": "",
     "links": [],
     "sellValue": 1000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lever-action-rifle-2",
+    "name": "Lever Action Rifle [2]",
+    "itemId": 13170,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -10753,6 +10825,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "santas-bag",
+    "name": "Santa's Bag",
+    "itemId": 12132,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "sap-jelly",
     "name": "Sap Jelly",
     "itemId": 23187,
@@ -12670,6 +12760,24 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "temporal-crystal",
+    "name": "Temporal Crystal",
+    "itemId": 6607,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "uaRO"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {

@@ -41,6 +41,11 @@ export const CHANGELOG = [
         type: 'Changed',
         text: 'New vend prices for Peaked Hat, Phlogopite, Red Herb, Rose Quartz, Valhalla’s Flower and Expanded Token Fragment.',
       },
+      {
+        type: 'Added',
+        text: 'Temporal Crystal, Coagulated Spell, Contaminated Magic, Lever Action Rifle, Hatii Claw and Santa’s Bag, with vend prices.',
+      },
+      { type: 'Changed', text: 'Grape is sold by the Tool Dealer, so it now shows ✓ under NPC Buyable.' },
     ],
   },
   {

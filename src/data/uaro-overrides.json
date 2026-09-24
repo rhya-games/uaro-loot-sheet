@@ -57,8 +57,12 @@
       "shops": [
         {
           "name": "Tool Dealer",
+          "location": "Every inn",
           "checked": "2026-09-24",
+          "source": "In-game screenshots and https://wiki.uaro.net/Dealers/",
           "items": [
+            { "itemId": 611, "name": "Magnifier", "price": 40 },
+            { "itemId": 514, "name": "Grape", "price": 1500 },
           { "itemId": 536, "name": "Ice Cream", "price": 150 },
           { "itemId": 517, "name": "Meat", "price": 50 },
           { "itemId": 579, "name": "Fresh Fish", "price": 250 },
@@ -84,8 +88,8 @@
           { "itemId": 1773, "name": "Elven Arrow", "price": 10 },
           { "itemId": 1065, "name": "Trap", "price": 100 },
           { "itemId": 13200, "name": "Bullet", "price": 1 },
-          { "itemId": 13221, "name": "Silver Bullet", "price": 3, "note": "Guessed ID: the cheaper shop version; uaRO's price differs from both emulators." },
-          { "itemId": 13222, "name": "Bloody Shell", "price": 3, "note": "Guessed ID: the cheaper shop version; uaRO's price differs from both emulators." },
+          { "itemId": 13201, "name": "Silver Bullet", "price": 3 },
+          { "itemId": 13202, "name": "Bloody Shell", "price": 3 },
           { "itemId": 13250, "name": "Shuriken", "price": 4 },
           { "itemId": 13251, "name": "Nimbus Shuriken", "price": 5 },
           { "itemId": 13252, "name": "Flash Shuriken", "price": 8 },
@@ -129,11 +133,75 @@
             { "itemId": 25233, "name": "Cotton Wads", "price": 2500 },
             { "itemId": 7821, "name": "Green Apple", "price": 2500 }
           ]
+        },
+        {
+          "name": "Jackie (Ninja Materials Dealer)",
+          "location": "Prontera west inn (prt_in 233/136)",
+          "checked": "2026-09-24",
+          "source": "In-game screenshots and https://wiki.uaro.net/Dealers/",
+          "items": [
+            { "itemId": 13250, "name": "Shuriken", "price": 4 },
+            { "itemId": 13251, "name": "Nimbus Shuriken", "price": 5 },
+            { "itemId": 13252, "name": "Flash Shuriken", "price": 8 },
+            { "itemId": 13253, "name": "Sharp Leaf Shuriken", "price": 10 },
+            { "itemId": 13254, "name": "Thorn Needle Shuriken", "price": 20 },
+            { "itemId": 13255, "name": "Icicle Kunai", "price": 10 },
+            { "itemId": 13256, "name": "Black Earth Kunai", "price": 10 },
+            { "itemId": 13258, "name": "Heat Wave Kunai", "price": 10 },
+            { "itemId": 13257, "name": "High Wind Kunai", "price": 10 },
+            { "itemId": 13259, "name": "Fell Poison Kunai", "price": 10 },
+            { "itemId": 35360, "name": "Hamaya Kunai", "price": 10, "note": "uaRO item; not in the emulators." },
+            { "itemId": 35361, "name": "Shadow Kunai", "price": 10, "note": "uaRO item; not in the emulators." },
+            { "itemId": 35362, "name": "Formless Kunai", "price": 10, "note": "uaRO item; not in the emulators." },
+            { "itemId": 7521, "name": "Flame Stone", "price": 15 },
+            { "itemId": 7522, "name": "Ice Stone", "price": 15 },
+            { "itemId": 7523, "name": "Wind Stone", "price": 15 },
+            { "itemId": 7524, "name": "Shadow Orb", "price": 30 }
+          ]
+        },
+        {
+          "name": "Vincenzo (Gunslinger Materials Dealer)",
+          "location": "Prontera west inn (prt_in 236/136)",
+          "checked": "2026-09-24",
+          "source": "In-game screenshots and https://wiki.uaro.net/Dealers/",
+          "items": [
+            { "itemId": 13200, "name": "Bullet", "price": 1 },
+            { "itemId": 13201, "name": "Silver Bullet", "price": 3 },
+            { "itemId": 13202, "name": "Bloody Shell", "price": 3 },
+            { "itemId": 13228, "name": "Flare Bullet", "price": 3 },
+            { "itemId": 13229, "name": "Lightning Bullet", "price": 3, "note": "The wiki says 13299, which doesn't exist; 13229 is Lightning Bullet in the emulators." },
+            { "itemId": 13230, "name": "Ice Bullet", "price": 3 },
+            { "itemId": 13219, "name": "Stone Bullet", "price": 3, "note": "ID from the wiki; rAthena calls it Magic Stone Bullet." },
+            { "itemId": 13231, "name": "Poison Bullet", "price": 3 },
+            { "itemId": 13232, "name": "Dark Bullet", "price": 3, "note": "ID from the wiki; rAthena calls it Blind Bullet." },
+            { "itemId": 13206, "name": "Blind Sphere", "price": 10 },
+            { "itemId": 13203, "name": "Flare Sphere", "price": 10, "note": "The wiki says Flame Sphere; the game shows Flare Sphere." },
+            { "itemId": 13207, "name": "Freezing Sphere", "price": 10 },
+            { "itemId": 13204, "name": "Lightning Sphere", "price": 10 },
+            { "itemId": 13205, "name": "Poison Sphere", "price": 10 }
+          ]
+        },
+        {
+          "name": "Weapon Dealer",
+          "checked": "2026-09-24",
+          "source": "In-game screenshots (only part of the shop). IDs are the slotted versions with these prices in Hercules.",
+          "items": [
+            { "itemId": 1401, "name": "Javelin [3]", "price": 150 },
+            { "itemId": 1404, "name": "Spear [3]", "price": 1700 },
+            { "itemId": 1407, "name": "Pike [3]", "price": 3450 },
+            { "itemId": 1451, "name": "Guisarme [2]", "price": 13000 },
+            { "itemId": 1454, "name": "Glaive [2]", "price": 20000 },
+            { "itemId": 1457, "name": "Partizan", "price": 27000 },
+            { "itemId": 1463, "name": "Halberd [1]", "price": 54000, "note": "Shown in game as \"Hallberd\"." },
+            { "itemId": 1410, "name": "Lance", "price": 60000 },
+            { "itemId": 1146, "name": "Town Sword [1]", "price": 42000 },
+            { "itemId": 1245, "name": "Cinquedea [1]", "price": 40000 }
+          ]
         }
       ]
     },
     "soldByNpc": {
-      "about": "Items uaRO NPCs sell that aren't in the emulators' shops.",
+      "about": "Items uaRO NPCs sell that aren't in the emulators' shops (use uaroShops when you know the shop). Items don't need to be in loot.json.",
       "items": [
         { "itemId": 732, "name": "3carat Diamond", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
         { "itemId": 2605, "name": "Brooch [0]", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
@@ -142,8 +210,10 @@
       ]
     },
     "notSoldByNpc": {
-      "about": "Items the emulators' shops sell but uaRO's NPCs don't.",
-      "items": []
+      "about": "Items the emulators' shops sell but uaRO's NPCs don't. Items don't need to be in loot.json.",
+      "items": [
+        { "itemId": 1460, "name": "Trident [2]", "note": "No longer sold by NPCs on uaRO." }
+      ]
     }
   },
 

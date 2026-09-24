@@ -111,17 +111,18 @@ for (const listName of ['modifiedSellPrices', 'customSellValues', 'notSellableTo
     overriddenIds.set(entry.itemId, listName);
   }
 }
-const otherLists = {
-  reviewedPrices: overrides.renewalContent.reviewedPrices,
-  soldByNpc: overrides.npcShops.soldByNpc,
-  notSoldByNpc: overrides.npcShops.notSoldByNpc,
-};
-// Shop items don't have to be in loot.json, but if they are, names must match.
-for (const shop of overrides.npcShops.uaroShops.shops) {
-  for (const entry of shop.items) {
+const otherLists = { reviewedPrices: overrides.renewalContent.reviewedPrices };
+// Shop lists don't have to be in loot.json, but if an item is, names must match.
+const shopLists = [
+  ...overrides.npcShops.uaroShops.shops.map((shop) => [`uaroShops ${shop.name}`, shop.items]),
+  ['soldByNpc', overrides.npcShops.soldByNpc.items],
+  ['notSoldByNpc', overrides.npcShops.notSoldByNpc.items],
+];
+for (const [listName, entries] of shopLists) {
+  for (const entry of entries) {
     const item = itemsById.get(entry.itemId);
     if (item && item.name !== entry.name) {
-      errors.push(`${OVERRIDES_FILE} uaroShops ${shop.name}: itemId ${entry.itemId} is "${item.name}", not "${entry.name}"`);
+      errors.push(`${OVERRIDES_FILE} ${listName}: itemId ${entry.itemId} is "${item.name}", not "${entry.name}"`);
     }
   }
 }
