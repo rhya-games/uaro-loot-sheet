@@ -1,6 +1,8 @@
 # uaro-loot-sheet
 Rhya's uaRO Loot Sheet: quickly determine what to do with your loot.
 
+Live: https://rhya-ragnarok.github.io/uaro-loot-sheet/
+
 ## Running it locally
 
 Requires [Node.js](https://nodejs.org/) 20 or newer.
