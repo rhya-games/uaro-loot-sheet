@@ -10,6 +10,7 @@
     "build": "npm run validate && vite build",
     "preview": "vite preview",
     "import:csv": "node scripts/import-csv.mjs",
+    "sync:prices": "node scripts/sync-prices.mjs",
     "validate": "node scripts/validate.mjs"
   },
   "devDependencies": {

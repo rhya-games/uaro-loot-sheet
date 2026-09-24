@@ -19,7 +19,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 15500,
+    "sellValue": 12500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -45,7 +46,8 @@
     ],
     "notes": "Diamond Gambling",
     "links": [],
-    "npcSellPrice": 34100,
+    "sellValue": 27500,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -72,7 +74,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -91,7 +94,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 60,
+    "sellValue": 49,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -108,7 +112,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 1860,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -133,7 +138,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -169,7 +175,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 248,
+    "sellValue": 200,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -194,7 +201,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -237,7 +245,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 1502,
+    "sellValue": 1212,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -262,7 +271,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -287,7 +297,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -312,7 +323,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -331,7 +343,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 310,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -349,7 +362,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 223,
+    "sellValue": 180,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -375,7 +389,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 930,
+    "sellValue": 750,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -392,7 +407,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 3720,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -410,7 +426,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 62,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -445,7 +462,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 620,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -470,7 +488,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -494,7 +513,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 339,
+    "sellValue": 274,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -522,7 +542,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -546,7 +567,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -565,7 +587,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 279,
+    "sellValue": 225,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -589,7 +612,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 22,
+    "sellValue": 18,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -607,7 +631,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 1240,
+    "sellValue": 1000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -633,7 +658,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 600,
+    "sellValue": 484,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -650,7 +676,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 143,
+    "sellValue": 116,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -674,7 +701,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 416,
+    "sellValue": 336,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -692,7 +720,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 18600,
+    "sellValue": 15000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -710,7 +739,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 8,
+    "sellValue": 7,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -736,7 +766,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -759,7 +790,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -776,7 +808,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 620,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -800,7 +833,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 3720,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -822,7 +856,8 @@
     ],
     "notes": "Isis Taming Item",
     "links": [],
-    "npcSellPrice": 11160,
+    "sellValue": 9000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -839,7 +874,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 489,
+    "sellValue": 395,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -862,7 +898,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -880,7 +917,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 899,
+    "sellValue": 725,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -900,7 +938,8 @@
     "uses": [],
     "notes": "+10 DEX Food",
     "links": [],
-    "npcSellPrice": 634,
+    "sellValue": 512,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -917,7 +956,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 930,
+    "sellValue": 750,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -935,7 +975,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 124,
+    "sellValue": 100,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -953,7 +994,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 8,
+    "sellValue": 7,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -968,7 +1010,8 @@
     "uses": [],
     "notes": "Yoyo Pet food",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -994,7 +1037,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 248,
+    "sellValue": 200,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -1016,7 +1060,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 11160,
+    "sellValue": 9000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1045,7 +1090,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1062,7 +1108,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1087,7 +1134,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 545,
+    "sellValue": 440,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1104,7 +1152,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 158,
+    "sellValue": 128,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1121,7 +1170,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1139,7 +1189,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 107,
+    "sellValue": 87,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1156,7 +1207,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -1174,7 +1226,8 @@
     "uses": [],
     "notes": "Create Deadly Poison",
     "links": [],
-    "npcSellPrice": 19,
+    "sellValue": 16,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1196,7 +1249,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 15000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1213,7 +1267,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -1235,7 +1290,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 9300,
+    "sellValue": 7500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1253,7 +1309,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 39,
+    "sellValue": 32,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -1270,7 +1327,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 1860,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1288,7 +1346,8 @@
     "uses": [],
     "notes": "+10 AGI Food, Poporing Taming Item",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1311,7 +1370,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 238,
+    "sellValue": 192,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1328,7 +1388,8 @@
     "uses": [],
     "notes": "Sucubus Pet accessory",
     "links": [],
-    "npcSellPrice": 0,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1359,7 +1420,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 892,
+    "sellValue": 720,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1392,7 +1454,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 4960,
+    "sellValue": 4000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1420,7 +1483,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 7440,
+    "sellValue": 6000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1437,7 +1501,8 @@
     "uses": [],
     "notes": "Create Elemental Converter",
     "links": [],
-    "npcSellPrice": 2480,
+    "sellValue": 2000,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -1463,7 +1528,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 620,
+    "sellValue": 500,
+    "sellSource": "manual",
     "npcBuyable": "no"
   },
   {
@@ -1488,7 +1554,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 421,
+    "sellValue": 340,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1505,7 +1572,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 1249,
+    "sellValue": 1008,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1531,7 +1599,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 549,
+    "sellValue": 443,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1565,7 +1634,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 704,
+    "sellValue": 704,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1583,7 +1653,8 @@
     "uses": [],
     "notes": "Wizard Job Quest, Blacksmith Job Quest",
     "links": [],
-    "npcSellPrice": 279,
+    "sellValue": 300,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -1600,7 +1671,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 212,
+    "sellValue": 171,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1630,7 +1702,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 37,
+    "sellValue": 30,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1647,7 +1720,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 3100,
+    "sellValue": 2500,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -1664,7 +1738,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 620,
+    "sellValue": 500,
+    "sellSource": "manual",
     "npcBuyable": "npc-only"
   },
   {
@@ -1692,7 +1767,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1715,7 +1791,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1739,7 +1816,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1756,7 +1834,8 @@
     "uses": [],
     "notes": "Baphomet Jr. Taming Item",
     "links": [],
-    "npcSellPrice": 1116,
+    "sellValue": 900,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1785,7 +1864,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 1860,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1807,7 +1887,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 1240,
+    "sellValue": 1000,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -1824,7 +1905,8 @@
     "uses": [],
     "notes": "Succubus Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1841,7 +1923,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 75,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -1866,7 +1949,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 373,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1883,7 +1967,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 204,
+    "sellValue": 165,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -1900,7 +1985,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 15000,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -1917,7 +2003,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 15000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1934,7 +2021,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 347,
+    "sellValue": 280,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -1951,7 +2039,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -1974,7 +2063,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 462,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2001,7 +2091,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 411,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2024,7 +2115,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 361,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2049,7 +2141,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 100,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2077,7 +2170,8 @@
     ],
     "notes": "Create Deadly Poison",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 41,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2099,7 +2193,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2126,7 +2221,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2153,7 +2249,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2176,7 +2273,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 6000,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -2199,7 +2297,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 6000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2217,7 +2316,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 7,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -2235,7 +2335,8 @@
     "uses": [],
     "notes": "Lunatic Pet food",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2253,7 +2354,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 477,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2276,7 +2378,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2293,7 +2396,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 11500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2308,7 +2412,8 @@
     "uses": [],
     "notes": "Evil Nymph Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2333,7 +2438,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1400,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2351,7 +2457,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -2368,7 +2475,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2387,7 +2495,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2412,7 +2521,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2438,7 +2548,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3750,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2455,7 +2566,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2473,7 +2585,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 79,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2498,7 +2611,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 28,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -2522,7 +2636,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 520,
+    "sellValue": 420,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2556,25 +2671,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
-    "npcBuyable": null
-  },
-  {
-    "id": "clock-hands",
-    "name": "Clock Hands",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Keep",
-      "NPC"
-    ],
-    "categories": [
-      "Official Hat Quest"
-    ],
-    "uses": [],
-    "notes": "",
-    "links": [],
-    "npcSellPrice": null,
+    "sellValue": 104,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2599,7 +2697,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2627,7 +2726,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2658,7 +2758,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2675,7 +2776,8 @@
     "uses": [],
     "notes": "Professor skill",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 92,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2692,7 +2794,8 @@
     "uses": [],
     "notes": "+10 DEX Food",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 400,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2710,7 +2813,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 79,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2734,7 +2838,8 @@
     ],
     "notes": "Deviruchi Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2758,7 +2863,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -2775,7 +2881,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -2798,7 +2905,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 386,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2822,7 +2930,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2839,7 +2948,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "npc-only"
   },
   {
@@ -2856,7 +2966,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 45,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -2878,7 +2989,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2896,7 +3008,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 2500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2920,7 +3033,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2939,7 +3053,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2956,7 +3071,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 276,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -2979,7 +3095,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 6500,
+    "sellValue": 7500,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -3003,7 +3120,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -3020,7 +3138,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3037,7 +3156,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 403,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -3060,7 +3180,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 206,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3089,7 +3210,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 300,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3119,7 +3241,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 666,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3136,7 +3259,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 386,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3154,7 +3278,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 130,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3177,8 +3302,27 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 211,
+    "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "darkgreen-dyestuffs",
+    "name": "Darkgreen Dyestuffs",
+    "itemId": 979,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 4000,
+    "sellSource": "hercules",
+    "npcBuyable": null
   },
   {
     "id": "dead-branch-db",
@@ -3195,7 +3339,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 31,
+    "sellValue": 25,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -3212,14 +3357,15 @@
     "uses": [],
     "notes": "Poison Spore Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
     "id": "delicious-meat",
     "name": "Delicious Meat",
-    "itemId": null,
-    "itemType": "Misc",
+    "itemId": 11616,
+    "itemType": "Consumable",
     "actions": [],
     "categories": [
       "Pet",
@@ -3234,7 +3380,8 @@
     ],
     "notes": "Skelion Pet Food",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 700,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -3251,7 +3398,8 @@
     "uses": [],
     "notes": "Marionette Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -3276,7 +3424,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3299,7 +3448,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 521,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3317,7 +3467,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 225,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3335,7 +3486,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 200,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3360,7 +3512,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3377,7 +3530,8 @@
     "uses": [],
     "notes": "Spore Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3394,7 +3548,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12500,
+    "sellValue": 22500,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -3420,7 +3575,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 146,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3439,7 +3595,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 300,
+    "sellValue": 242,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3472,7 +3629,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 310,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3487,7 +3645,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 634,
+    "sellValue": 512,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3503,7 +3662,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 744,
+    "sellValue": 600,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3520,7 +3680,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 279,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -3544,7 +3705,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 125000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3569,7 +3731,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3586,7 +3749,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 128,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3612,7 +3776,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3631,7 +3796,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 98,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3654,7 +3820,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 161,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3671,7 +3838,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 20,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -3700,7 +3868,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -3725,7 +3894,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -3755,7 +3925,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 190,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3772,7 +3943,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 116,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3795,7 +3967,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3819,7 +3992,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 550,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3842,7 +4016,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3866,7 +4041,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3897,7 +4073,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3915,7 +4092,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -3940,7 +4118,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -3973,7 +4152,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 600,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -3997,7 +4177,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4015,7 +4196,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "manual",
     "npcBuyable": "no"
   },
   {
@@ -4054,7 +4236,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 153,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4071,7 +4254,8 @@
     "uses": [],
     "notes": "Civil Servant Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4088,7 +4272,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 340,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4110,7 +4295,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4128,7 +4314,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4153,7 +4340,8 @@
     ],
     "notes": "Peco Peco Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 2500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4199,7 +4387,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4226,7 +4415,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4244,7 +4434,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 333,
+    "sellValue": 269,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4261,7 +4452,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 206,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4278,7 +4470,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 60,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4295,7 +4488,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4312,7 +4506,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4336,7 +4531,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 121,
+    "sellValue": 98,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -4353,7 +4549,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4370,7 +4567,8 @@
     "uses": [],
     "notes": "Flail Goblin Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -4387,7 +4585,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -4412,7 +4611,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4429,7 +4629,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4456,7 +4657,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 51,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4480,7 +4682,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4497,7 +4700,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 356,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4514,7 +4718,8 @@
     "uses": [],
     "notes": "Zealotus Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4561,7 +4766,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 40000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4578,7 +4784,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 672,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4593,7 +4800,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 753,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -4608,7 +4816,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 753,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -4623,7 +4832,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 753,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -4638,7 +4848,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 753,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -4662,7 +4873,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 125,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -4679,7 +4891,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4699,7 +4912,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 125,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -4716,7 +4930,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 14500,
+    "sellValue": 17500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -4743,7 +4958,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 352,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -4767,7 +4983,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4784,7 +5001,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 20,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4801,7 +5019,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4829,7 +5048,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10000,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -4846,25 +5066,9 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 710,
+    "sellSource": "hercules",
     "npcBuyable": "no"
-  },
-  {
-    "id": "ghost-coffin",
-    "name": "Ghost Coffin",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Vend"
-    ],
-    "categories": [
-      "Pet"
-    ],
-    "uses": [],
-    "notes": "Whisper Taming Item",
-    "links": [],
-    "npcSellPrice": null,
-    "npcBuyable": null
   },
   {
     "id": "ghoul-card",
@@ -4892,7 +5096,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -4909,7 +5114,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 307,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4927,7 +5133,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4944,7 +5151,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 171,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4962,7 +5170,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 750,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4977,7 +5186,8 @@
     "uses": [],
     "notes": "Miyabi Doll Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -4994,7 +5204,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -5025,7 +5236,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 375,
+    "sellValue": 303,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5048,7 +5260,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 700,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -5108,7 +5321,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 100000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5125,7 +5339,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 7500,
+    "sellValue": 15000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5149,7 +5364,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5164,7 +5380,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5181,7 +5398,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 215,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5206,7 +5424,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5229,7 +5448,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 2500,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -5246,7 +5466,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 100,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5264,7 +5485,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 125,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5289,7 +5511,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 18,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5304,7 +5527,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5322,7 +5546,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5339,7 +5564,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5366,24 +5592,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 549,
-    "npcBuyable": null
-  },
-  {
-    "id": "green-dyestuffs",
-    "name": "Green Dyestuffs",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "NPC"
-    ],
-    "categories": [
-      "Uncategorized"
-    ],
-    "uses": [],
-    "notes": "",
-    "links": [],
-    "npcSellPrice": null,
+    "sellValue": 443,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5415,7 +5625,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5430,7 +5641,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5453,7 +5665,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5471,7 +5684,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5488,7 +5702,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 2000,
+    "sellValue": 5000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5505,7 +5720,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5522,7 +5738,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 153,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5545,7 +5762,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 23500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5560,7 +5778,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5585,7 +5804,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5602,7 +5822,8 @@
     "uses": [],
     "notes": "Hammer Gobling Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -5620,7 +5841,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5648,7 +5870,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5672,7 +5895,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 362,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5689,7 +5913,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 285,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5706,7 +5931,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 708,
+    "sellValue": 571,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5729,7 +5955,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5747,7 +5974,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5769,7 +5997,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5787,7 +6016,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 132,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5804,7 +6034,8 @@
     "uses": [],
     "notes": "Nightmare Terror Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5826,7 +6057,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 22000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5843,7 +6075,8 @@
     "uses": [],
     "notes": "Bongun Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5878,7 +6111,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5895,7 +6129,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5914,7 +6149,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 93,
+    "sellValue": 75,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5943,7 +6179,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -5971,7 +6208,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -5988,7 +6226,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6017,7 +6256,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6034,7 +6274,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 311,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6051,7 +6292,8 @@
     "uses": [],
     "notes": "Create Elemental Converter",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 58,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6066,7 +6308,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6081,7 +6324,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6098,7 +6342,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6125,7 +6370,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 400,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6143,7 +6389,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 241,
+    "sellValue": 195,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6160,7 +6407,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 294,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6190,7 +6438,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 378,
+    "sellValue": 305,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6215,7 +6464,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6240,7 +6490,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6257,7 +6508,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 75,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -6274,7 +6526,8 @@
     "uses": [],
     "notes": "+10 DEX Food",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 330,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6291,7 +6544,8 @@
     "uses": [],
     "notes": "Imp Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6315,7 +6569,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1510,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6343,7 +6598,8 @@
     ],
     "notes": "+10 DEX Food",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6363,7 +6619,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 187,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6380,7 +6637,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 28500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6397,7 +6655,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 57,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6414,7 +6673,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 329,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6440,7 +6700,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6455,7 +6716,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6472,7 +6734,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 25,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6497,7 +6760,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6521,7 +6785,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6544,7 +6809,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 22500,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -6562,7 +6828,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 187,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -6597,7 +6864,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6621,7 +6889,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6646,7 +6915,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6668,7 +6938,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 16,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6687,7 +6958,8 @@
     "uses": [],
     "notes": "Create Deadly Poison",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 200,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6704,7 +6976,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 25000,
+    "sellValue": 120000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6740,7 +7013,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6757,7 +7031,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -6774,7 +7049,8 @@
     "uses": [],
     "notes": "Shinobi Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6791,7 +7067,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 125,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6816,7 +7093,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 420,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -6845,7 +7123,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6863,7 +7142,8 @@
     "uses": [],
     "notes": "+10 INT Food",
     "links": [],
-    "npcSellPrice": 37,
+    "sellValue": 30,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6880,7 +7160,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6897,7 +7178,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6920,7 +7202,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 264,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6945,7 +7228,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -6981,7 +7265,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 125,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7005,7 +7290,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7025,7 +7311,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7050,7 +7337,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7067,7 +7355,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5000,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "npc-only"
   },
   {
@@ -7084,7 +7373,8 @@
     "uses": [],
     "notes": "Dullahan Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7108,7 +7398,8 @@
     ],
     "notes": "Golem Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7136,7 +7427,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7162,7 +7454,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7190,7 +7483,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7214,7 +7508,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 98,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7232,7 +7527,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 98,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7250,7 +7546,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 104,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7267,7 +7564,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 98,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7292,7 +7590,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7324,7 +7623,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7339,7 +7639,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7364,7 +7665,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4250,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -7393,7 +7695,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7418,7 +7721,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 25,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -7435,7 +7739,8 @@
     "uses": [],
     "notes": "+10 VIT Food",
     "links": [],
-    "npcSellPrice": 372,
+    "sellValue": 300,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -7453,7 +7758,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7478,7 +7784,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7505,7 +7812,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 12,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -7521,7 +7829,31 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": null
+  },
+  {
+    "id": "miracle-bandage",
+    "name": "Miracle Bandage",
+    "itemId": 23256,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [
+      {
+        "for": "Ancient Mummy Pet Evolution",
+        "qty": 3
+      }
+    ],
+    "notes": "Mummy Taming Item",
+    "links": [],
+    "sellValue": 5,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -7538,7 +7870,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 400,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7553,7 +7886,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 53,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7571,7 +7905,8 @@
     "uses": [],
     "notes": "Hunter Fly Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 750,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7588,7 +7923,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7605,7 +7941,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 30,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -7623,7 +7960,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7640,7 +7978,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 69,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7657,7 +7996,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 100,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7680,7 +8020,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 233,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7703,7 +8044,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7729,7 +8071,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7754,7 +8097,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4450,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7769,7 +8113,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7792,7 +8137,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 22,
+    "sellValue": 18,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7817,7 +8163,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7834,7 +8181,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7851,7 +8199,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7874,7 +8223,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 273,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7898,7 +8248,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 416,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7928,7 +8279,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -7963,7 +8315,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 325,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -7981,7 +8334,8 @@
     "uses": [],
     "notes": "Munak Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8003,7 +8357,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 284,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8025,7 +8380,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 550,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8048,7 +8404,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8070,7 +8427,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 105,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8087,7 +8445,8 @@
     "uses": [],
     "notes": "Stone Shooter Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8105,7 +8464,8 @@
     "uses": [],
     "notes": "Open it, silly!",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8129,7 +8489,8 @@
     ],
     "notes": "Dokebi Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 175,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8159,7 +8520,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 98,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8184,7 +8546,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8201,7 +8564,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 256,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8226,7 +8590,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 750,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8244,13 +8609,14 @@
     "uses": [],
     "notes": "Open it, silly!",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
     "id": "old-trees-dew",
     "name": "Old Tree's Dew",
-    "itemId": null,
+    "itemId": 23257,
     "itemType": "Misc",
     "actions": [
       "Vend"
@@ -8261,7 +8627,8 @@
     "uses": [],
     "notes": "Willow Pet Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1250,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -8286,7 +8653,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8308,7 +8676,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -8325,7 +8694,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 27500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8343,7 +8713,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 150,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8365,7 +8736,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8382,7 +8754,8 @@
     "uses": [],
     "notes": "Drops Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 750,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8408,7 +8781,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -8425,7 +8799,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 84,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8450,7 +8825,8 @@
     ],
     "notes": "Orc Warrior Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 150,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8480,7 +8856,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -8497,7 +8874,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 110,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8522,7 +8900,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8552,7 +8931,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 71,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8579,7 +8959,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 550,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8596,7 +8977,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8620,7 +9002,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8637,7 +9020,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8654,7 +9038,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 13500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -8671,7 +9056,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 216,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -8693,7 +9079,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8718,7 +9105,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -8744,7 +9132,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 227,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8768,7 +9157,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 200,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8783,7 +9173,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8811,7 +9202,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8836,7 +9228,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8851,7 +9244,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8873,7 +9267,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 155,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8890,7 +9285,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 263,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8918,7 +9314,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8942,7 +9339,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 84,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -8959,7 +9357,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 179,
+    "sellValue": 145,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -8983,7 +9382,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9000,7 +9400,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9024,7 +9425,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9041,7 +9443,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 42,
+    "sellValue": 34,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -9067,7 +9470,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 57,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -9086,7 +9490,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 79,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -9105,7 +9510,8 @@
     "uses": [],
     "notes": "Used for Server Hats, Pet Evolutions, and more! Check the uaRO wiki for more details.",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -9122,7 +9528,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 100,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9139,7 +9546,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 7,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -9158,7 +9566,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 45,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9183,7 +9592,8 @@
     ],
     "notes": "+10 DEX Food",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 270,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9201,7 +9611,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9218,7 +9629,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 7,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -9242,7 +9654,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 243,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9259,7 +9672,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9277,7 +9691,8 @@
     "uses": [],
     "notes": "Keep 1",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9294,7 +9709,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9317,7 +9733,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9332,7 +9749,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9347,7 +9765,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9376,7 +9795,26 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": null
+  },
+  {
+    "id": "raccoon-doll",
+    "name": "Raccoon Doll",
+    "itemId": 754,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 2500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9394,7 +9832,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 53,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9412,7 +9851,8 @@
     "uses": [],
     "notes": "Lunatic Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9429,7 +9869,8 @@
     "uses": [],
     "notes": "Create Elemental Converter",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 45,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9452,7 +9893,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9479,7 +9921,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 549,
+    "sellValue": 443,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9497,7 +9940,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -9529,7 +9973,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 667,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9548,7 +9993,8 @@
     "uses": [],
     "notes": "Wizard Job Quest",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 300,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9566,7 +10012,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 9,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9588,7 +10035,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 330,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9612,7 +10060,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 440,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9627,7 +10076,8 @@
     "uses": [],
     "notes": "Smokie Pet accessory",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9644,7 +10094,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -9661,7 +10112,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 550,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9689,7 +10141,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 401,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9707,7 +10160,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 70,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9730,7 +10184,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 420,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9752,7 +10207,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 60,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9775,7 +10231,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 400,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -9790,7 +10247,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9807,7 +10265,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 2000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9824,7 +10283,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9847,7 +10307,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9870,7 +10331,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 7500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9892,7 +10354,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 7500,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -9917,7 +10380,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9940,7 +10404,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 175,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9955,7 +10420,8 @@
     "uses": [],
     "notes": "Chonchon Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9972,7 +10438,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 51,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -9996,7 +10463,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10013,7 +10481,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 325,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10030,7 +10499,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 341,
+    "sellValue": 275,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10055,7 +10525,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10073,7 +10544,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 2500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10101,7 +10573,8 @@
     ],
     "notes": "+10 DEX Food",
     "links": [],
-    "npcSellPrice": 4300,
+    "sellValue": 3500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10132,7 +10605,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1263,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10150,7 +10624,8 @@
     "uses": [],
     "notes": "Steel Chonchon Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10184,7 +10659,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 267,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10207,7 +10683,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10229,7 +10706,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10246,7 +10724,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 353,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10269,7 +10748,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10292,7 +10772,8 @@
     ],
     "notes": "Nine Tail Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -10309,7 +10790,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10331,7 +10813,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10348,7 +10831,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 350,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -10381,13 +10865,14 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
     "id": "scatleton-memory",
     "name": "Scatleton Memory",
-    "itemId": null,
+    "itemId": 25408,
     "itemType": "Misc",
     "actions": [
       "Vend"
@@ -10405,7 +10890,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -10422,7 +10908,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 80,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10440,7 +10927,8 @@
     "uses": [],
     "notes": "+10 AGI Food",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 307,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10458,7 +10946,8 @@
     "uses": [],
     "notes": "Create Elemental Converter, +10 AGI Food",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 62,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10485,7 +10974,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 410,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10505,7 +10995,8 @@
     "uses": [],
     "notes": "Green Salad",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 403,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10522,7 +11013,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 125,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10547,7 +11039,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 7,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10582,7 +11075,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 233,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10606,7 +11100,8 @@
     ],
     "notes": "Petite Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10626,7 +11121,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 8,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10643,7 +11139,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 139,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10660,7 +11157,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 115,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10677,7 +11175,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 310,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10702,7 +11201,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -10730,7 +11230,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10747,7 +11248,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10764,7 +11266,8 @@
     "uses": [],
     "notes": "Sohee Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 6000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10781,7 +11284,8 @@
     "uses": [],
     "notes": "Rocker Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 150,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10810,7 +11314,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10827,7 +11332,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 23,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -10844,7 +11350,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 116,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10867,7 +11374,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 850,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10901,7 +11409,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 522,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10916,7 +11425,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10943,7 +11453,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 353,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -10965,7 +11476,8 @@
     ],
     "notes": "Teddy Bear Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -10982,24 +11494,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
-    "npcBuyable": null
-  },
-  {
-    "id": "smokie-doll",
-    "name": "Smokie Doll",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Vend"
-    ],
-    "categories": [
-      "Dungeon Quest"
-    ],
-    "uses": [],
-    "notes": "",
-    "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11016,7 +11512,8 @@
     "uses": [],
     "notes": "Create Elemental Converter",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 32,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11033,7 +11530,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 41,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11065,7 +11563,8 @@
     ],
     "notes": "Alice Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11088,7 +11587,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 200,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11125,7 +11625,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 140,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11150,7 +11651,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 600,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11175,7 +11677,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11198,7 +11701,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 70,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11215,7 +11719,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 421,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11233,7 +11738,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 200,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11257,7 +11763,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 224,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11274,7 +11781,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11293,7 +11801,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 70,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11311,29 +11820,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
-    "npcBuyable": null
-  },
-  {
-    "id": "spiritual-bandage",
-    "name": "Spiritual Bandage",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Vend"
-    ],
-    "categories": [
-      "Pet"
-    ],
-    "uses": [
-      {
-        "for": "Ancient Mummy Pet Evolution",
-        "qty": 3
-      }
-    ],
-    "notes": "Mummy Taming Item",
-    "links": [],
-    "npcSellPrice": null,
+    "sellValue": 350,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11351,7 +11839,8 @@
     "uses": [],
     "notes": "Medusa Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11375,7 +11864,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 212,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11392,7 +11882,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11417,7 +11908,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11446,7 +11938,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 132,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11463,7 +11956,8 @@
     "uses": [],
     "notes": "Goblin Leader Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11486,7 +11980,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 2250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11503,7 +11998,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 750,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11555,7 +12051,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11578,7 +12075,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11597,7 +12095,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11615,7 +12114,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 23,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11642,7 +12142,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 35,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11659,7 +12160,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 175,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11676,7 +12178,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11693,7 +12196,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 7200,
+    "sellValue": 9750,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -11710,7 +12214,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 84,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11730,7 +12235,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 92,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11752,7 +12258,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 215,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11769,7 +12276,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 316,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11791,7 +12299,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11809,7 +12318,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 100,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11824,7 +12334,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11847,7 +12358,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11864,7 +12376,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11881,7 +12394,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11898,7 +12412,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11915,7 +12430,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -11940,7 +12456,8 @@
     ],
     "notes": "Savage Babe Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -11957,7 +12474,8 @@
     "uses": [],
     "notes": "Smokie Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -11974,13 +12492,14 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 350,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
     "id": "sweets-festival-coin",
     "name": "Sweets Festival Coin",
-    "itemId": null,
+    "itemId": 25290,
     "itemType": "Misc",
     "actions": [
       "Keep",
@@ -11998,7 +12517,8 @@
     ],
     "notes": "Item only drops seasonally",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -12015,7 +12535,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12037,7 +12558,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 2709,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12054,7 +12576,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 370,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12071,7 +12594,8 @@
     "uses": [],
     "notes": "Green Maiden Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12094,7 +12618,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 494,
+    "sellValue": 399,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12109,7 +12634,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12142,7 +12668,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12160,7 +12687,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 110,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12177,7 +12705,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 35,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12206,7 +12735,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12223,7 +12753,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 592,
+    "sellValue": 478,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12240,7 +12771,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 149,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12270,7 +12802,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 750,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12287,7 +12820,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12310,7 +12844,8 @@
     ],
     "notes": "+10 STR Food",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 264,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12327,7 +12862,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 17,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12351,24 +12887,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
-    "npcBuyable": null
-  },
-  {
-    "id": "torn-paper-piece",
-    "name": "Torn Paper Piece",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "NPC"
-    ],
-    "categories": [
-      "Uncategorized"
-    ],
-    "uses": [],
-    "notes": "",
-    "links": [],
-    "npcSellPrice": null,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12391,7 +12911,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 206,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12424,7 +12945,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 250,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12441,7 +12963,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 333,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12458,7 +12981,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12475,7 +12999,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12492,7 +13017,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 6,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -12517,7 +13043,8 @@
     ],
     "notes": "Yoyo Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12540,7 +13067,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 30,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12565,7 +13093,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 1500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12582,7 +13111,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 340,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12613,7 +13143,8 @@
     ],
     "notes": "Poring Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12635,7 +13166,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 512,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12652,7 +13184,8 @@
     "uses": [],
     "notes": "Wanderer Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": null
   },
   {
@@ -12676,7 +13209,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 100000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12694,7 +13228,8 @@
     "uses": [],
     "notes": "Create Deadly Poison",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 74,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12711,7 +13246,8 @@
     "uses": [],
     "notes": "Loli Ruri Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12728,7 +13264,8 @@
     "uses": [],
     "notes": "Leaf Cat Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12754,7 +13291,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4000,
+    "sellSource": "hercules",
     "npcBuyable": null
   },
   {
@@ -12780,7 +13318,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12798,7 +13337,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 6000,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -12815,7 +13355,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12838,7 +13379,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12868,7 +13410,8 @@
     ],
     "notes": "Baby Desert Wolf Taming Item",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 5000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12890,7 +13433,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 7500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12924,7 +13468,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 4000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12950,7 +13495,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 60,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12967,7 +13513,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 530,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -12984,7 +13531,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 600,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -13001,7 +13549,8 @@
     "uses": [],
     "notes": "Dokebi Pet accessory",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13016,7 +13565,8 @@
     "uses": [],
     "notes": "Orc Warror pet accessory",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13040,7 +13590,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13055,7 +13606,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": null,
+    "sellValue": 765,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13079,7 +13631,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 455,
+    "sellValue": 367,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13096,7 +13649,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 620,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13125,7 +13679,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 322,
+    "sellValue": 260,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13143,7 +13698,8 @@
     "uses": [],
     "notes": "Knight Job Quest",
     "links": [],
-    "npcSellPrice": 104,
+    "sellValue": 84,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13162,7 +13718,8 @@
     "uses": [],
     "notes": "Used for creating Slim Potions",
     "links": [],
-    "npcSellPrice": 300,
+    "sellValue": 242,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13185,7 +13742,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 7500,
+    "sellValue": 27500,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -13212,7 +13770,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13229,7 +13788,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 35,
+    "sellValue": 29,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13253,7 +13813,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 290,
+    "sellValue": 234,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13281,7 +13842,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 421,
+    "sellValue": 340,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13298,7 +13860,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 121,
+    "sellValue": 26,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13315,7 +13878,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 587,
+    "sellValue": 474,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13332,7 +13896,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 31,
+    "sellValue": 25,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13349,7 +13914,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 365,
+    "sellValue": 295,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13367,7 +13933,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 478,
+    "sellValue": 386,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13389,7 +13956,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 421,
+    "sellValue": 340,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13418,7 +13986,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13436,7 +14005,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 111,
+    "sellValue": 90,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13461,7 +14031,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13484,7 +14055,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 62,
+    "sellValue": 50,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13511,7 +14083,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 549,
+    "sellValue": 443,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13530,7 +14103,8 @@
     "uses": [],
     "notes": "Wizard Job Quest",
     "links": [],
-    "npcSellPrice": 372,
+    "sellValue": 300,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13560,7 +14134,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 24,
+    "sellValue": 20,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13579,7 +14154,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 111,
+    "sellValue": 275,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -13597,7 +14173,8 @@
     "uses": [],
     "notes": "+10 DEX Food",
     "links": [],
-    "npcSellPrice": 620,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -13614,7 +14191,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 620,
+    "sellValue": 500,
+    "sellSource": "hercules",
     "npcBuyable": "npc-only"
   },
   {
@@ -13633,7 +14211,8 @@
     "uses": [],
     "notes": "+10 DEX Food",
     "links": [],
-    "npcSellPrice": 3100,
+    "sellValue": 2500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13658,7 +14237,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 2480,
+    "sellValue": 2000,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -13676,7 +14256,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 3100,
+    "sellValue": 2500,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13701,7 +14282,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13731,7 +14313,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 3720,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13748,7 +14331,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 297,
+    "sellValue": 240,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   },
   {
@@ -13765,7 +14349,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13783,7 +14368,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 132,
+    "sellValue": 132,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13808,7 +14394,8 @@
     ],
     "notes": "",
     "links": [],
-    "npcSellPrice": 12,
+    "sellValue": 10,
+    "sellSource": "hercules",
     "npcBuyable": "no"
   },
   {
@@ -13825,7 +14412,8 @@
     "uses": [],
     "notes": "",
     "links": [],
-    "npcSellPrice": 3720,
+    "sellValue": 3000,
+    "sellSource": "hercules",
     "npcBuyable": "yes"
   }
 ]

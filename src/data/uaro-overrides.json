@@ -1,0 +1,73 @@
+{
+  "about": "Where uaRO differs from its base game data. Item data follows Hercules pre-renewal by default; the lists below override it. Edit this file by hand (see CONTRIBUTING.md). Each entry needs the item's itemId and name exactly as in loot.json.",
+
+  "modifiedSellPrices": {
+    "about": "uaRO lowered these NPC sell prices. The price is the most an NPC pays: Overcharge does NOT raise it.",
+    "source": "https://wiki.uaro.net/Modified_Sales_Prices/",
+    "items": [
+      { "itemId": 12065, "name": "Green Salad", "price": 2000 },
+      { "itemId": 747, "name": "Crystal Mirror", "price": 6500 },
+      { "itemId": 749, "name": "Frozen Rose", "price": 14500 },
+      { "itemId": 748, "name": "Witherless Rose", "price": 7500 },
+      { "itemId": 13006, "name": "Khukri [0]", "price": 25000 },
+      { "itemId": 2613, "name": "Diamond Ring [0]", "price": 12500 },
+      { "itemId": 2610, "name": "Gold Ring [0]", "price": 7500 },
+      { "itemId": 1216, "name": "Stiletto [2]", "price": 7200 },
+      { "itemId": 522, "name": "Mastela Fruit", "price": 3500 },
+      { "itemId": 993, "name": "Green Live", "price": 400 }
+    ]
+  },
+
+  "customSellValues": {
+    "about": "NPC sell prices checked by hand for uaRO, where the emulators are wrong or unsure (including items confirmed to sell for 0z). This is the base price: Overcharge applies on top, like normal items.",
+    "items": [
+      { "itemId": 6075, "name": "Crystalized Teardrop", "sellValue": 325, "note": "Renewal drop added by uaRO; the emulators list it at 0z." },
+      { "itemId": 6073, "name": "Dragon's Mane", "sellValue": 225, "note": "The emulators list it at 0z." },
+      { "itemId": 12361, "name": "Delicious Shaved Ice", "sellValue": 0, "note": "0z. Not confirmed whether NPCs buy it." },
+      { "itemId": 7086, "name": "Emblem of the Sun God", "sellValue": 0, "note": "0z. Not confirmed whether NPCs buy it." },
+      { "itemId": 35661, "name": "Expanded Token Fragment", "sellValue": 0, "note": "uaRO item, not in the emulators." },
+      { "itemId": 14570, "name": "Flail Goblin Ring", "sellValue": 0 },
+      { "itemId": 12370, "name": "Girl's Naivety", "sellValue": 0 },
+      { "itemId": 14571, "name": "Hammer Goblin Ring", "sellValue": 0 },
+      { "itemId": 14569, "name": "Knife Goblin Ring", "sellValue": 0 },
+      { "itemId": 25408, "name": "Scatleton Memory", "sellValue": 0, "note": "uaRO custom item. The emulators use this ID for a different item." },
+      { "itemId": 551, "name": "Sushi", "sellValue": 0 },
+      { "itemId": 14574, "name": "Vagabond's Skull", "sellValue": 0 }
+    ]
+  },
+
+  "notSellableToNpc": {
+    "about": "Items NPCs won't buy on purpose (currencies, event coins). The NPC Sell column shows ✕ instead of a price.",
+    "items": [
+      { "itemId": 11605, "name": "Cookie Bat", "reason": "uaRO rule" },
+      { "itemId": 7539, "name": "Poring Coin", "reason": "uaRO currency" },
+      { "itemId": 25290, "name": "Sweets Festival Coin", "reason": "Event coin" }
+    ]
+  },
+
+  "renewalContent": {
+    "about": "Renewal areas uaRO added. Drops here may be tweaked by uaRO, so they are NOT added automatically. `npm run sync:prices` only checks the prices of items dropped here against rAthena's renewal data and lists differences for review. When they differ, the pre-renewal price is used.",
+    "reviewedPrices": {
+      "about": "Renewal-area items whose renewal price differs, already reviewed: they keep their pre-renewal price. The sync stops listing these.",
+      "items": [
+        { "itemId": 579, "name": "Fresh Fish" },
+        { "itemId": 969, "name": "Gold" },
+        { "itemId": 716, "name": "Red Gemstone" },
+        { "itemId": 912, "name": "Zargon" }
+      ]
+    },
+    "areas": [
+      { "name": "Splendide", "spawnFile": "npc/re/mobs/fields/splendide.txt", "maps": ["spl_fild01", "spl_fild02", "spl_fild03"] },
+      { "name": "Manuk", "spawnFile": "npc/re/mobs/fields/manuk.txt", "maps": ["man_fild01", "man_fild02", "man_fild03"] },
+      { "name": "Nidhogg's Nest", "spawnFile": "npc/re/mobs/dungeons/nyd_dun.txt", "maps": ["nyd_dun01", "nyd_dun02"] },
+      { "name": "El Dicastes", "spawnFile": "npc/re/mobs/fields/dicastes.txt", "maps": ["dic_fild01", "dic_fild02"] },
+      { "name": "Scaraba Dungeon", "spawnFile": "npc/re/mobs/dungeons/dic_dun.txt", "maps": ["dic_dun01", "dic_dun02", "dic_dun03"] },
+      { "name": "Biolab 4", "spawnFile": "npc/re/mobs/dungeons/lhz_dun.txt", "maps": ["lhz_dun04"] },
+      {
+        "name": "Horror Toy Factory",
+        "source": "https://wiki.uaro.net/Horror_Toy_Factory/",
+        "monsters": [2987, 2988, 2989, 2991, 2992, 2993, 2994, 2995, 2996, 2997]
+      }
+    ]
+  }
+}

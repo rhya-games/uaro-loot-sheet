@@ -3,6 +3,7 @@ import { BulletList, ExternalLink, Page, PageLink, Section, SubHeading } from '.
 import { ACTIONS, ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES } from '../utils/labels.js';
 import { ROUTES } from '../utils/route.js';
 import { CONTRIBUTING_URL } from '../config.js';
+import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 
 /** What the site is, how to read it, and where the data comes from. */
 export default function AboutPage() {
@@ -54,16 +55,19 @@ export default function AboutPage() {
             <strong>Vend</strong>: average price players sell it for in vending shops.
           </li>
           <li>
-            <strong>Whobuy</strong>: average price players pay for it through @whobuy.
+            <strong>Whobuy</strong>: average price players pay for it through @whobuy. ✕ in Vend or Whobuy means
+            NPCs sell it, so players don't trade it.
           </li>
           <li>
-            <strong>NPC Sell</strong>: zeny an NPC pays for one, with Overcharge level 10.
+            <strong>NPC Sell</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+
+            {OVERCHARGE_PERCENT}%). A lock means uaRO set a fixed price that Overcharge doesn't raise; ✕ means NPCs
+            won't buy it.
           </li>
           <li>
-            <strong>NPC Buy</strong>: whether an NPC sells it.
+            <strong>NPC Buy</strong>: whether an NPC sells it (✓ or ✕).
           </li>
           <li>
-            <strong>Verified</strong>: when someone last checked the entry on the live server.
+            <strong>Verified</strong>: when someone last checked the vend or @whobuy price on the live server.
           </li>
         </BulletList>
 
@@ -87,8 +91,13 @@ export default function AboutPage() {
             <ExternalLink href="https://github.com/HerculesWS/Hercules">Hercules emulator</ExternalLink> (pre-renewal).
           </li>
           <li>
-            Server-specific quests and pet evolutions from the{' '}
-            <ExternalLink href="https://wiki.uaro.net/">uaRO wiki</ExternalLink>.
+            Prices for renewal items uaRO added, from the{' '}
+            <ExternalLink href="https://github.com/rathena/rathena">rAthena emulator</ExternalLink> (renewal).
+          </li>
+          <li>
+            Server-specific quests, pet evolutions, and{' '}
+            <ExternalLink href="https://wiki.uaro.net/Modified_Sales_Prices/">modified NPC prices</ExternalLink> from
+            the <ExternalLink href="https://wiki.uaro.net/">uaRO wiki</ExternalLink>.
           </li>
         </BulletList>
       </Section>

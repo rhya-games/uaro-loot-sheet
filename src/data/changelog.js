@@ -23,6 +23,31 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-23',
+    title: 'NPC sell prices from Hercules',
+    changes: [
+      {
+        type: 'Changed',
+        text: 'NPC Sell now uses each item’s sell price from the Hercules emulator plus the Overcharge level 10 bonus (+24%), also read from Hercules.',
+      },
+      { type: 'Added', text: 'NPC Sell prices for 481 items that were blank in the original sheet.' },
+      {
+        type: 'Added',
+        text: 'uaRO’s modified NPC prices (lock icon, no Overcharge) and a ✕ for items NPCs won’t buy, like Poring Coin.',
+      },
+      {
+        type: 'Fixed',
+        text: 'NPC Sell prices that didn’t match the game (for example, Blue Feather was missing the Overcharge bonus).',
+      },
+      {
+        type: 'Fixed',
+        text: 'Item names that differ in game: Green Dyestuffs is now Darkgreen Dyestuffs, Smokie Doll is Raccoon Doll, and Spiritual Bandage is Miracle Bandage. Clock Hands was a duplicate of Needle of Alarm.',
+      },
+      { type: 'Removed', text: 'Ghost Coffin and Torn Paper Piece, which couldn’t be found in game.' },
+      { type: 'Changed', text: 'NPC Buy shows ✓ or ✕. Vend and Whobuy show ✕ for items NPCs sell.' },
+    ],
+  },
+  {
+    date: '2026-09-23',
     title: 'First version of the site (sample entry)',
     changes: [
       { type: 'Added', text: 'Searchable, sortable table of 643 items from the original Google Sheet.' },

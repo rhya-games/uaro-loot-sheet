@@ -12,6 +12,7 @@
 /** Misspelled item names in the sheet: "sheet name" -> "correct name". */
 export const RENAMES = {
   'Baphoment Jr Card': 'Baphomet Jr Card',
+  'Clock Hands': 'Needle of Alarm', // listed twice; merged on import
   'Fluroscent Liquid': 'Fluorescent Liquid',
   "Loki's Whisper": "Loki's Whispers",
   'Mini Furnance': 'Mini Furnace',
@@ -25,7 +26,14 @@ export const RENAMES = {
   'Suspcious Bottle': 'Suspicious Bottle',
   "Tiger's Footksin": "Tiger's Footskin",
   'Witch Starsand': 'Witched Starsand',
+  // Names that differ in game.
+  'Green Dyestuffs': 'Darkgreen Dyestuffs',
+  'Smokie Doll': 'Raccoon Doll',
+  'Spiritual Bandage': 'Miracle Bandage',
 };
+
+/** Sheet rows to skip: items that couldn't be found in game. */
+export const REMOVED = ['Ghost Coffin', 'Torn Paper Piece'];
 
 /**
  * "Used for" targets that were spelled differently in different rows:
@@ -173,4 +181,14 @@ export const ITEM_IDS = {
   'Suspicious Bottle': 25231,
   "Tiger's Footskin": 1030,
   'Western Grace [0]': 2248,
+
+  // Renewal items that aren't in Hercules; IDs from rAthena's renewal database.
+  'Delicious Meat': 11616,
+  "Old Tree's Dew": 23257,
+  'Sweets Festival Coin': 25290,
+
+  // uaRO names or custom items (the emulators use a different name, or
+  // use the ID for another item).
+  'Miracle Bandage': 23256,
+  'Scatleton Memory': 25408,
 };

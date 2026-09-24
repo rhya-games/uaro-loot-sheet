@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
 import CheckboxGroup from './CheckboxGroup.jsx';
@@ -21,7 +21,11 @@ import { countActiveFilters, countOptions, listOptions, toggleValue } from '../u
  *   onClose    - optional: shows a close (×) button that calls this
  *   closeButtonRef - optional ref for that button (so it can be focused)
  */
-export default function FilterSidebar({
+/*
+ * Wrapped in `memo` so it only redraws when its own props change (not when
+ * the panel opens or closes). The parent passes stable functions (useCallback).
+ */
+export default memo(function FilterSidebar({
   allItems,
   items,
   filters,
@@ -46,8 +50,9 @@ export default function FilterSidebar({
 
   return (
     <div>
-      {/* Stays pinned to the top of the panel while the filters scroll underneath. */}
-      <div className="sticky top-0 z-10 -mx-4 flex items-center gap-3 border-b border-line bg-surface px-4 pt-3 pb-2">
+      {/* Stays pinned to the top of the panel while the filters scroll underneath.
+          Same height as the table header (h-11, 44px) so the two line up side by side. */}
+      <div className="sticky top-0 z-10 -mx-4 flex h-11 items-center gap-3 border-b border-line bg-surface px-4">
         <h2 className="text-sm font-bold tracking-wide text-muted uppercase">Filters</h2>
         {countActiveFilters(filters) > 0 && (
           <button type="button" onClick={onClear} className="ml-auto text-sm text-accent hover:underline">
@@ -106,4 +111,4 @@ export default function FilterSidebar({
       <CheckboxGroup title="Used For" searchable {...groupProps('usedFor', usedForOptions)} />
     </div>
   );
-}
+});
