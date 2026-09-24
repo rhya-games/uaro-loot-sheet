@@ -48,7 +48,7 @@ You only need a free GitHub account.
 | `actions` | What to do with it: `Keep`, `Vend`, `Whobuy`, `NPC`, or `Junk` (throw it away: nothing uses it and nobody pays for it). |
 | `categories` | What it's used for. See the allowed list in [`schema.json`](src/data/schema.json). |
 | `uses` | What it's needed for and how many: `{ "for": "Mystic Rose", "qty": 10 }`. Optional `"note"`, e.g. `"each try"`. |
-| `notes` | Anything else, e.g. `Isis Taming Item` or `+10 DEX Food`. |
+| `notes` | Anything else about what the item does, e.g. `Isis Taming Item` or `+4 INT for 20 minutes`. It shows under "Used For", so leave out who drops it, and skip the period unless there are several sentences. |
 | `links` | Helpful links (`label` + `url`). Can be empty: `[]`. |
 | `avgVend` | Average vending price in zeny, or `null` if unknown. |
 | `avgWhobuy` | Average @whobuy price in zeny, or `null` if unknown. |

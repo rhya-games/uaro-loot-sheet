@@ -31,13 +31,15 @@ export const CHANGELOG = [
       },
       {
         type: 'Added',
-        text: '248 drops from the hunting-quest monsters and every monster on the repeatable-quest maps (cards, equipment and more). Each note says which monsters drop it.',
+        text: '248 drops from the hunting-quest monsters and every monster on the repeatable-quest maps (cards, equipment and more).',
       },
       {
         type: 'Changed',
         text: 'New cards start as Vend; the other new drops have no action yet until they’re sorted. Items NPCs sell say NPC.',
       },
       { type: 'Fixed', text: 'Acorn is sold by the Acorn Dealer in Moscovia.' },
+      { type: 'Changed', text: '“Used For” only says what an item is for. Notes about which monsters drop an item are gone.' },
+      { type: 'Fixed', text: 'Three pet cards listed Bacsojin’s evolution twice, once misspelled.' },
       {
         type: 'Added',
         text: '52 drops from uaRO’s renewal monsters (Scarabas, Queen Scaraba, Hillslion, Tatacho, Centipede, Bradium Golem, Naga, Cornus, Nepenthes, Dolomedes, Luciola Vespa and more), checked in game.',

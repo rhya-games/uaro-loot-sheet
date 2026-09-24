@@ -92,6 +92,15 @@ for (const item of items) {
   if (soldByNpc && (item.avgVend != null || item.avgWhobuy != null)) {
     errors.push(`${item.name}: NPCs sell this, so avgVend and avgWhobuy should be null (the site shows ✕)`);
   }
+  // Notes show under "Used For", so keep them about what the item does.
+  if (/^dropped by/i.test(item.notes ?? '')) {
+    errors.push(`${item.name}: notes shouldn't say who drops it (they show under "Used For")`);
+  }
+  // A single sentence or fragment ("+4 INT for 20 minutes") has no period.
+  // Notes with several sentences keep theirs.
+  if (/\.$/.test(item.notes ?? '') && !/\.\s/.test(item.notes)) {
+    warnings.push(`${item.name}: notes with one sentence shouldn't end with a period`);
+  }
   if (item.categories?.length > 1 && item.categories.includes('Uncategorized')) {
     warnings.push(`${item.name}: has categories, so "Uncategorized" can be removed`);
   }
