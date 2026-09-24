@@ -22,6 +22,16 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    date: '2026-09-25',
+    title: 'Skill names players use',
+    changes: [
+      {
+        type: 'Changed',
+        text: 'Skills in “Used For” use the names players know, like Potion Pitcher (was Aid Potion), Slim Potion Pitcher, Chemical Protection, Pharmacy, Graffiti and Abracadabra.',
+      },
+    ],
+  },
+  {
     date: '2026-09-24',
     title: 'Share what you see',
     changes: [
