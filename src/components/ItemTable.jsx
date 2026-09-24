@@ -1,5 +1,6 @@
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
+import CopyItemId from './CopyItemId.jsx';
 import RowActions from './RowActions.jsx';
 import Tooltip from './Tooltip.jsx';
 import VerifiedText from './VerifiedText.jsx';
@@ -25,15 +26,30 @@ const COLUMNS = [
     label: 'Item Name',
     sortKey: 'name',
     title: 'Item name, type and ID',
-    className: 'min-w-48',
+    className: 'min-w-56', // room for the name plus the Report Issue flag
     render: (item) => (
-      <>
-        <div className="font-medium text-fg">{item.name}</div>
-        <div className="mt-0.5 text-sm text-muted">
-          {item.itemType}
-          {item.itemId && ` · #${item.itemId}`}
+      <div className="flex items-start justify-between gap-2">
+        <div>
+          <div className="font-medium text-fg">{item.name}</div>
+          <div className="mt-0.5 text-sm text-muted">
+            {item.itemType}
+            {item.itemId && (
+              <>
+                {' · '}
+                <CopyItemId itemId={item.itemId} />
+              </>
+            )}
+          </div>
         </div>
-      </>
+        {/* Report Issue (and any other row actions): shown when the row is hovered
+            or focused, and always on touch screens, which can't hover. */}
+        <div
+          className="-mt-1.5 -mr-1.5 opacity-0 transition-opacity duration-150 group-hover:opacity-100
+            focus-within:opacity-100 motion-reduce:transition-none [@media(hover:none)]:opacity-100"
+        >
+          <RowActions item={item} />
+        </div>
+      </div>
     ),
   },
   {
@@ -100,12 +116,6 @@ const COLUMNS = [
     nowrap: true,
     title: 'When the vend or @whobuy price was last checked in game',
     render: (item) => <VerifiedText item={item} />,
-  },
-  {
-    label: 'Actions',
-    hideLabel: true,
-    numeric: true, // right-aligned
-    render: (item) => <RowActions item={item} />,
   },
 ];
 

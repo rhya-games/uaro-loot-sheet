@@ -34,6 +34,13 @@ export const CHANGELOG = [
         text: 'Ingredients list each food they’re for and what it does, like “x10 Morroc Fruit Wine (+4 INT food)”. Also added: the cookbooks and eight missing ingredients (Bao, Bug Leg, China, Live Coal, Nipper, Scale Shell, Scorpion Claw, Yoyo Tail).',
       },
       { type: 'Changed', text: 'Flame Heart, Mystic Frozen, Rough Wind and Great Nature are tagged Other Quest.' },
+      { type: 'Added', text: 'Click an item ID (like #7539) to copy it.' },
+      { type: 'Added', text: 'A back to top button appears after you scroll down.' },
+      {
+        type: 'Changed',
+        text: 'The Report Issue flag sits next to the item name and shows when you point at the row, so the table has more room.',
+      },
+      { type: 'Fixed', text: 'Filter checkboxes line up with the first line of long labels.' },
     ],
   },
   {

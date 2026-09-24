@@ -8,8 +8,8 @@ export default function FeedbackPage() {
     <Page title="Feedback" intro="Spotted a wrong price, a missing item, or have an idea? Here's how to tell us.">
       <Section title="Report a problem with one item">
         <p>
-          On the <PageLink href={ROUTES.loot}>Loot Sheet</PageLink>, click the <strong>flag</strong> (Report Issue) at
-          the far right of the item's row. It opens a short GitHub form with the item already filled in.
+          On the <PageLink href={ROUTES.loot}>Loot Sheet</PageLink>, point at the item and click the <strong>flag</strong> (Report
+          Issue) next to its name. It opens a short GitHub form with the item already filled in.
         </p>
         <p className="text-muted">Best for: wrong actions, categories, uses, or prices. Needs a free GitHub account.</p>
       </Section>

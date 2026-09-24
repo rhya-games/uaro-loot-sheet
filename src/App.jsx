@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import SkipLink from './components/SkipLink.jsx';
+import BackToTop from './components/BackToTop.jsx';
 import SiteFooter from './components/SiteFooter.jsx';
 import SiteHeader from './components/SiteHeader.jsx';
 import LootPage from './pages/LootPage.jsx';
@@ -43,6 +44,7 @@ export default function App() {
         {page && <page.Component />}
       </main>
       <SiteFooter />
+      <BackToTop />
     </div>
   );
 }

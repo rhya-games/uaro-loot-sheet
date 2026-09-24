@@ -33,7 +33,8 @@ export function itemReportUrl(item) {
 }
 
 /**
- * Actions at the far right of each table row (and top right of each card).
+ * Actions next to each item's name in the table (shown on hover or focus) and at
+ * the top right of each card.
  * With one action it shows as its icon (with a tooltip); with two or more
  * they collapse into a ⋮ menu. To add one, add an entry:
  *
