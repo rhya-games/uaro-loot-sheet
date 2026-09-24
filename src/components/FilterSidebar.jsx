@@ -4,7 +4,7 @@ import Tooltip from './Tooltip.jsx';
 import CheckboxGroup from './CheckboxGroup.jsx';
 import { ActionBadge, CategoryBadge } from './ItemBadges.jsx';
 import { ALL_CATEGORIES, ALL_ITEM_TYPES, FILTER_ACTIONS } from '../utils/labels.js';
-import { countActiveFilters, countOptions, listOptions, toggleValue } from '../utils/filter.js';
+import { countOptions, listOptions, toggleValue } from '../utils/filter.js';
 import { ACTIVITIES } from '../utils/activities.js';
 
 /**
@@ -16,7 +16,6 @@ import { ACTIVITIES } from '../utils/activities.js';
  *                used to calculate the counts next to each option
  *   filters    - current filter state (see EMPTY_FILTERS in utils/filter.js)
  *   onChange   - called with the new filter state
- *   onClear    - called when "Clear all" is clicked
  *   keepFor - activity ids the player keeps items for (see utils/activities.js)
  *   keepForDisabled - true in admin mode, where every activity counts
  *   onKeepForChange - called with the new list of activity ids
@@ -32,7 +31,6 @@ export default memo(function FilterSidebar({
   items,
   filters,
   onChange,
-  onClear,
   keepFor,
   keepForDisabled,
   onKeepForChange,
@@ -53,16 +51,12 @@ export default memo(function FilterSidebar({
   return (
     <div>
       {/* Stays pinned to the top of the panel while the filters scroll underneath.
-          Same height as the table header (h-11, 44px) so the two line up side by side. */}
+          Same height as the search box beside it (h-11, 44px), so their edges line up.
+          Clear all lives with the filter chips above the table. */}
       <div className="sticky top-0 z-10 -mx-4 flex h-11 items-center gap-3 border-b border-line bg-surface px-4">
         <h2 className="text-base font-semibold text-fg">Filters</h2>
-        {countActiveFilters(filters) > 0 && (
-          <button type="button" onClick={onClear} className="button-small ml-auto">
-            Clear all
-          </button>
-        )}
         {onClose && (
-          <span className={countActiveFilters(filters) > 0 ? '' : 'ml-auto'}>
+          <span className="ml-auto">
             <Tooltip text="Close filters" placement="bottom">
               <button
                 ref={closeButtonRef}

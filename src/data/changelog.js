@@ -31,6 +31,10 @@ export const CHANGELOG = [
       },
       {
         type: 'Changed',
+        text: 'On wide screens the filter panel starts at the top with its own close button, and the search, item count and filter chips sit above the table. Adding a filter no longer pushes the table down.',
+      },
+      {
+        type: 'Changed',
         text: 'Skills in “Used For” use the names players know, like Potion Pitcher (was Aid Potion), Slim Potion Pitcher, Chemical Protection, Pharmacy, Graffiti and Abracadabra.',
       },
     ],

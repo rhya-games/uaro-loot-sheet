@@ -39,7 +39,7 @@ export default function SearchBar({ value, onChange }) {
         }}
         placeholder="Search by name, use, or item ID…"
         autoComplete="off"
-        className={`w-full rounded-lg border py-2.5 pr-11 pl-10 text-base shadow-sm placeholder:text-muted ${
+        className={`h-11 w-full rounded-lg border pr-11 pl-10 text-base shadow-sm placeholder:text-muted ${
           active ? 'border-accent-line bg-accent-soft' : 'border-line-strong bg-surface'
         }`}
       />

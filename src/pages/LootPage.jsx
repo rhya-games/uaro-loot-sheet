@@ -142,12 +142,19 @@ export default function LootPage() {
     if (window.matchMedia(PANEL_BESIDE_TABLE).matches) writePreference('panelOpen', open);
   }, []);
 
+  // Closing returns focus to the Filters button. Beside the table that button
+  // only appears once the panel is closed, so focus moves after the redraw.
+  const focusToggleOnClose = useRef(false);
   const closePanel = useCallback(() => {
+    focusToggleOnClose.current = true;
     changePanel(false);
-    toggleButtonRef.current?.focus();
   }, [changePanel]);
+  useEffect(() => {
+    if (sidebarOpen || !focusToggleOnClose.current) return;
+    focusToggleOnClose.current = false;
+    toggleButtonRef.current?.focus();
+  }, [sidebarOpen]);
 
-  const clearFilters = useCallback(() => setFilters(EMPTY_FILTERS), []);
 
   // On wide screens the panel pushes the table over. Instead of animating the
   // table's width (which re-lays-out every row on every frame and stutters),
@@ -230,18 +237,22 @@ export default function LootPage() {
       )}
     </button>
   );
-  return (
-    <div className="space-y-4">
-      <h1 className="sr-only">Loot items</h1>
+  // Wide screens with the panel open: the panel has its own close button, so
+  // the toolbar drops the Filters button and the search box takes its room.
+  const showFiltersButton = !(sidebarOpen && panelBesideTable);
+
+  const toolbar = (
+    <>
       <div className="flex gap-3">
         {/* Small screens: filter icon only, so it gets a tooltip. Larger: icon and text (no tooltip needed). */}
-        {smallScreen ? (
-          <Tooltip text={sidebarOpen ? 'Hide filters' : 'Show filters'} placement="bottom">
-            {filtersButton}
-          </Tooltip>
-        ) : (
-          filtersButton
-        )}
+        {showFiltersButton &&
+          (smallScreen ? (
+            <Tooltip text={sidebarOpen ? 'Hide filters' : 'Show filters'} placement="bottom">
+              {filtersButton}
+            </Tooltip>
+          ) : (
+            filtersButton
+          ))}
         <div className="flex-1">
           <SearchBar value={query} onChange={setQuery} />
         </div>
@@ -254,26 +265,30 @@ export default function LootPage() {
         )}
       </div>
 
-      {/* What you're looking at: how many items, and what's narrowing them. */}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+      {/* The results header: how many items, and what's narrowing them.
+          Always one chip tall, so adding the first filter doesn't push the table down. */}
+      <div className="flex min-h-7 flex-wrap items-center gap-x-4 gap-y-2">
         <p className="text-sm text-muted">
           {results.length.toLocaleString('en-US')} of {loot.length.toLocaleString('en-US')} items
         </p>
         <ActiveFilters
-          query={query}
           filters={filters}
           keepFor={keepFor}
-          onClearQuery={() => setQuery('')}
           onClearKeepFor={() => changeKeepFor(ALL_ACTIVITY_IDS)}
           onRemove={(key, value) => setFilters({ ...filters, [key]: toggleValue(filters[key], value) })}
           onRemoveGroup={(key) => setFilters({ ...filters, [key]: [] })}
           onClearAll={() => {
-            setQuery('');
             setFilters(EMPTY_FILTERS);
             changeKeepFor(ALL_ACTIVITY_IDS);
           }}
         />
       </div>
+    </>
+  );
+
+  return (
+    <div>
+      <h1 className="sr-only">Loot items</h1>
 
       {/* Panel and table share one grid cell (so the panel floats over the table)
           until 1470px (`wide:`), where the grid gets a second column for the panel.
@@ -320,11 +335,11 @@ export default function LootPage() {
         >
           <div className="hidden md:block">
             <SkipLink targetId="results" className="focus:absolute focus:top-2 focus:left-2 focus:z-20">
-              Skip to table
+              Skip to results
             </SkipLink>
           </div>
           <FilterSidebar
-            onClose={panelBesideTable ? undefined : closePanel}
+            onClose={closePanel}
             closeButtonRef={closeButtonRef}
             allItems={baseItems}
             keepFor={keepFor}
@@ -333,15 +348,15 @@ export default function LootPage() {
             items={searched}
             filters={filters}
             onChange={setFilters}
-            onClear={clearFilters}
           />
         </aside>
         <div
           ref={resultsRef}
           id="results"
           tabIndex={-1}
-          className={`min-w-0 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
+          className={`min-w-0 space-y-4 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
         >
+          {toolbar}
           <ItemList
             items={results}
             sort={sort}
