@@ -37,6 +37,7 @@ npm run validate       # check the data (CI runs this; build runs it first)
 npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
+npm run check:uses -- recipes.json   # compare recipes (e.g. a wiki table) with "Used For"
 ```
 
 Both sync scripts take `-- --check` to report without writing. They
@@ -131,7 +132,8 @@ Match similar existing items. Look them up in loot.json first.
 
 - Colors are theme tokens in `src/index.css` (`text-fg`, `text-body`,
   `text-muted`, `bg-surface`, `bg-hover`, `border-line`, ...) with light and
-  dark values. Don't use raw grays.
+  dark values. Don't use raw grays. Text uses only three grays: `fg`,
+  `body`, `muted`. For anything quieter, lower the opacity.
 - Reuse the utilities: `panel` (cards and popovers), `button-small`
   (secondary buttons like "Clear all").
 - Type: headings are `font-semibold`, body `text-sm`, secondary `text-xs`
@@ -145,6 +147,15 @@ Match similar existing items. Look them up in loot.json first.
 - Check changes at desktop (≥1470px, where the panel pushes the table),
   tablet (768–1469px, the panel overlaps it) and phone (<768px, cards and a
   full-screen panel), in light and dark mode.
+
+## Recurring jobs
+
+Step-by-step guides for the common data tasks are in `.claude/skills/`
+(plain Markdown, usable by any agent):
+
+- `check-wiki-page`: compare "Used For" data with a uaRO wiki table and fix it.
+- `record-npc-shop`: record an NPC shop from screenshots or the wiki.
+- `update-vend-prices`: set vend/@whobuy prices from screenshots.
 
 ## Writing style
 

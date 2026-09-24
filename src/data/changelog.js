@@ -66,6 +66,11 @@ export const CHANGELOG = [
         text: '12 pet items: evolution cards and materials (like Airship Part and Young Twig), Earthworm the Dude, and four pet accessories.',
       },
       { type: 'Added', text: 'Beehive Box (Hornet) and Ghost Coffin (Whisper) taming items.' },
+      {
+        type: 'Changed',
+        text: 'Used For is sorted A-Z, and anything you search for moves to the front (search “Headset” and Coal lists Headset first).',
+      },
+      { type: 'Changed', text: 'Fewer shades of gray text, so dark mode is easier to read.' },
     ],
   },
   {

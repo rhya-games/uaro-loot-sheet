@@ -12,6 +12,7 @@
     "import:csv": "node scripts/import-csv.mjs",
     "sync:prices": "node scripts/sync-prices.mjs",
     "sync:shops": "node scripts/sync-shops.mjs",
+    "check:uses": "node scripts/check-uses.mjs",
     "validate": "node scripts/validate.mjs"
   },
   "devDependencies": {

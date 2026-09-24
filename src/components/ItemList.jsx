@@ -29,7 +29,7 @@ export default memo(function ItemList({ items, sort, onSort, onSelectUse, highli
   const showTable = useMediaQuery('(min-width: 768px)');
 
   if (items.length === 0) {
-    return <p className="py-12 text-center text-subtle-fg">No items match your search or filters.</p>;
+    return <p className="py-12 text-center text-muted">No items match your search or filters.</p>;
   }
 
   return (

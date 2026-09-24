@@ -89,7 +89,7 @@ const COLUMNS = [
   {
     label: 'NPC Shop',
     sortKey: 'npcBuyable',
-    nowrap: true,
+    numeric: true, // right-aligned, like the price columns
     className: 'w-px', // as narrow as the header text allows
     title: 'Whether NPC shops sell the item',
     render: (item) => <NpcBuyable item={item} />,

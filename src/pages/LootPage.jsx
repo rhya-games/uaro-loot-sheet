@@ -13,6 +13,9 @@ import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue, withoutKee
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
 
+/** Every "Used For" target in the data, e.g. "Mystic Rose". */
+const ALL_USE_TARGETS = [...new Set(loot.flatMap((item) => item.uses.map((use) => use.for)))];
+
 /** How long the panel takes to slide in or out (ms). Matches `duration-200` below. */
 const PANEL_ANIMATION_MS = 200;
 
@@ -57,6 +60,15 @@ export default function LootPage() {
   const search = useMemo(() => createSearch(baseItems), [baseItems]);
   const searched = useMemo(() => search(query), [search, query]);
   const results = useMemo(() => sortItems(filterItems(searched, filters), sort), [searched, filters, sort]);
+
+  // "Used For" targets to bring to the front of each item's list: the ones
+  // filtered by, plus any whose name contains the search text (searching
+  // "Headset" puts "x1 Headset" first on Coal).
+  const highlightUses = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    const searchedTargets = needle.length >= 2 ? ALL_USE_TARGETS.filter((t) => t.toLowerCase().includes(needle)) : [];
+    return [...new Set([...filters.usedFor, ...searchedTargets])];
+  }, [query, filters.usedFor]);
 
   const activeFilterCount = countActiveFilters(filters) + (ignoreKeep ? 1 : 0);
 
@@ -180,7 +192,7 @@ export default function LootPage() {
       </div>
 
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <p className="text-sm text-subtle-fg">
+        <p className="text-sm text-muted">
           Showing {results.length} of {loot.length} items
         </p>
         <ActiveFilters
@@ -270,7 +282,7 @@ export default function LootPage() {
             sort={sort}
             onSort={changeSort}
             onSelectUse={showItemsUsedFor}
-            highlightUses={filters.usedFor}
+            highlightUses={highlightUses}
           />
         </div>
       </div>

@@ -15,25 +15,25 @@ const MAX_USES_SHOWN = 6;
  * wraps like a normal sentence. Clicking the target shows every item used
  * for it (via the "Used For" filter).
  *
- * Long lists (Poring Coin is used for 40+ things) show the first few, then a
- * "+N more" button that opens the full list in a popover.
+ * Uses are listed A-Z. Long lists (Poring Coin is used for 40+ things) show
+ * the first few, then a "+N more" button that opens the rest in a popover.
  *
- * While filtering by "Used For", the matching uses move to the front and the
- * others fade back, so it's easy to see why the item is listed.
+ * Uses the visitor is looking for (searched for, or filtered by in "Used
+ * For") move to the front and the others fade back, so it's easy to see why
+ * the item is listed.
  *
  * Props:
  *   item        - one entry from loot.json
  *   onSelectUse - called with a target name, e.g. "Mystic Rose"
- *   highlight   - targets being filtered by, e.g. ["Love Guard [1]"] (optional)
+ *   highlight   - targets to bring to the front, e.g. ["Love Guard [1]"] (optional)
  */
 export default function ItemUses({ item, onSelectUse, highlight = [] }) {
   if (item.uses.length === 0 && !item.notes) return null;
   const isMatch = (use) => highlight.includes(use.for);
   const dimOthers = highlight.length > 0 && item.uses.some(isMatch);
-  // Matches first; otherwise the original order (sort is stable).
-  const uses = dimOthers ? [...item.uses].sort((a, b) => isMatch(b) - isMatch(a)) : item.uses;
+  const uses = [...item.uses].sort((a, b) => isMatch(b) - isMatch(a) || a.for.localeCompare(b.for));
   const shown = uses.slice(0, MAX_USES_SHOWN);
-  const hiddenCount = uses.length - shown.length;
+  const hidden = uses.slice(MAX_USES_SHOWN);
   const dimmed = (use) => (dimOthers && !isMatch(use) ? 'opacity-60' : '');
 
   return (
@@ -45,15 +45,9 @@ export default function ItemUses({ item, onSelectUse, highlight = [] }) {
               <UseText use={use} onSelectUse={onSelectUse} />
             </li>
           ))}
-          {hiddenCount > 0 && (
+          {hidden.length > 0 && (
             <li>
-              <AllUsesPopover
-                item={item}
-                uses={uses}
-                dimmed={dimmed}
-                hiddenCount={hiddenCount}
-                onSelectUse={onSelectUse}
-              />
+              <MoreUsesPopover item={item} uses={hidden} dimmed={dimmed} onSelectUse={onSelectUse} />
             </li>
           )}
         </ul>
@@ -67,22 +61,23 @@ export default function ItemUses({ item, onSelectUse, highlight = [] }) {
 function UseText({ use, onSelectUse }) {
   return (
     <>
-      <span className="text-subtle-fg tabular-nums">x{use.qty?.toLocaleString('en-US') ?? '?'}</span>{' '}
+      <span className="text-muted tabular-nums">x{use.qty?.toLocaleString('en-US') ?? '?'}</span>{' '}
       <InlineButton onClick={() => onSelectUse(use.for)}>{use.for}</InlineButton>
-      {use.note && <span className="text-subtle-fg"> ({use.note})</span>}
+      {use.note && <span className="text-muted"> ({use.note})</span>}
     </>
   );
 }
 
 /**
- * "+N more" button that opens every use in a small popover next to it.
+ * "+N more" button that opens the uses that didn't fit in a small popover
+ * next to it.
  * It's a non-modal dialog:
  *   - opening it moves focus inside; Escape closes it and returns focus
  *   - clicking outside, or picking a use, closes it
  * Like tooltips, it's drawn at the end of the page and positioned with
  * Floating UI, so the table's scroll box can't cut it off.
  */
-function AllUsesPopover({ item, uses, dimmed, hiddenCount, onSelectUse }) {
+function MoreUsesPopover({ item, uses, dimmed, onSelectUse }) {
   const [open, setOpen] = useState(false);
   const { mounted, visible } = usePresence(open, 150);
   const dialogId = useId();
@@ -154,7 +149,7 @@ function AllUsesPopover({ item, uses, dimmed, hiddenCount, onSelectUse }) {
         aria-controls={dialogId}
         className="cursor-pointer rounded font-medium text-accent hover:underline"
       >
-        +{hiddenCount} more
+        +{uses.length} more
         <span className="sr-only"> uses for {item.name}</span>
       </button>
       {mounted &&
@@ -174,7 +169,7 @@ function AllUsesPopover({ item, uses, dimmed, hiddenCount, onSelectUse }) {
           >
             <div className="flex items-center justify-between gap-2 border-b border-line px-3 py-2">
               <h2 id={titleId} className="font-semibold text-fg">
-                {item.name}: used for {item.uses.length}
+                {item.name}: {uses.length} more uses
               </h2>
               <button
                 type="button"

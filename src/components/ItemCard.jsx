@@ -59,7 +59,7 @@ export default function ItemCard({ item, onSelectUse, highlightUses }) {
 function Stat({ label, value }) {
   return (
     <div>
-      <dt className="text-subtle-fg">{label}</dt>
+      <dt className="text-muted">{label}</dt>
       <dd className="font-medium text-body">{value}</dd>
     </div>
   );

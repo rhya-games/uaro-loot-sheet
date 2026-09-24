@@ -16,6 +16,7 @@ Then open http://localhost:5173/uaro-loot-sheet/
 | --- | --- |
 | `npm run dev` | Starts the site locally and reloads as you edit. |
 | `npm run validate` | Checks `src/data/loot.json` for mistakes. |
+| `npm run check:uses -- recipes.json` | Compares a list of recipes (for example, a quest table from the uaRO wiki) with the "Used For" data and lists the differences. |
 | `npm run sync:shops` | Updates which items NPCs sell (Hercules pre-renewal shops, plus uaRO's renewal shops from rAthena). Add `-- --check` to only list differences. |
 | `npm run sync:prices` | Updates NPC sell prices (Hercules pre-renewal, rAthena renewal for renewal-only items) and the Overcharge bonus. Add `-- --check` to only list differences. |
 | `npm run build` | Validates the data, then builds the public site into `dist/`. |

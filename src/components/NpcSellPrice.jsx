@@ -30,7 +30,7 @@ export default function NpcSellPrice({ item }) {
     return (
       <Tooltip text={`uaRO price: the most an NPC pays. Overcharge ${OVERCHARGE_LEVEL} doesn't raise it.`}>
         <span tabIndex={0} className="inline-flex items-center gap-1 rounded">
-          <LockClosedIcon className="size-3.5 text-subtle-fg" aria-hidden="true" />
+          <LockClosedIcon className="size-3.5 text-muted" aria-hidden="true" />
           {formatZeny(info.price)}
           <span className="sr-only"> (fixed uaRO price)</span>
         </span>

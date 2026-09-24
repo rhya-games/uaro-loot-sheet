@@ -37,7 +37,7 @@ export function SubHeading({ children }) {
 
 /** A bulleted list with consistent spacing. */
 export function BulletList({ children }) {
-  return <ul className="list-disc space-y-1.5 pl-5 marker:text-faint">{children}</ul>;
+  return <ul className="list-disc space-y-1.5 pl-5 marker:text-muted">{children}</ul>;
 }
 
 /** Link that opens in a new tab, and says so to screen readers. */
