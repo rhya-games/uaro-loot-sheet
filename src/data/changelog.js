@@ -23,6 +23,24 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-24',
+    title: 'Items used by skills',
+    changes: [
+      {
+        type: 'Added',
+        text: 'Used For now lists skills that use up an item, like “x1 Warp Portal (each cast)” for Blue Gemstone.',
+      },
+      {
+        type: 'Added',
+        text: 'Crafting skills list what they make, like “x30 Falchion (Smith Sword)” for Iron. Pharmacy materials are tagged Brewing.',
+      },
+      {
+        type: 'Fixed',
+        text: 'Items no pre-renewal skill uses are no longer tagged Skills (for example, Agate, Citrin and Rose Quartz).',
+      },
+    ],
+  },
+  {
+    date: '2026-09-24',
     title: 'Which items NPCs sell',
     changes: [
       {
