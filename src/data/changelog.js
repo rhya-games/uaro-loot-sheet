@@ -46,6 +46,10 @@ export const CHANGELOG = [
         type: 'Fixed',
         text: 'Searching an item’s name (like “gold”) no longer fades its Used For list. Search only brings forward uses that match whole words.',
       },
+      {
+        type: 'Added',
+        text: '21 items skills use, including ones NPCs sell (Red Potion, Trap, Medicine Bowl, ninja stones) so you know not to vend them.',
+      },
     ],
   },
   {

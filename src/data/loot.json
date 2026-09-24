@@ -1,5 +1,30 @@
 [
   {
+    "id": "1carat-diamond",
+    "name": "1carat Diamond",
+    "itemId": 730,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Morning Star",
+        "qty": 1,
+        "note": "Smith Mace"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "2carat-diamond",
     "name": "2carat Diamond",
     "itemId": 731,
@@ -1460,6 +1485,36 @@
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "berserk-potion",
+    "name": "Berserk Potion",
+    "itemId": 657,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Berserk Potion",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Poison Bottle",
+        "qty": 1,
+        "note": "Create Deadly Poison"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1500,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "big-cell",
@@ -3271,6 +3326,56 @@
     "npcBuyable": "no"
   },
   {
+    "id": "condensed-white-potion",
+    "name": "Condensed White Potion",
+    "itemId": 547,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Condensed Potion",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 825,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "condensed-yellow-potion",
+    "name": "Condensed Yellow Potion",
+    "itemId": 546,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Condensed Potion",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 300,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "contaminated-magic",
     "name": "Contaminated Magic",
     "itemId": 6755,
@@ -4094,6 +4199,31 @@
     "notes": "Poison Spore Taming Item",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "decayed-nail",
+    "name": "Decayed Nail",
+    "itemId": 957,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Slayer",
+        "qty": 20,
+        "note": "Smith Two-handed Sword"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 41,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -5113,6 +5243,106 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "empty-potion-bottle",
+    "name": "Empty Potion Bottle",
+    "itemId": 1093,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Red Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Yellow Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "White Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Blue Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Fireproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Coldproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Earthproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Thunderproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 5,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "empty-test-tube",
+    "name": "Empty Test Tube",
+    "itemId": 1092,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Condensed Red Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Condensed Yellow Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Condensed White Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Alcohol",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "errende-ebecee-card",
     "name": "Errende Ebecee Card",
     "itemId": 4349,
@@ -5721,6 +5951,36 @@
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "flame-stone",
+    "name": "Flame Stone",
+    "itemId": 7521,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Crimson Fire Formation",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Raging Fire Dragon",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "flavored-alcohol",
@@ -6413,6 +6673,31 @@
     "notes": "",
     "links": [],
     "sellValue": 700,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "glass-tube",
+    "name": "Glass Tube",
+    "itemId": 7143,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Embryo",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
   },
@@ -8057,6 +8342,36 @@
     "npcBuyable": "no"
   },
   {
+    "id": "ice-stone",
+    "name": "Ice Stone",
+    "itemId": 7522,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Hidden Water",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Ice Meteor",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "illusion-flower",
     "name": "Illusion Flower",
     "itemId": 710,
@@ -9575,6 +9890,47 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "medicine-bowl",
+    "name": "Medicine Bowl",
+    "itemId": 7134,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing",
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Prepare Potion",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Twilight Alchemy 1",
+        "qty": 200,
+        "note": "each cast"
+      },
+      {
+        "for": "Twilight Alchemy 2",
+        "qty": 200,
+        "note": "each cast"
+      },
+      {
+        "for": "Twilight Alchemy 3",
+        "qty": 200,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 4,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "memento",
     "name": "Memento",
     "itemId": 934,
@@ -9876,6 +10232,31 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "morning-dew-of-yggdrasil",
+    "name": "Morning Dew of Yggdrasil",
+    "itemId": 7141,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Embryo",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
   },
@@ -10795,6 +11176,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "orange-potion",
+    "name": "Orange Potion",
+    "itemId": 502,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Potion",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "orc-baby-card",
     "name": "Orc Baby Card",
     "itemId": 4375,
@@ -11680,6 +12086,31 @@
     "notes": "",
     "links": [],
     "sellValue": 34,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "poison-bottle",
+    "name": "Poison Bottle",
+    "itemId": 678,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Enchant Deadly Poison",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -12669,6 +13100,37 @@
     "npcBuyable": "no"
   },
   {
+    "id": "red-potion",
+    "name": "Red Potion",
+    "itemId": 501,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills",
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Aid Potion",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Condensed Red Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 25,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "red-prickly-fruit",
     "name": "Red Prickly Fruit",
     "itemId": 587,
@@ -13266,6 +13728,36 @@
     "npcBuyable": "no"
   },
   {
+    "id": "ruby",
+    "name": "Ruby",
+    "itemId": 723,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Fist",
+        "qty": 10,
+        "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "Lance",
+        "qty": 3,
+        "note": "Smith Spear"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 3000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "rune-of-darkness",
     "name": "Rune of Darkness",
     "itemId": 7511,
@@ -13735,6 +14227,56 @@
     "sellValue": 410,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "seed-of-life",
+    "name": "Seed of Life",
+    "itemId": 7140,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Embryo",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 30000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "shadow-orb",
+    "name": "Shadow Orb",
+    "itemId": 7524,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Mirror Image",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 150,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "sharp-leaf",
@@ -15303,6 +15845,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "stone",
+    "name": "Stone",
+    "itemId": 7049,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Stone Fling",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
+    "npcBuyable": "no"
+  },
+  {
     "id": "stone-heart",
     "name": "Stone Heart",
     "itemId": 953,
@@ -16188,6 +16755,76 @@
     "npcBuyable": "no"
   },
   {
+    "id": "trap",
+    "name": "Trap",
+    "itemId": 1065,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Skid Trap",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Land Mine",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Ankle Snare",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Shockwave Trap",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Sandman",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Flasher",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Freezing Trap",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Blast Mine",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Claymore Trap",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Talkie Box",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 50,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "tree-root",
     "name": "Tree Root",
     "itemId": 902,
@@ -16944,6 +17581,36 @@
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "wind-stone",
+    "name": "Wind Stone",
+    "itemId": 7523,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Lightning Strike of Destruction",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Kamaitachi",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "wing-of-dragonfly",
