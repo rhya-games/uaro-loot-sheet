@@ -115,7 +115,7 @@ npm run sync:shops            # update npcBuyable in loot.json
 npm run sync:shops -- --check # only list differences
 ```
 
-When an item turns out to be sold by NPCs, the sync changes its Vend/Whobuy actions to NPC and clears its player prices, and lists every change. If uaRO sells something the emulators don't (or the other way around), add it to `npcShops.soldByNpc` (or `notSoldByNpc`).
+When an item turns out to be sold by NPCs, the sync changes its Vend/Whobuy actions to NPC and clears its player prices, and lists every change. Shops checked in game go in `npcShops.uaroShops` (shop name, date checked, and each item's ID, name and normal price). Anything else uaRO sells that the emulators don't goes in `npcShops.soldByNpc`, and anything it doesn't sell goes in `notSoldByNpc`.
 
 ## Changelog
 

@@ -3,7 +3,7 @@
  *
  * Where the answer comes from, in order:
  *   1. uaRO's own changes (src/data/uaro-overrides.json, npcShops):
- *      notSoldByNpc -> "no", soldByNpc -> "yes"
+ *      notSoldByNpc -> "no"; uaroShops (checked in game) or soldByNpc -> "yes"
  *   2. Zeny shops in Hercules' pre-renewal NPC scripts -> "yes"
  *   3. uaRO's renewal shops, read from rAthena (npcShops.renewalShops) -> "yes"
  *   4. Otherwise -> "no"
@@ -54,6 +54,11 @@ function zenyShops(itemId) {
 }
 
 const soldIds = new Set(npcShops.soldByNpc.items.map((entry) => entry.itemId));
+// Item ID -> names of uaRO shops that sell it, e.g. ["Tool Dealer"].
+const uaroShopsById = new Map();
+for (const shop of npcShops.uaroShops.shops) {
+  for (const entry of shop.items) uaroShopsById.set(entry.itemId, [...(uaroShopsById.get(entry.itemId) ?? []), shop.name]);
+}
 const notSoldIds = new Set(npcShops.notSoldByNpc.items.map((entry) => entry.itemId));
 
 const changes = [];
@@ -67,6 +72,7 @@ const updatedItems = items.map((item) => {
   let sold;
   let reason;
   if (notSoldIds.has(item.itemId)) [sold, reason] = [false, 'uaRO override'];
+  else if (uaroShopsById.has(item.itemId)) [sold, reason] = [true, `uaRO ${uaroShopsById.get(item.itemId).join(', ')}`];
   else if (soldIds.has(item.itemId)) [sold, reason] = [true, 'uaRO override'];
   else if (shops.length) [sold, reason] = [true, shops.slice(0, 3).join(', ')];
   else [sold, reason] = [false, 'not in any shop'];

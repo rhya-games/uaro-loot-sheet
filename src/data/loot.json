@@ -1506,33 +1506,6 @@
     "npcBuyable": "yes"
   },
   {
-    "id": "blood-red",
-    "name": "Blood Red",
-    "itemId": null,
-    "itemType": "Misc",
-    "actions": [
-      "Vend",
-      "Whobuy"
-    ],
-    "categories": [
-      "Pet Evolution",
-      "Pet",
-      "uaRO",
-      "Skills"
-    ],
-    "uses": [
-      {
-        "for": "Fire Golem Pet Evolution",
-        "qty": 50
-      }
-    ],
-    "notes": "",
-    "links": [],
-    "sellValue": 500,
-    "sellSource": "manual",
-    "npcBuyable": "no"
-  },
-  {
     "id": "bloody-page",
     "name": "Bloody Page",
     "itemId": 7449,
@@ -9922,6 +9895,33 @@
     "notes": "",
     "links": [],
     "sellValue": 443,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "red-blood",
+    "name": "Red Blood",
+    "itemId": 990,
+    "itemType": "Misc",
+    "actions": [
+      "Vend",
+      "Whobuy"
+    ],
+    "categories": [
+      "Pet Evolution",
+      "Pet",
+      "uaRO",
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Fire Golem Pet Evolution",
+        "qty": 50
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },

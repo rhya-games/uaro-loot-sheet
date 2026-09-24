@@ -22,7 +22,7 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
-    date: '2026-09-23',
+    date: '2026-09-24',
     title: 'Which items NPCs sell',
     changes: [
       {
@@ -34,6 +34,7 @@ export const CHANGELOG = [
         text: 'Items NPCs sell that were marked Vend (for example, Chonchon Doll and Topaz) now say NPC.',
       },
       { type: 'Changed', text: 'Renamed the NPC Sell column to NPC and NPC Buy to NPC Buyable. NPC Only shows as ✓.' },
+      { type: 'Fixed', text: 'Blood Red is now Red Blood, with its item ID and NPC price.' },
     ],
   },
   {

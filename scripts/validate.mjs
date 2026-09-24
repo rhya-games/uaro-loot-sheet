@@ -116,6 +116,15 @@ const otherLists = {
   soldByNpc: overrides.npcShops.soldByNpc,
   notSoldByNpc: overrides.npcShops.notSoldByNpc,
 };
+// Shop items don't have to be in loot.json, but if they are, names must match.
+for (const shop of overrides.npcShops.uaroShops.shops) {
+  for (const entry of shop.items) {
+    const item = itemsById.get(entry.itemId);
+    if (item && item.name !== entry.name) {
+      errors.push(`${OVERRIDES_FILE} uaroShops ${shop.name}: itemId ${entry.itemId} is "${item.name}", not "${entry.name}"`);
+    }
+  }
+}
 for (const [listName, list] of Object.entries(otherLists)) {
   for (const entry of list.items) {
     const item = itemsById.get(entry.itemId);

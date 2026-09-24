@@ -12,6 +12,7 @@
 /** Misspelled item names in the sheet: "sheet name" -> "correct name". */
 export const RENAMES = {
   'Baphoment Jr Card': 'Baphomet Jr Card',
+  'Blood Red': 'Red Blood',
   'Clock Hands': 'Needle of Alarm', // listed twice; merged on import
   'Fluroscent Liquid': 'Fluorescent Liquid',
   "Loki's Whisper": "Loki's Whispers",
@@ -191,5 +192,6 @@ export const ITEM_IDS = {
   // use the ID for another item).
   'Miracle Bandage': 23256,
   'Scatleton Memory': 25408,
+  'Red Blood': 990,
   'Blue Vital Flower': 6113, // rAthena calls it "Vital Flower"
 };

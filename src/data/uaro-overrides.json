@@ -52,11 +52,54 @@
       "maps": ["mid_camp", "spl_in01", "spl_in02", "man_in01", "dic_in01"],
       "shops": ["Pet_Items"]
     },
+    "uaroShops": {
+      "about": "NPC shops checked in game on uaRO. Every item listed here is sold by NPCs. `price` is the shop's normal price in zeny (before Discount). Items don't need to be in loot.json. Not shown on the site yet.",
+      "shops": [
+        {
+          "name": "Tool Dealer",
+          "checked": "2026-09-24",
+          "items": [
+          { "itemId": 536, "name": "Ice Cream", "price": 150 },
+          { "itemId": 517, "name": "Meat", "price": 50 },
+          { "itemId": 579, "name": "Fresh Fish", "price": 250 },
+          { "itemId": 601, "name": "Fly Wing", "price": 60 },
+          { "itemId": 602, "name": "Butterfly Wing", "price": 300 },
+          { "itemId": 645, "name": "Concentration Potion", "price": 800 },
+          { "itemId": 656, "name": "Awakening Potion", "price": 1500 },
+          { "itemId": 657, "name": "Berserk Potion", "price": 3000 },
+          { "itemId": 717, "name": "Blue Gemstone", "price": 600 },
+          { "itemId": 610, "name": "Yggdrasil Leaf", "price": 4000 },
+          { "itemId": 501, "name": "Red Potion", "price": 50 },
+          { "itemId": 502, "name": "Orange Potion", "price": 200 },
+          { "itemId": 503, "name": "Yellow Potion", "price": 550 },
+          { "itemId": 504, "name": "White Potion", "price": 1200 },
+          { "itemId": 505, "name": "Blue Potion", "price": 7000 },
+          { "itemId": 506, "name": "Green Potion", "price": 40 },
+          { "itemId": 7134, "name": "Medicine Bowl", "price": 8 },
+          { "itemId": 1750, "name": "Arrow", "price": 1 },
+          { "itemId": 1752, "name": "Fire Arrow", "price": 3 },
+          { "itemId": 1755, "name": "Arrow of Wind", "price": 3 },
+          { "itemId": 1770, "name": "Iron Arrow", "price": 2 },
+          { "itemId": 1751, "name": "Silver Arrow", "price": 3 },
+          { "itemId": 1773, "name": "Elven Arrow", "price": 10 },
+          { "itemId": 1065, "name": "Trap", "price": 100 },
+          { "itemId": 13200, "name": "Bullet", "price": 1 },
+          { "itemId": 13221, "name": "Silver Bullet", "price": 3, "note": "Guessed ID: the cheaper shop version; uaRO's price differs from both emulators." },
+          { "itemId": 13222, "name": "Bloody Shell", "price": 3, "note": "Guessed ID: the cheaper shop version; uaRO's price differs from both emulators." },
+          { "itemId": 13250, "name": "Shuriken", "price": 4 },
+          { "itemId": 13251, "name": "Nimbus Shuriken", "price": 5 },
+          { "itemId": 13252, "name": "Flash Shuriken", "price": 8 },
+          { "itemId": 13253, "name": "Sharp Leaf Shuriken", "price": 10 },
+          { "itemId": 13254, "name": "Thorn Needle Shuriken", "price": 20 },
+          { "itemId": 1771, "name": "Venom Knife", "price": 50 }
+          ]
+        }
+      ]
+    },
     "soldByNpc": {
       "about": "Items uaRO NPCs sell that aren't in the emulators' shops.",
       "items": [
         { "itemId": 732, "name": "3carat Diamond", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
-        { "itemId": 505, "name": "Blue Potion", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
         { "itemId": 2605, "name": "Brooch [0]", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
         { "itemId": 713, "name": "Empty Bottle", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
         { "itemId": 2271, "name": "Jack be Dandy", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." }
