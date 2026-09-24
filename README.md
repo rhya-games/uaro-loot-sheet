@@ -18,6 +18,24 @@ Then open http://localhost:5173/uaro-loot-sheet/
 | `npm run validate` | Checks `src/data/loot.json` for mistakes. |
 | `npm run build` | Validates the data, then builds the public site into `dist/`. |
 
+## Deploying
+
+The site is published to GitHub Pages automatically by
+[`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)
+on every push to `main`. It runs `npm run build` (which checks the data first),
+so broken data is never published.
+
+One-time setup on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+To check a production build locally before pushing:
+
+```bash
+npm run build
+npm run preview
+```
+
+Then open http://localhost:4173/uaro-loot-sheet/
+
 ## Project layout
 
 ```
