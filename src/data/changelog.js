@@ -35,11 +35,11 @@ export const CHANGELOG = [
       },
       {
         type: 'Fixed',
-        text: 'Items no pre-renewal skill uses are no longer tagged Skills (for example, Agate, Citrin and Rose Quartz).',
+        text: 'Items no pre-renewal skill uses are no longer tagged Skills (for example, Agate, Citrin and Rose Quartz, which are for the Level 4 weapon quest instead).',
       },
       {
-        type: 'Changed',
-        text: 'Agate, Biotite, Citrin, Peridot and Pyroxene say NPC: they only make God items, which uaRO doesn’t have.',
+        type: 'Added',
+        text: 'The Level 4 weapon quest: which stones and materials each weapon needs (for example, 30 Phlogopite, Pyroxene and Rose Quartz for Longinus’s Spear or Brionac).',
       },
       { type: 'Added', text: 'Rough Elunium and Rough Oridecon: 5 turn into 1 Elunium or Oridecon at the refiner.' },
     ],
