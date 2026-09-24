@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FunnelIcon } from '@heroicons/react/24/outline';
-import loot from '../data/loot.json';
+import loot from '../data/loot.json' with { type: 'json' };
 import SearchBar from '../components/SearchBar.jsx';
 import FilterSidebar from '../components/FilterSidebar.jsx';
 import ActiveFilters from '../components/ActiveFilters.jsx';

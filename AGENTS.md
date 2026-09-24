@@ -38,6 +38,7 @@ npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
 npm run check:uses -- recipes.json   # compare recipes (e.g. a wiki table) with "Used For"
+npm run suggest [-- "name"]          # compare suggested actions (src/utils/suggest.js) with hand-set ones
 ```
 
 Both sync scripts take `-- --check` to report without writing. They

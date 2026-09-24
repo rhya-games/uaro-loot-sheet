@@ -1,4 +1,4 @@
-import schema from '../data/schema.json';
+import schema from '../data/schema.json' with { type: 'json' };
 
 /**
  * Every allowed action and category, read from src/data/schema.json so

@@ -1,5 +1,5 @@
-import rules from '../data/game-rules.json';
-import overrides from '../data/uaro-overrides.json';
+import rules from '../data/game-rules.json' with { type: 'json' };
+import overrides from '../data/uaro-overrides.json' with { type: 'json' };
 
 /**
  * NPC sell prices.
