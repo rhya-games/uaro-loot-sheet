@@ -5,7 +5,7 @@ import { ROW_ACTIONS } from '../config.js';
 
 /** Round icon button look, shared by the single action and the ⋮ menu button. */
 const ICON_BUTTON_STYLE =
-  'flex size-8 items-center justify-center rounded-full text-gray-600 hover:bg-gray-200 hover:text-gray-900';
+  'flex size-8 items-center justify-center rounded-full text-muted hover:bg-hover hover:text-fg';
 
 /** Props an <a> needs to open one row action. */
 function linkProps(action, item) {
@@ -123,7 +123,10 @@ function ActionsMenu({ item }) {
           role="menu"
           aria-label={`Actions for ${item.name}`}
           onKeyDown={onMenuKeyDown}
-          className="panel absolute right-0 z-20 mt-1 min-w-36 py-1 text-left"
+          // Fades and grows in from the button's corner (skipped for reduced motion).
+          className="panel absolute right-0 z-20 mt-1 min-w-36 origin-top-right py-1 text-left
+            motion-safe:transition motion-safe:duration-150 motion-safe:ease-out
+            motion-safe:starting:scale-95 motion-safe:starting:opacity-0"
         >
           {ROW_ACTIONS.map((action) => (
             <li key={action.id} role="none">
@@ -132,7 +135,7 @@ function ActionsMenu({ item }) {
                 role="menuitem"
                 tabIndex={-1}
                 onClick={() => close()}
-                className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100"
+                className="block px-3 py-2 text-sm text-body hover:bg-hover focus:bg-hover"
               >
                 {action.label}
                 {action.external && <span className="sr-only"> (opens in a new tab)</span>}

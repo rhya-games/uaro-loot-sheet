@@ -1,9 +1,9 @@
 import Badge from './Badge.jsx';
-import { ACTIONS, ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES, FALLBACK_ACTION, categoryStyle } from '../utils/labels.js';
+import { ACTIONS, ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES, FALLBACK_ACTION, categoryChip } from '../utils/labels.js';
 import { FILTER_GROUPS } from '../utils/filter.js';
 
 /** Neutral chip color, for filters that don't have their own color. */
-const NEUTRAL = 'bg-gray-200 text-gray-800';
+const NEUTRAL = 'bg-chip text-fg';
 
 /** More checked options than this in one group collapse into a single chip. */
 const MAX_CHIPS_PER_GROUP = 3;
@@ -18,7 +18,7 @@ const GROUP_OPTIONS = {
 /** Chip colors for one filter: match the action/category colors where there are some. */
 function chipColors(groupKey, value) {
   if (groupKey === 'actions') return { className: (ACTIONS[value] ?? FALLBACK_ACTION).className };
-  if (groupKey === 'categories') return { style: categoryStyle(value) };
+  if (groupKey === 'categories') return categoryChip(value);
   return { className: NEUTRAL };
 }
 
@@ -97,7 +97,7 @@ export default function ActiveFilters({
       ))}
       {chips.length > 1 && (
         <li>
-          <button type="button" onClick={onClearAll} className="text-sm text-emerald-700 hover:underline">
+          <button type="button" onClick={onClearAll} className="text-sm text-accent hover:underline">
             Clear all
           </button>
         </li>

@@ -17,9 +17,9 @@ export default function ItemCard({ item, onSelectUse }) {
   return (
     <article className="panel p-4">
       <header className="flex flex-wrap items-start justify-between gap-2">
-        <h2 className="text-base font-semibold text-gray-900">
+        <h2 className="text-base font-semibold text-fg">
           {item.name}
-          <span className="ml-2 text-[13px] font-normal text-gray-600">
+          <span className="ml-2 text-[13px] font-normal text-muted">
             {item.itemType}
             {item.itemId && ` · #${item.itemId}`}
           </span>
@@ -42,7 +42,7 @@ export default function ItemCard({ item, onSelectUse }) {
         <ItemUses item={item} onSelectUse={onSelectUse} />
       </div>
 
-      <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-gray-100 pt-3 text-xs sm:grid-cols-5">
+      <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-5">
         <Stat label="Avg. vend" value={formatZeny(item.avgVend)} />
         <Stat label="Avg. whobuy" value={formatZeny(item.avgWhobuy)} />
         <Stat label="NPC sell (OC 10)" value={formatZeny(item.npcSellPrice)} />
@@ -57,8 +57,8 @@ export default function ItemCard({ item, onSelectUse }) {
 function Stat({ label, value }) {
   return (
     <div>
-      <dt className="text-gray-500">{label}</dt>
-      <dd className="font-medium text-gray-800">{value}</dd>
+      <dt className="text-subtle-fg">{label}</dt>
+      <dd className="font-medium text-body">{value}</dd>
     </div>
   );
 }

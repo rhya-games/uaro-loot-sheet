@@ -1,5 +1,5 @@
 import Badge from './Badge.jsx';
-import { ACTIONS, FALLBACK_ACTION, categoryStyle } from '../utils/labels.js';
+import { ACTIONS, FALLBACK_ACTION, categoryChip } from '../utils/labels.js';
 
 /**
  * Dark chips for an item's actions (Keep, Vend, NPC, ...).
@@ -27,7 +27,7 @@ export function CategoryBadges({ categories }) {
 /** One category chip. */
 export function CategoryBadge({ category }) {
   return (
-    <Badge style={categoryStyle(category)}>
+    <Badge {...categoryChip(category)}>
       {category}
     </Badge>
   );

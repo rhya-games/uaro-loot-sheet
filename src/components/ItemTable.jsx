@@ -26,8 +26,8 @@ const COLUMNS = [
     className: 'min-w-48',
     render: (item) => (
       <>
-        <div className="font-medium text-gray-900">{item.name}</div>
-        <div className="mt-0.5 text-[13px] text-gray-600">
+        <div className="font-medium text-fg">{item.name}</div>
+        <div className="mt-0.5 text-[13px] text-muted">
           {item.itemType}
           {item.itemId && ` · #${item.itemId}`}
         </div>
@@ -130,9 +130,11 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
                 // Two shadows: the first paints the page background above it, so rows
                 // scrolling past don't show through that gap; the second paints 1px of
                 // green to the right, hiding hairline seams between header cells.
-                className={`sticky top-4 z-10 bg-emerald-800 px-3 py-3 font-semibold whitespace-nowrap text-white
-                  shadow-[0_-1rem_0_0_var(--color-gray-50),1px_0_0_0_var(--color-emerald-800)]
-                  first:rounded-tl-lg last:rounded-tr-lg last:shadow-[0_-1rem_0_0_var(--color-gray-50)]
+                // In the narrow scroll box (see ItemList) it sticks to the box's top instead.
+                className={`sticky top-4 z-10 bg-header px-3 py-3 font-semibold whitespace-nowrap text-white
+                  shadow-[0_-1rem_0_0_var(--color-page),1px_0_0_0_var(--color-header)]
+                  first:rounded-tl-lg last:rounded-tr-lg last:shadow-[0_-1rem_0_0_var(--color-page)]
+                  @max-table-fit:top-0 @max-table-fit:shadow-[1px_0_0_0_var(--color-header)]
                   ${column.numeric ? 'text-right' : 'text-left'} ${column.className ?? ''}`}
               >
                 {column.sortKey ? (
@@ -145,13 +147,13 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
           })}
         </tr>
       </thead>
-      <tbody className="bg-white">
+      <tbody className="bg-surface">
         {items.map((item) => (
-          <tr key={item.id} className="group even:bg-gray-50 hover:bg-emerald-50">
+          <tr key={item.id} className="group even:bg-subtle hover:bg-accent-soft">
             {COLUMNS.map((column) => (
               <td
                 key={column.label}
-                className={`border-b border-gray-200 px-3 py-3 align-top group-last:border-b-0 ${
+                className={`border-b border-line px-3 py-3 align-top group-last:border-b-0 ${
                   column.numeric ? 'text-right whitespace-nowrap tabular-nums' : ''
                 } ${column.nowrap ? 'whitespace-nowrap' : ''}`}
               >

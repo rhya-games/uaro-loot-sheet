@@ -4,7 +4,6 @@ import SiteHeader from './components/SiteHeader.jsx';
 import LootPage from './pages/LootPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import FeedbackPage from './pages/FeedbackPage.jsx';
-import ContributePage from './pages/ContributePage.jsx';
 import ChangelogPage from './pages/ChangelogPage.jsx';
 import { useRoute } from './utils/route.js';
 
@@ -12,7 +11,6 @@ import { useRoute } from './utils/route.js';
 const PAGES = {
   about: { title: 'About', Component: AboutPage },
   feedback: { title: 'Feedback', Component: FeedbackPage },
-  contribute: { title: 'Contribute', Component: ContributePage },
   changelog: { title: 'Changelog', Component: ChangelogPage },
 };
 
@@ -30,7 +28,7 @@ export default function App() {
   }, [page]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-page text-body">
       <SkipLink targetId="main" className="focus:fixed focus:top-4 focus:left-4 focus:z-50">
         Skip to main content
       </SkipLink>

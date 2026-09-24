@@ -1,18 +1,112 @@
 @import 'tailwindcss';
 
 /*
- * Extra screen size: `wide:` = 1420px and up. That's where the filter panel
- * has room to sit beside the table (see pages/LootPage.jsx).
+ * Dark mode is on when <html> has the "dark" class. index.html sets it before
+ * the page draws (from the saved choice, or the system setting), and the
+ * header's theme toggle changes it. See components/ThemeToggle.jsx.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Color roles. Components use these names (bg-surface, text-muted, border-line…)
+ * instead of raw grays, so light and dark mode are both defined here, once.
+ *
+ *   page         page background          surface      panels, table, inputs
+ *   subtle       striped rows, soft boxes  hover        hover background
+ *   chip         neutral chips             line         borders
+ *   line-strong  input borders             line-faint   very light dividers
+ *   fg           headings, strong text     body         normal text
+ *   muted        secondary text            subtle-fg    hints, counts, placeholders
+ *   faint        decorative (chevrons, bullets)
+ *   accent       links                     accent-soft  active/selected background
+ *   accent-line  active borders            focus        keyboard focus ring
+ *   header       green site header and table header
+ *   header-strong  current page link in the header
+ */
+:root {
+  --page: var(--color-gray-50);
+  --surface: var(--color-white);
+  --subtle: var(--color-gray-50);
+  --hover: var(--color-gray-100);
+  --chip: var(--color-gray-200);
+  --line: var(--color-gray-200);
+  --line-strong: var(--color-gray-300);
+  --line-faint: var(--color-gray-100);
+  --fg: var(--color-gray-900);
+  --body: var(--color-gray-700);
+  --muted: var(--color-gray-600);
+  --subtle-fg: var(--color-gray-500);
+  --faint: var(--color-gray-400);
+  --accent: var(--color-emerald-800);
+  --accent-soft: var(--color-emerald-50);
+  --accent-line: var(--color-emerald-600);
+  --focus: var(--color-emerald-600);
+  --header: var(--color-emerald-800);
+  --header-strong: var(--color-emerald-900);
+}
+
+.dark {
+  color-scheme: dark; /* dark scrollbars and form controls */
+  --page: var(--color-gray-950);
+  --surface: var(--color-gray-900);
+  --subtle: oklch(0.24 0.02 265); /* between gray-900 and gray-800 */
+  --hover: var(--color-gray-800);
+  --chip: var(--color-gray-700);
+  --line: var(--color-gray-700);
+  --line-strong: var(--color-gray-600);
+  --line-faint: var(--color-gray-800);
+  --fg: var(--color-gray-50);
+  --body: var(--color-gray-200);
+  --muted: var(--color-gray-300);
+  --subtle-fg: var(--color-gray-400);
+  --faint: var(--color-gray-500);
+  --accent: var(--color-emerald-300);
+  --accent-soft: oklch(0.3 0.05 165); /* dark emerald */
+  --accent-line: var(--color-emerald-500);
+  --focus: var(--color-emerald-400);
+  --header: var(--color-emerald-900);
+  --header-strong: var(--color-emerald-950);
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-subtle: var(--subtle);
+  --color-hover: var(--hover);
+  --color-chip: var(--chip);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-line-faint: var(--line-faint);
+  --color-fg: var(--fg);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-subtle-fg: var(--subtle-fg);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-line: var(--accent-line);
+  --color-header: var(--header);
+  --color-header-strong: var(--header-strong);
+}
+
+/*
+ * Screen sizes used by the loot page (see pages/LootPage.jsx):
+ *   `wide:` 1420px and up: the filter panel has room beside the table.
  * Named breakpoints are ordered correctly with sm/md/lg/xl, unlike min-[...] ones.
+ *
+ * Container size `table-fit` (1120px): the table's narrowest width plus a
+ * little room. Below it, the table scrolls sideways inside its own box
+ * (`@max-table-fit:` in components/ItemList.jsx and ItemTable.jsx).
  */
 @theme {
   --breakpoint-wide: 88.75rem;
+  --container-table-fit: 70rem;
 }
 
 @layer base {
   /* One focus ring for everything you can tab to (buttons, links, inputs, checkboxes). */
   :focus-visible {
-    outline: 2px solid var(--color-emerald-600);
+    outline: 2px solid var(--focus);
     outline-offset: 2px;
   }
 
@@ -28,7 +122,7 @@
   }
 }
 
-/* The white box used for the filter sidebar, the item table, and item cards. */
+/* The box used for the filter sidebar, the item table, and item cards. */
 @utility panel {
-  @apply rounded-lg border border-gray-200 bg-white shadow-sm;
+  @apply rounded-lg border border-line bg-surface shadow-sm;
 }

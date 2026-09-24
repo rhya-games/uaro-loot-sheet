@@ -22,7 +22,7 @@ export default function SearchBar({ value, onChange }) {
       <MagnifyingGlassIcon
         aria-hidden="true"
         className={`pointer-events-none absolute top-1/2 left-3 size-5 -translate-y-1/2 ${
-          active ? 'text-emerald-700' : 'text-gray-400'
+          active ? 'text-accent' : 'text-faint'
         }`}
       />
       <input
@@ -33,8 +33,8 @@ export default function SearchBar({ value, onChange }) {
         onKeyDown={(event) => event.key === 'Escape' && onChange('')}
         placeholder="Search by name, use, or item ID…"
         autoComplete="off"
-        className={`w-full rounded-lg border py-2.5 pr-11 pl-10 text-base shadow-sm placeholder:text-gray-500 ${
-          active ? 'border-emerald-600 bg-emerald-50' : 'border-gray-300 bg-white'
+        className={`w-full rounded-lg border py-2.5 pr-11 pl-10 text-base shadow-sm placeholder:text-subtle-fg ${
+          active ? 'border-accent-line bg-accent-soft' : 'border-line-strong bg-surface'
         }`}
       />
       {active && (
@@ -44,7 +44,7 @@ export default function SearchBar({ value, onChange }) {
               type="button"
               onClick={() => onChange('')}
               aria-label="Clear search"
-              className="flex size-8 items-center justify-center rounded-full text-emerald-800 hover:bg-emerald-100"
+              className="flex size-8 items-center justify-center rounded-full text-accent hover:bg-accent-soft"
             >
               <XMarkIcon className="size-5" aria-hidden="true" />
             </button>

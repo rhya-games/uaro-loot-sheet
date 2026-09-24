@@ -42,13 +42,13 @@ export default function CheckboxGroup({
   }
 
   return (
-    <details open className="group border-b border-gray-200 py-3">
-      <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-gray-900">
+    <details open className="group border-b border-line py-3">
+      <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-fg">
         {title}
         {selected.length > 0 && (
-          <span className="mr-2 ml-auto text-xs font-normal text-emerald-700">{selected.length} selected</span>
+          <span className="mr-2 ml-auto text-xs font-normal text-accent">{selected.length} selected</span>
         )}
-        <span className="text-gray-400 transition-transform group-open:rotate-90" aria-hidden="true">
+        <span className="text-faint transition-transform group-open:rotate-90" aria-hidden="true">
           ›
         </span>
       </summary>
@@ -60,13 +60,13 @@ export default function CheckboxGroup({
           onChange={(event) => setFilterText(event.target.value)}
           placeholder={`Find ${title.toLowerCase()}…`}
           aria-label={`Find ${title.toLowerCase()}`}
-          className="mt-2 w-full rounded border border-gray-300 px-2 py-1 text-sm"
+          className="mt-2 w-full rounded border border-line-strong px-2 py-1 text-sm"
         />
       )}
 
       <ul className={`mt-2 space-y-0.5 ${searchable ? 'max-h-72 overflow-y-auto' : ''}`}>
         {onSetAll && (
-          <li className="border-b border-gray-100 pb-1">
+          <li className="border-b border-line-faint pb-1">
             <SelectAll label={selectAllLabel} options={options} selected={selected} onSetAll={onSetAll} />
           </li>
         )}
@@ -78,7 +78,7 @@ export default function CheckboxGroup({
             <li key={option}>
               <label
                 className={`flex items-center gap-2 rounded px-1 py-1 text-sm ${
-                  disabled ? 'cursor-default opacity-40' : 'cursor-pointer hover:bg-gray-100'
+                  disabled ? 'cursor-default opacity-40' : 'cursor-pointer hover:bg-hover'
                 }`}
               >
                 <input
@@ -88,13 +88,13 @@ export default function CheckboxGroup({
                   onChange={() => onToggle(option)}
                   className="size-4 shrink-0 accent-emerald-700"
                 />
-                <span className="flex-1 text-gray-800">{renderLabel ? renderLabel(option) : option}</span>
-                <span className="text-xs text-gray-500 tabular-nums">{count}</span>
+                <span className="flex-1 text-body">{renderLabel ? renderLabel(option) : option}</span>
+                <span className="text-xs text-subtle-fg tabular-nums">{count}</span>
               </label>
             </li>
           );
         })}
-        {visible.length === 0 && <li className="px-1 py-1 text-sm text-gray-500">No matches</li>}
+        {visible.length === 0 && <li className="px-1 py-1 text-sm text-subtle-fg">No matches</li>}
       </ul>
     </details>
   );
@@ -116,7 +116,7 @@ function SelectAll({ label, options, selected, onSetAll }) {
   }, [someChecked]);
 
   return (
-    <label className="flex cursor-pointer items-center gap-2 rounded px-1 py-1 text-sm font-medium text-gray-800 hover:bg-gray-100">
+    <label className="flex cursor-pointer items-center gap-2 rounded px-1 py-1 text-sm font-medium text-body hover:bg-hover">
       <input
         ref={ref}
         type="checkbox"

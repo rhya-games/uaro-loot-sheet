@@ -10,8 +10,9 @@ export const GITHUB_REPO_URL = 'https://github.com/rhya-ragnarok/uaro-loot-sheet
 /** Discord thread for feedback and questions. Set to null to hide it. */
 export const DISCORD_FEEDBACK_THREAD_URL = 'https://discord.com/channels/702960460168953946/1552378187885838428';
 
-/** Discord username for direct messages. Set to null to hide it. */
-export const DISCORD_USERNAME = 'pizzabreaths';
+
+/** The contributing guide on GitHub (how to edit the item data). */
+export const CONTRIBUTING_URL = `${GITHUB_REPO_URL}/blob/main/CONTRIBUTING.md`;
 
 /** Name of the issue form in .github/ISSUE_TEMPLATE/ used for item reports. */
 const ITEM_REPORT_TEMPLATE = 'item-report.yml';

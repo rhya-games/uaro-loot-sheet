@@ -23,7 +23,7 @@ export default function SkipLink({ targetId, children, className = '' }) {
       href={`#${targetId}`}
       onClick={jump}
       // `not-sr-only` resets padding to 0, so the padding is set again for the focused state.
-      className={`sr-only rounded-lg bg-white text-sm font-semibold text-emerald-800 shadow-md
+      className={`sr-only rounded-lg bg-surface text-sm font-semibold text-accent shadow-md
         focus:not-sr-only focus:inline-block focus:px-4 focus:py-2 ${className}`}
     >
       {children}

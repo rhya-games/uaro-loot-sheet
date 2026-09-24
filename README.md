@@ -22,11 +22,12 @@ Then open http://localhost:5173/uaro-loot-sheet/
 
 ```
 src/
-  config.js           Site links (GitHub, Discord) and the per-row actions (Report)
+  config.js           Site links (GitHub, Discord) and the per-row actions (Report Issue)
+  index.css           Color roles for light/dark mode, screen sizes
   data/loot.json      All items (edit this to update the sheet)
   data/schema.json    Rules for what an item looks like
   data/changelog.js   Changelog entries (template at the top)
-  pages/              Loot Sheet, About, Feedback, Contribute, Changelog
+  pages/              Loot Sheet, About, Feedback, Changelog
   components/         UI pieces (SearchBar, FilterSidebar, ItemTable, ItemCard, ...)
   utils/              Search, filters, sorting, page switching, labels/colors, formatting
 scripts/              Data import and validation tools

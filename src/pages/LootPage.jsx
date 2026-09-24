@@ -16,9 +16,11 @@ import { useMediaQuery } from '../utils/useMediaQuery.js';
 /**
  * The filter panel has three layouts, by window width:
  *   1420px and up: beside the table, pushing it over (open by default).
- *   1024-1419px:   floats over the left of the table, so the table isn't
- *                  squeezed into cards (closed by default).
- *   under 1024px:  full-screen takeover (closed by default).
+ *   768-1419px:    floats over the left of the table, so the table isn't
+ *                  squeezed (closed by default).
+ *   under 768px:   a sheet covering most of the screen, with a dimmed strip
+ *                  (scrim) on the right; clicking the scrim closes it
+ *                  (closed by default).
  *
  * 1420px = table's minimum width (~1100px, see ItemList) + panel (240px)
  * + gap (24px) + page padding (32px), rounded up. The same number appears in
@@ -66,8 +68,8 @@ export default function LootPage() {
     toggleButtonRef.current?.focus();
   };
 
-  // Full-screen panel on small screens: stop the page behind it from scrolling.
-  const smallScreen = useMediaQuery('(max-width: 1023px)');
+  // Sheet on small screens: stop the page behind it from scrolling.
+  const smallScreen = useMediaQuery('(max-width: 767px)');
   useEffect(() => {
     if (!(sidebarOpen && smallScreen)) return;
     document.body.style.overflow = 'hidden';
@@ -97,11 +99,11 @@ export default function LootPage() {
             aria-expanded={sidebarOpen}
             aria-controls="filter-sidebar"
             aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
-            className="flex h-full shrink-0 items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 text-sm
-              font-medium text-gray-700 shadow-sm hover:bg-gray-100 lg:px-4"
+            className="flex h-full shrink-0 items-center gap-2 rounded-lg border border-line-strong bg-surface px-3 text-sm
+              font-medium text-body shadow-sm hover:bg-hover md:px-4"
           >
             <FunnelIcon className="size-5" aria-hidden="true" />
-            <span className="hidden lg:inline">{sidebarOpen ? 'Hide filters' : 'Show filters'}</span>
+            <span className="hidden md:inline">{sidebarOpen ? 'Hide filters' : 'Show filters'}</span>
             {activeFilterCount > 0 && (
               <span className="rounded-full bg-emerald-700 px-2 py-0.5 text-xs text-white">{activeFilterCount}</span>
             )}
@@ -113,7 +115,7 @@ export default function LootPage() {
       </div>
 
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-subtle-fg">
           Showing {results.length} of {loot.length} items
         </p>
         <ActiveFilters
@@ -135,18 +137,30 @@ export default function LootPage() {
       {/* Panel and table share one grid cell (so the panel floats over the table)
           until 1420px (`wide:`), where the grid gets a second column and the panel sits beside it. */}
       <div
-        className={`lg:grid lg:items-start ${sidebarOpen ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''}`}
+        className={`md:grid md:items-start ${sidebarOpen ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''}`}
       >
+        {sidebarOpen && (
+          // Small screens only: dims the page behind the sheet; clicking it closes the panel.
+          <div
+            aria-hidden="true"
+            onClick={closePanel}
+            className="fixed inset-0 z-40 bg-black/50 md:hidden motion-safe:transition-opacity motion-safe:duration-200
+              motion-safe:starting:opacity-0"
+          />
+        )}
         {sidebarOpen && (
           <aside
             id="filter-sidebar"
             aria-label="Filters"
             onKeyDown={(event) => event.key === 'Escape' && !panelBesideTable && closePanel()}
-            className="fixed inset-0 z-50 overflow-y-auto bg-white px-4 pb-4
-              lg:panel lg:sticky lg:inset-auto lg:top-4 lg:z-30 lg:col-start-1 lg:row-start-1 lg:max-h-[calc(100vh-2rem)]
-              lg:w-60 lg:justify-self-start lg:pb-3 lg:shadow-xl wide:shadow-sm"
+            // Slides in from the left (skipped when the system asks for reduced motion).
+            className="fixed inset-y-0 right-12 left-0 z-50 overflow-y-auto bg-surface px-4 pb-4 shadow-xl
+              motion-safe:transition motion-safe:duration-200 motion-safe:ease-out
+              motion-safe:starting:-translate-x-6 motion-safe:starting:opacity-0
+              md:panel md:sticky md:inset-auto md:top-4 md:z-30 md:col-start-1 md:row-start-1 md:max-h-[calc(100vh-2rem)]
+              md:w-60 md:justify-self-start md:pb-3 md:shadow-xl wide:shadow-sm"
           >
-            <div className="hidden lg:block">
+            <div className="hidden md:block">
               <SkipLink targetId="results" className="focus:absolute focus:top-2 focus:left-2 focus:z-20">
                 Skip to table
               </SkipLink>
@@ -167,7 +181,7 @@ export default function LootPage() {
         <div
           id="results"
           tabIndex={-1}
-          className={`min-w-0 focus:outline-none lg:col-start-1 lg:row-start-1 ${sidebarOpen ? 'wide:col-start-2' : ''}`}
+          className={`min-w-0 focus:outline-none md:col-start-1 md:row-start-1 ${sidebarOpen ? 'wide:col-start-2' : ''}`}
         >
           <ItemList
             items={results}

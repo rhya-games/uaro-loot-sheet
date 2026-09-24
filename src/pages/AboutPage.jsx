@@ -2,6 +2,7 @@ import { ActionBadge, CategoryBadge } from '../components/ItemBadges.jsx';
 import { BulletList, ExternalLink, Page, PageLink, Section, SubHeading } from '../components/Page.jsx';
 import { ACTIONS, ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES } from '../utils/labels.js';
 import { ROUTES } from '../utils/route.js';
+import { CONTRIBUTING_URL } from '../config.js';
 
 /** What the site is, how to read it, and where the data comes from. */
 export default function AboutPage() {
@@ -94,8 +95,8 @@ export default function AboutPage() {
 
       <Section title="Found a mistake or want to help?">
         <p>
-          See <PageLink href={ROUTES.feedback}>Feedback</PageLink> for ways to report problems, and{' '}
-          <PageLink href={ROUTES.contribute}>Contribute</PageLink> to edit the data yourself.
+          See <PageLink href={ROUTES.feedback}>Feedback</PageLink> for ways to report problems, or read the{' '}
+          <ExternalLink href={CONTRIBUTING_URL}>contributing guide</ExternalLink> to edit the data yourself.
         </p>
         <p>
           Want to support this work? You can mail in-game hat quest materials to <strong>Rhya</strong> the Sniper.

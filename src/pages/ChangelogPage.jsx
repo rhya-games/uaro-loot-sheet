@@ -3,10 +3,10 @@ import { CHANGELOG, CHANGE_TYPES } from '../data/changelog.js';
 
 /** Colored label next to each change type, e.g. "Added". */
 const TYPE_COLORS = {
-  Added: 'text-green-800',
-  Changed: 'text-blue-800',
-  Fixed: 'text-amber-800',
-  Removed: 'text-red-800',
+  Added: 'text-green-800 dark:text-green-300',
+  Changed: 'text-blue-800 dark:text-blue-300',
+  Fixed: 'text-amber-800 dark:text-amber-300',
+  Removed: 'text-red-800 dark:text-red-300',
 };
 
 /** "2026-09-23" -> "September 23, 2026" (in any time zone). */
@@ -22,7 +22,7 @@ export default function ChangelogPage() {
       {CHANGELOG.length === 0 && <p>No updates yet.</p>}
       {CHANGELOG.map((entry) => (
         <Section key={`${entry.date}-${entry.title}`} title={entry.title}>
-          <p className="text-gray-600">
+          <p className="text-muted">
             <time dateTime={entry.date}>{formatDate(entry.date)}</time>
           </p>
           {CHANGE_TYPES.map((type) => {
@@ -33,7 +33,7 @@ export default function ChangelogPage() {
                 <SubHeading>
                   <span className={TYPE_COLORS[type]}>{type}</span>
                 </SubHeading>
-                <ul className="mt-1 list-disc space-y-1.5 pl-5 marker:text-gray-400">
+                <ul className="mt-1 list-disc space-y-1.5 pl-5 marker:text-faint">
                   {changes.map((change) => (
                     <li key={change.text}>{change.text}</li>
                   ))}

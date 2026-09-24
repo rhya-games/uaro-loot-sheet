@@ -15,7 +15,6 @@ export const ROUTES = {
   loot: '#/',
   about: '#/about',
   feedback: '#/feedback',
-  contribute: '#/contribute',
   changelog: '#/changelog',
 };
 

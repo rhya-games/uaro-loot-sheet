@@ -38,7 +38,9 @@ export default function Tooltip({ text, placement = 'top', children }) {
         role="tooltip"
         hidden={!visible}
         className={`pointer-events-none absolute left-1/2 z-40 -translate-x-1/2 rounded bg-gray-900 px-2 py-1 text-xs
-          font-medium whitespace-nowrap text-white shadow-md ${placement === 'bottom' ? 'top-full mt-2' : 'bottom-full mb-2'}`}
+          font-medium whitespace-nowrap text-white shadow-md dark:bg-gray-100 dark:text-gray-900
+          motion-safe:transition-opacity motion-safe:duration-150 motion-safe:starting:opacity-0
+          ${placement === 'bottom' ? 'top-full mt-2' : 'bottom-full mb-2'}`}
       >
         {text}
       </span>

@@ -47,10 +47,10 @@ export default function FilterSidebar({
   return (
     <div>
       {/* Stays pinned to the top of the panel while the filters scroll underneath. */}
-      <div className="sticky top-0 z-10 -mx-4 flex items-center gap-3 border-b border-gray-200 bg-white px-4 pt-3 pb-2">
-        <h2 className="text-sm font-bold tracking-wide text-gray-600 uppercase">Filters</h2>
+      <div className="sticky top-0 z-10 -mx-4 flex items-center gap-3 border-b border-line bg-surface px-4 pt-3 pb-2">
+        <h2 className="text-sm font-bold tracking-wide text-muted uppercase">Filters</h2>
         {countActiveFilters(filters) > 0 && (
-          <button type="button" onClick={onClear} className="ml-auto text-sm text-emerald-700 hover:underline">
+          <button type="button" onClick={onClear} className="ml-auto text-sm text-accent hover:underline">
             Clear all
           </button>
         )}
@@ -62,7 +62,7 @@ export default function FilterSidebar({
                 type="button"
                 onClick={onClose}
                 aria-label="Close filters"
-                className="flex size-8 items-center justify-center rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                className="flex size-8 items-center justify-center rounded-full text-muted hover:bg-hover hover:text-fg"
               >
                 <XMarkIcon className="size-5" aria-hidden="true" />
               </button>
@@ -71,7 +71,7 @@ export default function FilterSidebar({
         )}
       </div>
 
-      <label className="my-2 flex cursor-pointer items-start gap-2 rounded-lg bg-gray-50 p-2 text-sm hover:bg-gray-100">
+      <label className="my-2 flex cursor-pointer items-start gap-2 rounded-lg bg-subtle p-2 text-sm hover:bg-hover">
         <input
           type="checkbox"
           checked={ignoreKeep}
@@ -80,8 +80,8 @@ export default function FilterSidebar({
           className="mt-0.5 size-4 shrink-0 accent-emerald-700"
         />
         <span>
-          <span className="font-medium text-gray-900">I don't keep items</span>
-          <span id="ignore-keep-hint" className="block text-gray-600">
+          <span className="font-medium text-fg">I don't keep items</span>
+          <span id="ignore-keep-hint" className="block text-muted">
             Skip quests, hats and pets: hides Keep so you only see what to sell.
           </span>
         </span>

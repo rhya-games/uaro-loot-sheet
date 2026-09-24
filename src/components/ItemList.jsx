@@ -2,14 +2,14 @@ import ItemCard from './ItemCard.jsx';
 import ItemTable from './ItemTable.jsx';
 
 /**
- * Shows the items: as a table when there's room, as cards when there isn't.
- * Both are rendered and CSS decides which one is visible. It uses a
- * container query (based on the space this list has, not the whole screen),
- * so opening the filter sidebar on a small laptop switches to cards
- * instead of making the page scroll sideways.
+ * Shows the items: as a table from 768px (`md:`) up, as cards below that.
+ * Both are rendered and CSS decides which one is visible.
  *
- * 1120px is just above the table's narrowest possible width (about 1100px).
- * If you add a column or widen one, measure again and raise it.
+ * When the table doesn't fit (the list is narrower than the `table-fit`
+ * container size, 1120px, in index.css), the table gets its own scroll box:
+ * it scrolls sideways inside it and its header sticks to the top of the box.
+ * Otherwise the page scrolls and the header sticks to the top of the window.
+ * If you add or widen a column, measure the table's narrowest width again.
  *
  * Props:
  *   items       - items to display (already searched, filtered and sorted)
@@ -19,16 +19,19 @@ import ItemTable from './ItemTable.jsx';
  */
 export default function ItemList({ items, sort, onSort, onSelectUse }) {
   if (items.length === 0) {
-    return <p className="py-12 text-center text-gray-500">No items match your search or filters.</p>;
+    return <p className="py-12 text-center text-subtle-fg">No items match your search or filters.</p>;
   }
 
   return (
     <div className="@container">
-      <div className="hidden @min-[1120px]:block">
+      <div
+        className="hidden md:block @max-table-fit:max-h-[calc(100vh-2rem)] @max-table-fit:overflow-auto
+          @max-table-fit:rounded-lg @max-table-fit:shadow-sm"
+      >
         <ItemTable items={items} sort={sort} onSort={onSort} onSelectUse={onSelectUse} />
       </div>
 
-      <ul className="space-y-3 @min-[1120px]:hidden">
+      <ul className="space-y-3 md:hidden">
         {items.map((item) => (
           <li key={item.id}>
             <ItemCard item={item} onSelectUse={onSelectUse} />
