@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import ItemCard from './ItemCard.jsx';
 import ItemTable from './ItemTable.jsx';
+import { highlightFor } from '../utils/highlight.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
 
 /**
@@ -51,7 +52,7 @@ export default memo(function ItemList({ items, sort, onSort, onSelectUse, highli
         <ul className="space-y-3">
           {items.map((item) => (
             <li key={item.id}>
-              <ItemCard item={item} onSelectUse={onSelectUse} highlightUses={highlightUses} />
+              <ItemCard item={item} onSelectUse={onSelectUse} highlightUses={highlightFor(item, highlightUses)} />
             </li>
           ))}
         </ul>

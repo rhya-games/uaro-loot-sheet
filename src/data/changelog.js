@@ -29,6 +29,8 @@ export const CHANGELOG = [
         type: 'Changed',
         text: 'Copy link is now Share, next to the search box. On phones it opens your share menu; on computers it copies the link.',
       },
+      { type: 'Changed', text: 'Typing in the search box feels instant, even with the whole list showing.' },
+      { type: 'Fixed', text: 'Checkboxes have a white check, and keyboard focus rings are never cut off or covered.' },
       {
         type: 'Changed',
         text: 'On wide screens the filter panel starts at the top with its own close button and shows the item count. Filter chips show above the table when the panel is closed (or floating on smaller screens), and adding a filter no longer pushes the table down.',

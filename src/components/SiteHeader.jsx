@@ -20,7 +20,8 @@ const NAV_LINKS = [
  */
 export default function SiteHeader({ route }) {
   return (
-    <header className="bg-header text-white">
+    // Focus rings here are white, with a green gap (see --focus-gap in index.css).
+    <header className="bg-header text-white [--focus-gap:var(--header)]">
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-4 px-4 py-5">
         <div>
           <a href={ROUTES.loot} className="rounded text-2xl font-bold focus-visible:outline-white">

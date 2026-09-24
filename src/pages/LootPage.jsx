@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FunnelIcon } from '@heroicons/react/24/outline';
 import SearchBar from '../components/SearchBar.jsx';
 import FilterSidebar from '../components/FilterSidebar.jsx';
@@ -90,15 +90,18 @@ export default function LootPage() {
 
   // Build the search index, then: search box, then sidebar filters, then sorting.
   const search = useMemo(() => createSearch(baseItems), [baseItems]);
-  const searched = useMemo(() => search(query), [search, query]);
+  // The search box shows each letter right away; the list catches up a moment
+  // later (React can drop an unfinished redraw when the next letter arrives).
+  const deferredQuery = useDeferredValue(query);
+  const searched = useMemo(() => search(deferredQuery), [search, deferredQuery]);
   const results = useMemo(() => sortItems(filterItems(searched, filters), sort), [searched, filters, sort]);
 
   // Which "Used For" entries to bring to the front of each item's list: the
   // targets filtered by, and uses the search text matches as whole words
   // (searching "Headset" puts "x1 Headset" first on Coal). See ItemUses.
   const highlightUses = useMemo(
-    () => ({ targets: filters.usedFor, matchesSearch: wordMatcher(query) }),
-    [filters.usedFor, query],
+    () => ({ targets: filters.usedFor, matchesSearch: wordMatcher(deferredQuery) }),
+    [filters.usedFor, deferredQuery],
   );
 
   const activeFilterCount = countActiveFilters(filters) + (keepsEverything(keepFor) ? 0 : 1);

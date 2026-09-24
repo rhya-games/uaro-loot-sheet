@@ -3,11 +3,11 @@ import { createPortal } from 'react-dom';
 import { autoUpdate, flip, offset, shift, size, useFloating } from '@floating-ui/react-dom';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { usePresence } from '../utils/usePresence.js';
+import { NO_HIGHLIGHT, highlightedUseTest } from '../utils/highlight.js';
 
 /** How many uses to show before the rest go behind "+N more". */
 const MAX_USES_SHOWN = 6;
 
-const NO_HIGHLIGHT = { targets: [], matchesSearch: null };
 
 /**
  * Shows what an item is used for, plus any extra notes.
@@ -34,9 +34,7 @@ const NO_HIGHLIGHT = { targets: [], matchesSearch: null };
  */
 export default function ItemUses({ item, onSelectUse, highlight = NO_HIGHLIGHT }) {
   if (item.uses.length === 0 && !item.notes) return null;
-  const { targets, matchesSearch } = highlight;
-  const searchFindsUses = matchesSearch && !matchesSearch(item.name);
-  const isMatch = (use) => targets.includes(use.for) || (searchFindsUses && matchesSearch(use.for));
+  const isMatch = highlightedUseTest(item, highlight);
   const dimOthers = item.uses.some(isMatch);
   const uses = [...item.uses].sort((a, b) => isMatch(b) - isMatch(a) || a.for.localeCompare(b.for));
   const shown = uses.slice(0, MAX_USES_SHOWN);

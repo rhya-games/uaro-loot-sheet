@@ -1,4 +1,6 @@
+import { memo } from 'react';
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
+import { highlightFor } from '../utils/highlight.js';
 import ItemUses from './ItemUses.jsx';
 import CopyItemId from './CopyItemId.jsx';
 import RowActions from './RowActions.jsx';
@@ -112,7 +114,8 @@ const COLUMNS = [
     nowrap: true,
     title: 'When the vend or @whobuy price was last checked in game',
     render: (item) => (
-      <div className="relative">
+      // isolate keeps the flag's z-30 inside this cell, so it can't cover the sticky header.
+      <div className="relative isolate">
         <VerifiedText item={item} />
         <FloatingRowActions item={item} />
       </div>
@@ -131,7 +134,7 @@ function FloatingRowActions({ item }) {
   if (enabled) return null;
   return (
     <div
-      className="absolute -top-1.5 right-0 rounded-full bg-surface opacity-0 shadow-sm transition-opacity duration-150
+      className="absolute -top-1.5 right-0 z-30 rounded-full bg-surface opacity-0 shadow-sm transition-opacity duration-150
         group-hover:opacity-100 focus-within:opacity-100 motion-reduce:transition-none
         [@media(hover:none)]:opacity-100"
     >
@@ -154,7 +157,8 @@ function FloatingRowActions({ item }) {
 export default function ItemTable({ items, sort, onSort, onSelectUse, highlightUses }) {
   return (
     <table className="panel w-full border-separate border-spacing-0 text-sm">
-      <thead>
+      {/* Header rings are drawn inside each cell, so no gap fill around them. */}
+      <thead className="[--focus-gap:transparent]">
         <tr>
           {COLUMNS.map((column) => {
             const direction = column.sortKey && sort?.key === column.sortKey ? sort.direction : null;
@@ -190,23 +194,38 @@ export default function ItemTable({ items, sort, onSort, onSelectUse, highlightU
       </thead>
       <tbody className="bg-surface">
         {items.map((item) => (
-          <tr key={item.id} className="group even:bg-subtle hover:bg-accent-soft">
-            {COLUMNS.map((column) => (
-              <td
-                key={column.label}
-                className={`border-b border-line px-3 py-3 align-top group-last:border-b-0 ${
-                  column.numeric ? 'text-right whitespace-nowrap tabular-nums' : ''
-                } ${column.nowrap ? 'whitespace-nowrap' : ''}`}
-              >
-                {column.render(item, { onSelectUse, highlightUses })}
-              </td>
-            ))}
-          </tr>
+          <ItemRow
+            key={item.id}
+            item={item}
+            onSelectUse={onSelectUse}
+            highlightUses={highlightFor(item, highlightUses)}
+          />
         ))}
       </tbody>
     </table>
   );
 }
+
+/**
+ * One table row. Wrapped in `memo` so typing in the search box only redraws
+ * rows whose item or highlighting changed, not all ~1,000 of them.
+ */
+const ItemRow = memo(function ItemRow({ item, onSelectUse, highlightUses }) {
+  return (
+    <tr className="group even:bg-subtle hover:bg-accent-soft">
+      {COLUMNS.map((column) => (
+        <td
+          key={column.label}
+          className={`border-b border-line px-3 py-3 align-top group-last:border-b-0 ${
+            column.numeric ? 'text-right whitespace-nowrap tabular-nums' : ''
+          } ${column.nowrap ? 'whitespace-nowrap' : ''}`}
+        >
+          {column.render(item, { onSelectUse, highlightUses })}
+        </td>
+      ))}
+    </tr>
+  );
+});
 
 /**
  * A column header you can click (or focus and press Enter/Space) to sort.

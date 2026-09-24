@@ -159,7 +159,11 @@ Match similar existing items. Look them up in loot.json first.
   (secondary buttons like "Clear all").
 - Type: headings are `font-semibold`, body `text-sm`, secondary `text-xs`
   or `text-sm text-muted`. No all-caps, letter-spacing or italics.
-- Every interactive element gets a visible focus ring (rounded). Tooltips
+- Every interactive element gets a visible focus ring (rounded, from
+  `index.css`): a 2px ring with the gap filled by `--focus-gap` (set it where
+  the background isn't the surface color), raised to z-20 so neighbors can't
+  cover it. Overlays inside a focusable control (icons, clear buttons) need
+  z-30. Checkboxes use the `checkbox` utility (white check). Tooltips
   use `components/Tooltip.jsx` (hover with a delay, and keyboard focus).
   Only use one when the element has no visible label.
 - Escape closes the innermost thing first. Components that handle Escape

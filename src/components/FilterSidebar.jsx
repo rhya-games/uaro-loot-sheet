@@ -79,7 +79,7 @@ export default memo(function FilterSidebar({
             </span>
           )}
         </div>
-        <div className="flex min-h-7 items-center justify-between gap-2 pb-2">
+        <div className="flex min-h-8 items-center justify-between gap-2 pb-2">
           <p className="text-sm text-muted" aria-live="polite">
             {resultCount.toLocaleString('en-US')} of {totalCount.toLocaleString('en-US')} items
           </p>
@@ -118,7 +118,7 @@ export default memo(function FilterSidebar({
                 type="checkbox"
                 checked={keepFor.includes(activity.id)}
                 onChange={() => onKeepForChange(toggleValue(keepFor, activity.id))}
-                className="size-4 shrink-0 accent-emerald-700"
+                className="checkbox"
               />
               <span className="text-body">{activity.label}</span>
             </label>
