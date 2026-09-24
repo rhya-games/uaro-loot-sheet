@@ -1,5 +1,5 @@
 import targetData from '../data/use-targets.json' with { type: 'json' };
-import { isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
+import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
 
 /**
  * Suggested actions, worked out from prices instead of set by hand.
@@ -33,7 +33,7 @@ export function suggestSale(item) {
   const npc = npcSellPrice(item);
   if (isSoldByNpc(item)) return { action: 'NPC', price: npc, reason: 'NPCs sell it, so players won’t buy it' };
   const tradeable = isTradeable(item);
-  const whobuy = tradeable ? item.avgWhobuy : null;
+  const whobuy = tradeable && hasWhobuy(item) ? item.avgWhobuy : null;
   const vend = tradeable ? item.avgVend : null;
   const floor = npc ?? 0;
 
@@ -43,9 +43,10 @@ export function suggestSale(item) {
   if (whobuy != null && whobuy > floor * (1 + WHOBUY_MARGIN)) {
     return { action: 'Whobuy', price: whobuy, reason: `@whobuy pays ${fmt(whobuy)}, more than NPCs` };
   }
-  // No player price yet: we can't tell whether players pay more, so don't
-  // guess NPC (cards would all come out as NPC).
-  if (tradeable && whobuy == null && vend == null) return null;
+  // No vend price yet, and no @whobuy buyers to go on: we can't tell
+  // whether players pay more, so don't guess NPC (cards would all come out
+  // as NPC). A Whobuy of 0 means "checked, nobody's buying".
+  if (tradeable && vend == null && !(whobuy > 0)) return null;
   if (npc > 0) {
     const closest = Math.max(whobuy ?? 0, vend ?? 0);
     const reason = closest > npc

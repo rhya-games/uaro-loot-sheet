@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useAdmin } from './AdminContext.jsx';
 import { parseZeny, todayText } from '../utils/format.js';
 import { PlayerPrice } from '../components/StatusIcons.jsx';
-import { isSoldByNpc, isTradeable } from '../utils/prices.js';
+import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
 
 /** What the Verified note says for a price checked in game. */
 const CHECK_NOTES = {
@@ -10,11 +10,24 @@ const CHECK_NOTES = {
   avgWhobuy: '@whobuy price in game',
 };
 
+/** What a saved price looks like in the box: 12000 -> "12,000", null -> "". */
+const asText = (price) => (price == null ? '' : price.toLocaleString('en-US'));
+
+/**
+ * Adds thousands commas to what's typed so far: "12000" -> "12,000",
+ * "1500k" -> "1,500k". Only the leading digits change; the rest is kept.
+ */
+function withCommas(text) {
+  const [, digits, rest] = text.replace(/,/g, '').match(/^(\d*)(.*)$/s);
+  return digits.replace(/\B(?=(\d{3})+(?!\d))/g, ',') + rest;
+}
+
 /**
  * A Vend or Whobuy price cell. In admin mode it's a text box: type a price
  * and press Enter (or leave the box) to save it. That also marks the item
- * as verified today. Escape puts the old price back. Outside admin mode, and
- * for items players don't trade, it's the normal read-only price.
+ * as verified today. Escape puts the old price back. 0 means "checked, and
+ * nobody was buying (or selling)". Outside admin mode, and where there
+ * can't be a price (see PlayerPrice), it's the normal read-only cell.
  *
  * Props:
  *   item  - one entry from loot.json
@@ -22,18 +35,40 @@ const CHECK_NOTES = {
  */
 export default function PriceCell({ item, field }) {
   const { enabled } = useAdmin();
-  if (!enabled || !isTradeable(item) || isSoldByNpc(item)) return <PlayerPrice item={item} field={field} />;
+  const noPrice = !isTradeable(item) || isSoldByNpc(item) || (field === 'avgWhobuy' && !hasWhobuy(item));
+  if (!enabled || noPrice) return <PlayerPrice item={item} field={field} />;
   return <PriceInput item={item} field={field} />;
 }
 
 function PriceInput({ item, field }) {
   const { saveItem } = useAdmin();
   const saved = item[field];
-  const [text, setText] = useState(saved == null ? '' : String(saved));
+  const [text, setText] = useState(asText(saved));
   const [status, setStatus] = useState(null); // null | 'saving' | { error }
+  const inputRef = useRef(null);
+  const caret = useRef(null); // where the cursor goes after commas are added
 
-  // Show the new value when the data reloads after a save.
-  useEffect(() => setText(saved == null ? '' : String(saved)), [saved]);
+  // Show the new value after a save.
+  useEffect(() => setText(asText(saved)), [saved]);
+
+  // Adding commas moves the text around, so put the cursor back after the
+  // same number of typed characters (commas don't count).
+  function onChange(event) {
+    const { value: typed, selectionStart } = event.target;
+    const before = typed.slice(0, selectionStart).replace(/,/g, '').length;
+    const formatted = withCommas(typed);
+    let position = 0;
+    for (let seen = 0; position < formatted.length && seen < before; position++) {
+      if (formatted[position] !== ',') seen++;
+    }
+    caret.current = position;
+    setText(formatted);
+  }
+  useLayoutEffect(() => {
+    if (caret.current == null) return;
+    inputRef.current?.setSelectionRange(caret.current, caret.current);
+    caret.current = null;
+  }, [text]);
 
   const value = parseZeny(text);
   const invalid = value === undefined;
@@ -66,13 +101,14 @@ function PriceInput({ item, field }) {
         type="text"
         inputMode="decimal"
         value={text}
-        onChange={(event) => setText(event.target.value)}
+        ref={inputRef}
+        onChange={onChange}
         onBlur={save}
         onKeyDown={(event) => {
           if (event.key === 'Enter') event.currentTarget.blur();
           if (event.key === 'Escape') {
             event.preventDefault(); // Escape is handled here; see AGENTS.md.
-            setText(saved == null ? '' : String(saved));
+            setText(asText(saved));
           }
         }}
         placeholder="—"
@@ -83,7 +119,8 @@ function PriceInput({ item, field }) {
           ${status === 'saving' ? 'opacity-60' : ''}`}
       />
       {/* Typed "12k"? Show what it means. */}
-      {value != null && text.trim() !== String(value) && <span className="text-xs text-muted">{value.toLocaleString('en-US')}z</span>}
+      {value > 0 && text.trim() !== asText(value) && <span className="text-xs text-muted">{asText(value)}z</span>}
+      {value === 0 && <span className="text-xs text-muted">{field === 'avgWhobuy' ? 'No buyers' : 'No sellers'}</span>}
       {status?.error && <span className="text-xs text-red-700 dark:text-red-400">{status.error}</span>}
     </div>
   );

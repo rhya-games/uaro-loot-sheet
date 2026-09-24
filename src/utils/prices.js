@@ -47,6 +47,12 @@ const NOT_TRADEABLE = new Set(overrides.tradeRestrictions.notTradeable.items.map
 /** Players can trade this item (uaro-overrides.json, tradeRestrictions.notTradeable). */
 export const isTradeable = (item) => !NOT_TRADEABLE.has(item.itemId);
 
+/**
+ * Whether @whobuy can apply to this item. Buying stores don't buy cards or
+ * equipment, so those never have a Whobuy price (the site shows ✕).
+ */
+export const hasWhobuy = (item) => item.itemType !== 'Equipment' && !item.categories.includes('Card');
+
 /** Just the number (for sorting). null when it can't be sold or is unknown. */
 export function npcSellPrice(item) {
   const info = npcSellInfo(item);

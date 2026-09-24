@@ -1,7 +1,7 @@
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { formatZeny } from '../utils/format.js';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
-import { isSoldByNpc, isTradeable } from '../utils/prices.js';
+import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
 import Tooltip from './Tooltip.jsx';
 
 /**
@@ -36,9 +36,12 @@ export function NpcBuyable({ item }) {
 }
 
 /**
- * A player price (avgVend or avgWhobuy), or ✕ when players don't trade it:
+ * A player price (avgVend or avgWhobuy), or ✕ when there isn't one:
  *   - items that can't be traded at all (with a tooltip, since it's rare)
- *   - items NPCs sell (explained in the column header's tooltip)
+ *   - items NPCs sell, and cards and equipment in the Whobuy column
+ *     (@whobuy doesn't buy them)
+ *   - 0: checked in game, and nobody was buying or selling it
+ * The column headers' tooltips explain the ✕.
  */
 export function PlayerPrice({ item, field }) {
   if (!isTradeable(item)) {
@@ -51,5 +54,7 @@ export function PlayerPrice({ item, field }) {
     );
   }
   if (isSoldByNpc(item)) return <NoIcon label="None: NPCs sell this" />;
+  if (field === 'avgWhobuy' && !hasWhobuy(item)) return <NoIcon label="None: @whobuy doesn't buy cards or equipment" />;
+  if (item[field] === 0) return <NoIcon label={field === 'avgWhobuy' ? 'No buyers' : 'No sellers'} />;
   return formatZeny(item[field]);
 }
