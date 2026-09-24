@@ -82,6 +82,12 @@ export default function LootPage() {
     writePreference('keepFor', activityIds);
   }, []);
 
+  /** Clear all: every filter, and back to keeping items for everything. The search stays. */
+  const clearAll = useCallback(() => {
+    setFilters(EMPTY_FILTERS);
+    changeKeepFor(ALL_ACTIVITY_IDS);
+  }, [changeKeepFor]);
+
   // Build the search index, then: search box, then sidebar filters, then sorting.
   const search = useMemo(() => createSearch(baseItems), [baseItems]);
   const searched = useMemo(() => search(query), [search, query]);
@@ -129,11 +135,14 @@ export default function LootPage() {
   }, [viewHash]);
 
   // When the panel floats or takes over the screen, opening it moves focus into
-  // it, and closing it returns focus to the toggle button.
+  // it, and closing it returns focus to the toggle button. Beside the table,
+  // opening it from the Filters button does too, since that button disappears.
   const panelCovers = sidebarOpen && !panelBesideTable;
+  const focusCloseOnOpen = useRef(false);
   useEffect(() => {
-    if (panelCovers) closeButtonRef.current?.focus();
-  }, [panelCovers]);
+    if (panelCovers || (sidebarOpen && focusCloseOnOpen.current)) closeButtonRef.current?.focus();
+    focusCloseOnOpen.current = false;
+  }, [panelCovers, sidebarOpen]);
 
   /** Opens or closes the panel. Remembers where the table was, for the slide below. */
   const changePanel = useCallback((open) => {
@@ -212,7 +221,10 @@ export default function LootPage() {
     <button
       ref={toggleButtonRef}
       type="button"
-      onClick={() => changePanel(!sidebarOpen)}
+      onClick={() => {
+        focusCloseOnOpen.current = !sidebarOpen;
+        changePanel(!sidebarOpen);
+      }}
       aria-expanded={sidebarOpen}
       aria-controls="filter-sidebar"
       aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
@@ -239,7 +251,8 @@ export default function LootPage() {
   );
   // Wide screens with the panel open: the panel has its own close button, so
   // the toolbar drops the Filters button and the search box takes its room.
-  const showFiltersButton = !(sidebarOpen && panelBesideTable);
+  const panelShownBeside = sidebarOpen && panelBesideTable;
+  const showFiltersButton = !panelShownBeside;
 
   const toolbar = (
     <>
@@ -265,24 +278,24 @@ export default function LootPage() {
         )}
       </div>
 
-      {/* The results header: how many items, and what's narrowing them.
-          Always one chip tall, so adding the first filter doesn't push the table down. */}
-      <div className="flex min-h-7 flex-wrap items-center gap-x-4 gap-y-2">
-        <p className="text-sm text-muted">
-          {results.length.toLocaleString('en-US')} of {loot.length.toLocaleString('en-US')} items
-        </p>
-        <ActiveFilters
-          filters={filters}
-          keepFor={keepFor}
-          onClearKeepFor={() => changeKeepFor(ALL_ACTIVITY_IDS)}
-          onRemove={(key, value) => setFilters({ ...filters, [key]: toggleValue(filters[key], value) })}
-          onRemoveGroup={(key) => setFilters({ ...filters, [key]: [] })}
-          onClearAll={() => {
-            setFilters(EMPTY_FILTERS);
-            changeKeepFor(ALL_ACTIVITY_IDS);
-          }}
-        />
-      </div>
+      {/* The results header: how many items, and what's narrowing them. Always one
+          chip tall, so adding the first filter doesn't push the table down. When the
+          panel sits beside the table it shows the count and filters itself, so this hides. */}
+      {!panelShownBeside && (
+        <div className="flex min-h-7 flex-wrap items-center gap-x-4 gap-y-2">
+          <p className="text-sm text-muted">
+            {results.length.toLocaleString('en-US')} of {loot.length.toLocaleString('en-US')} items
+          </p>
+          <ActiveFilters
+            filters={filters}
+            keepFor={keepFor}
+            onClearKeepFor={() => changeKeepFor(ALL_ACTIVITY_IDS)}
+            onRemove={(key, value) => setFilters({ ...filters, [key]: toggleValue(filters[key], value) })}
+            onRemoveGroup={(key) => setFilters({ ...filters, [key]: [] })}
+            onClearAll={clearAll}
+          />
+        </div>
+      )}
     </>
   );
 
@@ -293,9 +306,11 @@ export default function LootPage() {
       {/* Panel and table share one grid cell (so the panel floats over the table)
           until 1470px (`wide:`), where the grid gets a second column for the panel.
           overflow-x-clip hides the table's edge while it slides (see the FLIP effect above)
-          without breaking the sticky header; the clip margin keeps the panel's shadow. */}
+          without breaking the sticky header. Browsers ignore overflow-clip-margin when
+          only one direction clips, so -mx-4/px-4 widen the clip box instead: that room
+          keeps focus rings and the panel's shadow at the edges from being cut off. */}
       <div
-        className={`md:grid md:items-start wide:overflow-x-clip wide:[overflow-clip-margin:1rem] ${
+        className={`md:grid md:items-start wide:-mx-4 wide:overflow-x-clip wide:px-4 ${
           panelTakesSpace ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''
         }`}
       >
@@ -340,6 +355,10 @@ export default function LootPage() {
           </div>
           <FilterSidebar
             onClose={closePanel}
+            resultCount={results.length}
+            totalCount={loot.length}
+            anyActive={activeFilterCount > 0}
+            onClearAll={clearAll}
             closeButtonRef={closeButtonRef}
             allItems={baseItems}
             keepFor={keepFor}
