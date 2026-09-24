@@ -23,7 +23,7 @@ import { useMediaQuery } from '../utils/useMediaQuery.js';
  *   sort        - current sort (the table shows it on its headers)
  *   onSort      - called with a column's sortKey when a table header is clicked
  *   onSelectUse - called when a "Used For" target is clicked
- *   highlightUses - "Used For" targets being filtered by (highlighted in each item)
+ *   highlightUses - which "Used For" entries to bring forward (see ItemUses)
  */
 export default memo(function ItemList({ items, sort, onSort, onSelectUse, highlightUses }) {
   const showTable = useMediaQuery('(min-width: 768px)');

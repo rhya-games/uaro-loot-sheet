@@ -42,6 +42,10 @@ export const CHANGELOG = [
         text: 'The Level 4 weapon quest: which stones and materials each weapon needs (for example, 30 Phlogopite, Pyroxene and Rose Quartz for Longinus’s Spear or Brionac).',
       },
       { type: 'Added', text: 'Rough Elunium and Rough Oridecon: 5 turn into 1 Elunium or Oridecon at the refiner.' },
+      {
+        type: 'Fixed',
+        text: 'Searching an item’s name (like “gold”) no longer fades its Used For list. Search only brings forward uses that match whole words.',
+      },
     ],
   },
   {

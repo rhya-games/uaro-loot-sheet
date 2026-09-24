@@ -118,7 +118,7 @@ const COLUMNS = [
  *   sort        - current sort, e.g. { key: 'avgVend', direction: 'desc' }, or null
  *   onSort      - called with a column's sortKey when its header is clicked
  *   onSelectUse - called when a "Used For" target is clicked
- *   highlightUses - "Used For" targets being filtered by (highlighted in each row)
+ *   highlightUses - which "Used For" entries to bring forward (see ItemUses)
  */
 export default function ItemTable({ items, sort, onSort, onSelectUse, highlightUses }) {
   return (

@@ -13,7 +13,7 @@ import { OVERCHARGE_LEVEL } from '../utils/prices.js';
  * Props:
  *   item        - one entry from src/data/loot.json
  *   onSelectUse - called when a "Used For" target is clicked
- *   highlightUses - "Used For" targets being filtered by (highlighted)
+ *   highlightUses - which "Used For" entries to bring forward (see ItemUses)
  */
 export default function ItemCard({ item, onSelectUse, highlightUses }) {
   return (
