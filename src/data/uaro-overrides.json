@@ -37,7 +37,8 @@
       { "itemId": 1750, "name": "Arrow", "sellValue": 0, "note": "Costs 1z, and NPCs pay half, rounded down." },
       { "itemId": 102723, "name": "Beehive Box", "sellValue": 0, "note": "0z for now. Not confirmed whether NPCs buy it." },
       { "itemId": 12363, "name": "Ghost Coffin", "sellValue": 0, "note": "0z for now. Not confirmed whether NPCs buy it." },
-      { "itemId": 7049, "name": "Stone", "sellValue": 0, "note": "0z, confirmed in game." }
+      { "itemId": 7049, "name": "Stone", "sellValue": 0, "note": "0z, confirmed in game." },
+      { "itemId": 553, "name": "Bao", "sellValue": 0, "note": "0z, confirmed in game." }
     ]
   },
 

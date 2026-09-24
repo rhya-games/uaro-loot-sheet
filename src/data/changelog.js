@@ -27,12 +27,13 @@ export const CHANGELOG = [
     changes: [
       {
         type: 'Added',
-        text: 'Level 4–10 foods (42), with their stat bonus. NPCs don’t sell food, so they’re marked Vend.',
+        text: 'All 60 foods (levels 1–10), with their stat bonus. NPCs don’t sell food, so they’re marked Vend.',
       },
       {
         type: 'Added',
-        text: 'Ingredients list each food they’re for, like “x10 Morroc Fruit Wine (Cooking Lv 4)”. Also added: the Level 4–10 Cookbooks and five missing ingredients (Bao, Bug Leg, Live Coal, Scale Shell, Scorpion Claw).',
+        text: 'Ingredients list each food they’re for and what it does, like “x10 Morroc Fruit Wine (+4 INT food)”. Also added: the cookbooks and eight missing ingredients (Bao, Bug Leg, China, Live Coal, Nipper, Scale Shell, Scorpion Claw, Yoyo Tail).',
       },
+      { type: 'Changed', text: 'Flame Heart, Mystic Frozen, Rough Wind and Great Nature are tagged Other Quest.' },
     ],
   },
   {
