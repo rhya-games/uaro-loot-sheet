@@ -23,6 +23,46 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-24',
+    title: 'Items used by skills',
+    changes: [
+      {
+        type: 'Added',
+        text: 'Used For now lists skills that use up an item, like “x1 Warp Portal (each cast)” for Blue Gemstone.',
+      },
+      {
+        type: 'Added',
+        text: 'Crafting skills list what they make, like “x30 Falchion (Smith Sword)” for Iron. Pharmacy materials are tagged Brewing.',
+      },
+      {
+        type: 'Fixed',
+        text: 'Items no pre-renewal skill uses are no longer tagged Skills (for example, Agate, Citrin and Rose Quartz, which are for the Level 4 weapon quest instead).',
+      },
+      {
+        type: 'Added',
+        text: 'The Level 4 weapon quest: which stones and materials each weapon needs (for example, 30 Phlogopite, Pyroxene and Rose Quartz for Longinus’s Spear or Brionac).',
+      },
+      { type: 'Added', text: 'Rough Elunium and Rough Oridecon: 5 turn into 1 Elunium or Oridecon at the refiner.' },
+      {
+        type: 'Fixed',
+        text: 'Searching an item’s name (like “gold”) no longer fades its Used For list. Search only brings forward uses that match whole words.',
+      },
+      {
+        type: 'Added',
+        text: '21 items skills use, including ones NPCs sell (Red Potion, Trap, Medicine Bowl, ninja stones) so you know not to vend them.',
+      },
+      {
+        type: 'Added',
+        text: 'Crafted items skills use, like Acid Bottle, Glistening Coat, Embryo and the four Elemental Converters (now named by element).',
+      },
+      { type: 'Changed', text: 'Bigger, bolder icons, all in the same style and two sizes.' },
+      {
+        type: 'Added',
+        text: 'Flame Heart, Mystic Frozen, Rough Wind and Great Nature: the Utan Shaman in Umbala turns each into 6–10 Red Blood, Crystal Blue, Wind of Verdure or Green Live.',
+      },
+    ],
+  },
+  {
+    date: '2026-09-24',
     title: 'Which items NPCs sell',
     changes: [
       {

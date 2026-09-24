@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
 
 /**
  * A titled, collapsible list of checkboxes with a count next to each option.
@@ -51,9 +52,7 @@ export default function CheckboxGroup({
         {selected.length > 0 && (
           <span className="mr-2 ml-auto text-xs font-normal text-accent">{selected.length} selected</span>
         )}
-        <span className="text-muted transition-transform group-open:rotate-90" aria-hidden="true">
-          ›
-        </span>
+        <ChevronRightIcon className="size-5 text-muted transition-transform group-open:rotate-90" aria-hidden="true" />
       </summary>
 
       {searchable && (

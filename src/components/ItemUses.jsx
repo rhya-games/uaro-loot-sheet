@@ -7,6 +7,8 @@ import { usePresence } from '../utils/usePresence.js';
 /** How many uses to show before the rest go behind "+N more". */
 const MAX_USES_SHOWN = 6;
 
+const NO_HIGHLIGHT = { targets: [], matchesSearch: null };
+
 /**
  * Shows what an item is used for, plus any extra notes.
  *   e.g. "x10 Mystic Rose  x6 Little Isis Pet Evolution  x10 Veins Siblings Quest (each try)"
@@ -18,19 +20,24 @@ const MAX_USES_SHOWN = 6;
  * Uses are listed A-Z. Long lists (Poring Coin is used for 40+ things) show
  * the first few, then a "+N more" button that opens the rest in a popover.
  *
- * Uses the visitor is looking for (searched for, or filtered by in "Used
- * For") move to the front and the others fade back, so it's easy to see why
- * the item is listed.
+ * Uses the visitor is looking for move to the front and the others fade back,
+ * so it's easy to see why the item is listed:
+ *   - targets picked in the "Used For" filter, always
+ *   - uses the search text matches as whole words, but only when the search
+ *     didn't match the item's own name (searching "Gold" shows Gold's list
+ *     as usual; searching "Headset" brings "x1 Headset" forward on Coal)
  *
  * Props:
  *   item        - one entry from loot.json
  *   onSelectUse - called with a target name, e.g. "Mystic Rose"
- *   highlight   - targets to bring to the front, e.g. ["Love Guard [1]"] (optional)
+ *   highlight   - { targets: ["Love Guard [1]"], matchesSearch: (text) => bool | null } (optional)
  */
-export default function ItemUses({ item, onSelectUse, highlight = [] }) {
+export default function ItemUses({ item, onSelectUse, highlight = NO_HIGHLIGHT }) {
   if (item.uses.length === 0 && !item.notes) return null;
-  const isMatch = (use) => highlight.includes(use.for);
-  const dimOthers = highlight.length > 0 && item.uses.some(isMatch);
+  const { targets, matchesSearch } = highlight;
+  const searchFindsUses = matchesSearch && !matchesSearch(item.name);
+  const isMatch = (use) => targets.includes(use.for) || (searchFindsUses && matchesSearch(use.for));
+  const dimOthers = item.uses.some(isMatch);
   const uses = [...item.uses].sort((a, b) => isMatch(b) - isMatch(a) || a.for.localeCompare(b.for));
   const shown = uses.slice(0, MAX_USES_SHOWN);
   const hidden = uses.slice(MAX_USES_SHOWN);

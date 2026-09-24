@@ -19,7 +19,7 @@ export default function NpcSellPrice({ item }) {
     return (
       <Tooltip text={`Can't be sold to NPCs (${info.reason})`}>
         <span tabIndex={0} className="inline-flex items-center rounded text-muted">
-          <XMarkIcon className="size-4" aria-hidden="true" />
+          <XMarkIcon className="size-5" aria-hidden="true" />
           <span className="sr-only">Can't be sold to NPCs</span>
         </span>
       </Tooltip>
@@ -30,7 +30,7 @@ export default function NpcSellPrice({ item }) {
     return (
       <Tooltip text={`uaRO price: the most an NPC pays. Overcharge ${OVERCHARGE_LEVEL} doesn't raise it.`}>
         <span tabIndex={0} className="inline-flex items-center gap-1 rounded">
-          <LockClosedIcon className="size-3.5 text-muted" aria-hidden="true" />
+          <LockClosedIcon className="size-4 text-muted" aria-hidden="true" />
           {formatZeny(info.price)}
           <span className="sr-only"> (fixed uaRO price)</span>
         </span>

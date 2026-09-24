@@ -89,6 +89,11 @@ unit tests or formatter yet.
 
 Match similar existing items. Look them up in loot.json first.
 
+- **What belongs in the sheet:** any item a player can end up holding:
+  dropped, sold by NPCs (the sheet tells people not to vend those) or
+  crafted (crafted items can be sold too). Default to including. Before
+  leaving anything out, explain why and get the maintainer's OK.
+
 - "Used For" targets reuse an existing name exactly. Pet evolutions are
   `"<Evolved pet> Pet Evolution"`. Uses show quantities from the wiki.
 - Pet evolution materials: `Keep` + `Vend`, categories `Pet Evolution`,
@@ -134,6 +139,8 @@ Match similar existing items. Look them up in loot.json first.
   `text-muted`, `bg-surface`, `bg-hover`, `border-line`, ...) with light and
   dark values. Don't use raw grays. Text uses only three grays: `fg`,
   `body`, `muted`. For anything quieter, lower the opacity.
+- Icons: Heroicons outline only, line weight 2 (set once in `index.css`).
+  `size-5` (20px) for icons on their own, `size-4` (16px) inside a line of text.
 - Reuse the utilities: `panel` (cards and popovers), `button-small`
   (secondary buttons like "Clear all").
 - Type: headings are `font-semibold`, body `text-sm`, secondary `text-xs`

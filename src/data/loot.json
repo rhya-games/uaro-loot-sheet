@@ -1,5 +1,30 @@
 [
   {
+    "id": "1carat-diamond",
+    "name": "1carat Diamond",
+    "itemId": 730,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Morning Star",
+        "qty": 1,
+        "note": "Smith Mace"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "2carat-diamond",
     "name": "2carat Diamond",
     "itemId": 731,
@@ -79,6 +104,36 @@
     "npcBuyable": "no"
   },
   {
+    "id": "acid-bottle",
+    "name": "Acid Bottle",
+    "itemId": 7136,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Acid Terror",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Acid Demonstration",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "acorn",
     "name": "Acorn",
     "itemId": 1026,
@@ -131,9 +186,45 @@
       "Vend"
     ],
     "categories": [
-      "Skills"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Quadrille",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Great Axe",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Guillotine",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tjungkuletti",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brocca",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Byeollungum",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Combat Knife",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
@@ -202,7 +293,6 @@
       "Whobuy"
     ],
     "categories": [
-      "Skills",
       "Cooking",
       "Brewing",
       "Official Hat Quest",
@@ -221,6 +311,21 @@
       {
         "for": "Beer Hat",
         "qty": 50
+      },
+      {
+        "for": "Bottle Grenade",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Glistening Coat",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Anodyne",
+        "qty": 1,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -395,6 +500,11 @@
       {
         "for": "Ph.D Hat",
         "qty": 1
+      },
+      {
+        "for": "Aloevera",
+        "qty": 1,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -458,9 +568,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Two-Handed Axe",
+        "qty": 1,
+        "note": "Smith Axe"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 3000,
@@ -778,7 +894,7 @@
       "Skills"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Raises the chance of forging a weapon. Not used up.",
     "links": [],
     "sellValue": 15000,
     "sellSource": "hercules",
@@ -888,12 +1004,18 @@
     ],
     "categories": [
       "Server Hat Quest",
-      "uaRO"
+      "uaRO",
+      "Skills"
     ],
     "uses": [
       {
         "for": "Pisces Crown",
         "qty": 70
+      },
+      {
+        "for": "Trident",
+        "qty": 5,
+        "note": "Smith Spear"
       }
     ],
     "notes": "",
@@ -1340,8 +1462,14 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
-    "notes": "Create Deadly Poison",
+    "uses": [
+      {
+        "for": "Poison Bottle",
+        "qty": 1,
+        "note": "Create Deadly Poison"
+      }
+    ],
+    "notes": "",
     "links": [],
     "sellValue": 16,
     "sellSource": "hercules",
@@ -1387,6 +1515,36 @@
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "berserk-potion",
+    "name": "Berserk Potion",
+    "itemId": 657,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Berserk Potion",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Poison Bottle",
+        "qty": 1,
+        "note": "Create Deadly Poison"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1500,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "big-cell",
@@ -1457,9 +1615,35 @@
       "Vend"
     ],
     "categories": [
-      "Skills"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Swordbreaker",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tjungkuletti",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brocca",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Edge",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Excalibur",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
@@ -1653,8 +1837,29 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
-    "notes": "Create Elemental Converter",
+    "uses": [
+      {
+        "for": "Elemental Converter (Fire)",
+        "qty": 1,
+        "note": "Create Elemental Converter"
+      },
+      {
+        "for": "Elemental Converter (Water)",
+        "qty": 1,
+        "note": "Create Elemental Converter"
+      },
+      {
+        "for": "Elemental Converter (Earth)",
+        "qty": 1,
+        "note": "Create Elemental Converter"
+      },
+      {
+        "for": "Elemental Converter (Wind)",
+        "qty": 1,
+        "note": "Create Elemental Converter"
+      }
+    ],
+    "notes": "",
     "links": [],
     "sellValue": 2000,
     "sellSource": "hercules",
@@ -1771,9 +1976,71 @@
     ],
     "categories": [
       "Skills",
-      "Job Quest"
+      "Job Quest",
+      "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Safety Wall",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Warp Portal",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Resurrection",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Sanctuary",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Magnus Exorcismus",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Fire Pillar",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Magnetic Earth",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Basilica",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Ganbantein",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Gravitation Field",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Coldproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Thunderproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "Wizard Job Quest, Blacksmith Job Quest",
     "links": [],
     "sellValue": 300,
@@ -1821,6 +2088,11 @@
       {
         "for": "Blue Moon Loli Ruri Pet Evolution",
         "qty": 50
+      },
+      {
+        "for": "Blue Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -1838,9 +2110,16 @@
       "Keep"
     ],
     "categories": [
-      "Cooking"
+      "Cooking",
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Aid Potion",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 2500,
@@ -2008,6 +2287,36 @@
     "notes": "",
     "links": [],
     "sellValue": 1500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bottle-grenade",
+    "name": "Bottle Grenade",
+    "itemId": 7135,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Bomb",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Acid Demonstration",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -2323,7 +2632,8 @@
     ],
     "categories": [
       "Skills",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Brewing"
     ],
     "uses": [
       {
@@ -2333,9 +2643,19 @@
       {
         "for": "Hahoe Mask",
         "qty": 100
+      },
+      {
+        "for": "Condensed Red Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Poison Bottle",
+        "qty": 1,
+        "note": "Create Deadly Poison"
       }
     ],
-    "notes": "Create Deadly Poison",
+    "notes": "",
     "links": [],
     "sellValue": 41,
     "sellSource": "hercules",
@@ -2737,9 +3057,45 @@
       "Vend"
     ],
     "categories": [
-      "Skills"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Immaterial Sword",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tjungkuletti",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brocca",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Dragon Slayer",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Schweizersabel",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Byeollungum",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Combat Knife",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
@@ -2919,7 +3275,8 @@
     ],
     "categories": [
       "Cooking",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -2929,6 +3286,11 @@
       {
         "for": "Headset",
         "qty": 1
+      },
+      {
+        "for": "Steel",
+        "qty": 1,
+        "note": "Steel Tempering"
       }
     ],
     "notes": "",
@@ -2988,8 +3350,14 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
-    "notes": "Professor skill",
+    "uses": [
+      {
+        "for": "Fiber Lock",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
     "links": [],
     "sellValue": 92,
     "sellSource": "hercules",
@@ -3029,6 +3397,86 @@
     "notes": "",
     "links": [],
     "sellValue": 79,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "condensed-red-potion",
+    "name": "Condensed Red Potion",
+    "itemId": 545,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Condensed Potion",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Healing Touch",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "condensed-white-potion",
+    "name": "Condensed White Potion",
+    "itemId": 547,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Condensed Potion",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 825,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "condensed-yellow-potion",
+    "name": "Condensed Yellow Potion",
+    "itemId": 546,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Condensed Potion",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 300,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -3236,7 +3684,8 @@
       "Keep"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -3250,6 +3699,11 @@
       {
         "for": "Magistrate Hat [1]",
         "qty": 5
+      },
+      {
+        "for": "Claymore",
+        "qty": 1,
+        "note": "Smith Two-handed Sword"
       }
     ],
     "notes": "",
@@ -3315,7 +3769,18 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Endow Tsunami",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Mystic Frozen",
+        "qty": 10,
+        "note": "Enchanted Stone Craft"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 500,
@@ -3331,7 +3796,7 @@
       "NPC"
     ],
     "categories": [
-      "Skills"
+      "Uncategorized"
     ],
     "uses": [],
     "notes": "",
@@ -3461,7 +3926,8 @@
       "Pet Evolution",
       "Pet",
       "uaRO",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -3471,6 +3937,11 @@
       {
         "for": "Ear Muffs",
         "qty": 1
+      },
+      {
+        "for": "Flamberge",
+        "qty": 1,
+        "note": "Smith Sword"
       }
     ],
     "notes": "",
@@ -3837,6 +4308,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "decayed-nail",
+    "name": "Decayed Nail",
+    "itemId": 957,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Slayer",
+        "qty": 20,
+        "note": "Smith Two-handed Sword"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 41,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "delicious-meat",
     "name": "Delicious Meat",
     "itemId": 11616,
@@ -3939,7 +4435,13 @@
     "categories": [
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Marine Sphere Bottle",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 225,
@@ -4492,6 +4994,106 @@
     "npcBuyable": "no"
   },
   {
+    "id": "elemental-converter-earth",
+    "name": "Elemental Converter (Earth)",
+    "itemId": 12116,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Elemental Change Earth",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elemental-converter-fire",
+    "name": "Elemental Converter (Fire)",
+    "itemId": 12114,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Elemental Change Fire",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elemental-converter-water",
+    "name": "Elemental Converter (Water)",
+    "itemId": 12115,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Elemental Change Water",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elemental-converter-wind",
+    "name": "Elemental Converter (Wind)",
+    "itemId": 12117,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Elemental Change Wind",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "elunium",
     "name": "Elunium",
     "itemId": 985,
@@ -4574,6 +5176,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "embryo",
+    "name": "Embryo",
+    "itemId": 7142,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Call Homunculus",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 5,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "emerald",
     "name": "Emerald",
     "itemId": 721,
@@ -4607,8 +5234,8 @@
       "Keep"
     ],
     "categories": [
-      "Skills",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Other Quest"
     ],
     "uses": [
       {
@@ -4622,11 +5249,156 @@
       {
         "for": "Crown of Mistress",
         "qty": 1
+      },
+      {
+        "for": "Immaterial Sword",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Slash",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Quadrille",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Mailbreaker",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Swordbreaker",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Slaughter",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Caesar's Sword",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tirfing",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Sabbath",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
       }
     ],
     "notes": "",
     "links": [],
     "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "emperium-anvil",
+    "name": "Emperium Anvil",
+    "itemId": 989,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "Great Axe",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Guillotine",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Longinus's Spear",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brionac",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Berserk",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Rudra Bow",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tjungkuletti",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brocca",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Edge",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Excalibur",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Dragon Slayer",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Schweizersabel",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Byeollungum",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Combat Knife",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Exorciser",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Grand Cross",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 300000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -4642,10 +5414,161 @@
       "Skills",
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Holy Water",
+        "qty": 1,
+        "note": "Aqua Benedicta"
+      },
+      {
+        "for": "Poison Bottle",
+        "qty": 1,
+        "note": "Create Deadly Poison"
+      },
+      {
+        "for": "Bottle Grenade",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Acid Bottle",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Plant Bottle",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Marine Sphere Bottle",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Glistening Coat",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Anodyne",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Aloevera",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Alcohol",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 3,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "empty-potion-bottle",
+    "name": "Empty Potion Bottle",
+    "itemId": 1093,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Red Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Yellow Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "White Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Blue Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Fireproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Coldproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Earthproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Thunderproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 5,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "empty-test-tube",
+    "name": "Empty Test Tube",
+    "itemId": 1092,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Condensed Red Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Condensed Yellow Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Condensed White Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Alcohol",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "yes"
   },
@@ -4713,7 +5636,8 @@
       "Pet Evolution",
       "Pet",
       "uaRO",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -4727,6 +5651,11 @@
       {
         "for": "Antlers",
         "qty": 20
+      },
+      {
+        "for": "Lance",
+        "qty": 2,
+        "note": "Smith Spear"
       }
     ],
     "notes": "",
@@ -4839,6 +5768,11 @@
       {
         "for": "Necktie",
         "qty": 100
+      },
+      {
+        "for": "Bottle Grenade",
+        "qty": 1,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -5233,7 +6167,6 @@
       "Whobuy"
     ],
     "categories": [
-      "Skills",
       "Server Hat Quest",
       "uaRO"
     ],
@@ -5241,6 +6174,11 @@
       {
         "for": "Vanilmirth Hat",
         "qty": 20
+      },
+      {
+        "for": "Red Blood",
+        "qty": 1,
+        "note": "Utan Shaman in Umbala: 1 makes 6-10"
       }
     ],
     "notes": "",
@@ -5248,6 +6186,36 @@
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "flame-stone",
+    "name": "Flame Stone",
+    "itemId": 7521,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Crimson Fire Formation",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Raging Fire Dragon",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "flavored-alcohol",
@@ -5553,7 +6521,13 @@
       "uaRO",
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Fireproof Potion",
+        "qty": 2,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 125,
@@ -5663,9 +6637,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Tsurugi",
+        "qty": 1,
+        "note": "Smith Sword"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 3000,
@@ -5932,6 +6912,76 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "glass-tube",
+    "name": "Glass Tube",
+    "itemId": 7143,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Embryo",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 2500,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "glistening-coat",
+    "name": "Glistening Coat",
+    "itemId": 7139,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Alchemical Weapon",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Synthesized Shield",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Synthetic Armor",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Biochemical Helm",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Full Protection",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "gold",
     "name": "Gold",
     "itemId": 969,
@@ -5984,6 +7034,131 @@
       {
         "for": "Am Mut Pet Evolution",
         "qty": 3
+      },
+      {
+        "for": "Immaterial Sword",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Slash",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Quadrille",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Mailbreaker",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Swordbreaker",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Slaughter",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Caesar's Sword",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tirfing",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Sabbath",
+        "qty": 10,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Great Axe",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Guillotine",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Longinus's Spear",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brionac",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Berserk",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Rudra Bow",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tjungkuletti",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brocca",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Edge",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Excalibur",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Dragon Slayer",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Schweizersabel",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Byeollungum",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Combat Knife",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Exorciser",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Grand Cross",
+        "qty": 20,
+        "note": "Level 4 weapon quest"
       }
     ],
     "notes": "",
@@ -6208,9 +7383,15 @@
       "Whobuy"
     ],
     "categories": [
-      "Skills"
+      "Uncategorized"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Green Live",
+        "qty": 1,
+        "note": "Utan Shaman in Umbala: 1 makes 6-10"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
@@ -6348,7 +7529,18 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Endow Quake",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Great Nature",
+        "qty": 10,
+        "note": "Enchanted Stone Craft"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 500,
@@ -6509,7 +7701,88 @@
     "categories": [
       "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Great Axe",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Guillotine",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Longinus's Spear",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brionac",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Berserk",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Rudra Bow",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tjungkuletti",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brocca",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Edge",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Excalibur",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Dragon Slayer",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Schweizersabel",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Byeollungum",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Combat Knife",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Exorciser",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Grand Cross",
+        "qty": 2,
+        "note": "Level 4 weapon quest"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1,
@@ -6709,9 +7982,20 @@
       "Whobuy"
     ],
     "categories": [
-      "Uncategorized"
+      "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Glistening Coat",
+        "qty": 1,
+        "note": "Prepare Potion"
+      },
+      {
+        "for": "Coldproof Potion",
+        "qty": 3,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 132,
@@ -6791,7 +8075,8 @@
       "Pet",
       "uaRO",
       "Official Hat Quest",
-      "Server Hat Quest"
+      "Server Hat Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -6809,6 +8094,11 @@
       {
         "for": "Orc Hero Helm",
         "qty": 100
+      },
+      {
+        "for": "Stunner",
+        "qty": 1,
+        "note": "Smith Mace"
       }
     ],
     "notes": "",
@@ -6916,6 +8206,16 @@
       {
         "for": "Statue Of Baby Angel",
         "qty": 1
+      },
+      {
+        "for": "Aspersio",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Basilica",
+        "qty": 1,
+        "note": "each cast"
       }
     ],
     "notes": "",
@@ -6954,7 +8254,8 @@
       "Pet",
       "Pet Evolution",
       "uaRO",
-      "Cooking"
+      "Cooking",
+      "Brewing"
     ],
     "uses": [
       {
@@ -6964,6 +8265,11 @@
       {
         "for": "Aliot Pet Evolution",
         "qty": 100
+      },
+      {
+        "for": "Aloevera",
+        "qty": 1,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -7001,8 +8307,14 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
-    "notes": "Create Elemental Converter",
+    "uses": [
+      {
+        "for": "Elemental Converter (Earth)",
+        "qty": 3,
+        "note": "Create Elemental Converter"
+      }
+    ],
+    "notes": "",
     "links": [],
     "sellValue": 58,
     "sellSource": "hercules",
@@ -7123,9 +8435,16 @@
       "NPC"
     ],
     "categories": [
-      "Pet"
+      "Pet",
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Katana",
+        "qty": 15,
+        "note": "Smith Two-handed Sword"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 195,
@@ -7309,6 +8628,36 @@
     "npcBuyable": "no"
   },
   {
+    "id": "ice-stone",
+    "name": "Ice Stone",
+    "itemId": 7522,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Hidden Water",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Ice Meteor",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "illusion-flower",
     "name": "Illusion Flower",
     "itemId": 710,
@@ -7320,7 +8669,8 @@
       "Cooking",
       "Server Hat Quest",
       "uaRO",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Other Quest"
     ],
     "uses": [
       {
@@ -7334,6 +8684,86 @@
       {
         "for": "Ph.D Hat",
         "qty": 1
+      },
+      {
+        "for": "Great Axe",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Guillotine",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Longinus's Spear",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brionac",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Berserk",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Rudra Bow",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tjungkuletti",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brocca",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Edge",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Excalibur",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Dragon Slayer",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Schweizersabel",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Byeollungum",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Combat Knife",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Exorciser",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Grand Cross",
+        "qty": 1,
+        "note": "Level 4 weapon quest"
       }
     ],
     "notes": "+10 DEX Food",
@@ -7356,7 +8786,13 @@
       "Pet",
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Acid Bottle",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 187,
@@ -7450,7 +8886,8 @@
       "Keep"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -7460,6 +8897,86 @@
       {
         "for": "Opera Masque",
         "qty": 20
+      },
+      {
+        "for": "Sword",
+        "qty": 2,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Falchion",
+        "qty": 30,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Blade",
+        "qty": 45,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Knife",
+        "qty": 1,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Cutter",
+        "qty": 25,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Main Gauche",
+        "qty": 50,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Katana",
+        "qty": 35,
+        "note": "Smith Two-handed Sword"
+      },
+      {
+        "for": "Axe",
+        "qty": 10,
+        "note": "Smith Axe"
+      },
+      {
+        "for": "Battle Axe",
+        "qty": 110,
+        "note": "Smith Axe"
+      },
+      {
+        "for": "Club",
+        "qty": 3,
+        "note": "Smith Mace"
+      },
+      {
+        "for": "Mace",
+        "qty": 30,
+        "note": "Smith Mace"
+      },
+      {
+        "for": "Waghnak",
+        "qty": 160,
+        "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "Javelin",
+        "qty": 3,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Spear",
+        "qty": 35,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Pike",
+        "qty": 70,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Steel",
+        "qty": 5,
+        "note": "Steel Tempering"
       }
     ],
     "notes": "",
@@ -7478,7 +8995,7 @@
       "Skills"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Used up to forge level 1 weapons.",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -7493,9 +9010,16 @@
       "NPC"
     ],
     "categories": [
-      "Pet"
+      "Pet",
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Iron",
+        "qty": 1,
+        "note": "Iron Tempering"
+      }
+    ],
     "notes": "Steel Chonchon Pet Food",
     "links": [],
     "sellValue": 25,
@@ -7627,7 +9151,8 @@
       "Pet",
       "uaRO",
       "Official Hat Quest",
-      "Dungeon Quest"
+      "Dungeon Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -7646,6 +9171,11 @@
       {
         "for": "Mr. Smile",
         "qty": 10
+      },
+      {
+        "for": "Knife",
+        "qty": 10,
+        "note": "Smith Dagger"
       }
     ],
     "notes": "",
@@ -7745,8 +9275,14 @@
       "Skills",
       "Other Quest"
     ],
-    "uses": [],
-    "notes": "Create Deadly Poison",
+    "uses": [
+      {
+        "for": "Poison Bottle",
+        "qty": 1,
+        "note": "Create Deadly Poison"
+      }
+    ],
+    "notes": "",
     "links": [],
     "sellValue": 200,
     "sellSource": "hercules",
@@ -7879,6 +9415,11 @@
       {
         "for": "Vanilmirth Hat",
         "qty": 300
+      },
+      {
+        "for": "Earthproof Potion",
+        "qty": 2,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -8370,6 +9911,11 @@
       {
         "for": "Bride's Corolla",
         "qty": 1000
+      },
+      {
+        "for": "Plant Bottle",
+        "qty": 2,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -8495,6 +10041,31 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "marine-sphere-bottle",
+    "name": "Marine Sphere Bottle",
+    "itemId": 7138,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Summon Marine Sphere",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -8630,6 +10201,47 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "medicine-bowl",
+    "name": "Medicine Bowl",
+    "itemId": 7134,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing",
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Prepare Potion",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Twilight Alchemy 1",
+        "qty": 200,
+        "note": "each cast"
+      },
+      {
+        "for": "Twilight Alchemy 2",
+        "qty": 200,
+        "note": "each cast"
+      },
+      {
+        "for": "Twilight Alchemy 3",
+        "qty": 200,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 4,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "memento",
     "name": "Memento",
     "itemId": 934,
@@ -8665,6 +10277,11 @@
       {
         "for": "Ph.D Hat",
         "qty": 1
+      },
+      {
+        "for": "Anodyne",
+        "qty": 1,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -8739,7 +10356,7 @@
       "Skills"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Used up to make Iron, Steel and elemental stones (Iron Tempering, Steel Tempering, Enchanted Stone Craft).",
     "links": [],
     "sellValue": 75,
     "sellSource": "hercules",
@@ -8824,7 +10441,13 @@
     "categories": [
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Condensed Yellow Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 53,
@@ -8924,6 +10547,31 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "morning-dew-of-yggdrasil",
+    "name": "Morning Dew of Yggdrasil",
+    "itemId": 7141,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Embryo",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "moth-dust",
     "name": "Moth Dust",
     "itemId": 1057,
@@ -8934,7 +10582,13 @@
     "categories": [
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Thunderproof Potion",
+        "qty": 3,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 69,
@@ -9091,13 +10745,38 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Skills",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Statue Of Baby Angel",
         "qty": 10
+      },
+      {
+        "for": "Mailbreaker",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Berserk",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Rudra Bow",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Byeollungum",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Combat Knife",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
       }
     ],
     "notes": "",
@@ -9116,12 +10795,18 @@
     ],
     "categories": [
       "Cooking",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Skills"
     ],
     "uses": [
       {
         "for": "Decorative Mushroom",
         "qty": 300
+      },
+      {
+        "for": "Plant Cultivation",
+        "qty": 1,
+        "note": "each cast"
       }
     ],
     "notes": "",
@@ -9140,7 +10825,6 @@
       "Whobuy"
     ],
     "categories": [
-      "Skills",
       "Server Hat Quest",
       "uaRO"
     ],
@@ -9148,6 +10832,11 @@
       {
         "for": "Fish in Mouth",
         "qty": 50
+      },
+      {
+        "for": "Crystal Blue",
+        "qty": 1,
+        "note": "Utan Shaman in Umbala: 1 makes 6-10"
       }
     ],
     "notes": "",
@@ -9671,12 +11360,23 @@
     "categories": [
       "Pet Evolution",
       "Pet",
-      "uaRO"
+      "uaRO",
+      "Skills"
     ],
     "uses": [
       {
         "for": "Aliot Pet Evolution",
         "qty": 10
+      },
+      {
+        "for": "Saber",
+        "qty": 1,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Finger",
+        "qty": 10,
+        "note": "Smith Knucklebrace"
       }
     ],
     "notes": "",
@@ -9792,6 +11492,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "orange-potion",
+    "name": "Orange Potion",
+    "itemId": 502,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Potion",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "orc-baby-card",
     "name": "Orc Baby Card",
     "itemId": 4375,
@@ -9902,9 +11627,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Buster",
+        "qty": 30,
+        "note": "Smith Axe"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 110,
@@ -9978,7 +11709,8 @@
     ],
     "categories": [
       "Brewing",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -9988,6 +11720,91 @@
       {
         "for": "Headset",
         "qty": 1
+      },
+      {
+        "for": "Saber",
+        "qty": 8,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Haedonggum",
+        "qty": 8,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Tsurugi",
+        "qty": 8,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Flamberge",
+        "qty": 16,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Gladius",
+        "qty": 4,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Damascus",
+        "qty": 4,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Two-Handed Sword",
+        "qty": 12,
+        "note": "Smith Two-handed Sword"
+      },
+      {
+        "for": "Broad Sword",
+        "qty": 12,
+        "note": "Smith Two-handed Sword"
+      },
+      {
+        "for": "Claymore",
+        "qty": 16,
+        "note": "Smith Two-handed Sword"
+      },
+      {
+        "for": "Buster",
+        "qty": 4,
+        "note": "Smith Axe"
+      },
+      {
+        "for": "Two-Handed Axe",
+        "qty": 8,
+        "note": "Smith Axe"
+      },
+      {
+        "for": "Fist",
+        "qty": 4,
+        "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "Claw",
+        "qty": 8,
+        "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "Finger",
+        "qty": 4,
+        "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "Trident",
+        "qty": 8,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Halberd",
+        "qty": 12,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Lance",
+        "qty": 12,
+        "note": "Smith Spear"
       }
     ],
     "notes": "",
@@ -10126,12 +11943,18 @@
       "NPC"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Skills"
     ],
     "uses": [
       {
         "for": "Bunny Band",
         "qty": 1
+      },
+      {
+        "for": "Waghnak",
+        "qty": 1,
+        "note": "Smith Knucklebrace"
       }
     ],
     "notes": "",
@@ -10231,11 +12054,39 @@
     "name": "Peridot",
     "itemId": 7289,
     "itemType": "Misc",
-    "actions": [],
-    "categories": [
-      "Skills"
+    "actions": [
+      "Vend"
     ],
-    "uses": [],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "Tirfing",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Great Axe",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Guillotine",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Berserk",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Rudra Bow",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
@@ -10302,11 +12153,49 @@
     "name": "Phlogopite",
     "itemId": 7290,
     "itemType": "Misc",
-    "actions": [],
-    "categories": [
-      "Skills"
+    "actions": [
+      "Vend"
     ],
-    "uses": [],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "Caesar's Sword",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Longinus's Spear",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brionac",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Dragon Slayer",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Schweizersabel",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Exorciser",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Grand Cross",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
@@ -10456,6 +12345,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "plant-bottle",
+    "name": "Plant Bottle",
+    "itemId": 7137,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Summon Flora",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "plant-neutrient",
     "name": "Plant Neutrient",
     "itemId": 6109,
@@ -10517,6 +12431,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "poison-bottle",
+    "name": "Poison Bottle",
+    "itemId": 678,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Enchant Deadly Poison",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 2500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "poison-spore",
     "name": "Poison Spore",
     "itemId": 7033,
@@ -10535,6 +12474,16 @@
       {
         "for": "Spore Hat",
         "qty": 850
+      },
+      {
+        "for": "Poison Bottle",
+        "qty": 1,
+        "note": "Create Deadly Poison"
+      },
+      {
+        "for": "Alcohol",
+        "qty": 5,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -11042,11 +12991,49 @@
     "name": "Pyroxene",
     "itemId": 7296,
     "itemType": "Misc",
-    "actions": [],
-    "categories": [
-      "Skills"
+    "actions": [
+      "Vend"
     ],
-    "uses": [],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "Slaughter",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Longinus's Spear",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brionac",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Dragon Slayer",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Schweizersabel",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Exorciser",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Grand Cross",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1500,
@@ -11199,8 +13186,14 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
-    "notes": "Create Elemental Converter",
+    "uses": [
+      {
+        "for": "Elemental Converter (Wind)",
+        "qty": 3,
+        "note": "Create Elemental Converter"
+      }
+    ],
+    "notes": "",
     "links": [],
     "sellValue": 45,
     "sellSource": "hercules",
@@ -11277,6 +13270,16 @@
       {
         "for": "Fire Golem Pet Evolution",
         "qty": 50
+      },
+      {
+        "for": "Endow Blaze",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Flame Heart",
+        "qty": 10,
+        "note": "Enchanted Stone Craft"
       }
     ],
     "notes": "",
@@ -11348,9 +13351,41 @@
     "categories": [
       "Pet",
       "Skills",
-      "Job Quest"
+      "Job Quest",
+      "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Stone Curse",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Venom Dust",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Venom Splasher",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Scribble",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Basilica",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Fireproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "Wizard Job Quest",
     "links": [],
     "sellValue": 300,
@@ -11369,7 +13404,13 @@
       "Pet",
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Red Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 9,
@@ -11398,6 +13439,37 @@
     "sellValue": 330,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "red-potion",
+    "name": "Red Potion",
+    "itemId": 501,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills",
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Aid Potion",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Condensed Red Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 25,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "red-prickly-fruit",
@@ -11728,14 +13800,49 @@
       "Keep"
     ],
     "categories": [
-      "Skills",
       "Server Hat Quest",
-      "uaRO"
+      "uaRO",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Crimson Rose",
         "qty": 10
+      },
+      {
+        "for": "Sabbath",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Longinus's Spear",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Brionac",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Berserk",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Rudra Bow",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Edge",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Excalibur",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
       }
     ],
     "notes": "",
@@ -11842,9 +13949,15 @@
       "Keep"
     ],
     "categories": [
-      "Skills"
+      "Uncategorized"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Elunium",
+        "qty": 5,
+        "note": "refiner NPC"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 325,
@@ -11860,9 +13973,15 @@
       "Keep"
     ],
     "categories": [
-      "Skills"
+      "Uncategorized"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Oridecon",
+        "qty": 5,
+        "note": "refiner NPC"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 275,
@@ -11879,7 +13998,6 @@
       "Whobuy"
     ],
     "categories": [
-      "Skills",
       "Server Hat Quest",
       "uaRO"
     ],
@@ -11887,6 +14005,11 @@
       {
         "for": "Fish in Mouth",
         "qty": 50
+      },
+      {
+        "for": "Wind of Verdure",
+        "qty": 1,
+        "note": "Utan Shaman in Umbala: 1 makes 6-10"
       }
     ],
     "notes": "",
@@ -11949,6 +14072,36 @@
     "sellValue": 3500,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "ruby",
+    "name": "Ruby",
+    "itemId": 723,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Fist",
+        "qty": 10,
+        "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "Lance",
+        "qty": 3,
+        "note": "Smith Spear"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 3000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "rune-of-darkness",
@@ -12185,9 +14338,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Gladius",
+        "qty": 1,
+        "note": "Smith Dagger"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 3000,
@@ -12319,9 +14478,16 @@
       "NPC"
     ],
     "categories": [
-      "Pet"
+      "Pet",
+      "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Blue Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 80,
@@ -12359,8 +14525,14 @@
       "Skills",
       "Cooking"
     ],
-    "uses": [],
-    "notes": "Create Elemental Converter, +10 AGI Food",
+    "uses": [
+      {
+        "for": "Elemental Converter (Fire)",
+        "qty": 3,
+        "note": "Create Elemental Converter"
+      }
+    ],
+    "notes": "+10 AGI Food",
     "links": [],
     "sellValue": 62,
     "sellSource": "hercules",
@@ -12403,6 +14575,56 @@
     "npcBuyable": "no"
   },
   {
+    "id": "seed-of-life",
+    "name": "Seed of Life",
+    "itemId": 7140,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Brewing"
+    ],
+    "uses": [
+      {
+        "for": "Embryo",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 30000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
+    "id": "shadow-orb",
+    "name": "Shadow Orb",
+    "itemId": 7524,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Mirror Image",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 150,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "sharp-leaf",
     "name": "Sharp Leaf",
     "itemId": 7100,
@@ -12432,9 +14654,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sword Mace",
+        "qty": 20,
+        "note": "Smith Mace"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 125,
@@ -12980,8 +15208,14 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
-    "notes": "Create Elemental Converter",
+    "uses": [
+      {
+        "for": "Elemental Converter (Water)",
+        "qty": 3,
+        "note": "Create Elemental Converter"
+      }
+    ],
+    "notes": "",
     "links": [],
     "sellValue": 32,
     "sellSource": "hercules",
@@ -13495,9 +15729,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Star Crumb",
+        "qty": 10,
+        "note": "Enchanted Stone Craft"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 750,
@@ -13515,7 +15755,8 @@
     "categories": [
       "Official Hat Quest",
       "Skills",
-      "Brewing"
+      "Brewing",
+      "Other Quest"
     ],
     "uses": [
       {
@@ -13553,6 +15794,211 @@
       {
         "for": "Welding Mask",
         "qty": 50
+      },
+      {
+        "for": "Rapier",
+        "qty": 20,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Scimitar",
+        "qty": 35,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Ring Pommel Saber",
+        "qty": 40,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Saber",
+        "qty": 5,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Haedonggum",
+        "qty": 10,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Tsurugi",
+        "qty": 15,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Dirk",
+        "qty": 17,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Dagger",
+        "qty": 30,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Stiletto",
+        "qty": 40,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Gladius",
+        "qty": 40,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Damascus",
+        "qty": 60,
+        "note": "Smith Dagger"
+      },
+      {
+        "for": "Slayer",
+        "qty": 25,
+        "note": "Smith Two-handed Sword"
+      },
+      {
+        "for": "Bastard Sword",
+        "qty": 45,
+        "note": "Smith Two-handed Sword"
+      },
+      {
+        "for": "Two-Handed Sword",
+        "qty": 10,
+        "note": "Smith Two-handed Sword"
+      },
+      {
+        "for": "Broad Sword",
+        "qty": 20,
+        "note": "Smith Two-handed Sword"
+      },
+      {
+        "for": "Claymore",
+        "qty": 20,
+        "note": "Smith Two-handed Sword"
+      },
+      {
+        "for": "Hammer",
+        "qty": 30,
+        "note": "Smith Axe"
+      },
+      {
+        "for": "Buster",
+        "qty": 20,
+        "note": "Smith Axe"
+      },
+      {
+        "for": "Two-Handed Axe",
+        "qty": 10,
+        "note": "Smith Axe"
+      },
+      {
+        "for": "Smasher",
+        "qty": 20,
+        "note": "Smith Mace"
+      },
+      {
+        "for": "Flail",
+        "qty": 33,
+        "note": "Smith Mace"
+      },
+      {
+        "for": "Chain",
+        "qty": 45,
+        "note": "Smith Mace"
+      },
+      {
+        "for": "Morning Star",
+        "qty": 85,
+        "note": "Smith Mace"
+      },
+      {
+        "for": "Sword Mace",
+        "qty": 100,
+        "note": "Smith Mace"
+      },
+      {
+        "for": "Stunner",
+        "qty": 120,
+        "note": "Smith Mace"
+      },
+      {
+        "for": "Knuckle Dusters",
+        "qty": 50,
+        "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "Studded Knuckles",
+        "qty": 65,
+        "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "Guisarme",
+        "qty": 25,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Glaive",
+        "qty": 40,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Partizan",
+        "qty": 55,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Trident",
+        "qty": 10,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Halberd",
+        "qty": 10,
+        "note": "Smith Spear"
+      },
+      {
+        "for": "Immaterial Sword",
+        "qty": 50,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Slash",
+        "qty": 50,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Quadrille",
+        "qty": 50,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Mailbreaker",
+        "qty": 50,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Swordbreaker",
+        "qty": 50,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Slaughter",
+        "qty": 50,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Caesar's Sword",
+        "qty": 50,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Tirfing",
+        "qty": 50,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Sabbath",
+        "qty": 50,
+        "note": "Level 4 weapon quest"
       }
     ],
     "notes": "",
@@ -13614,9 +16060,21 @@
       "Vend"
     ],
     "categories": [
-      "Brewing"
+      "Brewing",
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Plant Cultivation",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Alcohol",
+        "qty": 5,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 23,
@@ -13730,6 +16188,31 @@
     "links": [],
     "sellValue": 84,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "stone",
+    "name": "Stone",
+    "itemId": 7049,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Stone Fling",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 0,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -14245,7 +16728,13 @@
     "categories": [
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Marine Sphere Bottle",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 110,
@@ -14424,9 +16913,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Blade",
+        "qty": 25,
+        "note": "Smith Sword"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 17,
@@ -14444,12 +16939,23 @@
     ],
     "categories": [
       "Server Hat Quest",
-      "uaRO"
+      "uaRO",
+      "Skills"
     ],
     "uses": [
       {
         "for": "Moonlight Flower Hat",
         "qty": 250
+      },
+      {
+        "for": "Haedonggum",
+        "qty": 1,
+        "note": "Smith Sword"
+      },
+      {
+        "for": "Claw",
+        "qty": 10,
+        "note": "Smith Knucklebrace"
       }
     ],
     "notes": "",
@@ -14595,6 +17101,76 @@
     "npcBuyable": "no"
   },
   {
+    "id": "trap",
+    "name": "Trap",
+    "itemId": 1065,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Skid Trap",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Land Mine",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Ankle Snare",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Shockwave Trap",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Sandman",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Flasher",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Freezing Trap",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Blast Mine",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Claymore Trap",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Talkie Box",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 50,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "tree-root",
     "name": "Tree Root",
     "itemId": 902,
@@ -14694,14 +17270,49 @@
       "Vend"
     ],
     "categories": [
-      "Skills",
       "Server Hat Quest",
-      "uaRO"
+      "uaRO",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Santa Poring Hat",
         "qty": 20
+      },
+      {
+        "for": "Slash",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Great Axe",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Guillotine",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Edge",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Excalibur",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Exorciser",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "Grand Cross",
+        "qty": 30,
+        "note": "Level 4 weapon quest"
       }
     ],
     "notes": "",
@@ -14837,8 +17448,14 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
-    "notes": "Create Deadly Poison",
+    "uses": [
+      {
+        "for": "Poison Bottle",
+        "qty": 1,
+        "note": "Create Deadly Poison"
+      }
+    ],
+    "notes": "",
     "links": [],
     "sellValue": 74,
     "sellSource": "hercules",
@@ -15120,6 +17737,11 @@
       {
         "for": "Angeling Pet Evolution",
         "qty": 50
+      },
+      {
+        "for": "White Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -15155,9 +17777,22 @@
       "Keep"
     ],
     "categories": [
-      "Pet"
+      "Pet",
+      "Skills",
+      "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Aid Potion",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Condensed White Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 600,
@@ -15275,12 +17910,53 @@
     "categories": [
       "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Endow Tornado",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Rough Wind",
+        "qty": 10,
+        "note": "Enchanted Stone Craft"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "wind-stone",
+    "name": "Wind Stone",
+    "itemId": 7523,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Lightning Strike of Destruction",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Kamaitachi",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 75,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "wing-of-dragonfly",
@@ -15344,7 +18020,13 @@
       "Brewing",
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Condensed White Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "Used for creating Slim Potions",
     "links": [],
     "sellValue": 242,
@@ -15412,9 +18094,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Ring Pommel Saber",
+        "qty": 50,
+        "note": "Smith Sword"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 29,
@@ -15736,9 +18424,56 @@
     ],
     "categories": [
       "Skills",
-      "Job Quest"
+      "Job Quest",
+      "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Volcano",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Deluge",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Whirlwind",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Magnetic Earth",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Dispell",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Hocus-pocus",
+        "qty": 2,
+        "note": "each cast"
+      },
+      {
+        "for": "Basilica",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Ganbantein",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Earthproof Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "Wizard Job Quest",
     "links": [],
     "sellValue": 300,
@@ -15768,6 +18503,11 @@
       {
         "for": "Metaller Pet Evolution",
         "qty": 200
+      },
+      {
+        "for": "Yellow Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -15787,12 +18527,24 @@
     "categories": [
       "Pet Evolution",
       "Pet",
-      "uaRO"
+      "uaRO",
+      "Skills",
+      "Brewing"
     ],
     "uses": [
       {
         "for": "Angeling Pet Evolution",
         "qty": 20
+      },
+      {
+        "for": "Aid Potion",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Condensed Yellow Potion",
+        "qty": 1,
+        "note": "Prepare Potion"
       }
     ],
     "notes": "",
@@ -16034,7 +18786,13 @@
     "categories": [
       "Brewing"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Glistening Coat",
+        "qty": 1,
+        "note": "Prepare Potion"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 132,
@@ -16080,9 +18838,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Skills"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Damascus",
+        "qty": 1,
+        "note": "Smith Dagger"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 3000,

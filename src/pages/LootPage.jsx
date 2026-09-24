@@ -7,14 +7,12 @@ import ActiveFilters from '../components/ActiveFilters.jsx';
 import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
 import Tooltip from '../components/Tooltip.jsx';
-import { createSearch } from '../utils/search.js';
+import { createSearch, wordMatcher } from '../utils/search.js';
 import { nextSort, sortItems } from '../utils/sort.js';
 import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue, withoutKeep } from '../utils/filter.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
 
-/** Every "Used For" target in the data, e.g. "Mystic Rose". */
-const ALL_USE_TARGETS = [...new Set(loot.flatMap((item) => item.uses.map((use) => use.for)))];
 
 /** How long the panel takes to slide in or out (ms). Matches `duration-200` below. */
 const PANEL_ANIMATION_MS = 200;
@@ -61,14 +59,13 @@ export default function LootPage() {
   const searched = useMemo(() => search(query), [search, query]);
   const results = useMemo(() => sortItems(filterItems(searched, filters), sort), [searched, filters, sort]);
 
-  // "Used For" targets to bring to the front of each item's list: the ones
-  // filtered by, plus any whose name contains the search text (searching
-  // "Headset" puts "x1 Headset" first on Coal).
-  const highlightUses = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    const searchedTargets = needle.length >= 2 ? ALL_USE_TARGETS.filter((t) => t.toLowerCase().includes(needle)) : [];
-    return [...new Set([...filters.usedFor, ...searchedTargets])];
-  }, [query, filters.usedFor]);
+  // Which "Used For" entries to bring to the front of each item's list: the
+  // targets filtered by, and uses the search text matches as whole words
+  // (searching "Headset" puts "x1 Headset" first on Coal). See ItemUses.
+  const highlightUses = useMemo(
+    () => ({ targets: filters.usedFor, matchesSearch: wordMatcher(query) }),
+    [filters.usedFor, query],
+  );
 
   const activeFilterCount = countActiveFilters(filters) + (ignoreKeep ? 1 : 0);
 

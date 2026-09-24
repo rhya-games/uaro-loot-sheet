@@ -76,3 +76,16 @@ export function createSearch(items) {
     return fuse.search(trimmed).map((result) => result.item);
   };
 }
+
+/**
+ * A test for whole-word matches of the search text, or null when the text is
+ * too short to mean much. "gold" matches "Gold" and "Gold Ring", but not
+ * "Golden Bell"; "hat of the sun" matches "Hat of the Sun God".
+ */
+export function wordMatcher(text) {
+  const needle = text.trim();
+  if (needle.length < 2) return null;
+  const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const pattern = new RegExp(`(^|[^a-z0-9])${escaped}($|[^a-z0-9])`, 'i');
+  return (value) => pattern.test(value);
+}
