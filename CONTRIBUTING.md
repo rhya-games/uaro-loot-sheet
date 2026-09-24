@@ -120,7 +120,11 @@ When an item turns out to be sold by NPCs, the sync changes its Vend/Whobuy acti
 
 ## Changelog
 
-When you make a noticeable change, add an entry at the top of [`src/data/changelog.js`](src/data/changelog.js). There's a copy-and-paste template at the top of that file.
+When you make a noticeable change, add it to [`src/data/changelog.js`](src/data/changelog.js). There's a copy-and-paste template at the top of that file.
+
+- **One entry per day.** If today already has an entry, add your change to it.
+- **Each day gets a version** ([Semantic Versioning](https://semver.org), staying at 0.x until the first real release): something new or changed raises the middle number (0.2.3 → 0.3.0); only fixes raise the last one (0.3.0 → 0.3.1). Put the same version in `package.json` (`npm version 0.3.0 --no-git-tag-version`). `npm run validate` checks that they match.
+- Merging to `main` deploys the site and publishes a GitHub release (`v0.3.0`) with that day's notes.
 
 ## Wording
 

@@ -24,8 +24,8 @@ Then open http://localhost:5173/uaro-loot-sheet/
 
 ### Admin mode
 
-While `npm run dev` is running, the header has an **Admin** button. Turn it
-on to type vend and @whobuy prices straight into the table: press Enter (or
+While `npm run dev` is running, the loot page has an **Admin** button next
+to Share. Turn it on to type vend and @whobuy prices straight into the table: press Enter (or
 click away) to save to `src/data/loot.json`, which also marks the item as
 verified today. Shorthand works: `12k`, `1.5m`. Type `0` or `none` when
 nobody was buying or selling; the site shows it as "None". Escape puts the old price

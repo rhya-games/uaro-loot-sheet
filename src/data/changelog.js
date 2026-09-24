@@ -5,6 +5,7 @@
  * To add an entry, copy this template to the TOP of the list:
  *
  *   {
+ *     version: '0.3.0',
  *     date: 'YYYY-MM-DD',
  *     title: 'Short summary of this update',
  *     changes: [
@@ -17,17 +18,28 @@
  *
  * `type` must be one of: Added, Changed, Fixed, Removed.
  * Only include the types you need.
+ *
+ * One entry per day: add to today's entry if there already is one.
+ *
+ * Versions follow Semantic Versioning (https://semver.org), except that the
+ * site stays at 0.x until its first real release (1.0.0):
+ *   - something new or changed (a feature, new data): raise the middle
+ *     number and reset the last (0.2.3 -> 0.3.0)
+ *   - only fixes: raise the last number (0.3.0 -> 0.3.1)
+ * Set the same version in package.json (npm run validate checks). Merging
+ * to main publishes a GitHub release with that version and these notes.
  */
 export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
-    date: '2026-09-25',
-    title: 'Skill names players use, and a tidier toolbar',
+    version: '0.2.0',
+    date: '2026-09-24',
+    title: 'Lots more loot, suggested actions, and sharing',
     changes: [
       {
-        type: 'Changed',
-        text: 'Copy link is now Share, next to the search box. On phones it opens your share menu; on computers it copies the link.',
+        type: 'Added',
+        text: 'Version numbers: each day’s changes share one, shown here, at the bottom of every page, and as a release on GitHub.',
       },
       { type: 'Changed', text: 'Typing in the search box feels instant, even with the whole list showing.' },
       { type: 'Fixed', text: 'Checkboxes have a white check, and keyboard focus rings are never cut off or covered.' },
@@ -39,21 +51,15 @@ export const CHANGELOG = [
         type: 'Changed',
         text: 'Skills in “Used For” use the names players know, like Potion Pitcher (was Aid Potion), Slim Potion Pitcher, Chemical Protection, Pharmacy, Graffiti and Abracadabra.',
       },
-    ],
-  },
-  {
-    date: '2026-09-24',
-    title: 'Share what you see',
-    changes: [
-      { type: 'Added', text: 'Copy link: the address now holds your search, filters and sort, so a link opens the same view.' },
-      { type: 'Added', text: 'Your last search, filters and sort come back on your next visit. Clear all starts fresh.' },
+      {
+        type: 'Added',
+        text: 'Share, next to the search box: the address holds your search, filters and sort, so a link opens the same view. On phones it opens your share menu; on computers it copies the link.',
+      },
+      {
+        type: 'Added',
+        text: 'Your last search, filters and sort come back on your next visit. Clear all starts fresh.',
+      },
       { type: 'Added', text: 'On wide screens, the filter panel stays open or closed the way you left it.' },
-    ],
-  },
-  {
-    date: '2026-09-24',
-    title: 'Keep only what you use',
-    changes: [
       {
         type: 'Changed',
         text: '“I don’t keep items” is now “I keep items for”: tick the things you do (hats, pets, cooking, crafting and skills, quests). Items you’d only keep for the others show how to sell them instead.',
@@ -62,18 +68,15 @@ export const CHANGELOG = [
         type: 'Changed',
         text: 'Vend and Whobuy tell three things apart: ✕ can’t be sold that way (Whobuy on cards and equipment, for one), None means nobody was buying or selling when checked, and — means not checked yet.',
       },
-      { type: 'Changed', text: 'Ingredients only used for level 1–3 cooking aren’t marked Keep any more, like Banana and Yoyo Tail.' },
+      {
+        type: 'Changed',
+        text: 'Ingredients only used for level 1–3 cooking aren’t marked Keep any more, like Banana and Yoyo Tail.',
+      },
       { type: 'Fixed', text: 'Every card says Vend. Armeyer Dinze Card said NPC.' },
       {
         type: 'Changed',
         text: 'Pet accessories are equipment, and each one says which pet wears it. The ones worth under 5,000z that nothing else uses are Junk, like Afro and Backpack.',
       },
-    ],
-  },
-  {
-    date: '2026-09-24',
-    title: 'Repeatable quests',
-    changes: [
       {
         type: 'Added',
         text: 'The 15 turn-in items list their repeatable quest, like “x25 Langry Repeatable Quest (each turn-in)”, and are tagged uaRO.',
@@ -87,23 +90,23 @@ export const CHANGELOG = [
         text: 'New cards start as Vend; the other new drops have no action yet until they’re sorted. Items NPCs sell say NPC.',
       },
       { type: 'Fixed', text: 'Acorn is sold by the Acorn Dealer in Moscovia.' },
-      { type: 'Changed', text: '“Used For” only says what an item is for. Notes about which monsters drop an item are gone.' },
+      {
+        type: 'Changed',
+        text: '“Used For” only says what an item is for. Notes about which monsters drop an item are gone.',
+      },
       { type: 'Fixed', text: 'Three pet cards listed Bacsojin’s evolution twice, once misspelled.' },
       {
         type: 'Added',
         text: '52 drops from uaRO’s renewal monsters (Scarabas, Queen Scaraba, Hillslion, Tatacho, Centipede, Bradium Golem, Naga, Cornus, Nepenthes, Dolomedes, Luciola Vespa and more), checked in game.',
       },
-      { type: 'Changed', text: 'Meteo Plate Armor is now Meteor Plate, and Small Bottle is Small Water Bottle, their names in game.' },
+      {
+        type: 'Changed',
+        text: 'Meteo Plate Armor is now Meteor Plate, and Small Bottle is Small Water Bottle, their names in game.',
+      },
       {
         type: 'Added',
         text: 'A Junk action for items nothing uses and nobody pays for, like Unripe Acorn (NPCs won’t buy it either).',
       },
-    ],
-  },
-  {
-    date: '2026-09-24',
-    title: 'Cooking',
-    changes: [
       {
         type: 'Added',
         text: 'All 60 foods (levels 1–10), with their stat bonus. NPCs don’t sell food, so they’re marked Vend.',
@@ -124,12 +127,6 @@ export const CHANGELOG = [
         text: 'The Report Issue flag shows over the Verified column when you point at a row, so the table has more room.',
       },
       { type: 'Fixed', text: 'Filter checkboxes line up with the first line of long labels.' },
-    ],
-  },
-  {
-    date: '2026-09-24',
-    title: 'Items used by skills',
-    changes: [
       {
         type: 'Added',
         text: 'Used For now lists skills that use up an item, like “x1 Warp Portal (each cast)” for Blue Gemstone.',
@@ -164,12 +161,6 @@ export const CHANGELOG = [
         type: 'Added',
         text: 'Flame Heart, Mystic Frozen, Rough Wind and Great Nature: the Utan Shaman in Umbala turns each into 6–10 Red Blood, Crystal Blue, Wind of Verdure or Green Live.',
       },
-    ],
-  },
-  {
-    date: '2026-09-24',
-    title: 'Which items NPCs sell',
-    changes: [
       {
         type: 'Added',
         text: 'NPC Shop for every item, from the emulators’ NPC shops. About 290 items that were blank are now filled in.',
@@ -198,7 +189,10 @@ export const CHANGELOG = [
       },
       { type: 'Added', text: 'Margaretha Sorin Card (for Mitra) and Errende Ebecee Card (for Love Guard).' },
       { type: 'Added', text: 'Poring Coin now lists the 41 Dimonka headgears it’s used for.' },
-      { type: 'Changed', text: 'Long Used For lists show the first 6, with a “+N more” button that opens the full list.' },
+      {
+        type: 'Changed',
+        text: 'Long Used For lists show the first 6, with a “+N more” button that opens the full list.',
+      },
       { type: 'Changed', text: 'Filtering by Used For moves the matching use to the front and fades the rest.' },
       { type: 'Added', text: 'A GitHub link in the header and a footer at the bottom of every page.' },
       { type: 'Changed', text: 'Clearer column descriptions, and tooltips wait a moment before showing on hover.' },
@@ -233,8 +227,9 @@ export const CHANGELOG = [
     ],
   },
   {
+    version: '0.1.0',
     date: '2026-09-23',
-    title: 'NPC sell prices from Hercules',
+    title: 'First version of the site',
     changes: [
       {
         type: 'Changed',
@@ -255,12 +250,6 @@ export const CHANGELOG = [
       },
       { type: 'Removed', text: 'Ghost Coffin and Torn Paper Piece, which couldn’t be found in game.' },
       { type: 'Changed', text: 'NPC Buy shows ✓ or ✕. Vend and Whobuy show ✕ for items NPCs sell.' },
-    ],
-  },
-  {
-    date: '2026-09-23',
-    title: 'First version of the site (sample entry)',
-    changes: [
       { type: 'Added', text: 'Searchable, sortable table of 643 items from the original Google Sheet.' },
       { type: 'Added', text: 'Filters for action, item type, category, and what an item is used for.' },
       { type: 'Added', text: 'Report Issue flag on every item, plus About, Feedback, and Contribute pages.' },

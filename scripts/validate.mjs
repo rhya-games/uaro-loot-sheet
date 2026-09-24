@@ -9,6 +9,7 @@
 import { readFileSync } from 'node:fs';
 import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
+import { CHANGELOG } from '../src/data/changelog.js';
 
 const DATA_FILE = 'src/data/loot.json';
 const SCHEMA_FILE = 'src/data/schema.json';
@@ -196,6 +197,29 @@ if (noAction.length) warnings.push(`${noAction.length} items have no action yet:
 
 const isSorted = items.every((item, i) => i === 0 || items[i - 1].name.localeCompare(item.name) <= 0);
 if (!isSorted) warnings.push('Items are not in A-Z order by name. Keeping them sorted makes changes easier to review.');
+
+// Changelog: one entry per day, newest first, with 0.x versions that go up,
+// and the newest one matching package.json (the GitHub release uses it).
+const packageVersion = JSON.parse(readFileSync('package.json', 'utf8')).version;
+const versionParts = (version) => version.split('.').map(Number);
+const isNewer = (a, b) => {
+  const [x, y] = [versionParts(a), versionParts(b)];
+  return x[0] - y[0] || x[1] - y[1] || x[2] - y[2];
+};
+CHANGELOG.forEach((entry, i) => {
+  if (!/^0\.\d+\.\d+$/.test(entry.version ?? '')) {
+    errors.push(`Changelog ${entry.date}: version "${entry.version}" should look like 0.3.0 (0.x until the first real release)`);
+  }
+  const older = CHANGELOG[i + 1];
+  if (older && entry.date === older.date) errors.push(`Changelog: two entries for ${entry.date}; merge them into one`);
+  if (older && !(entry.date > older.date)) errors.push(`Changelog: ${entry.date} should be newer than ${older.date} below it`);
+  if (older && !(isNewer(entry.version, older.version) > 0)) {
+    errors.push(`Changelog: version ${entry.version} should be higher than ${older.version} below it`);
+  }
+});
+if (CHANGELOG[0] && CHANGELOG[0].version !== packageVersion) {
+  errors.push(`package.json version (${packageVersion}) should match the newest changelog entry (${CHANGELOG[0].version})`);
+}
 
 // Report.
 warnings.forEach((w) => console.warn(`WARNING: ${w}`));

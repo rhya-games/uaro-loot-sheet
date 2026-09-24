@@ -65,7 +65,9 @@ unit tests or formatter yet.
     already reviewed (`reviewedPrices`).
 - `src/data/game-rules.json`: Overcharge level and %; generated.
 - `src/data/changelog.js`: the site's Changelog page. Add a line for
-  anything a visitor would notice.
+  anything a visitor would notice. One entry per day, each with a version
+  (SemVer, 0.x until 1.0; features raise the middle number, fixes the last)
+  that matches `package.json`. Merging to main publishes a GitHub release.
 
 ### Where values come from (most important first)
 
@@ -140,7 +142,10 @@ Match similar existing items. Look them up in loot.json first.
   popovers in portals so scroll boxes can't clip them.
 - Performance matters: the table has 600+ rows. `ItemList` and
   `FilterSidebar` are `memo`'d, so pass them stable props (`useCallback`,
-  stable arrays). Only the table or the cards are drawn, never both. The
+  stable arrays). Rows and cards are `memo`'d too, and only rows whose uses
+  match get the highlight (`utils/highlight.js`). Long lists are drawn in
+  batches (`utils/useProgressiveList.js`), and results follow the search box
+  through `useDeferredValue`. Only the table or the cards are drawn, never both. The
   filter panel stays mounted (`inert` when closed) and the table slides
   with a FLIP animation.
 - Write code that reads like the code around it: plain names, a comment

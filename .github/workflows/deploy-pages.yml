@@ -1,5 +1,6 @@
 # Builds the site and publishes it to GitHub Pages on every push to main.
-# The site ends up at https://<owner>.github.io/uaro-loot-sheet/
+# The site ends up at https://<owner>.github.io/uaro-loot-sheet/, and each
+# deploy publishes a GitHub release for the version (see the release job).
 #
 # One-time setup on GitHub: Settings -> Pages -> "Build and deployment" ->
 # Source: "GitHub Actions".
@@ -46,3 +47,33 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
+
+  # After the site is live, publish a GitHub release named after the version
+  # in package.json (v0.2.0), with that version's notes from
+  # src/data/changelog.js. There's one changelog entry (and version) per day,
+  # so a second deploy on the same day moves that release to the new commit
+  # and refreshes its notes instead of making another one.
+  release:
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # create the tag and the release
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG="v$VERSION"
+          node scripts/release-notes.mjs "$VERSION" > notes.md
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            git tag -f "$TAG"
+            git push -f origin "refs/tags/$TAG"
+            gh release edit "$TAG" --title "$TAG" --notes-file notes.md --latest
+          else
+            gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" --notes-file notes.md --latest
+          fi

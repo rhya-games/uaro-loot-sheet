@@ -6,6 +6,7 @@ import ActiveFilters from '../components/ActiveFilters.jsx';
 import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
 import ShareButton from '../components/ShareButton.jsx';
+import AdminToggle from '../admin/AdminToggle.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 import { createSearch, wordMatcher } from '../utils/search.js';
 import { nextSort, sortItems } from '../utils/sort.js';
@@ -105,6 +106,12 @@ export default function LootPage() {
   );
 
   const activeFilterCount = countActiveFilters(filters) + (keepsEverything(keepFor) ? 0 : 1);
+
+  // The filter panel's counts (~500 checkboxes) follow the search. While the
+  // panel is closed nobody sees them, so it keeps what it last showed and
+  // skips redrawing on every keystroke; it catches up when it opens.
+  const panelView = useRef({ searched, count: results.length });
+  if (sidebarOpen) panelView.current = { searched, count: results.length };
 
   // Keep the link in step with the view, so it can be copied or bookmarked,
   // and remember the view for next time. replaceState changes the address
@@ -279,6 +286,7 @@ export default function LootPage() {
         ) : (
           <ShareButton className={TOOLBAR_BUTTON} />
         )}
+        <AdminToggle className={TOOLBAR_BUTTON} />
       </div>
 
       {/* The results header: how many items, and what's narrowing them. Always one
@@ -358,7 +366,7 @@ export default function LootPage() {
           </div>
           <FilterSidebar
             onClose={closePanel}
-            resultCount={results.length}
+            resultCount={panelView.current.count}
             totalCount={loot.length}
             anyActive={activeFilterCount > 0}
             onClearAll={clearAll}
@@ -367,7 +375,7 @@ export default function LootPage() {
             keepFor={keepFor}
             keepForDisabled={adminOn}
             onKeepForChange={changeKeepFor}
-            items={searched}
+            items={panelView.current.searched}
             filters={filters}
             onChange={setFilters}
           />

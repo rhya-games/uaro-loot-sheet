@@ -15,15 +15,15 @@ function formatDate(dateText) {
   return new Date(year, month - 1, day).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-/** Site and data updates, newest first. Entries live in src/data/changelog.js. */
+/** Site and data updates, one card per day, newest first. Entries live in src/data/changelog.js. */
 export default function ChangelogPage() {
   return (
     <Page title="Changelog" intro="What's new on the site and in the item data, newest first.">
       {CHANGELOG.length === 0 && <p>No updates yet.</p>}
       {CHANGELOG.map((entry) => (
-        <Section key={`${entry.date}-${entry.title}`} title={entry.title}>
+        <Section key={entry.version} title={entry.title}>
           <p className="text-muted">
-            <time dateTime={entry.date}>{formatDate(entry.date)}</time>
+            Version {entry.version} · <time dateTime={entry.date}>{formatDate(entry.date)}</time>
           </p>
           {CHANGE_TYPES.map((type) => {
             const changes = entry.changes.filter((change) => change.type === type);
