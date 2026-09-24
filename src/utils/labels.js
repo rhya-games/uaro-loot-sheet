@@ -9,8 +9,8 @@ export const ALL_ITEM_TYPES = schema.$defs.itemType.enum;
 export const ALL_CATEGORIES = schema.$defs.category.enum;
 
 /**
- * How each action looks in the UI: dark pills with white text, so they
- * stand apart from the light category tags.
+ * How each action looks in the UI: strong-colored chips, so they stand apart
+ * from the softer category chips. Dark mode uses deeper, less vivid shades.
  *
  * The keys must match the "action" list in src/data/schema.json.
  * `description` shows as a tooltip when you hover a badge.
@@ -18,19 +18,19 @@ export const ALL_CATEGORIES = schema.$defs.category.enum;
 export const ACTIONS = {
   Keep: {
     description: 'Keep it: needed for a quest, hat, or pet.',
-    className: 'bg-green-700 text-white',
+    className: 'bg-green-700 text-white dark:bg-green-800 dark:text-green-50',
   },
   Vend: {
     description: 'Sell it to players from a vending shop.',
-    className: 'bg-amber-700 text-white',
+    className: 'bg-amber-700 text-white dark:bg-amber-800 dark:text-amber-50',
   },
   Whobuy: {
     description: 'Sell it to a player who is buying it (check @whobuy).',
-    className: 'bg-purple-700 text-white',
+    className: 'bg-purple-700 text-white dark:bg-purple-800 dark:text-purple-50',
   },
   NPC: {
     description: 'Sell it to an NPC shop.',
-    className: 'bg-blue-700 text-white',
+    className: 'bg-blue-700 text-white dark:bg-blue-800 dark:text-blue-50',
   },
 };
 
@@ -53,7 +53,7 @@ const GRAY_CATEGORIES = ['Uncategorized'];
 const RAINBOW_CATEGORIES = ALL_CATEGORIES.filter((category) => !GRAY_CATEGORIES.includes(category));
 const RAINBOW_CLASSES =
   'bg-[oklch(0.94_0.06_var(--chip-hue))] text-[oklch(0.42_0.12_var(--chip-hue))] ' +
-  'dark:bg-[oklch(0.34_0.07_var(--chip-hue))] dark:text-[oklch(0.93_0.05_var(--chip-hue))]';
+  'dark:bg-[oklch(0.3_0.04_var(--chip-hue))] dark:text-[oklch(0.87_0.05_var(--chip-hue))]';
 
 /** Props for a category chip: { className, style }. */
 export function categoryChip(category) {

@@ -131,7 +131,9 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
                 // scrolling past don't show through that gap; the second paints 1px of
                 // green to the right, hiding hairline seams between header cells.
                 // In the narrow scroll box (see ItemList) it sticks to the box's top instead.
-                className={`sticky top-4 z-10 bg-header px-3 py-3 font-semibold whitespace-nowrap text-white
+                // Sortable headers have no padding: their button fills the cell (see SortButton).
+                className={`sticky top-4 z-10 bg-header font-semibold whitespace-nowrap text-white
+                  ${column.sortKey ? 'p-0' : 'px-3 py-3'}
                   shadow-[0_-1rem_0_0_var(--color-page),1px_0_0_0_var(--color-header)]
                   first:rounded-tl-lg last:rounded-tr-lg last:shadow-[0_-1rem_0_0_var(--color-page)]
                   @max-table-fit:top-0 @max-table-fit:shadow-[1px_0_0_0_var(--color-header)]
@@ -169,11 +171,10 @@ export default function ItemTable({ items, sort, onSort, onSelectUse }) {
 
 /**
  * A column header you can click (or focus and press Enter/Space) to sort.
- * The arrow shows while sorted by this column, or on hover/focus as a hint.
- *
- * The arrow sits in the header's padding (absolutely positioned) so it doesn't
- * make columns wider: after the label on text columns, before it on number
- * columns (which are right-aligned).
+ * The button fills the whole header cell, so the focus ring outlines the cell.
+ * The arrow always sits to the right of the label: shown while sorted by this
+ * column, or faintly on hover/focus as a hint. Its space is always reserved,
+ * so labels don't shift when it appears.
  */
 function SortButton({ column, direction, onSort }) {
   const arrow = direction === 'asc' ? '↑' : direction === 'desc' ? '↓' : '↕';
@@ -182,15 +183,16 @@ function SortButton({ column, direction, onSort }) {
     <button
       type="button"
       onClick={() => onSort(column.sortKey)}
-      // The header is dark green, so the focus ring is white here (same size and shape).
-      className="group/sort relative rounded font-semibold focus-visible:outline-white"
+      // The header is dark green, so the focus ring is white and drawn inside the cell.
+      className={`group/sort flex w-full items-center gap-1 rounded-md px-3 py-3 font-semibold
+        focus-visible:outline-white focus-visible:-outline-offset-4 ${column.numeric ? 'justify-end' : 'justify-start'}`}
     >
       {column.label}
       <span
         aria-hidden="true"
-        className={`absolute top-1/2 w-2.5 -translate-y-1/2 text-center text-xs ${
-          column.numeric ? 'right-full mr-0.5' : 'left-full ml-0.5'
-        } ${direction ? 'opacity-100' : 'opacity-0 group-hover/sort:opacity-70 group-focus-visible/sort:opacity-70'}`}
+        className={`w-3 text-center text-xs transition-opacity duration-150 ease-smooth ${
+          direction ? 'opacity-100' : 'opacity-0 group-hover/sort:opacity-70 group-focus-visible/sort:opacity-70'
+        }`}
       >
         {arrow}
       </span>
@@ -199,7 +201,7 @@ function SortButton({ column, direction, onSort }) {
 
   // Headers stick to the top of the window, so their tooltips open below.
   return column.title ? (
-    <Tooltip text={column.title} placement="bottom">
+    <Tooltip text={column.title} placement="bottom" className="flex w-full">
       {button}
     </Tooltip>
   ) : (

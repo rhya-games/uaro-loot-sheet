@@ -6,7 +6,7 @@ import ItemTable from './ItemTable.jsx';
  * Both are rendered and CSS decides which one is visible.
  *
  * When the table doesn't fit (the list is narrower than the `table-fit`
- * container size, 1120px, in index.css), the table gets its own scroll box:
+ * container size, 1170px, in index.css), the table gets its own scroll box:
  * it scrolls sideways inside it and its header sticks to the top of the box.
  * Otherwise the page scrolls and the header sticks to the top of the window.
  * If you add or widen a column, measure the table's narrowest width again.

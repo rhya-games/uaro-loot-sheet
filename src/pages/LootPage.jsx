@@ -12,21 +12,24 @@ import { nextSort, sortItems } from '../utils/sort.js';
 import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue, withoutKeep } from '../utils/filter.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
+import { usePresence } from '../utils/usePresence.js';
+
+/** How long the panel takes to slide in or out (ms). Matches `duration-300` below. */
+const PANEL_ANIMATION_MS = 300;
 
 /**
  * The filter panel has three layouts, by window width:
- *   1420px and up: beside the table, pushing it over (open by default).
- *   768-1419px:    floats over the left of the table, so the table isn't
+ *   1470px and up: beside the table, pushing it over (open by default).
+ *   768-1469px:    floats over the left of the table, so the table isn't
  *                  squeezed (closed by default).
  *   under 768px:   a sheet covering most of the screen, with a dimmed strip
  *                  (scrim) on the right; clicking the scrim closes it
  *                  (closed by default).
  *
- * 1420px = table's minimum width (~1100px, see ItemList) + panel (240px)
- * + gap (24px) + page padding (32px), rounded up. The same number appears in
- * the `wide:` classes below; change both together.
+ * 1470px is the `wide` breakpoint in index.css (table width + panel + gap +
+ * padding). The same number is in PANEL_BESIDE_TABLE below; change both together.
  */
-const PANEL_BESIDE_TABLE = '(min-width: 1420px)';
+const PANEL_BESIDE_TABLE = '(min-width: 1470px)';
 
 /** The main page: search box, filter sidebar, and the item table. */
 export default function LootPage() {
@@ -34,6 +37,7 @@ export default function LootPage() {
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const panelBesideTable = useMediaQuery(PANEL_BESIDE_TABLE);
   const [sidebarOpen, setSidebarOpen] = useState(() => window.matchMedia(PANEL_BESIDE_TABLE).matches);
+  const panel = usePresence(sidebarOpen, PANEL_ANIMATION_MS); // keeps it on screen while it animates out
   const toggleButtonRef = useRef(null);
   const closeButtonRef = useRef(null);
   const [sort, setSort] = useState(null);
@@ -60,13 +64,25 @@ export default function LootPage() {
   // it, and closing it returns focus to the toggle button.
   const panelCovers = sidebarOpen && !panelBesideTable;
   useEffect(() => {
-    if (panelCovers) closeButtonRef.current?.focus();
-  }, [panelCovers]);
+    if (panelCovers && panel.mounted) closeButtonRef.current?.focus();
+  }, [panelCovers, panel.mounted]);
 
   const closePanel = () => {
     setSidebarOpen(false);
     toggleButtonRef.current?.focus();
   };
+
+  // Escape closes the panel whenever it's covering the table, wherever focus
+  // is. Things that use Escape themselves first (clearing the search box,
+  // hiding a tooltip, closing a menu) mark the key as handled, so it's skipped.
+  useEffect(() => {
+    if (!panelCovers) return;
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape' && !event.defaultPrevented) closePanel();
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [panelCovers]);
 
   // Sheet on small screens: stop the page behind it from scrolling.
   const smallScreen = useMediaQuery('(max-width: 767px)');
@@ -79,10 +95,10 @@ export default function LootPage() {
   }, [sidebarOpen, smallScreen]);
 
   // Clicking a "Used For" target shows only items used for that target.
+  // (The filter chips above the table show it; the panel stays as it was.)
   const showItemsUsedFor = (target) => {
     setFilters({ ...EMPTY_FILTERS, usedFor: [target] });
     setQuery('');
-    setSidebarOpen(true);
     window.scrollTo({ top: 0 });
   };
 
@@ -135,30 +151,30 @@ export default function LootPage() {
       </div>
 
       {/* Panel and table share one grid cell (so the panel floats over the table)
-          until 1420px (`wide:`), where the grid gets a second column and the panel sits beside it. */}
+          until 1470px (`wide:`), where the grid gets a second column and the panel sits beside it. */}
       <div
-        className={`md:grid md:items-start ${sidebarOpen ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''}`}
+        className={`md:grid md:items-start ${panel.mounted ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''}`}
       >
-        {sidebarOpen && (
+        {panel.mounted && (
           // Small screens only: dims the page behind the sheet; clicking it closes the panel.
           <div
             aria-hidden="true"
             onClick={closePanel}
-            className="fixed inset-0 z-40 bg-black/50 md:hidden motion-safe:transition-opacity motion-safe:duration-200
-              motion-safe:starting:opacity-0"
+            className={`fixed inset-0 z-40 cursor-pointer bg-black/50 transition-opacity duration-300 ease-smooth
+              motion-reduce:transition-none md:hidden dark:bg-black/70 ${panel.visible ? 'opacity-100' : 'opacity-0'}`}
           />
         )}
-        {sidebarOpen && (
+        {panel.mounted && (
           <aside
             id="filter-sidebar"
             aria-label="Filters"
-            onKeyDown={(event) => event.key === 'Escape' && !panelBesideTable && closePanel()}
-            // Slides in from the left (skipped when the system asks for reduced motion).
-            className="fixed inset-y-0 right-12 left-0 z-50 overflow-y-auto bg-surface px-4 pb-4 shadow-xl
-              motion-safe:transition motion-safe:duration-200 motion-safe:ease-out
-              motion-safe:starting:-translate-x-6 motion-safe:starting:opacity-0
+            // Slides and fades in from the left, and back out when closed
+            // (instant when the system asks for reduced motion).
+            className={`fixed inset-y-0 right-12 left-0 z-50 overflow-y-auto bg-surface px-4 pb-4 shadow-xl
+              transition duration-300 ease-smooth motion-reduce:transition-none
+              ${panel.visible ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}
               md:panel md:sticky md:inset-auto md:top-4 md:z-30 md:col-start-1 md:row-start-1 md:max-h-[calc(100vh-2rem)]
-              md:w-60 md:justify-self-start md:pb-3 md:shadow-xl wide:shadow-sm"
+              md:w-60 md:justify-self-start md:pb-3 md:shadow-xl wide:shadow-sm`}
           >
             <div className="hidden md:block">
               <SkipLink targetId="results" className="focus:absolute focus:top-2 focus:left-2 focus:z-20">
@@ -181,7 +197,7 @@ export default function LootPage() {
         <div
           id="results"
           tabIndex={-1}
-          className={`min-w-0 focus:outline-none md:col-start-1 md:row-start-1 ${sidebarOpen ? 'wide:col-start-2' : ''}`}
+          className={`min-w-0 focus:outline-none md:col-start-1 md:row-start-1 ${panel.mounted ? 'wide:col-start-2' : ''}`}
         >
           <ItemList
             items={results}

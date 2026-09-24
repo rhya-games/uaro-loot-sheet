@@ -30,7 +30,13 @@ export default function SearchBar({ value, onChange }) {
         type="search"
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        onKeyDown={(event) => event.key === 'Escape' && onChange('')}
+        onKeyDown={(event) => {
+          // Escape clears the search. Marked as handled so it doesn't also close the filter panel.
+          if (event.key === 'Escape' && value) {
+            event.preventDefault();
+            onChange('');
+          }
+        }}
         placeholder="Search by name, use, or item ID…"
         autoComplete="off"
         className={`w-full rounded-lg border py-2.5 pr-11 pl-10 text-base shadow-sm placeholder:text-subtle-fg ${

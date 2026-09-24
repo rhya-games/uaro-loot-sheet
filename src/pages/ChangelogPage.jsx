@@ -3,10 +3,10 @@ import { CHANGELOG, CHANGE_TYPES } from '../data/changelog.js';
 
 /** Colored label next to each change type, e.g. "Added". */
 const TYPE_COLORS = {
-  Added: 'text-green-800 dark:text-green-300',
-  Changed: 'text-blue-800 dark:text-blue-300',
-  Fixed: 'text-amber-800 dark:text-amber-300',
-  Removed: 'text-red-800 dark:text-red-300',
+  Added: 'text-green-800 dark:text-green-400',
+  Changed: 'text-blue-800 dark:text-blue-400',
+  Fixed: 'text-amber-800 dark:text-amber-400',
+  Removed: 'text-red-800 dark:text-red-400',
 };
 
 /** "2026-09-23" -> "September 23, 2026" (in any time zone). */

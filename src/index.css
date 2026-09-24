@@ -45,27 +45,32 @@
   --header-strong: var(--color-emerald-900);
 }
 
+/*
+ * Dark mode follows common dark-UI guidance: near-black (not pure black)
+ * surfaces that get a little lighter as they sit "higher", off-white text
+ * instead of pure white, and softer, less saturated accent colors.
+ */
 .dark {
   color-scheme: dark; /* dark scrollbars and form controls */
-  --page: var(--color-gray-950);
-  --surface: var(--color-gray-900);
-  --subtle: oklch(0.24 0.02 265); /* between gray-900 and gray-800 */
-  --hover: var(--color-gray-800);
-  --chip: var(--color-gray-700);
-  --line: var(--color-gray-700);
-  --line-strong: var(--color-gray-600);
-  --line-faint: var(--color-gray-800);
-  --fg: var(--color-gray-50);
-  --body: var(--color-gray-200);
-  --muted: var(--color-gray-300);
-  --subtle-fg: var(--color-gray-400);
-  --faint: var(--color-gray-500);
-  --accent: var(--color-emerald-300);
-  --accent-soft: oklch(0.3 0.05 165); /* dark emerald */
-  --accent-line: var(--color-emerald-500);
-  --focus: var(--color-emerald-400);
-  --header: var(--color-emerald-900);
-  --header-strong: var(--color-emerald-950);
+  --page: oklch(0.17 0.01 265);
+  --surface: oklch(0.21 0.012 265);
+  --subtle: oklch(0.235 0.012 265);
+  --hover: oklch(0.27 0.014 265);
+  --chip: oklch(0.32 0.014 265);
+  --line: oklch(0.31 0.014 265);
+  --line-strong: oklch(0.38 0.014 265);
+  --line-faint: oklch(0.26 0.012 265);
+  --fg: oklch(0.94 0.005 265);
+  --body: oklch(0.86 0.008 265);
+  --muted: oklch(0.78 0.01 265);
+  --subtle-fg: oklch(0.7 0.012 265);
+  --faint: oklch(0.55 0.012 265);
+  --accent: oklch(0.8 0.08 165); /* soft mint instead of bright emerald */
+  --accent-soft: oklch(0.29 0.04 165);
+  --accent-line: oklch(0.62 0.09 165);
+  --focus: oklch(0.75 0.1 165);
+  --header: oklch(0.3 0.05 165);
+  --header-strong: oklch(0.24 0.04 165);
 }
 
 @theme inline {
@@ -91,16 +96,20 @@
 
 /*
  * Screen sizes used by the loot page (see pages/LootPage.jsx):
- *   `wide:` 1420px and up: the filter panel has room beside the table.
+ *   `wide:` 1470px and up: the filter panel has room beside the table
+ *           (table-fit 1170 + panel 240 + gap 24 + page padding 32, rounded up).
  * Named breakpoints are ordered correctly with sm/md/lg/xl, unlike min-[...] ones.
  *
- * Container size `table-fit` (1120px): the table's narrowest width plus a
+ * Container size `table-fit` (1170px): the table's narrowest width (~1150px) plus a
  * little room. Below it, the table scrolls sideways inside its own box
  * (`@max-table-fit:` in components/ItemList.jsx and ItemTable.jsx).
  */
 @theme {
-  --breakpoint-wide: 88.75rem;
-  --container-table-fit: 70rem;
+  --breakpoint-wide: 91.875rem; /* 1470px */
+  --container-table-fit: 73.125rem; /* 1170px */
+
+  /* Soft "ease out" curve used by every animation: quick start, gentle stop. */
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @layer base {
@@ -108,6 +117,9 @@
   :focus-visible {
     outline: 2px solid var(--focus);
     outline-offset: 2px;
+    /* Slightly rounded rings. Elements with their own rounding (rounded-full…) keep it,
+       because Tailwind utilities override this base style. */
+    border-radius: 0.25rem;
   }
 
   /* Tailwind resets buttons to the default arrow cursor; show a hand on anything clickable. */

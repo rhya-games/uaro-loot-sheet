@@ -1,5 +1,8 @@
 import { useEffect, useId, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { autoUpdate, flip, offset, shift, useFloating } from '@floating-ui/react-dom';
 import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
+import { usePresence } from '../utils/usePresence.js';
 import Tooltip from './Tooltip.jsx';
 import { ROW_ACTIONS } from '../config.js';
 
@@ -48,12 +51,30 @@ export default function RowActions({ item }) {
  *   - ↑ / ↓ move between items, Home / End jump to the ends
  *   - Escape closes it and returns focus to the button
  *   - Tab or clicking outside closes it
+ *
+ * Like tooltips, the menu is drawn at the end of the page and positioned with
+ * Floating UI, so the table's scroll box can't cut it off.
  */
 function ActionsMenu({ item }) {
   const [open, setOpen] = useState(false);
+  const { mounted, visible } = usePresence(open, 150);
   const menuId = useId();
   const buttonRef = useRef(null);
   const menuRef = useRef(null);
+  const { refs, floatingStyles } = useFloating({
+    placement: 'bottom-end',
+    strategy: 'fixed',
+    middleware: [offset(4), flip({ padding: 8 }), shift({ padding: 8 })],
+    whileElementsMounted: autoUpdate,
+  });
+  const setButton = (element) => {
+    buttonRef.current = element;
+    refs.setReference(element);
+  };
+  const setMenu = (element) => {
+    menuRef.current = element;
+    refs.setFloating(element);
+  };
 
   const menuItems = () => [...(menuRef.current?.querySelectorAll('[role="menuitem"]') ?? [])];
 
@@ -62,10 +83,10 @@ function ActionsMenu({ item }) {
     if (returnFocus) buttonRef.current?.focus();
   };
 
-  // When the menu opens, focus its first item.
+  // Once the opened menu is on the page, focus its first item.
   useEffect(() => {
-    if (open) menuItems()[0]?.focus();
-  }, [open]);
+    if (open && mounted) menuItems()[0]?.focus();
+  }, [open, mounted]);
 
   // Close when clicking anywhere outside the menu.
   useEffect(() => {
@@ -100,10 +121,10 @@ function ActionsMenu({ item }) {
   };
 
   return (
-    <div className="relative inline-block">
+    <div className="inline-block">
       <Tooltip text="More actions">
         <button
-          ref={buttonRef}
+          ref={setButton}
           type="button"
           onClick={() => setOpen((isOpen) => !isOpen)}
           onKeyDown={onButtonKeyDown}
@@ -116,34 +137,36 @@ function ActionsMenu({ item }) {
           <EllipsisVerticalIcon className="size-5" aria-hidden="true" />
         </button>
       </Tooltip>
-      {open && (
-        <ul
-          ref={menuRef}
-          id={menuId}
-          role="menu"
-          aria-label={`Actions for ${item.name}`}
-          onKeyDown={onMenuKeyDown}
-          // Fades and grows in from the button's corner (skipped for reduced motion).
-          className="panel absolute right-0 z-20 mt-1 min-w-36 origin-top-right py-1 text-left
-            motion-safe:transition motion-safe:duration-150 motion-safe:ease-out
-            motion-safe:starting:scale-95 motion-safe:starting:opacity-0"
-        >
-          {ROW_ACTIONS.map((action) => (
-            <li key={action.id} role="none">
-              <a
-                {...linkProps(action, item)}
-                role="menuitem"
-                tabIndex={-1}
-                onClick={() => close()}
-                className="block px-3 py-2 text-sm text-body hover:bg-hover focus:bg-hover"
-              >
-                {action.label}
-                {action.external && <span className="sr-only"> (opens in a new tab)</span>}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
+      {mounted &&
+        createPortal(
+          <ul
+            ref={setMenu}
+            style={floatingStyles}
+            id={menuId}
+            role="menu"
+            aria-label={`Actions for ${item.name}`}
+            onKeyDown={onMenuKeyDown}
+            // Fades and grows in from the button's corner (instant with reduced motion).
+            className={`panel z-[55] min-w-36 origin-top-right py-1 text-left transition duration-150 ease-smooth
+              motion-reduce:transition-none ${visible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}
+          >
+            {ROW_ACTIONS.map((action) => (
+              <li key={action.id} role="none">
+                <a
+                  {...linkProps(action, item)}
+                  role="menuitem"
+                  tabIndex={-1}
+                  onClick={() => close()}
+                  className="block px-3 py-2 text-sm text-body hover:bg-hover focus:bg-hover"
+                >
+                  {action.label}
+                  {action.external && <span className="sr-only"> (opens in a new tab)</span>}
+                </a>
+              </li>
+            ))}
+          </ul>,
+          document.body,
+        )}
     </div>
   );
 }
