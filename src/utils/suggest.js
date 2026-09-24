@@ -21,10 +21,15 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  * Cooking levels 1-3 don't count: those foods are too weak to be worth
  * keeping ingredients for (see isLowLevelCooking).
  *
- * Junk: nothing uses it, and nobody pays anything for it.
+ * Junk: nothing uses it, and nobody pays anything for it. Pet accessories
+ * are Junk under PET_ACCESSORY_JUNK_BELOW when nothing else uses them.
  */
 export const WHOBUY_MARGIN = 0.15;
 export const VEND_MARGIN = 0.15;
+export const PET_ACCESSORY_JUNK_BELOW = 5000;
+
+/** Pet accessories: the emulators' pet armor items are IDs 10001-10038 (pre-renewal) and 10043-10045. */
+export const isPetAccessory = (item) => item.itemId >= 10001 && item.itemId <= 10099;
 
 /**
  * A use for level 1-3 cooking: a food whose note says "+1" to "+3"
@@ -157,7 +162,12 @@ export function createSuggester(items) {
       reasons.push(`Not worth making ${use.for}: worth ${fmt(use.value)}, parts sell for ${fmt(use.partsValue)}`);
     }
 
-    if (sale?.action) {
+    // A pet accessory nothing else needs isn't worth the trouble under 5k.
+    const best = Math.max(npcSellPrice(item) ?? 0, sale?.price ?? 0);
+    if (isPetAccessory(item) && !uses.length && sale && best < PET_ACCESSORY_JUNK_BELOW) {
+      actions.push('Junk');
+      reasons.push(`Pet accessory worth under ${fmt(PET_ACCESSORY_JUNK_BELOW)} (${fmt(best)}), and nothing else uses it`);
+    } else if (sale?.action) {
       actions.push(sale.action);
       reasons.push(sale.reason);
     } else if (sale && !uses.length) {

@@ -103,7 +103,10 @@ Match similar existing items. Look them up in loot.json first.
 - Pet evolution materials: `Keep` + `Vend`, categories `Pet Evolution`,
   `Pet`, `uaRO`. Cards add `Card`.
 - Taming items: `Vend`, category `Pet`, notes `"<Pet> Taming Item"`.
-- Pet accessories: `NPC`, category `Pet`, notes `"<Pet> Pet accessory"`.
+- Pet accessories (IDs 10001-10038): item type `Equipment` (so no
+  @whobuy), category `Pet`, notes `"<Pet> Pet accessory"` with the uaRO pet
+  name. Junk when worth under 5,000z and nothing else uses them; otherwise
+  by price like anything else.
 - Headgear quest materials (Dimonka): category `Server Hat Quest` + `uaRO`.
 - After adding items: run `sync:prices`, `sync:shops`, then `validate`.
 - If the CSV import should produce the same result, mirror renames, IDs

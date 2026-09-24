@@ -32,6 +32,10 @@ export const CHANGELOG = [
       { type: 'Changed', text: 'Vend and Whobuy show ✕ when nobody was buying or selling, and Whobuy always shows ✕ for cards and equipment.' },
       { type: 'Changed', text: 'Ingredients only used for level 1–3 cooking aren’t marked Keep any more, like Banana and Yoyo Tail.' },
       { type: 'Fixed', text: 'Every card says Vend. Armeyer Dinze Card said NPC.' },
+      {
+        type: 'Changed',
+        text: 'Pet accessories are equipment, and each one says which pet wears it. The ones worth under 5,000z that nothing else uses are Junk, like Afro and Backpack.',
+      },
     ],
   },
   {
