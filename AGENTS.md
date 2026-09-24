@@ -89,9 +89,10 @@ unit tests or formatter yet.
 
 Match similar existing items. Look them up in loot.json first.
 
-- **What belongs in the sheet:** anything a player can loot, including items
-  NPCs sell (the sheet tells people not to vend those). Leave out only items
-  that are crafted or quest-only and never drop.
+- **What belongs in the sheet:** any item a player can end up holding:
+  dropped, sold by NPCs (the sheet tells people not to vend those) or
+  crafted (crafted items can be sold too). Default to including. Before
+  leaving anything out, explain why and get the maintainer's OK.
 
 - "Used For" targets reuse an existing name exactly. Pet evolutions are
   `"<Evolved pet> Pet Evolution"`. Uses show quantities from the wiki.

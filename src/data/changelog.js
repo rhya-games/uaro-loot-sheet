@@ -50,6 +50,11 @@ export const CHANGELOG = [
         type: 'Added',
         text: '21 items skills use, including ones NPCs sell (Red Potion, Trap, Medicine Bowl, ninja stones) so you know not to vend them.',
       },
+      {
+        type: 'Added',
+        text: 'Crafted items skills use, like Acid Bottle, Glistening Coat, Embryo and the four Elemental Converters (now named by element).',
+      },
+      { type: 'Changed', text: 'Bigger ✓ and ✕ marks in the table, and bigger arrows on the filter sections.' },
     ],
   },
   {

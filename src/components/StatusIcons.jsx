@@ -10,7 +10,7 @@ import { isSoldByNpc } from '../utils/prices.js';
 export function YesIcon({ label }) {
   return (
     <span className="inline-flex text-emerald-700 dark:text-emerald-400">
-      <CheckIcon className="size-4" aria-hidden="true" />
+      <CheckIcon className="size-5" aria-hidden="true" />
       <span className="sr-only">{label}</span>
     </span>
   );
@@ -19,7 +19,7 @@ export function YesIcon({ label }) {
 export function NoIcon({ label }) {
   return (
     <span className="inline-flex text-muted">
-      <XMarkIcon className="size-4" aria-hidden="true" />
+      <XMarkIcon className="size-5" aria-hidden="true" />
       <span className="sr-only">{label}</span>
     </span>
   );

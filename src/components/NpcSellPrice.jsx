@@ -19,7 +19,7 @@ export default function NpcSellPrice({ item }) {
     return (
       <Tooltip text={`Can't be sold to NPCs (${info.reason})`}>
         <span tabIndex={0} className="inline-flex items-center rounded text-muted">
-          <XMarkIcon className="size-4" aria-hidden="true" />
+          <XMarkIcon className="size-5" aria-hidden="true" />
           <span className="sr-only">Can't be sold to NPCs</span>
         </span>
       </Tooltip>

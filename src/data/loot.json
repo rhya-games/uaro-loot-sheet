@@ -104,6 +104,36 @@
     "npcBuyable": "no"
   },
   {
+    "id": "acid-bottle",
+    "name": "Acid Bottle",
+    "itemId": 7136,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Acid Terror",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Acid Demonstration",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "acorn",
     "name": "Acorn",
     "itemId": 1026,
@@ -1809,7 +1839,22 @@
     ],
     "uses": [
       {
-        "for": "Elemental Converter",
+        "for": "Elemental Converter (Fire)",
+        "qty": 1,
+        "note": "Create Elemental Converter"
+      },
+      {
+        "for": "Elemental Converter (Water)",
+        "qty": 1,
+        "note": "Create Elemental Converter"
+      },
+      {
+        "for": "Elemental Converter (Earth)",
+        "qty": 1,
+        "note": "Create Elemental Converter"
+      },
+      {
+        "for": "Elemental Converter (Wind)",
         "qty": 1,
         "note": "Create Elemental Converter"
       }
@@ -2242,6 +2287,36 @@
     "notes": "",
     "links": [],
     "sellValue": 1500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "bottle-grenade",
+    "name": "Bottle Grenade",
+    "itemId": 7135,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Bomb",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Acid Demonstration",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -3322,6 +3397,36 @@
     "notes": "",
     "links": [],
     "sellValue": 79,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "condensed-red-potion",
+    "name": "Condensed Red Potion",
+    "itemId": 545,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Aid Condensed Potion",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Healing Touch",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -4889,6 +4994,106 @@
     "npcBuyable": "no"
   },
   {
+    "id": "elemental-converter-earth",
+    "name": "Elemental Converter (Earth)",
+    "itemId": 12116,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Elemental Change Earth",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elemental-converter-fire",
+    "name": "Elemental Converter (Fire)",
+    "itemId": 12114,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Elemental Change Fire",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elemental-converter-water",
+    "name": "Elemental Converter (Water)",
+    "itemId": 12115,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Elemental Change Water",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "elemental-converter-wind",
+    "name": "Elemental Converter (Wind)",
+    "itemId": 12117,
+    "itemType": "Consumable",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Elemental Change Wind",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "elunium",
     "name": "Elunium",
     "itemId": 985,
@@ -4967,6 +5172,31 @@
     "notes": "",
     "links": [],
     "sellValue": 0,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "embryo",
+    "name": "Embryo",
+    "itemId": 7142,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Call Homunculus",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -6702,6 +6932,51 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "glistening-coat",
+    "name": "Glistening Coat",
+    "itemId": 7139,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Alchemical Weapon",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Synthesized Shield",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Synthetic Armor",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Biochemical Helm",
+        "qty": 1,
+        "note": "each cast"
+      },
+      {
+        "for": "Full Protection",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "gold",
     "name": "Gold",
     "itemId": 969,
@@ -8023,7 +8298,7 @@
     ],
     "uses": [
       {
-        "for": "Elemental Converter",
+        "for": "Elemental Converter (Earth)",
         "qty": 3,
         "note": "Create Elemental Converter"
       }
@@ -9755,6 +10030,31 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "marine-sphere-bottle",
+    "name": "Marine Sphere Bottle",
+    "itemId": 7138,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Summon Marine Sphere",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -12029,6 +12329,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "plant-bottle",
+    "name": "Plant Bottle",
+    "itemId": 7137,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Skills"
+    ],
+    "uses": [
+      {
+        "for": "Summon Flora",
+        "qty": 1,
+        "note": "each cast"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 100,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "plant-neutrient",
     "name": "Plant Neutrient",
     "itemId": 6109,
@@ -12847,7 +13172,7 @@
     ],
     "uses": [
       {
-        "for": "Elemental Converter",
+        "for": "Elemental Converter (Wind)",
         "qty": 3,
         "note": "Create Elemental Converter"
       }
@@ -14181,7 +14506,7 @@
     ],
     "uses": [
       {
-        "for": "Elemental Converter",
+        "for": "Elemental Converter (Fire)",
         "qty": 3,
         "note": "Create Elemental Converter"
       }
@@ -14864,7 +15189,7 @@
     ],
     "uses": [
       {
-        "for": "Elemental Converter",
+        "for": "Elemental Converter (Water)",
         "qty": 3,
         "note": "Create Elemental Converter"
       }
