@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useState } from 'react';
+import { createContext, useCallback, useContext, useMemo, useRef, useState } from 'react';
 import loot from '../data/loot.json' with { type: 'json' };
 import { createSuggester } from '../utils/suggest.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
@@ -37,9 +37,25 @@ export function AdminProvider({ children }) {
   const [enabled, setEnabled] = useState(() => ADMIN_AVAILABLE && readPreference('admin', false));
   const [items, setItems] = useState(loot);
 
+  // The latest items, for saves that finish one after another (tabbing from
+  // Vend to Whobuy saves twice in a row).
+  const latest = useRef(items);
+
+  /**
+   * Saves changes to one item. If the item has no actions yet, the actions
+   * its new prices suggest are saved too (nothing set by hand to override).
+   */
   const saveItem = useCallback(async (id, changes) => {
-    const saved = await postItem(id, changes);
-    setItems((current) => current.map((item) => (item.id === id ? saved : item)));
+    const replace = (saved) => {
+      latest.current = latest.current.map((item) => (item.id === id ? saved : item));
+      setItems(latest.current);
+      return saved;
+    };
+    const saved = replace(await postItem(id, changes));
+    if (saved.actions.length === 0) {
+      const { actions } = createSuggester(latest.current)(saved);
+      if (actions.length) replace(await postItem(id, { actions }));
+    }
   }, []);
 
   const changeEnabled = useCallback((value) => {

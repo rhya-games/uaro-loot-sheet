@@ -14,6 +14,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const LOOT_FILE = resolve('src/data/loot.json');
+const ACTIONS = JSON.parse(readFileSync(resolve('src/data/schema.json'), 'utf8')).$defs.action.enum;
 const isPrice = (value) => value === null || (Number.isInteger(value) && value >= 0);
 
 /** Field -> check for its new value. */
@@ -22,6 +23,8 @@ const EDITABLE = {
   avgWhobuy: isPrice,
   lastVerified: (value) => value === null || /^\d{4}-\d{2}-\d{2}$/.test(value),
   verificationNotes: (value) => typeof value === 'string',
+  actions: (value) =>
+    Array.isArray(value) && value.every((action) => ACTIONS.includes(action)) && new Set(value).size === value.length,
 };
 
 /** Reads a request's JSON body. */

@@ -6,18 +6,20 @@ const sameActions = (a, b) => a.length === b.length && a.every((action) => b.inc
 
 /**
  * In admin mode, shows under the Action chips what src/utils/suggest.js
- * would pick from the prices. Hover or focus it to see why.
+ * would pick from the prices. Hover or focus it to see why. "Use" saves
+ * the suggestion as the item's actions. (Items with no actions get it
+ * automatically when a price is saved; see AdminContext.)
  *
  * Props:
  *   item - one entry from loot.json
  */
 export default function SuggestedActions({ item }) {
-  const { enabled, suggest } = useAdmin();
+  const { enabled, suggest, saveItem } = useAdmin();
   if (!enabled) return null;
   const { actions, reasons } = suggest(item);
   const matches = actions.length > 0 && sameActions(actions, item.actions);
 
-  return (
+  const hint = (
     <Tooltip text={reasons.join('\n') || 'No uses and no prices yet'} className="mt-2 flex">
       <span tabIndex={0} className="flex flex-wrap items-center gap-1 rounded text-xs text-muted">
         {matches ? (
@@ -35,5 +37,19 @@ export default function SuggestedActions({ item }) {
         )}
       </span>
     </Tooltip>
+  );
+  if (matches || !actions.length) return hint;
+  return (
+    <div className="flex flex-wrap items-end gap-2">
+      {hint}
+      <button
+        type="button"
+        onClick={() => saveItem(item.id, { actions })}
+        aria-label={`Use suggested actions for ${item.name}: ${actions.join(' and ')}`}
+        className="button-small px-2 py-0.5 text-xs"
+      >
+        Use
+      </button>
+    </div>
   );
 }
