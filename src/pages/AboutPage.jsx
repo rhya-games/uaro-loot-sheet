@@ -64,7 +64,7 @@ export default function AboutPage() {
             won't buy it.
           </li>
           <li>
-            <strong>NPC Buyable</strong>: whether you can buy it from an NPC shop (✓ or ✕).
+            <strong>NPC Shop</strong>: whether you can buy it from an NPC shop (✓ or ✕).
           </li>
           <li>
             <strong>Verified</strong>: when someone last checked the vend or @whobuy price on the live server.

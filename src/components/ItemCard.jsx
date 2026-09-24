@@ -13,14 +13,15 @@ import { OVERCHARGE_LEVEL } from '../utils/prices.js';
  * Props:
  *   item        - one entry from src/data/loot.json
  *   onSelectUse - called when a "Used For" target is clicked
+ *   highlightUses - "Used For" targets being filtered by (highlighted)
  */
-export default function ItemCard({ item, onSelectUse }) {
+export default function ItemCard({ item, onSelectUse, highlightUses }) {
   return (
     <article className="panel p-4">
       <header className="flex flex-wrap items-start justify-between gap-2">
         <h2 className="text-base font-semibold text-fg">
           {item.name}
-          <span className="ml-2 text-[13px] font-normal text-muted">
+          <span className="ml-2 text-sm font-normal text-muted">
             {item.itemType}
             {item.itemId && ` · #${item.itemId}`}
           </span>
@@ -40,14 +41,14 @@ export default function ItemCard({ item, onSelectUse }) {
       )}
 
       <div className="mt-2 text-sm">
-        <ItemUses item={item} onSelectUse={onSelectUse} />
+        <ItemUses item={item} onSelectUse={onSelectUse} highlight={highlightUses} />
       </div>
 
       <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-5">
         <Stat label="Avg. vend" value={<PlayerPrice item={item} field="avgVend" />} />
         <Stat label="Avg. whobuy" value={<PlayerPrice item={item} field="avgWhobuy" />} />
         <Stat label={`NPC (OC ${OVERCHARGE_LEVEL})`} value={<NpcSellPrice item={item} />} />
-        <Stat label="NPC Buyable" value={<NpcBuyable item={item} />} />
+        <Stat label="NPC Shop" value={<NpcBuyable item={item} />} />
         <Stat label="Last verified" value={<VerifiedText item={item} />} />
       </dl>
     </article>

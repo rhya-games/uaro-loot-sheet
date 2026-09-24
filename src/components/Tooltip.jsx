@@ -1,11 +1,16 @@
-import { cloneElement, useId, useRef, useState } from 'react';
+import { cloneElement, useEffect, useId, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { autoUpdate, flip, offset, shift, useFloating } from '@floating-ui/react-dom';
 import { usePresence } from '../utils/usePresence.js';
 
+/** How long the mouse has to rest on something before its tooltip shows. */
+const HOVER_DELAY_MS = 300;
+
 /**
  * A small label that appears on hover AND on keyboard focus (unlike the
  * browser's built-in `title`, which keyboard users never see).
+ * On hover it waits a moment (HOVER_DELAY_MS) so tooltips don't flash while the
+ * mouse passes over things; on keyboard focus it shows right away.
  * Press Escape to hide it. Screen readers read it as the element's description.
  *
  * It's drawn at the end of the page (a "portal") and positioned with
@@ -31,19 +36,30 @@ export default function Tooltip({ text, placement = 'top', className = 'inline-f
   const { mounted, visible } = usePresence(open, 150);
   const id = useId();
   const referenceRef = useRef(null);
+  const hoverTimer = useRef(null);
+
+  const show = () => setOpen(true);
+  const hide = () => {
+    clearTimeout(hoverTimer.current);
+    setOpen(false);
+  };
+  useEffect(() => () => clearTimeout(hoverTimer.current), []);
 
   return (
     <span
       ref={referenceRef}
       className={className}
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={() => {
+        clearTimeout(hoverTimer.current);
+        hoverTimer.current = setTimeout(show, HOVER_DELAY_MS);
+      }}
+      onMouseLeave={hide}
       // Only show for keyboard focus, so a mouse click doesn't leave it stuck open.
-      onFocus={(event) => setOpen(event.target.matches(':focus-visible'))}
-      onBlur={() => setOpen(false)}
+      onFocus={(event) => event.target.matches(':focus-visible') && show()}
+      onBlur={hide}
       onKeyDown={(event) => {
         if (event.key === 'Escape' && open) {
-          setOpen(false);
+          hide();
           event.preventDefault(); // so Escape doesn't also close the filter panel
         }
       }}

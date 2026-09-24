@@ -1,3 +1,4 @@
+import GitHubLink from './GitHubLink.jsx';
 import ThemeToggle from './ThemeToggle.jsx';
 import { ROUTES } from '../utils/route.js';
 
@@ -10,8 +11,8 @@ const NAV_LINKS = [
 ];
 
 /**
- * The green bar at the top: site name on the left; page links and the
- * light/dark toggle on the right.
+ * The green bar at the top: site name on the left; page links, a GitHub
+ * link and the light/dark toggle on the right.
  *
  * Props:
  *   route - the current page name, used to highlight its link
@@ -49,6 +50,7 @@ export default function SiteHeader({ route }) {
               })}
             </ul>
           </nav>
+          <GitHubLink />
           <ThemeToggle />
         </div>
       </div>

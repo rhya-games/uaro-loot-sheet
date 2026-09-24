@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import { autoUpdate, flip, offset, shift, size, useFloating } from '@floating-ui/react-dom';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { usePresence } from '../utils/usePresence.js';
-import Tooltip from './Tooltip.jsx';
 
 /** How many uses to show before the rest go behind "+N more". */
 const MAX_USES_SHOWN = 6;
@@ -19,27 +18,42 @@ const MAX_USES_SHOWN = 6;
  * Long lists (Poring Coin is used for 40+ things) show the first few, then a
  * "+N more" button that opens the full list in a popover.
  *
+ * While filtering by "Used For", the matching uses move to the front and the
+ * others fade back, so it's easy to see why the item is listed.
+ *
  * Props:
  *   item        - one entry from loot.json
  *   onSelectUse - called with a target name, e.g. "Mystic Rose"
+ *   highlight   - targets being filtered by, e.g. ["Love Guard [1]"] (optional)
  */
-export default function ItemUses({ item, onSelectUse }) {
+export default function ItemUses({ item, onSelectUse, highlight = [] }) {
   if (item.uses.length === 0 && !item.notes) return null;
-  const shown = item.uses.slice(0, MAX_USES_SHOWN);
-  const hiddenCount = item.uses.length - shown.length;
+  const isMatch = (use) => highlight.includes(use.for);
+  const dimOthers = highlight.length > 0 && item.uses.some(isMatch);
+  // Matches first; otherwise the original order (sort is stable).
+  const uses = dimOthers ? [...item.uses].sort((a, b) => isMatch(b) - isMatch(a)) : item.uses;
+  const shown = uses.slice(0, MAX_USES_SHOWN);
+  const hiddenCount = uses.length - shown.length;
+  const dimmed = (use) => (dimOthers && !isMatch(use) ? 'opacity-60' : '');
 
   return (
     <div className="space-y-1 text-body">
       {item.uses.length > 0 && (
         <ul className="flex flex-wrap gap-x-4 gap-y-1">
           {shown.map((use, index) => (
-            <li key={`${use.for}-${index}`}>
+            <li key={`${use.for}-${index}`} className={dimmed(use)}>
               <UseText use={use} onSelectUse={onSelectUse} />
             </li>
           ))}
           {hiddenCount > 0 && (
             <li>
-              <AllUsesPopover item={item} hiddenCount={hiddenCount} onSelectUse={onSelectUse} />
+              <AllUsesPopover
+                item={item}
+                uses={uses}
+                dimmed={dimmed}
+                hiddenCount={hiddenCount}
+                onSelectUse={onSelectUse}
+              />
             </li>
           )}
         </ul>
@@ -54,9 +68,7 @@ function UseText({ use, onSelectUse }) {
   return (
     <>
       <span className="text-subtle-fg tabular-nums">x{use.qty?.toLocaleString('en-US') ?? '?'}</span>{' '}
-      <Tooltip text="Show all items used for this" className="">
-        <InlineButton onClick={() => onSelectUse(use.for)}>{use.for}</InlineButton>
-      </Tooltip>
+      <InlineButton onClick={() => onSelectUse(use.for)}>{use.for}</InlineButton>
       {use.note && <span className="text-subtle-fg"> ({use.note})</span>}
     </>
   );
@@ -70,7 +82,7 @@ function UseText({ use, onSelectUse }) {
  * Like tooltips, it's drawn at the end of the page and positioned with
  * Floating UI, so the table's scroll box can't cut it off.
  */
-function AllUsesPopover({ item, hiddenCount, onSelectUse }) {
+function AllUsesPopover({ item, uses, dimmed, hiddenCount, onSelectUse }) {
   const [open, setOpen] = useState(false);
   const { mounted, visible } = usePresence(open, 150);
   const dialogId = useId();
@@ -174,8 +186,8 @@ function AllUsesPopover({ item, hiddenCount, onSelectUse }) {
               </button>
             </div>
             <ul className="space-y-1 overflow-y-auto px-3 py-2 text-body">
-              {item.uses.map((use, index) => (
-                <li key={`${use.for}-${index}`}>
+              {uses.map((use, index) => (
+                <li key={`${use.for}-${index}`} className={dimmed(use)}>
                   <UseText
                     use={use}
                     onSelectUse={(target) => {

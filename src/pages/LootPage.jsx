@@ -262,6 +262,7 @@ export default function LootPage() {
             sort={sort}
             onSort={changeSort}
             onSelectUse={showItemsUsedFor}
+            highlightUses={filters.usedFor}
           />
         </div>
       </div>

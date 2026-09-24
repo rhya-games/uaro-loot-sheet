@@ -27,13 +27,13 @@ export const CHANGELOG = [
     changes: [
       {
         type: 'Added',
-        text: 'NPC Buyable for every item, from the emulators’ NPC shops. About 290 items that were blank are now filled in.',
+        text: 'NPC Shop for every item, from the emulators’ NPC shops. About 290 items that were blank are now filled in.',
       },
       {
         type: 'Fixed',
         text: 'Items NPCs sell that were marked Vend (for example, Chonchon Doll and Topaz) now say NPC.',
       },
-      { type: 'Changed', text: 'Renamed the NPC Sell column to NPC and NPC Buy to NPC Buyable. NPC Only shows as ✓.' },
+      { type: 'Changed', text: 'Renamed the NPC Sell column to NPC and NPC Buy to NPC Shop. NPC Only shows as ✓.' },
       { type: 'Fixed', text: 'Blood Red is now Red Blood, with its item ID and NPC price.' },
       { type: 'Changed', text: 'Green Apple is sold by the Pet Dealer, so it now says NPC instead of Vend.' },
       { type: 'Changed', text: 'Cotton Tufts is now Cotton Wads, its name in game.' },
@@ -45,7 +45,7 @@ export const CHANGELOG = [
         type: 'Added',
         text: 'Temporal Crystal, Coagulated Spell, Contaminated Magic, Lever Action Rifle, Hatii Claw and Santa’s Bag, with vend prices.',
       },
-      { type: 'Changed', text: 'Grape is sold by the Tool Dealer, so it now shows ✓ under NPC Buyable.' },
+      { type: 'Changed', text: 'Grape is sold by the Tool Dealer, so it now shows ✓ under NPC Shop.' },
       { type: 'Added', text: 'Trident, which uaRO’s NPCs no longer sell, so players vend it.' },
       {
         type: 'Fixed',
@@ -54,6 +54,9 @@ export const CHANGELOG = [
       { type: 'Added', text: 'Margaretha Sorin Card (for Mitra) and Errende Ebecee Card (for Love Guard).' },
       { type: 'Added', text: 'Poring Coin now lists the 41 Dimonka headgears it’s used for.' },
       { type: 'Changed', text: 'Long Used For lists show the first 6, with a “+N more” button that opens the full list.' },
+      { type: 'Changed', text: 'Filtering by Used For moves the matching use to the front and fades the rest.' },
+      { type: 'Added', text: 'A GitHub link in the header and a footer at the bottom of every page.' },
+      { type: 'Changed', text: 'Clearer column descriptions, and tooltips wait a moment before showing on hover.' },
     ],
   },
   {

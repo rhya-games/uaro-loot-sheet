@@ -138,3 +138,8 @@
 @utility panel {
   @apply rounded-lg border border-line bg-surface shadow-sm;
 }
+
+/* A small outlined button for secondary actions, like "Clear all". */
+@utility button-small {
+  @apply rounded-md border border-line-strong bg-surface px-2.5 py-1 text-sm font-medium text-body shadow-sm hover:bg-hover;
+}

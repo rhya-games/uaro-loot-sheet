@@ -12,7 +12,7 @@ export function Page({ title, intro, children }) {
   return (
     <div className="mx-auto max-w-3xl space-y-6 text-body">
       <header className="space-y-2">
-        <h1 className="text-3xl font-bold text-fg">{title}</h1>
+        <h1 className="text-3xl font-semibold text-fg">{title}</h1>
         {intro && <p className="text-lg text-muted">{intro}</p>}
       </header>
       {children}
