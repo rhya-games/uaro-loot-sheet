@@ -180,12 +180,23 @@ export default function ItemTable({ items, sort, onSort, onSelectUse, highlightU
 /**
  * A column header you can click (or focus and press Enter/Space) to sort.
  * The button fills the whole header cell, so the focus ring outlines the cell.
- * The arrow always sits to the right of the label: shown while sorted by this
- * column, or faintly on hover/focus as a hint. Its space is always reserved,
- * so labels don't shift when it appears.
+ * The arrow shows while sorted by this column, or faintly on hover/focus as a
+ * hint. Its space is always reserved, so labels don't shift when it appears.
+ * It sits on the side away from the column's alignment: after the label in
+ * left-aligned columns, before it in right-aligned (number) columns, so the
+ * label's edge lines up with the values below.
  */
 function SortButton({ column, direction, onSort }) {
-  const arrow = direction === 'asc' ? '↑' : direction === 'desc' ? '↓' : '↕';
+  const arrow = (
+    <span
+      aria-hidden="true"
+      className={`w-3 text-center text-xs transition-opacity duration-150 ease-smooth ${
+        direction ? 'opacity-100' : 'opacity-0 group-hover/sort:opacity-70 group-focus-visible/sort:opacity-70'
+      }`}
+    >
+      {direction === 'asc' ? '↑' : direction === 'desc' ? '↓' : '↕'}
+    </span>
+  );
 
   const button = (
     <button
@@ -196,15 +207,9 @@ function SortButton({ column, direction, onSort }) {
       className={`group/sort flex h-11 w-full items-center gap-1 rounded-md px-3 font-semibold
         focus-visible:outline-white focus-visible:-outline-offset-4 ${column.numeric ? 'justify-end' : 'justify-start'}`}
     >
+      {column.numeric && arrow}
       {column.label}
-      <span
-        aria-hidden="true"
-        className={`w-3 text-center text-xs transition-opacity duration-150 ease-smooth ${
-          direction ? 'opacity-100' : 'opacity-0 group-hover/sort:opacity-70 group-focus-visible/sort:opacity-70'
-        }`}
-      >
-        {arrow}
-      </span>
+      {!column.numeric && arrow}
     </button>
   );
 
