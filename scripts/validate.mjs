@@ -101,6 +101,17 @@ for (const item of items) {
   if (/\.$/.test(item.notes ?? '') && !/\.\s/.test(item.notes)) {
     warnings.push(`${item.name}: notes with one sentence shouldn't end with a period`);
   }
+  // Card rules below go by the category, so every card needs it.
+  if (/ Card( \(.+\))?$/.test(item.name) && !item.categories?.includes('Card')) {
+    warnings.push(`${item.name}: looks like a card, so it should have the "Card" category`);
+  }
+  if (item.categories?.includes('Card') && item.actions?.includes('NPC')) {
+    errors.push(`${item.name}: cards always sell to players, so use "Vend" instead of "NPC"`);
+  }
+  // Buying stores don't buy cards or equipment (see hasWhobuy in src/utils/prices.js).
+  if ((item.itemType === 'Equipment' || item.categories?.includes('Card')) && item.avgWhobuy != null) {
+    warnings.push(`${item.name}: @whobuy doesn't buy cards or equipment, so avgWhobuy should be null`);
+  }
   if (item.categories?.length > 1 && item.categories.includes('Uncategorized')) {
     warnings.push(`${item.name}: has categories, so "Uncategorized" can be removed`);
   }

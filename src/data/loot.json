@@ -85,6 +85,9 @@
       "Vend"
     ],
     "categories": [
+      "Pet Evolution",
+      "Pet",
+      "uaRO",
       "Card"
     ],
     "uses": [
@@ -169,7 +172,9 @@
     "name": "Adventurer's Suit [1]",
     "itemId": 2306,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -184,9 +189,9 @@
     "id": "afro",
     "name": "Afro",
     "itemId": 10033,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Junk"
     ],
     "categories": [
       "Pet"
@@ -204,6 +209,7 @@
     "itemId": 7291,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -258,6 +264,7 @@
     "itemId": 4409,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -309,7 +316,9 @@
     "name": "Alca Bringer [0]",
     "itemId": 1191,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -326,8 +335,8 @@
     "itemId": 970,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -417,6 +426,7 @@
     "itemId": 4253,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -487,6 +497,7 @@
     "itemId": 4401,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -513,6 +524,7 @@
     "itemId": 4402,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -539,6 +551,7 @@
     "itemId": 4400,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -583,8 +596,8 @@
     "itemId": 704,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -619,8 +632,8 @@
     "itemId": 521,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -674,8 +687,8 @@
     "itemId": 606,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -721,7 +734,8 @@
     "itemId": 719,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -745,8 +759,8 @@
     "itemId": 609,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -775,8 +789,8 @@
     "itemId": 1054,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -834,6 +848,7 @@
     "itemId": 4248,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -860,8 +875,8 @@
     "itemId": 1053,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -921,7 +936,8 @@
     "itemId": 2254,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -978,7 +994,9 @@
     "name": "Angel's Reincarnation [1]",
     "itemId": 2420,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -994,7 +1012,9 @@
     "name": "Angelic Ring [0]",
     "itemId": 2743,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -1010,7 +1030,9 @@
     "name": "Angled Glasses [0]",
     "itemId": 2276,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -1027,8 +1049,8 @@
     "itemId": 702,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -1078,8 +1100,8 @@
     "itemId": 605,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -1108,9 +1130,8 @@
     "itemId": 7003,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Repeatable Quest",
@@ -1182,6 +1203,7 @@
     "itemId": 7106,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -1211,7 +1233,9 @@
     "name": "Antelope Skin",
     "itemId": 7107,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -1227,7 +1251,9 @@
     "name": "Antler Helm",
     "itemId": 6322,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -1244,8 +1270,7 @@
     "itemId": 986,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "NPC"
     ],
     "categories": [
       "Skills"
@@ -1288,8 +1313,8 @@
     "itemId": 531,
     "itemType": "Consumable",
     "actions": [
-      "NPC",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -1439,6 +1464,7 @@
     "itemId": 639,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -1461,7 +1487,9 @@
     "name": "Armor of Naga [1]",
     "itemId": 2389,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -1519,7 +1547,9 @@
     "name": "Arrow of Shadow",
     "itemId": 1767,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -1536,7 +1566,7 @@
     "itemId": 12084,
     "itemType": "Consumable",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -1554,7 +1584,8 @@
     "itemId": 5054,
     "itemType": "Equipment",
     "actions": [
-      "Vend"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Server Hat Quest",
@@ -1577,7 +1608,9 @@
     "name": "Assassin Mask [0]",
     "itemId": 5096,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -1612,7 +1645,7 @@
     "itemId": 12052,
     "itemType": "Consumable",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -1630,7 +1663,7 @@
     "itemId": 12097,
     "itemType": "Consumable",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -1648,8 +1681,7 @@
     "itemId": 662,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Uncategorized"
@@ -1667,7 +1699,7 @@
     "itemId": 12047,
     "itemType": "Consumable",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -1685,7 +1717,7 @@
     "itemId": 12081,
     "itemType": "Consumable",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -1704,7 +1736,7 @@
     "itemType": "Equipment",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Official Hat Quest"
@@ -1757,15 +1789,15 @@
     "id": "backpack",
     "name": "Backpack",
     "itemId": 10013,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Junk"
     ],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Poring, Drops, Poporing Pet accessory",
     "links": [],
     "sellValue": 750,
     "sellSource": "hercules",
@@ -1827,7 +1859,6 @@
     "itemId": 513,
     "itemType": "Consumable",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -1851,7 +1882,9 @@
     "name": "Banana Hat [0]",
     "itemId": 5116,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -1867,7 +1900,9 @@
     "name": "Banana Juice",
     "itemId": 532,
     "itemType": "Consumable",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -1884,6 +1919,7 @@
     "itemId": 2211,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -1945,6 +1981,7 @@
     "itemId": 750,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -1968,6 +2005,7 @@
     "itemId": 4129,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -1996,15 +2034,15 @@
     "id": "bark-shorts",
     "name": "Bark Shorts",
     "itemId": 10017,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Junk"
     ],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Spore, Poison Spore Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -2058,15 +2096,15 @@
     "id": "battered-pot",
     "name": "Battered Pot",
     "itemId": 10010,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Peco Peco Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -2077,7 +2115,9 @@
     "name": "Battle Axe [4]",
     "itemId": 1352,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -2093,7 +2133,9 @@
     "name": "Battle Fork [4]",
     "itemId": 1485,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -2110,7 +2152,8 @@
     "itemId": 948,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Dungeon Quest",
@@ -2151,15 +2194,15 @@
     "id": "beautiful-badges",
     "name": "Beautiful Badges",
     "itemId": 10028,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Junk"
     ],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Goblin Leader Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -2171,8 +2214,8 @@
     "itemId": 939,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -2236,7 +2279,9 @@
     "name": "Berserk Guitar [0]",
     "itemId": 1920,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -2301,6 +2346,7 @@
     "itemId": 2244,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -2348,7 +2394,9 @@
     "name": "Binoculars [0]",
     "itemId": 2296,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -2365,7 +2413,8 @@
     "itemId": 7297,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Other Quest"
@@ -2408,7 +2457,9 @@
     "name": "Biretta [1]",
     "itemId": 2217,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -2425,6 +2476,7 @@
     "itemId": 621,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -2477,15 +2529,15 @@
     "id": "black-butterfly-mask",
     "name": "Black Butterfly Mask",
     "itemId": 10037,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
-      "Vend"
+      "Junk"
     ],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "Sucubus Pet accessory",
+    "notes": "Succubus Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -2496,7 +2548,9 @@
     "name": "Black Cat [0]",
     "itemId": 2747,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
@@ -2514,8 +2568,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -2617,6 +2670,7 @@
     "itemId": 7023,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -2703,7 +2757,7 @@
     "itemId": 12099,
     "itemType": "Consumable",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -2721,8 +2775,8 @@
     "itemId": 7449,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -2783,7 +2837,8 @@
     "itemId": 7446,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -2840,7 +2895,8 @@
     "itemId": 717,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Skills",
@@ -2939,8 +2995,8 @@
     "itemId": 510,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -2986,7 +3042,8 @@
     "itemId": 505,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking",
@@ -4075,7 +4132,6 @@
     "itemId": 534,
     "itemType": "Consumable",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -4336,7 +4392,6 @@
     "itemId": 736,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -7112,7 +7167,8 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Card"
     ],
     "uses": [
       {
@@ -7884,7 +7940,6 @@
     "itemId": 35661,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
       "Vend"
     ],
     "categories": [
@@ -8096,7 +8151,7 @@
     "id": "fashionable-glasses",
     "name": "Fashionable Glasses",
     "itemId": 10024,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "NPC"
     ],
@@ -10108,7 +10163,7 @@
     "id": "golden-bell",
     "name": "Golden Bell",
     "itemId": 10016,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "Keep",
       "Vend"
@@ -10123,7 +10178,7 @@
         "qty": 1
       }
     ],
-    "notes": "",
+    "notes": "Sohee Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -10133,13 +10188,13 @@
     "id": "golden-earring",
     "name": "Golden Earring",
     "itemId": 10022,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Civil Servant Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -10336,13 +10391,13 @@
     "id": "grave-keepers-sword",
     "name": "Grave Keeper's Sword",
     "itemId": 10020,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Bongun Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -10570,13 +10625,13 @@
     "id": "green-jewel-bag",
     "name": "Green Jewel Bag",
     "itemId": 10023,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Leaf Cat Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -10586,7 +10641,7 @@
     "id": "green-lace",
     "name": "Green Lace",
     "itemId": 10015,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "Keep"
     ],
@@ -10600,7 +10655,7 @@
         "qty": 1
       }
     ],
-    "notes": "",
+    "notes": "Savage Babe Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -10786,13 +10841,13 @@
     "id": "hairband-of-stars",
     "name": "Hairband of Stars",
     "itemId": 10025,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Marionette Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -11761,13 +11816,13 @@
     "id": "horn-barrier",
     "name": "Horn Barrier",
     "itemId": 10038,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Imp Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -11795,13 +11850,13 @@
     "id": "horn-of-hell",
     "name": "Horn of Hell",
     "itemId": 10036,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Nightmare Terror Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -12876,7 +12931,7 @@
     "id": "jade-trinket",
     "name": "Jade Trinket",
     "itemId": 10029,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "NPC"
     ],
@@ -14357,7 +14412,8 @@
     "categories": [
       "Pet Evolution",
       "Pet",
-      "uaRO"
+      "uaRO",
+      "Card"
     ],
     "uses": [
       {
@@ -14946,13 +15002,13 @@
     "id": "masked-ball",
     "name": "Masked Ball",
     "itemId": 10034,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Incubus Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -15562,7 +15618,7 @@
     "id": "monkey-circlet",
     "name": "Monkey Circlet",
     "itemId": 10018,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "NPC"
     ],
@@ -15599,7 +15655,7 @@
     "id": "monster-oxygen-mask",
     "name": "Monster Oxygen Mask",
     "itemId": 10002,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "NPC"
     ],
@@ -15607,7 +15663,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Chonchon, Steel Chonchon, Hunter Fly Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -16372,7 +16428,6 @@
     "itemId": 960,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -17300,7 +17355,7 @@
     "id": "pacifier",
     "name": "Pacifier",
     "itemId": 10004,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "Vend",
       "NPC"
@@ -17315,7 +17370,7 @@
         "qty": 1
       }
     ],
-    "notes": "",
+    "notes": "Deviruchi Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -17437,7 +17492,7 @@
     "itemId": 6021,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Uncategorized"
@@ -17729,6 +17784,7 @@
     "itemId": 7290,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -18774,7 +18830,7 @@
     "id": "punisher",
     "name": "Punisher",
     "itemId": 10008,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "Vend",
       "Keep"
@@ -18790,7 +18846,7 @@
         "qty": 1
       }
     ],
-    "notes": "Keep 1",
+    "notes": "Munak Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -18950,13 +19006,13 @@
     "id": "queens-coronet",
     "name": "Queen's Coronet",
     "itemId": 10032,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Medusa Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -18966,7 +19022,7 @@
     "id": "queens-hair-ornament",
     "name": "Queen's Hair Ornament",
     "itemId": 10006,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "Vend"
     ],
@@ -18986,7 +19042,7 @@
         "qty": 1
       }
     ],
-    "notes": "",
+    "notes": "Isis Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -19376,7 +19432,8 @@
     "itemId": 507,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -19528,7 +19585,7 @@
     "id": "red-scarf",
     "name": "Red Scarf",
     "itemId": 10019,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
@@ -19786,13 +19843,13 @@
     "id": "ring-of-death",
     "name": "Ring of Death",
     "itemId": 10031,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Dullahan Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -19870,15 +19927,15 @@
     "id": "rocker-glasses",
     "name": "Rocker Glasses",
     "itemId": 10014,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Junk"
     ],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Rocker Pet accessory",
     "links": [],
     "sellValue": 1000,
     "sellSource": "hercules",
@@ -20184,8 +20241,8 @@
     "itemId": 739,
     "itemType": "Misc",
     "actions": [
-      "NPC",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -21597,7 +21654,7 @@
     "id": "silk-ribbon",
     "name": "Silk Ribbon",
     "itemId": 10007,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "Keep",
       "Vend"
@@ -21624,7 +21681,7 @@
         "qty": 1
       }
     ],
-    "notes": "",
+    "notes": "Lunatic Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -21871,13 +21928,13 @@
     "id": "skull-helm",
     "name": "Skull Helm",
     "itemId": 10001,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Baphomet Jr. Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -22307,7 +22364,8 @@
     "itemId": 4100,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -22481,7 +22539,6 @@
     "itemId": 908,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -22755,7 +22812,7 @@
     "id": "spring",
     "name": "Spring",
     "itemId": 10035,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "NPC"
     ],
@@ -22763,7 +22820,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Golem Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -23421,7 +23478,7 @@
     "id": "stellar-hairpin",
     "name": "Stellar Hairpin",
     "itemId": 10011,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "Keep",
       "Vend"
@@ -23430,7 +23487,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Petite Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -23953,13 +24010,13 @@
     "id": "summer-fan",
     "name": "Summer Fan",
     "itemId": 10030,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Miyabi Doll Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -24231,6 +24288,8 @@
       "Whobuy"
     ],
     "categories": [
+      "Pet Evolution",
+      "Pet",
       "uaRO"
     ],
     "uses": [
@@ -24402,13 +24461,13 @@
     "id": "tassel-for-durumagi",
     "name": "Tassel for Durumagi",
     "itemId": 10026,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Shinobi Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -24438,7 +24497,8 @@
     "itemId": 4340,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -24686,7 +24746,7 @@
     "id": "tiny-egg-shell",
     "name": "Tiny Egg Shell",
     "itemId": 10012,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "NPC"
     ],
@@ -24694,7 +24754,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Picky Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -24915,7 +24975,7 @@
     "id": "transparent-head-protector",
     "name": "Transparent Head Protector",
     "itemId": 10003,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
       "NPC"
     ],
@@ -24923,7 +24983,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Baby Desert Wolf Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -26009,9 +26069,9 @@
     "id": "wig",
     "name": "Wig",
     "itemId": 10005,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -26043,13 +26103,13 @@
     "id": "wild-flower",
     "name": "Wild Flower",
     "itemId": 10009,
-    "itemType": "Misc",
+    "itemType": "Equipment",
     "actions": [],
     "categories": [
       "Pet"
     ],
     "uses": [],
-    "notes": "Orc Warror pet accessory",
+    "notes": "Orc Warrior Pet accessory",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -26066,7 +26126,8 @@
     "categories": [
       "Pet Evolution",
       "Pet",
-      "uaRO"
+      "uaRO",
+      "Card"
     ],
     "uses": [
       {
@@ -26653,7 +26714,8 @@
     "categories": [
       "Pet Evolution",
       "Pet",
-      "uaRO"
+      "uaRO",
+      "Card"
     ],
     "uses": [
       {
@@ -27199,7 +27261,6 @@
     "itemId": 942,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [

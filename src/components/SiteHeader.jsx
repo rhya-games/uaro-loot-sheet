@@ -1,3 +1,4 @@
+import AdminToggle from '../admin/AdminToggle.jsx';
 import GitHubLink from './GitHubLink.jsx';
 import ThemeToggle from './ThemeToggle.jsx';
 import { ROUTES } from '../utils/route.js';
@@ -50,6 +51,7 @@ export default function SiteHeader({ route }) {
               })}
             </ul>
           </nav>
+          <AdminToggle />
           <GitHubLink />
           <ThemeToggle />
         </div>

@@ -4,8 +4,11 @@ import CopyItemId from './CopyItemId.jsx';
 import RowActions from './RowActions.jsx';
 import Tooltip from './Tooltip.jsx';
 import VerifiedText from './VerifiedText.jsx';
-import { NpcBuyable, PlayerPrice } from './StatusIcons.jsx';
+import { NpcBuyable } from './StatusIcons.jsx';
 import NpcSellPrice from './NpcSellPrice.jsx';
+import PriceCell from '../admin/PriceCell.jsx';
+import SuggestedActions from '../admin/SuggestedActions.jsx';
+import { useAdmin } from '../admin/AdminContext.jsx';
 import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 
 /**
@@ -47,9 +50,12 @@ const COLUMNS = [
     sortKey: 'actions',
     title: 'What to do with the item',
     render: (item) => (
-      <div className="flex flex-wrap gap-1">
-        <ActionBadges actions={item.actions} />
-      </div>
+      <>
+        <div className="flex flex-wrap gap-1">
+          <ActionBadges actions={item.actions} />
+        </div>
+        <SuggestedActions item={item} />
+      </>
     ),
   },
   {
@@ -74,16 +80,16 @@ const COLUMNS = [
   {
     label: 'Vend',
     sortKey: 'avgVend',
-    title: 'Average price in player vending shops (✕: NPCs sell it)',
+    title: 'Average price in player vending shops\n✕ can’t be vended · None: nobody was selling · —: not checked yet',
     numeric: true,
-    render: (item) => <PlayerPrice item={item} field="avgVend" />,
+    render: (item) => <PriceCell item={item} field="avgVend" />,
   },
   {
     label: 'Whobuy',
     sortKey: 'avgWhobuy',
-    title: 'Average price players pay through @whobuy (✕: NPCs sell it)',
+    title: 'Average price players pay through @whobuy\n✕ can’t be sold this way · None: nobody was buying · —: not checked yet',
     numeric: true,
-    render: (item) => <PlayerPrice item={item} field="avgWhobuy" />,
+    render: (item) => <PriceCell item={item} field="avgWhobuy" />,
   },
   {
     label: 'NPC',
@@ -106,22 +112,33 @@ const COLUMNS = [
     nowrap: true,
     title: 'When the vend or @whobuy price was last checked in game',
     render: (item) => (
-      // Report Issue floats over the right of this cell when the row is hovered or
-      // focused (always on touch screens, which can't hover). Reports are mostly
-      // about prices, so it sits by the "last checked" date, and takes no room.
       <div className="relative">
         <VerifiedText item={item} />
-        <div
-          className="absolute -top-1.5 right-0 rounded-full bg-surface opacity-0 shadow-sm transition-opacity duration-150
-            group-hover:opacity-100 focus-within:opacity-100 motion-reduce:transition-none
-            [@media(hover:none)]:opacity-100"
-        >
-          <RowActions item={item} />
-        </div>
+        <FloatingRowActions item={item} />
       </div>
     ),
   },
 ];
+
+/**
+ * Report Issue, floating over the right of the Verified cell when the row is
+ * hovered or focused (always on touch screens, which can't hover). Reports are
+ * mostly about prices, so it sits by the "last checked" date, and takes no
+ * room. Hidden in admin mode, where you fix things instead of reporting them.
+ */
+function FloatingRowActions({ item }) {
+  const { enabled } = useAdmin();
+  if (enabled) return null;
+  return (
+    <div
+      className="absolute -top-1.5 right-0 rounded-full bg-surface opacity-0 shadow-sm transition-opacity duration-150
+        group-hover:opacity-100 focus-within:opacity-100 motion-reduce:transition-none
+        [@media(hover:none)]:opacity-100"
+    >
+      <RowActions item={item} />
+    </div>
+  );
+}
 
 /**
  * Items shown as a table, like the original Google Sheet.

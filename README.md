@@ -19,7 +19,21 @@ Then open http://localhost:5173/uaro-loot-sheet/
 | `npm run check:uses -- recipes.json` | Compares a list of recipes (for example, a quest table from the uaRO wiki) with the "Used For" data and lists the differences. |
 | `npm run sync:shops` | Updates which items NPCs sell (Hercules pre-renewal shops, plus uaRO's renewal shops from rAthena). Add `-- --check` to only list differences. |
 | `npm run sync:prices` | Updates NPC sell prices (Hercules pre-renewal, rAthena renewal for renewal-only items) and the Overcharge bonus. Add `-- --check` to only list differences. |
+| `npm run suggest` | Compares the suggested actions (worked out from prices) with the ones set by hand. Add `-- "name"` to see why for matching items. |
 | `npm run build` | Validates the data, then builds the public site into `dist/`. |
+
+### Admin mode
+
+While `npm run dev` is running, the header has an **Admin** button. Turn it
+on to type vend and @whobuy prices straight into the table: press Enter (or
+click away) to save to `src/data/loot.json`, which also marks the item as
+verified today. Shorthand works: `12k`, `1.5m`. Type `0` or `none` when
+nobody was buying or selling; the site shows it as "None". Escape puts the old price
+back. Each item also shows the action suggested by its prices (hover it to
+see why). Saving a price also saves the suggested action. If a suggestion
+changes because of another item's price, click **Use** to take it. Run `npm run validate` and commit as usual when you're done.
+
+The published site has no server, so it never shows admin mode.
 
 ## Deploying
 

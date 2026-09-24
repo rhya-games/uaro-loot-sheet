@@ -55,8 +55,12 @@ export default function AboutPage() {
             <strong>Vend</strong>: average price players sell it for in vending shops.
           </li>
           <li>
-            <strong>Whobuy</strong>: average price players pay for it through @whobuy. ✕ in Vend or Whobuy means
-            NPCs sell it (so players don't pay for it) or it can't be traded.
+            <strong>Whobuy</strong>: average price players pay for it through @whobuy.
+          </li>
+          <li>
+            In Vend and Whobuy, <strong>✕</strong> means it can't be sold that way: NPCs sell it, it can't be
+            traded, or it's a card or equipment (@whobuy doesn't buy those). <strong>None</strong> means someone
+            checked and nobody was selling or buying. <strong>—</strong> means nobody has checked yet.
           </li>
           <li>
             <strong>NPC</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+
@@ -75,7 +79,8 @@ export default function AboutPage() {
         <BulletList>
           <li>Click a column header to sort by it. Click again to reverse, and a third time to reset.</li>
           <li>
-            Don't do quests? Turn on <strong>I don't keep items</strong> in the filters to see only what to sell.
+            Don't cook or collect hats? Untick them under <strong>I keep items for</strong> in the filters. Items
+            you'd only keep for those show how to sell them instead. Untick everything if you just want zeny.
           </li>
           <li>
             Use <strong>Select all</strong> under Category, then untick the ones you don't care about.

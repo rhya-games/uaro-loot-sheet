@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FunnelIcon } from '@heroicons/react/24/outline';
-import loot from '../data/loot.json';
 import SearchBar from '../components/SearchBar.jsx';
 import FilterSidebar from '../components/FilterSidebar.jsx';
 import ActiveFilters from '../components/ActiveFilters.jsx';
@@ -9,9 +8,11 @@ import SkipLink from '../components/SkipLink.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 import { createSearch, wordMatcher } from '../utils/search.js';
 import { nextSort, sortItems } from '../utils/sort.js';
-import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue, withoutKeep } from '../utils/filter.js';
+import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue } from '../utils/filter.js';
+import { ALL_ACTIVITY_IDS, keepOnlyFor, keepsEverything } from '../utils/activities.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
+import { useAdmin } from '../admin/AdminContext.jsx';
 
 
 /** How long the panel takes to slide in or out (ms). Matches `duration-200` below. */
@@ -42,16 +43,24 @@ export default function LootPage() {
   const resultsRef = useRef(null);
   const resultsLeftBefore = useRef(null);
   const [sort, setSort] = useState(null);
-  const [ignoreKeep, setIgnoreKeep] = useState(() => readPreference('ignoreKeep', false));
+  // What the player keeps items for (hats, pets, ...). Everything by default.
+  // Older visits saved "I don't keep items" instead; that means nothing picked.
+  const [keepForSetting, setKeepFor] = useState(
+    () => readPreference('keepFor', null) ?? (readPreference('ignoreKeep', false) ? [] : ALL_ACTIVITY_IDS),
+  );
+  // loot.json, plus any prices saved in admin mode since the page loaded.
+  const { items: loot, enabled: adminOn } = useAdmin();
+  // Admin mode needs the real actions (to compare with suggestions), so it
+  // shows everything. The player's setting is remembered for afterwards.
+  const keepFor = adminOn ? ALL_ACTIVITY_IDS : keepForSetting;
 
-  // "I don't keep items" changes the items themselves (no Keep), so every
-  // count, chip and sort below sees the same thing the table shows.
-  const baseItems = useMemo(() => (ignoreKeep ? withoutKeep(loot) : loot), [ignoreKeep]);
+  // This changes the items themselves (Keep removed where it doesn't apply),
+  // so every count, chip and sort below sees the same thing the table shows.
+  const baseItems = useMemo(() => keepOnlyFor(loot, keepFor), [loot, keepFor]);
 
-  const changeIgnoreKeep = useCallback((value) => {
-    setIgnoreKeep(value);
-    writePreference('ignoreKeep', value);
-    if (value) setFilters((current) => ({ ...current, actions: current.actions.filter((a) => a !== 'Keep') }));
+  const changeKeepFor = useCallback((activityIds) => {
+    setKeepFor(activityIds);
+    writePreference('keepFor', activityIds);
   }, []);
 
   // Build the search index, then: search box, then sidebar filters, then sorting.
@@ -67,7 +76,7 @@ export default function LootPage() {
     [filters.usedFor, query],
   );
 
-  const activeFilterCount = countActiveFilters(filters) + (ignoreKeep ? 1 : 0);
+  const activeFilterCount = countActiveFilters(filters) + (keepsEverything(keepFor) ? 0 : 1);
 
   // When the panel floats or takes over the screen, opening it moves focus into
   // it, and closing it returns focus to the toggle button.
@@ -195,15 +204,15 @@ export default function LootPage() {
         <ActiveFilters
           query={query}
           filters={filters}
-          ignoreKeep={ignoreKeep}
+          keepFor={keepFor}
           onClearQuery={() => setQuery('')}
-          onClearIgnoreKeep={() => changeIgnoreKeep(false)}
+          onClearKeepFor={() => changeKeepFor(ALL_ACTIVITY_IDS)}
           onRemove={(key, value) => setFilters({ ...filters, [key]: toggleValue(filters[key], value) })}
           onRemoveGroup={(key) => setFilters({ ...filters, [key]: [] })}
           onClearAll={() => {
             setQuery('');
             setFilters(EMPTY_FILTERS);
-            changeIgnoreKeep(false);
+            changeKeepFor(ALL_ACTIVITY_IDS);
           }}
         />
       </div>
@@ -260,8 +269,9 @@ export default function LootPage() {
             onClose={panelBesideTable ? undefined : closePanel}
             closeButtonRef={closeButtonRef}
             allItems={baseItems}
-            ignoreKeep={ignoreKeep}
-            onIgnoreKeepChange={changeIgnoreKeep}
+            keepFor={keepFor}
+            keepForDisabled={adminOn}
+            onKeepForChange={changeKeepFor}
             items={searched}
             filters={filters}
             onChange={setFilters}

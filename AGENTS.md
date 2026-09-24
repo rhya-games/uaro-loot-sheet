@@ -38,6 +38,7 @@ npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
 npm run check:uses -- recipes.json   # compare recipes (e.g. a wiki table) with "Used For"
+npm run suggest [-- "name"]          # compare suggested actions (src/utils/suggest.js) with hand-set ones
 ```
 
 Both sync scripts take `-- --check` to report without writing. They
@@ -102,7 +103,10 @@ Match similar existing items. Look them up in loot.json first.
 - Pet evolution materials: `Keep` + `Vend`, categories `Pet Evolution`,
   `Pet`, `uaRO`. Cards add `Card`.
 - Taming items: `Vend`, category `Pet`, notes `"<Pet> Taming Item"`.
-- Pet accessories: `NPC`, category `Pet`, notes `"<Pet> Pet accessory"`.
+- Pet accessories (IDs 10001-10038): item type `Equipment` (so no
+  @whobuy), category `Pet`, notes `"<Pet> Pet accessory"` with the uaRO pet
+  name. Junk when worth under 5,000z and nothing else uses them; otherwise
+  by price like anything else.
 - Headgear quest materials (Dimonka): category `Server Hat Quest` + `uaRO`.
 - After adding items: run `sync:prices`, `sync:shops`, then `validate`.
 - If the CSV import should produce the same result, mirror renames, IDs
@@ -162,6 +166,21 @@ Match similar existing items. Look them up in loot.json first.
 - Check changes at desktop (≥1470px, where the panel pushes the table),
   tablet (768–1469px, the panel overlaps it) and phone (<768px, cards and a
   full-screen panel), in light and dark mode.
+
+### Admin mode and suggested actions
+
+- `src/utils/suggest.js` works out actions from prices (margins, Keep when
+  a finished thing is worth more than its parts). `src/data/use-targets.json`
+  holds values for "Used For" targets that aren't loot. Cards always
+  suggest Vend; level 1-3 cooking (use notes "+1".."+3 ... food", Level 1-3
+  Cookbook trades) is never a reason to Keep.
+- Admin mode (`src/admin/`) only exists under `npm run dev`
+  (`import.meta.env.DEV`). Saves POST to the Vite plugin in
+  `scripts/admin-server.mjs`, which writes loot.json; only the fields in its
+  `EDITABLE` list can change. The page swaps in the saved item itself, and
+  the plugin skips Vite's reload for its own writes.
+- Site JSON imports use `with { type: 'json' }` so Node scripts can import
+  the same utils.
 
 ## Recurring jobs
 

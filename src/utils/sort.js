@@ -27,7 +27,7 @@ export const SORT_VALUES = {
   uses: (item) => (item.uses.length ? item.uses.length : null),
   // Items NPCs sell, or that can't be traded, have no player price (shown as ✕).
   avgVend: (item) => (isSoldByNpc(item) || !isTradeable(item) ? null : item.avgVend),
-  avgWhobuy: (item) => (isSoldByNpc(item) || !isTradeable(item) ? null : item.avgWhobuy),
+  avgWhobuy: (item) => (isSoldByNpc(item) || !isTradeable(item) || !hasWhobuy(item) ? null : item.avgWhobuy),
   npcSellPrice: (item) => npcSellPrice(item),
   npcBuyable: (item) => NPC_BUYABLE_ORDER[item.npcBuyable] ?? null,
   lastVerified: (item) => item.lastVerified, // "YYYY-MM-DD" sorts correctly as text.

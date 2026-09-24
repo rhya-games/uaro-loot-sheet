@@ -13,7 +13,8 @@
     "sync:prices": "node scripts/sync-prices.mjs",
     "sync:shops": "node scripts/sync-shops.mjs",
     "check:uses": "node scripts/check-uses.mjs",
-    "validate": "node scripts/validate.mjs"
+    "validate": "node scripts/validate.mjs",
+    "suggest": "node scripts/suggest-report.mjs"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

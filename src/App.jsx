@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage.jsx';
 import FeedbackPage from './pages/FeedbackPage.jsx';
 import ChangelogPage from './pages/ChangelogPage.jsx';
 import { useRoute } from './utils/route.js';
+import { AdminProvider } from './admin/AdminContext.jsx';
 
 /** Every page except the loot page: route name -> title and component. */
 const PAGES = {
@@ -32,19 +33,21 @@ export default function App() {
   return (
     // A column as tall as the window: the footer sits at the bottom of the
     // window on short pages, and after the content on long ones.
-    <div className="flex min-h-screen flex-col bg-page text-body">
-      <SkipLink targetId="main" className="focus:fixed focus:top-4 focus:left-4 focus:z-50">
-        Skip to main content
-      </SkipLink>
-      <SiteHeader route={route} />
-      <main id="main" tabIndex={-1} className="mx-auto w-full max-w-screen-2xl flex-1 px-4 py-6 focus:outline-none">
-        <div hidden={route !== 'loot'}>
-          <LootPage />
-        </div>
-        {page && <page.Component />}
-      </main>
-      <SiteFooter />
-      <BackToTop />
-    </div>
+    <AdminProvider>
+      <div className="flex min-h-screen flex-col bg-page text-body">
+        <SkipLink targetId="main" className="focus:fixed focus:top-4 focus:left-4 focus:z-50">
+          Skip to main content
+        </SkipLink>
+        <SiteHeader route={route} />
+        <main id="main" tabIndex={-1} className="mx-auto w-full max-w-screen-2xl flex-1 px-4 py-6 focus:outline-none">
+          <div hidden={route !== 'loot'}>
+            <LootPage />
+          </div>
+          {page && <page.Component />}
+        </main>
+        <SiteFooter />
+        <BackToTop />
+      </div>
+    </AdminProvider>
   );
 }

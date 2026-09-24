@@ -1,6 +1,7 @@
 import Badge from './Badge.jsx';
 import { ACTIONS, ALL_ACTIONS, ALL_CATEGORIES, ALL_ITEM_TYPES, FALLBACK_ACTION, categoryChip } from '../utils/labels.js';
 import { FILTER_GROUPS } from '../utils/filter.js';
+import { ACTIVITIES, keepsEverything } from '../utils/activities.js';
 
 /** Neutral chip color, for filters that don't have their own color. */
 const NEUTRAL = 'bg-chip text-fg';
@@ -34,15 +35,16 @@ function summarize(groupKey, selected) {
 
 /**
  * A row of removable chips showing what's currently narrowing the list:
- * the search text, "I don't keep items", and every checked sidebar filter.
+ * the search text, what the player keeps items for (when not everything),
+ * and every checked sidebar filter.
  * Hidden when nothing is active.
  *
  * Props:
  *   query             - current search text
  *   filters           - current filter state
- *   ignoreKeep        - true when "I don't keep items" is on
+ *   keepFor           - activity ids the player keeps items for (utils/activities.js)
  *   onClearQuery      - called when the search chip's × is clicked
- *   onClearIgnoreKeep - called when the "I don't keep items" chip's × is clicked
+ *   onClearKeepFor    - called when the "Keeping for" chip's × is clicked (back to everything)
  *   onRemove          - called with (groupKey, value) to uncheck one option
  *   onRemoveGroup     - called with groupKey to uncheck a whole group
  *   onClearAll        - called when "Clear all" is clicked
@@ -50,9 +52,9 @@ function summarize(groupKey, selected) {
 export default function ActiveFilters({
   query,
   filters,
-  ignoreKeep,
+  keepFor,
   onClearQuery,
-  onClearIgnoreKeep,
+  onClearKeepFor,
   onRemove,
   onRemoveGroup,
   onClearAll,
@@ -61,8 +63,17 @@ export default function ActiveFilters({
   if (query) {
     chips.push({ key: 'search', text: `Search: “${query}”`, colors: { className: NEUTRAL }, onRemove: onClearQuery });
   }
-  if (ignoreKeep) {
-    chips.push({ key: 'ignoreKeep', text: "I don't keep items", colors: { className: NEUTRAL }, onRemove: onClearIgnoreKeep });
+  if (!keepsEverything(keepFor)) {
+    // Name whichever list is shorter: "Keeping for: Pets" or "Not keeping for: Cooking".
+    const kept = ACTIVITIES.filter((activity) => keepFor.includes(activity.id)).map((activity) => activity.label);
+    const skipped = ACTIVITIES.filter((activity) => !keepFor.includes(activity.id)).map((activity) => activity.label);
+    const text =
+      kept.length === 0
+        ? 'Not keeping items'
+        : kept.length <= skipped.length
+          ? `Keeping for: ${kept.join(', ')}`
+          : `Not keeping for: ${skipped.join(', ')}`;
+    chips.push({ key: 'keepFor', text, colors: { className: NEUTRAL }, onRemove: onClearKeepFor });
   }
   for (const group of FILTER_GROUPS) {
     const selected = filters[group.key];
