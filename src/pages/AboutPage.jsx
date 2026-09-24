@@ -83,8 +83,9 @@ export default function AboutPage() {
             you'd only keep for those show how to sell them instead. Untick everything if you just want zeny.
           </li>
           <li>
-            The page's address always holds your search, filters and sort. Click <strong>Copy link</strong> to share
-            exactly what you're looking at, or bookmark it. Your last search and filters come back on your next visit.
+            The page's address always holds your search, filters and sort. Click <strong>Share</strong> to send
+            exactly what you're looking at (on a computer it copies the link), or bookmark it. Your last search and
+            filters come back on your next visit.
           </li>
           <li>
             Use <strong>Select all</strong> under Category, then untick the ones you don't care about.

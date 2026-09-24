@@ -98,7 +98,9 @@ export default function ActiveFilters({
   if (chips.length === 0) return null;
 
   return (
-    <ul className="flex flex-wrap items-center gap-2" aria-label="Active filters">
+    // Fills the rest of the row, so "Clear all" can sit at the far right.
+    // Phones: its own line under the item count, so the chips aren't squeezed.
+    <ul className="flex w-full flex-wrap items-center gap-2 md:w-auto md:flex-1" aria-label="Active filters">
       {chips.map((chip) => (
         <li key={chip.key}>
           <Badge {...chip.colors} onRemove={chip.onRemove} removeLabel={`Remove ${chip.text}`}>
@@ -107,7 +109,7 @@ export default function ActiveFilters({
         </li>
       ))}
       {chips.length > 1 && (
-        <li>
+        <li className="ml-auto">
           <button type="button" onClick={onClearAll} className="button-small">
             Clear all
           </button>

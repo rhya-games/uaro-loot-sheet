@@ -5,7 +5,7 @@ import FilterSidebar from '../components/FilterSidebar.jsx';
 import ActiveFilters from '../components/ActiveFilters.jsx';
 import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
-import CopyLinkButton from '../components/CopyLinkButton.jsx';
+import ShareButton from '../components/ShareButton.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 import { createSearch, wordMatcher } from '../utils/search.js';
 import { nextSort, sortItems } from '../utils/sort.js';
@@ -33,6 +33,10 @@ const PANEL_ANIMATION_MS = 200;
  * padding). The same number is in PANEL_BESIDE_TABLE below; change both together.
  */
 const PANEL_BESIDE_TABLE = '(min-width: 1470px)';
+
+/** The look of the buttons beside the search box (Filters, Share), so they match. */
+const TOOLBAR_BUTTON =
+  'flex shrink-0 items-center gap-2 rounded-lg border border-line-strong bg-surface px-3 text-sm font-medium text-body shadow-sm hover:bg-hover md:justify-center md:px-4';
 
 /**
  * The view to start with: the one in the link if there is one, otherwise
@@ -205,8 +209,7 @@ export default function LootPage() {
       aria-expanded={sidebarOpen}
       aria-controls="filter-sidebar"
       aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
-      className="flex shrink-0 items-center gap-2 rounded-lg border border-line-strong bg-surface px-3 text-sm
-        font-medium text-body shadow-sm hover:bg-hover md:justify-center md:px-4"
+      className={TOOLBAR_BUTTON}
     >
       <FunnelIcon className="size-5" aria-hidden="true" />
       {/* Both labels share one grid cell, so the button is always as wide as the
@@ -242,13 +245,20 @@ export default function LootPage() {
         <div className="flex-1">
           <SearchBar value={query} onChange={setQuery} />
         </div>
+        {smallScreen ? (
+          <Tooltip text="Share" placement="bottom">
+            <ShareButton iconOnly className={TOOLBAR_BUTTON} />
+          </Tooltip>
+        ) : (
+          <ShareButton className={TOOLBAR_BUTTON} />
+        )}
       </div>
 
+      {/* What you're looking at: how many items, and what's narrowing them. */}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
         <p className="text-sm text-muted">
-          Showing {results.length} of {loot.length} items
+          {results.length.toLocaleString('en-US')} of {loot.length.toLocaleString('en-US')} items
         </p>
-        <CopyLinkButton />
         <ActiveFilters
           query={query}
           filters={filters}
