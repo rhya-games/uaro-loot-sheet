@@ -71,6 +71,15 @@ export const CHANGELOG = [
         text: 'Used For is sorted A-Z, and anything you search for moves to the front (search “Headset” and Coal lists Headset first).',
       },
       { type: 'Changed', text: 'Fewer shades of gray text, so dark mode is easier to read.' },
+      {
+        type: 'Fixed',
+        text: 'Official headgear quests now match the pre-renewal quest scripts: 88 missing materials added, and quantities fixed (for example, Mage Hat needs 50 Mould Powder).',
+      },
+      {
+        type: 'Added',
+        text: '16 headgear quest items, like Elven Ears, Coronet, Panda Hat and Transparent Celestial Robe.',
+      },
+      { type: 'Fixed', text: 'Items no official headgear uses are no longer tagged Official Hat Quest.' },
     ],
   },
   {

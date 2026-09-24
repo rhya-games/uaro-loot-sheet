@@ -7,9 +7,10 @@
  *   npm run check:uses -- path/to/recipes.json
  *   npm run check:uses -- path/to/recipes.json --suffix " Pet Evolution"
  *
- * recipes.json is a list of recipes. Materials are [name, quantity]:
+ * recipes.json is a list of recipes. Materials are [name, quantity], or
+ * [name, quantity, itemId] when the ID is known (it wins over the name):
  *   [
- *     { "target": "Mitra [1]", "materials": [["Poring Coin", 1500], ["Handcuffs", 1000]] },
+ *     { "target": "Mitra [1]", "materials": [["Poring Coin", 1500], ["Handcuffs", 1000, 7345]] },
  *     ...
  *   ]
  *
@@ -45,7 +46,9 @@ const simplify = (name) =>
 // Exact names win, so "Majestic Goat [0]" and "Majestic Goat [1]" stay apart.
 const itemByName = new Map(items.map((item) => [item.name.toLowerCase(), item]));
 const itemBySimpleName = new Map(items.map((item) => [simplify(item.name), item]));
-function findItem(name) {
+const itemById = new Map(items.filter((item) => item.itemId != null).map((item) => [item.itemId, item]));
+function findItem(name, itemId) {
+  if (itemId != null) return itemById.get(itemId) ?? null;
   const sheetName = NAME_ALIASES[name] ?? name;
   return itemByName.get(sheetName.toLowerCase()) ?? itemBySimpleName.get(simplify(sheetName));
 }
@@ -79,11 +82,12 @@ for (const recipe of recipes) {
   const lines = [];
   const matched = new Set();
 
-  for (const [name, qty] of recipe.materials) {
-    const item = findItem(name);
+  for (const [name, qty, itemId] of recipe.materials) {
+    const item = findItem(name, itemId);
     if (!item) {
-      notInSheet.add(name);
-      lines.push(`not in the sheet: ${name} x${qty}`);
+      const label = itemId != null ? `${name} (#${itemId})` : name;
+      notInSheet.add(label);
+      lines.push(`not in the sheet: ${label} x${qty}`);
       continue;
     }
     matched.add(item.name);
