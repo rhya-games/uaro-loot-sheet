@@ -57,6 +57,14 @@ export const CHANGELOG = [
       { type: 'Changed', text: 'Filtering by Used For moves the matching use to the front and fades the rest.' },
       { type: 'Added', text: 'A GitHub link in the header and a footer at the bottom of every page.' },
       { type: 'Changed', text: 'Clearer column descriptions, and tooltips wait a moment before showing on hover.' },
+      {
+        type: 'Fixed',
+        text: 'Pet evolution materials now match the uaRO wiki’s Pet System page (for example, Leaf Lunatic needs 250 Clover, not 25).',
+      },
+      {
+        type: 'Added',
+        text: '12 pet items: evolution cards and materials (like Airship Part and Young Twig), Earthworm the Dude, and four pet accessories.',
+      },
     ],
   },
   {
