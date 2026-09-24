@@ -37,6 +37,11 @@ export const CHANGELOG = [
         type: 'Fixed',
         text: 'Items no pre-renewal skill uses are no longer tagged Skills (for example, Agate, Citrin and Rose Quartz).',
       },
+      {
+        type: 'Changed',
+        text: 'Agate, Biotite, Citrin, Peridot and Pyroxene say NPC: they only make God items, which uaRO doesn’t have.',
+      },
+      { type: 'Added', text: 'Rough Elunium and Rough Oridecon: 5 turn into 1 Elunium or Oridecon at the refiner.' },
     ],
   },
   {

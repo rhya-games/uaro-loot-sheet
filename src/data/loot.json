@@ -128,13 +128,13 @@
     "itemId": 7291,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Uncategorized"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Used to make God items, which uaRO does not have.",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -1491,13 +1491,13 @@
     "itemId": 7297,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Uncategorized"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Used to make God items, which uaRO does not have.",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -2862,13 +2862,13 @@
     "itemId": 7295,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Uncategorized"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Used to make God items, which uaRO does not have.",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -9530,7 +9530,7 @@
         "qty": 10
       }
     ],
-    "notes": "",
+    "notes": "Also used to make God items, which uaRO does not have.",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -10775,12 +10775,14 @@
     "name": "Peridot",
     "itemId": 7289,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "Uncategorized"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Used to make God items, which uaRO does not have.",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -10846,12 +10848,14 @@
     "name": "Phlogopite",
     "itemId": 7290,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Uncategorized"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Used to make God items, which uaRO does not have.",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -11596,12 +11600,14 @@
     "name": "Pyroxene",
     "itemId": 7296,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "Uncategorized"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Used to make God items, which uaRO does not have.",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -12345,7 +12351,7 @@
         "qty": 10
       }
     ],
-    "notes": "",
+    "notes": "Also used to make God items, which uaRO does not have.",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -12451,7 +12457,13 @@
     "categories": [
       "Uncategorized"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Elunium",
+        "qty": 5,
+        "note": "refiner NPC"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 325,
@@ -12469,7 +12481,13 @@
     "categories": [
       "Uncategorized"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Oridecon",
+        "qty": 5,
+        "note": "refiner NPC"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 275,
@@ -15541,7 +15559,7 @@
         "qty": 20
       }
     ],
-    "notes": "",
+    "notes": "Also used to make God items, which uaRO does not have.",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
