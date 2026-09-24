@@ -55,6 +55,9 @@ unit tests or formatter yet.
     doesn't apply.
   - `customSellValues`: base prices checked by hand, including confirmed 0z.
   - `notSellableToNpc`: shown as ✕.
+  - `tradeRestrictions`: `notTradeable` (✕ in Vend/Whobuy) and `checked`
+    (emulator trade flags confirmed on uaRO). Don't trust the emulators'
+    Trade flags: every one checked so far was wrong for uaRO.
   - `npcShops`: `uaroShops` (shops checked in game or on the wiki, with
     prices), `soldByNpc`, `notSoldByNpc`, and `renewalShops`.
   - `renewalContent`: uaRO's renewal areas, and renewal price differences

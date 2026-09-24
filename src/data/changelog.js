@@ -38,6 +38,10 @@ export const CHANGELOG = [
         text: 'New cards start as Vend; the other new drops have no action yet until they’re sorted. Items NPCs sell say NPC.',
       },
       { type: 'Fixed', text: 'Acorn is sold by the Acorn Dealer in Moscovia.' },
+      {
+        type: 'Added',
+        text: 'A Junk action for items nothing uses and nobody pays for, like Unripe Acorn (NPCs won’t buy it either).',
+      },
     ],
   },
   {

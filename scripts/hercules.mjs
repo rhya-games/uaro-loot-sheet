@@ -42,6 +42,8 @@ export function parseItemDb(text) {
       slots: Number(field(body, 'Slots') ?? 0),
       sellValue: sellValue(field(body, 'Buy'), field(body, 'Sell')),
       hasPrice: field(body, 'Buy') != null || field(body, 'Sell') != null,
+      // Trade restrictions, e.g. ["nodrop", "notrade", "noselltonpc"].
+      trade: [...(body.match(/\n\s*Trade: \{([\s\S]*?)\}/)?.[1] ?? '').matchAll(/(\w+):\s*true/g)].map((m) => m[1]),
     });
   }
   return items;

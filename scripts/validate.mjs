@@ -86,6 +86,9 @@ for (const item of items) {
   if (soldByNpc && item.actions?.some((action) => action === 'Vend' || action === 'Whobuy')) {
     errors.push(`${item.name}: NPCs sell this, so use the "NPC" action instead of "Vend" or "Whobuy"`);
   }
+  if (item.actions?.includes('Junk') && item.actions.length > 1) {
+    warnings.push(`${item.name}: Junk means "throw it away", so it shouldn't have other actions`);
+  }
   if (soldByNpc && (item.avgVend != null || item.avgWhobuy != null)) {
     errors.push(`${item.name}: NPCs sell this, so avgVend and avgWhobuy should be null (the site shows ✕)`);
   }
@@ -112,11 +115,30 @@ for (const listName of ['modifiedSellPrices', 'customSellValues', 'notSellableTo
   }
 }
 const otherLists = { reviewedPrices: overrides.renewalContent.reviewedPrices };
+// Trade and NPC restrictions must agree with the actions.
+const notSellableIds = new Set(overrides.notSellableToNpc.items.map((entry) => entry.itemId));
+const notTradeableIds = new Set(overrides.tradeRestrictions.notTradeable.items.map((entry) => entry.itemId));
+for (const item of items) {
+  if (notSellableIds.has(item.itemId) && item.actions?.includes('NPC')) {
+    errors.push(`${item.name}: NPCs won't buy it (notSellableToNpc), so it can't have the NPC action`);
+  }
+  if (notTradeableIds.has(item.itemId)) {
+    if (item.actions?.some((action) => action === 'Vend' || action === 'Whobuy')) {
+      errors.push(`${item.name}: it can't be traded (notTradeable), so it can't have Vend or Whobuy`);
+    }
+    if (item.avgVend != null || item.avgWhobuy != null) {
+      errors.push(`${item.name}: it can't be traded (notTradeable), so avgVend and avgWhobuy should be null`);
+    }
+  }
+}
+
 // Shop lists don't have to be in loot.json, but if an item is, names must match.
 const shopLists = [
   ...overrides.npcShops.uaroShops.shops.map((shop) => [`uaroShops ${shop.name}`, shop.items]),
   ['soldByNpc', overrides.npcShops.soldByNpc.items],
   ['notSoldByNpc', overrides.npcShops.notSoldByNpc.items],
+  ['notTradeable', overrides.tradeRestrictions.notTradeable.items],
+  ['tradeRestrictions.checked', overrides.tradeRestrictions.checked.items],
 ];
 for (const [listName, entries] of shopLists) {
   for (const entry of entries) {

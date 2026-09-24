@@ -47,8 +47,35 @@
     "items": [
       { "itemId": 11605, "name": "Cookie Bat", "reason": "uaRO rule" },
       { "itemId": 7539, "name": "Poring Coin", "reason": "uaRO currency" },
+      { "itemId": 12346, "name": "Unripe Acorn", "reason": "uaRO rule" },
       { "itemId": 25290, "name": "Sweets Festival Coin", "reason": "Event coin" }
     ]
+  },
+
+  "tradeRestrictions": {
+    "about": "Items that can't be traded between players, and the emulator's trade flags we've checked. The emulators often flag items as bound when uaRO lets you trade them, so their flags are only a reminder to check: npm run sync:prices lists flagged items that aren't here.",
+    "notTradeable": {
+      "about": "Items players can't trade or vend on uaRO. Vend and Whobuy show ✕ (\"Can't be traded\"). Items NPCs won't buy go in notSellableToNpc.",
+      "items": []
+    },
+    "checked": {
+      "about": "Items the emulator flags as untradeable or unsellable, checked on uaRO. What actually applies is in notTradeable and notSellableToNpc.",
+      "items": [
+        { "itemId": 6075, "name": "Crystalized Teardrop", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 12361, "name": "Delicious Shaved Ice", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 6073, "name": "Dragon's Mane", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 14570, "name": "Flail Goblin Ring", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 12363, "name": "Ghost Coffin", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 12370, "name": "Girl's Naivety", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 7821, "name": "Green Apple", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 14571, "name": "Hammer Goblin Ring", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 5367, "name": "Hyegun Hat [1] (Yao Jun)", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 14569, "name": "Knife Goblin Ring", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 7539, "name": "Poring Coin", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 12346, "name": "Unripe Acorn", "note": "Tradeable and droppable on uaRO (checked in game)." },
+        { "itemId": 14574, "name": "Vagabond's Skull", "note": "Tradeable and droppable on uaRO (checked in game)." }
+      ]
+    }
   },
 
   "npcShops": {
