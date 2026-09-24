@@ -5,6 +5,7 @@ import CheckboxGroup from './CheckboxGroup.jsx';
 import { ActionBadge, CategoryBadge } from './ItemBadges.jsx';
 import { ALL_CATEGORIES, ALL_ITEM_TYPES, FILTER_ACTIONS } from '../utils/labels.js';
 import { countActiveFilters, countOptions, listOptions, toggleValue } from '../utils/filter.js';
+import { ACTIVITIES } from '../utils/activities.js';
 
 /**
  * Advanced filters shown beside the item table.
@@ -16,9 +17,9 @@ import { countActiveFilters, countOptions, listOptions, toggleValue } from '../u
  *   filters    - current filter state (see EMPTY_FILTERS in utils/filter.js)
  *   onChange   - called with the new filter state
  *   onClear    - called when "Clear all" is clicked
- *   ignoreKeep - true when "I don't keep items" is on
- *   ignoreKeepDisabled - true in admin mode, where that switch is off
- *   onIgnoreKeepChange - called with true/false when that switch changes
+ *   keepFor - activity ids the player keeps items for (see utils/activities.js)
+ *   keepForDisabled - true in admin mode, where every activity counts
+ *   onKeepForChange - called with the new list of activity ids
  *   onClose    - optional: shows a close (×) button that calls this
  *   closeButtonRef - optional ref for that button (so it can be focused)
  */
@@ -32,9 +33,9 @@ export default memo(function FilterSidebar({
   filters,
   onChange,
   onClear,
-  ignoreKeep,
-  ignoreKeepDisabled,
-  onIgnoreKeepChange,
+  keepFor,
+  keepForDisabled,
+  onKeepForChange,
   onClose,
   closeButtonRef,
 }) {
@@ -48,7 +49,6 @@ export default memo(function FilterSidebar({
     onToggle: (value) => onChange({ ...filters, [key]: toggleValue(filters[key], value) }),
   });
 
-  const actionOptions = ignoreKeep ? FILTER_ACTIONS.filter((action) => action !== 'Keep') : FILTER_ACTIONS;
 
   return (
     <div>
@@ -78,32 +78,40 @@ export default memo(function FilterSidebar({
         )}
       </div>
 
-      <label
-        className={`my-2 flex items-start gap-2 rounded-lg bg-subtle p-2 text-sm ${
-          ignoreKeepDisabled ? 'opacity-60' : 'cursor-pointer hover:bg-hover'
-        }`}
+      {/* A setting about the player rather than a filter: which activities
+          Keep applies to. Items only kept for unticked ones show how to sell them. */}
+      <fieldset
+        disabled={keepForDisabled}
+        aria-describedby="keep-for-hint"
+        className={`my-2 rounded-lg bg-subtle p-2 text-sm ${keepForDisabled ? 'opacity-60' : ''}`}
       >
-        <input
-          type="checkbox"
-          checked={ignoreKeep}
-          disabled={ignoreKeepDisabled}
-          onChange={(event) => onIgnoreKeepChange(event.target.checked)}
-          aria-describedby="ignore-keep-hint"
-          className="mt-0.5 size-4 shrink-0 accent-emerald-700"
-        />
-        <span>
-          <span className="font-medium text-fg">I don't keep items</span>
-          <span id="ignore-keep-hint" className="block text-muted">
-            {ignoreKeepDisabled
-              ? 'Off in admin mode, so you see every action.'
-              : 'Skip quests, hats and pets: hides Keep so you only see what to sell.'}
-          </span>
-        </span>
-      </label>
+        <legend className="float-left font-medium text-fg">I keep items for</legend>
+        <p id="keep-for-hint" className="clear-left text-muted">
+          {keepForDisabled
+            ? 'Off in admin mode, so you see every action.'
+            : 'Untick what you don’t do, and those items show how to sell them instead.'}
+        </p>
+        <div className="mt-1 flex flex-col">
+          {ACTIVITIES.map((activity) => (
+            <label
+              key={activity.id}
+              className={`-mx-1 flex items-center gap-2 rounded px-1 py-0.5 ${keepForDisabled ? '' : 'cursor-pointer hover:bg-hover'}`}
+            >
+              <input
+                type="checkbox"
+                checked={keepFor.includes(activity.id)}
+                onChange={() => onKeepForChange(toggleValue(keepFor, activity.id))}
+                className="size-4 shrink-0 accent-emerald-700"
+              />
+              <span className="text-body">{activity.label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
 
       <CheckboxGroup
         title="Action"
-        {...groupProps('actions', actionOptions)}
+        {...groupProps('actions', FILTER_ACTIONS)}
         renderLabel={(action) => <ActionBadge action={action} />}
       />
 

@@ -75,13 +75,3 @@ export function toggleValue(list, value) {
   return list.includes(value) ? list.filter((v) => v !== value) : [...list, value];
 }
 
-/**
- * For players who don't keep items for quests, hats, or pets:
- * removes "Keep" from every item, and drops items that were only "Keep"
- * (nothing else to do with them).
- */
-export function withoutKeep(items) {
-  return items
-    .filter((item) => !(item.actions.length === 1 && item.actions[0] === 'Keep'))
-    .map((item) => (item.actions.includes('Keep') ? { ...item, actions: item.actions.filter((a) => a !== 'Keep') } : item));
-}

@@ -1,5 +1,5 @@
 /**
- * Small per-browser settings (e.g. "I don't keep items"), saved in
+ * Small per-browser settings (e.g. what you keep items for), saved in
  * localStorage so they're remembered on the next visit.
  *
  * localStorage can be unavailable (private windows, blocked storage), so every

@@ -75,7 +75,8 @@ export default function AboutPage() {
         <BulletList>
           <li>Click a column header to sort by it. Click again to reverse, and a third time to reset.</li>
           <li>
-            Don't do quests? Turn on <strong>I don't keep items</strong> in the filters to see only what to sell.
+            Don't cook or collect hats? Untick them under <strong>I keep items for</strong> in the filters. Items
+            you'd only keep for those show how to sell them instead. Untick everything if you just want zeny.
           </li>
           <li>
             Use <strong>Select all</strong> under Category, then untick the ones you don't care about.

@@ -23,6 +23,17 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 export const CHANGELOG = [
   {
     date: '2026-09-24',
+    title: 'Keep only what you use',
+    changes: [
+      {
+        type: 'Changed',
+        text: '“I don’t keep items” is now “I keep items for”: tick the things you do (hats, pets, cooking, crafting and skills, quests). Items you’d only keep for the others show how to sell them instead.',
+      },
+      { type: 'Changed', text: 'Vend and Whobuy show ✕ when nobody was buying or selling, and Whobuy always shows ✕ for cards and equipment.' },
+    ],
+  },
+  {
+    date: '2026-09-24',
     title: 'Repeatable quests',
     changes: [
       {
