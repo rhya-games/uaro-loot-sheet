@@ -1599,10 +1599,6 @@
       {
         "for": "Rainbow Scarf",
         "qty": 10
-      },
-      {
-        "for": "Orc Hero Headdress",
-        "qty": 300
       }
     ],
     "notes": "",
@@ -1729,10 +1725,6 @@
       "uaRO"
     ],
     "uses": [
-      {
-        "for": "Wickebine's Black Cat Ears",
-        "qty": 1
-      },
       {
         "for": "Blush of Groom",
         "qty": 1
@@ -2604,7 +2596,7 @@
     "uses": [
       {
         "for": "Satanic Bone Helm",
-        "qty": 250
+        "qty": 350
       }
     ],
     "notes": "",
@@ -4104,6 +4096,32 @@
     "sellValue": 3,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "errende-ebecee-card",
+    "name": "Errende Ebecee Card",
+    "itemId": 4349,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO",
+      "Card"
+    ],
+    "uses": [
+      {
+        "for": "Love Guard [1]",
+        "qty": 3
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "evil-druid-card",
@@ -7640,6 +7658,32 @@
     "npcBuyable": "no"
   },
   {
+    "id": "margaretha-sorin-card",
+    "name": "Margaretha Sorin Card",
+    "itemId": 4364,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO",
+      "Card"
+    ],
+    "uses": [
+      {
+        "for": "Mitra [1]",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "marionette-doll-1",
     "name": "Marionette Doll [1]",
     "itemId": 5141,
@@ -10040,7 +10084,7 @@
       },
       {
         "for": "Little Angel Doll",
-        "qty": 300
+        "qty": 50
       }
     ],
     "notes": "",
@@ -10810,12 +10854,18 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "uaRO"
     ],
     "uses": [
       {
         "for": "Party Hat",
         "qty": 1
+      },
+      {
+        "for": "Santa Poring Hat",
+        "qty": 10
       }
     ],
     "notes": "",
@@ -11706,7 +11756,7 @@
       },
       {
         "for": "Dress Hat",
-        "qty": 250
+        "qty": 500
       },
       {
         "for": "Purple Cowboy Hat",
@@ -13130,6 +13180,24 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "trident-2",
+    "name": "Trident [2]",
+    "itemId": 1460,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Uncategorized"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 25500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "tropical-banana",
     "name": "Tropical Banana",
     "itemId": 634,
@@ -13514,6 +13582,10 @@
       {
         "for": "Desert Wolf Pet Evolution",
         "qty": 3
+      },
+      {
+        "for": "Umbala Spirit",
+        "qty": 5
       }
     ],
     "notes": "Baby Desert Wolf Taming Item",
@@ -13941,7 +14013,7 @@
     "uses": [
       {
         "for": "Pirate Dagger",
-        "qty": 20
+        "qty": 120
       },
       {
         "for": "Umbala Spirit",

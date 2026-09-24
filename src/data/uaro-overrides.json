@@ -32,7 +32,8 @@
       { "itemId": 14569, "name": "Knife Goblin Ring", "sellValue": 0 },
       { "itemId": 25408, "name": "Scatleton Memory", "sellValue": 0, "note": "uaRO custom item. The emulators use this ID for a different item." },
       { "itemId": 551, "name": "Sushi", "sellValue": 0 },
-      { "itemId": 14574, "name": "Vagabond's Skull", "sellValue": 0 }
+      { "itemId": 14574, "name": "Vagabond's Skull", "sellValue": 0 },
+      { "itemId": 12132, "name": "Santa's Bag", "sellValue": 0, "note": "0z. Not confirmed whether NPCs buy it." }
     ]
   },
 

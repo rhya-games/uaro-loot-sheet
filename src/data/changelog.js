@@ -46,6 +46,12 @@ export const CHANGELOG = [
         text: 'Temporal Crystal, Coagulated Spell, Contaminated Magic, Lever Action Rifle, Hatii Claw and Santa’s Bag, with vend prices.',
       },
       { type: 'Changed', text: 'Grape is sold by the Tool Dealer, so it now shows ✓ under NPC Buyable.' },
+      { type: 'Added', text: 'Trident, which uaRO’s NPCs no longer sell, so players vend it.' },
+      {
+        type: 'Fixed',
+        text: 'Dimonka headgear quest materials now match the uaRO wiki (for example, Pirate Dagger needs 120 Wooden Heart, not 20).',
+      },
+      { type: 'Added', text: 'Margaretha Sorin Card (for Mitra) and Errende Ebecee Card (for Love Guard).' },
     ],
   },
   {
