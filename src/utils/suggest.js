@@ -11,6 +11,8 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  *   - Vend when it pays more than VEND_MARGIN above the NPC price, and more
  *     than @whobuy at all.
  *   - NPC otherwise, and always for items NPCs sell or that can't be traded.
+ *   - Cards are always Vend, even with no price yet: players pay far more
+ *     than NPCs for any card.
  *
  * Keeping: for each "Used For" target, compare what the finished thing is
  * worth with what all its parts would sell for. If the finished thing is
@@ -36,6 +38,10 @@ export function suggestSale(item) {
   const whobuy = tradeable && hasWhobuy(item) ? item.avgWhobuy : null;
   const vend = tradeable ? item.avgVend : null;
   const floor = npc ?? 0;
+
+  if (tradeable && item.categories.includes('Card')) {
+    return { action: 'Vend', price: vend, reason: 'Cards always sell to players' + (vend != null ? ` (${fmt(vend)})` : '') };
+  }
 
   if (vend != null && vend > floor * (1 + VEND_MARGIN) && vend > (whobuy ?? 0)) {
     return { action: 'Vend', price: vend, reason: `Vending pays the most (${fmt(vend)})` };
