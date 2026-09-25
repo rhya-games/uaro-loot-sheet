@@ -9,7 +9,13 @@ export const ALL_ACTIONS = schema.$defs.action.enum;
 /** Actions offered in the filter panel. Junk is left out: nobody filters for it. */
 export const FILTER_ACTIONS = ALL_ACTIONS.filter((action) => action !== 'Junk');
 export const ALL_ITEM_TYPES = schema.$defs.itemType.enum;
-export const ALL_CATEGORIES = schema.$defs.category.enum;
+/**
+ * Items waiting for review ("Not Reviewed") only show while running
+ * `npm run dev`; the published site leaves them out (see admin/useAdmin.js),
+ * so it doesn't offer that category either.
+ */
+export const IN_DEV = Boolean(import.meta.env?.DEV);
+export const ALL_CATEGORIES = schema.$defs.category.enum.filter((category) => IN_DEV || category !== 'Not Reviewed');
 
 /**
  * How each action looks in the UI: strong-colored chips, so they stand apart

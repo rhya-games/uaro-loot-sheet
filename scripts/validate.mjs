@@ -195,6 +195,11 @@ if (sellsForZero.length) {
   );
 }
 
+const notReviewed = items.filter((item) => item.categories?.includes('Not Reviewed')).map((item) => item.name);
+if (notReviewed.length) {
+  warnings.push(`${notReviewed.length} items are Not Reviewed, so the published site hides them until they're checked: ${notReviewed.join(', ')}`);
+}
+
 const noAction = items.filter((item) => item.actions?.length === 0).map((item) => item.name);
 if (noAction.length) warnings.push(`${noAction.length} items have no action yet: ${noAction.join(', ')}`);
 

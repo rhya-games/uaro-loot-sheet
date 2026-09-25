@@ -43,8 +43,7 @@ export default function AboutPage() {
           <strong>uaRO</strong> mean content added by this server.
         </p>
         <p>
-          <strong>No Use</strong> means someone checked and nothing uses the item: it's only worth what it sells for.{' '}
-          <strong>Not Reviewed</strong> (dashed) means nobody has checked yet, so it may still have a use.
+          <strong>No Use</strong> means someone checked and nothing uses the item: it's only worth what it sells for.
         </p>
 
         <SubHeading>Other columns</SubHeading>

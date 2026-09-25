@@ -1,6 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
-import loot from '../data/loot.json' with { type: 'json' };
-import { ADMIN_AVAILABLE, AdminContext } from './useAdmin.js';
+import { ADMIN_AVAILABLE, AdminContext, SITE_ITEMS } from './useAdmin.js';
 import { createSuggester } from '../utils/suggest.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 
@@ -34,7 +33,7 @@ async function postItem(id, changes) {
 
 export function AdminProvider({ children }) {
   const [enabled, setEnabled] = useState(() => ADMIN_AVAILABLE && readPreference('admin', false));
-  const [items, setItems] = useState(loot);
+  const [items, setItems] = useState(SITE_ITEMS);
 
   // The latest items, for saves that finish one after another (tabbing from
   // Vend to Whobuy saves twice in a row).

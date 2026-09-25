@@ -52,7 +52,7 @@ export const CHANGELOG = [
         type: 'Changed',
         text: '“Uncategorized” is now “No Use”: we checked, and nothing uses these 246 items. New items start as “Not Reviewed” (dashed) until someone checks them.',
       },
-      { type: 'Added', text: 'A site icon: a loot bag.' },
+      { type: 'Added', text: 'A loot bag icon, in the browser tab and next to the site name.' },
       {
         type: 'Added',
         text: 'The El Dicastes daily quest in “Used For” on the 9 items it can ask for (one request at a time), like x100 Apple and x26 Fluorescent Liquid. Pineapple and Melon are new.',

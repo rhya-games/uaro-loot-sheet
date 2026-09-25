@@ -1,4 +1,5 @@
 import GitHubLink from './GitHubLink.jsx';
+import LootBagIcon from './LootBagIcon.jsx';
 import ThemeToggle from './ThemeToggle.jsx';
 import { ROUTES } from '../utils/route.js';
 
@@ -22,11 +23,15 @@ export default function SiteHeader({ route }) {
     // Focus rings here are white, with a green gap (see --focus-gap in index.css).
     <header className="bg-header text-white [--focus-gap:var(--header)]">
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-4 px-4 py-5">
-        <div>
-          <a href={ROUTES.loot} className="rounded text-2xl font-bold focus-visible:outline-white">
-            Rhya's uaRO Loot Sheet
-          </a>
-          <p className="mt-1 text-sm text-emerald-100">Quickly determine what to do with your loot.</p>
+        <div className="flex items-center gap-3">
+          {/* Decorative: the site's loot bag, like the browser tab icon. */}
+          <LootBagIcon className="size-12 shrink-0 text-white" />
+          <div>
+            <a href={ROUTES.loot} className="rounded text-2xl font-bold focus-visible:outline-white">
+              Rhya's uaRO Loot Sheet
+            </a>
+            <p className="mt-1 text-sm text-emerald-100">Quickly determine what to do with your loot.</p>
+          </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
