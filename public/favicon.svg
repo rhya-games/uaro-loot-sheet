@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- The site icon: a white loot bag on the header's green. -->
+  <rect width="32" height="32" rx="7" fill="#065f46"/>
+  <path d="M12 9.5h8l-2.2 3.2c3.9 1.6 6.2 5.3 6.2 8.8 0 3.3-2.6 5-8 5s-8-1.7-8-5c0-3.5 2.3-7.2 6.2-8.8z" fill="#fff"/>
+  <path d="M13.3 12.8h5.4" stroke="#065f46" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
