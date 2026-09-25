@@ -10,11 +10,13 @@ import { ROW_ACTIONS } from '../config.js';
 const ICON_BUTTON_STYLE =
   'flex size-8 items-center justify-center rounded-full text-muted hover:bg-hover hover:text-fg';
 
-/** Props an <a> needs to open one row action. */
+/** Props an <a> needs to open one row action, and to count clicks (see utils/analytics.js). */
 function linkProps(action, item) {
   return {
     href: action.href(item),
     ...(action.external && { target: '_blank', rel: 'noopener noreferrer' }),
+    'data-track': action.id,
+    'data-track-item': item.itemId ? `${item.name} (#${item.itemId})` : item.name,
   };
 }
 

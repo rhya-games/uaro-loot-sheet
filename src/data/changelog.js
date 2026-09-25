@@ -33,6 +33,17 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '0.3.0',
+    date: '2026-09-25',
+    title: 'Visit counts',
+    changes: [
+      {
+        type: 'Added',
+        text: 'The site counts visits, searches and filter use, without cookies, to learn what to improve. See About.',
+      },
+    ],
+  },
+  {
     version: '0.2.0',
     date: '2026-09-24',
     title: 'Lots more loot, suggested actions, and sharing',
