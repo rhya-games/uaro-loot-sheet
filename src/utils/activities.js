@@ -3,7 +3,7 @@
  * an item's Keep counts for an activity when the item has one of its
  * categories. The filter panel lists these as "I keep items for".
  *
- * Categories that aren't here (Card, uaRO, Uncategorized) aren't an
+ * Categories that aren't here (Card, uaRO, No Use, Not Reviewed) aren't an
  * activity by themselves. Cards are kept for pets or hats, and carry those
  * categories too.
  */

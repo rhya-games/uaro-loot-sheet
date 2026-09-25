@@ -42,6 +42,10 @@ export default function AboutPage() {
           <strong>Official</strong> means content from the original game. <strong>Server</strong> and{' '}
           <strong>uaRO</strong> mean content added by this server.
         </p>
+        <p>
+          <strong>No Use</strong> means someone checked and nothing uses the item: it's only worth what it sells for.{' '}
+          <strong>Not Reviewed</strong> (dashed) means nobody has checked yet, so it may still have a use.
+        </p>
 
         <SubHeading>Other columns</SubHeading>
         <BulletList>

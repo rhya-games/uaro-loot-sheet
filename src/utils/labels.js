@@ -48,7 +48,9 @@ export const FALLBACK_ACTION = { description: '', className: 'bg-gray-600 text-w
  * Category chip colors: a rainbow running red -> violet down the A-Z
  * category list in schema.json. Colors are calculated from each category's
  * position, so adding or removing a category keeps the rainbow intact.
- * "Uncategorized" is always gray and isn't part of the rainbow.
+ * "No Use" and "Not Reviewed" are gray and aren't part of the rainbow: they
+ * say the item isn't used for anything (yet). "Not Reviewed" is dashed, so
+ * unchecked items stand out from ones checked and found useless.
  *
  * Each chip gets its hue as a CSS variable (--chip-hue); the classes below
  * turn it into a light chip in light mode and a dark chip in dark mode.
@@ -56,7 +58,11 @@ export const FALLBACK_ACTION = { description: '', className: 'bg-gray-600 text-w
  */
 const RAINBOW_START_HUE = 25; // red
 const RAINBOW_END_HUE = 300; // violet
-const GRAY_CATEGORIES = ['Uncategorized'];
+const GRAY_CHIPS = {
+  'No Use': 'bg-chip text-body',
+  'Not Reviewed': 'border border-dashed border-line-strong text-muted',
+};
+const GRAY_CATEGORIES = Object.keys(GRAY_CHIPS);
 const RAINBOW_CATEGORIES = ALL_CATEGORIES.filter((category) => !GRAY_CATEGORIES.includes(category));
 const RAINBOW_CLASSES =
   'bg-[oklch(0.94_0.06_var(--chip-hue))] text-[oklch(0.42_0.12_var(--chip-hue))] ' +
@@ -65,7 +71,7 @@ const RAINBOW_CLASSES =
 /** Props for a category chip: { className, style }. */
 export function categoryChip(category) {
   const index = RAINBOW_CATEGORIES.indexOf(category);
-  if (index === -1) return { className: 'bg-chip text-body' };
+  if (index === -1) return { className: GRAY_CHIPS[category] ?? 'bg-chip text-body' };
   const step = (RAINBOW_END_HUE - RAINBOW_START_HUE) / Math.max(RAINBOW_CATEGORIES.length - 1, 1);
   return { className: RAINBOW_CLASSES, style: { '--chip-hue': RAINBOW_START_HUE + index * step } };
 }

@@ -63,7 +63,7 @@ You only need a free GitHub account.
 - Numbers have no commas or quotes: `15500`, not `"15,500"`. Unknown values are `null`.
 - If an NPC sells the item (`npcBuyable` is `"yes"` or `"npc-only"`), use `NPC` instead of `Vend` or `Whobuy`, and leave `avgVend` and `avgWhobuy` as `null` (the site shows ✕).
 - Cards can't be bought from NPCs (`npcBuyable` is always `"no"`).
-- Every item needs at least one category. Use `["Uncategorized"]` if none fit.
+- Every item needs at least one category. Use `["Not Reviewed"]` until someone has checked what it's for, and `["No Use"]` once you've checked and nothing uses it (it can't have uses or other categories).
 - Spell each `uses` target (`for`) the same way on every item, so the "Used For" filter groups them.
 - Dates are `YYYY-MM-DD`.
 

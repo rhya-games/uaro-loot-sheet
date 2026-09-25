@@ -126,13 +126,13 @@ function parseDetails(text) {
   return { uses, notes: notes.join(', ') };
 }
 
-/** Applies CATEGORY_FIXES: renames, merges and removals. No categories left -> "Uncategorized". */
+/** Applies CATEGORY_FIXES: renames, merges and removals. No categories left -> "Not Reviewed". */
 function fixCategories(name, categories) {
   const fixed = categories.flatMap((category) => {
     if (category === 'Refining / Ore / Forging' && REFINING_ONLY.includes(name)) return [];
     return CATEGORY_FIXES[category] ?? [category];
   });
-  return fixed.length ? [...new Set(fixed)] : ['Uncategorized'];
+  return fixed.length ? [...new Set(fixed)] : ['Not Reviewed'];
 }
 
 /**
@@ -207,7 +207,7 @@ for (const row of rows.slice(headerIndex + 1)) {
 function mergeInto(target, extra) {
   target.actions = [...new Set([...target.actions, ...extra.actions])];
   target.categories = [...new Set([...target.categories, ...extra.categories])];
-  if (target.categories.length > 1) target.categories = target.categories.filter((c) => c !== 'Uncategorized');
+  if (target.categories.length > 1) target.categories = target.categories.filter((c) => c !== 'Not Reviewed');
   target.uses = [...target.uses, ...extra.uses];
   target.notes = [target.notes, extra.notes].filter(Boolean).join(', ');
   for (const key of ['itemId', 'avgVend', 'avgWhobuy', 'sellValue', 'npcBuyable']) {

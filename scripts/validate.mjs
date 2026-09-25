@@ -113,8 +113,11 @@ for (const item of items) {
   if ((item.itemType === 'Equipment' || item.categories?.includes('Card')) && item.avgWhobuy != null) {
     warnings.push(`${item.name}: @whobuy doesn't buy cards or equipment, so avgWhobuy should be null`);
   }
-  if (item.categories?.length > 1 && item.categories.includes('Uncategorized')) {
-    warnings.push(`${item.name}: has categories, so "Uncategorized" can be removed`);
+  if (item.categories?.length > 1 && item.categories.includes('Not Reviewed')) {
+    warnings.push(`${item.name}: has categories, so "Not Reviewed" can be removed`);
+  }
+  if (item.categories?.includes('No Use') && (item.categories.length > 1 || item.uses?.length)) {
+    errors.push(`${item.name}: "No Use" means nothing uses it, but it has uses or other categories`);
   }
 }
 
