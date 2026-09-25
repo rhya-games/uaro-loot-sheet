@@ -31,10 +31,6 @@ export default memo(function ItemList({ items, sort, onSort, onSelectUse, highli
   const showTable = useMediaQuery('(min-width: 768px)');
   const shown = useProgressiveList(items);
 
-  if (items.length === 0) {
-    return <p className="py-12 text-center text-muted">No items match your search or filters.</p>;
-  }
-
   return (
     <div className="@container">
       {showTable ? (

@@ -6,6 +6,7 @@ import ActiveFilters from '../components/ActiveFilters.jsx';
 import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
 import ShareButton from '../components/ShareButton.jsx';
+import NoResults from '../components/NoResults.jsx';
 import AdminToggle from '../admin/AdminToggle.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 import { createSearch, wordMatcher } from '../utils/search.js';
@@ -392,13 +393,22 @@ export default function LootPage() {
           className={`min-w-0 space-y-4 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
         >
           {toolbar}
-          <ItemList
-            items={results}
-            sort={sort}
-            onSort={changeSort}
-            onSelectUse={showItemsUsedFor}
-            highlightUses={highlightUses}
-          />
+          {results.length === 0 ? (
+            <NoResults
+              query={query}
+              filterCount={activeFilterCount}
+              onClearSearch={() => setQuery('')}
+              onClearFilters={clearAll}
+            />
+          ) : (
+            <ItemList
+              items={results}
+              sort={sort}
+              onSort={changeSort}
+              onSelectUse={showItemsUsedFor}
+              highlightUses={highlightUses}
+            />
+          )}
         </div>
       </div>
     </div>
