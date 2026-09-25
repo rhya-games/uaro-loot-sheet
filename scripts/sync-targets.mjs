@@ -6,7 +6,8 @@
  * Names are matched with Hercules pre-renewal first, then rAthena renewal,
  * ignoring case, spaces and punctuation. A pet evolution's ID is the evolved
  * pet's egg (that's what players trade). Names that don't match go in
- * AEGIS_NAMES below, by the emulators' exact item code.
+ * AEGIS_NAMES below, by the emulators' exact item code, or in ITEM_IDS
+ * when the emulators don't name the item at all.
  *
  * Usage:
  *   npm run sync:targets             (update target-ids.json)
@@ -37,6 +38,11 @@ const AEGIS_NAMES = {
   'Chaotic Baphomet Jr Pet Evolution': 'Chaos_Bapho_Jr_Egg',
 };
 
+/** Targets whose item the emulators don't name: target -> item ID (from the maintainer). */
+const ITEM_IDS = {
+  'Mistress Pet Evolution': 9193, // Mistress Egg; rAthena only has it as aegis_9193
+};
+
 const items = JSON.parse(readFileSync(LOOT_FILE, 'utf8'));
 const key = (name) => name.toLowerCase().replace(/\s*\[\d\]$/, '').replace(/[^a-z0-9]/g, '');
 
@@ -60,9 +66,9 @@ const ids = {};
 const missing = [];
 for (const target of valueTargets(items).values()) {
   const names = / Pet Evolution/.test(target.name) ? eggNames(target.name) : [target.name];
-  const id = AEGIS_NAMES[target.name]
+  const id = ITEM_IDS[target.name] ?? (AEGIS_NAMES[target.name]
     ? idByAegis.get(AEGIS_NAMES[target.name])
-    : names.map((name) => idByName.get(key(name))).find(Boolean);
+    : names.map((name) => idByName.get(key(name))).find(Boolean));
   if (id) ids[target.name] = id;
   else missing.push(target.name);
 }

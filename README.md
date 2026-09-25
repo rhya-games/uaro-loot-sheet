@@ -35,7 +35,10 @@ verified today. Shorthand works: `12k`, `1.5m`. Type `0` or `none` when
 nobody was buying or selling; the site shows it as "None". Escape puts the old price
 back. Each item also shows the action suggested by its prices (hover it to
 see why). Saving a price also saves the suggested action. If a suggestion
-changes because of another item's price, click **Use** to take it. Run `npm run validate` and commit as usual when you're done.
+changes because of another item's price, click **Use** to take it. After
+each save, a note at the bottom says what changed, with **Undo** to put it
+all back (including any actions it updated). It stays while your mouse is on
+it. Run `npm run validate` and commit as usual when you're done.
 
 With admin mode on, **Targets** opens a list of hats, pet evolutions and
 other finished things that aren't loot, so they have no price of their own.
