@@ -45,6 +45,16 @@ export const CHANGELOG = [
       { type: 'Added', text: 'When nothing matches, the list says why and offers Clear search or Clear filters.' },
       {
         type: 'Added',
+        text: 'Official quests in “Used For” on 52 items: job change quests (like x5 Talon for Rogue), the Sign quest, Nameless Island, Episode 13, town quests, ninja and gunslinger gear, and the Valkyrie Helm. Weapons that only need to be carried (to break the Sign seal, or any whip for the Zealotus Mask) say “not used up”.',
+      },
+      { type: 'Added', text: 'Barren Trunk, for the Archer job quest.' },
+      {
+        type: 'Changed',
+        text: '“Uncategorized” is now two labels: Not Reviewed (dashed; nobody has checked yet) and No Use (checked, and nothing uses it).',
+      },
+      { type: 'Added', text: 'A site icon: a loot bag.' },
+      {
+        type: 'Added',
         text: 'The El Dicastes daily quest in “Used For” on the 9 items it can ask for (one request at a time), like x100 Apple and x26 Fluorescent Liquid. Pineapple and Melon are new.',
       },
       { type: 'Added', text: 'Shared links show the site’s name and a short description in chat apps.' },
