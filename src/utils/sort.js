@@ -1,5 +1,5 @@
 import { ALL_ACTIONS } from './labels.js';
-import { isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
+import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
 
 /**
  * Table sorting. The sort state is either null (default order: A-Z, or best

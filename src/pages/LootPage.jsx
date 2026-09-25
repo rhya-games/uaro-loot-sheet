@@ -15,7 +15,7 @@ import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue } from '../
 import { ALL_ACTIVITY_IDS, keepOnlyFor, keepsEverything } from '../utils/activities.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
-import { useAdmin } from '../admin/AdminContext.jsx';
+import { useAdmin } from '../admin/useAdmin.js';
 import { EMPTY_VIEW, cleanView, hashToView, isLootHash, viewToHash } from '../utils/viewUrl.js';
 
 
@@ -116,8 +116,10 @@ export default function LootPage() {
   // The filter panel's counts (~500 checkboxes) follow the search. While the
   // panel is closed nobody sees them, so it keeps what it last showed and
   // skips redrawing on every keystroke; it catches up when it opens.
-  const panelView = useRef({ searched, count: results.length });
-  if (sidebarOpen) panelView.current = { searched, count: results.length };
+  const [panelView, setPanelView] = useState({ searched, count: results.length });
+  if (sidebarOpen && (panelView.searched !== searched || panelView.count !== results.length)) {
+    setPanelView({ searched, count: results.length });
+  }
 
   // Keep the link in step with the view, so it can be copied or bookmarked,
   // and remember the view for next time. replaceState changes the address
@@ -126,6 +128,8 @@ export default function LootPage() {
   const viewHash = viewToHash({ query, filters, sort });
   useEffect(() => {
     writePreference('lastView', { query, filters, sort });
+  }, [query, filters, sort]);
+  useEffect(() => {
     const syncLink = () => {
       const current = window.location.hash;
       if (!isLootHash(current) || current === viewHash) return;
@@ -209,7 +213,7 @@ export default function LootPage() {
     };
     document.addEventListener('keydown', onKeyDown);
     return () => document.removeEventListener('keydown', onKeyDown);
-  }, [panelCovers]);
+  }, [panelCovers, closePanel]);
 
   // Sheet on small screens: stop the page behind it from scrolling.
   const smallScreen = useMediaQuery('(max-width: 767px)');
@@ -372,7 +376,7 @@ export default function LootPage() {
           </div>
           <FilterSidebar
             onClose={closePanel}
-            resultCount={panelView.current.count}
+            resultCount={panelView.count}
             totalCount={loot.length}
             activeCount={activeFilterCount}
             onClearAll={clearAll}
@@ -381,7 +385,7 @@ export default function LootPage() {
             keepFor={keepFor}
             keepForDisabled={adminOn}
             onKeepForChange={changeKeepFor}
-            items={panelView.current.searched}
+            items={panelView.searched}
             filters={filters}
             onChange={setFilters}
           />

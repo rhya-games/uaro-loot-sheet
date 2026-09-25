@@ -34,6 +34,8 @@ is JSON in the repo, so people who don't code can edit it.
 ```bash
 npm run dev            # local site at http://localhost:5173/uaro-loot-sheet/
 npm run validate       # check the data (CI runs this; build runs it first)
+npm run lint           # code checks (ESLint; CI runs this)
+npm test               # unit tests in src/**/*.test.js (Vitest; CI runs this)
 npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
@@ -43,8 +45,8 @@ npm run suggest [-- "name"]          # compare suggested actions (src/utils/sugg
 
 Both sync scripts take `-- --check` to report without writing. They
 download emulator files once into `scripts/.cache/` (gitignored). Run
-`npm run validate` after any data change; errors must be 0. There are no
-unit tests or formatter yet.
+`npm run validate` after any data change; errors must be 0. Run `npm run
+lint` and `npm test` after code changes. There's no formatter yet.
 
 ## Data model
 
@@ -211,6 +213,7 @@ English speakers. Use short, plain sentences and everyday words. Say
 ## Git
 
 - Work on a feature branch, never commit to `main`, and merge through a PR.
-  CI runs `validate` on PRs, and merging to `main` deploys to GitHub Pages.
+  CI runs `validate`, `lint` and `test` on PRs, and merging to `main`
+  deploys to GitHub Pages and publishes a release.
 - Commit in small steps with messages that say what changed and why.
 - Don't push, open PRs, merge or deploy unless the maintainer asks.

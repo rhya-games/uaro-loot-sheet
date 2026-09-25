@@ -10,7 +10,7 @@ import { NpcBuyable } from './StatusIcons.jsx';
 import NpcSellPrice from './NpcSellPrice.jsx';
 import PriceCell from '../admin/PriceCell.jsx';
 import SuggestedActions from '../admin/SuggestedActions.jsx';
-import { useAdmin } from '../admin/AdminContext.jsx';
+import { useAdmin } from '../admin/useAdmin.js';
 import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 
 /**

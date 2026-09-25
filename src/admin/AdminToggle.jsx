@@ -1,5 +1,5 @@
 import { PencilSquareIcon } from '@heroicons/react/24/outline';
-import { useAdmin } from './AdminContext.jsx';
+import { useAdmin } from './useAdmin.js';
 
 /**
  * Turns admin mode on and off. Sits in the loot page's toolbar (admin mode
