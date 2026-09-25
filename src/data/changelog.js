@@ -42,6 +42,10 @@ export const CHANGELOG = [
         text: 'Version numbers: each day’s changes share one, shown here, at the bottom of every page, and as a release on GitHub.',
       },
       { type: 'Added', text: 'The filter panel shows how many filters are on, next to its title.' },
+      {
+        type: 'Added',
+        text: 'The El Dicastes daily quest in “Used For” on the 9 items it can ask for (one request at a time), like x100 Apple and x26 Fluorescent Liquid. Pineapple and Melon are new.',
+      },
       { type: 'Added', text: 'Shared links show the site’s name and a short description in chat apps.' },
       { type: 'Changed', text: 'Typing in the search box feels instant, even with the whole list showing.' },
       { type: 'Fixed', text: 'Checkboxes have a white check, and keyboard focus rings are never cut off or covered.' },
@@ -51,7 +55,7 @@ export const CHANGELOG = [
       },
       {
         type: 'Changed',
-        text: 'Skills in “Used For” use the names players know, like Potion Pitcher (was Aid Potion), Slim Potion Pitcher, Chemical Protection, Pharmacy, Graffiti and Abracadabra.',
+        text: 'Skills in “Used For” use the names players know, like Potion Pitcher (was Aid Potion), Slim Potion Pitcher, Chemical Protection, Pharmacy (was Prepare Potion), Graffiti and Abracadabra.',
       },
       {
         type: 'Added',

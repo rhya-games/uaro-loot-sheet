@@ -1,60 +1,211 @@
 {
   "about": "Where uaRO differs from its base game data. Item data follows Hercules pre-renewal by default; the lists below override it. Edit this file by hand (see CONTRIBUTING.md). Each entry needs the item's itemId and name exactly as in loot.json.",
-
   "modifiedSellPrices": {
     "about": "uaRO lowered these NPC sell prices. The price is the most an NPC pays: Overcharge does NOT raise it.",
     "source": "https://wiki.uaro.net/Modified_Sales_Prices/",
     "items": [
-      { "itemId": 12065, "name": "Green Salad", "price": 2000 },
-      { "itemId": 747, "name": "Crystal Mirror", "price": 6500 },
-      { "itemId": 749, "name": "Frozen Rose", "price": 14500 },
-      { "itemId": 748, "name": "Witherless Rose", "price": 7500 },
-      { "itemId": 13006, "name": "Khukri [0]", "price": 25000 },
-      { "itemId": 2613, "name": "Diamond Ring [0]", "price": 12500 },
-      { "itemId": 2610, "name": "Gold Ring [0]", "price": 7500 },
-      { "itemId": 1216, "name": "Stiletto [2]", "price": 7200 },
-      { "itemId": 522, "name": "Mastela Fruit", "price": 3500 },
-      { "itemId": 993, "name": "Green Live", "price": 400 }
+      {
+        "itemId": 12065,
+        "name": "Green Salad",
+        "price": 2000
+      },
+      {
+        "itemId": 747,
+        "name": "Crystal Mirror",
+        "price": 6500
+      },
+      {
+        "itemId": 749,
+        "name": "Frozen Rose",
+        "price": 14500
+      },
+      {
+        "itemId": 748,
+        "name": "Witherless Rose",
+        "price": 7500
+      },
+      {
+        "itemId": 13006,
+        "name": "Khukri [0]",
+        "price": 25000
+      },
+      {
+        "itemId": 2613,
+        "name": "Diamond Ring [0]",
+        "price": 12500
+      },
+      {
+        "itemId": 2610,
+        "name": "Gold Ring [0]",
+        "price": 7500
+      },
+      {
+        "itemId": 1216,
+        "name": "Stiletto [2]",
+        "price": 7200
+      },
+      {
+        "itemId": 522,
+        "name": "Mastela Fruit",
+        "price": 3500
+      },
+      {
+        "itemId": 993,
+        "name": "Green Live",
+        "price": 400
+      }
     ]
   },
-
   "customSellValues": {
     "about": "NPC sell prices checked by hand for uaRO, where the emulators are wrong or unsure (including items confirmed to sell for 0z). This is the base price: Overcharge applies on top, like normal items.",
     "items": [
-      { "itemId": 6075, "name": "Crystalized Teardrop", "sellValue": 325, "note": "Renewal drop added by uaRO; the emulators list it at 0z." },
-      { "itemId": 6073, "name": "Dragon's Mane", "sellValue": 225, "note": "The emulators list it at 0z." },
-      { "itemId": 12361, "name": "Delicious Shaved Ice", "sellValue": 0, "note": "0z. Not confirmed whether NPCs buy it." },
-      { "itemId": 7086, "name": "Emblem of the Sun God", "sellValue": 0, "note": "0z. Not confirmed whether NPCs buy it." },
-      { "itemId": 35661, "name": "Expanded Token Fragment", "sellValue": 0, "note": "uaRO item, not in the emulators." },
-      { "itemId": 14570, "name": "Flail Goblin Ring", "sellValue": 0 },
-      { "itemId": 12370, "name": "Girl's Naivety", "sellValue": 0 },
-      { "itemId": 14571, "name": "Hammer Goblin Ring", "sellValue": 0 },
-      { "itemId": 14569, "name": "Knife Goblin Ring", "sellValue": 0 },
-      { "itemId": 25408, "name": "Scatleton Memory", "sellValue": 0, "note": "uaRO custom item. The emulators use this ID for a different item." },
-      { "itemId": 551, "name": "Sushi", "sellValue": 0 },
-      { "itemId": 14574, "name": "Vagabond's Skull", "sellValue": 0 },
-      { "itemId": 12132, "name": "Santa's Bag", "sellValue": 0, "note": "0z. Not confirmed whether NPCs buy it." },
-      { "itemId": 1750, "name": "Arrow", "sellValue": 0, "note": "Costs 1z, and NPCs pay half, rounded down." },
-      { "itemId": 102723, "name": "Beehive Box", "sellValue": 0, "note": "0z for now. Not confirmed whether NPCs buy it." },
-      { "itemId": 12363, "name": "Ghost Coffin", "sellValue": 0, "note": "0z for now. Not confirmed whether NPCs buy it." },
-      { "itemId": 7049, "name": "Stone", "sellValue": 0, "note": "0z, confirmed in game." },
-      { "itemId": 553, "name": "Bao", "sellValue": 0, "note": "0z, confirmed in game." },
-      { "itemId": 28628, "name": "Forbidden Grimoire [1]", "sellValue": 0, "note": "0z for now. Not confirmed whether NPCs buy it." },
-      { "itemId": 400396, "name": "Ghost Whisper [1]", "sellValue": 0, "note": "0z for now. Not confirmed whether NPCs buy it." },
-      { "itemId": 25731, "name": "Zelunium", "sellValue": 0, "note": "0z for now. Not confirmed whether NPCs buy it." }
+      {
+        "itemId": 6075,
+        "name": "Crystalized Teardrop",
+        "sellValue": 325,
+        "note": "Renewal drop added by uaRO; the emulators list it at 0z."
+      },
+      {
+        "itemId": 6073,
+        "name": "Dragon's Mane",
+        "sellValue": 225,
+        "note": "The emulators list it at 0z."
+      },
+      {
+        "itemId": 12361,
+        "name": "Delicious Shaved Ice",
+        "sellValue": 0,
+        "note": "0z. Not confirmed whether NPCs buy it."
+      },
+      {
+        "itemId": 7086,
+        "name": "Emblem of the Sun God",
+        "sellValue": 0,
+        "note": "0z. Not confirmed whether NPCs buy it."
+      },
+      {
+        "itemId": 35661,
+        "name": "Expanded Token Fragment",
+        "sellValue": 0,
+        "note": "uaRO item, not in the emulators."
+      },
+      {
+        "itemId": 14570,
+        "name": "Flail Goblin Ring",
+        "sellValue": 0
+      },
+      {
+        "itemId": 12370,
+        "name": "Girl's Naivety",
+        "sellValue": 0
+      },
+      {
+        "itemId": 14571,
+        "name": "Hammer Goblin Ring",
+        "sellValue": 0
+      },
+      {
+        "itemId": 14569,
+        "name": "Knife Goblin Ring",
+        "sellValue": 0
+      },
+      {
+        "itemId": 25408,
+        "name": "Scatleton Memory",
+        "sellValue": 0,
+        "note": "uaRO custom item. The emulators use this ID for a different item."
+      },
+      {
+        "itemId": 551,
+        "name": "Sushi",
+        "sellValue": 0
+      },
+      {
+        "itemId": 14574,
+        "name": "Vagabond's Skull",
+        "sellValue": 0
+      },
+      {
+        "itemId": 12132,
+        "name": "Santa's Bag",
+        "sellValue": 0,
+        "note": "0z. Not confirmed whether NPCs buy it."
+      },
+      {
+        "itemId": 1750,
+        "name": "Arrow",
+        "sellValue": 0,
+        "note": "Costs 1z, and NPCs pay half, rounded down."
+      },
+      {
+        "itemId": 102723,
+        "name": "Beehive Box",
+        "sellValue": 0,
+        "note": "0z for now. Not confirmed whether NPCs buy it."
+      },
+      {
+        "itemId": 12363,
+        "name": "Ghost Coffin",
+        "sellValue": 0,
+        "note": "0z for now. Not confirmed whether NPCs buy it."
+      },
+      {
+        "itemId": 7049,
+        "name": "Stone",
+        "sellValue": 0,
+        "note": "0z, confirmed in game."
+      },
+      {
+        "itemId": 553,
+        "name": "Bao",
+        "sellValue": 0,
+        "note": "0z, confirmed in game."
+      },
+      {
+        "itemId": 28628,
+        "name": "Forbidden Grimoire [1]",
+        "sellValue": 0,
+        "note": "0z for now. Not confirmed whether NPCs buy it."
+      },
+      {
+        "itemId": 400396,
+        "name": "Ghost Whisper [1]",
+        "sellValue": 0,
+        "note": "0z for now. Not confirmed whether NPCs buy it."
+      },
+      {
+        "itemId": 25731,
+        "name": "Zelunium",
+        "sellValue": 0,
+        "note": "0z for now. Not confirmed whether NPCs buy it."
+      }
     ]
   },
-
   "notSellableToNpc": {
     "about": "Items NPCs won't buy on purpose (currencies, event coins). The NPC column shows ✕ instead of a price.",
     "items": [
-      { "itemId": 11605, "name": "Cookie Bat", "reason": "uaRO rule" },
-      { "itemId": 7539, "name": "Poring Coin", "reason": "uaRO currency" },
-      { "itemId": 12346, "name": "Unripe Acorn", "reason": "uaRO rule" },
-      { "itemId": 25290, "name": "Sweets Festival Coin", "reason": "Event coin" }
+      {
+        "itemId": 11605,
+        "name": "Cookie Bat",
+        "reason": "uaRO rule"
+      },
+      {
+        "itemId": 7539,
+        "name": "Poring Coin",
+        "reason": "uaRO currency"
+      },
+      {
+        "itemId": 12346,
+        "name": "Unripe Acorn",
+        "reason": "uaRO rule"
+      },
+      {
+        "itemId": 25290,
+        "name": "Sweets Festival Coin",
+        "reason": "Event coin"
+      }
     ]
   },
-
   "tradeRestrictions": {
     "about": "Items that can't be traded between players, and the emulator's trade flags we've checked. The emulators often flag items as bound when uaRO lets you trade them, so their flags are only a reminder to check: npm run sync:prices lists flagged items that aren't here.",
     "notTradeable": {
@@ -64,28 +215,85 @@
     "checked": {
       "about": "Items the emulator flags as untradeable or unsellable, checked on uaRO. What actually applies is in notTradeable and notSellableToNpc.",
       "items": [
-        { "itemId": 6075, "name": "Crystalized Teardrop", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 12361, "name": "Delicious Shaved Ice", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 6073, "name": "Dragon's Mane", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 14570, "name": "Flail Goblin Ring", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 12363, "name": "Ghost Coffin", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 12370, "name": "Girl's Naivety", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 7821, "name": "Green Apple", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 14571, "name": "Hammer Goblin Ring", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 5367, "name": "Hyegun Hat [1] (Yao Jun)", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 14569, "name": "Knife Goblin Ring", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 7539, "name": "Poring Coin", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 12346, "name": "Unripe Acorn", "note": "Tradeable and droppable on uaRO (checked in game)." },
-        { "itemId": 14574, "name": "Vagabond's Skull", "note": "Tradeable and droppable on uaRO (checked in game)." }
+        {
+          "itemId": 6075,
+          "name": "Crystalized Teardrop",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 12361,
+          "name": "Delicious Shaved Ice",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 6073,
+          "name": "Dragon's Mane",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 14570,
+          "name": "Flail Goblin Ring",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 12363,
+          "name": "Ghost Coffin",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 12370,
+          "name": "Girl's Naivety",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 7821,
+          "name": "Green Apple",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 14571,
+          "name": "Hammer Goblin Ring",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 5367,
+          "name": "Hyegun Hat [1] (Yao Jun)",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 14569,
+          "name": "Knife Goblin Ring",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 7539,
+          "name": "Poring Coin",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 12346,
+          "name": "Unripe Acorn",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        },
+        {
+          "itemId": 14574,
+          "name": "Vagabond's Skull",
+          "note": "Tradeable and droppable on uaRO (checked in game)."
+        }
       ]
     }
   },
-
   "npcShops": {
     "about": "Which items NPCs sell (npcBuyable in loot.json), filled in by `npm run sync:shops`. By default that's every item in a zeny shop in Hercules' pre-renewal NPC scripts. The lists below add uaRO's renewal shops and its differences.",
     "renewalShops": {
       "about": "Renewal NPC shops uaRO added, read from rAthena: every zeny shop on these maps, plus any shops listed by name (shops that other NPCs open). Once a shop is checked in game, put it in uaroShops instead.",
-      "maps": ["mid_camp", "spl_in01", "spl_in02", "man_in01", "dic_in01"],
+      "maps": [
+        "mid_camp",
+        "spl_in01",
+        "spl_in02",
+        "man_in01",
+        "dic_in01"
+      ],
       "shops": []
     },
     "uaroShops": {
@@ -97,77 +305,340 @@
           "checked": "2026-09-24",
           "source": "In-game screenshots and https://wiki.uaro.net/Dealers/",
           "items": [
-            { "itemId": 611, "name": "Magnifier", "price": 40 },
-            { "itemId": 514, "name": "Grape", "price": 1500 },
-          { "itemId": 536, "name": "Ice Cream", "price": 150 },
-          { "itemId": 517, "name": "Meat", "price": 50 },
-          { "itemId": 579, "name": "Fresh Fish", "price": 250 },
-          { "itemId": 601, "name": "Fly Wing", "price": 60 },
-          { "itemId": 602, "name": "Butterfly Wing", "price": 300 },
-          { "itemId": 645, "name": "Concentration Potion", "price": 800 },
-          { "itemId": 656, "name": "Awakening Potion", "price": 1500 },
-          { "itemId": 657, "name": "Berserk Potion", "price": 3000 },
-          { "itemId": 717, "name": "Blue Gemstone", "price": 600 },
-          { "itemId": 610, "name": "Yggdrasil Leaf", "price": 4000 },
-          { "itemId": 501, "name": "Red Potion", "price": 50 },
-          { "itemId": 502, "name": "Orange Potion", "price": 200 },
-          { "itemId": 503, "name": "Yellow Potion", "price": 550 },
-          { "itemId": 504, "name": "White Potion", "price": 1200 },
-          { "itemId": 505, "name": "Blue Potion", "price": 7000 },
-          { "itemId": 506, "name": "Green Potion", "price": 40 },
-          { "itemId": 7134, "name": "Medicine Bowl", "price": 8 },
-          { "itemId": 1750, "name": "Arrow", "price": 1 },
-          { "itemId": 1752, "name": "Fire Arrow", "price": 3 },
-          { "itemId": 1755, "name": "Arrow of Wind", "price": 3 },
-          { "itemId": 1770, "name": "Iron Arrow", "price": 2 },
-          { "itemId": 1751, "name": "Silver Arrow", "price": 3 },
-          { "itemId": 1773, "name": "Elven Arrow", "price": 10 },
-          { "itemId": 1065, "name": "Trap", "price": 100 },
-          { "itemId": 13200, "name": "Bullet", "price": 1 },
-          { "itemId": 13201, "name": "Silver Bullet", "price": 3 },
-          { "itemId": 13202, "name": "Bloody Shell", "price": 3 },
-          { "itemId": 13250, "name": "Shuriken", "price": 4 },
-          { "itemId": 13251, "name": "Nimbus Shuriken", "price": 5 },
-          { "itemId": 13252, "name": "Flash Shuriken", "price": 8 },
-          { "itemId": 13253, "name": "Sharp Leaf Shuriken", "price": 10 },
-          { "itemId": 13254, "name": "Thorn Needle Shuriken", "price": 20 },
-          { "itemId": 1771, "name": "Venom Knife", "price": 50 }
+            {
+              "itemId": 611,
+              "name": "Magnifier",
+              "price": 40
+            },
+            {
+              "itemId": 514,
+              "name": "Grape",
+              "price": 1500
+            },
+            {
+              "itemId": 536,
+              "name": "Ice Cream",
+              "price": 150
+            },
+            {
+              "itemId": 517,
+              "name": "Meat",
+              "price": 50
+            },
+            {
+              "itemId": 579,
+              "name": "Fresh Fish",
+              "price": 250
+            },
+            {
+              "itemId": 601,
+              "name": "Fly Wing",
+              "price": 60
+            },
+            {
+              "itemId": 602,
+              "name": "Butterfly Wing",
+              "price": 300
+            },
+            {
+              "itemId": 645,
+              "name": "Concentration Potion",
+              "price": 800
+            },
+            {
+              "itemId": 656,
+              "name": "Awakening Potion",
+              "price": 1500
+            },
+            {
+              "itemId": 657,
+              "name": "Berserk Potion",
+              "price": 3000
+            },
+            {
+              "itemId": 717,
+              "name": "Blue Gemstone",
+              "price": 600
+            },
+            {
+              "itemId": 610,
+              "name": "Yggdrasil Leaf",
+              "price": 4000
+            },
+            {
+              "itemId": 501,
+              "name": "Red Potion",
+              "price": 50
+            },
+            {
+              "itemId": 502,
+              "name": "Orange Potion",
+              "price": 200
+            },
+            {
+              "itemId": 503,
+              "name": "Yellow Potion",
+              "price": 550
+            },
+            {
+              "itemId": 504,
+              "name": "White Potion",
+              "price": 1200
+            },
+            {
+              "itemId": 505,
+              "name": "Blue Potion",
+              "price": 7000
+            },
+            {
+              "itemId": 506,
+              "name": "Green Potion",
+              "price": 40
+            },
+            {
+              "itemId": 7134,
+              "name": "Medicine Bowl",
+              "price": 8
+            },
+            {
+              "itemId": 1750,
+              "name": "Arrow",
+              "price": 1
+            },
+            {
+              "itemId": 1752,
+              "name": "Fire Arrow",
+              "price": 3
+            },
+            {
+              "itemId": 1755,
+              "name": "Arrow of Wind",
+              "price": 3
+            },
+            {
+              "itemId": 1770,
+              "name": "Iron Arrow",
+              "price": 2
+            },
+            {
+              "itemId": 1751,
+              "name": "Silver Arrow",
+              "price": 3
+            },
+            {
+              "itemId": 1773,
+              "name": "Elven Arrow",
+              "price": 10
+            },
+            {
+              "itemId": 1065,
+              "name": "Trap",
+              "price": 100
+            },
+            {
+              "itemId": 13200,
+              "name": "Bullet",
+              "price": 1
+            },
+            {
+              "itemId": 13201,
+              "name": "Silver Bullet",
+              "price": 3
+            },
+            {
+              "itemId": 13202,
+              "name": "Bloody Shell",
+              "price": 3
+            },
+            {
+              "itemId": 13250,
+              "name": "Shuriken",
+              "price": 4
+            },
+            {
+              "itemId": 13251,
+              "name": "Nimbus Shuriken",
+              "price": 5
+            },
+            {
+              "itemId": 13252,
+              "name": "Flash Shuriken",
+              "price": 8
+            },
+            {
+              "itemId": 13253,
+              "name": "Sharp Leaf Shuriken",
+              "price": 10
+            },
+            {
+              "itemId": 13254,
+              "name": "Thorn Needle Shuriken",
+              "price": 20
+            },
+            {
+              "itemId": 1771,
+              "name": "Venom Knife",
+              "price": 50
+            }
           ]
         },
         {
           "name": "Pet Dealer",
           "checked": "2026-09-24",
           "items": [
-            { "itemId": 537, "name": "Pet Food", "price": 1000 },
-            { "itemId": 643, "name": "Pet Incubator", "price": 3000 },
-            { "itemId": 10013, "name": "Backpack", "price": 1500 },
-            { "itemId": 10014, "name": "Rocker Glasses", "price": 2000 },
-            { "itemId": 554, "name": "Mochi", "price": 400 },
-            { "itemId": 6114, "name": "Flame Gemstone", "price": 1000 },
-            { "itemId": 6110, "name": "Yellow Vital Flower", "price": 1000, "note": "Shown in game as \"Vital Flower\" (the yellow one)." },
-            { "itemId": 6113, "name": "Blue Vital Flower", "price": 1000, "note": "Shown in game as \"Vital Flower\" (the blue one)." },
-            { "itemId": 6115, "name": "Bun", "price": 1000 },
-            { "itemId": 6100, "name": "Damp Darkness", "price": 1000 },
-            { "itemId": 6098, "name": "Small Snow Flower", "price": 1000 },
-            { "itemId": 6112, "name": "Fresh Plant", "price": 1000 },
-            { "itemId": 6104, "name": "Big Cell", "price": 1000 },
-            { "itemId": 6108, "name": "Apple Pudding", "price": 1000 },
-            { "itemId": 6111, "name": "Mystic Stone", "price": 1000 },
-            { "itemId": 6095, "name": "Flavored Alcohol", "price": 1000 },
-            { "itemId": 6099, "name": "Grilled Rice Cake", "price": 20 },
-            { "itemId": 6096, "name": "Fish with Blue Back", "price": 20 },
-            { "itemId": 6097, "name": "Pumpkin Pie", "price": 20, "note": "Shown in game as \"Pumpkin Pie(Pet Food)\"." },
-            { "itemId": 7822, "name": "Whole Barbecue", "price": 1200 },
-            { "itemId": 7823, "name": "Meat Veg Skewer", "price": 1200 },
-            { "itemId": 6107, "name": "Sunset on the Rock", "price": 1200 },
-            { "itemId": 6105, "name": "Morning Dew", "price": 1200 },
-            { "itemId": 6106, "name": "Well Ripened Berry", "price": 1200 },
-            { "itemId": 6109, "name": "Plant Neutrient", "price": 1200 },
-            { "itemId": 11616, "name": "Delicious Meat", "price": 1400 },
-            { "itemId": 25231, "name": "Suspicious Bottle", "price": 4000 },
-            { "itemId": 25377, "name": "Luxurious Pet Food", "price": 5000 },
-            { "itemId": 25233, "name": "Cotton Wads", "price": 2500 },
-            { "itemId": 7821, "name": "Green Apple", "price": 2500 }
+            {
+              "itemId": 537,
+              "name": "Pet Food",
+              "price": 1000
+            },
+            {
+              "itemId": 643,
+              "name": "Pet Incubator",
+              "price": 3000
+            },
+            {
+              "itemId": 10013,
+              "name": "Backpack",
+              "price": 1500
+            },
+            {
+              "itemId": 10014,
+              "name": "Rocker Glasses",
+              "price": 2000
+            },
+            {
+              "itemId": 554,
+              "name": "Mochi",
+              "price": 400
+            },
+            {
+              "itemId": 6114,
+              "name": "Flame Gemstone",
+              "price": 1000
+            },
+            {
+              "itemId": 6110,
+              "name": "Yellow Vital Flower",
+              "price": 1000,
+              "note": "Shown in game as \"Vital Flower\" (the yellow one)."
+            },
+            {
+              "itemId": 6113,
+              "name": "Blue Vital Flower",
+              "price": 1000,
+              "note": "Shown in game as \"Vital Flower\" (the blue one)."
+            },
+            {
+              "itemId": 6115,
+              "name": "Bun",
+              "price": 1000
+            },
+            {
+              "itemId": 6100,
+              "name": "Damp Darkness",
+              "price": 1000
+            },
+            {
+              "itemId": 6098,
+              "name": "Small Snow Flower",
+              "price": 1000
+            },
+            {
+              "itemId": 6112,
+              "name": "Fresh Plant",
+              "price": 1000
+            },
+            {
+              "itemId": 6104,
+              "name": "Big Cell",
+              "price": 1000
+            },
+            {
+              "itemId": 6108,
+              "name": "Apple Pudding",
+              "price": 1000
+            },
+            {
+              "itemId": 6111,
+              "name": "Mystic Stone",
+              "price": 1000
+            },
+            {
+              "itemId": 6095,
+              "name": "Flavored Alcohol",
+              "price": 1000
+            },
+            {
+              "itemId": 6099,
+              "name": "Grilled Rice Cake",
+              "price": 20
+            },
+            {
+              "itemId": 6096,
+              "name": "Fish with Blue Back",
+              "price": 20
+            },
+            {
+              "itemId": 6097,
+              "name": "Pumpkin Pie",
+              "price": 20,
+              "note": "Shown in game as \"Pumpkin Pie(Pet Food)\"."
+            },
+            {
+              "itemId": 7822,
+              "name": "Whole Barbecue",
+              "price": 1200
+            },
+            {
+              "itemId": 7823,
+              "name": "Meat Veg Skewer",
+              "price": 1200
+            },
+            {
+              "itemId": 6107,
+              "name": "Sunset on the Rock",
+              "price": 1200
+            },
+            {
+              "itemId": 6105,
+              "name": "Morning Dew",
+              "price": 1200
+            },
+            {
+              "itemId": 6106,
+              "name": "Well Ripened Berry",
+              "price": 1200
+            },
+            {
+              "itemId": 6109,
+              "name": "Plant Neutrient",
+              "price": 1200
+            },
+            {
+              "itemId": 11616,
+              "name": "Delicious Meat",
+              "price": 1400
+            },
+            {
+              "itemId": 25231,
+              "name": "Suspicious Bottle",
+              "price": 4000
+            },
+            {
+              "itemId": 25377,
+              "name": "Luxurious Pet Food",
+              "price": 5000
+            },
+            {
+              "itemId": 25233,
+              "name": "Cotton Wads",
+              "price": 2500
+            },
+            {
+              "itemId": 7821,
+              "name": "Green Apple",
+              "price": 2500
+            }
           ]
         },
         {
@@ -176,23 +647,94 @@
           "checked": "2026-09-24",
           "source": "In-game screenshots and https://wiki.uaro.net/Dealers/",
           "items": [
-            { "itemId": 13250, "name": "Shuriken", "price": 4 },
-            { "itemId": 13251, "name": "Nimbus Shuriken", "price": 5 },
-            { "itemId": 13252, "name": "Flash Shuriken", "price": 8 },
-            { "itemId": 13253, "name": "Sharp Leaf Shuriken", "price": 10 },
-            { "itemId": 13254, "name": "Thorn Needle Shuriken", "price": 20 },
-            { "itemId": 13255, "name": "Icicle Kunai", "price": 10 },
-            { "itemId": 13256, "name": "Black Earth Kunai", "price": 10 },
-            { "itemId": 13258, "name": "Heat Wave Kunai", "price": 10 },
-            { "itemId": 13257, "name": "High Wind Kunai", "price": 10 },
-            { "itemId": 13259, "name": "Fell Poison Kunai", "price": 10 },
-            { "itemId": 35360, "name": "Hamaya Kunai", "price": 10, "note": "uaRO item; not in the emulators." },
-            { "itemId": 35361, "name": "Shadow Kunai", "price": 10, "note": "uaRO item; not in the emulators." },
-            { "itemId": 35362, "name": "Formless Kunai", "price": 10, "note": "uaRO item; not in the emulators." },
-            { "itemId": 7521, "name": "Flame Stone", "price": 15 },
-            { "itemId": 7522, "name": "Ice Stone", "price": 15 },
-            { "itemId": 7523, "name": "Wind Stone", "price": 15 },
-            { "itemId": 7524, "name": "Shadow Orb", "price": 30 }
+            {
+              "itemId": 13250,
+              "name": "Shuriken",
+              "price": 4
+            },
+            {
+              "itemId": 13251,
+              "name": "Nimbus Shuriken",
+              "price": 5
+            },
+            {
+              "itemId": 13252,
+              "name": "Flash Shuriken",
+              "price": 8
+            },
+            {
+              "itemId": 13253,
+              "name": "Sharp Leaf Shuriken",
+              "price": 10
+            },
+            {
+              "itemId": 13254,
+              "name": "Thorn Needle Shuriken",
+              "price": 20
+            },
+            {
+              "itemId": 13255,
+              "name": "Icicle Kunai",
+              "price": 10
+            },
+            {
+              "itemId": 13256,
+              "name": "Black Earth Kunai",
+              "price": 10
+            },
+            {
+              "itemId": 13258,
+              "name": "Heat Wave Kunai",
+              "price": 10
+            },
+            {
+              "itemId": 13257,
+              "name": "High Wind Kunai",
+              "price": 10
+            },
+            {
+              "itemId": 13259,
+              "name": "Fell Poison Kunai",
+              "price": 10
+            },
+            {
+              "itemId": 35360,
+              "name": "Hamaya Kunai",
+              "price": 10,
+              "note": "uaRO item; not in the emulators."
+            },
+            {
+              "itemId": 35361,
+              "name": "Shadow Kunai",
+              "price": 10,
+              "note": "uaRO item; not in the emulators."
+            },
+            {
+              "itemId": 35362,
+              "name": "Formless Kunai",
+              "price": 10,
+              "note": "uaRO item; not in the emulators."
+            },
+            {
+              "itemId": 7521,
+              "name": "Flame Stone",
+              "price": 15
+            },
+            {
+              "itemId": 7522,
+              "name": "Ice Stone",
+              "price": 15
+            },
+            {
+              "itemId": 7523,
+              "name": "Wind Stone",
+              "price": 15
+            },
+            {
+              "itemId": 7524,
+              "name": "Shadow Orb",
+              "price": 30
+            }
           ]
         },
         {
@@ -201,20 +743,80 @@
           "checked": "2026-09-24",
           "source": "In-game screenshots and https://wiki.uaro.net/Dealers/",
           "items": [
-            { "itemId": 13200, "name": "Bullet", "price": 1 },
-            { "itemId": 13201, "name": "Silver Bullet", "price": 3 },
-            { "itemId": 13202, "name": "Bloody Shell", "price": 3 },
-            { "itemId": 13228, "name": "Flare Bullet", "price": 3 },
-            { "itemId": 13229, "name": "Lightning Bullet", "price": 3, "note": "The wiki says 13299, which doesn't exist; 13229 is Lightning Bullet in the emulators." },
-            { "itemId": 13230, "name": "Ice Bullet", "price": 3 },
-            { "itemId": 13219, "name": "Stone Bullet", "price": 3, "note": "ID from the wiki; rAthena calls it Magic Stone Bullet." },
-            { "itemId": 13231, "name": "Poison Bullet", "price": 3 },
-            { "itemId": 13232, "name": "Dark Bullet", "price": 3, "note": "ID from the wiki; rAthena calls it Blind Bullet." },
-            { "itemId": 13206, "name": "Blind Sphere", "price": 10 },
-            { "itemId": 13203, "name": "Flare Sphere", "price": 10, "note": "The wiki says Flame Sphere; the game shows Flare Sphere." },
-            { "itemId": 13207, "name": "Freezing Sphere", "price": 10 },
-            { "itemId": 13204, "name": "Lightning Sphere", "price": 10 },
-            { "itemId": 13205, "name": "Poison Sphere", "price": 10 }
+            {
+              "itemId": 13200,
+              "name": "Bullet",
+              "price": 1
+            },
+            {
+              "itemId": 13201,
+              "name": "Silver Bullet",
+              "price": 3
+            },
+            {
+              "itemId": 13202,
+              "name": "Bloody Shell",
+              "price": 3
+            },
+            {
+              "itemId": 13228,
+              "name": "Flare Bullet",
+              "price": 3
+            },
+            {
+              "itemId": 13229,
+              "name": "Lightning Bullet",
+              "price": 3,
+              "note": "The wiki says 13299, which doesn't exist; 13229 is Lightning Bullet in the emulators."
+            },
+            {
+              "itemId": 13230,
+              "name": "Ice Bullet",
+              "price": 3
+            },
+            {
+              "itemId": 13219,
+              "name": "Stone Bullet",
+              "price": 3,
+              "note": "ID from the wiki; rAthena calls it Magic Stone Bullet."
+            },
+            {
+              "itemId": 13231,
+              "name": "Poison Bullet",
+              "price": 3
+            },
+            {
+              "itemId": 13232,
+              "name": "Dark Bullet",
+              "price": 3,
+              "note": "ID from the wiki; rAthena calls it Blind Bullet."
+            },
+            {
+              "itemId": 13206,
+              "name": "Blind Sphere",
+              "price": 10
+            },
+            {
+              "itemId": 13203,
+              "name": "Flare Sphere",
+              "price": 10,
+              "note": "The wiki says Flame Sphere; the game shows Flare Sphere."
+            },
+            {
+              "itemId": 13207,
+              "name": "Freezing Sphere",
+              "price": 10
+            },
+            {
+              "itemId": 13204,
+              "name": "Lightning Sphere",
+              "price": 10
+            },
+            {
+              "itemId": 13205,
+              "name": "Poison Sphere",
+              "price": 10
+            }
           ]
         },
         {
@@ -222,16 +824,57 @@
           "checked": "2026-09-24",
           "source": "In-game screenshots (only part of the shop). IDs are the slotted versions with these prices in Hercules.",
           "items": [
-            { "itemId": 1401, "name": "Javelin [3]", "price": 150 },
-            { "itemId": 1404, "name": "Spear [3]", "price": 1700 },
-            { "itemId": 1407, "name": "Pike [3]", "price": 3450 },
-            { "itemId": 1451, "name": "Guisarme [2]", "price": 13000 },
-            { "itemId": 1454, "name": "Glaive [2]", "price": 20000 },
-            { "itemId": 1457, "name": "Partizan", "price": 27000 },
-            { "itemId": 1463, "name": "Halberd [1]", "price": 54000, "note": "Shown in game as \"Hallberd\"." },
-            { "itemId": 1410, "name": "Lance", "price": 60000 },
-            { "itemId": 1146, "name": "Town Sword [1]", "price": 42000 },
-            { "itemId": 1245, "name": "Cinquedea [1]", "price": 40000 }
+            {
+              "itemId": 1401,
+              "name": "Javelin [3]",
+              "price": 150
+            },
+            {
+              "itemId": 1404,
+              "name": "Spear [3]",
+              "price": 1700
+            },
+            {
+              "itemId": 1407,
+              "name": "Pike [3]",
+              "price": 3450
+            },
+            {
+              "itemId": 1451,
+              "name": "Guisarme [2]",
+              "price": 13000
+            },
+            {
+              "itemId": 1454,
+              "name": "Glaive [2]",
+              "price": 20000
+            },
+            {
+              "itemId": 1457,
+              "name": "Partizan",
+              "price": 27000
+            },
+            {
+              "itemId": 1463,
+              "name": "Halberd [1]",
+              "price": 54000,
+              "note": "Shown in game as \"Hallberd\"."
+            },
+            {
+              "itemId": 1410,
+              "name": "Lance",
+              "price": 60000
+            },
+            {
+              "itemId": 1146,
+              "name": "Town Sword [1]",
+              "price": 42000
+            },
+            {
+              "itemId": 1245,
+              "name": "Cinquedea [1]",
+              "price": 40000
+            }
           ]
         }
       ]
@@ -239,50 +882,178 @@
     "soldByNpc": {
       "about": "Items uaRO NPCs sell that aren't in the emulators' shops (use uaroShops when you know the shop). Items don't need to be in loot.json.",
       "items": [
-        { "itemId": 1026, "name": "Acorn", "note": "Acorn Dealer in Moscovia (/navi moscovia 208/182), per the uaRO wiki's Repeatable Quests page." },
-        { "itemId": 7472, "name": "Level 1 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
-        { "itemId": 7473, "name": "Level 2 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
-        { "itemId": 7474, "name": "Level 3 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
-        { "itemId": 7475, "name": "Level 4 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
-        { "itemId": 7476, "name": "Level 5 Cookbook", "note": "Charles Orleans in Prontera Castle (cooking quest NPC)." },
-        { "itemId": 12125, "name": "Outdoor Cooking Kit", "note": "Madeleine Chu in Prontera Castle sells it for zeny (script menu, not a shop window)." },
-        { "itemId": 12126, "name": "Home Cooking Kit", "note": "Madeleine Chu in Prontera Castle sells it for zeny (script menu, not a shop window)." },
-        { "itemId": 732, "name": "3carat Diamond", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
-        { "itemId": 2605, "name": "Brooch [0]", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
-        { "itemId": 713, "name": "Empty Bottle", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." },
-        { "itemId": 2271, "name": "Jack be Dandy", "note": "From the original sheet; not in the emulators' shops. Needs checking in game." }
+        {
+          "itemId": 1026,
+          "name": "Acorn",
+          "note": "Acorn Dealer in Moscovia (/navi moscovia 208/182), per the uaRO wiki's Repeatable Quests page."
+        },
+        {
+          "itemId": 7472,
+          "name": "Level 1 Cookbook",
+          "note": "Charles Orleans in Prontera Castle (cooking quest NPC)."
+        },
+        {
+          "itemId": 7473,
+          "name": "Level 2 Cookbook",
+          "note": "Charles Orleans in Prontera Castle (cooking quest NPC)."
+        },
+        {
+          "itemId": 7474,
+          "name": "Level 3 Cookbook",
+          "note": "Charles Orleans in Prontera Castle (cooking quest NPC)."
+        },
+        {
+          "itemId": 7475,
+          "name": "Level 4 Cookbook",
+          "note": "Charles Orleans in Prontera Castle (cooking quest NPC)."
+        },
+        {
+          "itemId": 7476,
+          "name": "Level 5 Cookbook",
+          "note": "Charles Orleans in Prontera Castle (cooking quest NPC)."
+        },
+        {
+          "itemId": 12125,
+          "name": "Outdoor Cooking Kit",
+          "note": "Madeleine Chu in Prontera Castle sells it for zeny (script menu, not a shop window)."
+        },
+        {
+          "itemId": 12126,
+          "name": "Home Cooking Kit",
+          "note": "Madeleine Chu in Prontera Castle sells it for zeny (script menu, not a shop window)."
+        },
+        {
+          "itemId": 732,
+          "name": "3carat Diamond",
+          "note": "From the original sheet; not in the emulators' shops. Needs checking in game."
+        },
+        {
+          "itemId": 2605,
+          "name": "Brooch [0]",
+          "note": "From the original sheet; not in the emulators' shops. Needs checking in game."
+        },
+        {
+          "itemId": 713,
+          "name": "Empty Bottle",
+          "note": "From the original sheet; not in the emulators' shops. Needs checking in game."
+        },
+        {
+          "itemId": 2271,
+          "name": "Jack be Dandy",
+          "note": "From the original sheet; not in the emulators' shops. Needs checking in game."
+        },
+        {
+          "itemId": 6265,
+          "name": "Pineapple",
+          "note": "NPCs sell it on uaRO (checked by the maintainer); shop not recorded yet. Asked for by the El Dicastes daily quest."
+        },
+        {
+          "itemId": 6264,
+          "name": "Melon",
+          "note": "NPCs sell it on uaRO (checked by the maintainer); shop not recorded yet. Asked for by the El Dicastes daily quest."
+        }
       ]
     },
     "notSoldByNpc": {
       "about": "Items the emulators' shops sell but uaRO's NPCs don't. Items don't need to be in loot.json.",
       "items": [
-        { "itemId": 1460, "name": "Trident [2]", "note": "No longer sold by NPCs on uaRO." }
+        {
+          "itemId": 1460,
+          "name": "Trident [2]",
+          "note": "No longer sold by NPCs on uaRO."
+        }
       ]
     }
   },
-
   "renewalContent": {
     "about": "Renewal areas uaRO added. Drops here may be tweaked by uaRO, so they are NOT added automatically. `npm run sync:prices` only checks the prices of items dropped here against rAthena's renewal data and lists differences for review. When they differ, the pre-renewal price is used.",
     "reviewedPrices": {
       "about": "Renewal-area items whose renewal price differs, already reviewed: they keep their pre-renewal price. The sync stops listing these.",
       "items": [
-        { "itemId": 579, "name": "Fresh Fish" },
-        { "itemId": 969, "name": "Gold" },
-        { "itemId": 716, "name": "Red Gemstone" },
-        { "itemId": 912, "name": "Zargon" }
+        {
+          "itemId": 579,
+          "name": "Fresh Fish"
+        },
+        {
+          "itemId": 969,
+          "name": "Gold"
+        },
+        {
+          "itemId": 716,
+          "name": "Red Gemstone"
+        },
+        {
+          "itemId": 912,
+          "name": "Zargon"
+        }
       ]
     },
     "areas": [
-      { "name": "Splendide", "spawnFile": "npc/re/mobs/fields/splendide.txt", "maps": ["spl_fild01", "spl_fild02", "spl_fild03"] },
-      { "name": "Manuk", "spawnFile": "npc/re/mobs/fields/manuk.txt", "maps": ["man_fild01", "man_fild02", "man_fild03"] },
-      { "name": "Nidhogg's Nest", "spawnFile": "npc/re/mobs/dungeons/nyd_dun.txt", "maps": ["nyd_dun01", "nyd_dun02"] },
-      { "name": "El Dicastes", "spawnFile": "npc/re/mobs/fields/dicastes.txt", "maps": ["dic_fild01", "dic_fild02"] },
-      { "name": "Scaraba Dungeon", "spawnFile": "npc/re/mobs/dungeons/dic_dun.txt", "maps": ["dic_dun01", "dic_dun02", "dic_dun03"] },
-      { "name": "Biolab 4", "spawnFile": "npc/re/mobs/dungeons/lhz_dun.txt", "maps": ["lhz_dun04"] },
+      {
+        "name": "Splendide",
+        "spawnFile": "npc/re/mobs/fields/splendide.txt",
+        "maps": [
+          "spl_fild01",
+          "spl_fild02",
+          "spl_fild03"
+        ]
+      },
+      {
+        "name": "Manuk",
+        "spawnFile": "npc/re/mobs/fields/manuk.txt",
+        "maps": [
+          "man_fild01",
+          "man_fild02",
+          "man_fild03"
+        ]
+      },
+      {
+        "name": "Nidhogg's Nest",
+        "spawnFile": "npc/re/mobs/dungeons/nyd_dun.txt",
+        "maps": [
+          "nyd_dun01",
+          "nyd_dun02"
+        ]
+      },
+      {
+        "name": "El Dicastes",
+        "spawnFile": "npc/re/mobs/fields/dicastes.txt",
+        "maps": [
+          "dic_fild01",
+          "dic_fild02"
+        ]
+      },
+      {
+        "name": "Scaraba Dungeon",
+        "spawnFile": "npc/re/mobs/dungeons/dic_dun.txt",
+        "maps": [
+          "dic_dun01",
+          "dic_dun02",
+          "dic_dun03"
+        ]
+      },
+      {
+        "name": "Biolab 4",
+        "spawnFile": "npc/re/mobs/dungeons/lhz_dun.txt",
+        "maps": [
+          "lhz_dun04"
+        ]
+      },
       {
         "name": "Horror Toy Factory",
         "source": "https://wiki.uaro.net/Horror_Toy_Factory/",
-        "monsters": [2987, 2988, 2989, 2991, 2992, 2993, 2994, 2995, 2996, 2997]
+        "monsters": [
+          2987,
+          2988,
+          2989,
+          2991,
+          2992,
+          2993,
+          2994,
+          2995,
+          2996,
+          2997
+        ]
       }
     ]
   }
