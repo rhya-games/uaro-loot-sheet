@@ -63,7 +63,7 @@ You only need a free GitHub account.
 - Numbers have no commas or quotes: `15500`, not `"15,500"`. Unknown values are `null`.
 - If an NPC sells the item (`npcBuyable` is `"yes"` or `"npc-only"`), use `NPC` instead of `Vend` or `Whobuy`, and leave `avgVend` and `avgWhobuy` as `null` (the site shows ✕).
 - Cards can't be bought from NPCs (`npcBuyable` is always `"no"`).
-- Every item needs at least one category. Use `["Uncategorized"]` if none fit.
+- Every item needs at least one category. Use `["Not Reviewed"]` until someone has checked what it's for, and `["No Use"]` once you've checked and nothing uses it (it can't have uses or other categories).
 - Spell each `uses` target (`for`) the same way on every item, so the "Used For" filter groups them.
 - Dates are `YYYY-MM-DD`.
 
@@ -120,7 +120,11 @@ When an item turns out to be sold by NPCs, the sync changes its Vend/Whobuy acti
 
 ## Changelog
 
-When you make a noticeable change, add an entry at the top of [`src/data/changelog.js`](src/data/changelog.js). There's a copy-and-paste template at the top of that file.
+When you make a noticeable change, add it to [`src/data/changelog.js`](src/data/changelog.js). There's a copy-and-paste template at the top of that file.
+
+- **One entry per day.** If today already has an entry, add your change to it.
+- **Each day gets a version** ([Semantic Versioning](https://semver.org), staying at 0.x until the first real release): something new or changed raises the middle number (0.2.3 → 0.3.0); only fixes raise the last one (0.3.0 → 0.3.1). Put the same version in `package.json` (`npm version 0.3.0 --no-git-tag-version`). `npm run validate` checks that they match.
+- Merging to `main` deploys the site and publishes a GitHub release (`v0.3.0`) with that day's notes.
 
 ## Wording
 

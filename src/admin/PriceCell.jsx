@@ -1,5 +1,5 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { useAdmin } from './AdminContext.jsx';
+import { useLayoutEffect, useRef, useState } from 'react';
+import { useAdmin } from './useAdmin.js';
 import { parseZeny, todayText } from '../utils/format.js';
 import { PlayerPrice } from '../components/StatusIcons.jsx';
 import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
@@ -49,8 +49,12 @@ function PriceInput({ item, field }) {
   const inputRef = useRef(null);
   const caret = useRef(null); // where the cursor goes after commas are added
 
-  // Show the new value after a save.
-  useEffect(() => setText(asText(saved)), [saved]);
+  // Show the new value after a save (set while drawing, React's way to follow a prop).
+  const [shownSaved, setShownSaved] = useState(saved);
+  if (saved !== shownSaved) {
+    setShownSaved(saved);
+    setText(asText(saved));
+  }
 
   // Adding commas moves the text around, so put the cursor back after the
   // same number of typed characters (commas don't count).

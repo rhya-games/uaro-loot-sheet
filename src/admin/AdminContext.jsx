@@ -1,5 +1,5 @@
-import { createContext, useCallback, useContext, useMemo, useRef, useState } from 'react';
-import loot from '../data/loot.json' with { type: 'json' };
+import { useCallback, useMemo, useRef, useState } from 'react';
+import { ADMIN_AVAILABLE, AdminContext, SITE_ITEMS } from './useAdmin.js';
 import { createSuggester } from '../utils/suggest.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 
@@ -12,15 +12,13 @@ import { readPreference, writePreference } from '../utils/preferences.js';
  * its search, filters and scroll position. The published site has no
  * server, so ADMIN_AVAILABLE is false there and none of this shows.
  *
+ * The context and the useAdmin() hook live in useAdmin.js (so this file
+ * only exports a component, which keeps editing it smooth under `npm run dev`).
  * The table reads admin state from this context instead of props, so the
  * memo'd item list doesn't need new props to show or hide the editors.
  * The loot page reads `items` from here too (on the published site it's
  * just loot.json).
  */
-export const ADMIN_AVAILABLE = import.meta.env.DEV;
-
-const AdminContext = createContext({ enabled: false, items: loot });
-
 /** Sends one item's changes to the dev server and returns the saved item. Throws on failure. */
 async function postItem(id, changes) {
   const response = await fetch(`${import.meta.env.BASE_URL}__admin/item`, {
@@ -35,7 +33,7 @@ async function postItem(id, changes) {
 
 export function AdminProvider({ children }) {
   const [enabled, setEnabled] = useState(() => ADMIN_AVAILABLE && readPreference('admin', false));
-  const [items, setItems] = useState(loot);
+  const [items, setItems] = useState(SITE_ITEMS);
 
   // The latest items, for saves that finish one after another (tabbing from
   // Vend to Whobuy saves twice in a row).
@@ -74,6 +72,3 @@ export function AdminProvider({ children }) {
   );
   return <AdminContext.Provider value={value}>{children}</AdminContext.Provider>;
 }
-
-/** { available, enabled, setEnabled, items, suggest(item), saveItem(id, changes) } */
-export const useAdmin = () => useContext(AdminContext);

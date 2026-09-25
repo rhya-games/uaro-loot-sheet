@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
 import CopyItemId from './CopyItemId.jsx';
@@ -9,14 +10,15 @@ import { OVERCHARGE_LEVEL } from '../utils/prices.js';
 
 /**
  * One loot item shown as a card: name, what to do with it, what it's for,
- * and prices. Used on small screens (see ItemList).
+ * and prices. Used on small screens (see ItemList). Wrapped in `memo`, like
+ * table rows, so typing only redraws the cards that changed.
  *
  * Props:
  *   item        - one entry from src/data/loot.json
  *   onSelectUse - called when a "Used For" target is clicked
  *   highlightUses - which "Used For" entries to bring forward (see ItemUses)
  */
-export default function ItemCard({ item, onSelectUse, highlightUses }) {
+export default memo(function ItemCard({ item, onSelectUse, highlightUses }) {
   return (
     <article className="panel p-4">
       <header className="flex flex-wrap items-start justify-between gap-2">
@@ -59,7 +61,7 @@ export default function ItemCard({ item, onSelectUse, highlightUses }) {
       </dl>
     </article>
   );
-}
+});
 
 /** One label/value pair in the price row. */
 function Stat({ label, value }) {

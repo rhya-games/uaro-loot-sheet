@@ -1,6 +1,8 @@
 import { memo } from 'react';
 import ItemCard from './ItemCard.jsx';
 import ItemTable from './ItemTable.jsx';
+import { highlightFor } from '../utils/highlight.js';
+import { useProgressiveList } from '../utils/useProgressiveList.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
 
 /**
@@ -27,10 +29,7 @@ import { useMediaQuery } from '../utils/useMediaQuery.js';
  */
 export default memo(function ItemList({ items, sort, onSort, onSelectUse, highlightUses }) {
   const showTable = useMediaQuery('(min-width: 768px)');
-
-  if (items.length === 0) {
-    return <p className="py-12 text-center text-muted">No items match your search or filters.</p>;
-  }
+  const shown = useProgressiveList(items);
 
   return (
     <div className="@container">
@@ -40,7 +39,7 @@ export default memo(function ItemList({ items, sort, onSort, onSelectUse, highli
             @max-table-fit:shadow-sm"
         >
           <ItemTable
-            items={items}
+            items={shown}
             sort={sort}
             onSort={onSort}
             onSelectUse={onSelectUse}
@@ -49,9 +48,9 @@ export default memo(function ItemList({ items, sort, onSort, onSelectUse, highli
         </div>
       ) : (
         <ul className="space-y-3">
-          {items.map((item) => (
+          {shown.map((item) => (
             <li key={item.id}>
-              <ItemCard item={item} onSelectUse={onSelectUse} highlightUses={highlightUses} />
+              <ItemCard item={item} onSelectUse={onSelectUse} highlightUses={highlightFor(item, highlightUses)} />
             </li>
           ))}
         </ul>

@@ -35,7 +35,8 @@ export default function Tooltip({ text, placement = 'top', className = 'inline-f
   const [open, setOpen] = useState(false);
   const { mounted, visible } = usePresence(open, 150);
   const id = useId();
-  const referenceRef = useRef(null);
+  // The wrapper element, kept in state (not a ref) because the floating label reads it while drawing.
+  const [reference, setReference] = useState(null);
   const hoverTimer = useRef(null);
 
   const show = () => setOpen(true);
@@ -47,7 +48,7 @@ export default function Tooltip({ text, placement = 'top', className = 'inline-f
 
   return (
     <span
-      ref={referenceRef}
+      ref={setReference}
       className={className}
       onMouseEnter={() => {
         clearTimeout(hoverTimer.current);
@@ -69,7 +70,7 @@ export default function Tooltip({ text, placement = 'top', className = 'inline-f
       <span id={id} hidden>
         {text}
       </span>
-      {mounted && <FloatingLabel reference={referenceRef.current} text={text} placement={placement} visible={visible} />}
+      {mounted && <FloatingLabel reference={reference} text={text} placement={placement} visible={visible} />}
     </span>
   );
 }
@@ -80,8 +81,9 @@ export default function Tooltip({ text, placement = 'top', className = 'inline-f
  * tooltip in the table.
  */
 function FloatingLabel({ reference, text, placement, visible }) {
-  const { refs, floatingStyles } = useFloating({
-    elements: { reference },
+  const [floating, setFloating] = useState(null);
+  const { floatingStyles } = useFloating({
+    elements: { reference, floating },
     placement,
     strategy: 'fixed',
     middleware: [offset(8), flip({ padding: 8 }), shift({ padding: 8 })],
@@ -90,7 +92,7 @@ function FloatingLabel({ reference, text, placement, visible }) {
 
   return createPortal(
     <span
-      ref={refs.setFloating}
+      ref={setFloating}
       style={floatingStyles}
       aria-hidden="true"
       className={`pointer-events-none z-[60] rounded-md bg-gray-900 px-2 py-1 text-xs font-medium whitespace-pre

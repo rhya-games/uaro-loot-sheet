@@ -18,6 +18,8 @@ Then open http://localhost:5173/uaro-loot-sheet/
 | --- | --- |
 | `npm run dev` | Starts the site locally and reloads as you edit. |
 | `npm run validate` | Checks `src/data/loot.json` for mistakes. |
+| `npm run lint` | Checks the code for mistakes (ESLint). |
+| `npm test` | Runs the unit tests (search, share links, prices, suggestions). |
 | `npm run check:uses -- recipes.json` | Compares a list of recipes (for example, a quest table from the uaRO wiki) with the "Used For" data and lists the differences. |
 | `npm run sync:shops` | Updates which items NPCs sell (Hercules pre-renewal shops, plus uaRO's renewal shops from rAthena). Add `-- --check` to only list differences. |
 | `npm run sync:prices` | Updates NPC sell prices (Hercules pre-renewal, rAthena renewal for renewal-only items) and the Overcharge bonus. Add `-- --check` to only list differences. |
@@ -26,8 +28,8 @@ Then open http://localhost:5173/uaro-loot-sheet/
 
 ### Admin mode
 
-While `npm run dev` is running, the header has an **Admin** button. Turn it
-on to type vend and @whobuy prices straight into the table: press Enter (or
+While `npm run dev` is running, the loot page has an **Admin** button next
+to Share. Turn it on to type vend and @whobuy prices straight into the table: press Enter (or
 click away) to save to `src/data/loot.json`, which also marks the item as
 verified today. Shorthand works: `12k`, `1.5m`. Type `0` or `none` when
 nobody was buying or selling; the site shows it as "None". Escape puts the old price

@@ -50,7 +50,7 @@
           }
         },
         "categories": {
-          "description": "What the item is used for. An item can be in several categories. Use [\"Uncategorized\"] if none fit.",
+          "description": "What the item is used for. An item can be in several categories. Use [\"Not Reviewed\"] until someone checks, or [\"No Use\"] if nothing uses it.",
           "type": "array",
           "uniqueItems": true,
           "items": {
@@ -184,7 +184,7 @@
       ]
     },
     "category": {
-      "description": "Allowed categories: what the item is used for. To add a new one, add it here (keep A-Z order; the colors follow it). \"Uncategorized\" stays last. (Consumable / Equipment / Misc are item types, not categories.)",
+      "description": "Allowed categories: what the item is used for. To add a new one, add it here (keep A-Z order; the colors follow it). The two gray ones stay last: \"No Use\" (checked: nothing uses it) and \"Not Reviewed\" (nobody has checked yet). (Consumable / Equipment / Misc are item types, not categories.)",
       "enum": [
         "Brewing",
         "Card",
@@ -199,7 +199,8 @@
         "Server Hat Quest",
         "Skills",
         "uaRO",
-        "Uncategorized"
+        "No Use",
+        "Not Reviewed"
       ]
     },
     "itemType": {

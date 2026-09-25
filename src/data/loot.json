@@ -176,7 +176,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -320,7 +320,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -361,17 +361,17 @@
       {
         "for": "Bottle Grenade",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Glistening Coat",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Anodyne",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Morroc Fruit Wine",
@@ -612,7 +612,7 @@
       {
         "for": "Aloevera",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Lucky Soup",
@@ -998,7 +998,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1016,7 +1016,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1034,7 +1034,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1188,7 +1188,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1237,7 +1237,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1255,7 +1255,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1288,6 +1288,7 @@
     "itemId": 512,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -1299,6 +1300,11 @@
         "for": "Fruit Mix",
         "qty": 5,
         "note": "+3 DEX food"
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 100,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
@@ -1491,7 +1497,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1509,7 +1515,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1551,7 +1557,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1612,7 +1618,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1684,7 +1690,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -1886,7 +1892,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -2049,6 +2055,28 @@
     "npcBuyable": "no"
   },
   {
+    "id": "barren-trunk",
+    "name": "Barren Trunk",
+    "itemId": 1068,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Job Quest"
+    ],
+    "uses": [
+      {
+        "for": "Archer Job Quest",
+        "qty": 13,
+        "note": "2 points each; 25 points needed, any mix of trunks"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 1,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "bat-cage",
     "name": "Bat Cage",
     "itemId": 7214,
@@ -2083,7 +2111,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -2119,7 +2147,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -2137,7 +2165,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -2283,7 +2311,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -2398,7 +2426,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -2461,7 +2489,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -2552,7 +2580,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -2652,12 +2680,19 @@
     "itemId": 737,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 20,
+        "note": "one of its possible requests"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 200,
@@ -2804,9 +2839,20 @@
       "Keep"
     ],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest",
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Valkyrie Helm",
+        "qty": 1000
+      },
+      {
+        "for": "Episode 13 Quests",
+        "qty": 30,
+        "note": "Defaria"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1008,
@@ -2957,12 +3003,12 @@
       {
         "for": "Coldproof Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Thunderproof Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "Wizard Job Quest, Blacksmith Job Quest",
@@ -2980,7 +3026,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3017,7 +3063,7 @@
       {
         "for": "Blue Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Autumn Red Tea",
@@ -3051,7 +3097,7 @@
     ],
     "uses": [
       {
-        "for": "Aid Potion",
+        "for": "Potion Pitcher",
         "qty": 1,
         "note": "each cast"
       },
@@ -3194,7 +3240,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3282,7 +3328,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3353,7 +3399,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3405,7 +3451,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3421,7 +3467,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3437,7 +3483,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3515,7 +3561,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3531,7 +3577,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3547,9 +3593,15 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Gonryun Quests",
+        "qty": 5,
+        "note": "Blacksmith"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 294,
@@ -3565,7 +3617,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3583,7 +3635,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3598,16 +3650,23 @@
     "itemId": 7188,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Cooking"
+      "Cooking",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Awfully Bitter Bracer",
         "qty": 20,
         "note": "+6 VIT food"
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 16,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
@@ -3690,7 +3749,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3706,7 +3765,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3798,7 +3857,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3814,7 +3873,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3832,7 +3891,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -3917,7 +3976,7 @@
       {
         "for": "Condensed Red Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Poison Bottle",
@@ -4206,7 +4265,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -4260,7 +4319,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -4276,7 +4335,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -4359,9 +4418,21 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest",
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      },
+      {
+        "for": "Zealotus Mask",
+        "qty": 1,
+        "note": "any whip; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -4490,7 +4561,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -4790,7 +4861,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -4806,7 +4877,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -4861,7 +4932,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -4877,7 +4948,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -4956,7 +5027,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -5054,7 +5125,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -5126,12 +5197,12 @@
     ],
     "uses": [
       {
-        "for": "Aid Condensed Potion",
+        "for": "Slim Potion Pitcher",
         "qty": 1,
         "note": "each cast"
       },
       {
-        "for": "Healing Touch",
+        "for": "Healing Hands",
         "qty": 1,
         "note": "each cast"
       }
@@ -5156,7 +5227,7 @@
     ],
     "uses": [
       {
-        "for": "Aid Condensed Potion",
+        "for": "Slim Potion Pitcher",
         "qty": 1,
         "note": "each cast"
       }
@@ -5181,7 +5252,7 @@
     ],
     "uses": [
       {
-        "for": "Aid Condensed Potion",
+        "for": "Slim Potion Pitcher",
         "qty": 1,
         "note": "each cast"
       }
@@ -5415,7 +5486,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -5449,7 +5520,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -5575,7 +5646,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -5649,7 +5720,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -5716,7 +5787,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -5734,9 +5805,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Episode 13 Quests",
+        "qty": 15,
+        "note": "Laphine Craftsman"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 0,
@@ -5774,7 +5851,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -6037,7 +6114,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -6055,9 +6132,28 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Job Quest",
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Ninja Job Quest",
+        "qty": 5
+      },
+      {
+        "for": "Monk Job Quest",
+        "qty": 5
+      },
+      {
+        "for": "Old Blue Box Quest",
+        "qty": 50
+      },
+      {
+        "for": "Hugel Quests",
+        "qty": 5,
+        "note": "Dono"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 386,
@@ -6139,7 +6235,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -6181,7 +6277,7 @@
       "Whobuy"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -6378,7 +6474,7 @@
       {
         "for": "Marine Sphere Bottle",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -6477,9 +6573,14 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Wedding",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 22500,
@@ -6561,7 +6662,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -6732,7 +6833,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -6748,7 +6849,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -6862,7 +6963,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -7130,7 +7231,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -7148,7 +7249,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -7189,7 +7290,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -7633,42 +7734,42 @@
       {
         "for": "Bottle Grenade",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Acid Bottle",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Plant Bottle",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Marine Sphere Bottle",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Glistening Coat",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Anodyne",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Aloevera",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Alcohol",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -7693,42 +7794,42 @@
       {
         "for": "Red Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Yellow Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "White Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Blue Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Fireproof Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Coldproof Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Earthproof Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Thunderproof Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -7753,22 +7854,22 @@
       {
         "for": "Condensed Red Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Condensed Yellow Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Condensed White Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Alcohol",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -7784,9 +7885,20 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Gunslinger Weapon Quests",
+        "qty": 10,
+        "note": "Garrison"
+      },
+      {
+        "for": "Einbroch Quests",
+        "qty": 10,
+        "note": "Cavitar"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 500,
@@ -7977,7 +8089,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8044,7 +8156,7 @@
       {
         "for": "Bottle Grenade",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -8078,9 +8190,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Pet"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Monster Tamer Quests",
+        "qty": 1,
+        "note": "Monster Tamer in Alberta"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -8096,7 +8214,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8338,7 +8456,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8356,9 +8474,20 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Nameless Island Quest",
+        "qty": 20,
+        "note": "Wola"
+      },
+      {
+        "for": "Juno Quests",
+        "qty": 5,
+        "note": "Bain and Bajin"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 50,
@@ -8374,9 +8503,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Archer Job Quest",
+        "qty": 5,
+        "note": "5 points each; 25 points needed, any mix of trunks"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1,
@@ -8390,9 +8525,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Gunslinger Weapon Quests",
+        "qty": 1,
+        "note": "Vanessa"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 29000,
@@ -8406,7 +8547,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8422,9 +8563,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -8566,12 +8713,12 @@
     ],
     "uses": [
       {
-        "for": "Crimson Fire Formation",
+        "for": "Blaze Shield",
         "qty": 1,
         "note": "each cast"
       },
       {
-        "for": "Raging Fire Dragon",
+        "for": "Exploding Dragon",
         "qty": 1,
         "note": "each cast"
       }
@@ -8637,9 +8784,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Einbroch Quests",
+        "qty": 1,
+        "note": "Calla"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1,
@@ -8686,12 +8839,19 @@
     "itemId": 7326,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 26,
+        "note": "one of its possible requests"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 356,
@@ -8707,7 +8867,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8723,9 +8883,15 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Doomed Swords Quest",
+        "qty": 2,
+        "note": "1 in part 1, 1 in part 3"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -8739,7 +8905,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8779,9 +8945,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -8851,7 +9023,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8867,7 +9039,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8883,7 +9055,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8899,7 +9071,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -8915,7 +9087,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9008,7 +9180,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9024,7 +9196,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9123,7 +9295,7 @@
       {
         "for": "Fireproof Potion",
         "qty": 2,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Lemly Repeatable Quest",
@@ -9180,7 +9352,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9239,7 +9411,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9255,7 +9427,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9299,7 +9471,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9339,12 +9511,20 @@
     "itemId": 910,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Brewing"
+      "Brewing",
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 40,
+        "note": "one of its possible requests"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 20,
@@ -9382,7 +9562,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9463,7 +9643,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9481,7 +9661,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9497,7 +9677,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9531,7 +9711,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9597,7 +9777,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9634,7 +9814,7 @@
       "Whobuy"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9700,9 +9880,21 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Pet",
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Monster Tamer Quests",
+        "qty": 1,
+        "note": "Munak's Grandma"
+      },
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 750,
@@ -9782,7 +9974,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9800,7 +9992,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9816,7 +10008,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -9865,7 +10057,7 @@
       {
         "for": "Embryo",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -9888,27 +10080,27 @@
     ],
     "uses": [
       {
-        "for": "Alchemical Weapon",
+        "for": "Chemical Protection Weapon",
         "qty": 1,
         "note": "each cast"
       },
       {
-        "for": "Synthesized Shield",
+        "for": "Chemical Protection Shield",
         "qty": 1,
         "note": "each cast"
       },
       {
-        "for": "Synthetic Armor",
+        "for": "Chemical Protection Armor",
         "qty": 1,
         "note": "each cast"
       },
       {
-        "for": "Biochemical Helm",
+        "for": "Chemical Protection Helm",
         "qty": 1,
         "note": "each cast"
       },
       {
-        "for": "Full Protection",
+        "for": "Full Chemical Protection",
         "qty": 1,
         "note": "each cast"
       }
@@ -10150,7 +10342,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -10209,9 +10401,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Nameless Island Quest",
+        "qty": 4,
+        "note": "Rogue Guild Agent, 1 then 3"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 215,
@@ -10410,7 +10608,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -10469,7 +10667,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -10531,7 +10729,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -10736,7 +10934,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -10770,9 +10968,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Ninja Equipment Quests",
+        "qty": 1,
+        "note": "Boshuu"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 250,
@@ -10788,7 +10992,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -10804,7 +11008,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -11064,7 +11268,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -11080,7 +11284,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -11116,9 +11320,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Ninja Equipment Quests",
+        "qty": 20,
+        "note": "Tetsu"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 571,
@@ -11132,7 +11342,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -11178,7 +11388,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -11251,12 +11461,12 @@
       {
         "for": "Glistening Coat",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Coldproof Potion",
         "qty": 3,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Immortal Stew",
@@ -11331,9 +11541,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -11674,7 +11890,7 @@
       {
         "for": "Aloevera",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Honey Grape Juice",
@@ -11763,9 +11979,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Louyang Quests",
+        "qty": 5,
+        "note": "Doctor"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 311,
@@ -11779,7 +12001,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -11871,9 +12093,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Episode 13 Quests",
+        "qty": 35,
+        "note": "30 for a Worker, 5 for the Frozen Tree"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 250,
@@ -11887,7 +12115,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -11986,9 +12214,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Nameless Island Quest",
+        "qty": 4,
+        "note": "Rogue Guild Agent, 1 then 3"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 294,
@@ -12044,7 +12278,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -12150,7 +12384,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -12245,12 +12479,12 @@
     ],
     "uses": [
       {
-        "for": "Hidden Water",
+        "for": "Watery Evasion",
         "qty": 1,
         "note": "each cast"
       },
       {
-        "for": "Ice Meteor",
+        "for": "Snow Flake Draft",
         "qty": 1,
         "note": "each cast"
       }
@@ -12286,7 +12520,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -12302,9 +12536,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 1,
+        "note": "any whip; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -12467,7 +12707,7 @@
       {
         "for": "Acid Bottle",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Immortal Stew",
@@ -12506,7 +12746,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -12522,7 +12762,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -12582,9 +12822,15 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 28500,
@@ -12600,7 +12846,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -12618,7 +12864,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -12634,7 +12880,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -12952,7 +13198,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13150,9 +13396,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -13186,7 +13438,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13239,7 +13491,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13293,7 +13545,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13324,7 +13576,7 @@
       {
         "for": "Earthproof Potion",
         "qty": 2,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -13358,9 +13610,15 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Louyang Quests",
+        "qty": 1,
+        "note": "Gunpowder Expert"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 554,
@@ -13490,7 +13748,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13702,7 +13960,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13718,7 +13976,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13734,7 +13992,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13799,7 +14057,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13864,7 +14122,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13882,7 +14140,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -13898,7 +14156,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14112,7 +14370,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14291,7 +14549,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14325,7 +14583,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14341,7 +14599,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14375,7 +14633,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14391,7 +14649,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14560,7 +14818,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14576,7 +14834,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14636,7 +14894,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14708,7 +14966,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14767,7 +15025,7 @@
       {
         "for": "Plant Bottle",
         "qty": 2,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -14818,7 +15076,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14863,7 +15121,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14879,7 +15137,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -14954,7 +15212,7 @@
     ],
     "uses": [
       {
-        "for": "Summon Marine Sphere",
+        "for": "Sphere Mine",
         "qty": 1,
         "note": "each cast"
       }
@@ -15021,7 +15279,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15210,7 +15468,7 @@
     ],
     "uses": [
       {
-        "for": "Prepare Potion",
+        "for": "Pharmacy",
         "qty": 1,
         "note": "each cast"
       },
@@ -15253,6 +15511,31 @@
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "melon",
+    "name": "Melon",
+    "itemId": 6264,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 2,
+        "note": "one of its possible requests"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 50,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "memento",
@@ -15301,7 +15584,7 @@
       {
         "for": "Anodyne",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Soul Haunted Bread",
@@ -15384,7 +15667,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15400,7 +15683,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15495,7 +15778,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15605,7 +15888,7 @@
       {
         "for": "Condensed Yellow Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -15722,7 +16005,7 @@
       {
         "for": "Embryo",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -15738,7 +16021,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15754,7 +16037,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15770,7 +16053,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15786,7 +16069,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15802,7 +16085,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15844,7 +16127,7 @@
       {
         "for": "Thunderproof Potion",
         "qty": 3,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -15862,7 +16145,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -15950,7 +16233,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -16037,7 +16320,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -16170,12 +16453,19 @@
     "itemId": 6023,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 5,
+        "note": "one of its possible requests"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 500,
@@ -16207,9 +16497,20 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Job Quest",
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Assassin Job Quest",
+        "qty": 1
+      },
+      {
+        "for": "Doomed Swords Quest",
+        "qty": 4,
+        "note": "3 in part 1, 1 in part 3"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1,
@@ -16223,9 +16524,18 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Hunter Job Quest",
+        "qty": 1
+      },
+      {
+        "for": "Sage Job Quest",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1,
@@ -16292,7 +16602,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -16590,7 +16900,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "Open it, silly!",
@@ -16631,7 +16941,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -16731,7 +17041,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -16776,7 +17086,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "Open it, silly!",
@@ -16792,7 +17102,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -17009,7 +17319,7 @@
     ],
     "uses": [
       {
-        "for": "Aid Potion",
+        "for": "Potion Pitcher",
         "qty": 1,
         "note": "each cast"
       }
@@ -17056,9 +17366,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Gunslinger Weapon Quests",
+        "qty": 1000,
+        "note": "Lab Director"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 84,
@@ -17324,7 +17640,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -17383,7 +17699,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -17399,7 +17715,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -17441,7 +17757,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -17459,7 +17775,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -17495,9 +17811,15 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Episode 13 Quests",
+        "qty": 5,
+        "note": "Hansenne"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 216,
@@ -17840,9 +18162,20 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Job Quest",
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Ninja Job Quest",
+        "qty": 1
+      },
+      {
+        "for": "Juno Quests",
+        "qty": 1,
+        "note": "Sage Esklah"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 100,
@@ -17917,7 +18250,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -18001,7 +18334,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -18017,7 +18350,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -18033,7 +18366,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -18051,7 +18384,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -18061,13 +18394,38 @@
     "npcBuyable": "no"
   },
   {
+    "id": "pineapple",
+    "name": "Pineapple",
+    "itemId": 6265,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 2,
+        "note": "one of its possible requests"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 50,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "pinguicula-corsage-1",
     "name": "Pinguicula Corsage [1]",
     "itemId": 2745,
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -18115,7 +18473,7 @@
     ],
     "uses": [
       {
-        "for": "Summon Flora",
+        "for": "Bio Cannibalize",
         "qty": 1,
         "note": "each cast"
       }
@@ -18151,7 +18509,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -18194,7 +18552,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -18256,7 +18614,7 @@
       {
         "for": "Alcohol",
         "qty": 5,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -18290,7 +18648,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -18897,9 +19255,19 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1
+      },
+      {
+        "for": "Alberta Quests",
+        "qty": 1,
+        "note": "Elin"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 500,
@@ -19179,7 +19547,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -19365,9 +19733,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 1,
+        "note": "any whip; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -19405,7 +19779,7 @@
         "note": "each cast"
       },
       {
-        "for": "Scribble",
+        "for": "Graffiti",
         "qty": 1,
         "note": "each cast"
       },
@@ -19417,7 +19791,7 @@
       {
         "for": "Fireproof Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "Wizard Job Quest",
@@ -19444,7 +19818,7 @@
       {
         "for": "Red Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Autumn Red Tea",
@@ -19530,14 +19904,14 @@
     ],
     "uses": [
       {
-        "for": "Aid Potion",
+        "for": "Potion Pitcher",
         "qty": 1,
         "note": "each cast"
       },
       {
         "for": "Condensed Red Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Grape Juice Herbal Tea",
@@ -19655,9 +20029,15 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Episode 13 Quests",
+        "qty": 20,
+        "note": "Manuk Engineer"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 550,
@@ -19814,7 +20194,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -19830,7 +20210,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -19862,7 +20242,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -19878,7 +20258,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -19914,9 +20294,19 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1
+      },
+      {
+        "for": "Alberta Quests",
+        "qty": 1,
+        "note": "Elin"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 2000,
@@ -19948,7 +20338,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -19982,7 +20372,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20046,7 +20436,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20062,9 +20452,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 1,
+        "note": "any whip; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1250,
@@ -20101,7 +20497,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20226,7 +20622,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20269,13 +20665,23 @@
       "Keep"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Elunium",
         "qty": 5,
         "note": "refiner NPC"
+      },
+      {
+        "for": "Comodo Quests",
+        "qty": 1,
+        "note": "Meteurengut"
+      },
+      {
+        "for": "Juno Quests",
+        "qty": 3,
+        "note": "Bain and Bajin"
       }
     ],
     "notes": "",
@@ -20293,13 +20699,23 @@
       "Keep"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Oridecon",
         "qty": 5,
         "note": "refiner NPC"
+      },
+      {
+        "for": "Gonryun Quests",
+        "qty": 2,
+        "note": "Blacksmith"
+      },
+      {
+        "for": "Juno Quests",
+        "qty": 3,
+        "note": "Bain and Bajin"
       }
     ],
     "notes": "",
@@ -20593,7 +21009,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20633,7 +21049,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20692,7 +21108,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20708,7 +21124,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20756,7 +21172,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20822,7 +21238,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
     "uses": [
       {
@@ -20940,7 +21356,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -20956,7 +21372,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21064,17 +21480,24 @@
     "itemId": 911,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
       "Pet",
-      "Brewing"
+      "Brewing",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Blue Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 20,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
@@ -21187,7 +21610,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21284,7 +21707,7 @@
       {
         "for": "Embryo",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -21412,7 +21835,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21517,7 +21940,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21567,7 +21990,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21585,7 +22008,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21696,7 +22119,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21730,7 +22153,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21802,7 +22225,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21818,7 +22241,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -21836,9 +22259,20 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Gunslinger Weapon Quests",
+        "qty": 1000,
+        "note": "Lab Director"
+      },
+      {
+        "for": "Ninja Equipment Quests",
+        "qty": 500,
+        "note": "Craftsman Kaibara"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 116,
@@ -21852,9 +22286,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Official Hat Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Zealotus Mask",
+        "qty": 1,
+        "note": "any whip; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -21965,7 +22405,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22009,7 +22449,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22066,7 +22506,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22168,9 +22608,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Comodo Quests",
+        "qty": 2,
+        "note": "Zaka"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 41,
@@ -22184,7 +22630,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22490,9 +22936,15 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Archer Job Quest",
+        "qty": 9,
+        "note": "3 points each; 25 points needed, any mix of trunks"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1,
@@ -22524,7 +22976,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22564,7 +23016,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22727,9 +23179,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -22743,7 +23201,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22859,7 +23317,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22875,7 +23333,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22891,7 +23349,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -22952,7 +23410,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23423,7 +23881,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23515,7 +23973,7 @@
       {
         "for": "Alcohol",
         "qty": 5,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -23531,7 +23989,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23599,7 +24057,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23641,7 +24099,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23687,7 +24145,7 @@
     ],
     "uses": [
       {
-        "for": "Stone Fling",
+        "for": "Throw Stone",
         "qty": 1,
         "note": "each cast"
       }
@@ -23705,7 +24163,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23721,7 +24179,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23764,7 +24222,7 @@
     "itemType": "Consumable",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23780,7 +24238,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23821,7 +24279,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23947,9 +24405,15 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Episode 13 Quests",
+        "qty": 21,
+        "note": "20 for Diego, 1 for the Monster Scholar"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 15,
@@ -23981,7 +24445,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -23997,9 +24461,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -24073,7 +24543,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -24329,7 +24799,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -24347,9 +24817,14 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Rogue Job Quest",
+        "qty": 5
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -24388,7 +24863,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -24561,7 +25036,7 @@
       {
         "for": "Marine Sphere Bottle",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Tendon Satay",
@@ -24679,7 +25154,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -24920,7 +25395,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -24938,7 +25413,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25084,7 +25559,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25102,7 +25577,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25120,7 +25595,7 @@
       "Vend"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25188,7 +25663,8 @@
     ],
     "categories": [
       "Cooking",
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Job Quest"
     ],
     "uses": [
       {
@@ -25203,6 +25679,11 @@
         "for": "Whole Roast",
         "qty": 15,
         "note": "+7 STR food"
+      },
+      {
+        "for": "Archer Job Quest",
+        "qty": 25,
+        "note": "1 point each; 25 points needed, any mix of trunks"
       }
     ],
     "notes": "",
@@ -25281,7 +25762,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25297,7 +25778,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25313,7 +25794,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25329,7 +25810,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25345,7 +25826,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25363,7 +25844,7 @@
       "Junk"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25547,7 +26028,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25563,7 +26044,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25579,7 +26060,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25646,7 +26127,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25664,7 +26145,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25731,7 +26212,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25853,7 +26334,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25925,7 +26406,7 @@
       {
         "for": "White Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Honey Herbal Tea",
@@ -25973,7 +26454,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -25997,14 +26478,14 @@
     ],
     "uses": [
       {
-        "for": "Aid Potion",
+        "for": "Potion Pitcher",
         "qty": 1,
         "note": "each cast"
       },
       {
         "for": "Condensed White Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -26020,7 +26501,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -26090,7 +26571,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -26148,7 +26629,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -26225,12 +26706,12 @@
     ],
     "uses": [
       {
-        "for": "Lightning Strike of Destruction",
+        "for": "Lightning Jolt",
         "qty": 1,
         "note": "each cast"
       },
       {
-        "for": "Kamaitachi",
+        "for": "First Wind",
         "qty": 1,
         "note": "each cast"
       }
@@ -26248,7 +26729,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -26319,7 +26800,7 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -26345,7 +26826,7 @@
       {
         "for": "Condensed White Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Lucky Soup",
@@ -26366,7 +26847,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -26532,9 +27013,14 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Monk Job Quest",
+        "qty": 10
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 26,
@@ -26568,9 +27054,14 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Wizard Job Quest",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 25,
@@ -26586,7 +27077,7 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -26821,12 +27312,12 @@
         "note": "each cast"
       },
       {
-        "for": "Dispell",
+        "for": "Dispel",
         "qty": 1,
         "note": "each cast"
       },
       {
-        "for": "Hocus-pocus",
+        "for": "Abracadabra",
         "qty": 2,
         "note": "each cast"
       },
@@ -26843,7 +27334,7 @@
       {
         "for": "Earthproof Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "Wizard Job Quest",
@@ -26880,7 +27371,7 @@
       {
         "for": "Yellow Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Seasoned Sticky Webfoot",
@@ -26951,14 +27442,14 @@
         "qty": 20
       },
       {
-        "for": "Aid Potion",
+        "for": "Potion Pitcher",
         "qty": 1,
         "note": "each cast"
       },
       {
         "for": "Condensed Yellow Potion",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       },
       {
         "for": "Steamed Crab Nippers",
@@ -27288,9 +27779,34 @@
       "NPC"
     ],
     "categories": [
-      "Uncategorized"
+      "Job Quest",
+      "Pet",
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Gunslinger Job Quest",
+        "qty": 3
+      },
+      {
+        "for": "Monk Job Quest",
+        "qty": 5
+      },
+      {
+        "for": "Monster Tamer Quests",
+        "qty": 2,
+        "note": "Monster Tamer in Aldebaran"
+      },
+      {
+        "for": "Einbroch Quests",
+        "qty": 10,
+        "note": "Cavitar"
+      },
+      {
+        "for": "Nameless Island Quest",
+        "qty": 2
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 240,
@@ -27304,7 +27820,7 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "No Use"
     ],
     "uses": [],
     "notes": "",
@@ -27347,7 +27863,7 @@
       {
         "for": "Glistening Coat",
         "qty": 1,
-        "note": "Prepare Potion"
+        "note": "Pharmacy"
       }
     ],
     "notes": "",
@@ -27413,9 +27929,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "Uncategorized"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Sign Quest",
+        "qty": 1,
+        "note": "a weapon strong enough to break the seal; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,

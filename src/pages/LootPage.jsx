@@ -1,11 +1,13 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FunnelIcon } from '@heroicons/react/24/outline';
 import SearchBar from '../components/SearchBar.jsx';
 import FilterSidebar from '../components/FilterSidebar.jsx';
 import ActiveFilters from '../components/ActiveFilters.jsx';
 import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
-import CopyLinkButton from '../components/CopyLinkButton.jsx';
+import ShareButton from '../components/ShareButton.jsx';
+import NoResults from '../components/NoResults.jsx';
+import AdminToggle from '../admin/AdminToggle.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 import { createSearch, wordMatcher } from '../utils/search.js';
 import { nextSort, sortItems } from '../utils/sort.js';
@@ -13,7 +15,7 @@ import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue } from '../
 import { ALL_ACTIVITY_IDS, keepOnlyFor, keepsEverything } from '../utils/activities.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
-import { useAdmin } from '../admin/AdminContext.jsx';
+import { useAdmin } from '../admin/useAdmin.js';
 import { EMPTY_VIEW, cleanView, hashToView, isLootHash, viewToHash } from '../utils/viewUrl.js';
 
 
@@ -33,6 +35,10 @@ const PANEL_ANIMATION_MS = 200;
  * padding). The same number is in PANEL_BESIDE_TABLE below; change both together.
  */
 const PANEL_BESIDE_TABLE = '(min-width: 1470px)';
+
+/** The look of the buttons beside the search box (Filters, Share), so they match. */
+const TOOLBAR_BUTTON =
+  'flex shrink-0 items-center gap-2 rounded-lg border border-line-strong bg-surface px-3 text-sm font-medium text-body shadow-sm hover:bg-hover md:justify-center md:px-4';
 
 /**
  * The view to start with: the one in the link if there is one, otherwise
@@ -78,20 +84,42 @@ export default function LootPage() {
     writePreference('keepFor', activityIds);
   }, []);
 
+  /** Clear all: every filter, and back to keeping items for everything. The search stays. */
+  const clearAll = useCallback(() => {
+    setFilters(EMPTY_FILTERS);
+    changeKeepFor(ALL_ACTIVITY_IDS);
+  }, [changeKeepFor]);
+
   // Build the search index, then: search box, then sidebar filters, then sorting.
   const search = useMemo(() => createSearch(baseItems), [baseItems]);
-  const searched = useMemo(() => search(query), [search, query]);
-  const results = useMemo(() => sortItems(filterItems(searched, filters), sort), [searched, filters, sort]);
+  // The search box shows each letter right away; the list catches up a moment
+  // later (React can drop an unfinished redraw when the next letter arrives).
+  const deferredQuery = useDeferredValue(query);
+  const searched = useMemo(() => search(deferredQuery), [search, deferredQuery]);
+  // Filters work the same way: the checkbox ticks at once, the table follows.
+  const deferredFilters = useDeferredValue(filters);
+  const results = useMemo(
+    () => sortItems(filterItems(searched, deferredFilters), sort),
+    [searched, deferredFilters, sort],
+  );
 
   // Which "Used For" entries to bring to the front of each item's list: the
   // targets filtered by, and uses the search text matches as whole words
   // (searching "Headset" puts "x1 Headset" first on Coal). See ItemUses.
   const highlightUses = useMemo(
-    () => ({ targets: filters.usedFor, matchesSearch: wordMatcher(query) }),
-    [filters.usedFor, query],
+    () => ({ targets: filters.usedFor, matchesSearch: wordMatcher(deferredQuery) }),
+    [filters.usedFor, deferredQuery],
   );
 
   const activeFilterCount = countActiveFilters(filters) + (keepsEverything(keepFor) ? 0 : 1);
+
+  // The filter panel's counts (~500 checkboxes) follow the search. While the
+  // panel is closed nobody sees them, so it keeps what it last showed and
+  // skips redrawing on every keystroke; it catches up when it opens.
+  const [panelView, setPanelView] = useState({ searched, count: results.length });
+  if (sidebarOpen && (panelView.searched !== searched || panelView.count !== results.length)) {
+    setPanelView({ searched, count: results.length });
+  }
 
   // Keep the link in step with the view, so it can be copied or bookmarked,
   // and remember the view for next time. replaceState changes the address
@@ -100,6 +128,8 @@ export default function LootPage() {
   const viewHash = viewToHash({ query, filters, sort });
   useEffect(() => {
     writePreference('lastView', { query, filters, sort });
+  }, [query, filters, sort]);
+  useEffect(() => {
     const syncLink = () => {
       const current = window.location.hash;
       if (!isLootHash(current) || current === viewHash) return;
@@ -125,11 +155,14 @@ export default function LootPage() {
   }, [viewHash]);
 
   // When the panel floats or takes over the screen, opening it moves focus into
-  // it, and closing it returns focus to the toggle button.
+  // it, and closing it returns focus to the toggle button. Beside the table,
+  // opening it from the Filters button does too, since that button disappears.
   const panelCovers = sidebarOpen && !panelBesideTable;
+  const focusCloseOnOpen = useRef(false);
   useEffect(() => {
-    if (panelCovers) closeButtonRef.current?.focus();
-  }, [panelCovers]);
+    if (panelCovers || (sidebarOpen && focusCloseOnOpen.current)) closeButtonRef.current?.focus();
+    focusCloseOnOpen.current = false;
+  }, [panelCovers, sidebarOpen]);
 
   /** Opens or closes the panel. Remembers where the table was, for the slide below. */
   const changePanel = useCallback((open) => {
@@ -138,12 +171,19 @@ export default function LootPage() {
     if (window.matchMedia(PANEL_BESIDE_TABLE).matches) writePreference('panelOpen', open);
   }, []);
 
+  // Closing returns focus to the Filters button. Beside the table that button
+  // only appears once the panel is closed, so focus moves after the redraw.
+  const focusToggleOnClose = useRef(false);
   const closePanel = useCallback(() => {
+    focusToggleOnClose.current = true;
     changePanel(false);
-    toggleButtonRef.current?.focus();
   }, [changePanel]);
+  useEffect(() => {
+    if (sidebarOpen || !focusToggleOnClose.current) return;
+    focusToggleOnClose.current = false;
+    toggleButtonRef.current?.focus();
+  }, [sidebarOpen]);
 
-  const clearFilters = useCallback(() => setFilters(EMPTY_FILTERS), []);
 
   // On wide screens the panel pushes the table over. Instead of animating the
   // table's width (which re-lays-out every row on every frame and stutters),
@@ -173,7 +213,7 @@ export default function LootPage() {
     };
     document.addEventListener('keydown', onKeyDown);
     return () => document.removeEventListener('keydown', onKeyDown);
-  }, [panelCovers]);
+  }, [panelCovers, closePanel]);
 
   // Sheet on small screens: stop the page behind it from scrolling.
   const smallScreen = useMediaQuery('(max-width: 767px)');
@@ -201,12 +241,14 @@ export default function LootPage() {
     <button
       ref={toggleButtonRef}
       type="button"
-      onClick={() => changePanel(!sidebarOpen)}
+      onClick={() => {
+        focusCloseOnOpen.current = !sidebarOpen;
+        changePanel(!sidebarOpen);
+      }}
       aria-expanded={sidebarOpen}
       aria-controls="filter-sidebar"
       aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
-      className="flex shrink-0 items-center gap-2 rounded-lg border border-line-strong bg-surface px-3 text-sm
-        font-medium text-body shadow-sm hover:bg-hover md:justify-center md:px-4"
+      className={TOOLBAR_BUTTON}
     >
       <FunnelIcon className="size-5" aria-hidden="true" />
       {/* Both labels share one grid cell, so the button is always as wide as the
@@ -223,54 +265,73 @@ export default function LootPage() {
         ))}
       </span>
       {activeFilterCount > 0 && (
-        <span className="rounded-full bg-emerald-700 px-2 py-0.5 text-xs text-white">{activeFilterCount}</span>
+        <span className="rounded-full bg-control px-2 py-0.5 text-xs text-white">{activeFilterCount}</span>
       )}
     </button>
   );
-  return (
-    <div className="space-y-4">
-      <h1 className="sr-only">Loot items</h1>
+  // Wide screens with the panel open: the panel has its own close button, so
+  // the toolbar drops the Filters button and the search box takes its room.
+  const panelShownBeside = sidebarOpen && panelBesideTable;
+  const showFiltersButton = !panelShownBeside;
+
+  const toolbar = (
+    <>
       <div className="flex gap-3">
         {/* Small screens: filter icon only, so it gets a tooltip. Larger: icon and text (no tooltip needed). */}
-        {smallScreen ? (
-          <Tooltip text={sidebarOpen ? 'Hide filters' : 'Show filters'} placement="bottom">
-            {filtersButton}
-          </Tooltip>
-        ) : (
-          filtersButton
-        )}
+        {showFiltersButton &&
+          (smallScreen ? (
+            <Tooltip text={sidebarOpen ? 'Hide filters' : 'Show filters'} placement="bottom">
+              {filtersButton}
+            </Tooltip>
+          ) : (
+            filtersButton
+          ))}
         <div className="flex-1">
           <SearchBar value={query} onChange={setQuery} />
         </div>
+        {smallScreen ? (
+          <Tooltip text="Share" placement="bottom">
+            <ShareButton iconOnly className={TOOLBAR_BUTTON} />
+          </Tooltip>
+        ) : (
+          <ShareButton className={TOOLBAR_BUTTON} />
+        )}
+        <AdminToggle className={TOOLBAR_BUTTON} />
       </div>
 
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <p className="text-sm text-muted">
-          Showing {results.length} of {loot.length} items
-        </p>
-        <CopyLinkButton />
-        <ActiveFilters
-          query={query}
-          filters={filters}
-          keepFor={keepFor}
-          onClearQuery={() => setQuery('')}
-          onClearKeepFor={() => changeKeepFor(ALL_ACTIVITY_IDS)}
-          onRemove={(key, value) => setFilters({ ...filters, [key]: toggleValue(filters[key], value) })}
-          onRemoveGroup={(key) => setFilters({ ...filters, [key]: [] })}
-          onClearAll={() => {
-            setQuery('');
-            setFilters(EMPTY_FILTERS);
-            changeKeepFor(ALL_ACTIVITY_IDS);
-          }}
-        />
-      </div>
+      {/* The results header: how many items, and what's narrowing them. Always one
+          chip tall, so adding the first filter doesn't push the table down. When the
+          panel sits beside the table it shows the count and filters itself, so this hides. */}
+      {!panelShownBeside && (
+        <div className="flex min-h-7 flex-wrap items-center gap-x-4 gap-y-2">
+          <p className="text-sm text-muted" aria-live="polite">
+            {results.length.toLocaleString('en-US')} of {loot.length.toLocaleString('en-US')} items
+          </p>
+          <ActiveFilters
+            filters={filters}
+            keepFor={keepFor}
+            onClearKeepFor={() => changeKeepFor(ALL_ACTIVITY_IDS)}
+            onRemove={(key, value) => setFilters({ ...filters, [key]: toggleValue(filters[key], value) })}
+            onRemoveGroup={(key) => setFilters({ ...filters, [key]: [] })}
+            onClearAll={clearAll}
+          />
+        </div>
+      )}
+    </>
+  );
+
+  return (
+    <div>
+      <h1 className="sr-only">Loot items</h1>
 
       {/* Panel and table share one grid cell (so the panel floats over the table)
           until 1470px (`wide:`), where the grid gets a second column for the panel.
           overflow-x-clip hides the table's edge while it slides (see the FLIP effect above)
-          without breaking the sticky header; the clip margin keeps the panel's shadow. */}
+          without breaking the sticky header. Browsers ignore overflow-clip-margin when
+          only one direction clips, so -mx-4/px-4 widen the clip box instead: that room
+          keeps focus rings and the panel's shadow at the edges from being cut off. */}
       <div
-        className={`md:grid md:items-start wide:overflow-x-clip wide:[overflow-clip-margin:1rem] ${
+        className={`md:grid md:items-start wide:-mx-4 wide:overflow-x-clip wide:px-4 ${
           panelTakesSpace ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''
         }`}
       >
@@ -310,35 +371,48 @@ export default function LootPage() {
         >
           <div className="hidden md:block">
             <SkipLink targetId="results" className="focus:absolute focus:top-2 focus:left-2 focus:z-20">
-              Skip to table
+              Skip to results
             </SkipLink>
           </div>
           <FilterSidebar
-            onClose={panelBesideTable ? undefined : closePanel}
+            onClose={closePanel}
+            resultCount={panelView.count}
+            totalCount={loot.length}
+            activeCount={activeFilterCount}
+            onClearAll={clearAll}
             closeButtonRef={closeButtonRef}
             allItems={baseItems}
             keepFor={keepFor}
             keepForDisabled={adminOn}
             onKeepForChange={changeKeepFor}
-            items={searched}
+            items={panelView.searched}
             filters={filters}
             onChange={setFilters}
-            onClear={clearFilters}
           />
         </aside>
         <div
           ref={resultsRef}
           id="results"
           tabIndex={-1}
-          className={`min-w-0 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
+          className={`min-w-0 space-y-4 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
         >
-          <ItemList
-            items={results}
-            sort={sort}
-            onSort={changeSort}
-            onSelectUse={showItemsUsedFor}
-            highlightUses={highlightUses}
-          />
+          {toolbar}
+          {results.length === 0 ? (
+            <NoResults
+              query={query}
+              filterCount={activeFilterCount}
+              onClearSearch={() => setQuery('')}
+              onClearFilters={clearAll}
+            />
+          ) : (
+            <ItemList
+              items={results}
+              sort={sort}
+              onSort={changeSort}
+              onSelectUse={showItemsUsedFor}
+              highlightUses={highlightUses}
+            />
+          )}
         </div>
       </div>
     </div>

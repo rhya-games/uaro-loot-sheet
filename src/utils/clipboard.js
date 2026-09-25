@@ -16,7 +16,7 @@ export async function copyText(text) {
     box.style.opacity = '0';
     document.body.appendChild(box);
     box.select();
-    let copied = false;
+    let copied;
     try {
       copied = document.execCommand('copy');
     } catch {

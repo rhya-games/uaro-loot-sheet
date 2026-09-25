@@ -1,4 +1,4 @@
-import { useAdmin } from './AdminContext.jsx';
+import { useAdmin } from './useAdmin.js';
 import { ActionBadge } from '../components/ItemBadges.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 

@@ -14,14 +14,18 @@ export default function SearchBar({ value, onChange }) {
   const active = value !== '';
 
   return (
-    <div className="relative">
+    // z-20 lifts the whole box (and its focus ring) above the table's sticky header,
+    // which paints the page color 1rem above itself. It stays below the filter
+    // panel (z-30) when that floats over the page.
+    <div className="relative z-20">
       <label htmlFor="search" className="sr-only">
         Search items
       </label>
-      {/* Decorative only; the label above names the field. */}
+      {/* Decorative only; the label above names the field. z-30 keeps the icon and the
+          clear button above the input, which rises to z-20 while focused (see index.css). */}
       <MagnifyingGlassIcon
         aria-hidden="true"
-        className={`pointer-events-none absolute top-1/2 left-3 size-5 -translate-y-1/2 ${
+        className={`pointer-events-none absolute top-1/2 left-3 z-30 size-5 -translate-y-1/2 ${
           active ? 'text-accent' : 'text-muted'
         }`}
       />
@@ -39,12 +43,12 @@ export default function SearchBar({ value, onChange }) {
         }}
         placeholder="Search by name, use, or item ID…"
         autoComplete="off"
-        className={`w-full rounded-lg border py-2.5 pr-11 pl-10 text-base shadow-sm placeholder:text-muted ${
+        className={`h-11 w-full rounded-lg border pr-11 pl-10 text-base shadow-sm placeholder:text-muted ${
           active ? 'border-accent-line bg-accent-soft' : 'border-line-strong bg-surface'
         }`}
       />
       {active && (
-        <span className="absolute top-1/2 right-2 -translate-y-1/2">
+        <span className="absolute top-1/2 right-2 z-30 -translate-y-1/2">
           <Tooltip text="Clear search (Esc)">
             <button
               type="button"

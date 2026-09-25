@@ -90,7 +90,7 @@ export default function CheckboxGroup({
                   checked={checked}
                   disabled={disabled}
                   onChange={() => onToggle(option)}
-                  className="mt-0.5 size-4 shrink-0 accent-emerald-700"
+                  className="checkbox mt-0.5"
                 />
                 <span className="flex-1 text-body">{renderLabel ? renderLabel(option) : option}</span>
                 <span className="mt-0.5 text-xs text-muted tabular-nums">{count}</span>
@@ -126,7 +126,7 @@ function SelectAll({ label, options, selected, onSetAll }) {
         type="checkbox"
         checked={allChecked}
         onChange={() => onSetAll(allChecked ? [] : [...options])}
-        className="mt-0.5 size-4 shrink-0 accent-emerald-700"
+        className="checkbox mt-0.5"
       />
       {label}
     </label>

@@ -34,6 +34,8 @@ is JSON in the repo, so people who don't code can edit it.
 ```bash
 npm run dev            # local site at http://localhost:5173/uaro-loot-sheet/
 npm run validate       # check the data (CI runs this; build runs it first)
+npm run lint           # code checks (ESLint; CI runs this)
+npm test               # unit tests in src/**/*.test.js (Vitest; CI runs this)
 npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
@@ -43,8 +45,8 @@ npm run suggest [-- "name"]          # compare suggested actions (src/utils/sugg
 
 Both sync scripts take `-- --check` to report without writing. They
 download emulator files once into `scripts/.cache/` (gitignored). Run
-`npm run validate` after any data change; errors must be 0. There are no
-unit tests or formatter yet.
+`npm run validate` after any data change; errors must be 0. Run `npm run
+lint` and `npm test` after code changes. There's no formatter yet.
 
 ## Data model
 
@@ -65,7 +67,9 @@ unit tests or formatter yet.
     already reviewed (`reviewedPrices`).
 - `src/data/game-rules.json`: Overcharge level and %; generated.
 - `src/data/changelog.js`: the site's Changelog page. Add a line for
-  anything a visitor would notice.
+  anything a visitor would notice. One entry per day, each with a version
+  (SemVer, 0.x until 1.0; features raise the middle number, fixes the last)
+  that matches `package.json`. Merging to main publishes a GitHub release.
 
 ### Where values come from (most important first)
 
@@ -98,6 +102,9 @@ Match similar existing items. Look them up in loot.json first.
   crafted (crafted items can be sold too). Default to including. Before
   leaving anything out, explain why and get the maintainer's OK.
 
+- New items start with the category `Not Reviewed`. Once their uses are
+  checked (uaRO wiki, emulator quest scripts: items taken with `delitem`),
+  they get real categories, or `No Use` if nothing uses them.
 - "Used For" targets reuse an existing name exactly. Pet evolutions are
   `"<Evolved pet> Pet Evolution"`. Uses show quantities from the wiki.
 - Pet evolution materials: `Keep` + `Vend`, categories `Pet Evolution`,
@@ -140,7 +147,10 @@ Match similar existing items. Look them up in loot.json first.
   popovers in portals so scroll boxes can't clip them.
 - Performance matters: the table has 600+ rows. `ItemList` and
   `FilterSidebar` are `memo`'d, so pass them stable props (`useCallback`,
-  stable arrays). Only the table or the cards are drawn, never both. The
+  stable arrays). Rows and cards are `memo`'d too, and only rows whose uses
+  match get the highlight (`utils/highlight.js`). Long lists are drawn in
+  batches (`utils/useProgressiveList.js`), and results follow the search box
+  through `useDeferredValue`. Only the table or the cards are drawn, never both. The
   filter panel stays mounted (`inert` when closed) and the table slides
   with a FLIP animation.
 - Write code that reads like the code around it: plain names, a comment
@@ -159,7 +169,11 @@ Match similar existing items. Look them up in loot.json first.
   (secondary buttons like "Clear all").
 - Type: headings are `font-semibold`, body `text-sm`, secondary `text-xs`
   or `text-sm text-muted`. No all-caps, letter-spacing or italics.
-- Every interactive element gets a visible focus ring (rounded). Tooltips
+- Every interactive element gets a visible focus ring (rounded, from
+  `index.css`): a 2px ring with the gap filled by `--focus-gap` (set it where
+  the background isn't the surface color), raised to z-20 so neighbors can't
+  cover it. Overlays inside a focusable control (icons, clear buttons) need
+  z-30. Checkboxes use the `checkbox` utility (white check). Tooltips
   use `components/Tooltip.jsx` (hover with a delay, and keyboard focus).
   Only use one when the element has no visible label.
 - Escape closes the innermost thing first. Components that handle Escape
@@ -202,6 +216,7 @@ English speakers. Use short, plain sentences and everyday words. Say
 ## Git
 
 - Work on a feature branch, never commit to `main`, and merge through a PR.
-  CI runs `validate` on PRs, and merging to `main` deploys to GitHub Pages.
+  CI runs `validate`, `lint` and `test` on PRs, and merging to `main`
+  deploys to GitHub Pages and publishes a release.
 - Commit in small steps with messages that say what changed and why.
 - Don't push, open PRs, merge or deploy unless the maintainer asks.

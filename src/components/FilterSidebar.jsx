@@ -4,7 +4,7 @@ import Tooltip from './Tooltip.jsx';
 import CheckboxGroup from './CheckboxGroup.jsx';
 import { ActionBadge, CategoryBadge } from './ItemBadges.jsx';
 import { ALL_CATEGORIES, ALL_ITEM_TYPES, FILTER_ACTIONS } from '../utils/labels.js';
-import { countActiveFilters, countOptions, listOptions, toggleValue } from '../utils/filter.js';
+import { countOptions, listOptions, toggleValue } from '../utils/filter.js';
 import { ACTIVITIES } from '../utils/activities.js';
 
 /**
@@ -16,11 +16,14 @@ import { ACTIVITIES } from '../utils/activities.js';
  *                used to calculate the counts next to each option
  *   filters    - current filter state (see EMPTY_FILTERS in utils/filter.js)
  *   onChange   - called with the new filter state
- *   onClear    - called when "Clear all" is clicked
  *   keepFor - activity ids the player keeps items for (see utils/activities.js)
  *   keepForDisabled - true in admin mode, where every activity counts
  *   onKeepForChange - called with the new list of activity ids
  *   onClose    - optional: shows a close (×) button that calls this
+ *   resultCount, totalCount - items shown, and all items ("709 of 1,094 items")
+ *   activeCount - how many filters are on, counting "I keep items for" (shown
+ *                 next to the title, like on the Filters button; >0 shows Clear all)
+ *   onClearAll - called when "Clear all" is clicked
  *   closeButtonRef - optional ref for that button (so it can be focused)
  */
 /*
@@ -32,11 +35,14 @@ export default memo(function FilterSidebar({
   items,
   filters,
   onChange,
-  onClear,
   keepFor,
   keepForDisabled,
   onKeepForChange,
   onClose,
+  resultCount,
+  totalCount,
+  activeCount,
+  onClearAll,
   closeButtonRef,
 }) {
   const usedForOptions = useMemo(() => listOptions(allItems, 'usedFor'), [allItems]);
@@ -52,30 +58,50 @@ export default memo(function FilterSidebar({
 
   return (
     <div>
-      {/* Stays pinned to the top of the panel while the filters scroll underneath.
-          Same height as the table header (h-11, 44px) so the two line up side by side. */}
-      <div className="sticky top-0 z-10 -mx-4 flex h-11 items-center gap-3 border-b border-line bg-surface px-4">
-        <h2 className="text-base font-semibold text-fg">Filters</h2>
-        {countActiveFilters(filters) > 0 && (
-          <button type="button" onClick={onClear} className="button-small ml-auto">
-            Clear all
-          </button>
-        )}
-        {onClose && (
-          <span className={countActiveFilters(filters) > 0 ? '' : 'ml-auto'}>
-            <Tooltip text="Close filters" placement="bottom">
-              <button
-                ref={closeButtonRef}
-                type="button"
-                onClick={onClose}
-                aria-label="Close filters"
-                className="flex size-8 items-center justify-center rounded-full text-muted hover:bg-hover hover:text-fg"
-              >
-                <XMarkIcon className="size-5" aria-hidden="true" />
-              </button>
-            </Tooltip>
-          </span>
-        )}
+      {/* Stays pinned to the top of the panel while the filters scroll underneath:
+          the title (as tall as the search box beside it, h-11, so their edges line up),
+          then how many items the filters leave, with Clear all. */}
+      <div className="sticky top-0 z-10 -mx-4 border-b border-line bg-surface px-4">
+        <div className="flex h-11 items-center gap-3">
+          <h2 className="flex items-center gap-2 text-base font-semibold text-fg">
+          Filters
+          {activeCount > 0 && (
+            <span className="rounded-full bg-control px-2 py-0.5 text-xs font-medium text-white">
+              {activeCount}
+              <span className="sr-only"> on</span>
+            </span>
+          )}
+        </h2>
+          {onClose && (
+            <span className="ml-auto">
+              <Tooltip text="Close filters" placement="bottom">
+                <button
+                  ref={closeButtonRef}
+                  type="button"
+                  onClick={onClose}
+                  aria-label="Close filters"
+                  className="flex size-8 items-center justify-center rounded-full text-muted hover:bg-hover hover:text-fg"
+                >
+                  <XMarkIcon className="size-5" aria-hidden="true" />
+                </button>
+              </Tooltip>
+            </span>
+          )}
+        </div>
+        <div className="flex min-h-8 items-center justify-between gap-2 pb-2">
+          <p className="text-sm text-muted" aria-live="polite">
+            {resultCount.toLocaleString('en-US')} of {totalCount.toLocaleString('en-US')} items
+          </p>
+          {activeCount > 0 && (
+            <button
+              type="button"
+              onClick={onClearAll}
+              className="rounded px-1.5 py-0.5 text-sm font-medium text-muted hover:bg-hover hover:text-fg"
+            >
+              Clear all
+            </button>
+          )}
+        </div>
       </div>
 
       {/* A setting about the player rather than a filter: which activities
@@ -101,7 +127,7 @@ export default memo(function FilterSidebar({
                 type="checkbox"
                 checked={keepFor.includes(activity.id)}
                 onChange={() => onKeepForChange(toggleValue(keepFor, activity.id))}
-                className="size-4 shrink-0 accent-emerald-700"
+                className="checkbox"
               />
               <span className="text-body">{activity.label}</span>
             </label>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -19,12 +19,19 @@ const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: r
 export function usePresence(open, duration = 250) {
   const [mounted, setMounted] = useState(open);
   const [visible, setVisible] = useState(open);
-  const wasOpen = useRef(open);
+
+  // When `open` changes: mount right away when opening, and switch to the
+  // hidden styles right away when closing. Done while drawing (React's way
+  // to follow a prop) rather than in an effect, which would draw twice.
+  const [wasOpen, setWasOpen] = useState(open);
+  if (open !== wasOpen) {
+    setWasOpen(open);
+    if (open) setMounted(true);
+    else setVisible(false);
+  }
 
   useEffect(() => {
     if (open) {
-      wasOpen.current = true;
-      setMounted(true);
       // Wait two frames (~30ms, not noticeable) so the browser has drawn the
       // hidden state before switching to "shown"; with one frame it can skip
       // the transition.
@@ -33,13 +40,12 @@ export function usePresence(open, duration = 250) {
       });
       return () => cancelAnimationFrame(frame);
     }
-    setVisible(false);
-    // Nothing to animate out if it was never shown (e.g. a tooltip on page load).
-    if (!wasOpen.current) return;
-    wasOpen.current = false;
+    // Closed: let the exit transition play, then unmount. (Nothing to do if it
+    // was never shown, e.g. a tooltip on page load.)
+    if (!mounted) return undefined;
     const timer = setTimeout(() => setMounted(false), prefersReducedMotion() ? 0 : duration);
     return () => clearTimeout(timer);
-  }, [open, duration]);
+  }, [open, duration, mounted]);
 
   return { mounted, visible };
 }
