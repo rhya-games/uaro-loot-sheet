@@ -70,13 +70,22 @@ export default function UndoSnackbar({ change }) {
             event.preventDefault(); // Escape is handled here; see AGENTS.md.
             setOpen(false);
           }}
-          className={`panel fixed bottom-4 left-1/2 z-40 flex w-max max-w-[calc(100vw-2rem)] -translate-x-1/2 items-center
-            gap-3 py-2 pr-2 pl-4 text-sm text-fg shadow-lg transition duration-200 ease-smooth motion-reduce:transition-none
+          // Black in both themes (like tooltips), so it stands out from the page.
+          // Focus rings are white here, with a black gap.
+          className={`fixed bottom-4 left-1/2 z-40 flex w-max max-w-[calc(100vw-2rem)] -translate-x-1/2 items-center
+            gap-3 rounded-lg bg-gray-900 py-2 pr-2 pl-4 text-sm text-white shadow-lg transition duration-200 ease-smooth
+            [--focus-gap:var(--color-gray-900)] motion-reduce:transition-none dark:border dark:border-line-strong
             ${visible ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'}`}
         >
-          <p className={status?.error ? 'text-red-700 dark:text-red-400' : ''}>{message}</p>
+          <p className={status?.error ? 'text-red-300' : ''}>{message}</p>
           {status !== 'undone' && (
-            <button type="button" onClick={undo} disabled={status === 'undoing'} className="button-small disabled:opacity-60">
+            <button
+              type="button"
+              onClick={undo}
+              disabled={status === 'undoing'}
+              className="rounded-md border border-white/30 px-2.5 py-1 font-medium text-white hover:bg-white/10
+                focus-visible:outline-white disabled:opacity-60"
+            >
               {status === 'undoing' ? 'Undoing…' : 'Undo'}
             </button>
           )}
@@ -85,7 +94,7 @@ export default function UndoSnackbar({ change }) {
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Dismiss"
-              className="rounded-md p-1 text-muted hover:bg-hover hover:text-fg"
+              className="rounded-md p-1 text-white/70 hover:bg-white/10 hover:text-white focus-visible:outline-white"
             >
               <XMarkIcon className="size-5" aria-hidden="true" />
             </button>

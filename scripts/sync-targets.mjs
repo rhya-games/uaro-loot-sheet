@@ -41,6 +41,9 @@ const AEGIS_NAMES = {
 /** Targets whose item the emulators don't name: target -> item ID (from the maintainer). */
 const ITEM_IDS = {
   'Mistress Pet Evolution': 9193, // Mistress Egg; rAthena only has it as aegis_9193
+  'Earth Deleter Pet Evolution': 9098,
+  'Gigantic Majestic Goat (DEF)': 5518,
+  'Antique Smoking Pipe': 5377,
 };
 
 const items = JSON.parse(readFileSync(LOOT_FILE, 'utf8'));
