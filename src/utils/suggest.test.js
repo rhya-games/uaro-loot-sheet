@@ -48,6 +48,25 @@ describe('createSuggester', () => {
     expect(createSuggester([part])(part).actions).toEqual(['Keep', 'Vend']);
   });
 
+  it('keeps for a quest even when a value is set for it', () => {
+    const part = item({ name: 'Part', avgVend: 1000, uses: [{ for: 'Sign Quest', qty: 5 }] });
+    const values = new Map([['Sign Quest', 0]]);
+    expect(createSuggester([part], values)(part).actions).toEqual(['Keep', 'Vend']);
+  });
+
+  it("doesn't keep extras of something that isn't used up, and it isn't Junk", () => {
+    const whip = item({ name: 'Whip', sellValue: 0, avgVend: 0, uses: [{ for: 'Mask', note: 'any whip; not used up' }] });
+    expect(createSuggester([whip])(whip).actions).toEqual([]);
+    const sold = { ...whip, avgVend: 5000 };
+    expect(createSuggester([sold])(sold).actions).toEqual(['Vend']);
+  });
+
+  it('uses the target values it is given', () => {
+    const part = item({ name: 'Part', avgVend: 1000, uses: [{ for: 'Hat', qty: 2 }] });
+    expect(createSuggester([part], new Map([['Hat', 1500]]))(part).actions).toEqual(['Vend']);
+    expect(createSuggester([part], new Map([['Hat', 5000]]))(part).actions).toEqual(['Keep', 'Vend']);
+  });
+
   it("doesn't keep for level 1-3 cooking", () => {
     const fruit = item({ name: 'Fruit', avgVend: 1000, uses: [{ for: 'Snack', qty: 5, note: '+2 DEX food' }] });
     expect(createSuggester([fruit])(fruit).actions).toEqual(['Vend']);

@@ -14,5 +14,5 @@ export const SITE_ITEMS = ADMIN_AVAILABLE ? loot : loot.filter((item) => !item.c
 /** Outside admin mode (and on the published site): off, with the site's items. */
 export const AdminContext = createContext({ enabled: false, items: SITE_ITEMS });
 
-/** { available, enabled, setEnabled, items, suggest(item), saveItem(id, changes) } */
+/** { available, enabled, setEnabled, items, suggest(item), saveItem(id, changes), targets, saveTarget(name, value) } */
 export const useAdmin = () => useContext(AdminContext);

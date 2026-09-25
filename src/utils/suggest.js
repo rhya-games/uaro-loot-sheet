@@ -18,8 +18,13 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  * worth with what all its parts would sell for. If the finished thing is
  * worth more, its parts are worth keeping. Keep is suggested next to the
  * sell action ("keep it if you want, sell it if you want money").
- * Cooking levels 1-3 don't count: those foods are too weak to be worth
- * keeping ingredients for (see isLowLevelCooking).
+ *   - Quests can't be bought or sold, so they have no value to compare:
+ *     a quest use is always a reason to Keep (see isQuest).
+ *   - Uses that don't use the item up (a weapon that breaks the Sign Quest
+ *     seal, a whip for Zealotus Mask, a recipe book) aren't: one is enough,
+ *     so extras sell by price (see isNotUsedUp).
+ *   - Cooking levels 1-3 don't count: those foods are too weak to be worth
+ *     keeping ingredients for (see isLowLevelCooking).
  *
  * Junk: nothing uses it, and nobody pays anything for it. Pet accessories
  * are Junk under PET_ACCESSORY_JUNK_BELOW when nothing else uses them.
@@ -38,7 +43,14 @@ export const isPetAccessory = (item) => item.itemId >= 10001 && item.itemId <= 1
 export const isLowLevelCooking = (use) =>
   /^\+[1-3] [A-Z]{3} food$/.test(use.note ?? '') || /^Level [1-3] Cookbook$/.test(use.for);
 
-const TARGET_VALUES = new Map(targetData.items.map((entry) => [entry.for, entry.value]));
+/** A quest ("Sign Quest", "Episode 13 Quests"). Not "Level 4 weapon quest" uses: those make a weapon with a price. */
+export const isQuest = (use) => /\bQuests?\b/.test(use.for);
+
+/** A use that needs the item but doesn't take it ("any whip; not used up"). */
+export const isNotUsedUp = (use) => /\bnot used up\b/.test(use.note ?? '');
+
+/** use-targets.json as a Map: target name -> value. */
+export const TARGET_VALUES = new Map(targetData.items.map((entry) => [entry.for, entry.value]));
 const withoutSlots = (name) => name.replace(/\s*\[\d\]$/, '');
 
 /**
@@ -84,6 +96,7 @@ const fmt = (zeny) => `${zeny.toLocaleString('en-US')}z`;
 /**
  * Makes a function that suggests actions for any item in `items`. It
  * indexes every recipe once, so calling it for each item stays fast.
+ * `targetValues` overrides use-targets.json (admin mode passes its edits).
  *
  * The result is { actions, sale, uses, reasons }:
  *   actions  suggested actions, like ['Keep', 'Vend'] (empty when unsure)
@@ -91,7 +104,7 @@ const fmt = (zeny) => `${zeny.toLocaleString('en-US')}z`;
  *   uses     each use with { for, worthIt, value, partsValue, missingPrices }
  *   reasons  plain-language lines explaining the suggestion
  */
-export function createSuggester(items) {
+export function createSuggester(items, targetValues = TARGET_VALUES) {
   const byName = new Map(items.map((item) => [item.name, item]));
   const bySlotlessName = new Map();
   for (const item of items) {
@@ -100,10 +113,12 @@ export function createSuggester(items) {
   }
   const findItem = (name) => byName.get(name) ?? bySlotlessName.get(withoutSlots(name)) ?? null;
 
-  // Every material of each target, with quantities.
+  // Every material of each target, with quantities. Things that aren't used
+  // up cost nothing to make it.
   const partsOf = new Map();
   for (const item of items) {
     for (const use of item.uses) {
+      if (isNotUsedUp(use)) continue;
       if (!partsOf.has(use.for)) partsOf.set(use.for, []);
       partsOf.get(use.for).push({ item, qty: use.qty ?? 1 });
     }
@@ -117,7 +132,7 @@ export function createSuggester(items) {
 
   /** What the finished thing is worth: { value, source } (value null = unknown). */
   function targetValue(target) {
-    if (TARGET_VALUES.has(target)) return { value: TARGET_VALUES.get(target), source: 'use-targets.json' };
+    if (targetValues.has(target)) return { value: targetValues.get(target), source: 'use-targets.json' };
     const item = findItem(target);
     if (!item) return { value: null, source: 'not loot' };
     // A finished item is worth the most players pay for it. The NPC price
@@ -128,6 +143,7 @@ export function createSuggester(items) {
   }
 
   function judgeUse(use) {
+    if (isQuest(use)) return { for: use.for, worthIt: true, value: null, source: 'quest', partsValue: 0, missingPrices: 0 };
     const { value, source } = targetValue(use.for);
     let partsValue = 0;
     let missingPrices = 0;
@@ -143,7 +159,7 @@ export function createSuggester(items) {
 
   return function suggest(item) {
     const sale = saleOf(item);
-    const uses = item.uses.filter((use) => !isLowLevelCooking(use)).map(judgeUse);
+    const uses = item.uses.filter((use) => !isLowLevelCooking(use) && !isNotUsedUp(use)).map(judgeUse);
     const reasons = [];
     const actions = [];
 
@@ -151,26 +167,32 @@ export function createSuggester(items) {
     if (worthKeeping.length) {
       actions.push('Keep');
       for (const use of worthKeeping) {
-        reasons.push(use.value == null
+        reasons.push(use.source === 'quest'
+          ? `Keep for ${use.for} (quests can’t be bought)`
+          : use.value == null
           ? `Keep for ${use.for} (no value set, so keep to be safe)`
           : `Keep for ${use.for}: worth ${fmt(use.value)}, parts sell for ${fmt(use.partsValue)}${use.missingPrices ? ` (${use.missingPrices} parts have no price)` : ''}`);
       }
     }
     const lowCooking = item.uses.filter(isLowLevelCooking).length;
     if (lowCooking) reasons.push(`Level 1–3 cooking (${lowCooking} uses) isn’t a reason to keep it`);
+    const notUsedUp = item.uses.filter(isNotUsedUp).map((use) => use.for);
+    if (notUsedUp.length) reasons.push(`${notUsedUp.join(', ')} doesn’t use it up, so one is enough: not a reason to keep more`);
     for (const use of uses.filter((use) => !use.worthIt)) {
       reasons.push(`Not worth making ${use.for}: worth ${fmt(use.value)}, parts sell for ${fmt(use.partsValue)}`);
     }
 
     // A pet accessory nothing else needs isn't worth the trouble under 5k.
+    // Something that still needs one (a Sign Quest weapon) isn't Junk.
+    const usedFor = uses.length + notUsedUp.length;
     const best = Math.max(npcSellPrice(item) ?? 0, sale?.price ?? 0);
-    if (isPetAccessory(item) && !uses.length && sale && best < PET_ACCESSORY_JUNK_BELOW) {
+    if (isPetAccessory(item) && !usedFor && sale && best < PET_ACCESSORY_JUNK_BELOW) {
       actions.push('Junk');
       reasons.push(`Pet accessory worth under ${fmt(PET_ACCESSORY_JUNK_BELOW)} (${fmt(best)}), and nothing else uses it`);
     } else if (sale?.action) {
       actions.push(sale.action);
       reasons.push(sale.reason);
-    } else if (sale && !uses.length) {
+    } else if (sale && !usedFor) {
       actions.push('Junk');
       reasons.push(sale.reason);
     } else if (!sale) {
