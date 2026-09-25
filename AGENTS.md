@@ -102,6 +102,9 @@ Match similar existing items. Look them up in loot.json first.
   crafted (crafted items can be sold too). Default to including. Before
   leaving anything out, explain why and get the maintainer's OK.
 
+- New items start with the category `Not Reviewed`. Once their uses are
+  checked (uaRO wiki, emulator quest scripts: items taken with `delitem`),
+  they get real categories, or `No Use` if nothing uses them.
 - "Used For" targets reuse an existing name exactly. Pet evolutions are
   `"<Evolved pet> Pet Evolution"`. Uses show quantities from the wiki.
 - Pet evolution materials: `Keep` + `Vend`, categories `Pet Evolution`,

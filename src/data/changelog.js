@@ -50,7 +50,7 @@ export const CHANGELOG = [
       { type: 'Added', text: 'Barren Trunk, for the Archer job quest.' },
       {
         type: 'Changed',
-        text: '“Uncategorized” is now two labels: Not Reviewed (dashed; nobody has checked yet) and No Use (checked, and nothing uses it).',
+        text: '“Uncategorized” is now “No Use”: we checked, and nothing uses these 246 items. New items start as “Not Reviewed” (dashed) until someone checks them.',
       },
       { type: 'Added', text: 'A site icon: a loot bag.' },
       {
