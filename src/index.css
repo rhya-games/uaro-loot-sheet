@@ -23,7 +23,7 @@
  * quieter than muted, lower its opacity instead of adding a gray.
  *   accent       links                     accent-soft  active/selected background
  *   accent-line  active borders            focus        keyboard focus ring
- *   control      ticked checkboxes (with a white check)
+ *   control      ticked checkboxes and count badges (white text on it)
  *   header       green site header and table header
  *   header-strong  current page link in the header
  */
@@ -90,6 +90,7 @@
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-accent-line: var(--accent-line);
+  --color-control: var(--control);
   --color-header: var(--header);
   --color-header-strong: var(--header-strong);
 }

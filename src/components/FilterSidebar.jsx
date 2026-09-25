@@ -21,7 +21,8 @@ import { ACTIVITIES } from '../utils/activities.js';
  *   onKeepForChange - called with the new list of activity ids
  *   onClose    - optional: shows a close (×) button that calls this
  *   resultCount, totalCount - items shown, and all items ("709 of 1,094 items")
- *   anyActive  - true when any filter is on (shows Clear all)
+ *   activeCount - how many filters are on, counting "I keep items for" (shown
+ *                 next to the title, like on the Filters button; >0 shows Clear all)
  *   onClearAll - called when "Clear all" is clicked
  *   closeButtonRef - optional ref for that button (so it can be focused)
  */
@@ -40,7 +41,7 @@ export default memo(function FilterSidebar({
   onClose,
   resultCount,
   totalCount,
-  anyActive,
+  activeCount,
   onClearAll,
   closeButtonRef,
 }) {
@@ -62,7 +63,15 @@ export default memo(function FilterSidebar({
           then how many items the filters leave, with Clear all. */}
       <div className="sticky top-0 z-10 -mx-4 border-b border-line bg-surface px-4">
         <div className="flex h-11 items-center gap-3">
-          <h2 className="text-base font-semibold text-fg">Filters</h2>
+          <h2 className="flex items-center gap-2 text-base font-semibold text-fg">
+          Filters
+          {activeCount > 0 && (
+            <span className="rounded-full bg-control px-2 py-0.5 text-xs font-medium text-white">
+              {activeCount}
+              <span className="sr-only"> on</span>
+            </span>
+          )}
+        </h2>
           {onClose && (
             <span className="ml-auto">
               <Tooltip text="Close filters" placement="bottom">
@@ -83,7 +92,7 @@ export default memo(function FilterSidebar({
           <p className="text-sm text-muted" aria-live="polite">
             {resultCount.toLocaleString('en-US')} of {totalCount.toLocaleString('en-US')} items
           </p>
-          {anyActive && (
+          {activeCount > 0 && (
             <button
               type="button"
               onClick={onClearAll}

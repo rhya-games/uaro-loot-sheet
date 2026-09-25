@@ -95,7 +95,12 @@ export default function LootPage() {
   // later (React can drop an unfinished redraw when the next letter arrives).
   const deferredQuery = useDeferredValue(query);
   const searched = useMemo(() => search(deferredQuery), [search, deferredQuery]);
-  const results = useMemo(() => sortItems(filterItems(searched, filters), sort), [searched, filters, sort]);
+  // Filters work the same way: the checkbox ticks at once, the table follows.
+  const deferredFilters = useDeferredValue(filters);
+  const results = useMemo(
+    () => sortItems(filterItems(searched, deferredFilters), sort),
+    [searched, deferredFilters, sort],
+  );
 
   // Which "Used For" entries to bring to the front of each item's list: the
   // targets filtered by, and uses the search text matches as whole words
@@ -255,7 +260,7 @@ export default function LootPage() {
         ))}
       </span>
       {activeFilterCount > 0 && (
-        <span className="rounded-full bg-emerald-700 px-2 py-0.5 text-xs text-white">{activeFilterCount}</span>
+        <span className="rounded-full bg-control px-2 py-0.5 text-xs text-white">{activeFilterCount}</span>
       )}
     </button>
   );
@@ -294,7 +299,7 @@ export default function LootPage() {
           panel sits beside the table it shows the count and filters itself, so this hides. */}
       {!panelShownBeside && (
         <div className="flex min-h-7 flex-wrap items-center gap-x-4 gap-y-2">
-          <p className="text-sm text-muted">
+          <p className="text-sm text-muted" aria-live="polite">
             {results.length.toLocaleString('en-US')} of {loot.length.toLocaleString('en-US')} items
           </p>
           <ActiveFilters
@@ -368,7 +373,7 @@ export default function LootPage() {
             onClose={closePanel}
             resultCount={panelView.current.count}
             totalCount={loot.length}
-            anyActive={activeFilterCount > 0}
+            activeCount={activeFilterCount}
             onClearAll={clearAll}
             closeButtonRef={closeButtonRef}
             allItems={baseItems}

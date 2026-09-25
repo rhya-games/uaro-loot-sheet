@@ -41,6 +41,8 @@ export const CHANGELOG = [
         type: 'Added',
         text: 'Version numbers: each day’s changes share one, shown here, at the bottom of every page, and as a release on GitHub.',
       },
+      { type: 'Added', text: 'The filter panel shows how many filters are on, next to its title.' },
+      { type: 'Added', text: 'Shared links show the site’s name and a short description in chat apps.' },
       { type: 'Changed', text: 'Typing in the search box feels instant, even with the whole list showing.' },
       { type: 'Fixed', text: 'Checkboxes have a white check, and keyboard focus rings are never cut off or covered.' },
       {
