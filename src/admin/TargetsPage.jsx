@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
 import { useAdmin } from './useAdmin.js';
 import ZenyInput from './ZenyInput.jsx';
+import CopyItemId from '../components/CopyItemId.jsx';
 import { Page } from '../components/Page.jsx';
-import { isNotUsedUp, isQuest } from '../utils/suggest.js';
-
-const withoutSlots = (name) => name.replace(/\s*\[\d\]$/, '');
+import { valueTargets } from '../utils/targets.js';
+import targetIds from '../data/target-ids.json' with { type: 'json' };
 
 /**
  * Admin mode's list of "Used For" targets that need a value: hats, pet
@@ -15,7 +15,9 @@ const withoutSlots = (name) => name.replace(/\s*\[\d\]$/, '');
  *
  * Targets that decide the most suggestions come first. Quests aren't
  * listed (they're always a reason to keep), and neither are targets in the
- * sheet (price those on the loot page).
+ * sheet (price those on the loot page). Item IDs (click to copy, for
+ * @whobuy and shop searches) come from src/data/target-ids.json
+ * (`npm run sync:targets`); a pet evolution's is the evolved pet's egg.
  *
  * Only exists under `npm run dev`.
  */
@@ -24,15 +26,7 @@ export default function TargetsPage() {
   const [query, setQuery] = useState('');
 
   const rows = useMemo(() => {
-    const inSheet = new Set(items.map((item) => withoutSlots(item.name)));
-    const byTarget = new Map();
-    for (const item of items) {
-      for (const use of item.uses) {
-        if (isQuest(use) || isNotUsedUp(use) || inSheet.has(withoutSlots(use.for))) continue;
-        if (!byTarget.has(use.for)) byTarget.set(use.for, { name: use.for, parts: [], decides: 0 });
-        byTarget.get(use.for).parts.push(item.name);
-      }
-    }
+    const byTarget = new Map([...valueTargets(items)].map(([name, target]) => [name, { ...target, decides: 0 }]));
     // "Decides": parts whose only reason to keep, for now, is this target
     // having no value. Giving it one settles whether to keep them.
     for (const item of items) {
@@ -73,7 +67,7 @@ export default function TargetsPage() {
  *
  * Props:
  *   title   - heading, with the count
- *   rows    - [{ name, parts, decides }]
+ *   rows    - [{ name, parts, skill, decides }]
  *   targets - Map of target name -> value
  *   onSave  - (name, value) => Promise
  */
@@ -96,6 +90,8 @@ function TargetTable({ title, rows, targets, onSave }) {
               <td className="px-4 py-2">
                 <p className="font-medium text-fg">{row.name}</p>
                 <p className="text-xs text-muted">
+                  {row.skill ? 'Skill' : targetIds.ids[row.name] ? <CopyItemId itemId={targetIds.ids[row.name]} /> : 'No item ID'}
+                  {' · '}
                   {row.parts.length > 4 ? `${row.parts.slice(0, 4).join(', ')} and ${row.parts.length - 4} more` : row.parts.join(', ')}
                 </p>
               </td>

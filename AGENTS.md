@@ -39,6 +39,7 @@ npm test               # unit tests in src/**/*.test.js (Vitest; CI runs this)
 npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
+npm run sync:targets   # item IDs of "Used For" targets (admin Targets page)
 npm run check:uses -- recipes.json   # compare recipes (e.g. a wiki table) with "Used For"
 npm run suggest [-- "name"]          # compare suggested actions (src/utils/suggest.js) with hand-set ones
 ```
@@ -116,6 +117,7 @@ Match similar existing items. Look them up in loot.json first.
   by price like anything else.
 - Headgear quest materials (Dimonka): category `Server Hat Quest` + `uaRO`.
 - After adding items: run `sync:prices`, `sync:shops`, then `validate`.
+  After adding uses, run `sync:targets` so new targets get item IDs.
 - If the CSV import should produce the same result, mirror renames, IDs
   and removals in `scripts/source/sheet-corrections.mjs`.
 
@@ -188,7 +190,8 @@ Match similar existing items. Look them up in loot.json first.
 - `src/utils/suggest.js` works out actions from prices (margins, Keep when
   a finished thing is worth more than its parts). `src/data/use-targets.json`
   holds values for "Used For" targets that aren't loot (set them on admin
-  mode's Targets page, `#/targets`). Quests ("... Quest(s)") have no value
+  mode's Targets page, `#/targets`; its item IDs are in the generated
+  `src/data/target-ids.json`). Quests ("... Quest(s)") have no value
   and are always a reason to Keep. Uses noted "not used up" (Sign Quest
   weapons, recipe books) never are. Cards always suggest Vend; level 1-3
   cooking (use notes "+1".."+3 ... food", Level 1-3 Cookbook trades) is
