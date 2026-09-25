@@ -338,8 +338,25 @@ export default function LootPage() {
 
       {/* The results header: how many items, and what's narrowing them. Always one
           chip tall, so adding the first filter doesn't push the table down. When the
-          panel sits beside the table it shows the count and filters itself, so this hides. */}
-      {!panelShownBeside && (
+          panel sits beside the table it shows the count and every checkbox filter
+          itself, so this hides — except "Used For": clicking a target (in the Used
+          For column, not the panel) sets it, and its checkbox lives at the bottom of
+          a long sidebar, easy to miss. Keep just that chip visible here so picking a
+          target never disappears silently. */}
+      {panelShownBeside ? (
+        filters.usedFor.length > 0 && (
+          <div className="flex min-h-7 flex-wrap items-center gap-x-4 gap-y-2">
+            <ActiveFilters
+              filters={{ ...EMPTY_FILTERS, usedFor: filters.usedFor }}
+              keepFor={ALL_ACTIVITY_IDS}
+              onClearKeepFor={() => {}}
+              onRemove={(key, value) => setFilters({ ...filters, [key]: toggleValue(filters[key], value) })}
+              onRemoveGroup={(key) => setFilters({ ...filters, [key]: [] })}
+              onClearAll={() => setFilters({ ...filters, usedFor: [] })}
+            />
+          </div>
+        )
+      ) : (
         <div className="flex min-h-7 flex-wrap items-center gap-x-4 gap-y-2">
           <p className="text-sm text-muted" aria-live="polite">
             {results.length.toLocaleString('en-US')} of {loot.length.toLocaleString('en-US')} items
