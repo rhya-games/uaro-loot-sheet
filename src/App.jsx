@@ -8,13 +8,17 @@ import AboutPage from './pages/AboutPage.jsx';
 import FeedbackPage from './pages/FeedbackPage.jsx';
 import ChangelogPage from './pages/ChangelogPage.jsx';
 import { useRoute } from './utils/route.js';
+import { trackPage } from './utils/analytics.js';
 import { AdminProvider } from './admin/AdminContext.jsx';
+import { ADMIN_AVAILABLE } from './admin/useAdmin.js';
+import TargetsPage from './admin/TargetsPage.jsx';
 
 /** Every page except the loot page: route name -> title and component. */
 const PAGES = {
   about: { title: 'About', Component: AboutPage },
   feedback: { title: 'Feedback', Component: FeedbackPage },
   changelog: { title: 'Changelog', Component: ChangelogPage },
+  ...(ADMIN_AVAILABLE && { targets: { title: 'Target values', Component: TargetsPage } }),
 };
 
 /**
@@ -29,6 +33,8 @@ export default function App() {
   useEffect(() => {
     document.title = page ? `${page.title} · uaRO Loot Sheet` : 'uaRO Loot Sheet';
   }, [page]);
+  // After the title effect above, so the view is counted with the new title.
+  useEffect(() => trackPage(route), [route]);
 
   return (
     // A column as tall as the window: the footer sits at the bottom of the

@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { ADMIN_AVAILABLE, AdminContext, SITE_ITEMS } from './useAdmin.js';
-import { createSuggester } from '../utils/suggest.js';
+import { createSuggester, TARGET_VALUES } from '../utils/suggest.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 
 /**
@@ -31,13 +31,39 @@ async function postItem(id, changes) {
   return result.item;
 }
 
+/** Saves what a "Used For" target is worth (null removes it). Throws on failure. */
+async function postTarget(target, value) {
+  const response = await fetch(`${import.meta.env.BASE_URL}__admin/target`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ for: target, value }),
+  });
+  const result = await response.json();
+  if (!response.ok) throw new Error(result.error ?? `Save failed (${response.status})`);
+}
+
+const sameActions = (a, b) => a.length === b.length && a.every((action) => b.includes(action));
+
 export function AdminProvider({ children }) {
   const [enabled, setEnabled] = useState(() => ADMIN_AVAILABLE && readPreference('admin', false));
   const [items, setItems] = useState(SITE_ITEMS);
+  // What "Used For" targets are worth (use-targets.json), with this session's edits.
+  const [targets, setTargets] = useState(TARGET_VALUES);
 
-  // The latest items, for saves that finish one after another (tabbing from
-  // Vend to Whobuy saves twice in a row).
+  // The latest items and targets, for saves that finish one after another
+  // (tabbing from Vend to Whobuy saves twice in a row).
   const latest = useRef(items);
+  const latestTargets = useRef(targets);
+
+  /**
+   * Saves the actions an item's prices now suggest, if they changed. Items
+   * with no player price yet keep their hand-set actions: the suggestion
+   * can't tell how to sell them, so it would drop Vend or NPC.
+   */
+  const applySuggestion = useCallback(async (item, replace) => {
+    const { actions, sale } = createSuggester(latest.current, latestTargets.current)(item);
+    if (sale && actions.length && !sameActions(actions, item.actions)) replace(await postItem(item.id, { actions }));
+  }, []);
 
   /**
    * Saves changes to one item. When a price changes, the actions its new
@@ -51,12 +77,28 @@ export function AdminProvider({ children }) {
       return saved;
     };
     const saved = replace(await postItem(id, changes));
-    if ('avgVend' in changes || 'avgWhobuy' in changes) {
-      const { actions } = createSuggester(latest.current)(saved);
-      const same = actions.length === saved.actions.length && actions.every((action) => saved.actions.includes(action));
-      if (actions.length && !same) replace(await postItem(id, { actions }));
+    if ('avgVend' in changes || 'avgWhobuy' in changes) await applySuggestion(saved, replace);
+  }, [applySuggestion]);
+
+  /**
+   * Saves what a "Used For" target is worth, then updates the actions of
+   * everything used to make it, the same way saving a price does.
+   */
+  const saveTarget = useCallback(async (target, value) => {
+    await postTarget(target, value);
+    const next = new Map(latestTargets.current);
+    if (value == null) next.delete(target);
+    else next.set(target, value);
+    latestTargets.current = next;
+    setTargets(next);
+    const parts = latest.current.filter((item) => item.uses.some((use) => use.for === target));
+    for (const part of parts) {
+      await applySuggestion(part, (saved) => {
+        latest.current = latest.current.map((item) => (item.id === saved.id ? saved : item));
+        setItems(latest.current);
+      });
     }
-  }, []);
+  }, [applySuggestion]);
 
   const changeEnabled = useCallback((value) => {
     setEnabled(value);
@@ -64,11 +106,11 @@ export function AdminProvider({ children }) {
   }, []);
 
   // Rebuilt after each save, so suggestions see the new prices.
-  const suggest = useMemo(() => createSuggester(items), [items]);
+  const suggest = useMemo(() => createSuggester(items, targets), [items, targets]);
 
   const value = useMemo(
-    () => ({ available: ADMIN_AVAILABLE, enabled, setEnabled: changeEnabled, items, suggest, saveItem }),
-    [enabled, changeEnabled, items, suggest, saveItem],
+    () => ({ available: ADMIN_AVAILABLE, enabled, setEnabled: changeEnabled, items, suggest, saveItem, targets, saveTarget }),
+    [enabled, changeEnabled, items, suggest, saveItem, targets, saveTarget],
   );
   return <AdminContext.Provider value={value}>{children}</AdminContext.Provider>;
 }

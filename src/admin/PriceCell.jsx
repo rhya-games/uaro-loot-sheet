@@ -1,6 +1,6 @@
-import { useLayoutEffect, useRef, useState } from 'react';
 import { useAdmin } from './useAdmin.js';
-import { parseZeny, todayText } from '../utils/format.js';
+import ZenyInput from './ZenyInput.jsx';
+import { todayText } from '../utils/format.js';
 import { PlayerPrice } from '../components/StatusIcons.jsx';
 import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
 
@@ -9,18 +9,6 @@ const CHECK_NOTES = {
   avgVend: 'Vend price from a player shop',
   avgWhobuy: '@whobuy price in game',
 };
-
-/** What a saved price looks like in the box: 12000 -> "12,000", 0 -> "None", null -> "". */
-const asText = (price) => (price == null ? '' : price === 0 ? 'None' : price.toLocaleString('en-US'));
-
-/**
- * Adds thousands commas to what's typed so far: "12000" -> "12,000",
- * "1500k" -> "1,500k". Only the leading digits change; the rest is kept.
- */
-function withCommas(text) {
-  const [, digits, rest] = text.replace(/,/g, '').match(/^(\d*)(.*)$/s);
-  return digits.replace(/\B(?=(\d{3})+(?!\d))/g, ',') + rest;
-}
 
 /**
  * A Vend or Whobuy price cell. In admin mode it's a text box: type a price
@@ -42,45 +30,10 @@ export default function PriceCell({ item, field }) {
 
 function PriceInput({ item, field }) {
   const { saveItem } = useAdmin();
-  const saved = item[field];
-  const [text, setText] = useState(asText(saved));
-  const [status, setStatus] = useState(null); // null | 'saving' | { error }
-  const [focused, setFocused] = useState(false);
-  const inputRef = useRef(null);
-  const caret = useRef(null); // where the cursor goes after commas are added
 
-  // Show the new value after a save (set while drawing, React's way to follow a prop).
-  const [shownSaved, setShownSaved] = useState(saved);
-  if (saved !== shownSaved) {
-    setShownSaved(saved);
-    setText(asText(saved));
-  }
-
-  // Adding commas moves the text around, so put the cursor back after the
-  // same number of typed characters (commas don't count).
-  function onChange(event) {
-    const { value: typed, selectionStart } = event.target;
-    const before = typed.slice(0, selectionStart).replace(/,/g, '').length;
-    const formatted = withCommas(typed);
-    let position = 0;
-    for (let seen = 0; position < formatted.length && seen < before; position++) {
-      if (formatted[position] !== ',') seen++;
-    }
-    caret.current = position;
-    setText(formatted);
-  }
-  useLayoutEffect(() => {
-    if (caret.current == null) return;
-    inputRef.current?.setSelectionRange(caret.current, caret.current);
-    caret.current = null;
-  }, [text]);
-
-  const value = parseZeny(text);
-  const invalid = value === undefined;
-
-  async function save() {
-    if (invalid || value === saved) return;
-    // Clearing a price isn't a check in game, so it doesn't touch Verified.
+  // Saving a price also marks the item as verified today. Clearing a price
+  // isn't a check in game, so it doesn't touch Verified.
+  function save(value) {
     const changes = { [field]: value };
     if (value != null) {
       const note = CHECK_NOTES[field];
@@ -90,51 +43,15 @@ function PriceInput({ item, field }) {
         verificationNotes: earlierToday ? `${item.verificationNotes}; ${note}` : note,
       });
     }
-    setStatus('saving');
-    try {
-      await saveItem(item.id, changes);
-      setStatus(null);
-    } catch (error) {
-      setStatus({ error: error.message });
-    }
+    return saveItem(item.id, changes);
   }
 
-  const label = `${field === 'avgVend' ? 'Vend' : 'Whobuy'} price for ${item.name}`;
   return (
-    <div className="flex flex-col items-end gap-1">
-      <input
-        type="text"
-        inputMode="decimal"
-        value={text}
-        ref={inputRef}
-        onChange={onChange}
-        onFocus={() => setFocused(true)}
-        onBlur={() => {
-          setFocused(false);
-          save();
-        }}
-        onKeyDown={(event) => {
-          if (event.key === 'Enter') event.currentTarget.blur();
-          if (event.key === 'Escape') {
-            event.preventDefault(); // Escape is handled here; see AGENTS.md.
-            setText(asText(saved));
-          }
-        }}
-        // Empty means "no price"; while typing, hint that shorthand works.
-        placeholder={focused ? 'e.g. 1.5m' : '—'}
-        aria-label={label}
-        aria-invalid={invalid || undefined}
-        className={`w-24 rounded-md border bg-surface px-2 py-1 text-right tabular-nums text-fg
-          placeholder:text-muted ${invalid || status?.error ? 'border-red-600' : 'border-line'}
-          ${status === 'saving' ? 'opacity-60' : ''}`}
-      />
-      {/* Typed "12k"? Show what it means. */}
-      {value > 0 && text.trim() !== asText(value) && <span className="text-xs text-muted">{asText(value)}z</span>}
-      {/* Typed 0? It saves as "None". */}
-      {value === 0 && text.trim().toLowerCase() !== 'none' && (
-        <span className="text-xs text-muted">None: nobody {field === 'avgWhobuy' ? 'buying' : 'selling'}</span>
-      )}
-      {status?.error && <span className="text-xs text-red-700 dark:text-red-400">{status.error}</span>}
-    </div>
+    <ZenyInput
+      value={item[field]}
+      onSave={save}
+      label={`${field === 'avgVend' ? 'Vend' : 'Whobuy'} price for ${item.name}`}
+      noneHint={`nobody ${field === 'avgWhobuy' ? 'buying' : 'selling'}`}
+    />
   );
 }

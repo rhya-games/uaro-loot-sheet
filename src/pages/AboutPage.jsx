@@ -115,6 +115,14 @@ export default function AboutPage() {
         </BulletList>
       </Section>
 
+      <Section title="Privacy">
+        <p>
+          The site counts visits and how it's used (pages opened, searches, filters, buttons clicked) with{' '}
+          <ExternalLink href="https://umami.is">Umami</ExternalLink>, to learn what to improve. It uses no cookies and
+          doesn't know who you are.
+        </p>
+      </Section>
+
       <Section title="Found a mistake or want to help?">
         <p>
           See <PageLink href={ROUTES.feedback}>Feedback</PageLink> for ways to report problems, or read the{' '}

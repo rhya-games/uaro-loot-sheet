@@ -1,10 +1,12 @@
 /**
- * Admin mode's save endpoint, as a Vite plugin. It only runs with
- * `npm run dev` (never in the built site, which has no server): the page
- * POSTs an item's changes to /__admin/item and this writes them to
- * src/data/loot.json. The page updates its own copy of the item, so this
- * write doesn't trigger Vite's reload (which would reset the search and
- * filters). Editing loot.json by hand still reloads as usual.
+ * Admin mode's save endpoints, as a Vite plugin. It only runs with
+ * `npm run dev` (never in the built site, which has no server):
+ *   POST /__admin/item    { id, changes }  -> src/data/loot.json
+ *   POST /__admin/target  { for, value }   -> src/data/use-targets.json
+ *                         (value null removes the target)
+ * The page updates its own copy, so these writes don't trigger Vite's
+ * reload (which would reset the search and filters). Editing the files by
+ * hand still reloads as usual.
  *
  * Only the fields in EDITABLE can change, and each is checked, so a bad
  * request can't break the file. Run `npm run validate` before committing,
@@ -14,6 +16,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const LOOT_FILE = resolve('src/data/loot.json');
+const TARGETS_FILE = resolve('src/data/use-targets.json');
 const ACTIONS = JSON.parse(readFileSync(resolve('src/data/schema.json'), 'utf8')).$defs.action.enum;
 const isPrice = (value) => value === null || (Number.isInteger(value) && value >= 0);
 
@@ -43,22 +46,44 @@ function readBody(request) {
 }
 
 export default function lootAdminPlugin() {
-  let lastWrite = null; // what this plugin last wrote to loot.json
+  const lastWrites = new Map(); // file -> what this plugin last wrote to it
+  const write = (file, data) => {
+    const text = JSON.stringify(data, null, 2) + '\n';
+    lastWrites.set(file, text);
+    writeFileSync(file, text);
+  };
   return {
     name: 'loot-admin',
     apply: 'serve', // dev server only
     // Skip the reload when the change is our own save.
     async handleHotUpdate({ file, read }) {
-      if (file === LOOT_FILE && (await read()) === lastWrite) return [];
+      if (lastWrites.has(file) && (await read()) === lastWrites.get(file)) return [];
     },
     configureServer(server) {
       server.middlewares.use(async (request, response, next) => {
-        if (request.method !== 'POST' || !request.url.endsWith('/__admin/item')) return next();
+        if (request.method !== 'POST') return next();
         const reply = (status, data) => {
           response.statusCode = status;
           response.setHeader('Content-Type', 'application/json');
           response.end(JSON.stringify(data));
         };
+        if (request.url.endsWith('/__admin/target')) {
+          try {
+            const { for: target, value } = await readBody(request);
+            if (typeof target !== 'string' || !target) return reply(400, { error: 'No target name' });
+            if (!isPrice(value)) return reply(400, { error: `Bad value: ${JSON.stringify(value)}` });
+            const data = JSON.parse(readFileSync(TARGETS_FILE, 'utf8'));
+            const items = data.items.filter((entry) => entry.for !== target);
+            if (value !== null) items.push({ for: target, value });
+            data.items = items.sort((a, b) => a.for.localeCompare(b.for));
+            write(TARGETS_FILE, data);
+            server.config.logger.info(`admin: target ${target} = ${value}`, { timestamp: true });
+            return reply(200, { for: target, value });
+          } catch (error) {
+            return reply(500, { error: error.message });
+          }
+        }
+        if (!request.url.endsWith('/__admin/item')) return next();
         try {
           const { id, changes } = await readBody(request);
           const items = JSON.parse(readFileSync(LOOT_FILE, 'utf8'));
@@ -69,8 +94,7 @@ export default function lootAdminPlugin() {
             if (!EDITABLE[field](value)) return reply(400, { error: `Bad value for ${field}: ${JSON.stringify(value)}` });
           }
           Object.assign(item, changes);
-          lastWrite = JSON.stringify(items, null, 2) + '\n';
-          writeFileSync(LOOT_FILE, lastWrite);
+          write(LOOT_FILE, items);
           server.config.logger.info(`admin: ${item.name} ${JSON.stringify(changes)}`, { timestamp: true });
           reply(200, { item });
         } catch (error) {

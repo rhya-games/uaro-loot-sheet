@@ -187,13 +187,18 @@ Match similar existing items. Look them up in loot.json first.
 
 - `src/utils/suggest.js` works out actions from prices (margins, Keep when
   a finished thing is worth more than its parts). `src/data/use-targets.json`
-  holds values for "Used For" targets that aren't loot. Cards always
-  suggest Vend; level 1-3 cooking (use notes "+1".."+3 ... food", Level 1-3
-  Cookbook trades) is never a reason to Keep.
+  holds values for "Used For" targets that aren't loot (set them on admin
+  mode's Targets page, `#/targets`). Quests ("... Quest(s)") have no value
+  and are always a reason to Keep. Uses noted "not used up" (Sign Quest
+  weapons, recipe books) never are. Cards always suggest Vend; level 1-3
+  cooking (use notes "+1".."+3 ... food", Level 1-3 Cookbook trades) is
+  never a reason to Keep.
 - Admin mode (`src/admin/`) only exists under `npm run dev`
   (`import.meta.env.DEV`). Saves POST to the Vite plugin in
   `scripts/admin-server.mjs`, which writes loot.json; only the fields in its
-  `EDITABLE` list can change. The page swaps in the saved item itself, and
+  `EDITABLE` list can change; target values go to use-targets.json. Saving
+  a price or a target value also saves the new suggested actions (except
+  for items with no player price yet). The page swaps in the saved item itself, and
   the plugin skips Vite's reload for its own writes.
 - Site JSON imports use `with { type: 'json' }` so Node scripts can import
   the same utils.

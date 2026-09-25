@@ -16,6 +16,8 @@ export const ROUTES = {
   about: '#/about',
   feedback: '#/feedback',
   changelog: '#/changelog',
+  // Admin mode's target values; only under `npm run dev` (see admin/TargetsPage.jsx).
+  ...(import.meta.env.DEV && { targets: '#/targets' }),
 };
 
 function readRoute() {

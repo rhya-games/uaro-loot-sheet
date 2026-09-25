@@ -37,6 +37,13 @@ back. Each item also shows the action suggested by its prices (hover it to
 see why). Saving a price also saves the suggested action. If a suggestion
 changes because of another item's price, click **Use** to take it. Run `npm run validate` and commit as usual when you're done.
 
+With admin mode on, **Targets** opens a list of hats, pet evolutions and
+other finished things that aren't loot, so they have no price of their own.
+Type what each is worth (saved to `src/data/use-targets.json`). The
+suggestion then keeps their parts only when the finished thing is worth more
+than the parts sell for. The ones that decide the most suggestions come first.
+Quests aren't listed: a quest use is always a reason to keep.
+
 The published site has no server, so it never shows admin mode.
 
 ## Deploying

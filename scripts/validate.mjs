@@ -206,6 +206,24 @@ if (noAction.length) warnings.push(`${noAction.length} items have no action yet:
 const isSorted = items.every((item, i) => i === 0 || items[i - 1].name.localeCompare(item.name) <= 0);
 if (!isSorted) warnings.push('Items are not in A-Z order by name. Keeping them sorted makes changes easier to review.');
 
+// use-targets.json: values for "Used For" targets. Each must still be a
+// target (a rename in loot.json would leave it behind), and quests don't
+// take values (they're always a reason to Keep; see src/utils/suggest.js).
+const TARGETS_FILE = 'src/data/use-targets.json';
+const allTargets = new Set(items.flatMap((item) => item.uses.map((use) => use.for)));
+const targetEntries = JSON.parse(readFileSync(TARGETS_FILE, 'utf8')).items;
+const seenTargets = new Set();
+for (const entry of targetEntries) {
+  if (typeof entry.for !== 'string' || !Number.isInteger(entry.value) || entry.value < 0) {
+    errors.push(`${TARGETS_FILE}: bad entry ${JSON.stringify(entry)} (needs "for" and a whole-number "value")`);
+    continue;
+  }
+  if (seenTargets.has(entry.for)) errors.push(`${TARGETS_FILE}: "${entry.for}" is listed twice`);
+  seenTargets.add(entry.for);
+  if (!allTargets.has(entry.for)) errors.push(`${TARGETS_FILE}: nothing in loot.json is used for "${entry.for}"`);
+  if (/\bQuests?\b/.test(entry.for)) warnings.push(`${TARGETS_FILE}: "${entry.for}" is a quest, so its value is ignored`);
+}
+
 // Changelog: one entry per day, newest first, with 0.x versions that go up,
 // and the newest one matching package.json (the GitHub release uses it).
 const packageVersion = JSON.parse(readFileSync('package.json', 'utf8')).version;

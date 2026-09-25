@@ -75,3 +75,14 @@ export function toggleValue(list, value) {
   return list.includes(value) ? list.filter((v) => v !== value) : [...list, value];
 }
 
+/**
+ * Options checked in `after` that weren't in `before`, with their group's
+ * title: [{ group: 'Action', value: 'Vend' }]. Used to count filter use.
+ */
+export function addedFilters(before, after) {
+  return FILTER_GROUPS.flatMap((group) =>
+    after[group.key]
+      .filter((value) => !before[group.key].includes(value))
+      .map((value) => ({ group: group.title, value })),
+  );
+}

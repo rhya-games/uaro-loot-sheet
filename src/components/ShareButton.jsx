@@ -1,6 +1,7 @@
 import { forwardRef, useEffect, useRef, useState } from 'react';
 import { ShareIcon } from '@heroicons/react/24/outline';
 import { copyText } from '../utils/clipboard.js';
+import { track } from '../utils/analytics.js';
 
 /** How long "Copied!" shows before the button goes back to "Share". */
 const COPIED_MS = 1500;
@@ -25,6 +26,7 @@ export default forwardRef(function ShareButton({ iconOnly = false, className = '
 
   const share = async () => {
     const url = window.location.href;
+    track('share', { how: USE_SHARE_MENU() ? 'menu' : 'copy' });
     if (USE_SHARE_MENU()) {
       try {
         await navigator.share({ title: document.title, url });

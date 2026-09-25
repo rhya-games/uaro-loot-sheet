@@ -11,12 +11,13 @@ import AdminToggle from '../admin/AdminToggle.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 import { createSearch, wordMatcher } from '../utils/search.js';
 import { nextSort, sortItems } from '../utils/sort.js';
-import { EMPTY_FILTERS, countActiveFilters, filterItems, toggleValue } from '../utils/filter.js';
+import { EMPTY_FILTERS, addedFilters, countActiveFilters, filterItems, toggleValue } from '../utils/filter.js';
 import { ALL_ACTIVITY_IDS, keepOnlyFor, keepsEverything } from '../utils/activities.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import { useMediaQuery } from '../utils/useMediaQuery.js';
 import { useAdmin } from '../admin/useAdmin.js';
 import { EMPTY_VIEW, cleanView, hashToView, isLootHash, viewToHash } from '../utils/viewUrl.js';
+import { track } from '../utils/analytics.js';
 
 
 /** How long the panel takes to slide in or out (ms). Matches `duration-200` below. */
@@ -35,6 +36,9 @@ const PANEL_ANIMATION_MS = 200;
  * padding). The same number is in PANEL_BESIDE_TABLE below; change both together.
  */
 const PANEL_BESIDE_TABLE = '(min-width: 1470px)';
+
+/** How long typing must stop before a search is counted (see utils/analytics.js). */
+const SEARCH_PAUSE_MS = 1500;
 
 /** The look of the buttons beside the search box (Filters, Share), so they match. */
 const TOOLBAR_BUTTON =
@@ -86,6 +90,7 @@ export default function LootPage() {
 
   /** Clear all: every filter, and back to keeping items for everything. The search stays. */
   const clearAll = useCallback(() => {
+    track('clear-filters');
     setFilters(EMPTY_FILTERS);
     changeKeepFor(ALL_ACTIVITY_IDS);
   }, [changeKeepFor]);
@@ -110,6 +115,38 @@ export default function LootPage() {
     () => ({ targets: filters.usedFor, matchesSearch: wordMatcher(deferredQuery) }),
     [filters.usedFor, deferredQuery],
   );
+
+  // Usage counts (see utils/analytics.js). Only changes are counted, not the
+  // view the page started with. A search counts once typing stops, not per
+  // letter, with how many items it found: searches that find nothing point
+  // to missing items or names people know differently.
+  const lastSearch = useRef(start.query.trim().toLowerCase());
+  useEffect(() => {
+    const text = deferredQuery.trim().toLowerCase();
+    if (!text || text === lastSearch.current) return;
+    const timer = setTimeout(() => {
+      lastSearch.current = text;
+      track('search', { q: text, results: searched.length });
+    }, SEARCH_PAUSE_MS);
+    return () => clearTimeout(timer);
+  }, [deferredQuery, searched]);
+  const lastFilters = useRef(start.filters);
+  useEffect(() => {
+    for (const added of addedFilters(lastFilters.current, filters)) track('filter', added);
+    lastFilters.current = filters;
+  }, [filters]);
+  const lastSort = useRef(start.sort);
+  useEffect(() => {
+    if (sort === lastSort.current) return;
+    lastSort.current = sort;
+    if (sort) track('sort', { column: sort.key, direction: sort.direction });
+  }, [sort]);
+  const lastKeepFor = useRef(keepForSetting);
+  useEffect(() => {
+    if (keepForSetting === lastKeepFor.current) return;
+    lastKeepFor.current = keepForSetting;
+    track('keep-for', { activities: keepForSetting.join(', ') || 'nothing' });
+  }, [keepForSetting]);
 
   const activeFilterCount = countActiveFilters(filters) + (keepsEverything(keepFor) ? 0 : 1);
 

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Tooltip from './Tooltip.jsx';
 import { copyText } from '../utils/clipboard.js';
+import { track } from '../utils/analytics.js';
 
 /** How long "Copied!" shows before the tooltip goes back to normal. */
 const COPIED_MS = 1500;
@@ -19,6 +20,7 @@ export default function CopyItemId({ itemId }) {
   useEffect(() => () => clearTimeout(timer.current), []);
 
   const copy = async () => {
+    track('copy-item-id', { item: itemId });
     setStatus((await copyText(String(itemId))) ? 'copied' : 'failed');
     clearTimeout(timer.current);
     timer.current = setTimeout(() => setStatus(null), COPIED_MS);
