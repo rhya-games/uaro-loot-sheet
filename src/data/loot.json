@@ -6572,14 +6572,9 @@
       "NPC"
     ],
     "categories": [
-      "Other Quest"
+      "No Use"
     ],
-    "uses": [
-      {
-        "for": "Wedding",
-        "qty": 1
-      }
-    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "sellValue": 22500,
@@ -27693,6 +27688,7 @@
     "itemId": 4051,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [

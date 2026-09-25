@@ -61,6 +61,20 @@ describe('createSuggester', () => {
     expect(createSuggester([sold])(sold).actions).toEqual(['Vend']);
   });
 
+  it("doesn't keep for skills, and a skill item isn't Junk", () => {
+    const gem = item({ name: 'Gem', avgVend: 1000, uses: [{ for: 'Safety Wall', note: 'each cast' }] });
+    expect(createSuggester([gem])(gem).actions).toEqual(['Vend']);
+    const free = item({ name: 'Gem', sellValue: 0, avgVend: 0, uses: [{ for: 'Safety Wall', note: 'each cast' }] });
+    expect(createSuggester([free])(free).actions).toEqual([]);
+  });
+
+  it('keeps parts of a target no shops sell (value 0)', () => {
+    const part = item({ name: 'Part', avgVend: 1000, uses: [{ for: 'Hat', qty: 2 }] });
+    const suggestion = createSuggester([part], new Map([['Hat', 0]]))(part);
+    expect(suggestion.actions).toEqual(['Keep', 'Vend']);
+    expect(suggestion.reasons[0]).toMatch(/no shops/);
+  });
+
   it('uses the target values it is given', () => {
     const part = item({ name: 'Part', avgVend: 1000, uses: [{ for: 'Hat', qty: 2 }] });
     expect(createSuggester([part], new Map([['Hat', 1500]]))(part).actions).toEqual(['Vend']);

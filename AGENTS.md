@@ -191,9 +191,11 @@ Match similar existing items. Look them up in loot.json first.
   a finished thing is worth more than its parts). `src/data/use-targets.json`
   holds values for "Used For" targets that aren't loot (set them on admin
   mode's Targets page, `#/targets`; its item IDs are in the generated
-  `src/data/target-ids.json`). Quests ("... Quest(s)") have no value
-  and are always a reason to Keep. Uses noted "not used up" (Sign Quest
-  weapons, recipe books) never are. Cards always suggest Vend; level 1-3
+  `src/data/target-ids.json`). A target value of 0 means "checked, no
+  shops sell it": it can only be made, so its parts count as worth keeping.
+  Quests ("... Quest(s)") have no value and are always a reason to Keep.
+  Skills (uses noted "each cast") and uses noted "not used up" (Sign Quest
+  weapons, recipe books) never are, and aren't targets. Cards always suggest Vend; level 1-3
   cooking (use notes "+1".."+3 ... food", Level 1-3 Cookbook trades) is
   never a reason to Keep.
 - Admin mode (`src/admin/`) only exists under `npm run dev`

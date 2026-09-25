@@ -6,8 +6,7 @@
  * Names are matched with Hercules pre-renewal first, then rAthena renewal,
  * ignoring case, spaces and punctuation. A pet evolution's ID is the evolved
  * pet's egg (that's what players trade). Names that don't match go in
- * AEGIS_NAMES below, by the emulators' exact item code. Skills have no
- * item, so they're skipped.
+ * AEGIS_NAMES below, by the emulators' exact item code.
  *
  * Usage:
  *   npm run sync:targets             (update target-ids.json)
@@ -60,7 +59,6 @@ function eggNames(target) {
 const ids = {};
 const missing = [];
 for (const target of valueTargets(items).values()) {
-  if (target.skill) continue;
   const names = / Pet Evolution/.test(target.name) ? eggNames(target.name) : [target.name];
   const id = AEGIS_NAMES[target.name]
     ? idByAegis.get(AEGIS_NAMES[target.name])

@@ -39,10 +39,12 @@ changes because of another item's price, click **Use** to take it. Run `npm run 
 
 With admin mode on, **Targets** opens a list of hats, pet evolutions and
 other finished things that aren't loot, so they have no price of their own.
-Type what each is worth (saved to `src/data/use-targets.json`). The
-suggestion then keeps their parts only when the finished thing is worth more
-than the parts sell for. The ones that decide the most suggestions come first.
-Quests aren't listed: a quest use is always a reason to keep.
+Type what each sells for (saved to `src/data/use-targets.json`), or `0` when
+no shops sell it. The suggestion then keeps their parts only when the
+finished thing is worth more than the parts sell for, or when no shops sell
+it. The ones that decide the most suggestions come first; click an item ID
+to copy it. Quests and skills aren't listed: a quest use is always a reason
+to keep, and a skill never is.
 
 The published site has no server, so it never shows admin mode.
 
