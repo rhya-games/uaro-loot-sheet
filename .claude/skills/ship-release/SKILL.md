@@ -57,7 +57,10 @@ job before trying again.
 
 ## 5. Tidy and report
 
-- `git checkout main && git pull`, and offer to delete the merged branch
-  (only with approval).
+- `git checkout main && git pull` (in the main folder; from a worktree, run
+  `git fetch` instead), then delete the merged branch: on GitHub with
+  `git push origin --delete <branch>`, and locally with `git branch -d
+  <branch>` (it refuses if the branch isn't merged). Also remove the
+  branch's worktree. Only delete the branch you merged.
 - Report: the PR link, the release link, what went live, and anything the
   maintainer should look at on the live site.
