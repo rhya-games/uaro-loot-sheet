@@ -6,8 +6,11 @@ description: Update avgVend / avgWhobuy prices in the loot sheet from vending st
 # Update vend or @whobuy prices
 
 Read AGENTS.md first. For a lot of prices typed by hand, admin mode
-(`npm run dev`, then the Admin button) is faster and does steps 2 and 4
-for you. This guide is for prices the maintainer sends to you.
+(`npm run dev`, then the Admin link in the header) is faster and does steps 2
+and 4 for you: the Paste prices page takes one line per item ("item ID, vend
+price, @whobuy price") with a preview and one Undo, and the Needs a price
+and Verify prices pages take prices one box at a time. This guide is for
+prices the maintainer sends to you.
 
 **Take the maintainer's prices as given.** Don't question a price, flag one
 that dropped a lot, or ask if it might be a one-off. They checked it in game.

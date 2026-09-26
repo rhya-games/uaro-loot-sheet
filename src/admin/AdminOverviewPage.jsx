@@ -37,10 +37,13 @@ export default function AdminOverviewPage() {
                   {!entry.route && ' No page yet.'}
                 </p>
               </div>
-              <p className={`text-xl font-semibold tabular-nums ${counts[entry.id] ? 'text-fg' : 'text-muted'}`}>
-                {counts[entry.id]}
-                <span className="sr-only"> waiting</span>
-              </p>
+              {/* Tools that aren't a list (Paste prices) have no count. */}
+              {counts[entry.id] != null && (
+                <p className={`text-xl font-semibold tabular-nums ${counts[entry.id] ? 'text-fg' : 'text-muted'}`}>
+                  {counts[entry.id]}
+                  <span className="sr-only"> waiting</span>
+                </p>
+              )}
             </li>
           ))}
         </ul>

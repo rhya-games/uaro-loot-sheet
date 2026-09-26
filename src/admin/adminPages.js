@@ -11,6 +11,14 @@ const QUEUE_ROUTES = {
   'unverified-prices': 'adminVerify',
 };
 
+/** Paste prices is a tool, not a queue: it has no count. */
+const PASTE_PRICES = {
+  id: 'paste-prices',
+  title: 'Paste prices',
+  description: 'Add many prices at once from a list of item IDs.',
+  route: 'adminPaste',
+};
+
 /** The Targets page isn't a queue of items, but it works like one. */
 const TARGETS = {
   id: 'targets',
@@ -30,6 +38,7 @@ const TARGETS = {
 export function adminEntries() {
   return QUEUES.flatMap((queue) => {
     const entry = { id: queue.id, title: queue.title, description: queue.description, route: QUEUE_ROUTES[queue.id] ?? null };
+    if (queue.id === 'needs-price') return [entry, PASTE_PRICES];
     return queue.id === 'suspicious-values' ? [entry, TARGETS] : [entry];
   });
 }

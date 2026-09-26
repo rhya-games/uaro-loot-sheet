@@ -23,6 +23,6 @@ export const AdminContext = createContext({ enabled: false, items: SITE_ITEMS })
 
 /**
  * { available, enabled, setEnabled, items, suggest(item), saveItem(id, changes, description),
- *   targets, saveTarget(name, value), reviewed, saveReviewed(item, suggested), removeReviewed(item) }
+ *   saveItems([{ id, changes }], description, onProgress), targets, saveTarget(name, value), reviewed, saveReviewed(item, suggested), removeReviewed(item) }
  */
 export const useAdmin = () => useContext(AdminContext);
