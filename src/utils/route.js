@@ -18,6 +18,7 @@ const ADMIN_ROUTES = import.meta.env.DEV
   ? {
       admin: '#/admin',
       adminPrices: '#/admin/needs-price',
+      adminSuggestions: '#/admin/suggestions',
       adminVerify: '#/admin/verify-prices',
       targets: '#/targets',
     }

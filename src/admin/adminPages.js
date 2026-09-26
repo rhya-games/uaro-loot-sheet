@@ -5,7 +5,11 @@ import { QUEUES } from './queues.js';
  * Queues with no page yet still get a count on the overview. Add a queue's
  * page here when it's built.
  */
-const QUEUE_ROUTES = { 'needs-price': 'adminPrices', 'unverified-prices': 'adminVerify' };
+const QUEUE_ROUTES = {
+  'needs-price': 'adminPrices',
+  'suggestion-differs': 'adminSuggestions',
+  'unverified-prices': 'adminVerify',
+};
 
 /** The Targets page isn't a queue of items, but it works like one. */
 const TARGETS = {
