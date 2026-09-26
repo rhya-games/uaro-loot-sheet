@@ -260,6 +260,10 @@ English speakers. Use short, plain sentences and everyday words. Say
   deploys to GitHub Pages and publishes a release.
 - Commit in small steps with messages that say what changed and why.
 - Don't push, open PRs, merge or deploy unless the maintainer asks.
+- After a PR is merged, delete its branch, both on GitHub
+  (`git push origin --delete <branch>`) and locally (`git branch -d
+  <branch>`, which refuses if it isn't merged). Only delete branches you
+  made for that PR: leave other people's and other sessions' alone.
 - Work in your own git worktree, one per session and branch. A folder has
   one checked-out branch, so two sessions in the same folder share it:
   switching branches switches it for both, and one session's commits land

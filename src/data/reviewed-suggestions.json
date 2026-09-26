@@ -1,0 +1,4 @@
+{
+  "about": "Items where the suggested actions (src/utils/suggest.js) were reviewed and the hand-set actions were kept. Set by admin mode's Suggestion differs page (\"Keep mine\"). An item stays out of that list only while both still match what is recorded here: if its actions or its suggestion change (a new price, a new target value), it comes back for another look. \"id\" is the item's id in loot.json.",
+  "items": []
+}

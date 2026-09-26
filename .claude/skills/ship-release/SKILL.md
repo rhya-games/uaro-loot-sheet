@@ -41,6 +41,14 @@ your own loops.
   read the log (`gh run view --log-failed`), fix it on the branch, and push.
 - Merge with a merge commit: `gh pr merge <number> --merge`. Never turn on
   auto-merge unless asked.
+- **Admin-only changes don't deploy.** If the PR changes nothing a visitor
+  can see or download (admin mode under `src/admin/`, dev scripts, tests,
+  docs, agent instructions), merge without deploying: add `[skip ci]` to
+  the merge commit's subject, so GitHub doesn't start the workflows for
+  the push to `main`:
+  `gh pr merge <number> --merge --subject "Merge pull request #<number> from <branch> [skip ci]"`.
+  Then skip step 4. The release tag stays where it is until the next real
+  deploy. If unsure whether a visitor could notice, deploy, or ask.
 
 ## 4. Confirm the deploy and the release
 
@@ -57,7 +65,10 @@ job before trying again.
 
 ## 5. Tidy and report
 
-- `git checkout main && git pull`, and offer to delete the merged branch
-  (only with approval).
+- `git checkout main && git pull` (in the main folder; from a worktree, run
+  `git fetch` instead), then delete the merged branch: on GitHub with
+  `git push origin --delete <branch>`, and locally with `git branch -d
+  <branch>` (it refuses if the branch isn't merged). Also remove the
+  branch's worktree. Only delete the branch you merged.
 - Report: the PR link, the release link, what went live, and anything the
   maintainer should look at on the live site.
