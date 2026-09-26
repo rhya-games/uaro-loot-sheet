@@ -260,6 +260,13 @@ English speakers. Use short, plain sentences and everyday words. Say
   deploys to GitHub Pages and publishes a release.
 - Commit in small steps with messages that say what changed and why.
 - Don't push, open PRs, merge or deploy unless the maintainer asks.
-- Another session may be working in the same checkout. Look at
-  `git status` before you commit, stage only your own files by name, and
-  never revert changes you didn't make.
+- Work in your own git worktree, one per session and branch. A folder has
+  one checked-out branch, so two sessions in the same folder share it:
+  switching branches switches it for both, and one session's commits land
+  on the other's branch. Create one with
+  `git worktree add ../uaro-loot-sheet-<topic> -b <branch>` (or your
+  tool's worktree feature), work and run the dev server there (pick a
+  free port), and remove it after the merge.
+- If you can't use a worktree and another session may be in the same
+  checkout, look at `git status` before you commit, stage only your own
+  files by name, and never revert changes you didn't make.
