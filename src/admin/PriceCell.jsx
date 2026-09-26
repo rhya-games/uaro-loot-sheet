@@ -1,7 +1,6 @@
 import { useAdmin } from './useAdmin.js';
 import ZenyInput from './ZenyInput.jsx';
-import { CHECK_NOTES } from './verify.js';
-import { todayText } from '../utils/format.js';
+import { priceChanges } from './verify.js';
 import { PlayerPrice } from '../components/StatusIcons.jsx';
 import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
 
@@ -27,20 +26,8 @@ export default function PriceCell({ item, field }) {
 export function PriceInput({ item, field, advance }) {
   const { saveItem } = useAdmin();
 
-  // Saving a price also marks the item as verified today. Clearing a price
-  // isn't a check in game, so it doesn't touch Verified.
-  function save(value) {
-    const changes = { [field]: value };
-    if (value != null) {
-      const note = CHECK_NOTES[field];
-      const earlierToday = item.lastVerified === todayText() && item.verificationNotes && !item.verificationNotes.includes(note);
-      Object.assign(changes, {
-        lastVerified: todayText(),
-        verificationNotes: earlierToday ? `${item.verificationNotes}; ${note}` : note,
-      });
-    }
-    return saveItem(item.id, changes);
-  }
+  // Saving a price also marks the item as verified today (see priceChanges).
+  const save = (value) => saveItem(item.id, priceChanges(item, { [field]: value }));
 
   return (
     <ZenyInput
