@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import { ArrowUpIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
+import { goToTop } from '../utils/scroll.js';
 
 /** Show the button once the page has scrolled this far (about two screens of table). */
 const SHOW_AFTER_PX = 1200;
-
-const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /**
  * Round "back to top" button in the bottom-right corner. It fades in after
@@ -21,12 +20,6 @@ export default function BackToTop() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  const goToTop = () => {
-    window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
-    // Keyboard users continue from the top too, not from the button.
-    document.getElementById('main')?.focus({ preventScroll: true });
-  };
 
   return (
     <div

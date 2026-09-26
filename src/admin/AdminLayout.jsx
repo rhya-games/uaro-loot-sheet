@@ -1,12 +1,16 @@
+import { ArrowUpIcon } from '@heroicons/react/24/outline';
 import { adminEntries } from './adminPages.js';
 import { useQueueCounts } from './useQueueCounts.js';
 import { Page } from '../components/Page.jsx';
 import { ROUTES, useRoute } from '../utils/route.js';
+import { goToTop } from '../utils/scroll.js';
 
 /**
  * The frame every admin page uses: the admin navigation on top, then the
- * usual page title and intro. Keeps the tools one click apart, and the
- * navigation in the same place on every page.
+ * usual page title and intro, and a Back to top button at the bottom (the
+ * lists are long, and the round button only shows after a lot of scrolling).
+ * Keeps the tools one click apart, and the navigation in the same place on
+ * every page.
  *
  * Props:
  *   title, intro - as for Page
@@ -18,13 +22,19 @@ export default function AdminLayout({ title, intro, children }) {
       <Page title={title} intro={intro}>
         {children}
       </Page>
+      <div className="mx-auto mt-6 flex max-w-3xl justify-end">
+        <button type="button" onClick={goToTop} className="button-small inline-flex items-center gap-1.5">
+          <ArrowUpIcon className="size-4" aria-hidden="true" />
+          Back to top
+        </button>
+      </div>
     </>
   );
 }
 
 /**
  * Links to the overview and every admin tool that has a page, each with how
- * many items are waiting (see useQueueCounts), and a way back to the loot sheet.
+ * many items are waiting (see useQueueCounts).
  */
 function AdminNav() {
   const route = useRoute();
@@ -51,11 +61,6 @@ function AdminNav() {
             </li>
           );
         })}
-        <li className="ml-auto">
-          <a href={ROUTES.loot} className="block rounded-lg px-3 py-1.5 text-sm text-muted hover:text-fg">
-            Loot sheet
-          </a>
-        </li>
       </ul>
     </nav>
   );
