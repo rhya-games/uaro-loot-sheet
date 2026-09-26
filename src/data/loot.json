@@ -4767,12 +4767,20 @@
     "itemId": 965,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Dungeon Quest"
+      "Dungeon Quest",
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 50,
+        "note": "one of its possible requests"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 28,
@@ -15410,7 +15418,8 @@
       "Pet Evolution",
       "Pet",
       "uaRO",
-      "Cooking"
+      "Cooking",
+      "Other Quest"
     ],
     "uses": [
       {
@@ -15466,6 +15475,11 @@
         "for": "Special Meat Stew",
         "qty": 10,
         "note": "+9 AGI food"
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 50,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
@@ -26888,11 +26902,20 @@
     "name": "Withered Flower",
     "itemId": 6086,
     "itemType": "Misc",
-    "actions": [],
-    "categories": [
-      "No Use"
+    "actions": [
+      "Keep",
+      "NPC"
     ],
-    "uses": [],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 6,
+        "note": "one of its possible requests"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 445,
