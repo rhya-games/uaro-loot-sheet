@@ -2,12 +2,11 @@ import { useCallback, useMemo, useState } from 'react';
 import { useAdmin } from './useAdmin.js';
 import { PriceInput } from './PriceCell.jsx';
 import { QUEUES, needsField } from './queues.js';
+import AdminLayout from './AdminLayout.jsx';
 import CopyItemId from '../components/CopyItemId.jsx';
-import { Page, PageLink } from '../components/Page.jsx';
 import { PlayerPrice } from '../components/StatusIcons.jsx';
 import { formatZeny } from '../utils/format.js';
 import { npcSellPrice } from '../utils/prices.js';
-import { ROUTES } from '../utils/route.js';
 
 /** How many rows show at once. Priced rows leave the list, so the next ones move up. */
 const BATCH = 50;
@@ -16,7 +15,7 @@ const PRICE_FIELDS = ['avgVend', 'avgWhobuy'];
 const COLUMNS = 'md:grid-cols-[1fr_7rem_7rem]';
 
 /**
- * Admin mode's work queues. For now, one: items with a Vend or Whobuy
+ * Admin mode's "Needs a price" queue: items with a Vend or Whobuy
  * action and no price yet (see queues.js). Type a price and press Enter: it
  * saves, marks the item verified today, updates its suggested actions, and
  * the cursor moves to the next box. Press Enter on an empty box to skip it.
@@ -30,7 +29,7 @@ const COLUMNS = 'md:grid-cols-[1fr_7rem_7rem]';
  *
  * Only exists under `npm run dev`.
  */
-export default function AdminPage() {
+export default function NeedsPricePage() {
   const { items, suggest } = useAdmin();
   const [query, setQuery] = useState('');
   const [limit, setLimit] = useState(BATCH);
@@ -54,13 +53,10 @@ export default function AdminPage() {
   }
 
   return (
-    <Page
+    <AdminLayout
       title="Needs a price"
       intro="Items set to Vend or Whobuy that have no price yet. Type a price and press Enter to save it and move to the next box. Type 0 if nobody is buying."
     >
-      <p className="text-sm text-muted">
-        <PageLink href={ROUTES.targets}>Target values</PageLink> · <PageLink href={ROUTES.loot}>Loot sheet</PageLink>
-      </p>
       <input
         type="search"
         value={query}
@@ -109,7 +105,7 @@ export default function AdminPage() {
           </div>
         )}
       </section>
-    </Page>
+    </AdminLayout>
   );
 }
 

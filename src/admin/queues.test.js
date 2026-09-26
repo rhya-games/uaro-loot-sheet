@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createSuggester } from '../utils/suggest.js';
-import { QUEUES, queueCounts } from './queues.js';
+import { QUEUES, queueCounts, targetsNeedingValue } from './queues.js';
 
 /** A made-up item; itemId 1 isn't in any uaRO override list. */
 const item = (fields) => ({
@@ -112,5 +112,15 @@ describe('queueCounts', () => {
     const counts = queueCounts(items, { suggest: createSuggester(items, new Map()) });
     expect(Object.keys(counts)).toEqual(QUEUES.map((entry) => entry.id));
     expect(counts['needs-price']).toBe(1);
+  });
+});
+
+describe('targetsNeedingValue', () => {
+  it('counts finished things with no value yet, skipping quests and things in the sheet', () => {
+    const items = [
+      item({ name: 'Part', uses: [{ for: 'Cool Hat' }, { for: 'Checked Hat' }, { for: 'Some Quest' }, { for: 'Other Item' }] }),
+      item({ name: 'Other Item' }),
+    ];
+    expect(targetsNeedingValue(items, new Map([['Checked Hat', 0]]))).toBe(1);
   });
 });

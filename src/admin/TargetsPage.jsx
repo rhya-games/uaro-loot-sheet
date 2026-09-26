@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { useAdmin } from './useAdmin.js';
 import ZenyInput from './ZenyInput.jsx';
 import CopyItemId from '../components/CopyItemId.jsx';
-import { Page } from '../components/Page.jsx';
+import AdminLayout from './AdminLayout.jsx';
 import { valueTargets } from '../utils/targets.js';
 import targetIds from '../data/target-ids.json' with { type: 'json' };
 
@@ -45,7 +45,7 @@ export default function TargetsPage() {
   const checked = shown.filter((row) => targets.has(row.name)).sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <Page
+    <AdminLayout
       title="Target values"
       intro="What hats, pet evolutions and other finished things sell for. Parts are worth keeping when the finished thing is worth more than they sell for, or when no shops sell it. Type 0 for no shops."
     >
@@ -59,7 +59,7 @@ export default function TargetsPage() {
       />
       <TargetTable title={`Needs a price (${needsValue.length})`} rows={needsValue} targets={targets} onSave={saveTarget} />
       <TargetTable title={`Checked (${checked.length})`} rows={checked} targets={targets} onSave={saveTarget} />
-    </Page>
+    </AdminLayout>
   );
 }
 

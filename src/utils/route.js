@@ -16,9 +16,12 @@ export const ROUTES = {
   about: '#/about',
   feedback: '#/feedback',
   changelog: '#/changelog',
-  // Admin mode's pages; only under `npm run dev` (see admin/AdminPage.jsx, admin/TargetsPage.jsx).
-  ...(import.meta.env.DEV && { admin: '#/admin', targets: '#/targets' }),
+  // Admin mode's pages; only under `npm run dev` (see src/admin/).
+  ...(import.meta.env.DEV && { admin: '#/admin', adminPrices: '#/admin/needs-price', targets: '#/targets' }),
 };
+
+/** The admin pages, so the header can highlight "Admin" on any of them. */
+export const isAdminRoute = (route) => ['admin', 'adminPrices', 'targets'].includes(route);
 
 function readRoute() {
   // The loot page keeps its search and filters after a "?" (see utils/viewUrl.js).
