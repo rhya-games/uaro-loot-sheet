@@ -20,8 +20,9 @@ const MAX_USES_SHOWN = 6;
  * Uses are listed A-Z. Long lists (Poring Coin is used for 40+ things) show
  * the first few, then a "+N more" button that opens the rest in a popover.
  *
- * Uses the visitor is looking for move to the front and the others fade back,
- * so it's easy to see why the item is listed:
+ * Uses the visitor is looking for move to the front and get a soft
+ * highlight (the others stay as they are), so it's easy to see why the
+ * item is listed:
  *   - targets picked in the "Used For" filter, always
  *   - uses the search text matches as whole words, but only when the search
  *     didn't match the item's own name (searching "Gold" shows Gold's list
@@ -35,24 +36,24 @@ const MAX_USES_SHOWN = 6;
 export default function ItemUses({ item, onSelectUse, highlight = NO_HIGHLIGHT }) {
   if (item.uses.length === 0 && !item.notes) return null;
   const isMatch = highlightedUseTest(item, highlight);
-  const dimOthers = item.uses.some(isMatch);
   const uses = [...item.uses].sort((a, b) => isMatch(b) - isMatch(a) || a.for.localeCompare(b.for));
   const shown = uses.slice(0, MAX_USES_SHOWN);
   const hidden = uses.slice(MAX_USES_SHOWN);
-  const dimmed = (use) => (dimOthers && !isMatch(use) ? 'opacity-60' : '');
+  // The padding and negative margin give the highlight some room without moving the text.
+  const marked = (use) => (isMatch(use) ? '-mx-1 rounded bg-accent-soft px-1 ring-1 ring-accent-line/40' : '');
 
   return (
     <div className="space-y-1 text-body">
       {item.uses.length > 0 && (
         <ul className="flex flex-wrap gap-x-4 gap-y-1">
           {shown.map((use, index) => (
-            <li key={`${use.for}-${index}`} className={dimmed(use)}>
+            <li key={`${use.for}-${index}`} className={marked(use)}>
               <UseText use={use} onSelectUse={onSelectUse} />
             </li>
           ))}
           {hidden.length > 0 && (
             <li>
-              <MoreUsesPopover item={item} uses={hidden} dimmed={dimmed} onSelectUse={onSelectUse} />
+              <MoreUsesPopover item={item} uses={hidden} marked={marked} onSelectUse={onSelectUse} />
             </li>
           )}
         </ul>
@@ -82,7 +83,7 @@ function UseText({ use, onSelectUse }) {
  * Like tooltips, it's drawn at the end of the page and positioned with
  * Floating UI, so the table's scroll box can't cut it off.
  */
-function MoreUsesPopover({ item, uses, dimmed, onSelectUse }) {
+function MoreUsesPopover({ item, uses, marked, onSelectUse }) {
   const [open, setOpen] = useState(false);
   const { mounted, visible } = usePresence(open, 150);
   const dialogId = useId();
@@ -187,7 +188,7 @@ function MoreUsesPopover({ item, uses, dimmed, onSelectUse }) {
             </div>
             <ul className="space-y-1 overflow-y-auto px-3 py-2 text-body">
               {uses.map((use, index) => (
-                <li key={`${use.for}-${index}`} className={dimmed(use)}>
+                <li key={`${use.for}-${index}`} className={marked(use)}>
                   <UseText
                     use={use}
                     onSelectUse={(target) => {
