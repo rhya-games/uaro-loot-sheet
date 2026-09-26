@@ -55,13 +55,14 @@ with a small Node script (keep it in the scratchpad):
 - Items that gain a quest or evolution use also get the matching categories
   (see "Conventions when adding items" in AGENTS.md). An item that loses its
   only use of a kind loses those categories.
-- **Missing items:** find the item ID in Hercules (pre-renewal) first, then
-  rAthena (`scripts/.cache/` after any sync, or `loadPreRenewalItemDb` /
-  `loadRenewalItemDb`). Use the wiki's (in-game) name, and note the
-  emulator name if it differs. Copy the actions/categories/notes pattern of
-  a similar existing item.
+- **Missing items:** add them with the `add-items` skill (ID lookup, every
+  field, categories and actions). Use the wiki's (in-game) name, and note
+  the emulator name if it differs. Copy the actions/categories/notes
+  pattern of a similar existing item.
 - If the CSV import should match, mirror new IDs and renames in
   `scripts/source/sheet-corrections.mjs`.
+- New "Used For" targets need item IDs for the Targets page: run
+  `npm run sync:targets`.
 - Keep `loot.json` sorted by name.
 
 Then:
@@ -73,7 +74,8 @@ npm run check:uses -- <scratchpad>/recipes.json   # should be 0 differences
 
 ## 4. Finish
 
-- Add a line to `src/data/changelog.js`.
+- Add a line to today's card in `src/data/changelog.js` (one card per day;
+  a new day needs the next version, also in `package.json`).
 - Commit with a message that lists the kinds of fixes.
 - Report to the maintainer: the fixes (a small table for quantities), new
   items, and anything that needs a decision. Examples: the wiki and the

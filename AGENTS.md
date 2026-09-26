@@ -103,9 +103,11 @@ Match similar existing items. Look them up in loot.json first.
   crafted (crafted items can be sold too). Default to including. Before
   leaving anything out, explain why and get the maintainer's OK.
 
-- New items start with the category `Not Reviewed`. Once their uses are
-  checked (uaRO wiki, emulator quest scripts: items taken with `delitem`),
-  they get real categories, or `No Use` if nothing uses them.
+- An item nothing uses is `No Use`. All known uses are already mapped, so
+  that's the default for an item you add. `Not Reviewed` is only for items
+  the maintainer says still need checking (uaRO wiki, emulator quest
+  scripts: items taken with `delitem`); the published site hides them.
+  The `add-items` skill has the full steps.
 - "Used For" targets reuse an existing name exactly. Pet evolutions are
   `"<Evolved pet> Pet Evolution"`. Uses show quantities from the wiki.
 - Pet evolution materials: `Keep` + `Vend`, categories `Pet Evolution`,
@@ -178,6 +180,12 @@ Match similar existing items. Look them up in loot.json first.
   z-30. Checkboxes use the `checkbox` utility (white check). Tooltips
   use `components/Tooltip.jsx` (hover with a delay, and keyboard focus).
   Only use one when the element has no visible label.
+- On the loot page, uses the search or the Used For filter matches move to
+  the front of their cell with a soft highlight; the others stay as they
+  are (never faded). With the filter panel open beside the table, the panel
+  shows the count and every checkbox filter, so the results header hides,
+  except the Used For chip: that filter is set by clicking a target in the
+  table, and its checkbox sits at the bottom of the panel.
 - Escape closes the innermost thing first. Components that handle Escape
   call `event.preventDefault()`, and the filter panel ignores handled keys.
 - Respect `prefers-reduced-motion` (see `utils/usePresence.js`).
@@ -210,12 +218,34 @@ Match similar existing items. Look them up in loot.json first.
 
 ## Recurring jobs
 
-Step-by-step guides for the common data tasks are in `.claude/skills/`
-(plain Markdown, usable by any agent):
+Step-by-step guides for the common tasks are in `.claude/skills/` (plain
+Markdown, usable by any agent):
 
+- `add-items`: add items that are missing from the sheet (any source).
 - `check-wiki-page`: compare "Used For" data with a uaRO wiki table and fix it.
 - `record-npc-shop`: record an NPC shop from screenshots or the wiki.
-- `update-vend-prices`: set vend/@whobuy prices from screenshots.
+- `update-vend-prices`: set vend/@whobuy prices from screenshots or a list.
+- `ship-release`: merge and deploy (PR, checks, merge, release). Only when asked.
+
+The maintainer's prices are facts from the game: **take them as given**.
+Don't question a price or ask if a big drop is a one-off.
+
+## Testing and dev tips
+
+- Tailwind doesn't see a **new file** until the dev server restarts (styles
+  from it are missing until then).
+- The Browser pane is often hidden, so screenshots and clicks by coordinate
+  can time out. Check with the DOM instead (`read_page`, or JavaScript
+  for classes, text and positions). Set the window to at least 1470px wide
+  to see the desktop layout.
+- What the page remembers changes how it looks: `localStorage`
+  (`uaro-loot-sheet:panelOpen`, `lastView`, `admin`) and a hash without
+  a `?` restore the last view. Open a link with the filters you want.
+- **Admin-mode saves write the real files** (`loot.json`, `use-targets.json`).
+  Copy them before you test a save, and restore the copies afterwards
+  (`git checkout` is only safe when the files have no other changes).
+  Typing into a price box that already shows "None" adds to the text; select
+  it first.
 
 ## Writing style
 
@@ -230,3 +260,6 @@ English speakers. Use short, plain sentences and everyday words. Say
   deploys to GitHub Pages and publishes a release.
 - Commit in small steps with messages that say what changed and why.
 - Don't push, open PRs, merge or deploy unless the maintainer asks.
+- Another session may be working in the same checkout. Look at
+  `git status` before you commit, stage only your own files by name, and
+  never revert changes you didn't make.
