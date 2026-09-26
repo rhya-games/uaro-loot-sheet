@@ -4,6 +4,8 @@
  *   POST /__admin/item    { id, changes }  -> src/data/loot.json
  *   POST /__admin/target  { for, value }   -> src/data/use-targets.json
  *                         (value null removes the target)
+ *   POST /__admin/reviewed { id, actions, suggested } -> src/data/reviewed-suggestions.json
+ *                         ("Keep mine"; { id, remove: true } takes it back)
  * The page updates its own copy, so these writes don't trigger Vite's
  * reload (which would reset the search and filters). Editing the files by
  * hand still reloads as usual.
@@ -17,8 +19,11 @@ import { resolve } from 'node:path';
 
 const LOOT_FILE = resolve('src/data/loot.json');
 const TARGETS_FILE = resolve('src/data/use-targets.json');
+const REVIEWED_FILE = resolve('src/data/reviewed-suggestions.json');
 const ACTIONS = JSON.parse(readFileSync(resolve('src/data/schema.json'), 'utf8')).$defs.action.enum;
 const isPrice = (value) => value === null || (Number.isInteger(value) && value >= 0);
+const isActionList = (value) =>
+  Array.isArray(value) && value.every((action) => ACTIONS.includes(action)) && new Set(value).size === value.length;
 
 /** Field -> check for its new value. */
 const EDITABLE = {
@@ -26,8 +31,7 @@ const EDITABLE = {
   avgWhobuy: isPrice,
   lastVerified: (value) => value === null || /^\d{4}-\d{2}-\d{2}$/.test(value),
   verificationNotes: (value) => typeof value === 'string',
-  actions: (value) =>
-    Array.isArray(value) && value.every((action) => ACTIONS.includes(action)) && new Set(value).size === value.length,
+  actions: isActionList,
 };
 
 /** Reads a request's JSON body. */
@@ -79,6 +83,25 @@ export default function lootAdminPlugin() {
             write(TARGETS_FILE, data);
             server.config.logger.info(`admin: target ${target} = ${value}`, { timestamp: true });
             return reply(200, { for: target, value });
+          } catch (error) {
+            return reply(500, { error: error.message });
+          }
+        }
+        if (request.url.endsWith('/__admin/reviewed')) {
+          try {
+            const { id, actions, suggested, remove } = await readBody(request);
+            const item = JSON.parse(readFileSync(LOOT_FILE, 'utf8')).find((entry) => entry.id === id);
+            if (!item) return reply(404, { error: `No item with id "${id}"` });
+            if (!remove && !(isActionList(actions) && isActionList(suggested) && suggested.length)) {
+              return reply(400, { error: 'Needs "actions" and a non-empty "suggested", both lists of actions' });
+            }
+            const data = JSON.parse(readFileSync(REVIEWED_FILE, 'utf8'));
+            data.items = data.items.filter((entry) => entry.id !== id);
+            if (!remove) data.items.push({ id, name: item.name, actions, suggested });
+            data.items.sort((a, b) => a.name.localeCompare(b.name));
+            write(REVIEWED_FILE, data);
+            server.config.logger.info(`admin: ${remove ? 'unreviewed' : 'kept actions of'} ${item.name}`, { timestamp: true });
+            return reply(200, { id });
           } catch (error) {
             return reply(500, { error: error.message });
           }

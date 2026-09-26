@@ -224,6 +224,26 @@ for (const entry of targetEntries) {
   if (/\bQuests?\b/.test(entry.for)) warnings.push(`${TARGETS_FILE}: "${entry.for}" is a quest, so its value is ignored`);
 }
 
+// reviewed-suggestions.json: "Keep mine" reviews from admin mode. Each must
+// point at an item that still exists under the same name (a rename would
+// leave it behind), with valid action lists.
+const REVIEWED_FILE = 'src/data/reviewed-suggestions.json';
+const itemsBySlug = new Map(items.map((item) => [item.id, item]));
+const ACTION_NAMES = new Set(schema.$defs.action.enum);
+const isActionList = (list) => Array.isArray(list) && list.every((action) => ACTION_NAMES.has(action)) && new Set(list).size === list.length;
+const seenReviews = new Set();
+for (const entry of JSON.parse(readFileSync(REVIEWED_FILE, 'utf8')).items) {
+  if (typeof entry.id !== 'string' || !isActionList(entry.actions) || !isActionList(entry.suggested) || !entry.suggested.length) {
+    errors.push(`${REVIEWED_FILE}: bad entry ${JSON.stringify(entry)} (needs "id", "actions" and a non-empty "suggested")`);
+    continue;
+  }
+  if (seenReviews.has(entry.id)) errors.push(`${REVIEWED_FILE}: "${entry.id}" is listed twice`);
+  seenReviews.add(entry.id);
+  const item = itemsBySlug.get(entry.id);
+  if (!item) errors.push(`${REVIEWED_FILE}: no item with id "${entry.id}" in loot.json`);
+  else if (item.name !== entry.name) errors.push(`${REVIEWED_FILE}: "${entry.id}" is named "${item.name}" in loot.json, not "${entry.name}"`);
+}
+
 // Changelog: one entry per day, newest first, with 0.x versions that go up,
 // and the newest one matching package.json (the GitHub release uses it).
 const packageVersion = JSON.parse(readFileSync('package.json', 'utf8')).version;

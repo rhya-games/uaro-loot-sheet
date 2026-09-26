@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createSuggester } from '../utils/suggest.js';
-import { QUEUES, queueCounts, targetsNeedingValue } from './queues.js';
+import { QUEUES, isReviewed, queueCounts, targetsNeedingValue } from './queues.js';
 
 /** A made-up item; itemId 1 isn't in any uaRO override list. */
 const item = (fields) => ({
@@ -58,6 +58,44 @@ describe('suggestion-differs', () => {
   it('includes items with no action that now get a suggestion, and skips unsure ones', () => {
     const items = [item({ name: 'New', avgVend: 5000 }), item({ name: 'Unsure' })];
     expect(names(run('suggestion-differs', items))).toEqual(['New']);
+  });
+
+  it('carries the suggested actions on each row', () => {
+    const rows = run('suggestion-differs', [item({ actions: ['Vend'], avgVend: 100 })]);
+    expect(rows[0].suggested).toEqual(['NPC']);
+  });
+
+  describe('Keep mine reviews', () => {
+    const mine = item({ id: 'mine', name: 'Mine', actions: ['Vend'], avgVend: 100 }); // suggestion: NPC
+    const select = (items, reviewed) => queue('suggestion-differs').select(items, { suggest: createSuggester(items, new Map()), reviewed });
+    const review = (fields) => new Map([['mine', { id: 'mine', name: 'Mine', actions: ['Vend'], suggested: ['NPC'], ...fields }]]);
+
+    it('hides an item while its actions and its suggestion are what they were', () => {
+      expect(select([mine], review())).toEqual([]);
+    });
+
+    it('brings it back when the suggestion changes', () => {
+      const nowKeep = { ...mine, uses: [{ for: 'Some Quest' }] }; // a quest makes it Keep + NPC
+      expect(names(select([nowKeep], review()))).toEqual(['Mine']);
+    });
+
+    it('brings it back when the hand-set actions change', () => {
+      expect(names(select([{ ...mine, actions: ['Whobuy'] }], review()))).toEqual(['Mine']);
+    });
+
+    it('ignores reviews of other items', () => {
+      expect(names(select([mine], new Map([['other', { id: 'other', actions: ['Vend'], suggested: ['NPC'] }]])))).toEqual(['Mine']);
+    });
+  });
+});
+
+describe('isReviewed', () => {
+  it('needs an entry, and matching actions and suggestion in any order', () => {
+    const entry = { actions: ['Keep', 'Vend'], suggested: ['NPC'] };
+    expect(isReviewed(entry, { actions: ['Vend', 'Keep'] }, ['NPC'])).toBe(true);
+    expect(isReviewed(entry, { actions: ['Vend'] }, ['NPC'])).toBe(false);
+    expect(isReviewed(entry, { actions: ['Keep', 'Vend'] }, ['Vend'])).toBe(false);
+    expect(isReviewed(undefined, { actions: [] }, [])).toBe(false);
   });
 });
 

@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
-import { ADMIN_AVAILABLE, AdminContext, SITE_ITEMS } from './useAdmin.js';
+import { ADMIN_AVAILABLE, AdminContext, REVIEWED, SITE_ITEMS } from './useAdmin.js';
 import { createSuggester, TARGET_VALUES } from '../utils/suggest.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import UndoSnackbar from './UndoSnackbar.jsx';
@@ -46,6 +46,20 @@ async function postTarget(target, value) {
   if (!response.ok) throw new Error(result.error ?? `Save failed (${response.status})`);
 }
 
+/**
+ * Saves (or, with `entry` null, removes) an item's "Keep mine" review:
+ * { actions, suggested }. Throws on failure.
+ */
+async function postReviewed(id, entry) {
+  const response = await fetch(`${import.meta.env.BASE_URL}__admin/reviewed`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(entry ? { id, ...entry } : { id, remove: true }),
+  });
+  const result = await response.json();
+  if (!response.ok) throw new Error(result.error ?? `Save failed (${response.status})`);
+}
+
 const sameActions = (a, b) => a.length === b.length && a.every((action) => b.includes(action));
 
 /** The fields a save can change, so undo can put them all back. */
@@ -69,6 +83,9 @@ export function AdminProvider({ children }) {
   // (tabbing from Vend to Whobuy saves twice in a row).
   const latest = useRef(items);
   const latestTargets = useRef(targets);
+  // The "Keep mine" reviews (reviewed-suggestions.json), with this session's changes.
+  const [reviewed, setReviewed] = useState(REVIEWED);
+  const latestReviewed = useRef(reviewed);
   // The latest save, for the undo snackbar: { id, message, undo() }.
   const [lastChange, setLastChange] = useState(null);
 
@@ -153,6 +170,42 @@ export function AdminProvider({ children }) {
     });
   }, [applySuggestion, replaceItem, restoreItems, writeTarget]);
 
+  /**
+   * Writes an item's review (null removes it) and updates `reviewed`. Reviews
+   * are checked against the actions and the suggestion (see queues.js
+   * isReviewed), so nothing else needs to change with them.
+   */
+  const writeReviewed = useCallback(async (item, entry) => {
+    await postReviewed(item.id, entry);
+    const next = new Map(latestReviewed.current);
+    if (entry) next.set(item.id, { id: item.id, name: item.name, ...entry });
+    else next.delete(item.id);
+    latestReviewed.current = next;
+    setReviewed(next);
+  }, []);
+
+  /** "Keep mine": the item's actions are right, even though `suggested` differs. */
+  const saveReviewed = useCallback(async (item, suggested) => {
+    const old = latestReviewed.current.get(item.id) ?? null;
+    await writeReviewed(item, { actions: item.actions, suggested });
+    setLastChange({
+      id: Date.now(),
+      message: `${item.name}: kept ${item.actions.join(' + ') || 'no action'} (suggested ${suggested.join(' + ')})`,
+      undo: () => writeReviewed(item, old && { actions: old.actions, suggested: old.suggested }),
+    });
+  }, [writeReviewed]);
+
+  /** Takes a "Keep mine" back, so the item is listed again. */
+  const removeReviewed = useCallback(async (item) => {
+    const old = latestReviewed.current.get(item.id);
+    await writeReviewed(item, null);
+    setLastChange({
+      id: Date.now(),
+      message: `${item.name}: review removed`,
+      undo: () => writeReviewed(item, old && { actions: old.actions, suggested: old.suggested }),
+    });
+  }, [writeReviewed]);
+
   const changeEnabled = useCallback((value) => {
     setEnabled(value);
     writePreference('admin', value);
@@ -162,8 +215,11 @@ export function AdminProvider({ children }) {
   const suggest = useMemo(() => createSuggester(items, targets), [items, targets]);
 
   const value = useMemo(
-    () => ({ available: ADMIN_AVAILABLE, enabled, setEnabled: changeEnabled, items, suggest, saveItem, targets, saveTarget }),
-    [enabled, changeEnabled, items, suggest, saveItem, targets, saveTarget],
+    () => ({
+      available: ADMIN_AVAILABLE, enabled, setEnabled: changeEnabled, items, suggest, saveItem, targets, saveTarget,
+      reviewed, saveReviewed, removeReviewed,
+    }),
+    [enabled, changeEnabled, items, suggest, saveItem, targets, saveTarget, reviewed, saveReviewed, removeReviewed],
   );
   return (
     <AdminContext.Provider value={value}>

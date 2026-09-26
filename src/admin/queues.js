@@ -47,18 +47,31 @@ function needsPrice(items) {
 }
 
 /**
+ * Whether a "Keep mine" review (an entry of reviewed-suggestions.json) still
+ * applies: the item's actions and its suggestion are both what they were
+ * when it was reviewed. If either changed, it needs another look.
+ */
+export function isReviewed(entry, item, suggested) {
+  return Boolean(entry) && sameActions(entry.actions, item.actions) && sameActions(entry.suggested, suggested);
+}
+
+/**
  * The suggested actions aren't the hand-set ones (the `npm run suggest`
  * report). Includes items with no action yet that now get a suggestion.
- * Items that share the same change sit together, biggest group first, so a
- * whole pattern can be reviewed in one go.
+ * Items reviewed with "Keep mine" stay out while the review applies
+ * (`ctx.reviewed`, a Map of item id -> entry). Items that share the same
+ * change sit together, biggest group first, so a whole pattern can be
+ * reviewed in one go.
+ *
+ * Rows also carry `suggested`, the suggested actions.
  */
-function suggestionDiffers(items, { suggest }) {
+function suggestionDiffers(items, { suggest, reviewed = new Map() }) {
   const rows = [];
   for (const item of items) {
     const { actions } = suggest(item);
-    if (!actions.length || sameActions(item.actions, actions)) continue;
+    if (!actions.length || sameActions(item.actions, actions) || isReviewed(reviewed.get(item.id), item, actions)) continue;
     const pattern = `${actionsText(item.actions)} → ${actionsText(actions)}`;
-    rows.push({ item, reasons: [pattern], pattern });
+    rows.push({ item, reasons: [pattern], pattern, suggested: actions });
   }
   const sizes = new Map();
   for (const row of rows) sizes.set(row.pattern, (sizes.get(row.pattern) ?? 0) + 1);
