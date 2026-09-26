@@ -70,8 +70,9 @@ changes what the site advises.
 
 ## 5. Finish
 
-- Add a line to `src/data/changelog.js` if a visitor would notice anything
-  (for example, an item now showing ✓ in NPC Shop).
+- Add a short line to today's card in `src/data/changelog.js` only if a
+  player would notice (for example, "NPC shops updated for 12 items"); sum
+  it up, and put the details in the PR description.
 - Commit.
 - Report: the shop and how many items, what changed on the site, and
   anything uncertain (guessed IDs, prices that don't match either emulator).

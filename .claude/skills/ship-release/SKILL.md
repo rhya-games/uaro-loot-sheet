@@ -14,12 +14,13 @@ release `vX.Y.Z` with that day's changelog card as its notes.
 ## 1. Get ready
 
 - `git status` is clean, and you're on a feature branch.
-- Today's card in `src/data/changelog.js` lists every change a visitor would
-  notice (data updates count). One card per day, with a version (0.x; new or
-  changed things raise the middle number, only fixes the last). The same
-  version is in `package.json`. Ask the maintainer to OK new changelog
-  wording. Work only they see (admin mode, Targets, Undo, tests, docs) needs
-  no line.
+- Today's card in `src/data/changelog.js` is short: what a **player** needs
+  to know, in up to 8 plain lines, with data updates summed up as counts
+  (see the rules at the top of that file). One card per day, with a version
+  (0.x; new or changed things raise the middle number, only fixes the
+  last). The same version is in `package.json`. Ask the maintainer to OK
+  new changelog wording. Work only they see (admin mode, Targets, Undo,
+  tests, docs) needs no line.
 - `npm run validate`, `npm run lint` and `npm test` pass, and `npm run
   build` works.
 
@@ -27,28 +28,36 @@ release `vX.Y.Z` with that day's changelog card as its notes.
 
 ```bash
 git push -u origin <branch>
-gh pr create --title "..." --body "..."
+gh pr create --title "..." --body-file pr-body.md
 ```
 
-The title says what changed. The body lists the changes in plain words and
-ends with the attribution line from the session's instructions. Then use the
-app's PR tools if you have them (`get_status`, `bind_pr`); don't poll CI with
-your own loops.
+The title says what changed, in plain words. The body follows
+`.github/pull_request_template.md` and is **the long version**: what
+changed (with counts), why, decisions and the maintainer's rules you
+applied, guesses and things that look odd but are right, how you checked it
+and what you didn't, and follow-ups. Write it for an agent who wasn't here.
+Keep a copy (`pr-body.md`, outside the repo) for step 3. End it with the
+attribution line from the session's instructions. Then use the app's PR
+tools if you have them (`get_status`, `bind_pr`); don't poll CI with your
+own loops.
 
 ## 3. Wait for the checks, then merge
 
 - The **Checks** workflow (validate, lint, test) must pass. If it fails,
   read the log (`gh run view --log-failed`), fix it on the branch, and push.
-- Merge with a merge commit: `gh pr merge <number> --merge`. Never turn on
-  auto-merge unless asked.
+- Merge with a merge commit that carries the PR description, so it's in git
+  and the GitHub release notes:
+  `gh pr merge <number> --merge --subject "<PR title> (#<number>)" --body-file pr-body.md`.
+  Never turn on auto-merge unless asked.
 - **Admin-only changes don't deploy.** If the PR changes nothing a visitor
   can see or download (admin mode under `src/admin/`, dev scripts, tests,
   docs, agent instructions), merge without deploying: add `[skip ci]` to
   the merge commit's subject, so GitHub doesn't start the workflows for
   the push to `main`:
-  `gh pr merge <number> --merge --subject "Merge pull request #<number> from <branch> [skip ci]"`.
+  `gh pr merge <number> --merge --subject "<PR title> (#<number>) [skip ci]" --body-file pr-body.md`.
   Then skip step 4. The release tag stays where it is until the next real
-  deploy. If unsure whether a visitor could notice, deploy, or ask.
+  deploy, and this PR's notes appear under "Merged changes" in that
+  release. If unsure whether a visitor could notice, deploy, or ask.
   Use that text **only** in the merge subject. If it is in the newest
   commit message on the PR branch, GitHub skips the PR's checks too (the
   PR then shows "no checks"), and pushing an empty commit is the way out.
@@ -58,8 +67,9 @@ your own loops.
 The **Deploy to GitHub Pages** workflow runs a build, a deploy and a release
 job. Check that all three passed (`gh run list --limit 3`). Then:
 
-- The release exists: `gh release view v<version>`, and its notes match the
-  changelog card.
+- The release exists: `gh release view v<version>`. Its notes have the
+  changelog card's short lines, then "Merged changes" with your PR
+  description. The run's summary page shows the same notes.
 - The site answers at https://rhya-ragnarok.github.io/uaro-loot-sheet/ and
   shows the new version in the footer.
 
