@@ -2805,6 +2805,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "bloody-branch",
+    "name": "Bloody Branch",
+    "itemId": 12103,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "bloody-page",
     "name": "Bloody Page",
     "itemId": 7449,
@@ -4240,6 +4258,7 @@
     "itemId": 2617,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -18708,6 +18727,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "poring-box",
+    "name": "Poring Box",
+    "itemId": 12109,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "sellValue": 5000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "poring-card",
     "name": "Poring Card",
     "itemId": 4001,
@@ -20517,8 +20554,8 @@
     "itemId": 7293,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -25948,7 +25985,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Server Hat Quest",
