@@ -1,4 +1,5 @@
 import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from '../utils/prices.js';
+import { valueTargets } from '../utils/targets.js';
 
 /**
  * Admin work queues: short lists of items that need a look, each with the
@@ -110,7 +111,15 @@ export const QUEUES = [
   { id: 'not-reviewed', title: 'Not reviewed', description: 'New items that need categories and uses.', select: notReviewed },
 ];
 
-/** How many rows each queue has: { 'needs-price': 416, ... }. */
+/** How many rows each queue has: { 'needs-price': 420, ... }. */
 export function queueCounts(items, ctx) {
   return Object.fromEntries(QUEUES.map((queue) => [queue.id, queue.select(items, ctx).length]));
+}
+
+/**
+ * How many "Used For" targets still need a value (the Targets page).
+ * `values` is a Map of target name -> value, like use-targets.json.
+ */
+export function targetsNeedingValue(items, values) {
+  return [...valueTargets(items).keys()].filter((name) => !values.has(name)).length;
 }

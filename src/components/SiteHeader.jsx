@@ -1,14 +1,18 @@
 import GitHubLink from './GitHubLink.jsx';
 import LootBagIcon from './LootBagIcon.jsx';
 import ThemeToggle from './ThemeToggle.jsx';
-import { ROUTES } from '../utils/route.js';
+import { ROUTES, isAdminRoute } from '../utils/route.js';
 
-/** Links shown at the top right. `route` must match a name in utils/route.js. */
+/**
+ * Links shown at the top right. `route` must match a name in utils/route.js.
+ * Admin is only there under `npm run dev`.
+ */
 const NAV_LINKS = [
   { route: 'loot', label: 'Loot Sheet' },
   { route: 'about', label: 'About' },
   { route: 'feedback', label: 'Feedback' },
   { route: 'changelog', label: 'Changelog' },
+  ...(import.meta.env.DEV ? [{ route: 'admin', label: 'Admin' }] : []),
 ];
 
 /**
@@ -38,7 +42,8 @@ export default function SiteHeader({ route }) {
           <nav aria-label="Site">
             <ul className="flex flex-wrap gap-1">
               {NAV_LINKS.map((link) => {
-                const current = link.route === route;
+                // The Admin link stays lit on every admin page.
+                const current = link.route === route || (link.route === 'admin' && isAdminRoute(route));
                 return (
                   <li key={link.route}>
                     <a

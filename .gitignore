@@ -433,3 +433,6 @@ dist/
 
 # Downloaded Hercules files (see scripts/hercules.mjs)
 scripts/.cache/
+
+# Git worktrees made by Claude Code (one per session; see AGENTS.md)
+.claude/worktrees/

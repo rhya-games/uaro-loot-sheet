@@ -9,16 +9,30 @@ import { useEffect, useState } from 'react';
  * can only serve files and can't handle real paths like /about on reload.
  *
  * To add a page: add it here, in NAV_LINKS (components/SiteHeader.jsx),
- * and in PAGES (App.jsx).
+ * and in PAGES (App.jsx). Admin pages go in ADMIN_ROUTES instead (and in
+ * src/admin/adminPages.js, which puts them in the admin tab bar).
  */
+
+/** Admin mode's pages (see src/admin/). Only under `npm run dev`; the published site has none. */
+const ADMIN_ROUTES = import.meta.env.DEV
+  ? {
+      admin: '#/admin',
+      adminPrices: '#/admin/needs-price',
+      adminVerify: '#/admin/verify-prices',
+      targets: '#/targets',
+    }
+  : {};
+
 export const ROUTES = {
   loot: '#/',
   about: '#/about',
   feedback: '#/feedback',
   changelog: '#/changelog',
-  // Admin mode's pages; only under `npm run dev` (see admin/AdminPage.jsx, admin/TargetsPage.jsx).
-  ...(import.meta.env.DEV && { admin: '#/admin', targets: '#/targets' }),
+  ...ADMIN_ROUTES,
 };
+
+/** The admin pages, so the header can highlight "Admin" on any of them. */
+export const isAdminRoute = (route) => route in ADMIN_ROUTES;
 
 function readRoute() {
   // The loot page keeps its search and filters after a "?" (see utils/viewUrl.js).

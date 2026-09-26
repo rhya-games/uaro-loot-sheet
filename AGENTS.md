@@ -265,8 +265,12 @@ English speakers. Use short, plain sentences and everyday words. Say
   switching branches switches it for both, and one session's commits land
   on the other's branch. Create one with
   `git worktree add ../uaro-loot-sheet-<topic> -b <branch>` (or your
-  tool's worktree feature), work and run the dev server there (pick a
-  free port), and remove it after the merge.
+  tool's worktree feature; its folder, `.claude/worktrees/`, is
+  gitignored). A new worktree has no `node_modules`, so run `npm ci`
+  first. Work and run the dev server from there (pick a free port; a
+  server started by a tool that launched in the main folder serves the
+  main folder's code, so check its working directory), and remove the
+  worktree after the merge.
 - If you can't use a worktree and another session may be in the same
   checkout, look at `git status` before you commit, stage only your own
   files by name, and never revert changes you didn't make.
