@@ -9,4 +9,9 @@
   JavaScript). It blocks `curl`, and WebFetch only returns a summary, which
   can drop or change rows.
 - The maintainer prefers small iterations, the data before the UI, plain
-  explanations, and questions when something is unclear.
+  explanations, and questions when something is unclear. Take the prices
+  they give you as-is.
+- Commit, push, open PRs, merge and deploy only when asked. "Merge and
+  deploy" means the whole `ship-release` skill.
+- Read "Testing and dev tips" in AGENTS.md before testing admin mode: it
+  writes the real data files.

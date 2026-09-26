@@ -23,6 +23,10 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  *   - Uses that don't use the item up (a weapon that breaks the Sign Quest
  *     seal, a whip for Zealotus Mask, a recipe book) aren't: one is enough,
  *     so extras sell by price (see isNotUsedUp).
+ *   - Skills (a Blue Gemstone for Safety Wall) aren't either: people who
+ *     cast them buy or keep their own, so the item sells by price (see isSkill).
+ *   - A target checked with no shops selling it (value 0 in
+ *     use-targets.json) can only be made, so its parts are worth keeping.
  *   - Cooking levels 1-3 don't count: those foods are too weak to be worth
  *     keeping ingredients for (see isLowLevelCooking).
  *
@@ -48,6 +52,12 @@ export const isQuest = (use) => /\bQuests?\b/.test(use.for);
 
 /** A use that needs the item but doesn't take it ("any whip; not used up"). */
 export const isNotUsedUp = (use) => /\bnot used up\b/.test(use.note ?? '');
+
+/** A skill that uses the item up when cast ("each cast"). */
+export const isSkill = (use) => use.note === 'each cast';
+
+/** Uses that can be a reason to Keep (the rest never are). */
+const isKeepReason = (use) => !isLowLevelCooking(use) && !isNotUsedUp(use) && !isSkill(use);
 
 /** use-targets.json as a Map: target name -> value. */
 export const TARGET_VALUES = new Map(targetData.items.map((entry) => [entry.for, entry.value]));
@@ -132,6 +142,8 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
 
   /** What the finished thing is worth: { value, source } (value null = unknown). */
   function targetValue(target) {
+    // 0 = checked, and no shops sell it: no price to compare, and it can only be made.
+    if (targetValues.get(target) === 0) return { value: null, source: 'no shops' };
     if (targetValues.has(target)) return { value: targetValues.get(target), source: 'use-targets.json' };
     const item = findItem(target);
     if (!item) return { value: null, source: 'not loot' };
@@ -159,7 +171,7 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
 
   return function suggest(item) {
     const sale = saleOf(item);
-    const uses = item.uses.filter((use) => !isLowLevelCooking(use) && !isNotUsedUp(use)).map(judgeUse);
+    const uses = item.uses.filter(isKeepReason).map(judgeUse);
     const reasons = [];
     const actions = [];
 
@@ -169,6 +181,8 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
       for (const use of worthKeeping) {
         reasons.push(use.source === 'quest'
           ? `Keep for ${use.for} (quests can’t be bought)`
+          : use.source === 'no shops'
+          ? `Keep for ${use.for} (no shops sell it, so it can only be made)`
           : use.value == null
           ? `Keep for ${use.for} (no value set, so keep to be safe)`
           : `Keep for ${use.for}: worth ${fmt(use.value)}, parts sell for ${fmt(use.partsValue)}${use.missingPrices ? ` (${use.missingPrices} parts have no price)` : ''}`);
@@ -178,13 +192,15 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
     if (lowCooking) reasons.push(`Level 1–3 cooking (${lowCooking} uses) isn’t a reason to keep it`);
     const notUsedUp = item.uses.filter(isNotUsedUp).map((use) => use.for);
     if (notUsedUp.length) reasons.push(`${notUsedUp.join(', ')} doesn’t use it up, so one is enough: not a reason to keep more`);
+    const skills = item.uses.filter(isSkill).map((use) => use.for);
+    if (skills.length) reasons.push(`Skills (${skills.join(', ')}) aren’t a reason to keep it`);
     for (const use of uses.filter((use) => !use.worthIt)) {
       reasons.push(`Not worth making ${use.for}: worth ${fmt(use.value)}, parts sell for ${fmt(use.partsValue)}`);
     }
 
     // A pet accessory nothing else needs isn't worth the trouble under 5k.
-    // Something that still needs one (a Sign Quest weapon) isn't Junk.
-    const usedFor = uses.length + notUsedUp.length;
+    // Something that still needs it (a Sign Quest weapon, a skill) isn't Junk.
+    const usedFor = uses.length + notUsedUp.length + skills.length;
     const best = Math.max(npcSellPrice(item) ?? 0, sale?.price ?? 0);
     if (isPetAccessory(item) && !usedFor && sale && best < PET_ACCESSORY_JUNK_BELOW) {
       actions.push('Junk');

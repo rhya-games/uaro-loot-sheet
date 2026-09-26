@@ -35,14 +35,19 @@ verified today. Shorthand works: `12k`, `1.5m`. Type `0` or `none` when
 nobody was buying or selling; the site shows it as "None". Escape puts the old price
 back. Each item also shows the action suggested by its prices (hover it to
 see why). Saving a price also saves the suggested action. If a suggestion
-changes because of another item's price, click **Use** to take it. Run `npm run validate` and commit as usual when you're done.
+changes because of another item's price, click **Use** to take it. After
+each save, a note at the bottom says what changed, with **Undo** to put it
+all back (including any actions it updated). It stays while your mouse is on
+it. Run `npm run validate` and commit as usual when you're done.
 
 With admin mode on, **Targets** opens a list of hats, pet evolutions and
 other finished things that aren't loot, so they have no price of their own.
-Type what each is worth (saved to `src/data/use-targets.json`). The
-suggestion then keeps their parts only when the finished thing is worth more
-than the parts sell for. The ones that decide the most suggestions come first.
-Quests aren't listed: a quest use is always a reason to keep.
+Type what each sells for (saved to `src/data/use-targets.json`), or `0` when
+no shops sell it. The suggestion then keeps their parts only when the
+finished thing is worth more than the parts sell for, or when no shops sell
+it. The ones that decide the most suggestions come first; click an item ID
+to copy it. Quests and skills aren't listed: a quest use is always a reason
+to keep, and a skill never is.
 
 The published site has no server, so it never shows admin mode.
 

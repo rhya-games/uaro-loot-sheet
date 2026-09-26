@@ -28,7 +28,8 @@ export default function PriceCell({ item, field }) {
   return <PriceInput item={item} field={field} />;
 }
 
-function PriceInput({ item, field }) {
+/** The price box itself (also used by the admin queues). `advance` is passed on to ZenyInput. */
+export function PriceInput({ item, field, advance }) {
   const { saveItem } = useAdmin();
 
   // Saving a price also marks the item as verified today. Clearing a price
@@ -52,6 +53,7 @@ function PriceInput({ item, field }) {
       onSave={save}
       label={`${field === 'avgVend' ? 'Vend' : 'Whobuy'} price for ${item.name}`}
       noneHint={`nobody ${field === 'avgWhobuy' ? 'buying' : 'selling'}`}
+      advance={advance}
     />
   );
 }

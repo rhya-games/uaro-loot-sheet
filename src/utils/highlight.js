@@ -1,5 +1,5 @@
 /**
- * Which "Used For" entries to bring forward on an item (see ItemUses):
+ * Which "Used For" entries to bring forward and highlight on an item (see ItemUses):
  *   - targets picked in the "Used For" filter, always
  *   - uses the search text matches as whole words, but only when the search
  *     didn't match the item's own name
@@ -8,7 +8,7 @@
  */
 export const NO_HIGHLIGHT = { targets: [], matchesSearch: null };
 
-/** A test for one use: true when it should be brought forward. */
+/** A test for one use: true when it should be brought forward and highlighted. */
 export function highlightedUseTest(item, { targets, matchesSearch }) {
   const searchFindsUses = matchesSearch && !matchesSearch(item.name);
   return (use) => targets.includes(use.for) || Boolean(searchFindsUses && matchesSearch(use.for));

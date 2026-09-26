@@ -39,6 +39,7 @@ npm test               # unit tests in src/**/*.test.js (Vitest; CI runs this)
 npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
+npm run sync:targets   # item IDs of "Used For" targets (admin Targets page)
 npm run check:uses -- recipes.json   # compare recipes (e.g. a wiki table) with "Used For"
 npm run suggest [-- "name"]          # compare suggested actions (src/utils/suggest.js) with hand-set ones
 ```
@@ -102,9 +103,11 @@ Match similar existing items. Look them up in loot.json first.
   crafted (crafted items can be sold too). Default to including. Before
   leaving anything out, explain why and get the maintainer's OK.
 
-- New items start with the category `Not Reviewed`. Once their uses are
-  checked (uaRO wiki, emulator quest scripts: items taken with `delitem`),
-  they get real categories, or `No Use` if nothing uses them.
+- An item nothing uses is `No Use`. All known uses are already mapped, so
+  that's the default for an item you add. `Not Reviewed` is only for items
+  the maintainer says still need checking (uaRO wiki, emulator quest
+  scripts: items taken with `delitem`); the published site hides them.
+  The `add-items` skill has the full steps.
 - "Used For" targets reuse an existing name exactly. Pet evolutions are
   `"<Evolved pet> Pet Evolution"`. Uses show quantities from the wiki.
 - Pet evolution materials: `Keep` + `Vend`, categories `Pet Evolution`,
@@ -116,6 +119,7 @@ Match similar existing items. Look them up in loot.json first.
   by price like anything else.
 - Headgear quest materials (Dimonka): category `Server Hat Quest` + `uaRO`.
 - After adding items: run `sync:prices`, `sync:shops`, then `validate`.
+  After adding uses, run `sync:targets` so new targets get item IDs.
 - If the CSV import should produce the same result, mirror renames, IDs
   and removals in `scripts/source/sheet-corrections.mjs`.
 
@@ -176,6 +180,12 @@ Match similar existing items. Look them up in loot.json first.
   z-30. Checkboxes use the `checkbox` utility (white check). Tooltips
   use `components/Tooltip.jsx` (hover with a delay, and keyboard focus).
   Only use one when the element has no visible label.
+- On the loot page, uses the search or the Used For filter matches move to
+  the front of their cell with a soft highlight; the others stay as they
+  are (never faded). With the filter panel open beside the table, the panel
+  shows the count and every checkbox filter, so the results header hides,
+  except the Used For chip: that filter is set by clicking a target in the
+  table, and its checkbox sits at the bottom of the panel.
 - Escape closes the innermost thing first. Components that handle Escape
   call `event.preventDefault()`, and the filter panel ignores handled keys.
 - Respect `prefers-reduced-motion` (see `utils/usePresence.js`).
@@ -188,9 +198,12 @@ Match similar existing items. Look them up in loot.json first.
 - `src/utils/suggest.js` works out actions from prices (margins, Keep when
   a finished thing is worth more than its parts). `src/data/use-targets.json`
   holds values for "Used For" targets that aren't loot (set them on admin
-  mode's Targets page, `#/targets`). Quests ("... Quest(s)") have no value
-  and are always a reason to Keep. Uses noted "not used up" (Sign Quest
-  weapons, recipe books) never are. Cards always suggest Vend; level 1-3
+  mode's Targets page, `#/targets`; its item IDs are in the generated
+  `src/data/target-ids.json`). A target value of 0 means "checked, no
+  shops sell it": it can only be made, so its parts count as worth keeping.
+  Quests ("... Quest(s)") have no value and are always a reason to Keep.
+  Skills (uses noted "each cast") and uses noted "not used up" (Sign Quest
+  weapons, recipe books) never are, and aren't targets. Cards always suggest Vend; level 1-3
   cooking (use notes "+1".."+3 ... food", Level 1-3 Cookbook trades) is
   never a reason to Keep.
 - Admin mode (`src/admin/`) only exists under `npm run dev`
@@ -205,12 +218,34 @@ Match similar existing items. Look them up in loot.json first.
 
 ## Recurring jobs
 
-Step-by-step guides for the common data tasks are in `.claude/skills/`
-(plain Markdown, usable by any agent):
+Step-by-step guides for the common tasks are in `.claude/skills/` (plain
+Markdown, usable by any agent):
 
+- `add-items`: add items that are missing from the sheet (any source).
 - `check-wiki-page`: compare "Used For" data with a uaRO wiki table and fix it.
 - `record-npc-shop`: record an NPC shop from screenshots or the wiki.
-- `update-vend-prices`: set vend/@whobuy prices from screenshots.
+- `update-vend-prices`: set vend/@whobuy prices from screenshots or a list.
+- `ship-release`: merge and deploy (PR, checks, merge, release). Only when asked.
+
+The maintainer's prices are facts from the game: **take them as given**.
+Don't question a price or ask if a big drop is a one-off.
+
+## Testing and dev tips
+
+- Tailwind doesn't see a **new file** until the dev server restarts (styles
+  from it are missing until then).
+- The Browser pane is often hidden, so screenshots and clicks by coordinate
+  can time out. Check with the DOM instead (`read_page`, or JavaScript
+  for classes, text and positions). Set the window to at least 1470px wide
+  to see the desktop layout.
+- What the page remembers changes how it looks: `localStorage`
+  (`uaro-loot-sheet:panelOpen`, `lastView`, `admin`) and a hash without
+  a `?` restore the last view. Open a link with the filters you want.
+- **Admin-mode saves write the real files** (`loot.json`, `use-targets.json`).
+  Copy them before you test a save, and restore the copies afterwards
+  (`git checkout` is only safe when the files have no other changes).
+  Typing into a price box that already shows "None" adds to the text; select
+  it first.
 
 ## Writing style
 
@@ -225,3 +260,13 @@ English speakers. Use short, plain sentences and everyday words. Say
   deploys to GitHub Pages and publishes a release.
 - Commit in small steps with messages that say what changed and why.
 - Don't push, open PRs, merge or deploy unless the maintainer asks.
+- Work in your own git worktree, one per session and branch. A folder has
+  one checked-out branch, so two sessions in the same folder share it:
+  switching branches switches it for both, and one session's commits land
+  on the other's branch. Create one with
+  `git worktree add ../uaro-loot-sheet-<topic> -b <branch>` (or your
+  tool's worktree feature), work and run the dev server there (pick a
+  free port), and remove it after the merge.
+- If you can't use a worktree and another session may be in the same
+  checkout, look at `git status` before you commit, stage only your own
+  files by name, and never revert changes you didn't make.

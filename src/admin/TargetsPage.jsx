@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
 import { useAdmin } from './useAdmin.js';
 import ZenyInput from './ZenyInput.jsx';
+import CopyItemId from '../components/CopyItemId.jsx';
 import { Page } from '../components/Page.jsx';
-import { isNotUsedUp, isQuest } from '../utils/suggest.js';
-
-const withoutSlots = (name) => name.replace(/\s*\[\d\]$/, '');
+import { valueTargets } from '../utils/targets.js';
+import targetIds from '../data/target-ids.json' with { type: 'json' };
 
 /**
  * Admin mode's list of "Used For" targets that need a value: hats, pet
@@ -13,9 +13,12 @@ const withoutSlots = (name) => name.replace(/\s*\[\d\]$/, '');
  * their parts are worth keeping (see src/utils/suggest.js). Values save to
  * src/data/use-targets.json, and the parts' actions update right away.
  *
- * Targets that decide the most suggestions come first. Quests aren't
- * listed (they're always a reason to keep), and neither are targets in the
- * sheet (price those on the loot page).
+ * Targets that decide the most suggestions come first. Quests and skills
+ * aren't listed (see suggest.js), and neither are targets in the sheet
+ * (price those on the loot page). 0 means "checked, no shops sell it",
+ * and shows as "None". Item IDs (click to copy, for
+ * @whobuy and shop searches) come from src/data/target-ids.json
+ * (`npm run sync:targets`); a pet evolution's is the evolved pet's egg.
  *
  * Only exists under `npm run dev`.
  */
@@ -24,19 +27,11 @@ export default function TargetsPage() {
   const [query, setQuery] = useState('');
 
   const rows = useMemo(() => {
-    const inSheet = new Set(items.map((item) => withoutSlots(item.name)));
-    const byTarget = new Map();
-    for (const item of items) {
-      for (const use of item.uses) {
-        if (isQuest(use) || isNotUsedUp(use) || inSheet.has(withoutSlots(use.for))) continue;
-        if (!byTarget.has(use.for)) byTarget.set(use.for, { name: use.for, parts: [], decides: 0 });
-        byTarget.get(use.for).parts.push(item.name);
-      }
-    }
+    const byTarget = new Map([...valueTargets(items)].map(([name, target]) => [name, { ...target, decides: 0 }]));
     // "Decides": parts whose only reason to keep, for now, is this target
     // having no value. Giving it one settles whether to keep them.
     for (const item of items) {
-      const open = suggest(item).uses.filter((use) => use.worthIt && use.value == null && use.source !== 'quest');
+      const open = suggest(item).uses.filter((use) => use.worthIt && use.source === 'not loot');
       if (open.length === 1 && byTarget.has(open[0].for)) byTarget.get(open[0].for).decides++;
     }
     return [...byTarget.values()].sort(
@@ -47,12 +42,12 @@ export default function TargetsPage() {
   const words = query.trim().toLowerCase();
   const shown = words ? rows.filter((row) => row.name.toLowerCase().includes(words)) : rows;
   const needsValue = shown.filter((row) => !targets.has(row.name));
-  const hasValue = shown.filter((row) => targets.has(row.name)).sort((a, b) => a.name.localeCompare(b.name));
+  const checked = shown.filter((row) => targets.has(row.name)).sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <Page
       title="Target values"
-      intro="What hats, pet evolutions and other finished things are worth. Parts are worth keeping when the finished thing is worth more than they sell for."
+      intro="What hats, pet evolutions and other finished things sell for. Parts are worth keeping when the finished thing is worth more than they sell for, or when no shops sell it. Type 0 for no shops."
     >
       <input
         type="search"
@@ -62,8 +57,8 @@ export default function TargetsPage() {
         aria-label="Find a target"
         className="w-full rounded-lg border border-line-strong bg-surface px-3 py-2 text-sm text-fg placeholder:text-muted"
       />
-      <TargetTable title={`Needs a value (${needsValue.length})`} rows={needsValue} targets={targets} onSave={saveTarget} />
-      <TargetTable title={`Has a value (${hasValue.length})`} rows={hasValue} targets={targets} onSave={saveTarget} />
+      <TargetTable title={`Needs a price (${needsValue.length})`} rows={needsValue} targets={targets} onSave={saveTarget} />
+      <TargetTable title={`Checked (${checked.length})`} rows={checked} targets={targets} onSave={saveTarget} />
     </Page>
   );
 }
@@ -87,7 +82,7 @@ function TargetTable({ title, rows, targets, onSave }) {
           <tr>
             <th className="px-4 py-2 font-medium">Target</th>
             <th className="px-4 py-2 text-right font-medium">Decides</th>
-            <th className="px-4 py-2 text-right font-medium">Worth</th>
+            <th className="px-4 py-2 text-right font-medium">Price</th>
           </tr>
         </thead>
         <tbody>
@@ -96,6 +91,8 @@ function TargetTable({ title, rows, targets, onSave }) {
               <td className="px-4 py-2">
                 <p className="font-medium text-fg">{row.name}</p>
                 <p className="text-xs text-muted">
+                  {targetIds.ids[row.name] ? <CopyItemId itemId={targetIds.ids[row.name]} /> : 'No item ID'}
+                  {' · '}
                   {row.parts.length > 4 ? `${row.parts.slice(0, 4).join(', ')} and ${row.parts.length - 4} more` : row.parts.join(', ')}
                 </p>
               </td>
@@ -104,8 +101,8 @@ function TargetTable({ title, rows, targets, onSave }) {
                 <ZenyInput
                   value={targets.get(row.name) ?? null}
                   onSave={(value) => onSave(row.name, value)}
-                  label={`What ${row.name} is worth`}
-                  noneHint="worth nothing"
+                  label={`Price of ${row.name}`}
+                  noneHint="no shops"
                 />
               </td>
             </tr>
