@@ -13,9 +13,12 @@ const fieldsWithPrice = (item) => PRICE_FIELDS.filter((field) => item[field] != 
 
 /**
  * Admin mode's "Verify prices" queue: items with a price that was never
- * checked in game (no Verified date; see queues.js). For each one, either
- * press Confirm if the price is still right, or type the new price and press
- * Enter. Both mark the item as checked today, so it leaves the list.
+ * checked in game (no Verified date; see queues.js). For each one, fix any
+ * price that changed (type it and press Enter: this only saves the price),
+ * then press Confirm. Confirm is what marks the item as checked today, so it
+ * leaves the list, and it can follow edits to both prices. From the keyboard,
+ * Enter in the last box of a row moves to its Confirm button, and Enter
+ * there confirms and moves to the next row.
  *
  * Only exists under `npm run dev`.
  */
@@ -32,7 +35,7 @@ export default function VerifyPricesPage() {
   return (
     <AdminLayout
       title="Verify prices"
-      intro="Prices that were never checked in game. Press Confirm if a price is still right, or type the new price and press Enter. Either way the item is marked as checked today."
+      intro="Prices that were never checked in game. Fix any price that changed (type it and press Enter), then press Confirm. Confirm marks the item as checked today."
     >
       <QueueSearch value={query} onChange={setQuery} />
       <section className="panel overflow-hidden">
@@ -53,6 +56,7 @@ export default function VerifyPricesPage() {
                   onEnter={() => enter(item, shown[index + 1]?.item.id)}
                   onLeave={() => leave(item.id)}
                   action={<ConfirmButton item={item} />}
+                  verifyOnSave={false}
                 />
               ))}
             </ul>
@@ -63,12 +67,22 @@ export default function VerifyPricesPage() {
   );
 }
 
-/** Marks the item's prices as checked today, as they are. */
+/**
+ * Marks the item's prices, as they are now, as checked today. It's the last
+ * stop in the row's keyboard order (the price boxes' Enter lands here), and
+ * when pressed from the keyboard it moves on to the next row, since this row
+ * is about to leave the list.
+ */
 function ConfirmButton({ item }) {
   const { saveItem } = useAdmin();
   const [status, setStatus] = useState(null); // null | 'saving' | { error }
 
-  async function confirm() {
+  async function confirm(event) {
+    // A click from the keyboard has no mouse position (detail 0).
+    if (event.detail === 0) {
+      const stops = [...document.querySelectorAll('[data-advance]')];
+      stops[stops.indexOf(event.currentTarget) + 1]?.focus();
+    }
     setStatus('saving');
     try {
       await saveItem(item.id, confirmChanges(item), 'Verified');
@@ -83,6 +97,7 @@ function ConfirmButton({ item }) {
       <button
         type="button"
         onClick={confirm}
+        data-advance="true"
         disabled={status === 'saving'}
         aria-label={`Confirm prices for ${item.name}`}
         className="button-small disabled:opacity-60"

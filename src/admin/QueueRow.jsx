@@ -49,8 +49,10 @@ export function QueueHeader({ action }) {
  *   onEnter - the cursor came into a box in the row
  *   onLeave - the cursor left the row (not just moved to another box in it)
  *   action  - a button for the last column (optional)
+ *   verifyOnSave - whether saving a price also marks the item verified today
+ *             (default). Verify prices turns it off: its Confirm button does that.
  */
-export default function QueueRow({ item, fields, onEnter, onLeave, action }) {
+export default function QueueRow({ item, fields, onEnter, onLeave, action, verifyOnSave = true }) {
   return (
     <li
       // Only boxes count: clicking the row's button shouldn't keep the row on screen.
@@ -67,19 +69,19 @@ export default function QueueRow({ item, fields, onEnter, onLeave, action }) {
         </p>
         <p className="text-xs text-muted">{usesText(item)}</p>
       </div>
-      <PriceCell item={item} field="avgVend" label="Vend" editable={fields.includes('avgVend')} />
-      <PriceCell item={item} field="avgWhobuy" label="Whobuy" editable={fields.includes('avgWhobuy')} />
+      <PriceCell item={item} field="avgVend" label="Vend" editable={fields.includes('avgVend')} verify={verifyOnSave} />
+      <PriceCell item={item} field="avgWhobuy" label="Whobuy" editable={fields.includes('avgWhobuy')} verify={verifyOnSave} />
       {action && <div className="col-span-2 flex justify-end md:col-span-1">{action}</div>}
     </li>
   );
 }
 
 /** A price box (`editable`); otherwise the price as the loot sheet shows it. */
-function PriceCell({ item, field, label, editable }) {
+function PriceCell({ item, field, label, editable, verify }) {
   return (
     <div className="flex items-start justify-between gap-2 md:justify-end">
       <span className="text-xs text-muted md:hidden">{label}</span>
-      {editable ? <PriceInput item={item} field={field} advance /> : <PlayerPrice item={item} field={field} />}
+      {editable ? <PriceInput item={item} field={field} advance verify={verify} /> : <PlayerPrice item={item} field={field} />}
     </div>
   );
 }

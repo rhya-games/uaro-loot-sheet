@@ -22,12 +22,16 @@ export default function PriceCell({ item, field }) {
   return <PriceInput item={item} field={field} />;
 }
 
-/** The price box itself (also used by the admin queues). `advance` is passed on to ZenyInput. */
-export function PriceInput({ item, field, advance }) {
+/**
+ * The price box itself (also used by the admin queues). `advance` is passed
+ * on to ZenyInput. Saving a price also marks the item as verified today (see
+ * priceChanges), unless `verify` is false: then it only saves the price, and
+ * something else (Verify prices' Confirm button) marks the item as checked.
+ */
+export function PriceInput({ item, field, advance, verify = true }) {
   const { saveItem } = useAdmin();
 
-  // Saving a price also marks the item as verified today (see priceChanges).
-  const save = (value) => saveItem(item.id, priceChanges(item, { [field]: value }));
+  const save = (value) => saveItem(item.id, verify ? priceChanges(item, { [field]: value }) : { [field]: value });
 
   return (
     <ZenyInput
