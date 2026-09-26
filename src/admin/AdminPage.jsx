@@ -11,7 +11,6 @@ import { ROUTES } from '../utils/route.js';
 
 /** How many rows show at once. Priced rows leave the list, so the next ones move up. */
 const BATCH = 50;
-const NEEDS_PRICE = QUEUES.find((queue) => queue.id === 'needs-price');
 const PRICE_FIELDS = ['avgVend', 'avgWhobuy'];
 /** The columns from tablet width up: item, Vend, Whobuy. */
 const COLUMNS = 'md:grid-cols-[1fr_7rem_7rem]';
@@ -42,7 +41,8 @@ export default function AdminPage() {
   }, []);
   const stopEditing = useCallback((id) => setEditing((current) => (current?.id === id ? null : current)), []);
 
-  const rows = useMemo(() => NEEDS_PRICE.select(items, { suggest }), [items, suggest]);
+  // Looked up here, not at the top of the file, so the published build drops this file entirely.
+  const rows = useMemo(() => QUEUES.find((queue) => queue.id === 'needs-price').select(items, { suggest }), [items, suggest]);
   const words = query.trim().toLowerCase();
   const matching = words ? rows.filter(({ item }) => item.name.toLowerCase().includes(words)) : rows;
   let shown = matching.slice(0, limit);
