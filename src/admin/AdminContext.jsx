@@ -151,6 +151,38 @@ export function AdminProvider({ children }) {
   }, [applySuggestion, replaceItem, restoreItems]);
 
   /**
+   * Saves changes to several items at once: `list` is [{ id, changes }]. They
+   * save one after another (the dev server writes a file each time). Once
+   * every price is in, the actions the new prices suggest are saved too,
+   * since a suggestion depends on other items' prices. One Undo puts the
+   * whole batch back. `onProgress(done, total)` is called after each item.
+   * Returns { saved, actionsChanged }. If one fails, the ones saved before
+   * it stay saved (and undoable) and the error is thrown.
+   */
+  const saveItems = useCallback(async (list, description, onProgress) => {
+    const before = new Map();
+    const replace = (saved) => replaceItem(saved, before);
+    const countActionChanges = () =>
+      [...before].filter(([id, old]) => !sameActions(old.actions, latest.current.find((item) => item.id === id).actions)).length;
+    try {
+      for (const [index, { id, changes }] of list.entries()) {
+        replace(await postItem(id, changes));
+        onProgress?.(index + 1, list.length);
+      }
+      for (const { id } of list) await applySuggestion(latest.current.find((item) => item.id === id), replace);
+    } finally {
+      if (before.size) {
+        setLastChange({
+          id: Date.now(),
+          message: `${description}: ${before.size} item${before.size === 1 ? '' : 's'}${actionsNote(countActionChanges())}`,
+          undo: () => restoreItems(before),
+        });
+      }
+    }
+    return { saved: before.size, actionsChanged: countActionChanges() };
+  }, [applySuggestion, replaceItem, restoreItems]);
+
+  /**
    * Saves what a "Used For" target is worth, then updates the actions of
    * everything used to make it, the same way saving a price does.
    */
@@ -216,10 +248,10 @@ export function AdminProvider({ children }) {
 
   const value = useMemo(
     () => ({
-      available: ADMIN_AVAILABLE, enabled, setEnabled: changeEnabled, items, suggest, saveItem, targets, saveTarget,
+      available: ADMIN_AVAILABLE, enabled, setEnabled: changeEnabled, items, suggest, saveItem, saveItems, targets, saveTarget,
       reviewed, saveReviewed, removeReviewed,
     }),
-    [enabled, changeEnabled, items, suggest, saveItem, targets, saveTarget, reviewed, saveReviewed, removeReviewed],
+    [enabled, changeEnabled, items, suggest, saveItem, saveItems, targets, saveTarget, reviewed, saveReviewed, removeReviewed],
   );
   return (
     <AdminContext.Provider value={value}>

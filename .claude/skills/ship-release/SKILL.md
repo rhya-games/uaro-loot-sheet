@@ -49,6 +49,9 @@ your own loops.
   `gh pr merge <number> --merge --subject "Merge pull request #<number> from <branch> [skip ci]"`.
   Then skip step 4. The release tag stays where it is until the next real
   deploy. If unsure whether a visitor could notice, deploy, or ask.
+  Use that text **only** in the merge subject. If it is in the newest
+  commit message on the PR branch, GitHub skips the PR's checks too (the
+  PR then shows "no checks"), and pushing an empty commit is the way out.
 
 ## 4. Confirm the deploy and the release
 

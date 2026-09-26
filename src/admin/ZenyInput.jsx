@@ -91,6 +91,9 @@ export default function ZenyInput({ value: saved, onSave, label, noneHint, advan
         onKeyDown={(event) => {
           if (event.key === 'Enter') {
             // Leaving the box saves it. With `advance`, the next such box gets the cursor.
+            // preventDefault stops this Enter from also pressing what gets focus
+            // (the browser sends the key press to the focused element, like a Confirm button).
+            event.preventDefault();
             const boxes = advance ? [...document.querySelectorAll('[data-advance]')] : [];
             const next = boxes[boxes.indexOf(event.currentTarget) + 1];
             if (next) next.focus();

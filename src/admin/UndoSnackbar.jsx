@@ -4,8 +4,8 @@ import Tooltip from '../components/Tooltip.jsx';
 import { usePresence } from '../utils/usePresence.js';
 
 /** How long the snackbar stays after a save, and after "Undone". */
-const SHOW_MS = 8000;
-const DONE_MS = 2500;
+const SHOW_MS = 4000;
+const DONE_MS = 1500;
 
 /**
  * Admin mode's note at the bottom of the screen after each save: what
