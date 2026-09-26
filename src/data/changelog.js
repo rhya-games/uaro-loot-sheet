@@ -33,6 +33,17 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '0.4.0',
+    date: '2026-09-26',
+    title: 'More El Dicastes daily requests',
+    changes: [
+      {
+        type: 'Added',
+        text: 'The El Dicastes Daily Quest now shows on Clam Shell (50), Withered Flower (6) and Meat (50).',
+      },
+    ],
+  },
+  {
     version: '0.3.0',
     date: '2026-09-25',
     title: 'Visit counts',
