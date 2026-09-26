@@ -11,6 +11,7 @@ import { useRoute } from './utils/route.js';
 import { trackPage } from './utils/analytics.js';
 import { AdminProvider } from './admin/AdminContext.jsx';
 import { ADMIN_AVAILABLE } from './admin/useAdmin.js';
+import AdminPage from './admin/AdminPage.jsx';
 import TargetsPage from './admin/TargetsPage.jsx';
 
 /** Every page except the loot page: route name -> title and component. */
@@ -18,7 +19,10 @@ const PAGES = {
   about: { title: 'About', Component: AboutPage },
   feedback: { title: 'Feedback', Component: FeedbackPage },
   changelog: { title: 'Changelog', Component: ChangelogPage },
-  ...(ADMIN_AVAILABLE && { targets: { title: 'Target values', Component: TargetsPage } }),
+  ...(ADMIN_AVAILABLE && {
+    admin: { title: 'Needs a price', Component: AdminPage },
+    targets: { title: 'Target values', Component: TargetsPage },
+  }),
 };
 
 /**

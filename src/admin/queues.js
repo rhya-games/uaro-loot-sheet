@@ -20,17 +20,26 @@ const hasPlayerPrice = (item) => item.avgVend != null || item.avgWhobuy != null;
 const isNoUse = (item) => item.categories.includes('No Use');
 
 /**
- * Vend or Whobuy is set, but there's no price to back it up. Items NPCs sell
- * or that can't be traded never have player prices, so they're left out.
- * Items used in more things come first: their price feeds more Keep decisions.
+ * Whether this price ("avgVend" or "avgWhobuy") is set to be used (the
+ * item has the Vend or Whobuy action) but is still empty. Items NPCs sell or
+ * that can't be traded never have player prices, and @whobuy doesn't apply
+ * to cards or equipment.
+ */
+export function needsField(item, field) {
+  if (isSoldByNpc(item) || !isTradeable(item) || item[field] != null) return false;
+  return field === 'avgVend' ? item.actions.includes('Vend') : item.actions.includes('Whobuy') && hasWhobuy(item);
+}
+
+/**
+ * Vend or Whobuy is set, but there's no price to back it up. Items used in
+ * more things come first: their price feeds more Keep decisions.
  */
 function needsPrice(items) {
   const rows = [];
   for (const item of items) {
-    if (isSoldByNpc(item) || !isTradeable(item)) continue;
     const reasons = [];
-    if (item.actions.includes('Vend') && item.avgVend == null) reasons.push('Vend action, no vend price');
-    if (item.actions.includes('Whobuy') && hasWhobuy(item) && item.avgWhobuy == null) reasons.push('Whobuy action, no @whobuy price');
+    if (needsField(item, 'avgVend')) reasons.push('Vend action, no vend price');
+    if (needsField(item, 'avgWhobuy')) reasons.push('Whobuy action, no @whobuy price');
     if (reasons.length) rows.push({ item, reasons });
   }
   return rows.sort((a, b) => b.item.uses.length - a.item.uses.length || byName(a, b));

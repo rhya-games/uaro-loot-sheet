@@ -24,8 +24,10 @@ function withCommas(text) {
  *   onSave   - async (newValue) => void; throw to show an error
  *   label    - the box's accessible name
  *   noneHint - what "None" means here, shown after typing 0
+ *   advance  - Enter moves to the next box that also has `advance` (for
+ *              typing down a list of prices), instead of just leaving this one
  */
-export default function ZenyInput({ value: saved, onSave, label, noneHint }) {
+export default function ZenyInput({ value: saved, onSave, label, noneHint, advance = false }) {
   const [text, setText] = useState(asText(saved));
   const [status, setStatus] = useState(null); // null | 'saving' | { error }
   const [focused, setFocused] = useState(false);
@@ -85,8 +87,15 @@ export default function ZenyInput({ value: saved, onSave, label, noneHint }) {
           setFocused(false);
           save();
         }}
+        data-advance={advance || undefined}
         onKeyDown={(event) => {
-          if (event.key === 'Enter') event.currentTarget.blur();
+          if (event.key === 'Enter') {
+            // Leaving the box saves it. With `advance`, the next such box gets the cursor.
+            const boxes = advance ? [...document.querySelectorAll('[data-advance]')] : [];
+            const next = boxes[boxes.indexOf(event.currentTarget) + 1];
+            if (next) next.focus();
+            else event.currentTarget.blur();
+          }
           if (event.key === 'Escape') {
             event.preventDefault(); // Escape is handled here; see AGENTS.md.
             setText(asText(saved));
