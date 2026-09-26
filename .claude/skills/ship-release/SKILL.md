@@ -41,6 +41,14 @@ your own loops.
   read the log (`gh run view --log-failed`), fix it on the branch, and push.
 - Merge with a merge commit: `gh pr merge <number> --merge`. Never turn on
   auto-merge unless asked.
+- **Admin-only changes don't deploy.** If the PR changes nothing a visitor
+  can see or download (admin mode under `src/admin/`, dev scripts, tests,
+  docs, agent instructions), merge without deploying: add `[skip ci]` to
+  the merge commit's subject, so GitHub doesn't start the workflows for
+  the push to `main`:
+  `gh pr merge <number> --merge --subject "Merge pull request #<number> from <branch> [skip ci]"`.
+  Then skip step 4. The release tag stays where it is until the next real
+  deploy. If unsure whether a visitor could notice, deploy, or ask.
 
 ## 4. Confirm the deploy and the release
 
