@@ -13,6 +13,7 @@ import { AdminProvider } from './admin/AdminContext.jsx';
 import { ADMIN_AVAILABLE } from './admin/useAdmin.js';
 import AdminOverviewPage from './admin/AdminOverviewPage.jsx';
 import NeedsPricePage from './admin/NeedsPricePage.jsx';
+import VerifyPricesPage from './admin/VerifyPricesPage.jsx';
 import TargetsPage from './admin/TargetsPage.jsx';
 
 /** Every page except the loot page: route name -> title and component. */
@@ -23,6 +24,7 @@ const PAGES = {
   ...(ADMIN_AVAILABLE && {
     admin: { title: 'Admin', Component: AdminOverviewPage },
     adminPrices: { title: 'Needs a price', Component: NeedsPricePage },
+    adminVerify: { title: 'Verify prices', Component: VerifyPricesPage },
     targets: { title: 'Target values', Component: TargetsPage },
   }),
 };

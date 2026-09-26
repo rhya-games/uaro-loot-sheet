@@ -111,9 +111,10 @@ export function AdminProvider({ children }) {
   /**
    * Saves changes to one item. When a price changes, the actions its new
    * prices suggest are saved too, replacing the old ones, so entering prices
-   * is all it takes to keep actions up to date.
+   * is all it takes to keep actions up to date. `description` is what the
+   * undo snackbar says for a save that isn't a price ("Verified").
    */
-  const saveItem = useCallback(async (id, changes) => {
+  const saveItem = useCallback(async (id, changes, description = 'saved') => {
     const before = new Map();
     const replace = (saved) => replaceItem(saved, before);
     const saved = replace(await postItem(id, changes));
@@ -123,7 +124,7 @@ export function AdminProvider({ children }) {
     const prices = Object.keys(FIELD_NAMES).filter((field) => field in changes);
     const what = prices.length
       ? prices.map((field) => `${FIELD_NAMES[field]} ${priceText(old[field])} → ${priceText(changes[field])}`).join(', ')
-      : 'saved';
+      : description;
     const actionsChanged = !sameActions(old.actions, latest.current.find((item) => item.id === id).actions);
     setLastChange({
       id: Date.now(),

@@ -1,14 +1,9 @@
 import { useAdmin } from './useAdmin.js';
 import ZenyInput from './ZenyInput.jsx';
+import { CHECK_NOTES } from './verify.js';
 import { todayText } from '../utils/format.js';
 import { PlayerPrice } from '../components/StatusIcons.jsx';
 import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
-
-/** What the Verified note says for a price checked in game. */
-const CHECK_NOTES = {
-  avgVend: 'Vend price from a player shop',
-  avgWhobuy: '@whobuy price in game',
-};
 
 /**
  * A Vend or Whobuy price cell. In admin mode it's a text box: type a price
