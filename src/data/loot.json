@@ -9594,9 +9594,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "No Use"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Nameless Island Quest",
+        "qty": 1,
+        "note": "any mask; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -16222,12 +16228,18 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Alarm Mask",
         "qty": 1
+      },
+      {
+        "for": "Nameless Island Quest",
+        "qty": 1,
+        "note": "any mask; not used up"
       }
     ],
     "notes": "",
@@ -16246,12 +16258,18 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Tulip Hairpin",
         "qty": 1
+      },
+      {
+        "for": "Nameless Island Quest",
+        "qty": 1,
+        "note": "any mask; not used up"
       }
     ],
     "notes": "",
@@ -17209,12 +17227,18 @@
       "Keep"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Opera Phantom Mask",
         "qty": 1
+      },
+      {
+        "for": "Nameless Island Quest",
+        "qty": 1,
+        "note": "any mask; not used up"
       }
     ],
     "notes": "",
