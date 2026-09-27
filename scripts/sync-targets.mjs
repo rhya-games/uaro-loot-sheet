@@ -44,6 +44,8 @@ const ITEM_IDS = {
   'Earth Deleter Pet Evolution': 9098,
   'Gigantic Majestic Goat (DEF)': 5518,
   'Antique Smoking Pipe': 5377,
+  'Bunny Ears Hat': 5378, // the emulators call it Bunny Top Hat
+  'Tropical Fruit Hat': 5307, // Carmen Miranda's Hat in the emulators
 };
 
 const items = JSON.parse(readFileSync(LOOT_FILE, 'utf8'));
