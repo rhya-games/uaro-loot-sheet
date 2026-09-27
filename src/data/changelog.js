@@ -47,6 +47,15 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '0.5.0',
+    date: '2026-09-27',
+    title: 'More quest uses, and two new items',
+    changes: [
+      { type: 'Added', text: 'Two Tool Dealer items: Awakening Potion and Green Potion.' },
+      { type: 'Added', text: 'More in “Used For”: two El Dicastes quests, weapon forging, Expanded Token Fragments, and masks for the Nameless Island quest.' },
+    ],
+  },
+  {
     version: '0.4.0',
     date: '2026-09-26',
     title: 'More El Dicastes requests, and a home screen icon',
