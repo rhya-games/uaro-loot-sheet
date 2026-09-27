@@ -36,10 +36,20 @@ The maintainer's rules (ask if a case isn't covered):
 - **"Only checks" is a use, but not used up.** The weapons that break the
   Sign seal and the whips for the Zealotus Mask are examples. Add the use
   with the note `not used up`; it never makes the item a Keep.
-- **uaRO may not have it.** Guild and party relay quests and the like: the
-  maintainer has not said whether they exist on uaRO. List them and ask.
-- **Not quests:** a hair dresser, a shop, or a refiner is not a quest. Ask
-  before adding those as uses.
+- **Skip guild and party relay quests** (`quests/guildrelay.txt`,
+  `quests/partyrelay.txt`): they don't exist on uaRO (the maintainer, 2026-09-26).
+- **Skip the Hair Dresser** (`merchants/hair_style.txt`): uaRO has a stylist
+  instead, and hair dyes are not quests.
+- **Not quests:** a shop or a refiner is not a quest. Ask before adding
+  those as uses.
+- **"Any of these items" checks:** a script may accept one of many items
+  (the Nameless Island quest takes any of 20 masks, and keeps it). Give
+  every accepted item that is in the sheet the same use, noted
+  `any mask; not used up`, and check the wiki says one is enough.
+- **Checking the Official wiki:** its pages read through the MediaWiki API
+  (`/w/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&titles=...`)
+  from a page on that site; the normal search page shows a bot check, so
+  use the API instead of searching in the page.
 
 ## 3. Add the uses
 
