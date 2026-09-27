@@ -4,6 +4,8 @@ The PR title says what changed, in plain words.
 This description is the long version. When the PR is merged it is copied into
 the merge commit and into the GitHub release notes, so people and agents can
 find out later what changed and why. Write it for someone who wasn't here.
+Don't write the CI skip marker in it (say "the skip marker"): GitHub would
+skip the deploy when the PR is merged.
 The short lines players read go in src/data/changelog.js instead.
 -->
 

@@ -49,6 +49,11 @@ own loops.
   and the GitHub release notes:
   `gh pr merge <number> --merge --subject "<PR title> (#<number>)" --body-file pr-body.md`.
   Never turn on auto-merge unless asked.
+  **The PR description becomes the merge commit message, and GitHub skips
+  every workflow when a commit message has the skip marker (see below)
+  anywhere, body included.** Never write the marker in a PR description
+  (say "the skip marker"). If it slipped in, nothing deploys: start it by
+  hand with `gh workflow run deploy-pages.yml --ref main`.
 - **Admin-only changes don't deploy.** If the PR changes nothing a visitor
   can see or download (admin mode under `src/admin/`, dev scripts, tests,
   docs, agent instructions), merge without deploying: add `[skip ci]` to

@@ -15508,17 +15508,7 @@
         "note": "each cast"
       },
       {
-        "for": "Twilight Alchemy 1",
-        "qty": 200,
-        "note": "each cast"
-      },
-      {
-        "for": "Twilight Alchemy 2",
-        "qty": 200,
-        "note": "each cast"
-      },
-      {
-        "for": "Twilight Alchemy 3",
+        "for": "Twilight Alchemy",
         "qty": 200,
         "note": "each cast"
       }
