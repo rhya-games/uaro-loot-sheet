@@ -38,7 +38,7 @@ const TRADER_CURRENCY = {
  *   Hercules:  @include "npc/scripts.conf"   and   "npc/merchants/shops.txt",
  *   rAthena:   import: npc/scripts_athena.conf   and   npc: npc/merchants/shops.txt
  */
-async function loadedScriptFiles(repo, branch, confFile, seen = new Set()) {
+export async function loadedScriptFiles(repo, branch, confFile, seen = new Set()) {
   const files = [];
   if (seen.has(confFile)) return files;
   seen.add(confFile);
@@ -55,7 +55,7 @@ async function loadedScriptFiles(repo, branch, confFile, seen = new Set()) {
 }
 
 /** Removes /* ... *\/ and // comments from a script. */
-const stripComments = (text) => text.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
+export const stripComments = (text) => text.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
 
 /**
  * Parses shops out of one NPC script file.

@@ -40,6 +40,7 @@ npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
 npm run sync:targets   # item IDs of "Used For" targets (admin Targets page)
+npm run scan:quests    # items the emulators' quest scripts take or check for
 npm run check:uses -- recipes.json   # compare recipes (e.g. a wiki table) with "Used For"
 npm run suggest [-- "name"]          # compare suggested actions (src/utils/suggest.js) with hand-set ones
 ```
@@ -228,6 +229,7 @@ Markdown, usable by any agent):
 - `add-items`: add items that are missing from the sheet (any source).
 - `check-wiki-page`: compare "Used For" data with a uaRO wiki table and fix it.
 - `record-npc-shop`: record an NPC shop from screenshots or the wiki.
+- `scan-quests`: find items quest scripts ask for and add the missing quest uses.
 - `update-vend-prices`: set vend/@whobuy prices from screenshots or a list.
 - `ship-release`: merge and deploy (PR, checks, merge, release). Only when asked.
 

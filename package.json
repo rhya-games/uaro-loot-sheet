@@ -13,6 +13,7 @@
     "sync:prices": "node scripts/sync-prices.mjs",
     "sync:shops": "node scripts/sync-shops.mjs",
     "sync:targets": "node scripts/sync-targets.mjs",
+    "scan:quests": "node scripts/scan-quests.mjs",
     "check:uses": "node scripts/check-uses.mjs",
     "validate": "node scripts/validate.mjs",
     "suggest": "node scripts/suggest-report.mjs",
