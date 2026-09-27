@@ -55,6 +55,10 @@ export const CHANGELOG = [
         type: 'Added',
         text: 'The El Dicastes Daily Quest now shows on Clam Shell (50), Withered Flower (6) and Meat (50).',
       },
+      {
+        type: 'Added',
+        text: 'The El Dicastes Daily Quest also shows on Zargon (26), Bill of Birds (50) and Potato (50).',
+      },
       { type: 'Added', text: 'An icon for adding the site to an iPhone or iPad home screen.' },
     ],
   },

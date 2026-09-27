@@ -2398,17 +2398,24 @@
     "itemId": 925,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
       "Repeatable Quest",
-      "uaRO"
+      "uaRO",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Gregor Repeatable Quest",
         "qty": 25,
         "note": "each turn-in"
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 50,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
@@ -19054,10 +19061,12 @@
     "itemId": 516,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Cooking"
+      "Cooking",
+      "Other Quest"
     ],
     "uses": [
       {
@@ -19069,6 +19078,11 @@
         "for": "Lutie Lady's Pancake",
         "qty": 10,
         "note": "+5 STR food"
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 50,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
@@ -27833,6 +27847,7 @@
     "itemId": 912,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -27862,6 +27877,11 @@
       {
         "for": "Nameless Island Quest",
         "qty": 2
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 26,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
