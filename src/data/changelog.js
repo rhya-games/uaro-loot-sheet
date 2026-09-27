@@ -49,12 +49,13 @@ export const CHANGELOG = [
   {
     version: '0.4.0',
     date: '2026-09-26',
-    title: 'More El Dicastes daily requests',
+    title: 'More El Dicastes requests, and a home screen icon',
     changes: [
       {
         type: 'Added',
         text: 'The El Dicastes Daily Quest now shows on Clam Shell (50), Withered Flower (6) and Meat (50).',
       },
+      { type: 'Added', text: 'An icon for adding the site to an iPhone or iPad home screen.' },
     ],
   },
   {
