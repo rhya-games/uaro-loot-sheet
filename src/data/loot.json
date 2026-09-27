@@ -1719,6 +1719,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "awakening-potion",
+    "name": "Awakening Potion",
+    "itemId": 656,
+    "sellValue": 750,
+    "sellSource": "hercules",
+    "itemType": "Consumable",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "npcBuyable": "yes"
+  },
+  {
     "id": "awfully-bitter-bracer",
     "name": "Awfully Bitter Bracer",
     "itemId": 12081,
@@ -10926,6 +10944,24 @@
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "green-potion",
+    "name": "Green Potion",
+    "itemId": 506,
+    "sellValue": 20,
+    "sellSource": "hercules",
+    "itemType": "Consumable",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "npcBuyable": "yes"
   },
   {
     "id": "green-salad",
@@ -24401,7 +24437,7 @@
     "itemId": 578,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
+      "Keep",
       "Whobuy"
     ],
     "categories": [
