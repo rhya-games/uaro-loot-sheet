@@ -74,8 +74,10 @@ npm run check:uses -- <scratchpad>/recipes.json   # should be 0 differences
 
 ## 4. Finish
 
-- Add a line to today's card in `src/data/changelog.js` (one card per day;
-  a new day needs the next version, also in `package.json`).
+- Add a short line to today's card in `src/data/changelog.js` ("Pet
+  evolution materials now match the wiki"), not one per fix; the fixes go
+  in the PR description. One card per day; a new day needs the next
+  version, also in `package.json`.
 - Commit with a message that lists the kinds of fixes.
 - Report to the maintainer: the fixes (a small table for quantities), new
   items, and anything that needs a decision. Examples: the wiki and the

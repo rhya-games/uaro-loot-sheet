@@ -252,7 +252,19 @@ const isNewer = (a, b) => {
   const [x, y] = [versionParts(a), versionParts(b)];
   return x[0] - y[0] || x[1] - y[1] || x[2] - y[2];
 };
+// The page is for players: a few short lines per day. The long notes go in
+// the pull request description (see CONTRIBUTING.md, "Changelog").
+const MAX_CHANGES_PER_ENTRY = 8;
+const MAX_CHANGE_LENGTH = 150;
 CHANGELOG.forEach((entry, i) => {
+  if (entry.changes.length > MAX_CHANGES_PER_ENTRY) {
+    errors.push(`Changelog ${entry.date}: ${entry.changes.length} lines is too many (up to ${MAX_CHANGES_PER_ENTRY}); sum up data updates with counts, and put the details in the pull request`);
+  }
+  for (const change of entry.changes) {
+    if (change.text.length > MAX_CHANGE_LENGTH) {
+      warnings.push(`Changelog ${entry.date}: "${change.text.slice(0, 40)}…" is ${change.text.length} characters; keep it to one short sentence (${MAX_CHANGE_LENGTH} at most)`);
+    }
+  }
   if (!/^0\.\d+\.\d+$/.test(entry.version ?? '')) {
     errors.push(`Changelog ${entry.date}: version "${entry.version}" should look like 0.3.0 (0.x until the first real release)`);
   }

@@ -73,5 +73,7 @@ CONTRIBUTING.md lists the fields).
 
 ## 5. Finish
 
-Add a line to today's changelog card, commit, and report what you added,
-with each item's ID, categories and actions, and anything you guessed.
+Add one summed-up line to today's changelog card ("12 new items: foods and
+cookbooks"), not one per item. Commit, and report what you added, with each
+item's ID, categories and actions, and anything you guessed. The item-level
+detail belongs in the PR description.

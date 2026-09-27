@@ -67,10 +67,14 @@ lint` and `npm test` after code changes. There's no formatter yet.
   - `renewalContent`: uaRO's renewal areas, and renewal price differences
     already reviewed (`reviewedPrices`).
 - `src/data/game-rules.json`: Overcharge level and %; generated.
-- `src/data/changelog.js`: the site's Changelog page. Add a line for
-  anything a visitor would notice. One entry per day, each with a version
-  (SemVer, 0.x until 1.0; features raise the middle number, fixes the last)
-  that matches `package.json`. Merging to main publishes a GitHub release.
+- `src/data/changelog.js`: the site's Changelog page, for **players**: a few
+  short lines per day (validate errors above 8), only what a player would
+  notice, with data updates summed up as counts. One entry per day, each
+  with a version (SemVer, 0.x until 1.0; features raise the middle number,
+  fixes the last) that matches `package.json`. The long version (what,
+  why, decisions, how it was checked) goes in the PR description, which
+  becomes the merge commit body and part of the GitHub release notes (see
+  CONTRIBUTING.md, "Changelog").
 
 ### Where values come from (most important first)
 
@@ -259,6 +263,9 @@ English speakers. Use short, plain sentences and everyday words. Say
   CI runs `validate`, `lint` and `test` on PRs, and merging to `main`
   deploys to GitHub Pages and publishes a release.
 - Commit in small steps with messages that say what changed and why.
+- Fill in the PR template (`.github/pull_request_template.md`). Write it
+  for a later agent who wasn't here: it is the record of what changed and
+  why.
 - Don't push, open PRs, merge or deploy unless the maintainer asks.
 - After a PR is merged, delete its branch, both on GitHub
   (`git push origin --delete <branch>`) and locally (`git branch -d

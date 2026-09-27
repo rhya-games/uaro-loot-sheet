@@ -120,11 +120,18 @@ When an item turns out to be sold by NPCs, the sync changes its Vend/Whobuy acti
 
 ## Changelog
 
-When you make a noticeable change, add it to [`src/data/changelog.js`](src/data/changelog.js). There's a copy-and-paste template at the top of that file.
+There are two levels of notes, for two kinds of readers.
+
+**The Changelog page** ([`src/data/changelog.js`](src/data/changelog.js)) is for the people who use the site. There's a copy-and-paste template at the top of that file.
+
+- **Only what a player needs to know:** a change they'd notice or would do something differently because of. Skip admin tools, tests, docs and code cleanup.
+- **A few short lines a day** (the check allows 8). Lead with the biggest change. Sum up data updates in one line with a count ("Prices updated for 40 items") and name items only when there are three or fewer and they matter. One sentence each, in everyday words.
+
+**The pull request description** is the long version, for maintainers and agents. Fill in the template: what changed, why, things to know, how it was checked, and follow-ups. When the PR is merged, the description becomes the merge commit's message and is added to the GitHub release notes, under the short lines from the Changelog page.
 
 - **One entry per day.** If today already has an entry, add your change to it.
 - **Each day gets a version** ([Semantic Versioning](https://semver.org), staying at 0.x until the first real release): something new or changed raises the middle number (0.2.3 → 0.3.0); only fixes raise the last one (0.3.0 → 0.3.1). Put the same version in `package.json` (`npm version 0.3.0 --no-git-tag-version`). `npm run validate` checks that they match.
-- Merging to `main` deploys the site and publishes a GitHub release (`v0.3.0`) with that day's notes.
+- Merging to `main` deploys the site and publishes a GitHub release (`v0.3.0`) with that day's short lines plus the notes from each pull request merged since the last release. The deploy run's page (Actions tab) shows the same notes.
 
 ## Wording
 
