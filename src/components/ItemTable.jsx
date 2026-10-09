@@ -3,6 +3,7 @@ import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import { highlightFor } from '../utils/highlight.js';
 import ItemUses from './ItemUses.jsx';
 import CopyItemId from './CopyItemId.jsx';
+import ItemIcon from './ItemIcon.jsx';
 import RowActions from './RowActions.jsx';
 import Tooltip from './Tooltip.jsx';
 import VerifiedText from './VerifiedText.jsx';
@@ -33,18 +34,21 @@ const COLUMNS = [
     title: 'Item name, type and ID',
     className: 'min-w-48',
     render: (item) => (
-      <>
-        <div className="font-medium text-fg">{item.name}</div>
-        <div className="mt-0.5 text-sm text-muted">
-          {item.itemType}
-          {item.itemId && (
-            <>
-              {' · '}
-              <CopyItemId itemId={item.itemId} />
-            </>
-          )}
+      <div className="flex items-center gap-2.5">
+        <ItemIcon item={item} />
+        <div>
+          <div className="font-medium text-fg">{item.name}</div>
+          <div className="mt-0.5 text-sm text-muted">
+            {item.itemType}
+            {item.itemId && (
+              <>
+                {' · '}
+                <CopyItemId itemId={item.itemId} />
+              </>
+            )}
+          </div>
         </div>
-      </>
+      </div>
     ),
   },
   {

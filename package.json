@@ -1,7 +1,7 @@
 {
   "name": "uaro-loot-sheet",
   "private": true,
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Rhya's uaRO Loot Sheet: quickly determine what to do with your loot.",
   "type": "module",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "sync:prices": "node scripts/sync-prices.mjs",
     "sync:shops": "node scripts/sync-shops.mjs",
     "sync:targets": "node scripts/sync-targets.mjs",
+    "sync:icons": "node scripts/sync-icons.mjs",
     "scan:quests": "node scripts/scan-quests.mjs",
     "check:uses": "node scripts/check-uses.mjs",
     "validate": "node scripts/validate.mjs",
