@@ -216,7 +216,7 @@ export default function ItemTable({ items, sort, onSort, onSelectUse, highlightU
  */
 const ItemRow = memo(function ItemRow({ item, onSelectUse, highlightUses }) {
   return (
-    <tr className="group hover:bg-accent-soft">
+    <tr className="group">
       {COLUMNS.map((column) => (
         <td
           key={column.label}
