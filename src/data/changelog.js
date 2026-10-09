@@ -47,6 +47,15 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '0.6.0',
+    date: '2026-10-08',
+    title: 'Actions now follow the prices',
+    changes: [
+      { type: 'Changed', text: 'Actions updated for 315 items to match their prices, 18 of them for the first time.' },
+      { type: 'Changed', text: 'Keep is never the only action now: items you keep also show how to sell the extras.' },
+    ],
+  },
+  {
     version: '0.5.0',
     date: '2026-09-27',
     title: 'More quest uses, and two new items',

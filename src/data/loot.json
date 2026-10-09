@@ -112,7 +112,6 @@
     "itemId": 7136,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -1049,7 +1048,6 @@
     "itemId": 702,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -1075,6 +1073,7 @@
     "itemId": 919,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -1784,7 +1783,7 @@
     "itemId": 7119,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -2078,7 +2077,10 @@
     "name": "Barren Trunk",
     "itemId": 1068,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Job Quest"
     ],
@@ -2101,6 +2103,7 @@
     "itemId": 7214,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -2303,6 +2306,7 @@
     "itemId": 5172,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -2760,7 +2764,8 @@
     "itemId": 7433,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Skills"
@@ -2879,7 +2884,8 @@
     "itemId": 7563,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -3416,6 +3422,7 @@
     "itemId": 744,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -3541,6 +3548,7 @@
     "itemId": 580,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -3575,8 +3583,8 @@
     "itemId": 7054,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -3634,7 +3642,10 @@
     "name": "Broken Sword",
     "itemId": 7110,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -3694,7 +3705,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -3824,7 +3835,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -3848,7 +3859,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -3876,7 +3887,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -3967,8 +3978,8 @@
     "itemId": 7182,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -3999,8 +4010,8 @@
     "itemId": 952,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills",
@@ -4039,7 +4050,8 @@
     "itemId": 5028,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -4062,7 +4074,8 @@
     "itemId": 529,
     "itemType": "Consumable",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -4091,7 +4104,7 @@
     "itemType": "Consumable",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -4260,7 +4273,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -4360,7 +4373,7 @@
     "itemId": 1520,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "No Use"
@@ -4411,8 +4424,7 @@
     "itemType": "Consumable",
     "actions": [
       "Keep",
-      "Vend",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -4620,8 +4632,8 @@
     "itemId": 915,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Repeatable Quest",
@@ -4672,7 +4684,8 @@
     "itemId": 2233,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -4703,6 +4716,7 @@
     "itemId": 7295,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -4944,7 +4958,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -5032,8 +5046,8 @@
     "itemId": 1003,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -5191,7 +5205,8 @@
     "itemId": 645,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -5338,6 +5353,7 @@
     "itemId": 641,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -5381,6 +5397,7 @@
     "itemId": 11605,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -5406,7 +5423,8 @@
     "itemId": 7457,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -5445,7 +5463,8 @@
     "itemId": 7013,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -5604,7 +5623,8 @@
     "itemId": 733,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -5738,8 +5758,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -5854,7 +5873,8 @@
     "itemId": 6075,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -5878,6 +5898,7 @@
     "itemId": 1045,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -5918,7 +5939,8 @@
     "itemId": 724,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -6181,7 +6203,8 @@
     "itemId": 7053,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Job Quest",
@@ -6303,7 +6326,8 @@
     "itemId": 979,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -6326,7 +6350,6 @@
     "itemId": 604,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
       "Whobuy"
     ],
     "categories": [
@@ -6388,6 +6411,7 @@
     "itemId": 11616,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -6449,6 +6473,7 @@
     "itemId": 4082,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -6476,7 +6501,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -6517,8 +6542,8 @@
     "itemId": 1051,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Brewing"
@@ -6660,7 +6685,7 @@
     "itemId": 1021,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -6762,8 +6787,6 @@
     "itemId": 1035,
     "itemType": "Misc",
     "actions": [
-      "Keep",
-      "Vend",
       "NPC"
     ],
     "categories": [
@@ -6832,7 +6855,9 @@
     "name": "Dragon Skin",
     "itemId": 7123,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Cooking"
     ],
@@ -6854,7 +6879,9 @@
     "name": "Dragon Tail",
     "itemId": 1037,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Cooking",
       "Dungeon Quest"
@@ -6964,6 +6991,7 @@
     "itemId": 4004,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -7071,7 +7099,7 @@
     "itemId": 1055,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -7116,7 +7144,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -7139,7 +7167,8 @@
     "itemId": 581,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -7248,7 +7277,8 @@
     "itemId": 7200,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -7454,7 +7484,8 @@
     "itemId": 985,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -7586,7 +7617,8 @@
     "itemId": 714,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -7763,7 +7795,8 @@
     "itemId": 713,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Skills",
@@ -7932,7 +7965,10 @@
     "name": "Emveretarcon",
     "itemId": 1011,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -7986,6 +8022,7 @@
     "itemId": 4141,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -8012,7 +8049,8 @@
     "itemId": 923,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -8101,6 +8139,7 @@
     "itemId": 35661,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -8244,7 +8283,10 @@
     "name": "Fancy Flower [0]",
     "itemId": 2207,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -8285,7 +8327,8 @@
     "itemId": 7036,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -8345,6 +8388,7 @@
     "itemId": 632,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -8376,7 +8420,8 @@
     "itemId": 949,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -8423,7 +8468,8 @@
     "itemId": 916,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -8455,8 +8501,8 @@
     "itemId": 7298,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -8527,7 +8573,8 @@
     "itemId": 7043,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -8556,7 +8603,8 @@
     "itemId": 1066,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Job Quest"
@@ -8579,7 +8627,10 @@
     "name": "Finger [2]",
     "itemId": 1812,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -8737,8 +8788,8 @@
     "itemId": 994,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -8774,7 +8825,6 @@
     "itemId": 7521,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -8822,7 +8872,8 @@
     "itemId": 7325,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest",
@@ -8850,6 +8901,7 @@
     "itemId": 712,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -8874,7 +8926,8 @@
     "itemId": 914,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Repeatable Quest",
@@ -8909,7 +8962,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -8950,7 +9003,10 @@
     "name": "Foolishness of the Blind",
     "itemId": 7021,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -8989,6 +9045,7 @@
     "itemId": 660,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -9189,7 +9246,8 @@
     "itemId": 579,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Pet",
@@ -9352,7 +9410,7 @@
     "itemId": 1012,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -9436,7 +9494,8 @@
     "itemId": 749,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -9511,6 +9570,7 @@
     "itemId": 6020,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -9606,7 +9666,8 @@
     "itemId": 718,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -9670,7 +9731,8 @@
     "itemId": 2243,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Official Hat Quest",
@@ -9801,6 +9863,7 @@
     "itemId": 4110,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -9885,7 +9948,6 @@
     "itemId": 644,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
       "Whobuy"
     ],
     "categories": [
@@ -9951,8 +10013,8 @@
     "itemId": 1558,
     "itemType": "Equipment",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -10209,8 +10271,8 @@
     "itemId": 969,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -10472,7 +10534,8 @@
     "itemId": 1060,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -10523,7 +10586,8 @@
     "itemId": 2241,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Dungeon Quest",
@@ -10547,7 +10611,8 @@
     "itemId": 514,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -10581,8 +10646,8 @@
     "itemId": 533,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -10634,8 +10699,8 @@
     "itemId": 940,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -10698,8 +10763,8 @@
     "itemId": 997,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest",
@@ -10782,7 +10847,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -10922,7 +10987,8 @@
     "itemId": 10015,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -10946,8 +11012,8 @@
     "itemId": 993,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -11065,7 +11131,10 @@
     "name": "Guard [1]",
     "itemId": 2102,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -11162,7 +11231,8 @@
     "itemId": 2282,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -11210,8 +11280,8 @@
     "itemId": 1005,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -11310,6 +11380,7 @@
     "itemId": 1009,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -11339,8 +11410,8 @@
     "itemId": 7345,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -11416,7 +11487,8 @@
     "itemId": 7115,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -11526,7 +11598,8 @@
     "itemId": 5041,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -11549,8 +11622,8 @@
     "itemId": 950,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Brewing",
@@ -11621,7 +11694,8 @@
     "itemId": 12372,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -11661,7 +11735,8 @@
     "itemId": 2229,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -11684,7 +11759,8 @@
     "itemId": 659,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -11784,7 +11860,8 @@
     "itemId": 703,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -11807,8 +11884,8 @@
     "itemId": 520,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -11907,6 +11984,7 @@
     "itemId": 523,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -11951,7 +12029,7 @@
     "itemId": 12126,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -11969,7 +12047,8 @@
     "itemId": 518,
     "itemType": "Consumable",
     "actions": [
-      "Vend"
+      "Keep",
+      "Whobuy"
     ],
     "categories": [
       "Pet",
@@ -12076,7 +12155,8 @@
     "itemId": 7121,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -12116,7 +12196,8 @@
     "itemId": 947,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -12190,7 +12271,8 @@
     "itemId": 6032,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -12258,7 +12340,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -12285,8 +12367,8 @@
     "itemId": 958,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -12311,7 +12393,8 @@
     "itemId": 944,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -12335,6 +12418,7 @@
     "itemId": 7198,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -12499,7 +12583,8 @@
     "itemId": 7066,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -12571,7 +12656,6 @@
     "itemId": 7522,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -12675,7 +12759,8 @@
     "itemId": 710,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -12795,8 +12880,8 @@
     "itemId": 929,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -12995,7 +13080,8 @@
     "itemId": 998,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -13119,7 +13205,8 @@
     "itemId": 1002,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -13171,8 +13258,8 @@
     "itemId": 709,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -13314,7 +13401,8 @@
     "itemId": 909,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -13385,6 +13473,7 @@
     "itemId": 4265,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -13411,7 +13500,8 @@
     "itemId": 7312,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Dungeon Quest"
@@ -13452,8 +13542,8 @@
     "itemId": 972,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills",
@@ -13536,7 +13626,7 @@
     "itemId": 13006,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "No Use"
@@ -13554,6 +13644,7 @@
     "itemId": 2213,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -13661,8 +13752,8 @@
     "itemId": 7126,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Brewing",
@@ -13709,7 +13800,10 @@
     "name": "Lava",
     "itemId": 7096,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -13750,6 +13844,7 @@
     "itemId": 4195,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -13780,8 +13875,8 @@
     "itemId": 568,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -13825,7 +13920,8 @@
     "itemId": 976,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -13864,7 +13960,7 @@
     "itemId": 7472,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -13913,7 +14009,8 @@
     "itemId": 7481,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -13962,7 +14059,7 @@
     "itemId": 7473,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -14011,7 +14108,7 @@
     "itemId": 7474,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -14108,7 +14205,7 @@
     "itemId": 7475,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -14173,7 +14270,7 @@
     "itemId": 7476,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -14272,7 +14369,8 @@
     "itemId": 7477,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -14321,7 +14419,8 @@
     "itemId": 7478,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -14370,7 +14469,8 @@
     "itemId": 7479,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -14419,7 +14519,8 @@
     "itemId": 7480,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -14562,7 +14663,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -14598,6 +14699,7 @@
     "itemId": 7019,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -14623,6 +14725,7 @@
     "itemId": 4191,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -14828,7 +14931,7 @@
     "itemId": 25377,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -14864,6 +14967,7 @@
     "itemId": 12371,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -15082,8 +15186,8 @@
     "itemId": 1028,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -15112,7 +15216,8 @@
     "itemId": 1032,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -15141,8 +15246,8 @@
     "itemId": 1033,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -15253,6 +15358,7 @@
     "itemId": 4202,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -15568,7 +15674,6 @@
     "itemId": 7134,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -15642,6 +15747,7 @@
     "itemId": 934,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -15667,8 +15773,8 @@
     "itemId": 708,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Brewing",
@@ -15894,6 +16000,7 @@
     "itemId": 23256,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -15935,7 +16042,8 @@
     "itemId": 974,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -15981,7 +16089,10 @@
     "name": "Mole Whiskers",
     "itemId": 1017,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Brewing"
     ],
@@ -16219,7 +16330,8 @@
     "itemId": 1057,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Brewing"
@@ -16262,7 +16374,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -16447,7 +16559,10 @@
     "name": "Muscovite",
     "itemId": 7292,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Official Hat Quest",
       "Other Quest"
@@ -16495,7 +16610,8 @@
     "itemId": 921,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -16535,8 +16651,8 @@
     "itemId": 995,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -16573,7 +16689,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -16614,7 +16730,10 @@
     "name": "Necklace of Oblivion",
     "itemId": 1008,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Job Quest",
       "Other Quest"
@@ -16641,7 +16760,10 @@
     "name": "Necklace of Wisdom",
     "itemId": 1007,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Job Quest"
     ],
@@ -16668,7 +16790,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -16812,7 +16934,8 @@
     "itemId": 1022,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -16900,7 +17023,8 @@
     "itemId": 941,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -16923,7 +17047,8 @@
     "itemId": 7270,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -16970,7 +17095,8 @@
     "itemId": 7151,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -17034,6 +17160,7 @@
     "itemId": 637,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -17075,6 +17202,7 @@
     "itemId": 7031,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -17254,8 +17382,8 @@
     "itemId": 727,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -17291,7 +17419,8 @@
     "itemId": 2281,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -17320,7 +17449,8 @@
     "itemId": 701,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -17343,8 +17473,8 @@
     "itemId": 582,
     "itemType": "Consumable",
     "actions": [
-      "Whobuy",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -17383,7 +17513,8 @@
     "itemId": 980,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -17406,6 +17537,7 @@
     "itemId": 620,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -17436,7 +17568,6 @@
     "itemId": 502,
     "itemType": "Consumable",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -17488,7 +17619,8 @@
     "itemId": 1043,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -17569,7 +17701,8 @@
     "itemId": 922,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -17650,7 +17783,8 @@
     "itemId": 984,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Brewing",
@@ -17780,7 +17914,7 @@
     "itemId": 12125,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -17798,8 +17932,8 @@
     "itemId": 10004,
     "itemType": "Equipment",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -17879,7 +18013,7 @@
     "itemId": 2339,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "No Use"
@@ -17933,6 +18067,7 @@
     "itemId": 6021,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -17957,7 +18092,8 @@
     "itemId": 722,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -18031,7 +18167,8 @@
     "itemId": 7101,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -18091,6 +18228,7 @@
     "itemId": 7289,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -18287,7 +18425,10 @@
     "name": "Phracon",
     "itemId": 1010,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Job Quest",
       "Other Quest"
@@ -18351,7 +18492,8 @@
     "itemId": 7150,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -18435,7 +18577,8 @@
     "itemId": 7032,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -18720,8 +18863,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Skills",
@@ -18808,7 +18950,7 @@
     "itemId": 1027,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -19113,7 +19255,8 @@
     "itemId": 7482,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -19188,7 +19331,7 @@
     "itemId": 924,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -19214,8 +19357,8 @@
     "itemId": 576,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -19341,8 +19484,8 @@
     "itemId": 10008,
     "itemType": "Equipment",
     "actions": [
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -19403,6 +19546,7 @@
     "itemId": 740,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -19431,6 +19575,7 @@
     "itemId": 5118,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -19455,6 +19600,7 @@
     "itemId": 7296,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -19543,6 +19689,7 @@
     "itemId": 10006,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -19615,7 +19762,8 @@
     "itemId": 945,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -19648,7 +19796,8 @@
     "itemId": 622,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -19673,7 +19822,8 @@
     "itemId": 1013,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -19738,7 +19888,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -19765,8 +19915,8 @@
     "itemId": 990,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -19803,7 +19953,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -19905,7 +20055,8 @@
     "itemId": 716,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -20004,7 +20155,8 @@
     "itemId": 7216,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -20088,7 +20240,7 @@
     "itemType": "Consumable",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -20128,7 +20280,8 @@
     "itemId": 7456,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -20177,6 +20330,7 @@
     "itemId": 6090,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -20201,6 +20355,7 @@
     "itemId": 1064,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -20248,8 +20403,8 @@
     "itemId": 903,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -20273,6 +20428,7 @@
     "itemId": 7347,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -20297,7 +20453,8 @@
     "itemId": 907,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -20442,7 +20599,8 @@
     "itemId": 752,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -20624,6 +20782,7 @@
     "itemId": 2608,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -20724,8 +20883,8 @@
     "itemId": 930,
     "itemType": "Misc",
     "actions": [
-      "NPC",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -20747,7 +20906,10 @@
     "name": "Rotten Fish",
     "itemId": 624,
     "itemType": "Consumable",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Pet",
       "Official Hat Quest"
@@ -20813,7 +20975,8 @@
     "itemId": 757,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -20847,7 +21010,8 @@
     "itemId": 756,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -20881,8 +21045,8 @@
     "itemId": 996,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -21076,8 +21240,8 @@
     "itemId": 7511,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -21126,6 +21290,7 @@
     "itemId": 7317,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -21221,7 +21386,8 @@
     "itemId": 2280,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -21368,6 +21534,7 @@
     "itemId": 726,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -21392,7 +21559,8 @@
     "itemId": 725,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -21433,7 +21601,8 @@
     "itemId": 7454,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -21612,6 +21781,7 @@
     "itemId": 25408,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -21731,7 +21901,8 @@
     "itemId": 904,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills",
@@ -21782,7 +21953,8 @@
     "itemId": 7065,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -21879,7 +22051,6 @@
     "itemId": 7524,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -21904,7 +22075,7 @@
     "itemId": 7100,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -21941,7 +22112,8 @@
     "itemId": 963,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -21966,7 +22138,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -22048,6 +22220,7 @@
     "itemId": 640,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -22112,8 +22285,8 @@
     "itemId": 711,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -22180,6 +22353,7 @@
     "itemId": 567,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -22343,6 +22517,7 @@
     "itemId": 707,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -22413,7 +22588,8 @@
     "itemId": 932,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -22465,7 +22641,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -22492,8 +22668,8 @@
     "itemId": 7005,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -22578,7 +22754,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -22604,7 +22780,10 @@
     "name": "Small Bradium",
     "itemId": 6319,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -22627,6 +22806,7 @@
     "itemId": 23189,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -22744,7 +22924,8 @@
     "itemId": 946,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -22768,7 +22949,8 @@
     "itemId": 926,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -22826,6 +23008,7 @@
     "itemId": 661,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -22859,7 +23042,8 @@
     "itemId": 7194,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -23000,7 +23184,7 @@
     "itemId": 7190,
     "itemType": "Misc",
     "actions": [
-      "NPC",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -23042,8 +23226,8 @@
     "itemId": 7164,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -23068,8 +23252,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -23096,7 +23279,8 @@
     "itemId": 1067,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Job Quest"
@@ -23624,6 +23808,7 @@
     "itemId": 1000,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -23648,7 +23833,8 @@
     "itemId": 1001,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -23780,7 +23966,8 @@
     "itemId": 999,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -24120,7 +24307,7 @@
     "itemId": 905,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -24186,7 +24373,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -24277,7 +24464,8 @@
     "itemId": 959,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -24357,7 +24545,7 @@
     "itemId": 953,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -24416,7 +24604,8 @@
     "itemId": 7167,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Dungeon Quest"
@@ -24457,7 +24646,8 @@
     "itemId": 5062,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -24566,7 +24756,10 @@
     "name": "Strong Vine",
     "itemId": 6041,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -24739,7 +24932,8 @@
     "itemId": 551,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -24786,8 +24980,8 @@
     "itemId": 627,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -24837,7 +25031,8 @@
     "itemId": 7453,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -24917,8 +25112,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -24977,7 +25171,8 @@
     "itemId": 917,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Job Quest"
@@ -25000,7 +25195,8 @@
     "itemId": 7048,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -25188,8 +25384,8 @@
     "itemId": 1050,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Brewing",
@@ -25237,7 +25433,8 @@
     "itemId": 962,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -25332,7 +25529,8 @@
     "itemId": 7267,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -25355,8 +25553,8 @@
     "itemId": 1030,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -25439,7 +25637,8 @@
     "itemId": 913,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -25500,7 +25699,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -25524,7 +25723,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -25633,7 +25832,8 @@
     "itemId": 7352,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Dungeon Quest"
@@ -25651,7 +25851,6 @@
     "itemId": 1065,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -25791,6 +25990,7 @@
     "itemId": 634,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -25822,7 +26022,8 @@
     "itemId": 1019,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -26064,7 +26265,8 @@
     "itemId": 7319,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -26130,7 +26332,8 @@
     "itemId": 937,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -26409,7 +26612,7 @@
     "itemType": "Consumable",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -26473,7 +26676,8 @@
     "itemId": 2248,
     "itemType": "Equipment",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -26512,7 +26716,8 @@
     "itemId": 982,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -26551,8 +26756,8 @@
     "itemId": 509,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -26632,7 +26837,8 @@
     "itemId": 504,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Pet",
@@ -26765,6 +26971,7 @@
     "itemId": 4257,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -26833,6 +27040,7 @@
     "itemId": 992,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -26862,7 +27070,6 @@
     "itemId": 7523,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -26909,7 +27116,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Official Hat Quest",
@@ -26938,7 +27145,8 @@
     "itemId": 7006,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -26979,8 +27187,8 @@
     "itemId": 1061,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Brewing",
@@ -27011,7 +27219,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -27087,7 +27295,8 @@
     "itemId": 920,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Skills"
@@ -27136,8 +27345,8 @@
     "itemId": 7189,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -27183,7 +27392,8 @@
     "itemId": 955,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Job Quest"
@@ -27224,7 +27434,8 @@
     "itemId": 618,
     "itemType": "Consumable",
     "actions": [
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Job Quest"
@@ -27289,7 +27500,8 @@
     "itemId": 1099,
     "itemType": "Misc",
     "actions": [
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -27312,6 +27524,7 @@
     "itemId": 4190,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -27400,7 +27613,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -27428,7 +27641,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
@@ -27523,7 +27736,7 @@
     "itemType": "Consumable",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -27599,6 +27812,7 @@
     "itemId": 503,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -27731,8 +27945,7 @@
     "itemType": "Consumable",
     "actions": [
       "Keep",
-      "Vend",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -27761,7 +27974,8 @@
     "itemId": 610,
     "itemType": "Consumable",
     "actions": [
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Pet Evolution",
@@ -27817,8 +28031,8 @@
     "itemId": 608,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -27895,8 +28109,8 @@
     "itemId": 753,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "NPC"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -28033,8 +28247,8 @@
     "itemId": 1044,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Brewing"
@@ -28058,6 +28272,7 @@
     "itemId": 4272,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -28084,6 +28299,7 @@
     "itemId": 729,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
