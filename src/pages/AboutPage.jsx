@@ -30,7 +30,7 @@ export default function AboutPage() {
           ))}
         </dl>
 
-        <SubHeading>Categories: what it's used for</SubHeading>
+        <SubHeading>Categories: what kind of content it belongs to</SubHeading>
         <ul className="flex flex-wrap gap-1.5">
           {ALL_CATEGORIES.map((category) => (
             <li key={category}>

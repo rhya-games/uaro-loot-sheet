@@ -67,7 +67,7 @@ const COLUMNS = [
   {
     label: 'Category',
     sortKey: 'categories',
-    title: 'Where the item is used',
+    title: 'What kind of content the item belongs to',
     render: (item) => (
       <div className="flex flex-wrap gap-1">
         <CategoryBadges categories={item.categories} />
