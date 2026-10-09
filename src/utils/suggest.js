@@ -17,7 +17,8 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  * Keeping: for each "Used For" target, compare what the finished thing is
  * worth with what all its parts would sell for. If the finished thing is
  * worth more, its parts are worth keeping. Keep is suggested next to the
- * sell action ("keep it if you want, sell it if you want money").
+ * sell action ("keep it if you want, sell it if you want money"). Keep is
+ * never the only action: with no player price yet, Vend goes next to it.
  *   - Quests can't be bought or sold, so they have no value to compare:
  *     a quest use is always a reason to Keep (see isQuest).
  *   - Uses that don't use the item up (a weapon that breaks the Sign Quest
@@ -211,6 +212,11 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
     } else if (sale && !usedFor) {
       actions.push('Junk');
       reasons.push(sale.reason);
+    } else if (!sale && actions.includes('Keep')) {
+      // Keep is never the only action: extras can always be sold. With no
+      // price to go on, vending is the usual way (the price comes later).
+      actions.push('Vend');
+      reasons.push('No player price yet, so Vend until one is set');
     } else if (!sale) {
       reasons.push('No player price yet');
     }
