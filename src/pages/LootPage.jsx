@@ -381,11 +381,10 @@ export default function LootPage() {
       {/* Panel and table share one grid cell (so the panel floats over the table)
           until 1470px (`wide:`), where the grid gets a second column for the panel.
           overflow-x-clip hides the table's edge while it slides (see the FLIP effect above)
-          without breaking the sticky header. Browsers ignore overflow-clip-margin when
-          only one direction clips, so -mx-4/px-4 widen the clip box instead: that room
-          keeps focus rings and the panel's shadow at the edges from being cut off. */}
+          without breaking the sticky header. The page has no side padding here, so
+          the clip box is the window's edge. */}
       <div
-        className={`md:grid md:items-start wide:-mx-4 wide:overflow-x-clip wide:px-4 ${
+        className={`md:grid md:items-start wide:overflow-x-clip ${
           panelTakesSpace ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''
         }`}
       >

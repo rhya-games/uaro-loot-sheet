@@ -1,5 +1,6 @@
 import { LockClosedIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
+import { Unknown } from './StatusIcons.jsx';
 import { formatZeny } from '../utils/format.js';
 import { OVERCHARGE_LEVEL, npcSellInfo } from '../utils/prices.js';
 
@@ -8,7 +9,7 @@ import { OVERCHARGE_LEVEL, npcSellInfo } from '../utils/prices.js';
  *   normal price    "15,500z"
  *   uaRO fixed      "2,000z" + lock icon (tooltip explains Overcharge doesn't apply)
  *   can't be sold   ✕ icon (tooltip explains why)
- *   unknown         "—"
+ *   unknown         "?" icon
  *
  * The special cases can be focused (Tab) so their tooltip is reachable by keyboard.
  */
@@ -38,5 +39,5 @@ export default function NpcSellPrice({ item }) {
     );
   }
 
-  return info.kind === 'overcharge' ? formatZeny(info.price) : '—';
+  return info.kind === 'overcharge' ? formatZeny(info.price) : <Unknown />;
 }

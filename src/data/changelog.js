@@ -49,8 +49,12 @@ export const CHANGELOG = [
   {
     version: '0.7.0',
     date: '2026-10-09',
-    title: 'Item icons',
-    changes: [{ type: 'Added', text: 'Every item now shows its in-game icon next to its name.' }],
+    title: 'Item icons, and clearer empty values',
+    changes: [
+      { type: 'Added', text: 'Every item now shows its in-game icon next to its name.' },
+      { type: 'Changed', text: 'Empty values are clearer: ? means not checked yet, and None, No sellers and No buyers mean it was checked.' },
+      { type: 'Changed', text: 'The table now uses the full width of the window, and rows no longer alternate colors.' },
+    ],
   },
   {
     version: '0.6.0',
