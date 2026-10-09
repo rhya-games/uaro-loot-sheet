@@ -57,7 +57,14 @@ export default function App() {
           Skip to main content
         </SkipLink>
         <SiteHeader route={route} />
-        <main id="main" tabIndex={-1} className="mx-auto w-full max-w-screen-2xl flex-1 px-4 py-6 focus:outline-none">
+        {/* The loot page lets its table use the whole window from tablet size up; the text pages keep a readable width. */}
+        <main
+          id="main"
+          tabIndex={-1}
+          className={`w-full flex-1 py-6 focus:outline-none ${
+            route === 'loot' ? 'px-4 md:px-0' : 'mx-auto max-w-screen-2xl px-4'
+          }`}
+        >
           <div hidden={route !== 'loot'}>
             <LootPage />
           </div>

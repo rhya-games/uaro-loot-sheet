@@ -1,4 +1,5 @@
 import Badge from './Badge.jsx';
+import { Unknown } from './StatusIcons.jsx';
 import { ACTIONS, FALLBACK_ACTION, categoryChip } from '../utils/labels.js';
 
 /**
@@ -7,7 +8,7 @@ import { ACTIONS, FALLBACK_ACTION, categoryChip } from '../utils/labels.js';
  * focusable, so they don't get tooltips).
  */
 export function ActionBadges({ actions }) {
-  if (actions.length === 0) return '—'; // Same blank marker as the price columns.
+  if (actions.length === 0) return <Unknown />; // Same "not checked yet" marker as the price columns.
   return actions.map((action) => <ActionBadge key={action} action={action} />);
 }
 

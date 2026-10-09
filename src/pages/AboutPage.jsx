@@ -52,7 +52,7 @@ export default function AboutPage() {
             <strong>Item Type</strong>: {ALL_ITEM_TYPES.join(', ')}.
           </li>
           <li>
-            <strong>Used For</strong>: how many you need and for what. Click one to see every item it needs.
+            <strong>Used For</strong>: how many you need and for what. Click one to see every item it needs. <strong>None</strong> means nothing uses it.
           </li>
           <li>
             <strong>Vend</strong>: average price players sell it for in vending shops.
@@ -62,8 +62,9 @@ export default function AboutPage() {
           </li>
           <li>
             In Vend and Whobuy, <strong>✕</strong> means it can't be sold that way: NPCs sell it, it can't be
-            traded, or it's a card or equipment (@whobuy doesn't buy those). <strong>None</strong> means someone
-            checked and nobody was selling or buying. <strong>—</strong> means nobody has checked yet.
+            traded, or it's a card or equipment (@whobuy doesn't buy those). <strong>No sellers</strong> or{' '}
+            <strong>No buyers</strong> means someone checked in game and nobody was selling or buying.{' '}
+            <strong>?</strong> means nobody has checked yet.
           </li>
           <li>
             <strong>NPC</strong>: zeny an NPC pays for one with Overcharge level {OVERCHARGE_LEVEL} (+

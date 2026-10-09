@@ -153,6 +153,14 @@
 }
 
 /*
+ * "None" and the "?" icon: quieter than muted text, so they don't look like
+ * a note or a hint (see the note about opacity above).
+ */
+@utility empty-value {
+  @apply text-muted opacity-60;
+}
+
+/*
  * The 2px gap between a focused element and its ring is filled with the
  * background (--focus-gap), so the ring reads as a clean band instead of
  * showing whatever is behind the gap. Outside any layer so it beats shadow

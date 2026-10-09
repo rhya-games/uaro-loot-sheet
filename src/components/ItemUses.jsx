@@ -34,7 +34,8 @@ const MAX_USES_SHOWN = 6;
  *   highlight   - { targets: ["Love Guard [1]"], matchesSearch: (text) => bool | null } (optional)
  */
 export default function ItemUses({ item, onSelectUse, highlight = NO_HIGHLIGHT }) {
-  if (item.uses.length === 0 && !item.notes) return null;
+  // "None" (like the price columns) so an empty cell isn't mistaken for "not checked yet".
+  if (item.uses.length === 0 && !item.notes) return <span className="empty-value">None</span>;
   const isMatch = highlightedUseTest(item, highlight);
   const uses = [...item.uses].sort((a, b) => isMatch(b) - isMatch(a) || a.for.localeCompare(b.for));
   const shown = uses.slice(0, MAX_USES_SHOWN);

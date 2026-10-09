@@ -86,14 +86,14 @@ const COLUMNS = [
   {
     label: 'Vend',
     sortKey: 'avgVend',
-    title: 'Average price in player vending shops\n✕ can’t be vended · None: nobody was selling · —: not checked yet',
+    title: 'Average price in player vending shops\n✕ can’t be vended · No sellers: checked, nobody was selling · ?: not checked yet',
     numeric: true,
     render: (item) => <PriceCell item={item} field="avgVend" />,
   },
   {
     label: 'Whobuy',
     sortKey: 'avgWhobuy',
-    title: 'Average price players pay through @whobuy\n✕ can’t be sold this way · None: nobody was buying · —: not checked yet',
+    title: 'Average price players pay through @whobuy\n✕ can’t be sold this way · No buyers: checked, nobody was buying · ?: not checked yet',
     numeric: true,
     render: (item) => <PriceCell item={item} field="avgWhobuy" />,
   },
@@ -216,7 +216,7 @@ export default function ItemTable({ items, sort, onSort, onSelectUse, highlightU
  */
 const ItemRow = memo(function ItemRow({ item, onSelectUse, highlightUses }) {
   return (
-    <tr className="group even:bg-subtle hover:bg-accent-soft">
+    <tr className="group hover:bg-accent-soft">
       {COLUMNS.map((column) => (
         <td
           key={column.label}
