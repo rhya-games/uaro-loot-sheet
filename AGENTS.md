@@ -40,6 +40,7 @@ npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
 npm run sync:targets   # item IDs of "Used For" targets (admin Targets page)
+npm run sync:icons     # copy item icons (24x24 GIFs) from game-data-tools into public/items/
 npm run scan:quests    # items the emulators' quest scripts take or check for
 npm run check:uses -- recipes.json   # compare recipes (e.g. a wiki table) with "Used For"
 npm run suggest [-- "name"]          # compare suggested actions (src/utils/suggest.js) with hand-set ones
@@ -125,6 +126,9 @@ Match similar existing items. Look them up in loot.json first.
 - Headgear quest materials (Dimonka): category `Server Hat Quest` + `uaRO`.
 - After adding items: run `sync:prices`, `sync:shops`, then `validate`.
   After adding uses, run `sync:targets` so new targets get item IDs.
+  After adding items, run `sync:icons` too (build missing icons in
+  game-data-tools first; `fetch_item_icons.py --ids FILE` downloads them).
+  Cards all share `card.gif`.
 - If the CSV import should produce the same result, mirror renames, IDs
   and removals in `scripts/source/sheet-corrections.mjs`.
 

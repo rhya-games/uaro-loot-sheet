@@ -47,6 +47,12 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '0.7.0',
+    date: '2026-10-09',
+    title: 'Item icons',
+    changes: [{ type: 'Added', text: 'Every item now shows its in-game icon next to its name.' }],
+  },
+  {
     version: '0.6.0',
     date: '2026-10-08',
     title: 'Actions now follow the prices',
