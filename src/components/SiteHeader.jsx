@@ -20,9 +20,10 @@ const NAV_LINKS = [
  * link and the light/dark toggle on the right.
  *
  * Props:
- *   route - the current page name, used to highlight its link
+ *   route      - the current page name, used to highlight its link
+ *   onOpenHelp - called by the "How to use" button
  */
-export default function SiteHeader({ route }) {
+export default function SiteHeader({ route, onOpenHelp }) {
   return (
     // Focus rings here are white, with a green gap (see --focus-gap in index.css).
     <header className="bg-header text-white [--focus-gap:var(--header)]">
@@ -59,6 +60,15 @@ export default function SiteHeader({ route }) {
                   </li>
                 );
               })}
+              <li>
+                <button
+                  type="button"
+                  onClick={onOpenHelp}
+                  className="block rounded-lg px-3 py-2 text-sm font-medium whitespace-nowrap text-emerald-50 hover:bg-white/10 focus-visible:outline-white"
+                >
+                  How to use
+                </button>
+              </li>
             </ul>
           </nav>
           <GitHubLink />
