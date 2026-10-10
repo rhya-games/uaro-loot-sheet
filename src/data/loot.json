@@ -1569,8 +1569,8 @@
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-09-26",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "apple-pudding",
@@ -2034,8 +2034,8 @@
     "itemId": 7119,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
-      "Vend"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Repeatable Quest",
@@ -2056,13 +2056,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": 780,
+    "avgVend": 100,
     "avgWhobuy": 580,
     "sellValue": 512,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-09-26",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "backpack",
@@ -2641,6 +2641,7 @@
     "itemId": 5172,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
@@ -2654,13 +2655,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": 50000,
+    "avgVend": 30000,
     "avgWhobuy": null,
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-09-26",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "berserk-guitar-0",
