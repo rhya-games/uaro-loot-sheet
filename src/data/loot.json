@@ -1766,8 +1766,8 @@
     "itemId": 7119,
     "itemType": "Misc",
     "actions": [
-      "Whobuy",
-      "Vend"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Repeatable Quest",
@@ -2285,6 +2285,7 @@
     "itemId": 5172,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
