@@ -46,6 +46,8 @@ const ITEM_IDS = {
   'Antique Smoking Pipe': 5377,
   'Bunny Ears Hat': 5378, // the emulators call it Bunny Top Hat
   'Tropical Fruit Hat': 5307, // Carmen Miranda's Hat in the emulators
+  'King Frog Hat [1]': 5528, // the emulators call it Frog King Hat
+  'Expanded Class Weapon Token': 35660, // a uaRO item, from the maintainer; not a loot sheet item
 };
 
 const items = JSON.parse(readFileSync(LOOT_FILE, 'utf8'));
