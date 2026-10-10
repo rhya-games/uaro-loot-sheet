@@ -20,6 +20,30 @@ example:
 Then read the rows of the table you need (`cell.innerText` splits the
 materials onto separate lines, like `Poring Coin - 1500`).
 
+From a tab already on wiki.uaro.net you can read every other page without
+navigating: `fetch('/Pet_System/')`, then `new DOMParser().parseFromString(
+await response.text(), 'text/html')`. Use `textContent` there, not
+`innerText` (a parsed document has no layout, so `innerText` is empty).
+
+### Which page feeds what (last compared 2026-09-26)
+
+| Page | Feeds | Result |
+| --- | --- | --- |
+| Dimonka_Headgear_Quest | headgear "Used For" (41 recipes) | matches |
+| Pet_System | pet evolutions (43), taming items, accessories | matches |
+| Repeatable_Quests | turn-in items (15 NPCs) | matches |
+| Modified_Sales_Prices | `modifiedSellPrices` (10 items) | matches |
+| Dealers | `npcShops.uaroShops` (Tool, Ninja, Gunslinger) | matches, except the wiki's own typos |
+| El_Dicastes | daily/quest uses, Scaraba drops | Frede's Request and the Cat Hand contract added |
+| Expanded-Class-Weapons | Expanded Token Fragment | no use recorded yet (1000 for a weapon token) |
+| Class_Changes | skill changes; Bag of Gold Coins (#670) | Bag not in the sheet |
+| Card_Exchange, Poring_Coins_System, Horror_Toy_Factory, Item_Changes | shops and gear | mostly bound or gear: left out on purpose |
+
+Items the maintainer says are untradeable or account bound (the Poring Coin
+shop, Sapha Certificates, bound gear) stay out of the sheet, and gear is
+left out for now. Wiki typos and name differences (Cotton Tufts, Meteo
+Plate Armor, ...) are listed in `scripts/source/name-aliases.mjs`.
+
 ## 2. Save it as recipes and compare
 
 Write the table to a JSON file in the scratchpad (not the repo):
@@ -74,8 +98,10 @@ npm run check:uses -- <scratchpad>/recipes.json   # should be 0 differences
 
 ## 4. Finish
 
-- Add a line to today's card in `src/data/changelog.js` (one card per day;
-  a new day needs the next version, also in `package.json`).
+- Add a short line to today's card in `src/data/changelog.js` ("Pet
+  evolution materials now match the wiki"), not one per fix; the fixes go
+  in the PR description. One card per day; a new day needs the next
+  version, also in `package.json`.
 - Commit with a message that lists the kinds of fixes.
 - Report to the maintainer: the fixes (a small table for quantities), new
   items, and anything that needs a decision. Examples: the wiki and the
