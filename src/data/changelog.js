@@ -47,6 +47,15 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '0.8.0',
+    date: '2026-10-10',
+    title: 'A short guide for new visitors',
+    changes: [
+      { type: 'Added', text: 'A welcome box shows how to use the sheet on your first visit. Open it again with “How to use” in the header.' },
+      { type: 'Changed', text: 'The About page is easier to scan, with short steps and a list of what each mark means.' },
+    ],
+  },
+  {
     version: '0.7.0',
     date: '2026-10-09',
     title: 'Item icons, and clearer empty values',

@@ -86,14 +86,14 @@ const COLUMNS = [
   {
     label: 'Vend',
     sortKey: 'avgVend',
-    title: 'Average price in player vending shops\n✕ can’t be vended · No sellers: checked, nobody was selling · ?: not checked yet',
+    title: 'Average price in player vending shops\n✕ can’t be vended · No sellers: none when checked in game · ?: not verified yet',
     numeric: true,
     render: (item) => <PriceCell item={item} field="avgVend" />,
   },
   {
     label: 'Whobuy',
     sortKey: 'avgWhobuy',
-    title: 'Average price players pay through @whobuy\n✕ can’t be sold this way · No buyers: checked, nobody was buying · ?: not checked yet',
+    title: 'Average price players pay through @whobuy\n✕ can’t be sold this way · No buyers: none when checked in game · ?: not verified yet',
     numeric: true,
     render: (item) => <PriceCell item={item} field="avgWhobuy" />,
   },

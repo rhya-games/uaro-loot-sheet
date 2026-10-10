@@ -32,7 +32,7 @@ export function Section({ title, children }) {
 
 /** A heading inside a Section. */
 export function SubHeading({ children }) {
-  return <h3 className="pt-2 text-lg font-semibold text-fg">{children}</h3>;
+  return <h3 className="pt-4 text-lg font-semibold text-fg">{children}</h3>;
 }
 
 /** A bulleted list with consistent spacing. */

@@ -39,9 +39,18 @@ export function Unknown() {
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="size-5" aria-hidden="true">
         <path transform="translate(12 12) scale(1.45) translate(-12 -12)" vectorEffect="non-scaling-stroke" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M12 17.25h.008v.008H12v-.008Z" />
       </svg>
-      <span className="sr-only">Not checked yet</span>
+      <span className="sr-only">Not verified yet</span>
     </span>
   );
+}
+
+/**
+ * A mark at full strength in the main text color, for legends and guides.
+ * In the table the marks are faded on purpose; the important modifiers
+ * (the trailing "!") beat that styling for everything inside.
+ */
+export function Mark({ children }) {
+  return <span className="inline-flex text-fg [&_*]:text-fg! [&_*]:opacity-100!">{children}</span>;
 }
 
 /** "Can you buy this from an NPC?": ✓ (yes, or NPC only), ✕, or "?" (unknown). */

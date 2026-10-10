@@ -1,13 +1,16 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import SkipLink from './components/SkipLink.jsx';
 import BackToTop from './components/BackToTop.jsx';
 import SiteFooter from './components/SiteFooter.jsx';
 import SiteHeader from './components/SiteHeader.jsx';
+import WelcomeDialog from './components/WelcomeDialog.jsx';
 import LootPage from './pages/LootPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import FeedbackPage from './pages/FeedbackPage.jsx';
 import ChangelogPage from './pages/ChangelogPage.jsx';
 import { useRoute } from './utils/route.js';
+import { readPreference, writePreference } from './utils/preferences.js';
+import { track } from './utils/analytics.js';
 import { trackPage } from './utils/analytics.js';
 import { AdminProvider } from './admin/AdminContext.jsx';
 import { ADMIN_AVAILABLE } from './admin/useAdmin.js';
@@ -42,6 +45,18 @@ export default function App() {
   const route = useRoute();
   const page = PAGES[route];
 
+  // The welcome box opens by itself on a first visit to the loot page, and
+  // from the header's "How to use" button after that.
+  const [welcomeOpen, setWelcomeOpen] = useState(() => route === 'loot' && !readPreference('welcomeSeen', false));
+  const closeWelcome = useCallback(() => {
+    writePreference('welcomeSeen', true);
+    setWelcomeOpen(false);
+  }, []);
+  const openWelcome = useCallback(() => {
+    track('welcome', { from: 'button' });
+    setWelcomeOpen(true);
+  }, []);
+
   useEffect(() => {
     document.title = page ? `${page.title} · uaRO Loot Sheet` : 'uaRO Loot Sheet';
   }, [page]);
@@ -56,7 +71,7 @@ export default function App() {
         <SkipLink targetId="main" className="focus:fixed focus:top-4 focus:left-4 focus:z-50">
           Skip to main content
         </SkipLink>
-        <SiteHeader route={route} />
+        <SiteHeader route={route} onOpenHelp={openWelcome} />
         {/* The loot page lets its table use the whole window from tablet size up; the text pages keep a readable width. */}
         <main
           id="main"
@@ -71,6 +86,7 @@ export default function App() {
           {page && <page.Component />}
         </main>
         <SiteFooter />
+        <WelcomeDialog open={welcomeOpen} onClose={closeWelcome} />
         <BackToTop />
       </div>
     </AdminProvider>
