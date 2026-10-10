@@ -1719,6 +1719,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "awakening-potion",
+    "name": "Awakening Potion",
+    "itemId": 656,
+    "sellValue": 750,
+    "sellSource": "hercules",
+    "itemType": "Consumable",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "npcBuyable": "yes"
+  },
+  {
     "id": "awfully-bitter-bracer",
     "name": "Awfully Bitter Bracer",
     "itemId": 12081,
@@ -2399,17 +2417,24 @@
     "itemId": 925,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
       "Repeatable Quest",
-      "uaRO"
+      "uaRO",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Gregor Repeatable Quest",
         "qty": 25,
         "note": "each turn-in"
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 50,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
@@ -4768,12 +4793,20 @@
     "itemId": 965,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Dungeon Quest"
+      "Dungeon Quest",
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 50,
+        "note": "one of its possible requests"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 28,
@@ -5459,11 +5492,17 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "uaRO"
     ],
     "uses": [
       {
         "for": "Crown of Mistress",
+        "qty": 1
+      },
+      {
+        "for": "King Frog Hat [1]",
         "qty": 1
       }
     ],
@@ -8072,9 +8111,16 @@
       "Vend"
     ],
     "categories": [
+      "Other Quest",
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Expanded Class Weapon Token",
+        "qty": 1000,
+        "note": "with 10,000,000z"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 0,
@@ -8609,7 +8655,8 @@
       "Pet",
       "uaRO",
       "Official Hat Quest",
-      "Cooking"
+      "Cooking",
+      "Other Quest"
     ],
     "uses": [
       {
@@ -8624,6 +8671,11 @@
         "for": "Sumptuous Feast",
         "qty": 10,
         "note": "+7 VIT food"
+      },
+      {
+        "for": "Cat Hand Contract Quest",
+        "qty": 20,
+        "note": "once per account, with 200 Delicious Fish and 550,000z"
       }
     ],
     "notes": "",
@@ -8698,7 +8750,8 @@
     "categories": [
       "Server Hat Quest",
       "uaRO",
-      "Other Quest"
+      "Other Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -8709,9 +8762,14 @@
         "for": "Red Blood",
         "qty": 1,
         "note": "Utan Shaman in Umbala: 1 makes 6-10"
+      },
+      {
+        "for": "Weapon Forging",
+        "qty": 1,
+        "note": "each cast"
       }
     ],
-    "notes": "",
+    "notes": "Adds the Fire element to a forged weapon (one element per weapon)",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -9364,6 +9422,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "frog-hat-0",
+    "name": "Frog Hat [0]",
+    "itemId": 5447,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "frozen-bow-1",
     "name": "Frozen Bow [1]",
     "itemId": 1731,
@@ -9580,9 +9663,15 @@
     "itemType": "Equipment",
     "actions": [],
     "categories": [
-      "No Use"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Nameless Island Quest",
+        "qty": 1,
+        "note": "any mask; not used up"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -10324,6 +10413,10 @@
         "for": "Grand Cross",
         "qty": 20,
         "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -10645,16 +10738,22 @@
       "Whobuy"
     ],
     "categories": [
-      "Other Quest"
+      "Other Quest",
+      "Skills"
     ],
     "uses": [
       {
         "for": "Green Live",
         "qty": 1,
         "note": "Utan Shaman in Umbala: 1 makes 6-10"
+      },
+      {
+        "for": "Weapon Forging",
+        "qty": 1,
+        "note": "each cast"
       }
     ],
-    "notes": "",
+    "notes": "Adds the Earth element to a forged weapon (one element per weapon)",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -10906,6 +11005,24 @@
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "green-potion",
+    "name": "Green Potion",
+    "itemId": 506,
+    "sellValue": 20,
+    "sellSource": "hercules",
+    "itemType": "Consumable",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "npcBuyable": "yes"
   },
   {
     "id": "green-salad",
@@ -15411,7 +15528,8 @@
       "Pet Evolution",
       "Pet",
       "uaRO",
-      "Cooking"
+      "Cooking",
+      "Other Quest"
     ],
     "uses": [
       {
@@ -15467,6 +15585,11 @@
         "for": "Special Meat Stew",
         "qty": 10,
         "note": "+9 AGI food"
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 50,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
@@ -15495,17 +15618,7 @@
         "note": "each cast"
       },
       {
-        "for": "Twilight Alchemy 1",
-        "qty": 200,
-        "note": "each cast"
-      },
-      {
-        "for": "Twilight Alchemy 2",
-        "qty": 200,
-        "note": "each cast"
-      },
-      {
-        "for": "Twilight Alchemy 3",
+        "for": "Twilight Alchemy",
         "qty": 200,
         "note": "each cast"
       }
@@ -16212,12 +16325,18 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Alarm Mask",
         "qty": 1
+      },
+      {
+        "for": "Nameless Island Quest",
+        "qty": 1,
+        "note": "any mask; not used up"
       }
     ],
     "notes": "",
@@ -16236,12 +16355,18 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Tulip Hairpin",
         "qty": 1
+      },
+      {
+        "for": "Nameless Island Quest",
+        "qty": 1,
+        "note": "any mask; not used up"
       }
     ],
     "notes": "",
@@ -16452,7 +16577,8 @@
     "categories": [
       "Server Hat Quest",
       "uaRO",
-      "Other Quest"
+      "Other Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -16463,9 +16589,14 @@
         "for": "Crystal Blue",
         "qty": 1,
         "note": "Utan Shaman in Umbala: 1 makes 6-10"
+      },
+      {
+        "for": "Weapon Forging",
+        "qty": 1,
+        "note": "each cast"
       }
     ],
-    "notes": "",
+    "notes": "Adds the Water element to a forged weapon (one element per weapon)",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -17199,12 +17330,18 @@
       "Keep"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Other Quest"
     ],
     "uses": [
       {
         "for": "Opera Phantom Mask",
         "qty": 1
+      },
+      {
+        "for": "Nameless Island Quest",
+        "qty": 1,
+        "note": "any mask; not used up"
       }
     ],
     "notes": "",
@@ -17860,7 +17997,9 @@
     ],
     "categories": [
       "Official Hat Quest",
-      "Skills"
+      "Skills",
+      "Server Hat Quest",
+      "uaRO"
     ],
     "uses": [
       {
@@ -17871,6 +18010,10 @@
         "for": "Waghnak",
         "qty": 1,
         "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 100
       }
     ],
     "notes": "",
@@ -18668,6 +18811,57 @@
     "npcBuyable": "no"
   },
   {
+    "id": "poisonous-toad-card",
+    "name": "Poisonous Toad Card",
+    "itemId": 4175,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO",
+      "Card"
+    ],
+    "uses": [
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "poisonous-toad-skin",
+    "name": "Poisonous Toad Skin",
+    "itemId": 7155,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 200
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 140,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "pole-axe-1",
     "name": "Pole Axe [1]",
     "itemId": 1417,
@@ -19051,10 +19245,12 @@
     "itemId": 516,
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Cooking"
+      "Cooking",
+      "Other Quest"
     ],
     "uses": [
       {
@@ -19066,6 +19262,11 @@
         "for": "Lutie Lady's Pancake",
         "qty": 10,
         "note": "+5 STR food"
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 50,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",
@@ -20779,7 +20980,8 @@
     "categories": [
       "Server Hat Quest",
       "uaRO",
-      "Other Quest"
+      "Other Quest",
+      "Skills"
     ],
     "uses": [
       {
@@ -20790,9 +20992,14 @@
         "for": "Wind of Verdure",
         "qty": 1,
         "note": "Utan Shaman in Umbala: 1 makes 6-10"
+      },
+      {
+        "for": "Weapon Forging",
+        "qty": 1,
+        "note": "each cast"
       }
     ],
-    "notes": "",
+    "notes": "Adds the Wind element to a forged weapon (one element per weapon)",
     "links": [],
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -22492,9 +22699,15 @@
     "itemType": "Misc",
     "actions": [],
     "categories": [
-      "No Use"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Frede's Request Quest",
+        "qty": 30,
+        "note": "Bouy"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 162,
@@ -24069,7 +24282,9 @@
       "NPC"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "uaRO"
     ],
     "uses": [
       {
@@ -24083,6 +24298,10 @@
       {
         "for": "Blue Fish",
         "qty": 100
+      },
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 200
       }
     ],
     "notes": "",
@@ -24360,7 +24579,7 @@
     "itemId": 578,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
+      "Keep",
       "Whobuy"
     ],
     "categories": [
@@ -26889,11 +27108,20 @@
     "name": "Withered Flower",
     "itemId": 6086,
     "itemType": "Misc",
-    "actions": [],
-    "categories": [
-      "No Use"
+    "actions": [
+      "Keep",
+      "NPC"
     ],
-    "uses": [],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 6,
+        "note": "one of its possible requests"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 445,
@@ -27821,6 +28049,7 @@
     "itemId": 912,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
@@ -27850,6 +28079,11 @@
       {
         "for": "Nameless Island Quest",
         "qty": 2
+      },
+      {
+        "for": "El Dicastes Daily Quest",
+        "qty": 26,
+        "note": "one of its possible requests"
       }
     ],
     "notes": "",

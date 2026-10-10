@@ -80,10 +80,11 @@ to NPCs for 0z makes validate warn; ask whether it really is 0z (add it to
 
 ## 6. Finish
 
-- Add a line to today's changelog card (`src/data/changelog.js`) naming the
-  updated and added items. One card per day: add to it if today has one.
-  Otherwise add a card with the next version and set the same one in
-  `package.json` (validate checks).
+- Add one line to today's changelog card (`src/data/changelog.js`) with a
+  count ("Vend prices updated for 6 items"); name items only if three or
+  fewer and they matter. The full list goes in the PR description. One card
+  per day: add to it if today has one. Otherwise add a card with the next
+  version and set the same one in `package.json` (validate checks).
 - Commit.
 - Report the prices you set, the items you added, and the actions that
   changed.
