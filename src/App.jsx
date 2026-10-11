@@ -77,7 +77,7 @@ export default function App() {
           </div>
           {page && <page.Component />}
         </main>
-        <SiteFooter />
+        <SiteFooter route={route} />
         <WelcomeDialog open={welcomeOpen} onClose={closeWelcome} />
         <BackToTop />
       </div>
