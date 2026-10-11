@@ -47,12 +47,14 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
-    version: '0.8.0',
+    version: '0.9.0',
     date: '2026-10-10',
-    title: 'A short guide for new visitors',
+    title: 'Easier to find your way around the text pages',
     changes: [
       { type: 'Added', text: 'A short welcome box shows how to use the sheet on your first visit. The same steps are on the About page.' },
+      { type: 'Added', text: 'About, Feedback and Changelog have an "On this page" list beside the text. It jumps to a section and shows where you are.' },
       { type: 'Changed', text: 'The About page is easier to scan, with short steps and a list of what each mark means.' },
+      { type: 'Changed', text: 'The Back to top button shows up sooner on those pages.' },
     ],
   },
   {
