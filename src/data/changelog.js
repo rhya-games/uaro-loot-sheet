@@ -49,9 +49,12 @@ export const CHANGELOG = [
   {
     version: '0.10.0',
     date: '2026-10-11',
-    title: 'Search from anywhere',
+    title: 'Search from anywhere, more checked prices',
     changes: [
       { type: 'Added', text: 'Press Ctrl+K (Cmd+K on Mac) or use the new Search button to find an item from any page.' },
+      { type: 'Added', text: 'Vend and @whobuy prices updated for 117 items, all checked in game today. Actions updated for 38 of them to match.' },
+      { type: 'Added', text: 'Links to the sheet now show a preview picture and description when you share them in chat.' },
+      { type: 'Changed', text: 'The page opens faster: the header and search box show while the items load.' },
     ],
   },
   {

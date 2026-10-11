@@ -3,6 +3,7 @@ import { useAdmin } from './useAdmin.js';
 import ZenyInput from './ZenyInput.jsx';
 import CopyItemId from '../components/CopyItemId.jsx';
 import AdminLayout from './AdminLayout.jsx';
+import { targetPriority } from './queues.js';
 import { valueTargets } from '../utils/targets.js';
 import targetIds from '../data/target-ids.json' with { type: 'json' };
 
@@ -13,11 +14,13 @@ import targetIds from '../data/target-ids.json' with { type: 'json' };
  * their parts are worth keeping (see src/utils/suggest.js). Values save to
  * src/data/use-targets.json, and the parts' actions update right away.
  *
- * Targets that decide the most suggestions come first. Quests and skills
+ * Targets come in priority order by quest relevance (see targetPriority in
+ * queues.js: the server's hat quests first, official hat quests last), then
+ * those that decide the most suggestions. Quests and skills
  * aren't listed (see suggest.js), and neither are targets in the sheet
  * (price those on the loot page). 0 means "checked, no shops sell it",
- * and shows as "None". Item IDs (click to copy, for
- * @whobuy and shop searches) come from src/data/target-ids.json
+ * and shows as "None". Item IDs (click to copy as "@ws <id>", for
+ * vend and shop searches) come from src/data/target-ids.json
  * (`npm run sync:targets`); a pet evolution's is the evolved pet's egg.
  *
  * Only exists under `npm run dev`.
@@ -27,7 +30,13 @@ export default function TargetsPage() {
   const [query, setQuery] = useState('');
 
   const rows = useMemo(() => {
-    const byTarget = new Map([...valueTargets(items)].map(([name, target]) => [name, { ...target, decides: 0 }]));
+    const itemsByName = new Map(items.map((item) => [item.name, item]));
+    const byTarget = new Map(
+      [...valueTargets(items)].map(([name, target]) => [
+        name,
+        { ...target, decides: 0, priority: targetPriority(name, target.parts.map((part) => itemsByName.get(part)).filter(Boolean)) },
+      ]),
+    );
     // "Decides": parts whose only reason to keep, for now, is this target
     // having no value. Giving it one settles whether to keep them.
     for (const item of items) {
@@ -35,7 +44,7 @@ export default function TargetsPage() {
       if (open.length === 1 && byTarget.has(open[0].for)) byTarget.get(open[0].for).decides++;
     }
     return [...byTarget.values()].sort(
-      (a, b) => b.decides - a.decides || b.parts.length - a.parts.length || a.name.localeCompare(b.name),
+      (a, b) => a.priority - b.priority || b.decides - a.decides || b.parts.length - a.parts.length || a.name.localeCompare(b.name),
     );
   }, [items, suggest]);
 
@@ -68,7 +77,7 @@ export default function TargetsPage() {
  *
  * Props:
  *   title   - heading, with the count
- *   rows    - [{ name, parts, decides }]
+ *   rows    - [{ name, parts, decides, priority }]
  *   targets - Map of target name -> value
  *   onSave  - (name, value) => Promise
  */
@@ -91,7 +100,7 @@ function TargetTable({ title, rows, targets, onSave }) {
               <td className="px-4 py-2">
                 <p className="font-medium text-fg">{row.name}</p>
                 <p className="text-xs text-muted">
-                  {targetIds.ids[row.name] ? <CopyItemId itemId={targetIds.ids[row.name]} /> : 'No item ID'}
+                  {targetIds.ids[row.name] ? <CopyItemId itemId={targetIds.ids[row.name]} command="@ws" /> : 'No item ID'}
                   {' · '}
                   {row.parts.length > 4 ? `${row.parts.slice(0, 4).join(', ')} and ${row.parts.length - 4} more` : row.parts.join(', ')}
                 </p>
