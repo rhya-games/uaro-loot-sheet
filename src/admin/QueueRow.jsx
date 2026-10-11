@@ -1,4 +1,9 @@
+import { useState } from 'react';
+import { XCircleIcon } from '@heroicons/react/24/outline';
 import { PriceInput } from './PriceCell.jsx';
+import { useAdmin } from './useAdmin.js';
+import { priceChanges } from './verify.js';
+import Tooltip from '../components/Tooltip.jsx';
 import CopyItemId from '../components/CopyItemId.jsx';
 import { PlayerPrice } from '../components/StatusIcons.jsx';
 import { formatZeny } from '../utils/format.js';
@@ -87,7 +92,15 @@ function PriceCell({ item, field, label, command, editable, verify }) {
     <div className="flex items-start justify-between gap-2 md:justify-end">
       <span className="text-xs text-muted md:hidden">{label}</span>
       <div className="flex flex-col items-end gap-1">
-        {editable ? <PriceInput item={item} field={field} advance verify={verify} /> : <PlayerPrice item={item} field={field} />}
+        {editable ? (
+          <div className="flex items-start gap-1">
+            {/* Whobuy only: most items nobody is buying, so it's one click instead of typing 0. */}
+            {field === 'avgWhobuy' && <NoneButton item={item} field={field} verify={verify} />}
+            <PriceInput item={item} field={field} advance verify={verify} />
+          </div>
+        ) : (
+          <PlayerPrice item={item} field={field} />
+        )}
         {canHavePrice(item, field) && (
           <span className="text-xs text-muted">
             <CopyItemId itemId={item.itemId} command={command} />
@@ -95,6 +108,39 @@ function PriceCell({ item, field, label, command, editable, verify }) {
         )}
       </div>
     </div>
+  );
+}
+
+/**
+ * Saves the price as 0, which the sheet shows as "None" (checked, and nobody
+ * is buying). Not part of the Enter-key order: the box and Done are.
+ */
+function NoneButton({ item, field, verify }) {
+  const { saveItem } = useAdmin();
+  const [saving, setSaving] = useState(false);
+  const isNone = item[field] === 0;
+
+  async function markNone() {
+    setSaving(true);
+    try {
+      await saveItem(item.id, verify ? priceChanges(item, { [field]: 0 }) : { [field]: 0 });
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <Tooltip text={isNone ? 'Already None' : 'Mark as None: nobody is buying'}>
+      <button
+        type="button"
+        onClick={markNone}
+        disabled={saving || isNone}
+        aria-label={`Mark whobuy price for ${item.name} as None`}
+        className="mt-px rounded-md p-1 text-muted hover:text-fg disabled:opacity-40"
+      >
+        <XCircleIcon className="size-5" aria-hidden="true" />
+      </button>
+    </Tooltip>
   );
 }
 
