@@ -58,10 +58,11 @@ export function QueueHeader({ action }) {
  *   onEnter - the cursor came into a box in the row
  *   onLeave - the cursor left the row (not just moved to another box in it)
  *   action  - a button for the last column (optional)
+ *   detail  - more under the item's uses, such as why it is listed (optional)
  *   verifyOnSave - whether saving a price also marks the item verified today
  *             (default). Verify prices turns it off: its Confirm button does that.
  */
-export default function QueueRow({ item, fields, onEnter, onLeave, action, verifyOnSave = true }) {
+export default function QueueRow({ item, fields, onEnter, onLeave, action, detail, verifyOnSave = true }) {
   return (
     <li
       // Only boxes count: clicking the row's button shouldn't keep the row on screen.
@@ -77,6 +78,7 @@ export default function QueueRow({ item, fields, onEnter, onLeave, action, verif
           <CopyItemId itemId={item.itemId} /> · {item.itemType} · NPC {formatZeny(npcSellPrice(item))}
         </p>
         <p className="text-xs text-muted">{usesText(item)}</p>
+        {detail}
       </div>
       <PriceCell item={item} field="avgVend" label="Vend" command="@ws" editable={fields.includes('avgVend')} verify={verifyOnSave} />
       <PriceCell item={item} field="avgWhobuy" label="Whobuy" command="@wb" editable={fields.includes('avgWhobuy')} verify={verifyOnSave} />
@@ -92,9 +94,11 @@ export default function QueueRow({ item, fields, onEnter, onLeave, action, verif
  */
 function PriceCell({ item, field, label, command, editable, verify }) {
   return (
-    <div className="flex items-start justify-between gap-2 md:justify-start">
+    // On phones the label sits above its box: side by side, the box, the None
+    // button and the label don't fit in half the row.
+    <div className="flex flex-col items-start gap-1">
       <span className="text-xs text-muted md:hidden">{label}</span>
-      <div className="flex flex-col items-end gap-1 md:items-start">
+      <div className="flex flex-col items-start gap-1">
         {editable ? (
           <div className="flex items-start gap-1">
             <PriceInput item={item} field={field} advance verify={verify} />

@@ -21,6 +21,8 @@ import NeedsPricePage from './admin/NeedsPricePage.jsx';
 import PastePricesPage from './admin/PastePricesPage.jsx';
 import SuggestionsPage from './admin/SuggestionsPage.jsx';
 import VerifyPricesPage from './admin/VerifyPricesPage.jsx';
+import SuspiciousValuesPage from './admin/SuspiciousValuesPage.jsx';
+import MissingUsesPage from './admin/MissingUsesPage.jsx';
 import TargetsPage from './admin/TargetsPage.jsx';
 
 /** Every page except the loot page: route name -> title and component. */
@@ -35,6 +37,8 @@ const PAGES = {
     adminPaste: { title: 'Paste prices', Component: PastePricesPage },
     adminSuggestions: { title: 'Suggestion differs', Component: SuggestionsPage },
     adminVerify: { title: 'Verify prices', Component: VerifyPricesPage },
+    adminSuspicious: { title: 'Suspicious values', Component: SuspiciousValuesPage },
+    adminMissingUses: { title: 'Missing uses', Component: MissingUsesPage },
     targets: { title: 'Target values', Component: TargetsPage },
   }),
 };
