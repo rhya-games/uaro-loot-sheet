@@ -3,6 +3,7 @@ import SkipLink from './components/SkipLink.jsx';
 import BackToTop from './components/BackToTop.jsx';
 import SiteFooter from './components/SiteFooter.jsx';
 import SiteHeader from './components/SiteHeader.jsx';
+import SearchPalette from './components/SearchPalette.jsx';
 import WelcomeDialog from './components/WelcomeDialog.jsx';
 import LootPage from './pages/LootPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
@@ -11,8 +12,9 @@ import ChangelogPage from './pages/ChangelogPage.jsx';
 import { useRoute } from './utils/route.js';
 import { readPreference, writePreference } from './utils/preferences.js';
 import { trackPage } from './utils/analytics.js';
+import { isPaletteShortcut } from './utils/shortcut.js';
 import { AdminProvider } from './admin/AdminContext.jsx';
-import { ADMIN_AVAILABLE } from './admin/useAdmin.js';
+import { ADMIN_AVAILABLE, useAdmin } from './admin/useAdmin.js';
 import AdminOverviewPage from './admin/AdminOverviewPage.jsx';
 import NeedsPricePage from './admin/NeedsPricePage.jsx';
 import PastePricesPage from './admin/PastePricesPage.jsx';
@@ -35,6 +37,12 @@ const PAGES = {
   }),
 };
 
+/** The search popover with the items the site shows (admin mode's edited ones, under `npm run dev`). */
+function AppSearch({ open, onClose }) {
+  const { items, status } = useAdmin();
+  return <SearchPalette open={open} onClose={onClose} items={items} status={status} />;
+}
+
 /**
  * The page frame: skip link, header, and the current page.
  * The loot page stays mounted (just hidden) while another page is open, so
@@ -51,6 +59,20 @@ export default function App() {
     setWelcomeOpen(false);
   }, []);
 
+  // Cmd/Ctrl+K opens the search popover from any page (not over the welcome box).
+  const [searchOpen, setSearchOpen] = useState(false);
+  const openSearch = useCallback(() => setSearchOpen(true), []);
+  const closeSearch = useCallback(() => setSearchOpen(false), []);
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (!isPaletteShortcut(event)) return;
+      event.preventDefault(); // Browsers use Ctrl+K for their own search.
+      if (!welcomeOpen) setSearchOpen((open) => !open);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [welcomeOpen]);
+
   useEffect(() => {
     document.title = page ? `${page.title} · uaRO Loot Sheet` : 'uaRO Loot Sheet';
   }, [page]);
@@ -65,7 +87,7 @@ export default function App() {
         <SkipLink targetId="main" className="focus:fixed focus:top-4 focus:left-4 focus:z-50">
           Skip to main content
         </SkipLink>
-        <SiteHeader route={route} />
+        <SiteHeader route={route} onOpenSearch={openSearch} />
         {/* The loot page lets its table use the whole window width; the text pages keep a readable width. */}
         <main
           id="main"
@@ -79,6 +101,7 @@ export default function App() {
         </main>
         <SiteFooter route={route} />
         <WelcomeDialog open={welcomeOpen} onClose={closeWelcome} />
+        <AppSearch open={searchOpen} onClose={closeSearch} />
         <BackToTop textPage={route !== 'loot'} raised={route === 'loot'} />
       </div>
     </AdminProvider>
