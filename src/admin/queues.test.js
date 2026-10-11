@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createSuggester } from '../utils/suggest.js';
-import { QUEUES, canHavePrice, isReviewed, pricePriority, queueCounts, targetsNeedingValue } from './queues.js';
+import { QUEUES, canHavePrice, isReviewed, pricePriority, targetPriority, queueCounts, targetsNeedingValue } from './queues.js';
 
 /** A made-up item; itemId 1 isn't in any uaRO override list. */
 const item = (fields) => ({
@@ -103,6 +103,33 @@ describe('needs-price, priority by quest relevance', () => {
   it('puts items with no categories in the default tier', () => {
     expect(pricePriority(item({ categories: [] }))).toBe(2);
     expect(pricePriority(item({ categories: ['No Use'] }))).toBe(3);
+  });
+});
+
+describe('targetPriority', () => {
+  const part = (...categories) => item({ categories });
+
+  it('treats "<pet> Pet Evolution" as a pet evolution whatever its parts are', () => {
+    expect(targetPriority('Smokie Pet Evolution', [part('Server Hat Quest')])).toBe(1);
+  });
+
+  it('goes by the most common quest category among the parts, not the best one', () => {
+    // A weapon quest whose parts are mostly Other Quest, with one also used for a server hat.
+    const weapon = [part('Other Quest'), part('Other Quest'), part('Other Quest', 'Server Hat Quest')];
+    expect(targetPriority('Great Axe', weapon)).toBe(1);
+    expect(targetPriority('Beer Hat', [part('Server Hat Quest'), part('Server Hat Quest', 'Pet Evolution')])).toBe(0);
+  });
+
+  it('breaks a tie toward the better tier, and ignores parts with no quest category', () => {
+    expect(targetPriority('Hat', [part('Server Hat Quest'), part('Official Hat Quest'), part('Cooking')])).toBe(0);
+    expect(targetPriority('Food', [part('Cooking'), part('Official Hat Quest', 'Cooking')])).toBe(3);
+  });
+
+  it('skips parts that could belong to either hat quest, then falls back to the default', () => {
+    const both = part('Server Hat Quest', 'Official Hat Quest');
+    expect(targetPriority('Hat', [both, part('Official Hat Quest')])).toBe(3);
+    expect(targetPriority('Hat', [both])).toBe(2);
+    expect(targetPriority('Hat', [])).toBe(2);
   });
 });
 
