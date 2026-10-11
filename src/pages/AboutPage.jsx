@@ -103,7 +103,7 @@ export default function AboutPage() {
 
       <Section title="Where the data comes from">
         <BulletList>
-          <li>Rhya's original loot sheet and in-game checks by players.</li>
+          <li>Rhya's original loot sheet and her in-game checks.</li>
           <li>
             Item IDs, types, NPC prices and shops: the{' '}
             <ExternalLink href="https://github.com/HerculesWS/Hercules">Hercules emulator</ExternalLink>, which has

@@ -20,14 +20,13 @@ const NAV_LINKS = [
  * link and the light/dark toggle on the right.
  *
  * Props:
- *   route      - the current page name, used to highlight its link
- *   onOpenHelp - called by the "How to use" button
+ *   route - the current page name, used to highlight its link
  */
-export default function SiteHeader({ route, onOpenHelp }) {
+export default function SiteHeader({ route }) {
   return (
     // Focus rings here are white, with a green gap (see --focus-gap in index.css).
     <header className="bg-header text-white [--focus-gap:var(--header)]">
-      <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-4 px-4 py-5">
+      <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-4 px-6 py-5">
         <div className="flex items-center gap-3">
           {/* Decorative: the site's loot bag, like the browser tab icon. */}
           <LootBagIcon className="size-12 shrink-0 text-white" />
@@ -60,15 +59,6 @@ export default function SiteHeader({ route, onOpenHelp }) {
                   </li>
                 );
               })}
-              <li>
-                <button
-                  type="button"
-                  onClick={onOpenHelp}
-                  className="block rounded-lg px-3 py-2 text-sm font-medium whitespace-nowrap text-emerald-50 hover:bg-white/10 focus-visible:outline-white"
-                >
-                  How to use
-                </button>
-              </li>
             </ul>
           </nav>
           <GitHubLink />

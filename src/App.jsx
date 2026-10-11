@@ -10,7 +10,6 @@ import FeedbackPage from './pages/FeedbackPage.jsx';
 import ChangelogPage from './pages/ChangelogPage.jsx';
 import { useRoute } from './utils/route.js';
 import { readPreference, writePreference } from './utils/preferences.js';
-import { track } from './utils/analytics.js';
 import { trackPage } from './utils/analytics.js';
 import { AdminProvider } from './admin/AdminContext.jsx';
 import { ADMIN_AVAILABLE } from './admin/useAdmin.js';
@@ -45,16 +44,11 @@ export default function App() {
   const route = useRoute();
   const page = PAGES[route];
 
-  // The welcome box opens by itself on a first visit to the loot page, and
-  // from the header's "How to use" button after that.
+  // The welcome box opens by itself, once, on a first visit to the loot page.
   const [welcomeOpen, setWelcomeOpen] = useState(() => route === 'loot' && !readPreference('welcomeSeen', false));
   const closeWelcome = useCallback(() => {
     writePreference('welcomeSeen', true);
     setWelcomeOpen(false);
-  }, []);
-  const openWelcome = useCallback(() => {
-    track('welcome', { from: 'button' });
-    setWelcomeOpen(true);
   }, []);
 
   useEffect(() => {
@@ -71,14 +65,12 @@ export default function App() {
         <SkipLink targetId="main" className="focus:fixed focus:top-4 focus:left-4 focus:z-50">
           Skip to main content
         </SkipLink>
-        <SiteHeader route={route} onOpenHelp={openWelcome} />
-        {/* The loot page lets its table use the whole window from tablet size up; the text pages keep a readable width. */}
+        <SiteHeader route={route} />
+        {/* The loot page lets its table use the whole window width; the text pages keep a readable width. */}
         <main
           id="main"
           tabIndex={-1}
-          className={`w-full flex-1 py-6 focus:outline-none ${
-            route === 'loot' ? 'px-4 md:px-0' : 'mx-auto max-w-screen-2xl px-4'
-          }`}
+          className={`w-full flex-1 px-6 py-6 focus:outline-none ${route === 'loot' ? '' : 'mx-auto max-w-screen-2xl'}`}
         >
           <div hidden={route !== 'loot'}>
             <LootPage />

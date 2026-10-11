@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
+import SkipLink from './SkipLink.jsx';
 
 /**
  * A titled, collapsible list of checkboxes with a count next to each option.
@@ -17,6 +18,9 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline';
  *   onSetAll    - optional: adds a "Select all" checkbox. Called with the new
  *                 list of checked options (all of them, or none).
  *   selectAllLabel - text for that checkbox, e.g. "Select all categories"
+ *   skipTo      - optional: id of an element to jump to. Adds a "Skip to results"
+ *                 link after the heading that only shows on keyboard focus, so
+ *                 a long list can be bypassed.
  */
 export default function CheckboxGroup({
   title,
@@ -28,6 +32,7 @@ export default function CheckboxGroup({
   searchable = false,
   onSetAll,
   selectAllLabel = 'Select all',
+  skipTo,
 }) {
   const [filterText, setFilterText] = useState('');
 
@@ -43,7 +48,7 @@ export default function CheckboxGroup({
   }
 
   return (
-    <details open className="group border-b border-line py-2">
+    <details open className="group relative border-b border-line py-2">
       <summary
         className="-mx-2 flex cursor-pointer list-none items-center justify-between rounded-md px-2 py-1 text-sm
           font-semibold text-fg hover:bg-hover"
@@ -54,6 +59,13 @@ export default function CheckboxGroup({
         )}
         <ChevronRightIcon className="size-5 text-muted transition-transform group-open:rotate-90" aria-hidden="true" />
       </summary>
+
+      {/* The skip link floats over the search box while focused, so nothing moves. */}
+      {skipTo && (
+        <SkipLink targetId={skipTo} className="focus:absolute focus:top-10 focus:left-0 focus:z-20">
+          Skip to results
+        </SkipLink>
+      )}
 
       {searchable && (
         <input
