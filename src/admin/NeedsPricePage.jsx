@@ -14,7 +14,7 @@ const fieldsToFill = (item) => PRICE_FIELDS.filter((field) => needsField(item, f
 
 /**
  * Admin mode's "Needs a price" queue: items with a Vend or Whobuy
- * action and no price yet (see queues.js). Type a price and press Enter: it
+ * action, or no action yet, and no price (see queues.js). Type a price and press Enter: it
  * saves, marks the item verified today, updates its suggested actions, and
  * the cursor moves to the next box. Press Enter on an empty box to skip it.
  * A row leaves the list once it has all its prices. Type 0 for "checked, and
@@ -40,7 +40,7 @@ export default function NeedsPricePage() {
   return (
     <AdminLayout
       title="Needs a price"
-      intro="Items set to Vend or Whobuy that have no price yet. Type a price and press Enter to save it and move to the next box. Type 0 if nobody is buying."
+      intro="Items set to Vend or Whobuy, or with no action yet, that have no price yet. Type a price and press Enter to save it and move to the next box. Type 0 if nobody is buying."
     >
       <QueueSearch
         value={query}
@@ -54,7 +54,7 @@ export default function NeedsPricePage() {
           {matching.length === rows.length ? `${rows.length} items` : `${matching.length} of ${rows.length} items`}
         </h2>
         {shown.length === 0 ? (
-          <p className="px-4 py-6 text-sm text-muted">{rows.length ? 'No items match.' : 'Every item set to Vend or Whobuy has a price.'}</p>
+          <p className="px-4 py-6 text-sm text-muted">{rows.length ? 'No items match.' : 'Every item that needs a price has one.'}</p>
         ) : (
           <>
             <QueueHeader />

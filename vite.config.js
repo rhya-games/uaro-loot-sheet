@@ -10,8 +10,9 @@ export default defineConfig({
   // GitHub Pages serves the site from https://<user>.github.io/uaro-loot-sheet/
   base: '/uaro-loot-sheet/',
   build: {
-    // Most of the bundle is the item data (loot.json). ~120 KB gzipped is fine,
-    // so only warn if it grows well past that.
+    // The item data (loot.json) is its own chunk (see loadItems in
+    // src/admin/useAdmin.js) and is by far the biggest file. Only warn if it
+    // grows well past its current size.
     chunkSizeWarningLimit: 800,
   },
 });

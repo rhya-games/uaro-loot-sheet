@@ -25,9 +25,14 @@ const isNoUse = (item) => item.categories.includes('No Use');
  * item has the Vend or Whobuy action) but is still empty. Items NPCs sell or
  * that can't be traded never have player prices, and @whobuy doesn't apply
  * to cards or equipment.
+ *
+ * An item with no action at all needs both: the suggester can't pick an
+ * action without a player price, so without a box here these items would
+ * wait in no queue. Saving a price sets the action (see AdminContext).
  */
 export function needsField(item, field) {
   if (isSoldByNpc(item) || !isTradeable(item) || item[field] != null) return false;
+  if (item.actions.length === 0) return field === 'avgVend' || hasWhobuy(item);
   return field === 'avgVend' ? item.actions.includes('Vend') : item.actions.includes('Whobuy') && hasWhobuy(item);
 }
 
@@ -39,8 +44,9 @@ function needsPrice(items) {
   const rows = [];
   for (const item of items) {
     const reasons = [];
-    if (needsField(item, 'avgVend')) reasons.push('Vend action, no vend price');
-    if (needsField(item, 'avgWhobuy')) reasons.push('Whobuy action, no @whobuy price');
+    const noAction = item.actions.length === 0;
+    if (needsField(item, 'avgVend')) reasons.push(noAction ? 'No action yet, no vend price' : 'Vend action, no vend price');
+    if (needsField(item, 'avgWhobuy')) reasons.push(noAction ? 'No action yet, no @whobuy price' : 'Whobuy action, no @whobuy price');
     if (reasons.length) rows.push({ item, reasons });
   }
   return rows.sort((a, b) => b.item.uses.length - a.item.uses.length || byName(a, b));
@@ -116,7 +122,7 @@ function notReviewed(items) {
 }
 
 export const QUEUES = [
-  { id: 'needs-price', title: 'Needs a price', description: 'Vend or Whobuy is set, but there is no price yet.', select: needsPrice },
+  { id: 'needs-price', title: 'Needs a price', description: 'Vend or Whobuy is set (or no action yet), but there is no price yet.', select: needsPrice },
   { id: 'suggestion-differs', title: 'Suggestion differs', description: 'The suggested actions are not the ones set by hand.', select: suggestionDiffers },
   { id: 'unverified-prices', title: 'Verify prices', description: 'A price is set, but it was never checked in game.', select: unverifiedPrices },
   { id: 'suspicious-values', title: 'Suspicious values', description: 'Numbers or actions that do not fit together.', select: suspiciousValues },
