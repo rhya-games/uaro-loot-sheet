@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createSuggester } from '../utils/suggest.js';
-import { QUEUES, canHavePrice, isReviewed, queueCounts, targetsNeedingValue } from './queues.js';
+import { QUEUES, canHavePrice, isReviewed, pricePriority, queueCounts, targetsNeedingValue } from './queues.js';
 
 /** A made-up item; itemId 1 isn't in any uaRO override list. */
 const item = (fields) => ({
@@ -78,14 +78,31 @@ describe('needs-price, half-priced items', () => {
   });
 });
 
-describe('needs-price, server headgear quests', () => {
-  it('puts Server Hat Quest materials first, then by uses', () => {
+describe('needs-price, priority by quest relevance', () => {
+  it('orders server hat quests, other quests, the rest, then official hat quests', () => {
+    const queued = (name, categories, uses = 1) =>
+      item({ name, actions: ['Vend'], categories, uses: Array.from({ length: uses }, (_, index) => ({ for: `T${index}` })) });
     const items = [
-      item({ name: 'Many uses', actions: ['Vend'], uses: [{ for: 'X' }, { for: 'Y' }, { for: 'Z' }] }),
-      item({ name: 'Hat, 1 use', actions: ['Vend'], categories: ['Server Hat Quest'], uses: [{ for: 'X' }] }),
-      item({ name: 'Hat, 2 uses', actions: ['Vend'], categories: ['Server Hat Quest'], uses: [{ for: 'X' }, { for: 'Y' }] }),
+      queued('Official only', ['Official Hat Quest'], 9),
+      queued('Cooking', ['Cooking'], 5),
+      queued('Pet evolution', ['Pet Evolution', 'Pet', 'uaRO'], 2),
+      queued('Server hat', ['Server Hat Quest', 'uaRO'], 1),
+      queued('Official and cooking', ['Official Hat Quest', 'Cooking'], 3),
+      queued('Official and quest', ['Official Hat Quest', 'Other Quest'], 1),
     ];
-    expect(names(run('needs-price', items))).toEqual(['Hat, 2 uses', 'Hat, 1 use', 'Many uses']);
+    expect(names(run('needs-price', items))).toEqual([
+      'Server hat',
+      'Pet evolution', // quests: 2 uses
+      'Official and quest', // best tier of its categories: quests, 1 use
+      'Cooking', // default tier: 5 uses
+      'Official and cooking', // best of official (low) and cooking (default): 3 uses
+      'Official only',
+    ]);
+  });
+
+  it('puts items with no categories in the default tier', () => {
+    expect(pricePriority(item({ categories: [] }))).toBe(2);
+    expect(pricePriority(item({ categories: ['No Use'] }))).toBe(3);
   });
 });
 
