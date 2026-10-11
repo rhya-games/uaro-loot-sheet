@@ -7,6 +7,7 @@ import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
 import ShareButton from '../components/ShareButton.jsx';
 import NoResults from '../components/NoResults.jsx';
+import FloatingSearchFilters from '../components/FloatingSearchFilters.jsx';
 import LoadingItems from '../components/LoadingItems.jsx';
 import AdminToggle from '../admin/AdminToggle.jsx';
 import Tooltip from '../components/Tooltip.jsx';
@@ -198,7 +199,10 @@ export default function LootPage() {
   const panelCovers = sidebarOpen && !panelBesideTable;
   const focusCloseOnOpen = useRef(false);
   useEffect(() => {
-    if (panelCovers || (sidebarOpen && focusCloseOnOpen.current)) closeButtonRef.current?.focus();
+    // preventScroll: the panel is fixed or sticky, so it's already in view, and
+    // scrolling to it would throw you back to the top (opening it from the
+    // floating Filters button, far down the table).
+    if (panelCovers || (sidebarOpen && focusCloseOnOpen.current)) closeButtonRef.current?.focus({ preventScroll: true });
     focusCloseOnOpen.current = false;
   }, [panelCovers, sidebarOpen]);
 
@@ -275,14 +279,16 @@ export default function LootPage() {
   const changeSort = useCallback((key) => setSort((current) => nextSort(current, key)), []);
 
 
+  const toggleFilters = () => {
+    focusCloseOnOpen.current = !sidebarOpen;
+    changePanel(!sidebarOpen);
+  };
+
   const filtersButton = (
     <button
       ref={toggleButtonRef}
       type="button"
-      onClick={() => {
-        focusCloseOnOpen.current = !sidebarOpen;
-        changePanel(!sidebarOpen);
-      }}
+      onClick={toggleFilters}
       aria-expanded={sidebarOpen}
       aria-controls="filter-sidebar"
       aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
@@ -382,6 +388,8 @@ export default function LootPage() {
   return (
     <div>
       <h1 className="sr-only">Loot items</h1>
+      {/* Fixed in the corner: the filter panel and search, when the toolbar has scrolled away. */}
+      <FloatingSearchFilters filtersOpen={sidebarOpen} activeCount={activeFilterCount} onFilters={toggleFilters} />
 
       {/* Panel and table share one grid cell (so the panel floats over the table)
           until 1470px (`wide:`), where the grid gets a second column for the panel.

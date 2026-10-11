@@ -79,7 +79,7 @@ export default function App() {
         </main>
         <SiteFooter route={route} />
         <WelcomeDialog open={welcomeOpen} onClose={closeWelcome} />
-        <BackToTop textPage={route !== 'loot'} />
+        <BackToTop textPage={route !== 'loot'} raised={route === 'loot'} />
       </div>
     </AdminProvider>
   );
