@@ -9,3 +9,8 @@ export function goToTop() {
   window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
   document.getElementById('main')?.focus({ preventScroll: true });
 }
+
+/** Scrolls a section into view (below the sticky header, via `scroll-padding`). */
+export function scrollToId(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
+}
