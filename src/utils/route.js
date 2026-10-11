@@ -21,6 +21,8 @@ const ADMIN_ROUTES = import.meta.env.DEV
       adminPaste: '#/admin/paste-prices',
       adminSuggestions: '#/admin/suggestions',
       adminVerify: '#/admin/verify-prices',
+      adminSuspicious: '#/admin/suspicious-values',
+      adminMissingUses: '#/admin/missing-uses',
       targets: '#/targets',
     }
   : {};

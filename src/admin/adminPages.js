@@ -9,6 +9,8 @@ const QUEUE_ROUTES = {
   'needs-price': 'adminPrices',
   'suggestion-differs': 'adminSuggestions',
   'unverified-prices': 'adminVerify',
+  'suspicious-values': 'adminSuspicious',
+  'missing-uses': 'adminMissingUses',
 };
 
 /** Paste prices is a tool, not a queue: it has no count. */

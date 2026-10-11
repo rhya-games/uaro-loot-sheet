@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FunnelIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
+import { useFooterLift } from '../utils/useFooterLift.js';
 
 /**
  * Show the buttons once the page has scrolled past the toolbar (the search
@@ -27,6 +28,7 @@ const ROUND_BUTTON =
  */
 export default function FloatingSearchFilters({ filtersOpen, activeCount, onFilters, onSearch }) {
   const [show, setShow] = useState(false);
+  const footerLift = useFooterLift();
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > SHOW_AFTER_PX);
@@ -40,6 +42,8 @@ export default function FloatingSearchFilters({ filtersOpen, activeCount, onFilt
       className={`fixed right-4 bottom-4 z-30 flex flex-col gap-2 transition-opacity duration-200 ease-smooth motion-reduce:transition-none ${
         show ? 'opacity-100' : 'pointer-events-none opacity-0'
       }`}
+      // Rides above the footer at the end of the page, so it never covers its links.
+      style={{ transform: `translateY(${-footerLift}px)` }}
       // Hidden from keyboard and screen readers until it shows.
       inert={!show}
     >
