@@ -48,13 +48,38 @@ export function canHavePrice(item, field) {
 }
 
 /**
+ * How soon an item's price is wanted, by quest relevance (0 comes first).
+ * An item takes the best tier of its categories; a category that isn't
+ * listed is the default tier. The aim is to price what players actually
+ * chase on this server before the official game's hat quests, which are
+ * low priority.
+ */
+const DEFAULT_PRIORITY = 2;
+const PRICE_PRIORITY = {
+  'Server Hat Quest': 0, // Dimonka's headgear quests, added by this server
+  'Pet Evolution': 1,
+  'Repeatable Quest': 1,
+  'Dungeon Quest': 1,
+  'Job Quest': 1,
+  'Other Quest': 1,
+  'Official Hat Quest': 3, // low: only if nothing better applies
+  'No Use': 3, // nothing to keep it for, so only its sell price matters
+};
+
+/** The item's pricing priority: 0 (first) to 3 (last). Exported for the tests. */
+export function pricePriority(item) {
+  if (!item.categories.length) return DEFAULT_PRIORITY;
+  return Math.min(...item.categories.map((category) => PRICE_PRIORITY[category] ?? DEFAULT_PRIORITY));
+}
+
+/**
  * Prices to fill in. Two kinds of item:
  *   - one price is set and another it can have is empty (started and left)
  *   - Vend or Whobuy is set (or no action yet), but there's no price
- * Order: materials for the server's headgear quests (Dimonka's, category
- * "Server Hat Quest") first, then the items used in the most things,
- * whichever kind: their price feeds the most Keep decisions. Of two items
- * used equally, the half-priced one goes first, since it's quickest to finish.
+ * Order: pricing priority by quest relevance (pricePriority), then the items
+ * used in the most things, whichever kind: their price feeds the most Keep
+ * decisions. Of two items used equally, the half-priced one goes first, since
+ * it's quickest to finish.
  */
 function needsPrice(items) {
   const rows = [];
@@ -67,9 +92,9 @@ function needsPrice(items) {
     if (half && !reasons.length) {
       reasons.push(item.avgVend == null ? 'Has a @whobuy price, no vend price' : 'Has a vend price, no @whobuy price');
     }
-    if (reasons.length) rows.push({ item, reasons, half, hat: item.categories.includes('Server Hat Quest') });
+    if (reasons.length) rows.push({ item, reasons, half, priority: pricePriority(item) });
   }
-  return rows.sort((a, b) => b.hat - a.hat || b.item.uses.length - a.item.uses.length || b.half - a.half || byName(a, b));
+  return rows.sort((a, b) => a.priority - b.priority || b.item.uses.length - a.item.uses.length || b.half - a.half || byName(a, b));
 }
 
 /**
