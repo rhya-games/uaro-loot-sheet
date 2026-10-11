@@ -1,3 +1,4 @@
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import GitHubLink from './GitHubLink.jsx';
 import LootBagIcon from './LootBagIcon.jsx';
 import ThemeToggle from './ThemeToggle.jsx';
@@ -15,14 +16,18 @@ const NAV_LINKS = [
   ...(import.meta.env.DEV ? [{ route: 'admin', label: 'Admin' }] : []),
 ];
 
+/** Which key the shortcut hint shows. */
+const IS_MAC = typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigator.platform);
+
 /**
  * The green bar at the top: site name on the left; page links, a GitHub
  * link and the light/dark toggle on the right.
  *
  * Props:
- *   route - the current page name, used to highlight its link
+ *   route        - the current page name, used to highlight its link
+ *   onOpenSearch - opens the search popover (also Cmd/Ctrl+K, see App)
  */
-export default function SiteHeader({ route }) {
+export default function SiteHeader({ route, onOpenSearch }) {
   return (
     // Focus rings here are white, with a green gap (see --focus-gap in index.css).
     <header className="bg-header text-white [--focus-gap:var(--header)]">
@@ -66,6 +71,19 @@ export default function SiteHeader({ route }) {
               })}
             </ul>
           </nav>
+          <button
+            type="button"
+            onClick={onOpenSearch}
+            aria-label="Search items"
+            aria-keyshortcuts="Control+K Meta+K"
+            className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-emerald-50 hover:bg-white/10 focus-visible:outline-white"
+          >
+            <MagnifyingGlassIcon className="size-5" aria-hidden="true" />
+            <span className="hidden sm:inline">Search</span>
+            <kbd className="hidden rounded border border-white/30 px-1.5 text-xs text-emerald-100 sm:inline">
+              {IS_MAC ? '⌘K' : 'Ctrl K'}
+            </kbd>
+          </button>
           <GitHubLink />
           <ThemeToggle />
         </div>
