@@ -54,8 +54,13 @@ function startingView() {
   return hashToView(window.location.hash) ?? cleanView(readPreference('lastView', EMPTY_VIEW));
 }
 
-/** The main page: search box, filter sidebar, and the item table. */
-export default function LootPage() {
+/**
+ * The main page: search box, filter sidebar, and the item table.
+ *
+ * Props:
+ *   onOpenSearch - opens the search popover (for the floating Search button)
+ */
+export default function LootPage({ onOpenSearch }) {
   const [start] = useState(startingView);
   const [query, setQuery] = useState(start.query);
   const [filters, setFilters] = useState(start.filters);
@@ -389,7 +394,7 @@ export default function LootPage() {
     <div>
       <h1 className="sr-only">Loot items</h1>
       {/* Fixed in the corner: the filter panel and search, when the toolbar has scrolled away. */}
-      <FloatingSearchFilters filtersOpen={sidebarOpen} activeCount={activeFilterCount} onFilters={toggleFilters} />
+      <FloatingSearchFilters filtersOpen={sidebarOpen} activeCount={activeFilterCount} onFilters={toggleFilters} onSearch={onOpenSearch} />
 
       {/* Panel and table share one grid cell (so the panel floats over the table)
           until 1470px (`wide:`), where the grid gets a second column for the panel.
