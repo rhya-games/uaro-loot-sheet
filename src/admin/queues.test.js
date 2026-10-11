@@ -78,6 +78,17 @@ describe('needs-price, half-priced items', () => {
   });
 });
 
+describe('needs-price, server headgear quests', () => {
+  it('puts Server Hat Quest materials first, then by uses', () => {
+    const items = [
+      item({ name: 'Many uses', actions: ['Vend'], uses: [{ for: 'X' }, { for: 'Y' }, { for: 'Z' }] }),
+      item({ name: 'Hat, 1 use', actions: ['Vend'], categories: ['Server Hat Quest'], uses: [{ for: 'X' }] }),
+      item({ name: 'Hat, 2 uses', actions: ['Vend'], categories: ['Server Hat Quest'], uses: [{ for: 'X' }, { for: 'Y' }] }),
+    ];
+    expect(names(run('needs-price', items))).toEqual(['Hat, 2 uses', 'Hat, 1 use', 'Many uses']);
+  });
+});
+
 describe('canHavePrice', () => {
   it('lets a Vend-only item take a @whobuy price too, so both can be filled in a row', () => {
     const vendOnly = item({ actions: ['Vend'] });

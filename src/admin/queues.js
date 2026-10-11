@@ -51,9 +51,10 @@ export function canHavePrice(item, field) {
  * Prices to fill in. Two kinds of item:
  *   - one price is set and another it can have is empty (started and left)
  *   - Vend or Whobuy is set (or no action yet), but there's no price
- * The items used in the most things come first, whichever kind: their price
- * feeds the most Keep decisions. Of two items used equally, the half-priced
- * one goes first, since it's quickest to finish.
+ * Order: materials for the server's headgear quests (Dimonka's, category
+ * "Server Hat Quest") first, then the items used in the most things,
+ * whichever kind: their price feeds the most Keep decisions. Of two items
+ * used equally, the half-priced one goes first, since it's quickest to finish.
  */
 function needsPrice(items) {
   const rows = [];
@@ -66,9 +67,9 @@ function needsPrice(items) {
     if (half && !reasons.length) {
       reasons.push(item.avgVend == null ? 'Has a @whobuy price, no vend price' : 'Has a vend price, no @whobuy price');
     }
-    if (reasons.length) rows.push({ item, reasons, half });
+    if (reasons.length) rows.push({ item, reasons, half, hat: item.categories.includes('Server Hat Quest') });
   }
-  return rows.sort((a, b) => b.item.uses.length - a.item.uses.length || b.half - a.half || byName(a, b));
+  return rows.sort((a, b) => b.hat - a.hat || b.item.uses.length - a.item.uses.length || b.half - a.half || byName(a, b));
 }
 
 /**
