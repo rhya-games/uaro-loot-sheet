@@ -34,8 +34,9 @@ export default function BackToTop() {
           type="button"
           onClick={goToTop}
           aria-label="Back to top"
-          className="flex size-11 items-center justify-center rounded-full border border-line bg-surface text-body shadow-md
-            hover:bg-hover"
+          // Inverted: dark in light mode, light in dark mode, so it stands out from the page.
+          className="flex size-11 items-center justify-center rounded-full border border-fg bg-fg text-surface shadow-md
+            hover:opacity-90"
         >
           <ArrowUpIcon className="size-5" aria-hidden="true" />
         </button>

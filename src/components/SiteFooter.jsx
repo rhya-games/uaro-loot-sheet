@@ -12,7 +12,7 @@ export default function SiteFooter() {
   return (
     <footer className="border-t border-line">
       <div
-        className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-6 text-sm
+        className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-6 py-6 text-sm
           text-muted"
       >
         <p>

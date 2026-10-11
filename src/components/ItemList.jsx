@@ -34,10 +34,13 @@ export default memo(function ItemList({ items, sort, onSort, onSelectUse, highli
   return (
     <div className="@container">
       {showTable ? (
-        <div
-          className="@max-table-fit:max-h-[calc(100vh-2rem)] @max-table-fit:overflow-auto @max-table-fit:rounded-lg
-            @max-table-fit:shadow-sm"
-        >
+        // The box draws the border and rounded corners (the same panel as the filters) and clips the table to them
+        // (overflow-clip, unlike hidden or auto, keeps the sticky header working),
+        // so the header cells themselves can stay square. `relative` makes it the
+        // containing block for the table's screen-reader-only text (absolutely
+        // positioned): otherwise that text sits past the box's edge and makes the
+        // whole page scroll sideways while the table is in its narrow scroll box.
+        <div className="panel relative overflow-clip @max-table-fit:max-h-[calc(100vh-2rem)] @max-table-fit:scroll-pt-14 @max-table-fit:overflow-auto">
           <ItemTable
             items={shown}
             sort={sort}

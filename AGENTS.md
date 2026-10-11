@@ -88,6 +88,9 @@ lint` and `npm test` after code changes. There's no formatter yet.
   Hercules pre-renewal zeny shops, then rAthena shops listed in
   `renewalShops`, and otherwise "no".
 - **Item type:** Hercules.
+- The scripts still read rAthena for renewal prices and shops. The maintainer
+  says Hercules has renewal data too, and is moving the sources to
+  game-data-tools (see Sources), so expect these rules to change.
 
 ### Data rules (enforced by `npm run validate`)
 
@@ -95,6 +98,10 @@ lint` and `npm test` after code changes. There's no formatter yet.
   never `Vend`/`Whobuy`, and have `avgVend`/`avgWhobuy` set to null (the
   site shows ✕).
 - Cards always have `npcBuyable: "no"`.
+- **Keep is never the only action** (validate errors). Items kept for a use
+  also show how to sell the extras; with no player price yet the suggester
+  (`src/utils/suggest.js`) adds `Vend`. Prefer the suggested action to a
+  hand-picked one.
 - Every entry in `uaro-overrides.json` must match an item's `itemId` and
   `name` in loot.json when that item is listed there.
 - `lastVerified` means the vend or @whobuy price was checked in game.
@@ -138,10 +145,20 @@ Match similar existing items. Look them up in loot.json first.
   modified prices, dealers, headgear quests, the pet system. It blocks
   plain `curl`; read it in a real browser. Its item IDs sometimes have
   typos, so check each against the emulators and note the fix.
-- **Hercules** (`HerculesWS/Hercules`, branch `stable`): pre-renewal items,
-  shops, and the Overcharge formula (`src/map/pc.cpp`).
-- **rAthena** (`rathena/rathena`, branch `master`): renewal items, monsters,
-  spawns, shops and pets.
+- **Hercules** (`HerculesWS/Hercules`, branch `stable`): item IDs and
+  types, shops, and the Overcharge formula (`src/map/pc.cpp`). It has both
+  pre-renewal and renewal data (per the maintainer).
+- **rAthena** (`rathena/rathena`, branch `master`): still read by
+  `sync:prices` and `sync:shops` for renewal prices and shops, and used for
+  monsters, spawns and pets. Being replaced as a source; the About page
+  no longer credits it.
+- **game-data-tools** (`~/Projects/game-data-tools`, rhya-games/game-data-tools):
+  the maintainer's tools and data. It compares items and monsters across
+  sources (`bin/compare_item.py`, `bin/drops.py`), builds the item icons
+  that `npm run sync:icons` copies into `public/items/`
+  (`bin/fetch_item_icons.py` downloads missing ones), and holds
+  `data/uaro-quests.json`. That quest file was imported from this sheet, so
+  it is not an independent check of our quest names.
 - **Divine Pride**: only for items that are in none of the above.
 - In-game screenshots from the maintainer beat everything else.
 - `research/uaro-monsters.json`: uaRO monsters transcribed from in-game
@@ -170,6 +187,18 @@ Match similar existing items. Look them up in loot.json first.
   explaining *why* above anything non-obvious, and JSDoc-style prop lists
   on components.
 
+- Item icons: `components/ItemIcon.jsx` shows the 24x24 GIF from
+  `public/items/` (`item<ID>.gif`; every card shares `card.gif`). Run
+  `npm run sync:icons` after adding items. A missing file hides the picture
+  but keeps its space.
+- The welcome box (`components/WelcomeDialog.jsx`, a native `<dialog>`) opens
+  once, on a first visit to the loot page, and isn't reachable from the
+  header. Its steps (`components/HowToSteps.jsx`) are shared with the About page, so
+  change them in one place. "Seen" is saved as the `welcomeSeen` preference.
+- Every category needs a plain-words line in `CATEGORY_DESCRIPTIONS`
+  (`utils/labels.js`; a test checks it). The About page lists them and never
+  lists "Not Reviewed".
+
 ### UI conventions
 
 - Colors are theme tokens in `src/index.css` (`text-fg`, `text-body`,
@@ -178,6 +207,14 @@ Match similar existing items. Look them up in loot.json first.
   `body`, `muted`. For anything quieter, lower the opacity.
 - Icons: Heroicons outline only, line weight 2 (set once in `index.css`).
   `size-5` (20px) for icons on their own, `size-4` (16px) inside a line of text.
+- Empty values: `?` (`Unknown` in `components/StatusIcons.jsx`) means not
+  verified yet; ✕ means it can't be done; "None", "No sellers" and "No
+  buyers" mean checked and empty. The quiet ones use the `empty-value`
+  utility (muted at 60% opacity). In legends and guides wrap a mark in
+  `Mark` so it shows at full strength. Words for players: say "verified",
+  not "someone/nobody checked".
+- The filter panel and the table box are the same `panel` with the search field's `shadow-sm`; nothing may clip it (the grid around them has -mx-2/px-2 room for that). Focus is kept in view with `scroll-padding` on `html`, below the sticky header. The loot table uses the full window width (pages have 24px side padding), and rows
+  have no zebra striping or hover color (the dividers do the job). The table sits in the same `panel` as the filters, with `overflow-clip` so the sticky header cells stay square (it sticks at the very top of the window, so no row or border shows above it).
 - Reuse the utilities: `panel` (cards and popovers), `button-small`
   (secondary buttons like "Clear all").
 - Type: headings are `font-semibold`, body `text-sm`, secondary `text-xs`

@@ -4,8 +4,8 @@ import HowToSteps from './HowToSteps.jsx';
 import { ROUTES } from '../utils/route.js';
 
 /**
- * The "how to use this" box. It opens by itself on a first visit to the loot
- * page (see App), and again from the header's "How to use" button.
+ * The "how to use this" box. It opens by itself, once, on a first visit to
+ * the loot page (see App). The same steps are on the About page.
  *
  * It's a native <dialog> opened with showModal(), so the browser keeps Tab
  * inside it, dims and disables the page behind it, and returns focus to

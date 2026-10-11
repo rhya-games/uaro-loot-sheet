@@ -51,7 +51,7 @@ export const CHANGELOG = [
     date: '2026-10-10',
     title: 'A short guide for new visitors',
     changes: [
-      { type: 'Added', text: 'A welcome box shows how to use the sheet on your first visit. Open it again with “How to use” in the header.' },
+      { type: 'Added', text: 'A short welcome box shows how to use the sheet on your first visit. The same steps are on the About page.' },
       { type: 'Changed', text: 'The About page is easier to scan, with short steps and a list of what each mark means.' },
     ],
   },

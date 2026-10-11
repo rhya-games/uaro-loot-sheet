@@ -381,10 +381,11 @@ export default function LootPage() {
       {/* Panel and table share one grid cell (so the panel floats over the table)
           until 1470px (`wide:`), where the grid gets a second column for the panel.
           overflow-x-clip hides the table's edge while it slides (see the FLIP effect above)
-          without breaking the sticky header. The page has no side padding here, so
-          the clip box is the window's edge. */}
+          without breaking the sticky header. Browsers ignore overflow-clip-margin when
+          only one direction clips, so -mx-2/px-2 widen the clip box instead: that room
+          keeps focus rings at the edges (like the Admin button's) from being cut off. */}
       <div
-        className={`md:grid md:items-start wide:overflow-x-clip ${
+        className={`md:grid md:items-start wide:-mx-2 wide:overflow-x-clip wide:px-2 ${
           panelTakesSpace ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''
         }`}
       >
@@ -420,7 +421,7 @@ export default function LootPage() {
                 : 'pointer-events-none invisible -translate-x-4 opacity-0 transition-[opacity,translate,visibility]'
             }
             md:panel md:sticky md:inset-auto md:top-4 md:z-30 md:col-start-1 md:row-start-1 md:max-h-[calc(100vh-2rem)]
-            md:w-60 md:justify-self-start md:pb-3 md:shadow-xl wide:shadow-sm`}
+            md:w-60 md:justify-self-start md:pb-3 md:shadow-sm`}
         >
           <div className="hidden md:block">
             <SkipLink targetId="results" className="focus:absolute focus:top-2 focus:left-2 focus:z-20">
