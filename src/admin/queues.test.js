@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createSuggester } from '../utils/suggest.js';
-import { QUEUES, isReviewed, queueCounts, targetsNeedingValue } from './queues.js';
+import { QUEUES, canHavePrice, isReviewed, queueCounts, targetsNeedingValue } from './queues.js';
 
 /** A made-up item; itemId 1 isn't in any uaRO override list. */
 const item = (fields) => ({
@@ -52,6 +52,20 @@ describe('needs-price', () => {
       item({ name: 'Card', actions: ['Whobuy'], categories: ['Card'] }),
     ];
     expect(run('needs-price', items)).toEqual([]);
+  });
+});
+
+describe('canHavePrice', () => {
+  it('lets a Vend-only item take a @whobuy price too, so both can be filled in a row', () => {
+    const vendOnly = item({ actions: ['Vend'] });
+    expect(canHavePrice(vendOnly, 'avgVend')).toBe(true);
+    expect(canHavePrice(vendOnly, 'avgWhobuy')).toBe(true);
+  });
+
+  it('has no @whobuy box for equipment and cards, and none for NPC-sold items', () => {
+    expect(canHavePrice(item({ itemType: 'Equipment' }), 'avgWhobuy')).toBe(false);
+    expect(canHavePrice(item({ categories: ['Card'] }), 'avgWhobuy')).toBe(false);
+    expect(canHavePrice(item({ npcBuyable: 'yes' }), 'avgVend')).toBe(false);
   });
 });
 

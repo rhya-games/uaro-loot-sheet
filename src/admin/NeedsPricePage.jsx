@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useAdmin } from './useAdmin.js';
-import { QUEUES, needsField } from './queues.js';
+import { QUEUES, canHavePrice } from './queues.js';
 import { useEditingRow } from './useEditingRow.js';
 import AdminLayout from './AdminLayout.jsx';
 import QueueRow, { QueueHeader, QueueSearch } from './QueueRow.jsx';
@@ -9,8 +9,11 @@ import QueueRow, { QueueHeader, QueueSearch } from './QueueRow.jsx';
 const BATCH = 50;
 const PRICE_FIELDS = ['avgVend', 'avgWhobuy'];
 
-/** The prices that still need a box. */
-const fieldsToFill = (item) => PRICE_FIELDS.filter((field) => needsField(item, field));
+/**
+ * The prices that still need a box: every empty price the item can have, not
+ * just the one its action asks for, so a row takes both Vend and Whobuy.
+ */
+const fieldsToFill = (item) => PRICE_FIELDS.filter((field) => canHavePrice(item, field) && item[field] == null);
 
 /**
  * Admin mode's "Needs a price" queue: items with a Vend or Whobuy
