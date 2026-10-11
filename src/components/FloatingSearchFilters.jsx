@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FunnelIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
-import { goToTop } from '../utils/scroll.js';
 
 /**
  * Show the buttons once the page has scrolled past the toolbar (the search
@@ -17,15 +16,16 @@ const ROUND_BUTTON =
 /**
  * Two round buttons in the bottom-right corner of the loot page, so you can
  * change the search or filters without scrolling back up: Filters opens (or
- * closes) the filter panel, and Search takes you to the top with the cursor
- * in the search box. They fade in after scrolling past the toolbar.
+ * closes) the filter panel, and Search opens the search popover (the same
+ * one as Cmd/Ctrl+K). They fade in after scrolling past the toolbar.
  *
  * Props:
  *   filtersOpen  - whether the filter panel is open
  *   activeCount  - how many filters are on (shown as a badge)
  *   onFilters    - toggles the filter panel
+ *   onSearch     - opens the search popover
  */
-export default function FloatingSearchFilters({ filtersOpen, activeCount, onFilters }) {
+export default function FloatingSearchFilters({ filtersOpen, activeCount, onFilters, onSearch }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -34,12 +34,6 @@ export default function FloatingSearchFilters({ filtersOpen, activeCount, onFilt
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  const search = () => {
-    goToTop();
-    // Smooth scrolling is under way: don't let focusing the box jump the page.
-    document.getElementById('search')?.focus({ preventScroll: true });
-  };
 
   return (
     <div
@@ -67,7 +61,7 @@ export default function FloatingSearchFilters({ filtersOpen, activeCount, onFilt
         </button>
       </Tooltip>
       <Tooltip text="Search" placement="top">
-        <button type="button" onClick={search} aria-label="Search items" className={ROUND_BUTTON}>
+        <button type="button" onClick={onSearch} aria-label="Search items" aria-keyshortcuts="Control+K Meta+K" className={ROUND_BUTTON}>
           <MagnifyingGlassIcon className="size-5" aria-hidden="true" />
         </button>
       </Tooltip>

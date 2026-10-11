@@ -95,7 +95,7 @@ export default function App() {
           className={`w-full flex-1 px-6 py-6 focus:outline-none ${route === 'loot' ? '' : 'mx-auto max-w-screen-2xl'}`}
         >
           <div hidden={route !== 'loot'}>
-            <LootPage />
+            <LootPage onOpenSearch={openSearch} />
           </div>
           {page && <page.Component />}
         </main>
