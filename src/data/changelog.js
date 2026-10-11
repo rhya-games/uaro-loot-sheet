@@ -39,9 +39,10 @@
  *   - something new or changed (a feature, new data): raise the middle
  *     number and reset the last (0.2.3 -> 0.3.0)
  *   - only fixes: raise the last number (0.3.0 -> 0.3.1)
- * Set the same version in package.json (npm run validate checks). Merging
- * to main publishes a GitHub release with that version, these lines, and
- * the notes from the pull requests merged since the last release.
+ * Set the same version in package.json (npm run validate checks). Deploying
+ * (pushing main to the deploy branch) publishes a GitHub release with that
+ * version, these lines, and the notes from the pull requests merged since
+ * the last release.
  */
 export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
