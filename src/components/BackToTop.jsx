@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowUpIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
 import { goToTop } from '../utils/scroll.js';
+import { useFooterLift } from '../utils/useFooterLift.js';
 
 /** Show the button once the page has scrolled this far (about two screens of table). */
 const SHOW_AFTER_PX = 1200;
@@ -18,6 +19,7 @@ const SHOW_AFTER_PX_TEXT_PAGE = 300;
 export default function BackToTop({ textPage = false, raised = false }) {
   const showAfter = textPage ? SHOW_AFTER_PX_TEXT_PAGE : SHOW_AFTER_PX;
   const [show, setShow] = useState(false);
+  const footerLift = useFooterLift();
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > showAfter);
@@ -31,6 +33,8 @@ export default function BackToTop({ textPage = false, raised = false }) {
       className={`fixed right-4 ${raised ? 'bottom-[7.5rem]' : 'bottom-4'} z-30 transition-opacity duration-200 ease-smooth motion-reduce:transition-none ${
         show ? 'opacity-100' : 'pointer-events-none opacity-0'
       }`}
+      // Rides above the footer at the end of the page, so it never covers its links.
+      style={{ transform: `translateY(${-footerLift}px)` }}
       // Hidden from keyboard and screen readers until it shows.
       inert={!show}
     >
