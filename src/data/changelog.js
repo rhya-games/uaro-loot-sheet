@@ -47,6 +47,14 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '0.10.0',
+    date: '2026-10-11',
+    title: 'Search from anywhere',
+    changes: [
+      { type: 'Added', text: 'Press Ctrl+K (Cmd+K on Mac) or use the new Search button to find an item from any page.' },
+    ],
+  },
+  {
     version: '0.9.0',
     date: '2026-10-10',
     title: 'Easier to find your way around the text pages',
