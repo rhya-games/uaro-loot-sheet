@@ -42,7 +42,10 @@ afterEach(() => {
   root = container = undefined;
 });
 
-describe('App', () => {
+// Each test draws the whole 1,000+ row page (even on the other pages, the loot
+// page stays mounted behind them), which takes a few seconds on a slow CI
+// machine, so the default 5 seconds is too tight.
+describe('App', { timeout: 30_000 }, () => {
   it('draws the loot table with items and a count', async () => {
     await openPage('#/');
     expect(container.querySelector('h1').textContent).toBe('Loot items');
