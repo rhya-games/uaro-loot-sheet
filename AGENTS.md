@@ -303,8 +303,10 @@ English speakers. Use short, plain sentences and everyday words. Say
 ## Git
 
 - Work on a feature branch, never commit to `main`, and merge through a PR.
-  CI runs `validate`, `lint` and `test` on PRs, and merging to `main`
-  deploys to GitHub Pages and publishes a release.
+  CI runs `validate`, `lint` and `test` on PRs. Merging to `main` never
+  deploys: the site goes live when `main` is pushed to the `deploy` branch
+  (a fast-forward, see the `ship-release` skill), which also publishes a
+  release.
 - Commit in small steps with messages that say what changed and why.
 - Fill in the PR template (`.github/pull_request_template.md`). Write it
   for a later agent who wasn't here: it is the record of what changed and

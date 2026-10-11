@@ -53,12 +53,23 @@ The published site has no server, so it never shows admin mode.
 
 ## Deploying
 
-The site is published to GitHub Pages automatically by
+The site is published to GitHub Pages by
 [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)
-on every push to `main`. It runs `npm run build` (which checks the data first),
-so broken data is never published.
+on every push to the `deploy` branch. Merging to `main` does not deploy: when
+`main` is ready to go live, push its latest commit to `deploy`:
 
-One-time setup on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+```bash
+git fetch origin
+git push origin origin/main:deploy
+```
+
+That is a fast-forward (never force-push `deploy`), so `deploy` is always a
+commit that was on `main`. The workflow runs `npm run build` (which checks the
+data first), so broken data is never published.
+
+One-time setup on GitHub: **Settings → Pages → Build and deployment → Source:
+GitHub Actions**, and **Settings → Environments → github-pages → Deployment
+branches**: add `deploy`.
 
 To check a production build locally before pushing:
 

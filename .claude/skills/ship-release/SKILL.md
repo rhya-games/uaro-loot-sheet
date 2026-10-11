@@ -1,6 +1,6 @@
 ---
 name: ship-release
-description: Publish finished work: check the changelog and version, run the checks, push, open a PR, wait for CI, merge, and confirm the site deploy and GitHub release. Use only when the maintainer asks to merge, deploy or release ("merge and deploy").
+description: Publish finished work: check the changelog and version, run the checks, push, open a PR, wait for CI, merge, then deploy by pushing main to the deploy branch and confirm the site and GitHub release. Merging and deploying are separate steps. Use only when the maintainer asks to merge, deploy or release ("merge and deploy").
 ---
 
 # Merge and deploy
@@ -8,8 +8,12 @@ description: Publish finished work: check the changelog and version, run the che
 Read AGENTS.md first. Do this **only when asked**: pushing, opening a PR,
 merging and deploying are all the maintainer's call. Never work on `main`.
 
-Merging to `main` deploys the site to GitHub Pages and publishes the GitHub
-release `vX.Y.Z` with that day's changelog card as its notes.
+Merging to `main` does **not** deploy. The site goes live, and the GitHub
+release `vX.Y.Z` is published with that day's changelog card as its notes,
+when `main`'s commit is pushed to the `deploy` branch (step 4). So:
+
+- "Merge" means steps 1 to 3 only.
+- "Deploy" or "merge and deploy" means all of them.
 
 ## 1. Get ready
 
@@ -48,29 +52,28 @@ own loops.
 - Merge with a merge commit that carries the PR description, so it's in git
   and the GitHub release notes:
   `gh pr merge <number> --merge --subject "<PR title> (#<number>)" --body-file pr-body.md`.
-  Never turn on auto-merge unless asked.
-  **The PR description becomes the merge commit message, and GitHub skips
-  every workflow when a commit message has the skip marker (see below)
-  anywhere, body included.** Never write the marker in a PR description
-  (say "the skip marker"). If it slipped in, nothing deploys: start it by
-  hand with `gh workflow run deploy-pages.yml --ref main`.
-- **Admin-only changes don't deploy.** If the PR changes nothing a visitor
-  can see or download (admin mode under `src/admin/`, dev scripts, tests,
-  docs, agent instructions), merge without deploying: add `[skip ci]` to
-  the merge commit's subject, so GitHub doesn't start the workflows for
-  the push to `main`:
-  `gh pr merge <number> --merge --subject "<PR title> (#<number>) [skip ci]" --body-file pr-body.md`.
-  Then skip step 4. The release tag stays where it is until the next real
-  deploy, and this PR's notes appear under "Merged changes" in that
-  release. If unsure whether a visitor could notice, deploy, or ask.
-  Use that text **only** in the merge subject. If it is in the newest
-  commit message on the PR branch, GitHub skips the PR's checks too (the
-  PR then shows "no checks"), and pushing an empty commit is the way out.
+  Never turn on auto-merge unless asked. This only updates `main`; nothing
+  goes live, and the merged PR's notes wait for the next deploy ("Merged
+  changes" in that release).
 
-## 4. Confirm the deploy and the release
+## 4. Deploy (only when asked to deploy)
 
-The **Deploy to GitHub Pages** workflow runs a build, a deploy and a release
-job. Check that all three passed (`gh run list --limit 3`). Then:
+Make `deploy` point at the commit on `main` that should go live. It must be a
+fast-forward; never force-push `deploy`.
+
+```bash
+git fetch origin
+git push origin origin/main:deploy
+```
+
+If the push is rejected as not a fast-forward, stop and tell the
+maintainer: `deploy` has a commit `main` doesn't. (The first time, the
+branch doesn't exist yet and this creates it.)
+
+## 5. Confirm the deploy and the release
+
+The **Deploy to GitHub Pages** workflow starts from the push to `deploy` and
+runs a build, a deploy and a release job. Check that all three passed (`gh run list --limit 3`). Then:
 
 - The release exists: `gh release view v<version>`. Its notes have the
   changelog card's short lines, then "Merged changes" with your PR
@@ -81,7 +84,7 @@ job. Check that all three passed (`gh run list --limit 3`). Then:
 If the release job fails, the deploy may still be fine: say so, and fix the
 job before trying again.
 
-## 5. Tidy and report
+## 6. Tidy and report
 
 - `git checkout main && git pull` (in the main folder; from a worktree, run
   `git fetch` instead), then delete the merged branch: on GitHub with
