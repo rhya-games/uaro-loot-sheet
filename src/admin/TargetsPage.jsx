@@ -19,8 +19,8 @@ import targetIds from '../data/target-ids.json' with { type: 'json' };
  * those that decide the most suggestions. Quests and skills
  * aren't listed (see suggest.js), and neither are targets in the sheet
  * (price those on the loot page). 0 means "checked, no shops sell it",
- * and shows as "None". Item IDs (click to copy, for
- * @whobuy and shop searches) come from src/data/target-ids.json
+ * and shows as "None". Item IDs (click to copy as "@ws <id>", for
+ * vend and shop searches) come from src/data/target-ids.json
  * (`npm run sync:targets`); a pet evolution's is the evolved pet's egg.
  *
  * Only exists under `npm run dev`.
@@ -100,7 +100,7 @@ function TargetTable({ title, rows, targets, onSave }) {
               <td className="px-4 py-2">
                 <p className="font-medium text-fg">{row.name}</p>
                 <p className="text-xs text-muted">
-                  {targetIds.ids[row.name] ? <CopyItemId itemId={targetIds.ids[row.name]} /> : 'No item ID'}
+                  {targetIds.ids[row.name] ? <CopyItemId itemId={targetIds.ids[row.name]} command="@ws" /> : 'No item ID'}
                   {' · '}
                   {row.parts.length > 4 ? `${row.parts.slice(0, 4).join(', ')} and ${row.parts.length - 4} more` : row.parts.join(', ')}
                 </p>
