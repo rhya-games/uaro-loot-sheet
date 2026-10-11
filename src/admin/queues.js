@@ -73,6 +73,35 @@ export function pricePriority(item) {
 }
 
 /**
+ * The same priority for a "Used For" target (a hat, a pet evolution, a
+ * weapon quest), which has no categories of its own. Its parts' categories
+ * say what it is:
+ *   - "<pet> Pet Evolution" (some have a note after it) is a pet evolution.
+ *   - Otherwise each part votes with its quest categories (Server Hat Quest,
+ *     Other Quest, Official Hat Quest...). A part also used for something
+ *     else would drag a target up if the best vote won, so the most common
+ *     vote wins, and the better tier takes a tie.
+ *   - Parts with no quest category don't vote, nor do parts in both hat
+ *     quest categories (they could belong to either), nor Pet Evolution
+ *     (a part can serve a pet and a hat).
+ *   - No votes: the default tier.
+ * `partItems` are the loot items that are parts of the target.
+ */
+export function targetPriority(targetName, partItems) {
+  if (/ Pet Evolution\b/.test(targetName)) return PRICE_PRIORITY['Pet Evolution'];
+  const votes = new Map();
+  for (const item of partItems) {
+    if (item.categories.includes('Server Hat Quest') && item.categories.includes('Official Hat Quest')) continue;
+    const tiers = item.categories
+      .filter((category) => category in PRICE_PRIORITY && category !== 'Pet Evolution' && category !== 'No Use')
+      .map((category) => PRICE_PRIORITY[category]);
+    if (tiers.length) votes.set(Math.min(...tiers), (votes.get(Math.min(...tiers)) ?? 0) + 1);
+  }
+  if (!votes.size) return DEFAULT_PRIORITY;
+  return [...votes].sort((a, b) => b[1] - a[1] || a[0] - b[0])[0][0];
+}
+
+/**
  * Prices to fill in. Two kinds of item:
  *   - one price is set and another it can have is empty (started and left)
  *   - Vend or Whobuy is set (or no action yet), but there's no price
