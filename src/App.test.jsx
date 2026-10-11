@@ -72,6 +72,13 @@ describe('App', { timeout: 30_000 }, () => {
     }
   });
 
+  it('shows a not-found page for an unknown address, with a way back', async () => {
+    await openPage('#/no-such-page');
+    expect(document.title).toBe('Page not found · uaRO Loot Sheet');
+    expect(container.querySelector('main h1:not(.sr-only)')?.textContent).toBe('Page not found');
+    expect(container.querySelector('main a[href="#/"]')).not.toBeNull();
+  });
+
   it('keeps the page frame (skip link, header, footer) on every page', async () => {
     await openPage('#/about');
     expect(container.querySelector('a[href="#main"]')).not.toBeNull();

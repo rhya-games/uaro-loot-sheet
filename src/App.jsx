@@ -8,7 +8,8 @@ import LootPage from './pages/LootPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import FeedbackPage from './pages/FeedbackPage.jsx';
 import ChangelogPage from './pages/ChangelogPage.jsx';
-import { useRoute } from './utils/route.js';
+import NotFoundPage from './pages/NotFoundPage.jsx';
+import { NOT_FOUND, useRoute } from './utils/route.js';
 import { readPreference, writePreference } from './utils/preferences.js';
 import { trackPage } from './utils/analytics.js';
 import { AdminProvider } from './admin/AdminContext.jsx';
@@ -25,6 +26,7 @@ const PAGES = {
   about: { title: 'About', Component: AboutPage },
   feedback: { title: 'Feedback', Component: FeedbackPage },
   changelog: { title: 'Changelog', Component: ChangelogPage },
+  [NOT_FOUND]: { title: 'Page not found', Component: NotFoundPage },
   ...(ADMIN_AVAILABLE && {
     admin: { title: 'Admin', Component: AdminOverviewPage },
     adminPrices: { title: 'Needs a price', Component: NeedsPricePage },
