@@ -32,8 +32,59 @@
         document.documentElement.classList.toggle('dark', dark);
       } catch (error) {}
     </script>
+    <!-- Without JavaScript the theme script above doesn't run, so the message
+         follows the system light or dark setting with plain CSS. Same colors
+         as 404.html (see src/index.css). -->
+    <noscript>
+      <style>
+        body {
+          margin: 0;
+          padding: 24px;
+          background: #f9fafb;
+          color: #374151;
+          font-family: ui-sans-serif, system-ui, sans-serif;
+        }
+        .no-script {
+          max-width: 28rem;
+          margin: 10vh auto 0;
+          padding: 24px;
+          text-align: center;
+          background: #fff;
+          border: 1px solid #e5e7eb;
+          border-radius: 12px;
+        }
+        .no-script h1 {
+          margin: 0 0 12px;
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #111827;
+        }
+        .no-script p {
+          margin: 0;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background: oklch(0.17 0.01 265);
+            color: oklch(0.85 0.008 265);
+          }
+          .no-script {
+            background: oklch(0.21 0.012 265);
+            border-color: oklch(0.31 0.014 265);
+          }
+          .no-script h1 {
+            color: oklch(0.95 0.005 265);
+          }
+        }
+      </style>
+    </noscript>
   </head>
   <body>
+    <noscript>
+      <div class="no-script" role="alert">
+        <h1>JavaScript is turned off</h1>
+        <p>The uaRO Loot Sheet needs JavaScript to show the items. Turn it on in your browser, then reload this page.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -36,11 +36,17 @@ export const ROUTES = {
 /** The admin pages, so the header can highlight "Admin" on any of them. */
 export const isAdminRoute = (route) => route in ADMIN_ROUTES;
 
+/** The page for a hash no route matches (a mistyped or old link). */
+export const NOT_FOUND = 'notFound';
+
 function readRoute() {
   // The loot page keeps its search and filters after a "?" (see utils/viewUrl.js).
   const path = window.location.hash.split('?')[0];
   const match = Object.entries(ROUTES).find(([, hash]) => hash === path);
-  return match ? match[0] : 'loot';
+  if (match) return match[0];
+  // Only "#/something" is a page address. Anything else ("", "#", a bare
+  // "#main" anchor) is the loot page, as it always was.
+  return path.startsWith('#/') && path !== '#/' ? NOT_FOUND : 'loot';
 }
 
 /** The current page name; updates when the user clicks a link or presses Back. */
