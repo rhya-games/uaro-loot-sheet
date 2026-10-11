@@ -2885,7 +2885,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Official Hat Quest",
@@ -4850,7 +4850,7 @@
     "itemId": 7752,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Server Hat Quest",
@@ -6356,7 +6356,7 @@
     "itemId": 604,
     "itemType": "Consumable",
     "actions": [
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "No Use"
@@ -6793,7 +6793,7 @@
     "itemId": 1035,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Dungeon Quest"
@@ -6862,7 +6862,7 @@
     "itemId": 7123,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Cooking"
@@ -6886,7 +6886,7 @@
     "itemId": 1037,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Cooking",
@@ -7702,7 +7702,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Other Quest"
@@ -8508,7 +8508,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -9979,7 +9979,7 @@
     "itemId": 644,
     "itemType": "Consumable",
     "actions": [
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "No Use"
@@ -12083,7 +12083,7 @@
     "itemType": "Consumable",
     "actions": [
       "Keep",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Pet",
@@ -12454,7 +12454,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Repeatable Quest",
@@ -16554,7 +16554,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Pet Evolution",
@@ -21584,7 +21584,7 @@
     "itemId": 12132,
     "itemType": "Consumable",
     "actions": [
-      "Vend"
+      "Junk"
     ],
     "categories": [
       "No Use"
@@ -24769,7 +24769,7 @@
     "itemType": "Consumable",
     "actions": [
       "Keep",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -25372,7 +25372,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Official Hat Quest"
@@ -27214,7 +27214,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
