@@ -2,16 +2,40 @@
   "about": "What each \"Used For\" target is worth, for targets that aren't loot in the sheet (hats, pet evolutions, quests). The site uses these to suggest Keep: an item is worth keeping when the finished thing is worth more than all its parts sold. Targets that are items in the sheet use that item's own prices instead. A target with no value here counts as worth keeping, since it can't be bought, only made.",
   "items": [
     {
+      "for": "Abandoned Teddy Bear Pet Evolution",
+      "value": 0
+    },
+    {
+      "for": "Advanced Assassin Mask",
+      "value": 15500000
+    },
+    {
+      "for": "Alice Doll",
+      "value": 0
+    },
+    {
       "for": "Aliza Pet Evolution",
       "value": 0
+    },
+    {
+      "for": "Am Mut Pet Evolution",
+      "value": 4000000
     },
     {
       "for": "Ancient Mummy Pet Evolution",
       "value": 5500000
     },
     {
+      "for": "Angeling Pet Evolution",
+      "value": 3000000
+    },
+    {
       "for": "Antique Smoking Pipe",
       "value": 0
+    },
+    {
+      "for": "Anubis Helm",
+      "value": 25000000
     },
     {
       "for": "Baby Pacifier",
@@ -19,6 +43,14 @@
     },
     {
       "for": "Bacsojin Pet Evolution",
+      "value": 0
+    },
+    {
+      "for": "Baphomet Pet Evolution",
+      "value": 55000000
+    },
+    {
+      "for": "Beer Hat",
       "value": 0
     },
     {
@@ -30,11 +62,43 @@
       "value": 0
     },
     {
+      "for": "Blush of Groom",
+      "value": 0
+    },
+    {
+      "for": "Bunny Ears Hat",
+      "value": 0
+    },
+    {
+      "for": "Cat o' Nine Tails Pet Evolution",
+      "value": 18000000
+    },
+    {
+      "for": "Chaotic Baphomet Jr Pet Evolution",
+      "value": 20000000
+    },
+    {
+      "for": "Chick Hat",
+      "value": 0
+    },
+    {
       "for": "Choco Pet Evolution",
       "value": 0
     },
     {
+      "for": "Claw",
+      "value": 50000
+    },
+    {
+      "for": "Contaminated Wanderer Pet Evolution",
+      "value": 18000000
+    },
+    {
       "for": "Cowboy Hat",
+      "value": 0
+    },
+    {
+      "for": "Crimson Rose",
       "value": 0
     },
     {
@@ -46,24 +110,76 @@
       "value": 0
     },
     {
+      "for": "Darkness Helm",
+      "value": 28000000
+    },
+    {
+      "for": "Defolty Doll",
+      "value": 0
+    },
+    {
+      "for": "Desert Wolf Pet Evolution",
+      "value": 0
+    },
+    {
       "for": "Diabolic Pet Evolution",
       "value": 0
+    },
+    {
+      "for": "Dress Hat",
+      "value": 30000000
     },
     {
       "for": "Earth Deleter Pet Evolution",
       "value": 7000000
     },
     {
+      "for": "Earthproof Potion",
+      "value": 250
+    },
+    {
+      "for": "Eddga Pet Evolution",
+      "value": 720000000
+    },
+    {
       "for": "Eggring Pet Evolution",
       "value": 7000000
+    },
+    {
+      "for": "Festival Pumpkin Hat",
+      "value": 25000000
+    },
+    {
+      "for": "Filir's Pinions",
+      "value": 25000000
     },
     {
       "for": "Fire Golem Pet Evolution",
       "value": 0
     },
     {
+      "for": "Fireproof Potion",
+      "value": 3700
+    },
+    {
+      "for": "Fish Head Hat",
+      "value": 10000000
+    },
+    {
+      "for": "Fish in Mouth",
+      "value": 12000000
+    },
+    {
+      "for": "Gangster Scarf",
+      "value": 21000000
+    },
+    {
       "for": "Gigantic Majestic Goat (DEF)",
       "value": 65000000
+    },
+    {
+      "for": "Glaris Doll",
+      "value": 0
     },
     {
       "for": "Gloom Under Night Pet Evolution",
@@ -72,6 +188,10 @@
     {
       "for": "Grand Peco Pet Evolution",
       "value": 2000000
+    },
+    {
+      "for": "Haedonggum",
+      "value": 300000
     },
     {
       "for": "Hair Brush",
@@ -90,6 +210,30 @@
       "value": 300000000
     },
     {
+      "for": "King Frog Hat [1]",
+      "value": 0
+    },
+    {
+      "for": "Koneko Hat",
+      "value": 0
+    },
+    {
+      "for": "Lazy Smokie",
+      "value": 0
+    },
+    {
+      "for": "Little Angel Doll",
+      "value": 32000000
+    },
+    {
+      "for": "Little Isis Pet Evolution",
+      "value": 4000000
+    },
+    {
+      "for": "Love Guard [1]",
+      "value": 0
+    },
+    {
       "for": "Mage Hat",
       "value": 0
     },
@@ -106,7 +250,39 @@
       "value": 0
     },
     {
+      "for": "Mitra [1]",
+      "value": 0
+    },
+    {
+      "for": "Moonlight Flower Hat",
+      "value": 0
+    },
+    {
+      "for": "Moonlight Flower Pet Evolution",
+      "value": 75000000
+    },
+    {
+      "for": "Necromancer's Hood",
+      "value": 0
+    },
+    {
+      "for": "Orc Hero Headdress",
+      "value": 0
+    },
+    {
+      "for": "Orc Hero Pet Evolution",
+      "value": 340000000
+    },
+    {
+      "for": "Pecopeco Wing Ears",
+      "value": 12000000
+    },
+    {
       "for": "Ph.D Hat",
+      "value": 0
+    },
+    {
+      "for": "Pirate Dagger",
       "value": 0
     },
     {
@@ -114,11 +290,35 @@
       "value": 0
     },
     {
+      "for": "Pisces Diadem",
+      "value": 0
+    },
+    {
+      "for": "Puppy Hat",
+      "value": 0
+    },
+    {
+      "for": "Purple Cowboy Hat",
+      "value": 0
+    },
+    {
+      "for": "Rainbow Scarf",
+      "value": 25000000
+    },
+    {
       "for": "Renown Detective's Cap [1]",
       "value": 0
     },
     {
+      "for": "Rideword Hat (RWH)",
+      "value": 30000000
+    },
+    {
       "for": "Rigid Nightmare Terror Pet Evolution",
+      "value": 0
+    },
+    {
+      "for": "Santa Poring Hat",
       "value": 0
     },
     {
@@ -130,12 +330,48 @@
       "value": 0
     },
     {
+      "for": "Skelion Pet Evolution",
+      "value": 60000000
+    },
+    {
+      "for": "Skull Cap",
+      "value": 30000000
+    },
+    {
+      "for": "Statue Of Baby Angel",
+      "value": 0
+    },
+    {
+      "for": "Sweet Drops Pet Evolution",
+      "value": 4000000
+    },
+    {
       "for": "Teddybear Hat",
+      "value": 0
+    },
+    {
+      "for": "Tropical Fruit Hat",
+      "value": 0
+    },
+    {
+      "for": "Umbala Spirit",
+      "value": 16000000
+    },
+    {
+      "for": "Vanilmirth Hat",
       "value": 0
     },
     {
       "for": "Well-Chewed Pencil",
       "value": 7500000
+    },
+    {
+      "for": "Wickebine's Black Cat Ears",
+      "value": 0
+    },
+    {
+      "for": "Wild Rose Pet Evolution",
+      "value": 65000000
     },
     {
       "for": "Yao Jun Pet Evolution (Hyegun)",
