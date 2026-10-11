@@ -11,8 +11,9 @@ import { npcSellPrice } from '../utils/prices.js';
 import { canHavePrice } from './queues.js';
 
 /** The columns from tablet width up: item, Vend, Whobuy, and a button if the queue has one. */
-const COLUMNS = 'md:grid-cols-[1fr_7rem_7rem]';
-const COLUMNS_WITH_ACTION = 'md:grid-cols-[1fr_7rem_7rem_6rem]';
+// 8rem fits the 6rem price box, the None button beside it, and a little air.
+const COLUMNS = 'md:grid-cols-[1fr_8rem_8rem]';
+const COLUMNS_WITH_ACTION = 'md:grid-cols-[1fr_8rem_8rem_6rem]';
 
 /**
  * The parts the price queues (Needs a price, Verify prices) share: a search
@@ -36,10 +37,12 @@ export function QueueSearch({ value, onChange }) {
 /** Column headings, from tablet width up (phones label each box instead). `action` is the last column's heading, if any. */
 export function QueueHeader({ action }) {
   return (
-    <div className={`hidden text-xs text-muted md:grid ${action ? COLUMNS_WITH_ACTION : COLUMNS} px-4 py-2`} aria-hidden="true">
+    // gap-x-3 like the rows below, or the columns drift out of line with the boxes.
+    <div className={`hidden gap-x-3 text-xs text-muted md:grid ${action ? COLUMNS_WITH_ACTION : COLUMNS} px-4 py-2`} aria-hidden="true">
       <span>Item</span>
-      <span className="text-right">Vend</span>
-      <span className="text-right">Whobuy</span>
+      {/* Left-aligned, like the boxes under them. */}
+      <span>Vend</span>
+      <span>Whobuy</span>
       {action && <span className="text-right">{action}</span>}
     </div>
   );
@@ -89,14 +92,14 @@ export default function QueueRow({ item, fields, onEnter, onLeave, action, verif
  */
 function PriceCell({ item, field, label, command, editable, verify }) {
   return (
-    <div className="flex items-start justify-between gap-2 md:justify-end">
+    <div className="flex items-start justify-between gap-2 md:justify-start">
       <span className="text-xs text-muted md:hidden">{label}</span>
-      <div className="flex flex-col items-end gap-1">
+      <div className="flex flex-col items-end gap-1 md:items-start">
         {editable ? (
           <div className="flex items-start gap-1">
+            <PriceInput item={item} field={field} advance verify={verify} />
             {/* Whobuy only: most items nobody is buying, so it's one click instead of typing 0. */}
             {field === 'avgWhobuy' && <NoneButton item={item} field={field} verify={verify} />}
-            <PriceInput item={item} field={field} advance verify={verify} />
           </div>
         ) : (
           <PlayerPrice item={item} field={field} />
