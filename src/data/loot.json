@@ -1784,7 +1784,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Repeatable Quest",
@@ -5510,11 +5510,17 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "uaRO"
     ],
     "uses": [
       {
         "for": "Crown of Mistress",
+        "qty": 1
+      },
+      {
+        "for": "King Frog Hat [1]",
         "qty": 1
       }
     ],
@@ -9473,6 +9479,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "frog-hat-0",
+    "name": "Frog Hat [0]",
+    "itemId": 5447,
+    "itemType": "Equipment",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "frozen-bow-1",
     "name": "Frozen Bow [1]",
     "itemId": 1731,
@@ -10443,6 +10474,10 @@
         "for": "Grand Cross",
         "qty": 20,
         "note": "Level 4 weapon quest"
+      },
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -18097,7 +18132,9 @@
     ],
     "categories": [
       "Official Hat Quest",
-      "Skills"
+      "Skills",
+      "Server Hat Quest",
+      "uaRO"
     ],
     "uses": [
       {
@@ -18108,6 +18145,10 @@
         "for": "Waghnak",
         "qty": 1,
         "note": "Smith Knucklebrace"
+      },
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 100
       }
     ],
     "notes": "",
@@ -18907,6 +18948,57 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "poisonous-toad-card",
+    "name": "Poisonous Toad Card",
+    "itemId": 4175,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO",
+      "Card"
+    ],
+    "uses": [
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "poisonous-toad-skin",
+    "name": "Poisonous Toad Skin",
+    "itemId": 7155,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Server Hat Quest",
+      "uaRO"
+    ],
+    "uses": [
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 200
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 140,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -24376,7 +24468,9 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Server Hat Quest",
+      "uaRO"
     ],
     "uses": [
       {
@@ -24390,6 +24484,10 @@
       {
         "for": "Blue Fish",
         "qty": 100
+      },
+      {
+        "for": "King Frog Hat [1]",
+        "qty": 200
       }
     ],
     "notes": "",
