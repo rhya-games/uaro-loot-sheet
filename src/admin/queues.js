@@ -48,12 +48,12 @@ export function canHavePrice(item, field) {
 }
 
 /**
- * Prices to fill in. Two kinds of item, and the half-priced ones come first
- * (they were started and left, so they're the quickest to finish):
- *   - one price is set and another it can have is empty
+ * Prices to fill in. Two kinds of item:
+ *   - one price is set and another it can have is empty (started and left)
  *   - Vend or Whobuy is set (or no action yet), but there's no price
- * Within each, items used in more things come first: their price feeds more
- * Keep decisions.
+ * The items used in the most things come first, whichever kind: their price
+ * feeds the most Keep decisions. Of two items used equally, the half-priced
+ * one goes first, since it's quickest to finish.
  */
 function needsPrice(items) {
   const rows = [];
@@ -68,7 +68,7 @@ function needsPrice(items) {
     }
     if (reasons.length) rows.push({ item, reasons, half });
   }
-  return rows.sort((a, b) => b.half - a.half || b.item.uses.length - a.item.uses.length || byName(a, b));
+  return rows.sort((a, b) => b.item.uses.length - a.item.uses.length || b.half - a.half || byName(a, b));
 }
 
 /**

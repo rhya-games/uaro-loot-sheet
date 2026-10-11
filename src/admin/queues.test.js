@@ -56,16 +56,25 @@ describe('needs-price', () => {
 });
 
 describe('needs-price, half-priced items', () => {
-  it('lists an item with one price set and another empty, ahead of the rest', () => {
+  it('lists an item with one price set and another empty', () => {
     const items = [
-      item({ name: 'Untouched', actions: ['Vend'], uses: [{ for: 'X' }] }),
+      item({ name: 'Untouched', actions: ['Vend'] }),
       item({ name: 'Half', actions: ['Vend'], avgVend: 500 }),
       item({ name: 'Half equipment', itemType: 'Equipment', avgVend: 500 }), // no @whobuy for equipment: complete
       item({ name: 'Complete', actions: ['Vend'], avgVend: 500, avgWhobuy: 0 }),
     ];
     const rows = run('needs-price', items);
-    expect(names(rows)).toEqual(['Half', 'Untouched']);
+    expect(names(rows)).toEqual(['Half', 'Untouched']); // equal uses: half-priced first
     expect(rows[0].reasons).toEqual(['Has a vend price, no @whobuy price']);
+  });
+
+  it('puts the most-used items first, half-priced or not', () => {
+    const items = [
+      item({ name: 'Half, 1 use', actions: ['Vend'], avgVend: 500, uses: [{ for: 'X' }] }),
+      item({ name: 'Untouched, 3 uses', actions: ['Vend'], uses: [{ for: 'X' }, { for: 'Y' }, { for: 'Z' }] }),
+      item({ name: 'Untouched, 0 uses', actions: ['Vend'] }),
+    ];
+    expect(names(run('needs-price', items))).toEqual(['Untouched, 3 uses', 'Half, 1 use', 'Untouched, 0 uses']);
   });
 });
 
