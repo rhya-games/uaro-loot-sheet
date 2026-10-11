@@ -11955,7 +11955,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Pet Evolution",
@@ -12134,13 +12134,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
+    "avgVend": 140000,
     "avgWhobuy": null,
     "sellValue": 100000,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "gold-acidus-card",
@@ -28072,13 +28072,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
+    "avgVend": 1000,
     "avgWhobuy": null,
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "steel-arrow-quiver",

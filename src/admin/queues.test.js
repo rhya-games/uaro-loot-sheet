@@ -34,6 +34,18 @@ describe('needs-price', () => {
     expect(names(run('needs-price', items))).toEqual(['B', 'A', 'Whobuy only']);
   });
 
+  it('lists items with no action yet, so they can get a price (and then an action)', () => {
+    const items = [
+      item({ name: 'Unsure' }),
+      item({ name: 'Equipment', itemType: 'Equipment' }),
+      item({ name: 'Shop item', npcBuyable: 'yes' }),
+      item({ name: 'Priced', avgVend: 500, avgWhobuy: 400 }),
+    ];
+    expect(names(run('needs-price', items))).toEqual(['Equipment', 'Unsure']);
+    // Equipment has no @whobuy, so it only needs a vend price.
+    expect(run('needs-price', items)[0].reasons).toEqual(['No action yet, no vend price']);
+  });
+
   it("skips items NPCs sell, and cards (there's no @whobuy for them)", () => {
     const items = [
       item({ name: 'Shop item', actions: ['Vend'], npcBuyable: 'yes' }),

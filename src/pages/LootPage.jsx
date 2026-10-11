@@ -7,6 +7,7 @@ import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
 import ShareButton from '../components/ShareButton.jsx';
 import NoResults from '../components/NoResults.jsx';
+import LoadingItems from '../components/LoadingItems.jsx';
 import AdminToggle from '../admin/AdminToggle.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 import { createSearch, wordMatcher } from '../utils/search.js';
@@ -74,7 +75,7 @@ export default function LootPage() {
     () => readPreference('keepFor', null) ?? (readPreference('ignoreKeep', false) ? [] : ALL_ACTIVITY_IDS),
   );
   // loot.json, plus any prices saved in admin mode since the page loaded.
-  const { items: loot, enabled: adminOn } = useAdmin();
+  const { items: loot, status, enabled: adminOn } = useAdmin();
   // Admin mode needs the real actions (to compare with suggestions), so it
   // shows everything. The player's setting is remembered for afterwards.
   const keepFor = adminOn ? ALL_ACTIVITY_IDS : keepForSetting;
@@ -359,7 +360,11 @@ export default function LootPage() {
       ) : (
         <div className="flex min-h-7 flex-wrap items-center gap-x-4 gap-y-2">
           <p className="text-sm text-muted" aria-live="polite">
-            {results.length.toLocaleString('en-US')} of {loot.length.toLocaleString('en-US')} items
+            {status === 'ready'
+              ? `${results.length.toLocaleString('en-US')} of ${loot.length.toLocaleString('en-US')} items`
+              : status === 'failed'
+                ? 'Items not loaded'
+                : 'Loading items…'}
           </p>
           <ActiveFilters
             filters={filters}
@@ -451,7 +456,9 @@ export default function LootPage() {
           className={`min-w-0 space-y-4 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
         >
           {toolbar}
-          {results.length === 0 ? (
+          {status !== 'ready' ? (
+            <LoadingItems failed={status === 'failed'} />
+          ) : results.length === 0 ? (
             <NoResults
               query={query}
               filterCount={activeFilterCount}
