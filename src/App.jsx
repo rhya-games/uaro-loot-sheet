@@ -39,8 +39,8 @@ const PAGES = {
 
 /** The search popover with the items the site shows (admin mode's edited ones, under `npm run dev`). */
 function AppSearch({ open, onClose }) {
-  const { items } = useAdmin();
-  return <SearchPalette open={open} onClose={onClose} items={items} />;
+  const { items, status } = useAdmin();
+  return <SearchPalette open={open} onClose={onClose} items={items} status={status} />;
 }
 
 /**

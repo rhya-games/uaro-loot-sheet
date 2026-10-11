@@ -19,8 +19,9 @@ import { EMPTY_VIEW, viewToHash } from '../utils/viewUrl.js';
  *   open    - whether the popover is showing
  *   onClose - called when it should close (Escape, a click outside, or a pick)
  *   items   - the items to search (the site's items, or admin mode's edited ones)
+ *   status  - 'loading', 'ready' or 'failed': whether the items have arrived
  */
-export default function SearchPalette({ open, onClose, items }) {
+export default function SearchPalette({ open, onClose, items, status }) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -68,13 +69,13 @@ export default function SearchPalette({ open, onClose, items }) {
       className="panel mx-auto mt-[max(1rem,calc(50dvh-13rem))] mb-auto max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-xl overflow-hidden p-0 text-body backdrop:bg-black/50"
     >
       {/* Mounted only while open, so every opening starts with an empty box. */}
-      {open && <PaletteBody items={items} onClose={onClose} />}
+      {open && <PaletteBody items={items} status={status} onClose={onClose} />}
     </dialog>
   );
 }
 
 /** The input and the results. See SearchPalette for the props. */
-function PaletteBody({ items, onClose }) {
+function PaletteBody({ items, status, onClose }) {
   const listId = useId();
   const [query, setQuery] = useState('');
   const [highlight, setHighlight] = useState(0);
@@ -182,10 +183,21 @@ function PaletteBody({ items, onClose }) {
         )}
       </ul>
 
-      {query.trim() === '' && (
+      {/* Typing still works while the items download; results appear when they arrive. */}
+      {status === 'loading' && (
+        <p role="status" className="px-4 py-6 text-center text-sm text-muted">
+          Loading items…
+        </p>
+      )}
+      {status === 'failed' && (
+        <p role="alert" className="px-4 py-6 text-center text-sm text-muted">
+          The items couldn’t be loaded. Check your connection, then reload the page.
+        </p>
+      )}
+      {status === 'ready' && query.trim() === '' && (
         <p className="px-4 py-6 text-center text-sm text-muted">Type to find an item. Press Esc to close.</p>
       )}
-      {query.trim() !== '' && results.length === 0 && (
+      {status === 'ready' && query.trim() !== '' && results.length === 0 && (
         <p className="px-4 py-6 text-center text-sm text-muted">No items found.</p>
       )}
     </div>
