@@ -15,10 +15,11 @@ import { scrollToId } from '../utils/scroll.js';
  * Long pages pass `contents` (a list of `{ id, title }` matching their
  * Sections' `id`s): on wide screens a sticky list of jump links fills the
  * space beside the column, so the text keeps a readable line length.
+ * A page can pass its own `side` (a SideNav) instead, as the admin pages do.
  */
-export function Page({ title, intro, contents, children }) {
+export function Page({ title, intro, contents, side, children }) {
   const column = (
-    <div className={`min-w-0 flex-1 space-y-6 ${contents ? 'max-w-3xl' : ''}`}>
+    <div className={`min-w-0 flex-1 space-y-6 ${contents || side ? 'max-w-3xl' : ''}`}>
       <header className="space-y-2">
         <h1 className="text-3xl font-semibold text-fg">{title}</h1>
         {intro && <p className="text-lg text-muted">{intro}</p>}
@@ -27,11 +28,13 @@ export function Page({ title, intro, contents, children }) {
     </div>
   );
 
-  if (!contents) return <div className="mx-auto flex max-w-3xl text-body">{column}</div>;
+  if (!contents && !side) return <div className="mx-auto flex max-w-3xl text-body">{column}</div>;
 
+  // Stacked below lg, where the sidebar is hidden (a page can put its own
+  // narrow-screen list in `side`).
   return (
-    <div className="mx-auto flex max-w-5xl items-start gap-10 text-body">
-      <Contents entries={contents} />
+    <div className="mx-auto max-w-5xl text-body lg:flex lg:items-start lg:gap-10">
+      {side ?? <Contents entries={contents} />}
       {column}
     </div>
   );
@@ -84,12 +87,33 @@ export function PageLink({ href, children }) {
   );
 }
 
-/**
- * The "On this page" jump list. The section the reader is in is
- * marked with a thicker green bar and bold text.
- */
+/** The "On this page" jump list: one button per section, scrolling to it. */
 function Contents({ entries }) {
   const [activeId, choose] = useActiveSection(entries);
+  return (
+    <SideNav label="On this page" activeKey={activeId}>
+      {entries.map((entry) => (
+        <SideNavItem
+          key={entry.id}
+          active={entry.id === activeId}
+          onClick={() => {
+            choose(entry.id);
+            scrollToId(entry.id);
+          }}
+        >
+          {entry.title}
+        </SideNavItem>
+      ))}
+    </SideNav>
+  );
+}
+
+/**
+ * The sticky list beside the page column (wide screens only). Its entries
+ * are `SideNavItem`s. `activeKey` changes when the active entry does, so the
+ * list can scroll it into view.
+ */
+export function SideNav({ label, activeKey, children }) {
   const listRef = useRef(null);
 
   // A long list scrolls inside its own box: keep the active entry in view
@@ -104,37 +128,50 @@ function Contents({ entries }) {
     else if (top + active.offsetHeight > list.scrollTop + list.clientHeight) {
       list.scrollTop = top + active.offsetHeight - list.clientHeight;
     }
-  }, [activeId]);
+  }, [activeKey]);
 
   return (
-    <nav aria-label="On this page" className="sticky top-24 hidden w-48 shrink-0 pt-14 lg:block">
+    <nav aria-label={label} className="sticky top-24 hidden w-48 shrink-0 pt-14 lg:block">
       {/* Never taller than the room under the header, so no entry is out of reach. The side
           padding and negative margin keep the focus rings from being clipped. */}
       <ul ref={listRef} className="-mx-1 max-h-[calc(100vh-11rem)] overflow-y-auto px-1 text-sm">
-        {entries.map((entry) => {
-          const active = entry.id === activeId;
-          return (
-            <li key={entry.id}>
-              <button
-                type="button"
-                onClick={() => {
-                  choose(entry.id);
-                  scrollToId(entry.id);
-                }}
-                aria-current={active ? 'location' : undefined}
-                className={`block w-full py-1.5 text-left ${
-                  active
-                    ? 'border-l-4 border-accent pl-2.5 font-semibold text-accent'
-                    : 'border-l-2 border-line-strong pl-3 text-muted hover:text-fg'
-                }`}
-              >
-                {entry.title}
-              </button>
-            </li>
-          );
-        })}
+        {children}
       </ul>
     </nav>
+  );
+}
+
+/**
+ * One entry of a SideNav: a button (`onClick`) or a link (`href`). The
+ * active one gets a thicker green bar and bold text. `trailing` is a small
+ * value on the right, such as a count.
+ */
+export function SideNavItem({ active, onClick, href, trailing, children }) {
+  const className = `flex w-full items-baseline justify-between gap-2 py-1.5 text-left ${
+    active
+      ? 'border-l-4 border-accent pl-2.5 font-semibold text-accent'
+      : 'border-l-2 border-line-strong pl-3 text-muted hover:text-fg'
+  }`;
+  const content = (
+    <>
+      <span>{children}</span>
+      {trailing != null && <span className="font-normal text-muted tabular-nums">{trailing}</span>}
+    </>
+  );
+  const current = active ? (href ? 'page' : 'location') : undefined;
+
+  return (
+    <li>
+      {href ? (
+        <a href={href} aria-current={current} className={className}>
+          {content}
+        </a>
+      ) : (
+        <button type="button" onClick={onClick} aria-current={current} className={className}>
+          {content}
+        </button>
+      )}
+    </li>
   );
 }
 
