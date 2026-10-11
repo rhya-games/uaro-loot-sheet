@@ -47,6 +47,34 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '0.8.0',
+    date: '2026-10-10',
+    title: 'A short guide for new visitors',
+    changes: [
+      { type: 'Added', text: 'A short welcome box shows how to use the sheet on your first visit. The same steps are on the About page.' },
+      { type: 'Changed', text: 'The About page is easier to scan, with short steps and a list of what each mark means.' },
+    ],
+  },
+  {
+    version: '0.7.0',
+    date: '2026-10-09',
+    title: 'Item icons, and clearer empty values',
+    changes: [
+      { type: 'Added', text: 'Every item now shows its in-game icon next to its name.' },
+      { type: 'Changed', text: 'Empty values are clearer: ? means not checked yet, and None, No sellers and No buyers mean it was checked.' },
+      { type: 'Changed', text: 'The table now uses the full width of the window, and rows no longer alternate colors.' },
+    ],
+  },
+  {
+    version: '0.6.0',
+    date: '2026-10-08',
+    title: 'Actions now follow the prices',
+    changes: [
+      { type: 'Changed', text: 'Actions updated for 315 items to match their prices, 18 of them for the first time.' },
+      { type: 'Changed', text: 'Keep is never the only action now: items you keep also show how to sell the extras.' },
+    ],
+  },
+  {
     version: '0.5.0',
     date: '2026-09-27',
     title: 'More quest uses, and two new items',

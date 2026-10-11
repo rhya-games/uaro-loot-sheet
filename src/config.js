@@ -5,7 +5,7 @@ import { FlagIcon } from '@heroicons/react/24/outline';
  */
 
 /** The GitHub repository for this project. */
-export const GITHUB_REPO_URL = 'https://github.com/rhya-ragnarok/uaro-loot-sheet';
+export const GITHUB_REPO_URL = 'https://github.com/rhya-games/uaro-loot-sheet';
 
 /** Discord thread for feedback and questions. Set to null to hide it. */
 export const DISCORD_FEEDBACK_THREAD_URL = 'https://discord.com/channels/702960460168953946/1552378187885838428';

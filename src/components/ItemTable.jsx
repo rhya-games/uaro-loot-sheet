@@ -3,6 +3,7 @@ import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import { highlightFor } from '../utils/highlight.js';
 import ItemUses from './ItemUses.jsx';
 import CopyItemId from './CopyItemId.jsx';
+import ItemIcon from './ItemIcon.jsx';
 import RowActions from './RowActions.jsx';
 import Tooltip from './Tooltip.jsx';
 import VerifiedText from './VerifiedText.jsx';
@@ -33,18 +34,21 @@ const COLUMNS = [
     title: 'Item name, type and ID',
     className: 'min-w-48',
     render: (item) => (
-      <>
-        <div className="font-medium text-fg">{item.name}</div>
-        <div className="mt-0.5 text-sm text-muted">
-          {item.itemType}
-          {item.itemId && (
-            <>
-              {' · '}
-              <CopyItemId itemId={item.itemId} />
-            </>
-          )}
+      <div className="flex items-center gap-2.5">
+        <ItemIcon item={item} />
+        <div>
+          <div className="font-medium text-fg">{item.name}</div>
+          <div className="mt-0.5 text-sm text-muted">
+            {item.itemType}
+            {item.itemId && (
+              <>
+                {' · '}
+                <CopyItemId itemId={item.itemId} />
+              </>
+            )}
+          </div>
         </div>
-      </>
+      </div>
     ),
   },
   {
@@ -63,7 +67,7 @@ const COLUMNS = [
   {
     label: 'Category',
     sortKey: 'categories',
-    title: 'Where the item is used',
+    title: 'What kind of content the item belongs to',
     render: (item) => (
       <div className="flex flex-wrap gap-1">
         <CategoryBadges categories={item.categories} />
@@ -82,14 +86,14 @@ const COLUMNS = [
   {
     label: 'Vend',
     sortKey: 'avgVend',
-    title: 'Average price in player vending shops\n✕ can’t be vended · None: nobody was selling · —: not checked yet',
+    title: 'Average price in player vending shops\n✕ can’t be vended · No sellers: none when checked in game · ?: not verified yet',
     numeric: true,
     render: (item) => <PriceCell item={item} field="avgVend" />,
   },
   {
     label: 'Whobuy',
     sortKey: 'avgWhobuy',
-    title: 'Average price players pay through @whobuy\n✕ can’t be sold this way · None: nobody was buying · —: not checked yet',
+    title: 'Average price players pay through @whobuy\n✕ can’t be sold this way · No buyers: none when checked in game · ?: not verified yet',
     numeric: true,
     render: (item) => <PriceCell item={item} field="avgWhobuy" />,
   },
@@ -114,30 +118,27 @@ const COLUMNS = [
     nowrap: true,
     title: 'When the vend or @whobuy price was last checked in game',
     render: (item) => (
-      // isolate keeps the flag's z-30 inside this cell, so it can't cover the sticky header.
-      <div className="relative isolate">
+      <div className="flex items-center justify-between gap-2">
         <VerifiedText item={item} />
-        <FloatingRowActions item={item} />
+        <QuietRowActions item={item} />
       </div>
     ),
   },
 ];
 
 /**
- * Report Issue, floating over the right of the Verified cell when the row is
- * hovered or focused (always on touch screens, which can't hover). Reports are
- * mostly about prices, so it sits by the "last checked" date, and takes no
- * room. Hidden in admin mode, where you fix things instead of reporting them.
+ * Report Issue, after the "last checked" date in the Verified cell: reports
+ * are mostly about prices, so it sits by the date. It's always there but
+ * quiet (faded, like the "?" mark) and comes to full strength under the
+ * pointer or keyboard focus. The negative margin keeps it from making the
+ * row taller. Hidden in admin mode, where you fix things instead of
+ * reporting them.
  */
-function FloatingRowActions({ item }) {
+function QuietRowActions({ item }) {
   const { enabled } = useAdmin();
   if (enabled) return null;
   return (
-    <div
-      className="absolute -top-1.5 right-0 z-30 rounded-full bg-surface opacity-0 shadow-sm transition-opacity duration-150
-        group-hover:opacity-100 focus-within:opacity-100 motion-reduce:transition-none
-        [@media(hover:none)]:opacity-100"
-    >
+    <div className="-my-1.5 opacity-50 transition-opacity duration-150 hover:opacity-100 focus-within:opacity-100 motion-reduce:transition-none">
       <RowActions item={item} />
     </div>
   );
@@ -156,7 +157,7 @@ function FloatingRowActions({ item }) {
  */
 export default function ItemTable({ items, sort, onSort, onSelectUse, highlightUses }) {
   return (
-    <table className="panel w-full border-separate border-spacing-0 text-sm">
+    <table className="w-full border-separate border-spacing-0 text-sm">
       {/* Header rings are drawn inside each cell, so no gap fill around them. */}
       <thead className="[--focus-gap:transparent]">
         <tr>
@@ -169,17 +170,13 @@ export default function ItemTable({ items, sort, onSort, onSelectUse, highlightU
                 aria-sort={
                   !column.sortKey ? undefined : direction === 'asc' ? 'ascending' : direction === 'desc' ? 'descending' : 'none'
                 }
-                // Sticks 1rem below the top of the window (lined up with the sidebar).
-                // Two shadows: the first paints the page background above it, so rows
-                // scrolling past don't show through that gap; the second paints 1px of
-                // green to the right, hiding hairline seams between header cells.
-                // In the narrow scroll box (see ItemList) it sticks to the box's top instead.
+                // Sticks to the top of the window (in the narrow scroll box, see ItemList, to
+                // the box's top). The 1px of green to the right hides hairline seams between
+                // header cells.
                 // Sortable headers have no padding: their button fills the cell (see SortButton).
-                className={`sticky top-4 z-10 bg-header font-semibold whitespace-nowrap text-white
+                className={`sticky top-0 z-10 bg-header font-semibold whitespace-nowrap text-white
                   ${column.sortKey ? 'p-0' : 'h-11 px-3'}
-                  shadow-[0_-1rem_0_0_var(--color-page),1px_0_0_0_var(--color-header)]
-                  first:rounded-tl-lg last:rounded-tr-lg last:shadow-[0_-1rem_0_0_var(--color-page)]
-                  @max-table-fit:top-0 @max-table-fit:shadow-[1px_0_0_0_var(--color-header)]
+                  shadow-[1px_0_0_0_var(--color-header)] last:shadow-none
                   ${column.numeric ? 'text-right' : 'text-left'} ${column.className ?? ''}`}
               >
                 {column.sortKey ? (
@@ -212,7 +209,7 @@ export default function ItemTable({ items, sort, onSort, onSelectUse, highlightU
  */
 const ItemRow = memo(function ItemRow({ item, onSelectUse, highlightUses }) {
   return (
-    <tr className="group even:bg-subtle hover:bg-accent-soft">
+    <tr className="group">
       {COLUMNS.map((column) => (
         <td
           key={column.label}

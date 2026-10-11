@@ -1,6 +1,6 @@
-/** 15500 -> "15,500z". null/undefined -> "—" (no data). */
+/** 15500 -> "15,500z". null/undefined -> "?" (not checked yet). */
 export function formatZeny(value) {
-  if (value == null) return '—';
+  if (value == null) return '?';
   return `${value.toLocaleString('en-US')}z`;
 }
 

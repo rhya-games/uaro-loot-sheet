@@ -134,6 +134,14 @@
     cursor: pointer;
   }
 
+  /* Keeps a focused or jumped-to element in view: far enough from the top that the
+     table's sticky header (44px) doesn't cover it, and from the bottom so the
+     back-to-top button doesn't. */
+  html {
+    scroll-padding-top: 4rem;
+    scroll-padding-bottom: 4.5rem;
+  }
+
   /* Icons (Heroicons outline, https://heroicons.com) all use the same line
      weight: 2 instead of the library's 1.5, so they read clearly. Sizes: size-5
      (20px) for icons on their own, size-4 (16px) for icons inside a line of text. */
@@ -150,6 +158,14 @@
 /* The box used for the filter sidebar, the item table, and item cards. */
 @utility panel {
   @apply rounded-lg border border-line bg-surface shadow-sm;
+}
+
+/*
+ * "None" and the "?" icon: quieter than muted text, so they don't look like
+ * a note or a hint (see the note about opacity above).
+ */
+@utility empty-value {
+  @apply text-muted opacity-60;
 }
 
 /*

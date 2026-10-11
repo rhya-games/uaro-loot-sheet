@@ -1,7 +1,7 @@
 # uaro-loot-sheet
 Rhya's uaRO Loot Sheet: quickly determine what to do with your loot.
 
-Live: https://rhya-ragnarok.github.io/uaro-loot-sheet/
+Live: https://rhya-games.github.io/uaro-loot-sheet/
 
 ## Running it locally
 

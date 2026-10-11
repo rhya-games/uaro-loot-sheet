@@ -48,6 +48,11 @@ describe('createSuggester', () => {
     expect(createSuggester([part])(part).actions).toEqual(['Keep', 'Vend']);
   });
 
+  it('never suggests Keep alone: with no player price yet, Vend goes next to it', () => {
+    const part = item({ name: 'Part', uses: [{ for: 'Some Quest', qty: 5 }] });
+    expect(createSuggester([part])(part).actions).toEqual(['Keep', 'Vend']);
+  });
+
   it('keeps for a quest even when a value is set for it', () => {
     const part = item({ name: 'Part', avgVend: 1000, uses: [{ for: 'Sign Quest', qty: 5 }] });
     const values = new Map([['Sign Quest', 0]]);

@@ -151,7 +151,7 @@ export default memo(function FilterSidebar({
         selectAllLabel="Select all categories"
       />
 
-      <CheckboxGroup title="Used For" searchable {...groupProps('usedFor', usedForOptions)} />
+      <CheckboxGroup title="Used For" searchable skipTo="results" {...groupProps('usedFor', usedForOptions)} />
     </div>
   );
 });
