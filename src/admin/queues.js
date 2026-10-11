@@ -73,9 +73,19 @@ export function pricePriority(item) {
 }
 
 /**
+ * Targets the parts can't place: every part is in both hat quest categories,
+ * so there is no vote. Set by hand (the maintainer), as target name -> tier.
+ */
+const TARGET_PRIORITY_OVERRIDES = {
+  'Bunny Band': PRICE_PRIORITY['Official Hat Quest'],
+  'Kitsune Mask': PRICE_PRIORITY['Official Hat Quest'],
+};
+
+/**
  * The same priority for a "Used For" target (a hat, a pet evolution, a
  * weapon quest), which has no categories of its own. Its parts' categories
  * say what it is:
+ *   - A target in TARGET_PRIORITY_OVERRIDES uses that tier.
  *   - "<pet> Pet Evolution" (some have a note after it) is a pet evolution.
  *   - Otherwise each part votes with its quest categories (Server Hat Quest,
  *     Other Quest, Official Hat Quest...). A part also used for something
@@ -88,6 +98,7 @@ export function pricePriority(item) {
  * `partItems` are the loot items that are parts of the target.
  */
 export function targetPriority(targetName, partItems) {
+  if (targetName in TARGET_PRIORITY_OVERRIDES) return TARGET_PRIORITY_OVERRIDES[targetName];
   if (/ Pet Evolution\b/.test(targetName)) return PRICE_PRIORITY['Pet Evolution'];
   const votes = new Map();
   for (const item of partItems) {

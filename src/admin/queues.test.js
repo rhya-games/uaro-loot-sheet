@@ -125,6 +125,12 @@ describe('targetPriority', () => {
     expect(targetPriority('Food', [part('Cooking'), part('Official Hat Quest', 'Cooking')])).toBe(3);
   });
 
+  it('uses the hand-set tier for targets the parts cannot place', () => {
+    const both = part('Server Hat Quest', 'Official Hat Quest');
+    expect(targetPriority('Bunny Band', [both])).toBe(3);
+    expect(targetPriority('Kitsune Mask', [both])).toBe(3);
+  });
+
   it('skips parts that could belong to either hat quest, then falls back to the default', () => {
     const both = part('Server Hat Quest', 'Official Hat Quest');
     expect(targetPriority('Hat', [both, part('Official Hat Quest')])).toBe(3);
