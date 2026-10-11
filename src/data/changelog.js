@@ -47,6 +47,16 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '0.10.0',
+    date: '2026-10-11',
+    title: 'More checked prices, and a faster start',
+    changes: [
+      { type: 'Added', text: 'Vend and @whobuy prices updated for 117 items, all checked in game today. Actions updated for 38 of them to match.' },
+      { type: 'Added', text: 'Links to the sheet now show a preview picture and description when you share them in chat.' },
+      { type: 'Changed', text: 'The page opens faster: the header and search box show while the items load.' },
+    ],
+  },
+  {
     version: '0.9.0',
     date: '2026-10-10',
     title: 'Easier to find your way around the text pages',
