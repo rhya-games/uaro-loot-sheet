@@ -65,7 +65,8 @@ export default function QueueRow({ item, fields, onEnter, onLeave, action, verif
       <div className="col-span-2 md:col-span-1">
         <p className="font-medium text-fg">{item.name}</p>
         <p className="text-xs text-muted">
-          <CopyItemId itemId={item.itemId} /> · {item.itemType} · NPC {formatZeny(npcSellPrice(item))}
+          {/* The two chat commands you type in game to look the item up; one click copies each. */}
+          <CopyItemId itemId={item.itemId} command="@ws" /> · <CopyItemId itemId={item.itemId} command="@wb" /> · {item.itemType} · NPC {formatZeny(npcSellPrice(item))}
         </p>
         <p className="text-xs text-muted">{usesText(item)}</p>
       </div>

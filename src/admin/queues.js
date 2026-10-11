@@ -37,6 +37,17 @@ export function needsField(item, field) {
 }
 
 /**
+ * Whether this price can be set at all for the item: it can be traded, NPCs
+ * don't sell it, and (for @whobuy) it isn't a card or equipment. The queue
+ * rows show a box for every such price, so Vend and Whobuy can both be
+ * filled in before the row leaves the list.
+ */
+export function canHavePrice(item, field) {
+  if (isSoldByNpc(item) || !isTradeable(item)) return false;
+  return field === 'avgVend' || hasWhobuy(item);
+}
+
+/**
  * Vend or Whobuy is set, but there's no price to back it up. Items used in
  * more things come first: their price feeds more Keep decisions.
  */

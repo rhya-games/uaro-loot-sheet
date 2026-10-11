@@ -14937,13 +14937,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
+    "avgVend": 10000,
     "avgWhobuy": null,
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "immortal-heart",
