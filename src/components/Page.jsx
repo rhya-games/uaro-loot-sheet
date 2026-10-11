@@ -7,10 +7,13 @@
  *   body text        16px
  */
 
-/** The page frame: a narrow readable column with the page title on top. */
-export function Page({ title, intro, children }) {
+/**
+ * The page frame: a narrow readable column with the page title on top.
+ * `wide` lets pages that lay sections out in a grid use more of the window.
+ */
+export function Page({ title, intro, wide = false, children }) {
   return (
-    <div className="mx-auto max-w-3xl space-y-6 text-body">
+    <div className={`mx-auto space-y-6 text-body ${wide ? 'max-w-5xl' : 'max-w-3xl'}`}>
       <header className="space-y-2">
         <h1 className="text-3xl font-semibold text-fg">{title}</h1>
         {intro && <p className="text-lg text-muted">{intro}</p>}
@@ -20,10 +23,10 @@ export function Page({ title, intro, children }) {
   );
 }
 
-/** One white panel with a section title. */
-export function Section({ title, children }) {
+/** One white panel with a section title. `className` adds layout classes. */
+export function Section({ title, className = '', children }) {
   return (
-    <section className="panel space-y-3 p-6">
+    <section className={`panel space-y-3 p-6 ${className}`}>
       <h2 className="text-xl font-semibold text-fg">{title}</h2>
       {children}
     </section>

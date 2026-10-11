@@ -2,44 +2,49 @@ import { BulletList, ExternalLink, Page, PageLink, Section } from '../components
 import { CONTRIBUTING_URL, DISCORD_FEEDBACK_THREAD_URL, GENERAL_ISSUE_URL } from '../config.js';
 import { ROUTES } from '../utils/route.js';
 
+// Cards in the grid: the "Best for" line sits at the bottom so rows line up.
+const CARD = 'flex flex-col';
+
 /** Every way to report a problem or share an idea, and when to use each. */
 export default function FeedbackPage() {
   return (
-    <Page title="Feedback" intro="Spotted a wrong price, a missing item, or have an idea? Here's how to tell us.">
-      <Section title="Report a problem with one item">
+    <Page wide title="Feedback" intro="Spotted a wrong price, a missing item, or have an idea? Here's how to tell us.">
+      <div className="grid gap-6 md:grid-cols-2">
+      <Section title="Report a problem with one item" className={CARD}>
         <p>
           On the <PageLink href={ROUTES.loot}>Loot Sheet</PageLink>, point at the item's row and click the <strong>flag</strong>
           (Report Issue) that appears in the Verified column. It opens a short GitHub form with the item already filled in.
         </p>
-        <p className="text-muted">Best for: wrong actions, categories, uses, or prices. Needs a free GitHub account.</p>
+        <p className="mt-auto pt-1 text-muted">Best for: wrong actions, categories, uses, or prices. Needs a free GitHub account.</p>
       </Section>
 
       {DISCORD_FEEDBACK_THREAD_URL && (
-        <Section title="Discord feedback thread">
+        <Section title="Discord feedback thread" className={CARD}>
           <p>
             Post in the <ExternalLink href={DISCORD_FEEDBACK_THREAD_URL}>loot sheet feedback thread</ExternalLink> on
             Discord.
           </p>
-          <p className="text-muted">Best for: quick questions, suggestions, and anything you'd like to discuss.</p>
+          <p className="mt-auto pt-1 text-muted">Best for: quick questions, suggestions, and anything you'd like to discuss.</p>
         </Section>
       )}
 
-      <Section title="GitHub issues">
+      <Section title="GitHub issues" className={CARD}>
         <p>
           <ExternalLink href={GENERAL_ISSUE_URL}>Open an issue on GitHub</ExternalLink> for bugs in the site itself or
           ideas for new features.
         </p>
-        <p className="text-muted">Best for: things that aren't about one item. Needs a free GitHub account.</p>
+        <p className="mt-auto pt-1 text-muted">Best for: things that aren't about one item. Needs a free GitHub account.</p>
       </Section>
 
-      <Section title="Help fix it yourself">
+      <Section title="Help fix it yourself" className={CARD}>
         <p>
           All item data lives in one file anyone can edit, no coding needed. The{' '}
           <ExternalLink href={CONTRIBUTING_URL}>contributing guide</ExternalLink> walks you through changing it on
           GitHub, step by step.
         </p>
-        <p className="text-muted">Best for: when you know the right answer and want it fixed quickly.</p>
+        <p className="mt-auto pt-1 text-muted">Best for: when you know the right answer and want it fixed quickly.</p>
       </Section>
+      </div>
 
       <Section title="What to include">
         <BulletList>
