@@ -3,6 +3,7 @@ import CopyItemId from '../components/CopyItemId.jsx';
 import { PlayerPrice } from '../components/StatusIcons.jsx';
 import { formatZeny } from '../utils/format.js';
 import { npcSellPrice } from '../utils/prices.js';
+import { canHavePrice } from './queues.js';
 
 /** The columns from tablet width up: item, Vend, Whobuy, and a button if the queue has one. */
 const COLUMNS = 'md:grid-cols-[1fr_7rem_7rem]';
@@ -65,24 +66,34 @@ export default function QueueRow({ item, fields, onEnter, onLeave, action, verif
       <div className="col-span-2 md:col-span-1">
         <p className="font-medium text-fg">{item.name}</p>
         <p className="text-xs text-muted">
-          {/* The two chat commands you type in game to look the item up; one click copies each. */}
-          <CopyItemId itemId={item.itemId} command="@ws" /> · <CopyItemId itemId={item.itemId} command="@wb" /> · {item.itemType} · NPC {formatZeny(npcSellPrice(item))}
+          <CopyItemId itemId={item.itemId} /> · {item.itemType} · NPC {formatZeny(npcSellPrice(item))}
         </p>
         <p className="text-xs text-muted">{usesText(item)}</p>
       </div>
-      <PriceCell item={item} field="avgVend" label="Vend" editable={fields.includes('avgVend')} verify={verifyOnSave} />
-      <PriceCell item={item} field="avgWhobuy" label="Whobuy" editable={fields.includes('avgWhobuy')} verify={verifyOnSave} />
+      <PriceCell item={item} field="avgVend" label="Vend" command="@ws" editable={fields.includes('avgVend')} verify={verifyOnSave} />
+      <PriceCell item={item} field="avgWhobuy" label="Whobuy" command="@wb" editable={fields.includes('avgWhobuy')} verify={verifyOnSave} />
       {action && <div className="col-span-2 flex justify-end md:col-span-1">{action}</div>}
     </li>
   );
 }
 
-/** A price box (`editable`); otherwise the price as the loot sheet shows it. */
-function PriceCell({ item, field, label, editable, verify }) {
+/**
+ * A price box (`editable`); otherwise the price as the loot sheet shows it.
+ * Under it, a button that copies the in-game chat command for that price
+ * ("@ws 969" looks up vendors, "@wb 969" buyers), for prices that can exist.
+ */
+function PriceCell({ item, field, label, command, editable, verify }) {
   return (
     <div className="flex items-start justify-between gap-2 md:justify-end">
       <span className="text-xs text-muted md:hidden">{label}</span>
-      {editable ? <PriceInput item={item} field={field} advance verify={verify} /> : <PlayerPrice item={item} field={field} />}
+      <div className="flex flex-col items-end gap-1">
+        {editable ? <PriceInput item={item} field={field} advance verify={verify} /> : <PlayerPrice item={item} field={field} />}
+        {canHavePrice(item, field) && (
+          <span className="text-xs text-muted">
+            <CopyItemId itemId={item.itemId} command={command} />
+          </span>
+        )}
+      </div>
     </div>
   );
 }

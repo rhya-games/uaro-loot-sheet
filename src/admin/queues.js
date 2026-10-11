@@ -48,8 +48,12 @@ export function canHavePrice(item, field) {
 }
 
 /**
- * Vend or Whobuy is set, but there's no price to back it up. Items used in
- * more things come first: their price feeds more Keep decisions.
+ * Prices to fill in. Two kinds of item, and the half-priced ones come first
+ * (they were started and left, so they're the quickest to finish):
+ *   - one price is set and another it can have is empty
+ *   - Vend or Whobuy is set (or no action yet), but there's no price
+ * Within each, items used in more things come first: their price feeds more
+ * Keep decisions.
  */
 function needsPrice(items) {
   const rows = [];
@@ -58,9 +62,13 @@ function needsPrice(items) {
     const noAction = item.actions.length === 0;
     if (needsField(item, 'avgVend')) reasons.push(noAction ? 'No action yet, no vend price' : 'Vend action, no vend price');
     if (needsField(item, 'avgWhobuy')) reasons.push(noAction ? 'No action yet, no @whobuy price' : 'Whobuy action, no @whobuy price');
-    if (reasons.length) rows.push({ item, reasons });
+    const half = hasPlayerPrice(item) && (canHavePrice(item, 'avgVend') && item.avgVend == null || canHavePrice(item, 'avgWhobuy') && item.avgWhobuy == null);
+    if (half && !reasons.length) {
+      reasons.push(item.avgVend == null ? 'Has a @whobuy price, no vend price' : 'Has a vend price, no @whobuy price');
+    }
+    if (reasons.length) rows.push({ item, reasons, half });
   }
-  return rows.sort((a, b) => b.item.uses.length - a.item.uses.length || byName(a, b));
+  return rows.sort((a, b) => b.half - a.half || b.item.uses.length - a.item.uses.length || byName(a, b));
 }
 
 /**
