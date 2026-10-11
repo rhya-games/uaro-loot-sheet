@@ -1,5 +1,5 @@
-import { useCallback, useMemo, useRef, useState } from 'react';
-import { ADMIN_AVAILABLE, AdminContext, REVIEWED, SITE_ITEMS } from './useAdmin.js';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ADMIN_AVAILABLE, AdminContext, NO_ITEMS, REVIEWED, loadItems } from './useAdmin.js';
 import { createSuggester, TARGET_VALUES } from '../utils/suggest.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import UndoSnackbar from './UndoSnackbar.jsx';
@@ -18,7 +18,8 @@ import UndoSnackbar from './UndoSnackbar.jsx';
  * The table reads admin state from this context instead of props, so the
  * memo'd item list doesn't need new props to show or hide the editors.
  * The loot page reads `items` from here too (on the published site it's
- * just loot.json).
+ * just loot.json, which loads after the page first draws: `status` is
+ * 'loading' until then, or 'failed' if the download didn't work).
  *
  * Every save remembers what it changed (including actions it updated on
  * other items), and a snackbar offers to undo the latest one.
@@ -75,7 +76,8 @@ const actionsNote = (count) => (count ? ` · actions updated on ${count} item${c
 
 export function AdminProvider({ children }) {
   const [enabled, setEnabled] = useState(() => ADMIN_AVAILABLE && readPreference('admin', false));
-  const [items, setItems] = useState(SITE_ITEMS);
+  const [items, setItems] = useState(NO_ITEMS);
+  const [status, setStatus] = useState('loading');
   // What "Used For" targets are worth (use-targets.json), with this session's edits.
   const [targets, setTargets] = useState(TARGET_VALUES);
 
@@ -83,6 +85,22 @@ export function AdminProvider({ children }) {
   // (tabbing from Vend to Whobuy saves twice in a row).
   const latest = useRef(items);
   const latestTargets = useRef(targets);
+
+  useEffect(() => {
+    let cancelled = false;
+    loadItems().then(
+      (loaded) => {
+        if (cancelled) return;
+        latest.current = loaded;
+        setItems(loaded);
+        setStatus('ready');
+      },
+      () => !cancelled && setStatus('failed'),
+    );
+    return () => {
+      cancelled = true;
+    };
+  }, []);
   // The "Keep mine" reviews (reviewed-suggestions.json), with this session's changes.
   const [reviewed, setReviewed] = useState(REVIEWED);
   const latestReviewed = useRef(reviewed);
@@ -248,10 +266,10 @@ export function AdminProvider({ children }) {
 
   const value = useMemo(
     () => ({
-      available: ADMIN_AVAILABLE, enabled, setEnabled: changeEnabled, items, suggest, saveItem, saveItems, targets, saveTarget,
+      available: ADMIN_AVAILABLE, enabled, setEnabled: changeEnabled, items, status, suggest, saveItem, saveItems, targets, saveTarget,
       reviewed, saveReviewed, removeReviewed,
     }),
-    [enabled, changeEnabled, items, suggest, saveItem, saveItems, targets, saveTarget, reviewed, saveReviewed, removeReviewed],
+    [enabled, changeEnabled, items, status, suggest, saveItem, saveItems, targets, saveTarget, reviewed, saveReviewed, removeReviewed],
   );
   return (
     <AdminContext.Provider value={value}>
