@@ -8,11 +8,21 @@ import { ROUTES } from '../utils/route.js';
 import { CONTRIBUTING_URL } from '../config.js';
 import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 
+const CONTENTS = [
+  { id: 'what', title: 'What this is' },
+  { id: 'how', title: 'How to use it' },
+  { id: 'table', title: 'Reading the table' },
+  { id: 'tips', title: 'Tips' },
+  { id: 'data', title: 'Data sources' },
+  { id: 'privacy', title: 'Privacy' },
+  { id: 'help', title: 'Help or report a mistake' },
+];
+
 /** What the site is, how to use it, how to read it, and where the data comes from. */
 export default function AboutPage() {
   return (
-    <Page title="About" intro="Rhya's Loot Sheet: quickly see what to do with your loot on uaRO.">
-      <Section title="What this is">
+    <Page contents={CONTENTS} title="About" intro="Rhya's Loot Sheet: quickly see what to do with your loot on uaRO.">
+      <Section id="what" title="What this is">
         <p>
           Search for an item to see whether to keep it, sell it to players, or sell it to an NPC, and which quests,
           hats and pet evolutions need it.
@@ -22,11 +32,11 @@ export default function AboutPage() {
         </p>
       </Section>
 
-      <Section title="How to use it">
+      <Section id="how" title="How to use it">
         <HowToSteps />
       </Section>
 
-      <Section title="Reading the table">
+      <Section id="table" title="Reading the table">
         <SubHeading>Columns</SubHeading>
         <Legend>
           <Row term="Item Name">Its name, type ({ALL_ITEM_TYPES.join(', ')}) and item ID. Click the ID to copy it.</Row>
@@ -83,7 +93,7 @@ export default function AboutPage() {
         </Legend>
       </Section>
 
-      <Section title="Tips">
+      <Section id="tips" title="Tips">
         <BulletList>
           <li>
             <strong>Sort:</strong> click a column header. Click again to reverse, and a third time to reset.
@@ -101,7 +111,7 @@ export default function AboutPage() {
         </BulletList>
       </Section>
 
-      <Section title="Where the data comes from">
+      <Section id="data" title="Where the data comes from">
         <BulletList>
           <li>Rhya's original loot sheet and her in-game checks.</li>
           <li>
@@ -117,7 +127,7 @@ export default function AboutPage() {
         </BulletList>
       </Section>
 
-      <Section title="Privacy">
+      <Section id="privacy" title="Privacy">
         <p>
           The site counts visits and how it's used (pages opened, searches, filters, buttons clicked) with{' '}
           <ExternalLink href="https://umami.is">Umami</ExternalLink>, to learn what to improve. It uses no cookies and
@@ -125,7 +135,7 @@ export default function AboutPage() {
         </p>
       </Section>
 
-      <Section title="Found a mistake or want to help?">
+      <Section id="help" title="Found a mistake or want to help?">
         <p>
           See <PageLink href={ROUTES.feedback}>Feedback</PageLink> for ways to report problems, or read the{' '}
           <ExternalLink href={CONTRIBUTING_URL}>contributing guide</ExternalLink> to edit the data yourself.
