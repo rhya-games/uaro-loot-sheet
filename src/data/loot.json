@@ -7093,7 +7093,6 @@
     "itemId": 2250,
     "itemType": "Equipment",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
