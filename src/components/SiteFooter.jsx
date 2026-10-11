@@ -7,13 +7,18 @@ import { ROUTES } from '../utils/route.js';
  * The note at the very bottom of every page: who made the site, its version
  * (the newest changelog entry), and where the code lives. App.jsx pushes it
  * to the bottom of the window when a page is shorter than the screen.
+ *
+ * Props:
+ *   route - the current page name; the loot page is full width, so the
+ *           footer is too (same rule as <main> in App.jsx)
  */
-export default function SiteFooter() {
+export default function SiteFooter({ route }) {
   return (
     <footer className="border-t border-line">
       <div
-        className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-6 py-6 text-sm
-          text-muted"
+        className={`flex flex-wrap items-center justify-between gap-x-6 gap-y-2 px-6 py-6 text-sm text-muted ${
+          route === 'loot' ? '' : 'mx-auto max-w-screen-2xl'
+        }`}
       >
         <p>
           Made by Rhya for the uaRO community.{' '}

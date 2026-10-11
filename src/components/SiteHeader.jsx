@@ -26,7 +26,12 @@ export default function SiteHeader({ route }) {
   return (
     // Focus rings here are white, with a green gap (see --focus-gap in index.css).
     <header className="bg-header text-white [--focus-gap:var(--header)]">
-      <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-4 px-6 py-5">
+      {/* Same width rule as <main> in App.jsx, so the edges line up with the page below. */}
+      <div
+        className={`flex flex-wrap items-center justify-between gap-4 px-6 py-5 ${
+          route === 'loot' ? '' : 'mx-auto max-w-screen-2xl'
+        }`}
+      >
         <div className="flex items-center gap-3">
           {/* Decorative: the site's loot bag, like the browser tab icon. */}
           <LootBagIcon className="size-12 shrink-0 text-white" />
