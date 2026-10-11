@@ -102,7 +102,7 @@ export default function App() {
         <SiteFooter route={route} />
         <WelcomeDialog open={welcomeOpen} onClose={closeWelcome} />
         <AppSearch open={searchOpen} onClose={closeSearch} />
-        <BackToTop textPage={route !== 'loot'} />
+        <BackToTop textPage={route !== 'loot'} raised={route === 'loot'} />
       </div>
     </AdminProvider>
   );

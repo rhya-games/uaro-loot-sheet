@@ -25,25 +25,116 @@ const isNoUse = (item) => item.categories.includes('No Use');
  * item has the Vend or Whobuy action) but is still empty. Items NPCs sell or
  * that can't be traded never have player prices, and @whobuy doesn't apply
  * to cards or equipment.
+ *
+ * An item with no action at all needs both: the suggester can't pick an
+ * action without a player price, so without a box here these items would
+ * wait in no queue. Saving a price sets the action (see AdminContext).
  */
 export function needsField(item, field) {
   if (isSoldByNpc(item) || !isTradeable(item) || item[field] != null) return false;
+  if (item.actions.length === 0) return field === 'avgVend' || hasWhobuy(item);
   return field === 'avgVend' ? item.actions.includes('Vend') : item.actions.includes('Whobuy') && hasWhobuy(item);
 }
 
 /**
- * Vend or Whobuy is set, but there's no price to back it up. Items used in
- * more things come first: their price feeds more Keep decisions.
+ * Whether this price can be set at all for the item: it can be traded, NPCs
+ * don't sell it, and (for @whobuy) it isn't a card or equipment. The queue
+ * rows show a box for every such price, so Vend and Whobuy can both be
+ * filled in before the row leaves the list.
+ */
+export function canHavePrice(item, field) {
+  if (isSoldByNpc(item) || !isTradeable(item)) return false;
+  return field === 'avgVend' || hasWhobuy(item);
+}
+
+/**
+ * How soon an item's price is wanted, by quest relevance (0 comes first).
+ * An item takes the best tier of its categories; a category that isn't
+ * listed is the default tier. The aim is to price what players actually
+ * chase on this server before the official game's hat quests, which are
+ * low priority.
+ */
+const DEFAULT_PRIORITY = 2;
+const PRICE_PRIORITY = {
+  'Server Hat Quest': 0, // Dimonka's headgear quests, added by this server
+  'Pet Evolution': 1,
+  'Repeatable Quest': 1,
+  'Dungeon Quest': 1,
+  'Job Quest': 1,
+  'Other Quest': 1,
+  'Official Hat Quest': 3, // low: only if nothing better applies
+  'No Use': 3, // nothing to keep it for, so only its sell price matters
+};
+
+/** The item's pricing priority: 0 (first) to 3 (last). Exported for the tests. */
+export function pricePriority(item) {
+  if (!item.categories.length) return DEFAULT_PRIORITY;
+  return Math.min(...item.categories.map((category) => PRICE_PRIORITY[category] ?? DEFAULT_PRIORITY));
+}
+
+/**
+ * Targets the parts can't place: every part is in both hat quest categories,
+ * so there is no vote. Set by hand (the maintainer), as target name -> tier.
+ */
+const TARGET_PRIORITY_OVERRIDES = {
+  'Bunny Band': PRICE_PRIORITY['Official Hat Quest'],
+  'Kitsune Mask': PRICE_PRIORITY['Official Hat Quest'],
+};
+
+/**
+ * The same priority for a "Used For" target (a hat, a pet evolution, a
+ * weapon quest), which has no categories of its own. Its parts' categories
+ * say what it is:
+ *   - A target in TARGET_PRIORITY_OVERRIDES uses that tier.
+ *   - "<pet> Pet Evolution" (some have a note after it) is a pet evolution.
+ *   - Otherwise each part votes with its quest categories (Server Hat Quest,
+ *     Other Quest, Official Hat Quest...). A part also used for something
+ *     else would drag a target up if the best vote won, so the most common
+ *     vote wins, and the better tier takes a tie.
+ *   - Parts with no quest category don't vote, nor do parts in both hat
+ *     quest categories (they could belong to either), nor Pet Evolution
+ *     (a part can serve a pet and a hat).
+ *   - No votes: the default tier.
+ * `partItems` are the loot items that are parts of the target.
+ */
+export function targetPriority(targetName, partItems) {
+  if (targetName in TARGET_PRIORITY_OVERRIDES) return TARGET_PRIORITY_OVERRIDES[targetName];
+  if (/ Pet Evolution\b/.test(targetName)) return PRICE_PRIORITY['Pet Evolution'];
+  const votes = new Map();
+  for (const item of partItems) {
+    if (item.categories.includes('Server Hat Quest') && item.categories.includes('Official Hat Quest')) continue;
+    const tiers = item.categories
+      .filter((category) => category in PRICE_PRIORITY && category !== 'Pet Evolution' && category !== 'No Use')
+      .map((category) => PRICE_PRIORITY[category]);
+    if (tiers.length) votes.set(Math.min(...tiers), (votes.get(Math.min(...tiers)) ?? 0) + 1);
+  }
+  if (!votes.size) return DEFAULT_PRIORITY;
+  return [...votes].sort((a, b) => b[1] - a[1] || a[0] - b[0])[0][0];
+}
+
+/**
+ * Prices to fill in. Two kinds of item:
+ *   - one price is set and another it can have is empty (started and left)
+ *   - Vend or Whobuy is set (or no action yet), but there's no price
+ * Order: pricing priority by quest relevance (pricePriority), then the items
+ * used in the most things, whichever kind: their price feeds the most Keep
+ * decisions. Of two items used equally, the half-priced one goes first, since
+ * it's quickest to finish.
  */
 function needsPrice(items) {
   const rows = [];
   for (const item of items) {
     const reasons = [];
-    if (needsField(item, 'avgVend')) reasons.push('Vend action, no vend price');
-    if (needsField(item, 'avgWhobuy')) reasons.push('Whobuy action, no @whobuy price');
-    if (reasons.length) rows.push({ item, reasons });
+    const noAction = item.actions.length === 0;
+    if (needsField(item, 'avgVend')) reasons.push(noAction ? 'No action yet, no vend price' : 'Vend action, no vend price');
+    if (needsField(item, 'avgWhobuy')) reasons.push(noAction ? 'No action yet, no @whobuy price' : 'Whobuy action, no @whobuy price');
+    const half = hasPlayerPrice(item) && (canHavePrice(item, 'avgVend') && item.avgVend == null || canHavePrice(item, 'avgWhobuy') && item.avgWhobuy == null);
+    if (half && !reasons.length) {
+      reasons.push(item.avgVend == null ? 'Has a @whobuy price, no vend price' : 'Has a vend price, no @whobuy price');
+    }
+    if (reasons.length) rows.push({ item, reasons, half, priority: pricePriority(item) });
   }
-  return rows.sort((a, b) => b.item.uses.length - a.item.uses.length || byName(a, b));
+  return rows.sort((a, b) => a.priority - b.priority || b.item.uses.length - a.item.uses.length || b.half - a.half || byName(a, b));
 }
 
 /**
@@ -116,7 +207,7 @@ function notReviewed(items) {
 }
 
 export const QUEUES = [
-  { id: 'needs-price', title: 'Needs a price', description: 'Vend or Whobuy is set, but there is no price yet.', select: needsPrice },
+  { id: 'needs-price', title: 'Needs a price', description: 'Vend or Whobuy is set (or no action yet), but there is no price yet.', select: needsPrice },
   { id: 'suggestion-differs', title: 'Suggestion differs', description: 'The suggested actions are not the ones set by hand.', select: suggestionDiffers },
   { id: 'unverified-prices', title: 'Verify prices', description: 'A price is set, but it was never checked in game.', select: unverifiedPrices },
   { id: 'suspicious-values', title: 'Suspicious values', description: 'Numbers or actions that do not fit together.', select: suspiciousValues },

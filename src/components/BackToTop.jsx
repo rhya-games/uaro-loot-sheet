@@ -12,8 +12,10 @@ const SHOW_AFTER_PX_TEXT_PAGE = 300;
  * Round "back to top" button in the bottom-right corner. It fades in after
  * scrolling down a good way, and takes you (and keyboard focus) back to the
  * top of the main content. `textPage` shows it after a shorter scroll.
+ * `raised` lifts it above the two buttons of FloatingSearchFilters (the loot
+ * page): 2 x 44px buttons, 2 x 8px gaps, and the 16px corner room.
  */
-export default function BackToTop({ textPage = false }) {
+export default function BackToTop({ textPage = false, raised = false }) {
   const showAfter = textPage ? SHOW_AFTER_PX_TEXT_PAGE : SHOW_AFTER_PX;
   const [show, setShow] = useState(false);
 
@@ -26,7 +28,7 @@ export default function BackToTop({ textPage = false }) {
 
   return (
     <div
-      className={`fixed right-4 bottom-4 z-30 transition-opacity duration-200 ease-smooth motion-reduce:transition-none ${
+      className={`fixed right-4 ${raised ? 'bottom-[7.5rem]' : 'bottom-4'} z-30 transition-opacity duration-200 ease-smooth motion-reduce:transition-none ${
         show ? 'opacity-100' : 'pointer-events-none opacity-0'
       }`}
       // Hidden from keyboard and screen readers until it shows.

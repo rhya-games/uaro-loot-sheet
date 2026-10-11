@@ -7,6 +7,8 @@ import ItemList from '../components/ItemList.jsx';
 import SkipLink from '../components/SkipLink.jsx';
 import ShareButton from '../components/ShareButton.jsx';
 import NoResults from '../components/NoResults.jsx';
+import FloatingSearchFilters from '../components/FloatingSearchFilters.jsx';
+import LoadingItems from '../components/LoadingItems.jsx';
 import AdminToggle from '../admin/AdminToggle.jsx';
 import Tooltip from '../components/Tooltip.jsx';
 import { createSearch, wordMatcher } from '../utils/search.js';
@@ -74,7 +76,7 @@ export default function LootPage() {
     () => readPreference('keepFor', null) ?? (readPreference('ignoreKeep', false) ? [] : ALL_ACTIVITY_IDS),
   );
   // loot.json, plus any prices saved in admin mode since the page loaded.
-  const { items: loot, enabled: adminOn } = useAdmin();
+  const { items: loot, status, enabled: adminOn } = useAdmin();
   // Admin mode needs the real actions (to compare with suggestions), so it
   // shows everything. The player's setting is remembered for afterwards.
   const keepFor = adminOn ? ALL_ACTIVITY_IDS : keepForSetting;
@@ -197,7 +199,10 @@ export default function LootPage() {
   const panelCovers = sidebarOpen && !panelBesideTable;
   const focusCloseOnOpen = useRef(false);
   useEffect(() => {
-    if (panelCovers || (sidebarOpen && focusCloseOnOpen.current)) closeButtonRef.current?.focus();
+    // preventScroll: the panel is fixed or sticky, so it's already in view, and
+    // scrolling to it would throw you back to the top (opening it from the
+    // floating Filters button, far down the table).
+    if (panelCovers || (sidebarOpen && focusCloseOnOpen.current)) closeButtonRef.current?.focus({ preventScroll: true });
     focusCloseOnOpen.current = false;
   }, [panelCovers, sidebarOpen]);
 
@@ -274,14 +279,16 @@ export default function LootPage() {
   const changeSort = useCallback((key) => setSort((current) => nextSort(current, key)), []);
 
 
+  const toggleFilters = () => {
+    focusCloseOnOpen.current = !sidebarOpen;
+    changePanel(!sidebarOpen);
+  };
+
   const filtersButton = (
     <button
       ref={toggleButtonRef}
       type="button"
-      onClick={() => {
-        focusCloseOnOpen.current = !sidebarOpen;
-        changePanel(!sidebarOpen);
-      }}
+      onClick={toggleFilters}
       aria-expanded={sidebarOpen}
       aria-controls="filter-sidebar"
       aria-label={sidebarOpen ? 'Hide filters' : 'Show filters'}
@@ -359,7 +366,11 @@ export default function LootPage() {
       ) : (
         <div className="flex min-h-7 flex-wrap items-center gap-x-4 gap-y-2">
           <p className="text-sm text-muted" aria-live="polite">
-            {results.length.toLocaleString('en-US')} of {loot.length.toLocaleString('en-US')} items
+            {status === 'ready'
+              ? `${results.length.toLocaleString('en-US')} of ${loot.length.toLocaleString('en-US')} items`
+              : status === 'failed'
+                ? 'Items not loaded'
+                : 'Loading items…'}
           </p>
           <ActiveFilters
             filters={filters}
@@ -377,6 +388,8 @@ export default function LootPage() {
   return (
     <div>
       <h1 className="sr-only">Loot items</h1>
+      {/* Fixed in the corner: the filter panel and search, when the toolbar has scrolled away. */}
+      <FloatingSearchFilters filtersOpen={sidebarOpen} activeCount={activeFilterCount} onFilters={toggleFilters} />
 
       {/* Panel and table share one grid cell (so the panel floats over the table)
           until 1470px (`wide:`), where the grid gets a second column for the panel.
@@ -451,7 +464,9 @@ export default function LootPage() {
           className={`min-w-0 space-y-4 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
         >
           {toolbar}
-          {results.length === 0 ? (
+          {status !== 'ready' ? (
+            <LoadingItems failed={status === 'failed'} />
+          ) : results.length === 0 ? (
             <NoResults
               query={query}
               filterCount={activeFilterCount}
