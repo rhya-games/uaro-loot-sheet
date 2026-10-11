@@ -28,7 +28,7 @@ describe('needs-price', () => {
     const items = [
       item({ name: 'A', actions: ['Vend'] }),
       item({ name: 'B', actions: ['Vend'], uses: [{ for: 'X' }, { for: 'Y' }] }),
-      item({ name: 'Priced', actions: ['Vend'], avgVend: 500 }),
+      item({ name: 'Priced', actions: ['Vend'], avgVend: 500, avgWhobuy: 400 }),
       item({ name: 'Whobuy only', actions: ['Whobuy'] }),
     ];
     expect(names(run('needs-price', items))).toEqual(['B', 'A', 'Whobuy only']);
@@ -52,6 +52,20 @@ describe('needs-price', () => {
       item({ name: 'Card', actions: ['Whobuy'], categories: ['Card'] }),
     ];
     expect(run('needs-price', items)).toEqual([]);
+  });
+});
+
+describe('needs-price, half-priced items', () => {
+  it('lists an item with one price set and another empty, ahead of the rest', () => {
+    const items = [
+      item({ name: 'Untouched', actions: ['Vend'], uses: [{ for: 'X' }] }),
+      item({ name: 'Half', actions: ['Vend'], avgVend: 500 }),
+      item({ name: 'Half equipment', itemType: 'Equipment', avgVend: 500 }), // no @whobuy for equipment: complete
+      item({ name: 'Complete', actions: ['Vend'], avgVend: 500, avgWhobuy: 0 }),
+    ];
+    const rows = run('needs-price', items);
+    expect(names(rows)).toEqual(['Half', 'Untouched']);
+    expect(rows[0].reasons).toEqual(['Has a vend price, no @whobuy price']);
   });
 });
 

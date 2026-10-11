@@ -52,7 +52,7 @@ export default function NeedsPricePage() {
   return (
     <AdminLayout
       title="Needs a price"
-      intro="Items set to Vend or Whobuy, or with no action yet, that have no price yet. Type a price and press Enter to save it and move to the next box. Type 0 if nobody is buying. A row stays until you press Done."
+      intro="Items set to Vend or Whobuy, or with no action yet, that have no price yet. Type a price and press Enter to save it and move to the next box. Type 0 if nobody is buying. A row stays until you press Done, which turns green when every box has a price."
     >
       <QueueSearch
         value={query}
@@ -76,7 +76,7 @@ export default function NeedsPricePage() {
                   key={item.id}
                   item={item}
                   fields={fieldsOf(item)}
-                  action={<DoneButton item={item} onDone={() => setDone((current) => new Set(current).add(item.id))} />}
+                  action={<DoneButton item={item} fields={fieldsOf(item)} onDone={() => setDone((current) => new Set(current).add(item.id))} />}
                 />
               ))}
             </ul>
@@ -95,12 +95,17 @@ export default function NeedsPricePage() {
 }
 
 /**
- * Sends the row away. It's the last stop in the row's keyboard order (the
- * price boxes' Enter lands here); pressed from the keyboard it first moves
- * the cursor to the next row's first box, since this row is about to go.
+ * Sends the row away. It's green once every box in the row has a price, and
+ * disabled (faded, and pressing it does nothing) until then. It's the last stop in the row's keyboard order (the
+ * price boxes' Enter lands here, once it's enabled); pressed from the
+ * keyboard it first moves the cursor to the next row's first box, since this
+ * row is about to go.
  */
-function DoneButton({ item, onDone }) {
+function DoneButton({ item, fields, onDone }) {
+  // Done once every box the row has holds a price (0 counts: nobody's buying).
+  const filled = fields.every((field) => item[field] != null);
   function done(event) {
+    if (!filled) return;
     // A click from the keyboard has no mouse position (detail 0).
     if (event.detail === 0) {
       const stops = [...document.querySelectorAll('[data-advance]')];
@@ -109,7 +114,18 @@ function DoneButton({ item, onDone }) {
     onDone();
   }
   return (
-    <button type="button" onClick={done} data-advance="true" aria-label={`Done with ${item.name}`} className="button-small">
+    <button
+      type="button"
+      onClick={done}
+      // aria-disabled, not disabled: a disabled button can't take the cursor,
+      // so Enter in the last box couldn't move on (and so wouldn't save it).
+      aria-disabled={!filled}
+      data-advance="true"
+      aria-label={`Done with ${item.name}`}
+      className={`button-small aria-disabled:cursor-not-allowed aria-disabled:opacity-50 aria-disabled:hover:bg-surface ${
+        filled ? 'border-emerald-700 bg-emerald-700 text-white hover:bg-emerald-800 dark:border-emerald-600 dark:bg-emerald-600 dark:hover:bg-emerald-500' : ''
+      }`}
+    >
       Done
     </button>
   );
