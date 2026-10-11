@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
 import CopyItemId from './CopyItemId.jsx';
+import ItemIcon from './ItemIcon.jsx';
 import RowActions from './RowActions.jsx';
 import { NpcBuyable, PlayerPrice } from './StatusIcons.jsx';
 import VerifiedText from './VerifiedText.jsx';
@@ -22,18 +23,21 @@ export default memo(function ItemCard({ item, onSelectUse, highlightUses }) {
   return (
     <article className="panel p-4">
       <header className="flex flex-wrap items-start justify-between gap-2">
-        <h2 className="text-base font-semibold text-fg">
-          {item.name}
-          <span className="ml-2 text-sm font-normal text-muted">
-            {item.itemType}
-            {item.itemId && (
-              <>
-                {' · '}
-                <CopyItemId itemId={item.itemId} />
-              </>
-            )}
-          </span>
-        </h2>
+        <div className="flex items-center gap-2.5">
+          <ItemIcon item={item} />
+          <h2 className="text-base font-semibold text-fg">
+            {item.name}
+            <span className="ml-2 text-sm font-normal text-muted">
+              {item.itemType}
+              {item.itemId && (
+                <>
+                  {' · '}
+                  <CopyItemId itemId={item.itemId} />
+                </>
+              )}
+            </span>
+          </h2>
+        </div>
         <div className="flex flex-wrap items-center gap-1">
           <ActionBadges actions={item.actions} />
           <span className="ml-2">

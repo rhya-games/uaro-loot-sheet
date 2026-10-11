@@ -105,7 +105,7 @@ export default function ZenyInput({ value: saved, onSave, label, noneHint, advan
           }
         }}
         // Empty means "not set"; while typing, hint that shorthand works.
-        placeholder={focused ? 'e.g. 1.5m' : '—'}
+        placeholder={focused ? 'e.g. 1.5m' : '?'}
         aria-label={label}
         aria-invalid={invalid || undefined}
         className={`w-24 rounded-md border bg-surface px-2 py-1 text-right tabular-nums text-fg

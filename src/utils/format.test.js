@@ -23,8 +23,8 @@ describe('parseZeny (admin price boxes)', () => {
 });
 
 describe('formatZeny', () => {
-  it('adds commas and z, and shows a dash for no price', () => {
+  it('adds commas and z, and shows ? for no price', () => {
     expect(formatZeny(15500)).toBe('15,500z');
-    expect(formatZeny(null)).toBe('—');
+    expect(formatZeny(null)).toBe('?');
   });
 });

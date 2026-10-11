@@ -75,7 +75,7 @@ job. Check that all three passed (`gh run list --limit 3`). Then:
 - The release exists: `gh release view v<version>`. Its notes have the
   changelog card's short lines, then "Merged changes" with your PR
   description. The run's summary page shows the same notes.
-- The site answers at https://rhya-ragnarok.github.io/uaro-loot-sheet/ and
+- The site answers at https://rhya-games.github.io/uaro-loot-sheet/ and
   shows the new version in the footer.
 
 If the release job fails, the deploy may still be fine: say so, and fix the

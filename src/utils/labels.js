@@ -42,13 +42,41 @@ export const ACTIONS = {
     className: 'bg-blue-700 text-white dark:bg-blue-800 dark:text-blue-50',
   },
   Junk: {
-    description: 'Throw it away: nothing uses it and nobody pays for it.',
+    description: 'Throw it away: it has no use, and no player or NPC pays for it.',
     className: 'bg-gray-600 text-white dark:bg-gray-700 dark:text-gray-50',
   },
 };
 
 /** Used for any action that isn't listed above. */
 export const FALLBACK_ACTION = { description: '', className: 'bg-gray-600 text-white' }; // dark chip in both modes
+
+/**
+ * What each category means, in plain words (shown on the About page).
+ * The keys must match the "category" list in src/data/schema.json; a test
+ * checks that every category has one.
+ */
+export const CATEGORY_DESCRIPTIONS = {
+  Brewing: 'Used to make potions and other brewed items.',
+  Card: 'A monster card.',
+  Cooking: 'An ingredient for cooking food.',
+  'Dungeon Quest': 'Needed for a dungeon quest, like the Sign Quest or Veins Siblings Quest.',
+  'Job Quest': 'Needed for a job quest.',
+  'Official Hat Quest': 'Needed for a hat quest from the original game.',
+  'Other Quest': 'Needed for a quest that isn’t a job, dungeon, hat or repeatable quest.',
+  Pet: 'Used for pets: taming items, accessories and evolution materials.',
+  'Pet Evolution': 'Needed to evolve a pet.',
+  'Repeatable Quest': 'Needed for a quest you can do again and again, like a daily request.',
+  'Server Hat Quest': 'Needed for a hat quest added by this server.',
+  Skills: 'Used up by a skill, or used for forging.',
+  uaRO: 'Content added by this server, not in the original game.',
+  'No Use': 'It has no purpose in the other categories, so it’s only worth what it sells for.',
+  'Not Reviewed': 'Its purpose hasn’t been checked yet. Only shows while editing the data.',
+};
+
+/** A wiki page that lists what a category covers, for the About page. */
+export const CATEGORY_LINKS = {
+  'Repeatable Quest': { href: 'https://wiki.uaro.net/repeatable-quests/', label: 'See the list on the uaRO wiki.' },
+};
 
 /**
  * Category chip colors: a rainbow running red -> violet down the A-Z

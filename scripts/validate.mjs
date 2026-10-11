@@ -87,6 +87,9 @@ for (const item of items) {
   if (soldByNpc && item.actions?.some((action) => action === 'Vend' || action === 'Whobuy')) {
     errors.push(`${item.name}: NPCs sell this, so use the "NPC" action instead of "Vend" or "Whobuy"`);
   }
+  if (item.actions?.length === 1 && item.actions[0] === 'Keep') {
+    errors.push(`${item.name}: Keep can't be the only action; add how to sell the extras (Vend, Whobuy or NPC)`);
+  }
   if (item.actions?.includes('Junk') && item.actions.length > 1) {
     warnings.push(`${item.name}: Junk means "throw it away", so it shouldn't have other actions`);
   }
