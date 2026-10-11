@@ -10,18 +10,24 @@ const TYPE_COLORS = {
 };
 
 /** "2026-09-23" -> "September 23, 2026" (in any time zone). */
-function formatDate(dateText) {
-  const [year, month, day] = dateText.split('-').map(Number);
-  return new Date(year, month - 1, day).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+function formatDate(dateText, month = 'long') {
+  const [year, monthNumber, day] = dateText.split('-').map(Number);
+  return new Date(year, monthNumber - 1, day).toLocaleDateString('en-US', { year: 'numeric', month, day: 'numeric' });
 }
+
+/** Jump links beside the page: "0.8.0 · Oct 10, 2026" for each day. */
+const CONTENTS = CHANGELOG.map((entry) => ({
+  id: `v${entry.version}`,
+  title: `${entry.version} · ${formatDate(entry.date, 'short')}`,
+}));
 
 /** Site and data updates, one card per day, newest first. Entries live in src/data/changelog.js. */
 export default function ChangelogPage() {
   return (
-    <Page title="Changelog" intro="What's new on the site and in the item data, newest first.">
+    <Page contents={CONTENTS} title="Changelog" intro="What's new on the site and in the item data, newest first.">
       {CHANGELOG.length === 0 && <p>No updates yet.</p>}
       {CHANGELOG.map((entry) => (
-        <Section key={entry.version} title={entry.title}>
+        <Section key={entry.version} id={`v${entry.version}`} title={entry.title}>
           <p className="text-muted">
             Version {entry.version} · <time dateTime={entry.date}>{formatDate(entry.date)}</time>
           </p>
