@@ -5,21 +5,24 @@ import { goToTop } from '../utils/scroll.js';
 
 /** Show the button once the page has scrolled this far (about two screens of table). */
 const SHOW_AFTER_PX = 1200;
+/** Text pages are short, so they get the button much sooner. */
+const SHOW_AFTER_PX_TEXT_PAGE = 300;
 
 /**
  * Round "back to top" button in the bottom-right corner. It fades in after
  * scrolling down a good way, and takes you (and keyboard focus) back to the
- * top of the main content.
+ * top of the main content. `textPage` shows it after a shorter scroll.
  */
-export default function BackToTop() {
+export default function BackToTop({ textPage = false }) {
+  const showAfter = textPage ? SHOW_AFTER_PX_TEXT_PAGE : SHOW_AFTER_PX;
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > SHOW_AFTER_PX);
+    const onScroll = () => setShow(window.scrollY > showAfter);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [showAfter]);
 
   return (
     <div
