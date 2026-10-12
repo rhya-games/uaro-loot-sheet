@@ -48,7 +48,7 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
-    version: '0.10.0',
+    version: '0.11.0',
     date: '2026-10-11',
     title: 'Search from anywhere, more checked prices',
     changes: [
@@ -56,8 +56,10 @@ export const CHANGELOG = [
       { type: 'Added', text: 'Vend and @whobuy prices updated for 117 items, all checked in game today. Actions updated for 38 of them to match.' },
       { type: 'Added', text: 'Links to the sheet now show a preview picture and description when you share them in chat.' },
       { type: 'Changed', text: 'The page opens faster: the header and search box show while the items load.' },
-      { type: 'Added', text: 'Pet food now says which pets eat it, under "Used For" (42 items).' },
-      { type: 'Added', text: 'Two new items: Cheap Lubricant and Mochi, both pet food.' },
+      { type: 'Changed', text: 'Vend and Whobuy are now suggested whenever players pay even 1z more than NPCs. Actions updated for 11 items.' },
+      { type: 'Added', text: 'Prices updated for 18 more items.' },
+      { type: 'Added', text: 'Uses added for the cooking kits, Temporal Crystal, Green Potion, Diamond Ring and 3 more items. Cooking kits now show that they are used for Cooking.' },
+      { type: 'Added', text: 'Pet food now says which pets eat it, under "Used For" (42 items). Cheap Lubricant and Mochi are new.' },
     ],
   },
   {
