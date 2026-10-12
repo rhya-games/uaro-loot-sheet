@@ -30,6 +30,9 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  *     use-targets.json) can only be made, so its parts are worth keeping.
  *   - Cooking levels 1-3 don't count: those foods are too weak to be worth
  *     keeping ingredients for (see isLowLevelCooking).
+ *   - Job quests ("Crusader Job Quest") don't count: they're done once, so
+ *     the item sells by price. They're still listed under "Used For" (see
+ *     isJobQuest).
  *
  * Junk: nothing uses it, and nobody pays anything for it. Pet accessories
  * are Junk under PET_ACCESSORY_JUNK_BELOW when nothing else uses them.
@@ -51,6 +54,9 @@ export const isLowLevelCooking = (use) =>
 /** A quest ("Sign Quest", "Episode 13 Quests"). Not "Level 4 weapon quest" uses: those make a weapon with a price. */
 export const isQuest = (use) => /\bQuests?\b/.test(use.for);
 
+/** A job change quest ("Archer Job Quest"). Listed as a use, but not a reason to Keep. */
+export const isJobQuest = (use) => /\bJob Quest\b/.test(use.for);
+
 /** A use that needs the item but doesn't take it ("any whip; not used up"). */
 export const isNotUsedUp = (use) => /\bnot used up\b/.test(use.note ?? '');
 
@@ -58,7 +64,7 @@ export const isNotUsedUp = (use) => /\bnot used up\b/.test(use.note ?? '');
 export const isSkill = (use) => use.note === 'each cast';
 
 /** Uses that can be a reason to Keep (the rest never are). */
-const isKeepReason = (use) => !isLowLevelCooking(use) && !isNotUsedUp(use) && !isSkill(use);
+const isKeepReason = (use) => !isLowLevelCooking(use) && !isNotUsedUp(use) && !isSkill(use) && !isJobQuest(use);
 
 /** use-targets.json as a Map: target name -> value. */
 export const TARGET_VALUES = new Map(targetData.items.map((entry) => [entry.for, entry.value]));
@@ -195,13 +201,15 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
     if (notUsedUp.length) reasons.push(`${notUsedUp.join(', ')} doesn’t use it up, so one is enough: not a reason to keep more`);
     const skills = item.uses.filter(isSkill).map((use) => use.for);
     if (skills.length) reasons.push(`Skills (${skills.join(', ')}) aren’t a reason to keep it`);
+    const jobQuests = item.uses.filter(isJobQuest).map((use) => use.for);
+    if (jobQuests.length) reasons.push(`Job quests (${jobQuests.join(', ')}) aren’t a reason to keep it`);
     for (const use of uses.filter((use) => !use.worthIt)) {
       reasons.push(`Not worth making ${use.for}: worth ${fmt(use.value)}, parts sell for ${fmt(use.partsValue)}`);
     }
 
     // A pet accessory nothing else needs isn't worth the trouble under 5k.
-    // Something that still needs it (a Sign Quest weapon, a skill) isn't Junk.
-    const usedFor = uses.length + notUsedUp.length + skills.length;
+    // Something that still needs it (a Sign Quest weapon, a skill, a job quest) isn't Junk.
+    const usedFor = uses.length + notUsedUp.length + skills.length + jobQuests.length;
     const best = Math.max(npcSellPrice(item) ?? 0, sale?.price ?? 0);
     if (isPetAccessory(item) && !usedFor && sale && best < PET_ACCESSORY_JUNK_BELOW) {
       actions.push('Junk');

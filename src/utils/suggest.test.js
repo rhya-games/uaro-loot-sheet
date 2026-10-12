@@ -73,6 +73,18 @@ describe('createSuggester', () => {
     expect(createSuggester([free])(free).actions).toEqual([]);
   });
 
+  it("doesn't keep for job quests, and a job quest item isn't Junk", () => {
+    const emblem = item({ name: 'Emblem', avgVend: 1000, uses: [{ for: 'Crusader Job Quest', qty: 1 }] });
+    const suggestion = createSuggester([emblem])(emblem);
+    expect(suggestion.actions).toEqual(['Vend']);
+    expect(suggestion.reasons.join(' ')).toMatch(/Job quests \(Crusader Job Quest\)/);
+    // Another quest still counts.
+    const both = { ...emblem, uses: [...emblem.uses, { for: 'Sign Quest', qty: 1 }] };
+    expect(createSuggester([both])(both).actions).toEqual(['Keep', 'Vend']);
+    const free = item({ name: 'Emblem', sellValue: 0, avgVend: 0, uses: [{ for: 'Crusader Job Quest', qty: 1 }] });
+    expect(createSuggester([free])(free).actions).toEqual([]);
+  });
+
   it('keeps parts of a target no shops sell (value 0)', () => {
     const part = item({ name: 'Part', avgVend: 1000, uses: [{ for: 'Hat', qty: 2 }] });
     const suggestion = createSuggester([part], new Map([['Hat', 0]]))(part);
