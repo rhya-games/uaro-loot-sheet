@@ -10,8 +10,20 @@
       "value": 15500000
     },
     {
+      "for": "Alarm Mask",
+      "value": 0
+    },
+    {
       "for": "Alice Doll",
       "value": 0
+    },
+    {
+      "for": "Alicel Pet Evolution",
+      "value": 0
+    },
+    {
+      "for": "Aliot Pet Evolution",
+      "value": 41000000
     },
     {
       "for": "Aliza Pet Evolution",
@@ -54,6 +66,10 @@
       "value": 0
     },
     {
+      "for": "Black Cat Ears",
+      "value": 0
+    },
+    {
       "for": "Blue Fish",
       "value": 0
     },
@@ -68,6 +84,10 @@
     {
       "for": "Bunny Ears Hat",
       "value": 0
+    },
+    {
+      "for": "Cake Hat",
+      "value": 5000
     },
     {
       "for": "Cat o' Nine Tails Pet Evolution",
@@ -90,6 +110,10 @@
       "value": 50000
     },
     {
+      "for": "Coldproof Potion",
+      "value": 1000
+    },
+    {
       "for": "Contaminated Wanderer Pet Evolution",
       "value": 18000000
     },
@@ -98,12 +122,36 @@
       "value": 0
     },
     {
+      "for": "Cresent Hairpin",
+      "value": 0
+    },
+    {
       "for": "Crimson Rose",
       "value": 0
     },
     {
+      "for": "Crown of Ancient Queen",
+      "value": 0
+    },
+    {
+      "for": "Crown of Mistress",
+      "value": 1400000
+    },
+    {
       "for": "Crunch Toast",
       "value": 0
+    },
+    {
+      "for": "Damascus",
+      "value": 0
+    },
+    {
+      "for": "Dark Illusion Pet Evolution",
+      "value": 0
+    },
+    {
+      "for": "Dark Lord Pet Evolution",
+      "value": 350000000
     },
     {
       "for": "Dark Randgris Helm",
@@ -112,6 +160,10 @@
     {
       "for": "Darkness Helm",
       "value": 28000000
+    },
+    {
+      "for": "Decorative Golden Bell",
+      "value": 0
     },
     {
       "for": "Defolty Doll",
@@ -146,6 +198,10 @@
       "value": 7000000
     },
     {
+      "for": "Feather Bonnet",
+      "value": 2000000
+    },
+    {
       "for": "Festival Pumpkin Hat",
       "value": 25000000
     },
@@ -170,8 +226,20 @@
       "value": 12000000
     },
     {
+      "for": "Flower Hairpin",
+      "value": 0
+    },
+    {
       "for": "Gangster Scarf",
       "value": 21000000
+    },
+    {
+      "for": "Giant Band Aid",
+      "value": 0
+    },
+    {
+      "for": "Giant Hornet Pet Evolution",
+      "value": 25000000
     },
     {
       "for": "Gigantic Majestic Goat (DEF)",
@@ -206,6 +274,10 @@
       "value": 37000000
     },
     {
+      "for": "Katana",
+      "value": 0
+    },
+    {
       "for": "Kiel D-01 Pet Evolution",
       "value": 300000000
     },
@@ -222,6 +294,10 @@
       "value": 0
     },
     {
+      "for": "Leaf Lunatic Pet Evolution",
+      "value": 5000000
+    },
+    {
       "for": "Little Angel Doll",
       "value": 32000000
     },
@@ -236,6 +312,10 @@
     {
       "for": "Mage Hat",
       "value": 0
+    },
+    {
+      "for": "Mastering Pet Evolution",
+      "value": 6000000
     },
     {
       "for": "Metaller Pet Evolution",
@@ -266,7 +346,15 @@
       "value": 0
     },
     {
+      "for": "Opera Phantom Mask",
+      "value": 0
+    },
+    {
       "for": "Orc Hero Headdress",
+      "value": 0
+    },
+    {
+      "for": "Orc Hero Helm",
       "value": 0
     },
     {
@@ -330,6 +418,10 @@
       "value": 0
     },
     {
+      "for": "Shafka",
+      "value": 0
+    },
+    {
       "for": "Skelion Pet Evolution",
       "value": 60000000
     },
@@ -350,7 +442,19 @@
       "value": 0
     },
     {
+      "for": "Thunderproof Potion",
+      "value": 4000
+    },
+    {
       "for": "Tropical Fruit Hat",
+      "value": 0
+    },
+    {
+      "for": "Tsurugi",
+      "value": 0
+    },
+    {
+      "for": "Two-Handed Axe",
       "value": 0
     },
     {

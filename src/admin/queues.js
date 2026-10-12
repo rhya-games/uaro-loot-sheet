@@ -175,6 +175,15 @@ function unverifiedPrices(items) {
 }
 
 /**
+ * A category that already says what the item is for, so a missing "Used For"
+ * line isn't a gap: pet items (taming items, accessories and evolution
+ * materials; the pet is the purpose), dungeon quest items and cooking
+ * ingredients.
+ */
+const PURPOSE_CATEGORIES = ['Pet', 'Dungeon Quest', 'Cooking'];
+const hasPurposeCategory = (item) => item.categories.some((category) => PURPOSE_CATEGORIES.includes(category));
+
+/**
  * Values that look wrong. A price of 0 isn't listed: it means "checked,
  * nobody's buying" (see suggest.js). Nor is a vend price below the NPC
  * price: players do that, and it says nothing is wrong with the data. A
@@ -192,17 +201,18 @@ function suspiciousValues(items) {
     // A vend price above the @whobuy price is why Whobuy is left out (see suggest.js), so it's not suspicious.
     const vendPaysMore = item.avgVend != null && item.avgVend > item.avgWhobuy;
     if (item.avgWhobuy > 0 && !vendPaysMore && !item.actions.includes('Whobuy') && !isSoldByNpc(item)) reasons.push('Has an @whobuy price but no Whobuy action');
-    if (item.actions.includes('Keep') && !item.uses.length) reasons.push('Keep, but nothing uses it');
+    // Items in a purpose category are kept for it, which has no "Used For" line.
+    if (item.actions.includes('Keep') && !item.uses.length && !hasPurposeCategory(item)) reasons.push('Keep, but nothing uses it');
     if (item.actions.includes('Keep') && isNoUse(item)) reasons.push('Keep, but the category is No Use');
     if (reasons.length) rows.push({ item, reasons });
   }
   return rows.sort(byName);
 }
 
-/** Nothing says what the item is for: no uses and no notes, and it isn't marked No Use. */
+/** Nothing says what the item is for: no uses and no notes, and it isn't marked No Use. Cards (used as they are) and items with a purpose category are left out. */
 function missingUses(items) {
   return items
-    .filter((item) => !item.uses.length && !item.notes && !isNoUse(item) && !item.categories.includes('Not Reviewed'))
+    .filter((item) => !item.uses.length && !item.notes && !isNoUse(item) && !item.categories.includes('Not Reviewed') && !item.categories.includes('Card') && !hasPurposeCategory(item))
     .map((item) => ({ item, reasons: ['No uses or notes, and not marked No Use'] }))
     .sort(byName);
 }

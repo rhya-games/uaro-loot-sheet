@@ -34,8 +34,8 @@
     "itemId": 731,
     "itemType": "Misc",
     "actions": [
-      "NPC",
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Official Hat Quest"
@@ -62,8 +62,8 @@
     "itemId": 732,
     "itemType": "Misc",
     "actions": [
-      "NPC",
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Pet Evolution",
@@ -218,7 +218,7 @@
     "itemId": 10033,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -508,8 +508,8 @@
     "itemId": 7047,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -2077,12 +2077,12 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
+    "avgVend": 600,
     "avgWhobuy": 580,
     "sellValue": 512,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": "2026-09-26",
+    "lastVerified": "2026-10-11",
     "verificationNotes": "Vend price from a player shop"
   },
   {
@@ -2091,7 +2091,7 @@
     "itemId": 10013,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -2372,7 +2372,7 @@
     "itemId": 10017,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -2593,7 +2593,7 @@
     "itemId": 10028,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -2992,7 +2992,7 @@
     "itemId": 10037,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -3333,7 +3333,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -3878,13 +3878,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 7000,
+    "avgWhobuy": 4500,
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "boots-1",
@@ -5630,7 +5630,7 @@
     "itemId": 7752,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -5836,12 +5836,24 @@
     "itemId": 6608,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "White Knight Card",
+        "qty": 5000,
+        "note": "Old Glast Heim card trade; or 2000 Contaminated Magic"
+      },
+      {
+        "for": "Khalitzburg Knight Card",
+        "qty": 5000,
+        "note": "Old Glast Heim card trade; or 2000 Contaminated Magic"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": 5400,
@@ -6191,12 +6203,24 @@
     "itemId": 6755,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "White Knight Card",
+        "qty": 2000,
+        "note": "Old Glast Heim card trade; or 5000 Coagulated Spell"
+      },
+      {
+        "for": "Khalitzburg Knight Card",
+        "qty": 2000,
+        "note": "Old Glast Heim card trade; or 5000 Coagulated Spell"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": 14500,
@@ -6410,13 +6434,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
+    "avgVend": 250000,
     "avgWhobuy": null,
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "corsair",
@@ -7064,13 +7088,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 165000,
+    "avgWhobuy": 100000,
     "sellValue": 666,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "cute-blue-ribbon-0",
@@ -7298,7 +7322,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Job Quest",
@@ -7738,13 +7762,19 @@
     "itemId": 971,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Hugel Quests",
+        "qty": 3,
+        "note": "Dono"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": null,
@@ -7836,12 +7866,19 @@
     "itemId": 2613,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "No Use"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Marriage Quest",
+        "qty": 1,
+        "note": "Wedding Staff"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": null,
@@ -8083,7 +8120,7 @@
     "itemId": 7123,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -8111,7 +8148,7 @@
     "itemId": 1037,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -8509,13 +8546,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
+    "avgVend": 400000,
     "avgWhobuy": null,
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "eggring-card",
@@ -9055,7 +9092,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -9792,7 +9829,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": null,
@@ -10318,13 +10361,13 @@
     ],
     "notes": "Adds the Fire element to a forged weapon (one element per weapon)",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 4200,
+    "avgWhobuy": 2300,
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "flame-stone",
@@ -10644,7 +10687,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -11261,13 +11304,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 4000,
+    "avgWhobuy": 2700,
     "sellValue": 352,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "gakkung-bow-2",
@@ -12071,7 +12114,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -12947,12 +12990,29 @@
     "sellSource": "hercules",
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "No Use"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cursed Spirit Quest",
+        "qty": 1,
+        "note": "Father Bamph; with 1 Yellow Gemstone"
+      },
+      {
+        "for": "Gonryun Quests",
+        "qty": 1,
+        "note": "Blacksmith"
+      },
+      {
+        "for": "Louyang Quests",
+        "qty": 30,
+        "note": "Employee"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": null,
@@ -13834,7 +13894,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -13869,7 +13929,7 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": 560000,
+    "avgVend": 630000,
     "avgWhobuy": 600000,
     "sellValue": 1500,
     "sellSource": "hercules",
@@ -14099,7 +14159,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": null,
@@ -14559,7 +14625,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Repeatable Quest",
@@ -15580,8 +15646,8 @@
     "itemId": 1062,
     "itemType": "Misc",
     "actions": [
-      "NPC",
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking",
@@ -16105,7 +16171,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Brewing",
@@ -16125,13 +16191,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 0,
+    "avgWhobuy": 0,
     "sellValue": 420,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "laurell-weinder-card",
@@ -17539,13 +17605,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
+    "avgVend": 1600000,
     "avgWhobuy": null,
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "magma-fist-3",
@@ -17697,7 +17763,7 @@
     "itemType": "Equipment",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Server Hat Quest",
@@ -17715,13 +17781,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
+    "avgVend": 0,
     "avgWhobuy": null,
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop"
   },
   {
     "id": "manacles",
@@ -19507,13 +19573,13 @@
     ],
     "notes": "Adds the Water element to a forged weapon (one element per weapon)",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 4000,
+    "avgWhobuy": 0,
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "mystic-horn",
@@ -20046,7 +20112,6 @@
     "itemId": 603,
     "itemType": "Consumable",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -20272,7 +20337,6 @@
     "itemId": 617,
     "itemType": "Consumable",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -20944,7 +21008,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": null,
@@ -21179,13 +21249,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 4000,
+    "avgWhobuy": 0,
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "peco-peco-card",
@@ -21272,13 +21342,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 550,
+    "avgWhobuy": 0,
     "sellValue": 227,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "pencil-case",
@@ -22702,7 +22772,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": null,
@@ -23395,13 +23471,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 35000,
+    "avgWhobuy": 20000,
     "sellValue": 667,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "red-ferus-card",
@@ -24118,7 +24194,7 @@
     "itemId": 10014,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -24656,7 +24732,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": null,
@@ -26527,13 +26609,13 @@
     ],
     "notes": "",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 1000,
+    "avgWhobuy": 555,
     "sellValue": 522,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "skull-helm",
@@ -26930,13 +27012,13 @@
     ],
     "notes": "Alice Taming Item",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 130000,
+    "avgWhobuy": 50000,
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "soft-blade-of-grass",
@@ -29640,12 +29722,29 @@
     "itemId": 6607,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Temporal Boots [0]",
+        "qty": 100,
+        "note": "Old Glast Heim, Hugin's Butler"
+      },
+      {
+        "for": "Upgraded Temporal Boots [0]",
+        "qty": 1000,
+        "note": "Old Glast Heim, Hugin's Butler; one stat of your choice"
+      },
+      {
+        "for": "Upgraded Temporal Boots [1]",
+        "qty": 1500,
+        "note": "Old Glast Heim, Hugin's Craftsman: adds the slot (75%), with 15,000,000z; a failed try uses everything"
+      }
+    ],
     "notes": "",
     "links": [],
     "avgVend": 100000,
@@ -30730,7 +30829,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -31152,13 +31251,13 @@
     ],
     "notes": "Baby Desert Wolf Taming Item",
     "links": [],
-    "avgVend": null,
-    "avgWhobuy": null,
+    "avgVend": 170000,
+    "avgWhobuy": 35000,
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no",
-    "lastVerified": null,
-    "verificationNotes": ""
+    "lastVerified": "2026-10-11",
+    "verificationNotes": "Vend price from a player shop; @whobuy price in game"
   },
   {
     "id": "western-grace-0",
@@ -31215,7 +31314,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
