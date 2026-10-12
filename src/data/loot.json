@@ -1527,7 +1527,7 @@
         "note": "+9 LUK food"
       }
     ],
-    "notes": "",
+    "notes": "Poring Pet Food",
     "links": [],
     "avgVend": 900,
     "avgWhobuy": 0,
@@ -1583,7 +1583,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Medusa Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -2223,7 +2223,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "Yoyo Pet food",
+    "notes": "Yoyo Pet Food",
     "links": [],
     "avgVend": 500,
     "avgWhobuy": 0,
@@ -2756,7 +2756,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Goblin Leader Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -3597,7 +3597,7 @@
         "note": "+10 INT food"
       }
     ],
-    "notes": "",
+    "notes": "Blue Unicorn Pet Food",
     "links": [],
     "avgVend": 3000,
     "avgWhobuy": 2700,
@@ -3664,7 +3664,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Succubus Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -4382,7 +4382,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Chung E Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -4735,7 +4735,7 @@
         "qty": 50
       }
     ],
-    "notes": "",
+    "notes": "Christmas Snow Rabbit, Sweet Drops Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -4928,7 +4928,7 @@
         "note": "+2 LUK food"
       }
     ],
-    "notes": "Lunatic Pet food",
+    "notes": "Lunatic Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -5117,6 +5117,28 @@
     "avgWhobuy": null,
     "sellValue": 10,
     "sellSource": "hercules",
+    "npcBuyable": "no",
+    "lastVerified": null,
+    "verificationNotes": ""
+  },
+  {
+    "id": "cheap-lubricant",
+    "name": "Cheap Lubricant",
+    "itemId": 25232,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Gremlin Pet Food",
+    "links": [],
+    "avgVend": null,
+    "avgWhobuy": null,
+    "sellValue": 500,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no",
     "lastVerified": null,
     "verificationNotes": ""
@@ -6503,7 +6525,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Teddy Bear Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -7407,7 +7429,7 @@
         "qty": 50
       }
     ],
-    "notes": "",
+    "notes": "Whisper Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -10130,7 +10152,7 @@
         "note": "5 points each; 25 points needed, any mix of trunks"
       }
     ],
-    "notes": "",
+    "notes": "Willow Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -10274,7 +10296,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Leaf Cat Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -10318,7 +10340,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Imp Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -10414,7 +10436,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Civil Servant Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -10898,7 +10920,7 @@
         "note": "+7 VIT food"
       }
     ],
-    "notes": "",
+    "notes": "Scatleton Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -10920,7 +10942,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Nightmare Terror Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -12748,7 +12770,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Knife Goblin, Flail Goblin, Hammer Goblin Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -12889,7 +12911,7 @@
         "note": "+9 STR food"
       }
     ],
-    "notes": "",
+    "notes": "Poporing, Rice Cake Pet Food",
     "links": [],
     "avgVend": 100,
     "avgWhobuy": 25,
@@ -13055,7 +13077,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Shinobi Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -14242,7 +14264,7 @@
         "note": "+7 INT food"
       }
     ],
-    "notes": "",
+    "notes": "Baphomet Jr. Pet Food",
     "links": [],
     "avgVend": 1200,
     "avgWhobuy": 450,
@@ -15170,7 +15192,7 @@
         "note": "+10 VIT food"
       }
     ],
-    "notes": "",
+    "notes": "Zealotus Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -17518,7 +17540,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Pet food for luxurious pets",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -18852,6 +18874,28 @@
     "verificationNotes": ""
   },
   {
+    "id": "mochi",
+    "name": "Mochi",
+    "itemId": 554,
+    "itemType": "Consumable",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "New Year Doll Pet Food",
+    "links": [],
+    "avgVend": null,
+    "avgWhobuy": null,
+    "sellValue": 200,
+    "sellSource": "hercules",
+    "npcBuyable": "yes",
+    "lastVerified": null,
+    "verificationNotes": ""
+  },
+  {
     "id": "model-training-hat-0",
     "name": "Model Training Hat [0]",
     "itemId": 5073,
@@ -19010,7 +19054,7 @@
       "Brewing"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Evil Nymph Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -19622,7 +19666,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Golem Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -22007,7 +22051,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Stone Shooter Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -22858,7 +22902,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Loli Ruri Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -23574,7 +23618,7 @@
         "note": "Pharmacy"
       }
     ],
-    "notes": "Wizard Job Quest",
+    "notes": "Wizard Job Quest; Hunter Fly Pet Food",
     "links": [],
     "avgVend": 900,
     "avgWhobuy": 530,
@@ -23625,7 +23669,7 @@
         "note": "+9 AGI food"
       }
     ],
-    "notes": "",
+    "notes": "Picky Pet Food",
     "links": [],
     "avgVend": 60,
     "avgWhobuy": 0,
@@ -24562,7 +24606,7 @@
       "No Use"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Roween Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -25585,7 +25629,7 @@
         "note": "one of its possible requests"
       }
     ],
-    "notes": "",
+    "notes": "Christmas Goblin Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -26145,7 +26189,7 @@
         "note": "trade at Charles Orleans"
       }
     ],
-    "notes": "",
+    "notes": "Deviruchi Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -26780,7 +26824,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Marionette Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -29204,7 +29248,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Dullahan Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -29260,7 +29304,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Nine Tail Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -31176,7 +31220,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Miyabi Doll Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -31466,7 +31510,7 @@
         "note": "Pharmacy"
       }
     ],
-    "notes": "",
+    "notes": "Alice Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
@@ -32558,7 +32602,7 @@
         "note": "+9 AGI food"
       }
     ],
-    "notes": "",
+    "notes": "Drops Pet Food",
     "links": [],
     "avgVend": 200,
     "avgWhobuy": 85,
@@ -32702,7 +32746,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Incubus Pet Food",
     "links": [],
     "avgVend": null,
     "avgWhobuy": null,
