@@ -21,8 +21,17 @@ describe('suggestSale', () => {
     expect(suggestSale(item({}))).toBeNull();
   });
 
-  it('picks NPC when players pay less than 15% more', () => {
-    expect(suggestSale(item({ avgVend: 140 })).action).toBe('NPC');
+  it('picks NPC when players pay the same or less', () => {
+    expect(suggestSale(item({ avgVend: 124 })).action).toBe('NPC');
+    expect(suggestSale(item({ avgVend: 100 })).action).toBe('NPC');
+  });
+
+  it('picks Vend for any price above the NPC price', () => {
+    expect(suggestSale(item({ avgVend: 125 })).action).toBe('Vend');
+  });
+
+  it('picks Whobuy for any price above the NPC price', () => {
+    expect(suggestSale(item({ avgWhobuy: 125 })).action).toBe('Whobuy');
   });
 
   it('picks Vend when it pays enough more', () => {
@@ -57,6 +66,14 @@ describe('createSuggester', () => {
     const part = item({ name: 'Part', avgVend: 1000, uses: [{ for: 'Sign Quest', qty: 5 }] });
     const values = new Map([['Sign Quest', 0]]);
     expect(createSuggester([part], values)(part).actions).toEqual(['Keep', 'Vend']);
+  });
+
+  it('keeps a cooking kit, unless NPCs sell it', () => {
+    const use = [{ for: 'Cooking', qty: 1, note: 'used up each time you cook' }];
+    const kit = item({ name: 'Royal Cooking Kit', avgVend: 3000, uses: use });
+    expect(createSuggester([kit])(kit).actions).toEqual(['Keep', 'Vend']);
+    const cheap = item({ name: 'Home Cooking Kit', npcBuyable: 'yes', uses: use });
+    expect(createSuggester([cheap])(cheap).actions).toEqual(['NPC']);
   });
 
   it("doesn't keep extras of something that isn't used up, and it isn't Junk", () => {
@@ -115,8 +132,8 @@ describe('createSuggester', () => {
     expect(createSuggester([part, hat])(part).actions).toEqual(['Vend']);
   });
 
-  it('calls a cheap pet accessory nothing needs Junk', () => {
+  it('sells a cheap pet accessory by price like anything else', () => {
     const accessory = item({ name: 'Wig', itemId: 10005, itemType: 'Equipment', avgVend: 2500 });
-    expect(createSuggester([accessory])(accessory).actions).toEqual(['Junk']);
+    expect(createSuggester([accessory])(accessory).actions).toEqual(['Vend']);
   });
 });

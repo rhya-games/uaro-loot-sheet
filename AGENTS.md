@@ -128,8 +128,7 @@ Match similar existing items. Look them up in loot.json first.
 - Taming items: `Vend`, category `Pet`, notes `"<Pet> Taming Item"`.
 - Pet accessories (IDs 10001-10038): item type `Equipment` (so no
   @whobuy), category `Pet`, notes `"<Pet> Pet accessory"` with the uaRO pet
-  name. Junk when worth under 5,000z and nothing else uses them; otherwise
-  by price like anything else.
+  name. Sold by price like anything else.
 - Headgear quest materials (Dimonka): category `Server Hat Quest` + `uaRO`.
 - After adding items: run `sync:prices`, `sync:shops`, then `validate`.
   After adding uses, run `sync:targets` so new targets get item IDs.
