@@ -247,6 +247,12 @@ describe('suspicious-values', () => {
     expect(run('suspicious-values', [item({ actions: ['Vend'], avgVend: 2000, avgWhobuy: 1000 })])).toEqual([]);
   });
 
+  it('does not flag Keep on a pet or dungeon quest item: it is kept for that', () => {
+    const tame = item({ actions: ['Keep', 'Vend'], categories: ['Pet'], notes: 'Bongun Taming Item' });
+    const plate = item({ actions: ['Keep', 'Vend'], categories: ['Dungeon Quest'] });
+    expect(run('suspicious-values', [tame, plate])).toEqual([]);
+  });
+
   it('flags Keep with nothing to keep it for, or with No Use', () => {
     const rows = run('suspicious-values', [item({ actions: ['Keep'], categories: ['No Use'] })]);
     expect(rows[0].reasons).toEqual(['Keep, but nothing uses it', 'Keep, but the category is No Use']);
@@ -260,6 +266,9 @@ describe('missing-uses and not-reviewed', () => {
       item({ name: 'Has notes', notes: 'Drops from X' }),
       item({ name: 'No Use', categories: ['No Use'] }),
       item({ name: 'New', categories: ['Not Reviewed'] }),
+      item({ name: 'A Card', categories: ['Card'] }),
+      item({ name: 'Pet hat', categories: ['Pet'] }),
+      item({ name: 'Plate', categories: ['Dungeon Quest'] }),
     ];
     expect(names(run('missing-uses', items))).toEqual(['Empty']);
     expect(names(run('not-reviewed', items))).toEqual(['New']);
