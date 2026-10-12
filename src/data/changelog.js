@@ -57,7 +57,7 @@ export const CHANGELOG = [
       { type: 'Added', text: 'Links to the sheet now show a preview picture and description when you share them in chat.' },
       { type: 'Changed', text: 'The page opens faster: the header and search box show while the items load.' },
       { type: 'Changed', text: 'Vend and Whobuy are now suggested whenever players pay even 1z more than NPCs. Actions updated for 11 items.' },
-      { type: 'Added', text: 'Prices updated for 18 more items. Items with new uses: Temporal Crystal, Coagulated Spell, Contaminated Magic, Detrimindexta and the cooking kits.' },
+      { type: 'Added', text: 'Prices updated for 18 more items. Items with new uses: Temporal Crystal, Coagulated Spell, Contaminated Magic, Detrimindexta, Green Potion, Diamond Ring and the cooking kits.' },
       { type: 'Fixed', text: 'Cooking kits now show that they are used for Cooking.' },
     ],
   },
