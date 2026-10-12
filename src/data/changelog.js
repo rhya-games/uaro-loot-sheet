@@ -58,8 +58,8 @@ export const CHANGELOG = [
       { type: 'Changed', text: 'The page opens faster: the header and search box show while the items load.' },
       { type: 'Changed', text: 'Vend and Whobuy are now suggested whenever players pay even 1z more than NPCs. Actions updated for 11 items.' },
       { type: 'Added', text: 'Prices updated for 18 more items.' },
-      { type: 'Added', text: 'Uses added for the cooking kits, Temporal Crystal, Green Potion, Diamond Ring and 3 more items.' },
-      { type: 'Fixed', text: 'Cooking kits now show that they are used for Cooking.' },
+      { type: 'Added', text: 'Uses added for the cooking kits, Temporal Crystal, Green Potion, Diamond Ring and 3 more items. Cooking kits now show that they are used for Cooking.' },
+      { type: 'Added', text: 'Pet food now says which pets eat it, under "Used For" (42 items). Cheap Lubricant and Mochi are new.' },
     ],
   },
   {

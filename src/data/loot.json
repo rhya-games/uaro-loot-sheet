@@ -1343,7 +1343,7 @@
         "note": "+9 LUK food"
       }
     ],
-    "notes": "",
+    "notes": "Poring Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -1391,7 +1391,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Medusa Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -1931,7 +1931,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "Yoyo Pet food",
+    "notes": "Yoyo Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -2384,7 +2384,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Goblin Leader Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -3125,7 +3125,7 @@
         "note": "+10 INT food"
       }
     ],
-    "notes": "",
+    "notes": "Blue Unicorn Pet Food",
     "links": [],
     "sellValue": 30,
     "sellSource": "hercules",
@@ -3184,7 +3184,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Succubus Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -3790,7 +3790,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Chung E Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -4091,7 +4091,7 @@
         "qty": 50
       }
     ],
-    "notes": "",
+    "notes": "Christmas Snow Rabbit, Sweet Drops Pet Food",
     "links": [],
     "sellValue": 5,
     "sellSource": "hercules",
@@ -4260,7 +4260,7 @@
         "note": "+2 LUK food"
       }
     ],
-    "notes": "Lunatic Pet food",
+    "notes": "Lunatic Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -4415,6 +4415,24 @@
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "cheap-lubricant",
+    "name": "Cheap Lubricant",
+    "itemId": 25232,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "Gremlin Pet Food",
+    "links": [],
+    "sellValue": 500,
+    "sellSource": "rathena-renewal",
     "npcBuyable": "no"
   },
   {
@@ -5619,7 +5637,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Teddy Bear Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "rathena-renewal",
@@ -6403,7 +6421,7 @@
         "qty": 50
       }
     ],
-    "notes": "",
+    "notes": "Whisper Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -8770,7 +8788,7 @@
         "note": "5 points each; 25 points needed, any mix of trunks"
       }
     ],
-    "notes": "",
+    "notes": "Willow Pet Food",
     "links": [],
     "sellValue": 1,
     "sellSource": "hercules",
@@ -8894,7 +8912,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Leaf Cat Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -8930,7 +8948,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Imp Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -9014,7 +9032,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Civil Servant Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -9430,7 +9448,7 @@
         "note": "+7 VIT food"
       }
     ],
-    "notes": "",
+    "notes": "Scatleton Pet Food",
     "links": [],
     "sellValue": 125,
     "sellSource": "hercules",
@@ -9448,7 +9466,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Nightmare Terror Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -11016,7 +11034,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Knife Goblin, Flail Goblin, Hammer Goblin Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -11141,7 +11159,7 @@
         "note": "+9 STR food"
       }
     ],
-    "notes": "",
+    "notes": "Poporing, Rice Cake Pet Food",
     "links": [],
     "sellValue": 5,
     "sellSource": "hercules",
@@ -11283,7 +11301,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Shinobi Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -12318,7 +12336,7 @@
         "note": "+7 INT food"
       }
     ],
-    "notes": "",
+    "notes": "Baphomet Jr. Pet Food",
     "links": [],
     "sellValue": 250,
     "sellSource": "hercules",
@@ -13122,7 +13140,7 @@
         "note": "+10 VIT food"
       }
     ],
-    "notes": "",
+    "notes": "Zealotus Pet Food",
     "links": [],
     "sellValue": 187,
     "sellSource": "hercules",
@@ -15166,7 +15184,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Pet food for luxurious pets",
     "links": [],
     "sellValue": 5000,
     "sellSource": "rathena-renewal",
@@ -16312,6 +16330,24 @@
     "npcBuyable": "no"
   },
   {
+    "id": "mochi",
+    "name": "Mochi",
+    "itemId": 554,
+    "itemType": "Consumable",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "Pet"
+    ],
+    "uses": [],
+    "notes": "New Year Doll Pet Food",
+    "links": [],
+    "sellValue": 200,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
+  },
+  {
     "id": "model-training-hat-0",
     "name": "Model Training Hat [0]",
     "itemId": 5073,
@@ -16446,7 +16482,7 @@
       "Brewing"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Evil Nymph Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -16970,7 +17006,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Golem Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -19043,7 +19079,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Stone Shooter Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -19806,7 +19842,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Loli Ruri Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -20430,7 +20466,7 @@
         "note": "Pharmacy"
       }
     ],
-    "notes": "Wizard Job Quest",
+    "notes": "Wizard Job Quest; Hunter Fly Pet Food",
     "links": [],
     "sellValue": 300,
     "sellSource": "hercules",
@@ -20477,7 +20513,7 @@
         "note": "+9 AGI food"
       }
     ],
-    "notes": "",
+    "notes": "Picky Pet Food",
     "links": [],
     "sellValue": 9,
     "sellSource": "hercules",
@@ -21278,7 +21314,7 @@
       "No Use"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Roween Pet Food",
     "links": [],
     "sellValue": 51,
     "sellSource": "hercules",
@@ -22173,7 +22209,7 @@
         "note": "one of its possible requests"
       }
     ],
-    "notes": "",
+    "notes": "Christmas Goblin Pet Food",
     "links": [],
     "sellValue": 80,
     "sellSource": "hercules",
@@ -22657,7 +22693,7 @@
         "note": "trade at Charles Orleans"
       }
     ],
-    "notes": "",
+    "notes": "Deviruchi Pet Food",
     "links": [],
     "sellValue": 8,
     "sellSource": "hercules",
@@ -23200,7 +23236,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Marionette Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
@@ -25296,7 +25332,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Dullahan Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -25344,7 +25380,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Nine Tail Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "rathena-renewal",
@@ -26992,7 +27028,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Miyabi Doll Pet Food",
     "links": [],
     "sellValue": 10,
     "sellSource": "hercules",
@@ -27250,7 +27286,7 @@
         "note": "Pharmacy"
       }
     ],
-    "notes": "",
+    "notes": "Alice Pet Food",
     "links": [],
     "sellValue": 600,
     "sellSource": "hercules",
@@ -28198,7 +28234,7 @@
         "note": "+9 AGI food"
       }
     ],
-    "notes": "",
+    "notes": "Drops Pet Food",
     "links": [],
     "sellValue": 20,
     "sellSource": "hercules",
@@ -28330,7 +28366,7 @@
       "Pet"
     ],
     "uses": [],
-    "notes": "",
+    "notes": "Incubus Pet Food",
     "links": [],
     "sellValue": 500,
     "sellSource": "hercules",
