@@ -6343,9 +6343,16 @@
       "NPC"
     ],
     "categories": [
-      "Pet"
+      "Pet",
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 130,
@@ -6488,9 +6495,15 @@
       "Vend"
     ],
     "categories": [
-      "Skills"
+      "Skills",
+      "Job Quest"
     ],
     "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      },
       {
         "for": "Slayer",
         "qty": 20,
@@ -12504,13 +12517,19 @@
     ],
     "categories": [
       "Pet",
-      "Skills"
+      "Skills",
+      "Job Quest"
     ],
     "uses": [
       {
         "for": "Book of the Devil",
         "qty": 2,
         "note": "Monster Tamer in Izlude"
+      },
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
       },
       {
         "for": "Katana",
@@ -13453,9 +13472,15 @@
       "Keep"
     ],
     "categories": [
-      "Cooking"
+      "Cooking",
+      "Job Quest"
     ],
     "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      },
       {
         "for": "Smooth Noodle",
         "qty": 5,
@@ -13874,9 +13899,15 @@
       "NPC"
     ],
     "categories": [
-      "No Use"
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 125,
@@ -15293,6 +15324,28 @@
     "notes": "",
     "links": [],
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "manacles",
+    "name": "Manacles",
+    "itemId": 1098,
+    "itemType": "Misc",
+    "actions": [],
+    "categories": [
+      "Job Quest"
+    ],
+    "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "sellValue": 329,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -17765,9 +17818,15 @@
       "Vend"
     ],
     "categories": [
-      "Other Quest"
+      "Other Quest",
+      "Job Quest"
     ],
     "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      },
       {
         "for": "Gunslinger Weapon Quests",
         "qty": 1000,
@@ -21086,9 +21145,15 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Job Quest"
     ],
     "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      },
       {
         "for": "Giant Band Aid",
         "qty": 500
@@ -22525,9 +22590,15 @@
       "NPC"
     ],
     "categories": [
-      "No Use"
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 139,
@@ -22797,9 +22868,15 @@
       "Vend"
     ],
     "categories": [
-      "Other Quest"
+      "Other Quest",
+      "Job Quest"
     ],
     "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      },
       {
         "for": "Gunslinger Weapon Quests",
         "qty": 1000,
@@ -24679,12 +24756,18 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Job Quest"
     ],
     "uses": [
       {
         "for": "Blue Fish",
         "qty": 300
+      },
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
       }
     ],
     "notes": "",
@@ -27715,9 +27798,15 @@
       "Vend"
     ],
     "categories": [
-      "Official Hat Quest"
+      "Official Hat Quest",
+      "Job Quest"
     ],
     "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 10,
+        "note": "Random test: 10 each of 4 items, one of three sets"
+      },
       {
         "for": "Striped Hairband",
         "qty": 1500
