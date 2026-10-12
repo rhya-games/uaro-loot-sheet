@@ -5721,8 +5721,89 @@
     "categories": [
       "Dungeon Quest"
     ],
-    "uses": [],
-    "notes": "",
+    "uses": [
+      {
+        "for": "Juperos Core Entrance Quest",
+        "qty": 1,
+        "note": "All four pieces fit the elevator lever, and are used up when it is pulled"
+      }
+    ],
+    "notes": "Piece 1 of 4",
+    "links": [],
+    "sellValue": 2500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "crest-piece-2",
+    "name": "Crest Piece",
+    "itemId": 7357,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "uses": [
+      {
+        "for": "Juperos Core Entrance Quest",
+        "qty": 1,
+        "note": "All four pieces fit the elevator lever, and are used up when it is pulled"
+      }
+    ],
+    "notes": "Piece 2 of 4",
+    "links": [],
+    "sellValue": 2500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "crest-piece-3",
+    "name": "Crest Piece",
+    "itemId": 7358,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "uses": [
+      {
+        "for": "Juperos Core Entrance Quest",
+        "qty": 1,
+        "note": "All four pieces fit the elevator lever, and are used up when it is pulled"
+      }
+    ],
+    "notes": "Piece 3 of 4",
+    "links": [],
+    "sellValue": 2500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "crest-piece-4",
+    "name": "Crest Piece",
+    "itemId": 7359,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Dungeon Quest"
+    ],
+    "uses": [
+      {
+        "for": "Juperos Core Entrance Quest",
+        "qty": 1,
+        "note": "All four pieces fit the elevator lever, and are used up when it is pulled"
+      }
+    ],
+    "notes": "Piece 4 of 4",
     "links": [],
     "sellValue": 2500,
     "sellSource": "hercules",
