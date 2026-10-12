@@ -221,9 +221,8 @@ describe('unverified-prices', () => {
 });
 
 describe('suspicious-values', () => {
-  it('flags a vend price below the NPC price', () => {
-    const rows = run('suspicious-values', [item({ actions: ['Vend'], avgVend: 50 })]);
-    expect(rows[0].reasons).toEqual(['Vend price is below the NPC price']);
+  it('does not flag a vend price below the NPC price (players do that)', () => {
+    expect(run('suspicious-values', [item({ actions: ['Vend'], avgVend: 50 })])).toEqual([]);
   });
 
   it('does not flag a price of 0 (checked, nobody is buying)', () => {
@@ -233,6 +232,19 @@ describe('suspicious-values', () => {
   it('flags a price with no matching action', () => {
     const rows = run('suspicious-values', [item({ actions: ['NPC'], avgVend: 5000 })]);
     expect(rows[0].reasons).toEqual(['Has a vend price but no Vend action']);
+  });
+
+  it('flags a vend price with no Vend action, unless the NPC pays more', () => {
+    // sellValue 100 is 124z from the NPC with Overcharge.
+    const flagged = run('suspicious-values', [item({ actions: ['NPC'], avgVend: 5000 })]);
+    expect(flagged[0].reasons).toEqual(['Has a vend price but no Vend action']);
+    expect(run('suspicious-values', [item({ actions: ['NPC'], avgVend: 50 })])).toEqual([]);
+  });
+
+  it('flags an @whobuy price with no Whobuy action, unless vend pays more', () => {
+    const flagged = run('suspicious-values', [item({ actions: ['Vend'], avgVend: 1000, avgWhobuy: 2000 })]);
+    expect(flagged[0].reasons).toEqual(['Has an @whobuy price but no Whobuy action']);
+    expect(run('suspicious-values', [item({ actions: ['Vend'], avgVend: 2000, avgWhobuy: 1000 })])).toEqual([]);
   });
 
   it('flags Keep with nothing to keep it for, or with No Use', () => {
