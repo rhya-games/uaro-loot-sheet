@@ -56,6 +56,8 @@ export const CHANGELOG = [
       { type: 'Added', text: 'Vend and @whobuy prices updated for 117 items, all checked in game today. Actions updated for 38 of them to match.' },
       { type: 'Added', text: 'Links to the sheet now show a preview picture and description when you share them in chat.' },
       { type: 'Changed', text: 'The page opens faster: the header and search box show while the items load.' },
+      { type: 'Added', text: 'Pet food now says which pets eat it, under "Used For" (42 items).' },
+      { type: 'Added', text: 'Two new items: Cheap Lubricant and Mochi, both pet food.' },
     ],
   },
   {
