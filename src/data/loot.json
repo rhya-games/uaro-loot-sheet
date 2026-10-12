@@ -4547,9 +4547,21 @@
       "Vend"
     ],
     "categories": [
-      "Pet"
+      "Pet",
+      "Job Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 1,
+        "note": "Senior Crusader in Prontera Castle; both together skip the item test"
+      },
+      {
+        "for": "Orc Trophy",
+        "qty": 1,
+        "note": "Monster Tamer in Izlude"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1,
@@ -11419,9 +11431,15 @@
     "categories": [
       "Pet Evolution",
       "Pet",
-      "uaRO"
+      "uaRO",
+      "Job Quest"
     ],
     "uses": [
+      {
+        "for": "Crusader Job Quest",
+        "qty": 1,
+        "note": "Senior Crusader in Prontera Castle; both together skip the item test"
+      },
       {
         "for": "Diabolic Pet Evolution",
         "qty": 30
@@ -12408,6 +12426,11 @@
       "Skills"
     ],
     "uses": [
+      {
+        "for": "Book of the Devil",
+        "qty": 2,
+        "note": "Monster Tamer in Izlude"
+      },
       {
         "for": "Katana",
         "qty": 15,
@@ -17297,6 +17320,11 @@
     ],
     "uses": [
       {
+        "for": "Book of the Devil",
+        "qty": 1,
+        "note": "Monster Tamer in Izlude"
+      },
+      {
         "for": "Rideword Hat (RWH)",
         "qty": 2
       }
@@ -17340,6 +17368,11 @@
       "uaRO"
     ],
     "uses": [
+      {
+        "for": "No Recipient",
+        "qty": 1,
+        "note": "Monster Tamer in Izlude"
+      },
       {
         "for": "Yao Jun Pet Evolution (Hyegun)",
         "qty": 50
@@ -21990,6 +22023,7 @@
       "Vend"
     ],
     "categories": [
+      "Pet",
       "Skills",
       "Cooking"
     ],
@@ -22003,6 +22037,11 @@
         "for": "Fried Scorpion Tails",
         "qty": 20,
         "note": "+5 LUK food"
+      },
+      {
+        "for": "Orc Trophy",
+        "qty": 1,
+        "note": "Monster Tamer in Izlude"
       },
       {
         "for": "Steamed Desert Scorpions",
