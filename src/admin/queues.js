@@ -176,16 +176,22 @@ function unverifiedPrices(items) {
 
 /**
  * Values that look wrong. A price of 0 isn't listed: it means "checked,
- * nobody's buying" (see suggest.js).
+ * nobody's buying" (see suggest.js). Nor is a vend price below the NPC
+ * price: players do that, and it says nothing is wrong with the data. A
+ * price without its action isn't listed when a better way to sell explains
+ * it (the NPC pays more than vend, or vend pays more than @whobuy).
  */
 function suspiciousValues(items) {
   const rows = [];
   for (const item of items) {
     const reasons = [];
+    // An NPC that pays more than the vend price is why Vend is left out (see suggest.js), so it's not suspicious.
     const npc = npcSellPrice(item);
-    if (item.avgVend > 0 && npc != null && item.avgVend < npc) reasons.push('Vend price is below the NPC price');
-    if (item.avgVend > 0 && !item.actions.includes('Vend') && !isSoldByNpc(item)) reasons.push('Has a vend price but no Vend action');
-    if (item.avgWhobuy > 0 && !item.actions.includes('Whobuy') && !isSoldByNpc(item)) reasons.push('Has an @whobuy price but no Whobuy action');
+    const npcPaysMore = npc != null && npc > item.avgVend;
+    if (item.avgVend > 0 && !npcPaysMore && !item.actions.includes('Vend') && !isSoldByNpc(item)) reasons.push('Has a vend price but no Vend action');
+    // A vend price above the @whobuy price is why Whobuy is left out (see suggest.js), so it's not suspicious.
+    const vendPaysMore = item.avgVend != null && item.avgVend > item.avgWhobuy;
+    if (item.avgWhobuy > 0 && !vendPaysMore && !item.actions.includes('Whobuy') && !isSoldByNpc(item)) reasons.push('Has an @whobuy price but no Whobuy action');
     if (item.actions.includes('Keep') && !item.uses.length) reasons.push('Keep, but nothing uses it');
     if (item.actions.includes('Keep') && isNoUse(item)) reasons.push('Keep, but the category is No Use');
     if (reasons.length) rows.push({ item, reasons });
