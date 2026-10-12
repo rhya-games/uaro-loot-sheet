@@ -48,7 +48,7 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
-    version: '0.10.0',
+    version: '0.11.0',
     date: '2026-10-11',
     title: 'Search from anywhere, more checked prices',
     changes: [
