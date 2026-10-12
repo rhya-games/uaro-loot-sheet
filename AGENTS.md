@@ -249,9 +249,10 @@ Match similar existing items. Look them up in loot.json first.
   shops sell it": it can only be made, so its parts count as worth keeping.
   Quests ("... Quest(s)") have no value and are always a reason to Keep.
   Skills (uses noted "each cast") and uses noted "not used up" (Sign Quest
-  weapons, recipe books) never are, and aren't targets. Cards always suggest Vend; level 1-3
-  cooking (use notes "+1".."+3 ... food", Level 1-3 Cookbook trades) is
-  never a reason to Keep.
+  weapons, recipe books) never are, and aren't targets. Job quests ("... Job
+  Quest") are listed as uses but never a reason to Keep. Cards always suggest
+  Vend; level 1-3 cooking (use notes "+1".."+3 ... food", Level 1-3 Cookbook
+  trades) is never a reason to Keep.
 - Admin mode (`src/admin/`) only exists under `npm run dev`
   (`import.meta.env.DEV`). Saves POST to the Vite plugin in
   `scripts/admin-server.mjs`, which writes loot.json; only the fields in its
