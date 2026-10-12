@@ -4,12 +4,11 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
 /**
  * Suggested actions, worked out from prices instead of set by hand.
  *
- * Selling: NPC, @whobuy and vending take more and more effort, and player
- * prices move around. So a player price has to beat the NPC price by a
- * margin before it's worth the trouble:
- *   - Whobuy when it pays more than WHOBUY_MARGIN above the NPC price.
- *   - Vend when it pays more than VEND_MARGIN above the NPC price, and more
- *     than @whobuy at all.
+ * Selling: NPC, @whobuy and vending take more and more effort, but a
+ * player price that beats the NPC price by even 1z is worth it, so there's
+ * no margin (a percentage rule left real vend prices as NPC):
+ *   - Whobuy when it pays more than the NPC price.
+ *   - Vend when it pays more than the NPC price, and more than @whobuy.
  *   - NPC otherwise, and always for items NPCs sell or that can't be traded.
  *   - Cards are always Vend, even with no price yet: players pay far more
  *     than NPCs for any card.
@@ -30,19 +29,15 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  *     use-targets.json) can only be made, so its parts are worth keeping.
  *   - Cooking levels 1-3 don't count: those foods are too weak to be worth
  *     keeping ingredients for (see isLowLevelCooking).
+ *   - A cooking kit (the "Cooking" use) is used up with every dish, and
+ *     there's no one finished thing to compare, so it's a reason to Keep
+ *     unless NPCs sell it (then it's easy to buy again; see isCooking).
  *   - Job quests ("Crusader Job Quest") don't count: they're done once, so
  *     the item sells by price. They're still listed under "Used For" (see
  *     isJobQuest).
  *
- * Junk: nothing uses it, and nobody pays anything for it. Pet accessories
- * are Junk under PET_ACCESSORY_JUNK_BELOW when nothing else uses them.
+ * Junk: nothing uses it, and nobody pays anything for it.
  */
-export const WHOBUY_MARGIN = 0.15;
-export const VEND_MARGIN = 0.15;
-export const PET_ACCESSORY_JUNK_BELOW = 5000;
-
-/** Pet accessories: the emulators' pet armor items are IDs 10001-10038 (pre-renewal) and 10043-10045. */
-export const isPetAccessory = (item) => item.itemId >= 10001 && item.itemId <= 10099;
 
 /**
  * A use for level 1-3 cooking: a food whose note says "+1" to "+3"
@@ -56,6 +51,9 @@ export const isQuest = (use) => /\bQuests?\b/.test(use.for);
 
 /** A job change quest ("Archer Job Quest"). Listed as a use, but not a reason to Keep. */
 export const isJobQuest = (use) => /\bJob Quest\b/.test(use.for);
+
+/** What a cooking kit is used for: any dish, so it has no single target to price. */
+export const isCooking = (use) => use.for === 'Cooking';
 
 /** A use that needs the item but doesn't take it ("any whip; not used up"). */
 export const isNotUsedUp = (use) => /\bnot used up\b/.test(use.note ?? '');
@@ -86,10 +84,10 @@ export function suggestSale(item) {
     return { action: 'Vend', price: vend, reason: 'Cards always sell to players' + (vend != null ? ` (${fmt(vend)})` : '') };
   }
 
-  if (vend != null && vend > floor * (1 + VEND_MARGIN) && vend > (whobuy ?? 0)) {
+  if (vend != null && vend > floor && vend > (whobuy ?? 0)) {
     return { action: 'Vend', price: vend, reason: `Vending pays the most (${fmt(vend)})` };
   }
-  if (whobuy != null && whobuy > floor * (1 + WHOBUY_MARGIN)) {
+  if (whobuy != null && whobuy > floor) {
     return { action: 'Whobuy', price: whobuy, reason: `@whobuy pays ${fmt(whobuy)}, more than NPCs` };
   }
   // No vend price yet, and no @whobuy buyers to go on: we can't tell
@@ -97,11 +95,7 @@ export function suggestSale(item) {
   // as NPC). A Whobuy of 0 means "checked, nobody's buying".
   if (tradeable && vend == null && !(whobuy > 0)) return null;
   if (npc > 0) {
-    const closest = Math.max(whobuy ?? 0, vend ?? 0);
-    const reason = closest > npc
-      ? `Players pay ${fmt(closest)}, not enough more than NPCs (${fmt(npc)}) to be worth it`
-      : `NPCs pay the most (${fmt(npc)})`;
-    return { action: 'NPC', price: npc, reason };
+    return { action: 'NPC', price: npc, reason: `NPCs pay the most (${fmt(npc)})` };
   }
   // Players and NPCs pay nothing.
   return { action: null, price: 0, reason: tradeable ? 'Players and NPCs pay nothing for it' : 'Can’t be traded, and NPCs pay nothing' };
@@ -163,6 +157,7 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
 
   function judgeUse(use) {
     if (isQuest(use)) return { for: use.for, worthIt: true, value: null, source: 'quest', partsValue: 0, missingPrices: 0 };
+    if (isCooking(use)) return { for: use.for, worthIt: true, value: null, source: 'cooking', partsValue: 0, missingPrices: 0 };
     const { value, source } = targetValue(use.for);
     let partsValue = 0;
     let missingPrices = 0;
@@ -178,7 +173,9 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
 
   return function suggest(item) {
     const sale = saleOf(item);
-    const uses = item.uses.filter(isKeepReason).map(judgeUse);
+    // NPC-sold cooking kits are easy to buy again, so they aren't kept.
+    const npcSoldKit = isSoldByNpc(item) && item.uses.some(isCooking);
+    const uses = item.uses.filter((use) => isKeepReason(use) && !(npcSoldKit && isCooking(use))).map(judgeUse);
     const reasons = [];
     const actions = [];
 
@@ -188,6 +185,8 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
       for (const use of worthKeeping) {
         reasons.push(use.source === 'quest'
           ? `Keep for ${use.for} (quests can’t be bought)`
+          : use.source === 'cooking'
+          ? `Keep for cooking (a kit is used up with every dish)`
           : use.source === 'no shops'
           ? `Keep for ${use.for} (no shops sell it, so it can only be made)`
           : use.value == null
@@ -201,20 +200,16 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
     if (notUsedUp.length) reasons.push(`${notUsedUp.join(', ')} doesn’t use it up, so one is enough: not a reason to keep more`);
     const skills = item.uses.filter(isSkill).map((use) => use.for);
     if (skills.length) reasons.push(`Skills (${skills.join(', ')}) aren’t a reason to keep it`);
+    if (npcSoldKit) reasons.push('NPCs sell it, so there’s no need to keep it for cooking');
     const jobQuests = item.uses.filter(isJobQuest).map((use) => use.for);
     if (jobQuests.length) reasons.push(`Job quests (${jobQuests.join(', ')}) aren’t a reason to keep it`);
     for (const use of uses.filter((use) => !use.worthIt)) {
       reasons.push(`Not worth making ${use.for}: worth ${fmt(use.value)}, parts sell for ${fmt(use.partsValue)}`);
     }
 
-    // A pet accessory nothing else needs isn't worth the trouble under 5k.
     // Something that still needs it (a Sign Quest weapon, a skill, a job quest) isn't Junk.
-    const usedFor = uses.length + notUsedUp.length + skills.length + jobQuests.length;
-    const best = Math.max(npcSellPrice(item) ?? 0, sale?.price ?? 0);
-    if (isPetAccessory(item) && !usedFor && sale && best < PET_ACCESSORY_JUNK_BELOW) {
-      actions.push('Junk');
-      reasons.push(`Pet accessory worth under ${fmt(PET_ACCESSORY_JUNK_BELOW)} (${fmt(best)}), and nothing else uses it`);
-    } else if (sale?.action) {
+    const usedFor = uses.length + (npcSoldKit ? 1 : 0) + notUsedUp.length + skills.length + jobQuests.length;
+    if (sale?.action) {
       actions.push(sale.action);
       reasons.push(sale.reason);
     } else if (sale && !usedFor) {

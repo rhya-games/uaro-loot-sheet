@@ -30,8 +30,8 @@
     "itemId": 731,
     "itemType": "Misc",
     "actions": [
-      "NPC",
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Official Hat Quest"
@@ -54,8 +54,8 @@
     "itemId": 732,
     "itemType": "Misc",
     "actions": [
-      "NPC",
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Pet Evolution",
@@ -190,7 +190,7 @@
     "itemId": 10033,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -452,8 +452,8 @@
     "itemId": 7047,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Keep"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -1815,7 +1815,7 @@
     "itemId": 10013,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -2060,7 +2060,7 @@
     "itemId": 10017,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -2245,7 +2245,7 @@
     "itemId": 10028,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -2588,7 +2588,7 @@
     "itemId": 10037,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -2885,7 +2885,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest",
@@ -4862,7 +4862,7 @@
     "itemId": 7752,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -5040,12 +5040,24 @@
     "itemId": 6608,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "White Knight Card",
+        "qty": 5000,
+        "note": "Old Glast Heim card trade; or 2000 Contaminated Magic"
+      },
+      {
+        "for": "Khalitzburg Knight Card",
+        "qty": 5000,
+        "note": "Old Glast Heim card trade; or 2000 Contaminated Magic"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -5347,12 +5359,24 @@
     "itemId": 6755,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "White Knight Card",
+        "qty": 2000,
+        "note": "Old Glast Heim card trade; or 5000 Coagulated Spell"
+      },
+      {
+        "for": "Khalitzburg Knight Card",
+        "qty": 2000,
+        "note": "Old Glast Heim card trade; or 5000 Coagulated Spell"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -6302,7 +6326,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Job Quest",
@@ -6678,13 +6702,19 @@
     "itemId": 971,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Keep",
+      "Vend"
     ],
     "categories": [
       "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Hugel Quests",
+        "qty": 3,
+        "note": "Dono"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 200,
@@ -6760,12 +6790,19 @@
     "itemId": 2613,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "No Use"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Marriage Quest",
+        "qty": 1,
+        "note": "Wedding Staff"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 22500,
@@ -6967,7 +7004,7 @@
     "itemId": 7123,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -6991,7 +7028,7 @@
     "itemId": 1037,
     "itemType": "Misc",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking",
@@ -7807,7 +7844,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Other Quest"
@@ -8468,7 +8505,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 5000,
@@ -9204,7 +9247,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -10407,7 +10450,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -11183,12 +11226,29 @@
     "sellSource": "hercules",
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "No Use"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cursed Spirit Quest",
+        "qty": 1,
+        "note": "Father Bamph; with 1 Yellow Gemstone"
+      },
+      {
+        "for": "Gonryun Quests",
+        "qty": 1,
+        "note": "Blacksmith"
+      },
+      {
+        "for": "Louyang Quests",
+        "qty": 30,
+        "note": "Employee"
+      }
+    ],
     "notes": "",
     "links": [],
     "npcBuyable": "yes"
@@ -11942,7 +12002,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Pet Evolution",
@@ -12179,7 +12239,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 500,
@@ -12575,7 +12641,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Repeatable Quest",
@@ -13468,8 +13534,8 @@
     "itemId": 1062,
     "itemType": "Misc",
     "actions": [
-      "NPC",
-      "Keep"
+      "Keep",
+      "NPC"
     ],
     "categories": [
       "Cooking",
@@ -13921,7 +13987,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Brewing",
@@ -15305,7 +15371,7 @@
     "itemType": "Equipment",
     "actions": [
       "Keep",
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "Server Hat Quest",
@@ -17326,7 +17392,6 @@
     "itemId": 603,
     "itemType": "Consumable",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -17524,7 +17589,6 @@
     "itemId": 617,
     "itemType": "Consumable",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -18120,7 +18184,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 250,
@@ -19662,7 +19732,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 1000,
@@ -20886,7 +20962,7 @@
     "itemId": 10014,
     "itemType": "Equipment",
     "actions": [
-      "Junk"
+      "NPC"
     ],
     "categories": [
       "Pet"
@@ -21352,7 +21428,13 @@
     "categories": [
       "Cooking"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cooking",
+        "qty": 1,
+        "note": "used up each time you cook"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 2500,
@@ -25660,12 +25742,29 @@
     "itemId": 6607,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
       "uaRO"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Temporal Boots [0]",
+        "qty": 100,
+        "note": "Old Glast Heim, Hugin's Butler"
+      },
+      {
+        "for": "Upgraded Temporal Boots [0]",
+        "qty": 1000,
+        "note": "Old Glast Heim, Hugin's Butler; one stat of your choice"
+      },
+      {
+        "for": "Upgraded Temporal Boots [1]",
+        "qty": 1500,
+        "note": "Old Glast Heim, Hugin's Craftsman: adds the slot (75%), with 15,000,000z; a failed try uses everything"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 10,
@@ -26602,7 +26701,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -27011,7 +27110,7 @@
     "itemType": "Misc",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Official Hat Quest"
