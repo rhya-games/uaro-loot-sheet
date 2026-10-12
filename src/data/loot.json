@@ -6790,12 +6790,19 @@
     "itemId": 2613,
     "itemType": "Equipment",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "No Use"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Marriage Quest",
+        "qty": 1,
+        "note": "Wedding Staff"
+      }
+    ],
     "notes": "",
     "links": [],
     "sellValue": 22500,
@@ -11219,12 +11226,29 @@
     "sellSource": "hercules",
     "itemType": "Consumable",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "No Use"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Cursed Spirit Quest",
+        "qty": 1,
+        "note": "Father Bamph; with 1 Yellow Gemstone"
+      },
+      {
+        "for": "Gonryun Quests",
+        "qty": 1,
+        "note": "Blacksmith"
+      },
+      {
+        "for": "Louyang Quests",
+        "qty": 30,
+        "note": "Employee"
+      }
+    ],
     "notes": "",
     "links": [],
     "npcBuyable": "yes"
