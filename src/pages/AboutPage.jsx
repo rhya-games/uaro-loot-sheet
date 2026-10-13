@@ -2,7 +2,7 @@ import { LockClosedIcon, MinusIcon } from '@heroicons/react/24/outline';
 import HowToSteps from '../components/HowToSteps.jsx';
 import { CategoryBadge } from '../components/ItemBadges.jsx';
 import { BulletList, ExternalLink, Page, PageLink, Section, SubHeading } from '../components/Page.jsx';
-import { BEST_VEND_LABEL, BestStar, Mark, NoIcon, Unknown, YesIcon } from '../components/StatusIcons.jsx';
+import { BEST_NPC_LABEL, BEST_VEND_LABEL, BestStar, Mark, NoIcon, Unknown, YesIcon } from '../components/StatusIcons.jsx';
 import { ALL_CATEGORIES, ALL_ITEM_TYPES, CATEGORY_DESCRIPTIONS, CATEGORY_LINKS } from '../utils/labels.js';
 import { ROUTES } from '../utils/route.js';
 import { CONTRIBUTING_URL } from '../config.js';
@@ -11,6 +11,7 @@ import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 const CONTENTS = [
   { id: 'what', title: 'What this is' },
   { id: 'how', title: 'How to use it' },
+  { id: 'prices', title: 'Why there are no vend prices' },
   { id: 'table', title: 'Reading the table' },
   { id: 'tips', title: 'Tips' },
   { id: 'data', title: 'Data sources' },
@@ -34,6 +35,18 @@ export default function AboutPage() {
 
       <Section id="how" title="How to use it">
         <HowToSteps />
+      </Section>
+
+      <Section id="prices" title="Why there are no vend prices">
+        <p>
+          This sheet used to show what players pay in vending shops. The server’s rules don’t allow those prices to be
+          published, so we had to remove them. We’re sorry: we know they were the most useful part.
+        </p>
+        <p>
+          What’s left still tells you what to do. A <BestStar label={BEST_VEND_LABEL} /> in Vend means players pay
+          more than an NPC does. A <BestStar label={BEST_NPC_LABEL} /> next to the NPC price means the NPC pays the
+          most. The NPC price is still shown in full.
+        </p>
       </Section>
 
       <Section id="table" title="Reading the table">

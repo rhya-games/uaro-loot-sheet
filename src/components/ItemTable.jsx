@@ -85,7 +85,7 @@ const COLUMNS = [
   {
     label: 'Vend',
     sortKey: 'avgVend',
-    title: 'Star: vending pays more than an NPC · –: it doesn’t\n✕ can’t be vended · ?: not verified yet',
+    title: 'Star: vending pays more than an NPC · –: it doesn’t\n✕ can’t be vended · ?: not checked yet\nVend prices aren’t shown because of server rules (see About)',
     numeric: true,
     render: (item) => <PriceCell item={item} field="avgVend" />,
   },

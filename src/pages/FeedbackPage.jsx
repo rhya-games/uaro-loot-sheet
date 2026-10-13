@@ -14,13 +14,13 @@ const CONTENTS = [
 /** Every way to report a problem or share an idea, and when to use each. */
 export default function FeedbackPage() {
   return (
-    <Page contents={CONTENTS} title="Feedback" intro="Spotted a wrong price, a missing item, or have an idea? Here's how to tell us.">
+    <Page contents={CONTENTS} title="Feedback" intro="Spotted a wrong action, a missing item, or have an idea? Here's how to tell us.">
       <Section id="item" title="Report a problem with one item">
         <p>
           On the <PageLink href={ROUTES.loot}>Loot Sheet</PageLink>, point at the item's row and click the <strong>flag</strong>
           (Report Issue) that appears at the end of the row. It opens a short GitHub form with the item already filled in.
         </p>
-        <p className="text-muted">Best for: wrong actions, categories, uses, or prices. Needs a free GitHub account.</p>
+        <p className="text-muted">Best for: wrong actions, categories, uses, or NPC prices. Needs a free GitHub account. Please don’t post vend prices: the server’s rules don’t allow publishing them.</p>
       </Section>
 
       {DISCORD_FEEDBACK_THREAD_URL && (
@@ -54,7 +54,7 @@ export default function FeedbackPage() {
         <BulletList>
           <li>The item name (and item ID if you know it).</li>
           <li>What's wrong and what it should say instead.</li>
-          <li>How you know: the date you checked in game, a uaRO wiki link, or the vend prices you saw.</li>
+          <li>How you know: the date you checked in game, a uaRO wiki link, or what you saw in game.</li>
         </BulletList>
       </Section>
     </Page>
