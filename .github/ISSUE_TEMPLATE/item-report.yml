@@ -22,7 +22,7 @@ body:
         - Action (Keep / Vend / NPC)
         - Category
         - Used For (quests, hats, pet evolutions)
-        - Prices
+        - NPC price
         - Item type or ID
         - Something else
     validations:
@@ -38,4 +38,4 @@ body:
     id: source
     attributes:
       label: How do you know?
-      description: e.g. checked in game on a date, a uaRO wiki link, a vend price you saw.
+      description: e.g. checked in game on a date, or a uaRO wiki link. Please don't post vend prices: the server's rules don't allow publishing them.
