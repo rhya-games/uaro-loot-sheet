@@ -33,10 +33,6 @@ export const ACTIONS = {
     description: 'Sell it to players from a vending shop.',
     className: 'bg-amber-700 text-white dark:bg-amber-800 dark:text-amber-50',
   },
-  Whobuy: {
-    description: 'Sell it to a player who is buying it (check @whobuy).',
-    className: 'bg-purple-700 text-white dark:bg-purple-800 dark:text-purple-50',
-  },
   NPC: {
     description: 'Sell it to an NPC shop.',
     className: 'bg-blue-700 text-white dark:bg-blue-800 dark:text-blue-50',

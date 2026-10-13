@@ -8,12 +8,38 @@ export const ADMIN_AVAILABLE = import.meta.env.DEV;
 export const NO_ITEMS = [];
 
 let itemsPromise = null;
+let privatePromise = null;
+
+/** What the private data is when there is none (the published site, or no file on this computer). */
+const NO_PRIVATE = { prices: {}, targets: [] };
+
+/** An item with nothing known about its price (what the private file says when it has no entry). */
+const NO_PRICE = { avgVend: null, lastVerified: null, verificationNotes: '' };
+
+/**
+ * The private data from the dev server: { prices, targets } (see
+ * scripts/private-data.mjs). Vend prices and target values are not part of
+ * the repo, so they only exist on the computer that runs `npm run dev`.
+ * Outside it, and when the request fails, there's nothing.
+ */
+export function loadPrivate() {
+  privatePromise ??= ADMIN_AVAILABLE
+    ? fetch(`${import.meta.env.BASE_URL}__admin/private`)
+        .then((response) => (response.ok ? response.json() : NO_PRIVATE))
+        .catch(() => NO_PRIVATE)
+    : Promise.resolve(NO_PRIVATE);
+  return privatePromise;
+}
 
 /**
  * Loads loot.json as its own file, so the page draws (header, search box)
  * while the data downloads, and the browser can keep the data apart from the
  * code. main.jsx calls this before React starts, so the download begins at
  * once; the first call starts it and later calls share the answer.
+ *
+ * Under `npm run dev` the private prices are added to each item (avgVend,
+ * lastVerified, verificationNotes; see loadPrivate). The published site only
+ * has the stored `vend` result.
  *
  * The published site leaves out items still "Not Reviewed" (nobody has
  * checked what they're for), so visitors only see checked data; `npm run
@@ -23,8 +49,10 @@ let itemsPromise = null;
  * dev server rejects it on a dynamic import, and Vite reads JSON by itself.
  */
 export function loadItems() {
-  itemsPromise ??= import('../data/loot.json').then(({ default: loot }) =>
-    ADMIN_AVAILABLE ? loot : loot.filter((item) => !item.categories.includes('Not Reviewed')),
+  itemsPromise ??= Promise.all([import('../data/loot.json'), loadPrivate()]).then(([{ default: loot }, { prices }]) =>
+    ADMIN_AVAILABLE
+      ? loot.map((item) => ({ ...item, ...NO_PRICE, ...prices[item.id] }))
+      : loot.filter((item) => !item.categories.includes('Not Reviewed')),
   );
   return itemsPromise;
 }

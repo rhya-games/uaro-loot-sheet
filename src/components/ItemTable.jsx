@@ -6,7 +6,6 @@ import CopyItemId from './CopyItemId.jsx';
 import ItemIcon from './ItemIcon.jsx';
 import RowActions from './RowActions.jsx';
 import Tooltip from './Tooltip.jsx';
-import VerifiedText from './VerifiedText.jsx';
 import { NpcBuyable } from './StatusIcons.jsx';
 import NpcSellPrice from './NpcSellPrice.jsx';
 import PriceCell from '../admin/PriceCell.jsx';
@@ -86,21 +85,14 @@ const COLUMNS = [
   {
     label: 'Vend',
     sortKey: 'avgVend',
-    title: 'Average price in player vending shops\n✕ can’t be vended · No sellers: none when checked in game · ?: not verified yet',
+    title: 'Star: vending pays more than an NPC · –: it doesn’t\n✕ can’t be vended · ?: not checked yet\nVend prices aren’t shown because of server rules (see About)',
     numeric: true,
     render: (item) => <PriceCell item={item} field="avgVend" />,
   },
   {
-    label: 'Whobuy',
-    sortKey: 'avgWhobuy',
-    title: 'Average price players pay through @whobuy\n✕ can’t be sold this way · No buyers: none when checked in game · ?: not verified yet',
-    numeric: true,
-    render: (item) => <PriceCell item={item} field="avgWhobuy" />,
-  },
-  {
     label: 'NPC',
     sortKey: 'npcSellPrice',
-    title: `What an NPC pays you, with Overcharge ${OVERCHARGE_LEVEL} (+${OVERCHARGE_PERCENT}%)`,
+    title: `What an NPC pays you, with Overcharge ${OVERCHARGE_LEVEL} (+${OVERCHARGE_PERCENT}%)\nStar: an NPC pays the most`,
     numeric: true,
     render: (item) => <NpcSellPrice item={item} />,
   },
@@ -113,23 +105,16 @@ const COLUMNS = [
     render: (item) => <NpcBuyable item={item} />,
   },
   {
-    label: 'Verified',
-    sortKey: 'lastVerified',
-    nowrap: true,
-    title: 'When the vend or @whobuy price was last checked in game',
-    render: (item) => (
-      <div className="flex items-center justify-between gap-2">
-        <VerifiedText item={item} />
-        <QuietRowActions item={item} />
-      </div>
-    ),
+    label: 'Report issue',
+    hideLabel: true,
+    className: 'w-px', // as narrow as the flag allows
+    render: (item) => <QuietRowActions item={item} />,
   },
 ];
 
 /**
- * Report Issue, after the "last checked" date in the Verified cell: reports
- * are mostly about prices, so it sits by the date. It's always there but
- * quiet (faded, like the "?" mark) and comes to full strength under the
+ * Report Issue, in its own narrow column at the end of the row. It's always
+ * there but quiet (faded, like the "?" mark) and comes to full strength under the
  * pointer or keyboard focus. The negative margin keeps it from making the
  * row taller. Hidden in admin mode, where you fix things instead of
  * reporting them.

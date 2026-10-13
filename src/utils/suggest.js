@@ -1,17 +1,18 @@
-import targetData from '../data/use-targets.json' with { type: 'json' };
-import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
+import { alwaysSoldToPlayers, isCard, isCheapUnpriced, isSoldByNpc, isTradeable, isUnsoldPetAccessory, npcSellPrice } from './prices.js';
 
 /**
  * Suggested actions, worked out from prices instead of set by hand.
  *
- * Selling: NPC, @whobuy and vending take more and more effort, but a
- * player price that beats the NPC price by even 1z is worth it, so there's
- * no margin (a percentage rule left real vend prices as NPC):
- *   - Whobuy when it pays more than the NPC price.
- *   - Vend when it pays more than the NPC price, and more than @whobuy.
+ * Selling: vending takes more effort than an NPC, but a player price that
+ * beats the NPC price by even 1z is worth it, so there's no margin (a
+ * percentage rule left real vend prices as NPC):
+ *   - Vend when it pays more than the NPC price.
  *   - NPC otherwise, and always for items NPCs sell or that can't be traded.
- *   - Cards are always Vend, even with no price yet: players pay far more
- *     than NPCs for any card.
+ *   - Cards and cooked food of +6 or more are always Vend, even with no
+ *     price yet: players pay far more than NPCs for them.
+ *   - Equipment an NPC pays under 3,000z for, and taming items under 1,000z,
+ *     with no vend price yet, are Vend too: players almost always pay more.
+ *     A vend price replaces this.
  *
  * Keeping: for each "Used For" target, compare what the finished thing is
  * worth with what all its parts would sell for. If the finished thing is
@@ -26,7 +27,7 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  *   - Skills (a Blue Gemstone for Safety Wall) aren't either: people who
  *     cast them buy or keep their own, so the item sells by price (see isSkill).
  *   - A target checked with no shops selling it (value 0 in
- *     use-targets.json) can only be made, so its parts are worth keeping.
+ *     private use-targets.json) can only be made, so its parts are worth keeping.
  *   - Cooking levels 1-3 don't count: those foods are too weak to be worth
  *     keeping ingredients for (see isLowLevelCooking).
  *   - A cooking kit (the "Cooking" use) is used up with every dish, and
@@ -36,7 +37,9 @@ import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  *     the item sells by price. They're still listed under "Used For" (see
  *     isJobQuest).
  *
- * Junk: nothing uses it, and nobody pays anything for it.
+ * Junk: nothing uses it, and nobody pays anything for it. Pet accessories
+ * nobody is selling (vend price 0) are Junk too, even though an NPC pays a
+ * few zeny for them.
  */
 
 /**
@@ -64,8 +67,6 @@ export const isSkill = (use) => use.note === 'each cast';
 /** Uses that can be a reason to Keep (the rest never are). */
 const isKeepReason = (use) => !isLowLevelCooking(use) && !isNotUsedUp(use) && !isSkill(use) && !isJobQuest(use);
 
-/** use-targets.json as a Map: target name -> value. */
-export const TARGET_VALUES = new Map(targetData.items.map((entry) => [entry.for, entry.value]));
 const withoutSlots = (name) => name.replace(/\s*\[\d\]$/, '');
 
 /**
@@ -76,24 +77,29 @@ export function suggestSale(item) {
   const npc = npcSellPrice(item);
   if (isSoldByNpc(item)) return { action: 'NPC', price: npc, reason: 'NPCs sell it, so players won’t buy it' };
   const tradeable = isTradeable(item);
-  const whobuy = tradeable && hasWhobuy(item) ? item.avgWhobuy : null;
   const vend = tradeable ? item.avgVend : null;
   const floor = npc ?? 0;
 
-  if (tradeable && item.categories.includes('Card')) {
-    return { action: 'Vend', price: vend, reason: 'Cards always sell to players' + (vend != null ? ` (${fmt(vend)})` : '') };
+  if (tradeable && isUnsoldPetAccessory(item)) {
+    return { action: null, price: 0, reason: 'No one is selling this pet accessory, so it’s junk' };
   }
 
-  if (vend != null && vend > floor && vend > (whobuy ?? 0)) {
+  if (tradeable && alwaysSoldToPlayers(item)) {
+    const what = isCard(item)
+      ? 'Cards always sell to players'
+      : isCheapUnpriced(item)
+      ? 'NPCs pay very little for it, so it sells to players until a vend price says otherwise'
+      : 'Food of +6 or more always sells to players';
+    return { action: 'Vend', price: vend, reason: what + (vend != null ? ` (${fmt(vend)})` : '') };
+  }
+
+  if (vend != null && vend > floor) {
     return { action: 'Vend', price: vend, reason: `Vending pays the most (${fmt(vend)})` };
   }
-  if (whobuy != null && whobuy > floor) {
-    return { action: 'Whobuy', price: whobuy, reason: `@whobuy pays ${fmt(whobuy)}, more than NPCs` };
-  }
-  // No vend price yet, and no @whobuy buyers to go on: we can't tell
-  // whether players pay more, so don't guess NPC (cards would all come out
-  // as NPC). A Whobuy of 0 means "checked, nobody's buying".
-  if (tradeable && vend == null && !(whobuy > 0)) return null;
+  // No vend price yet: we can't tell whether players pay more, so don't
+  // guess NPC (cards would all come out as NPC). A vend price of 0 means
+  // "checked, nobody's selling".
+  if (tradeable && vend == null) return null;
   if (npc > 0) {
     return { action: 'NPC', price: npc, reason: `NPCs pay the most (${fmt(npc)})` };
   }
@@ -107,7 +113,9 @@ const fmt = (zeny) => `${zeny.toLocaleString('en-US')}z`;
 /**
  * Makes a function that suggests actions for any item in `items`. It
  * indexes every recipe once, so calling it for each item stays fast.
- * `targetValues` overrides use-targets.json (admin mode passes its edits).
+ * `targetValues` is a Map of target name -> value (the private
+ * use-targets.json; see scripts/private-data.mjs). Without it, targets have
+ * no value and count as worth keeping.
  *
  * The result is { actions, sale, uses, reasons }:
  *   actions  suggested actions, like ['Keep', 'Vend'] (empty when unsure)
@@ -115,7 +123,7 @@ const fmt = (zeny) => `${zeny.toLocaleString('en-US')}z`;
  *   uses     each use with { for, worthIt, value, partsValue, missingPrices }
  *   reasons  plain-language lines explaining the suggestion
  */
-export function createSuggester(items, targetValues = TARGET_VALUES) {
+export function createSuggester(items, targetValues = new Map()) {
   const byName = new Map(items.map((item) => [item.name, item]));
   const bySlotlessName = new Map();
   for (const item of items) {
@@ -145,14 +153,13 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
   function targetValue(target) {
     // 0 = checked, and no shops sell it: no price to compare, and it can only be made.
     if (targetValues.get(target) === 0) return { value: null, source: 'no shops' };
-    if (targetValues.has(target)) return { value: targetValues.get(target), source: 'use-targets.json' };
+    if (targetValues.has(target)) return { value: targetValues.get(target), source: 'private target values' };
     const item = findItem(target);
     if (!item) return { value: null, source: 'not loot' };
     // A finished item is worth the most players pay for it. The NPC price
     // doesn't count: it's the floor, not what the item is worth to use
     // (Elemental Converters sell to NPCs for 1z).
-    const prices = [item.avgWhobuy, item.avgVend].filter((price) => price != null);
-    return { value: prices.length ? Math.max(...prices) : null, source: 'sheet' };
+    return { value: item.avgVend, source: 'sheet' };
   }
 
   function judgeUse(use) {

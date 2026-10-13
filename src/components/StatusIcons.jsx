@@ -1,7 +1,9 @@
-import { CheckIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { CheckIcon, MinusIcon, XMarkIcon } from '@heroicons/react/24/outline';
+// The one solid icon: a filled star reads as "best" at a glance.
+import { StarIcon } from '@heroicons/react/24/solid';
 import { formatZeny } from '../utils/format.js';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
-import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
+import { bestSale, isSoldByNpc, isTradeable, vendState } from '../utils/prices.js';
 import Tooltip from './Tooltip.jsx';
 
 /**
@@ -45,6 +47,53 @@ export function Unknown() {
 }
 
 /**
+ * A green star on whichever way of selling pays the most (see bestSale in
+ * utils/prices.js). It stands in for the vend price, which isn't shown.
+ * `label` is the tooltip and what screen readers say. It's the same size
+ * (20px) in the Vend column, beside the NPC price and in text. Set `inText`
+ * when it sits inside a sentence, so it's centered on the line (in a table
+ * cell the default lines up with the other icons).
+ */
+export function BestStar({ label, inText = false }) {
+  return (
+    <Tooltip text={label} className={inText ? 'inline-flex align-middle' : 'inline-flex'}>
+      <span tabIndex={0} className="inline-flex rounded text-emerald-700 dark:text-emerald-400">
+        <StarIcon className="size-5" aria-hidden="true" />
+        <span className="sr-only">{label}</span>
+      </span>
+    </Tooltip>
+  );
+}
+
+export const BEST_VEND_LABEL = 'Best price: sell to players (vend)';
+export const BEST_NPC_LABEL = 'Best price: sell to an NPC';
+
+/**
+ * The Vend cell on the public site: no price, only a green star when
+ * vending pays the most. Where it doesn't (the NPC pays the same or more, or
+ * nobody is selling it) there's a quiet dash, so the cell doesn't look like
+ * missing data; the star is in the NPC column. Where nothing can be compared
+ * it shows ✕ (can't be vended) or ? (price not known yet), as PlayerPrice does.
+ */
+export function VendStar({ item }) {
+  const best = bestSale(item);
+  if (best === 'vend') return <BestStar label={BEST_VEND_LABEL} />;
+  const vendable = isTradeable(item) && !isSoldByNpc(item);
+  if (vendable && vendState(item) !== 'unknown') {
+    const label = best === 'npc' ? 'Not the best price: an NPC pays the same or more' : 'Not the best price: nobody was selling it';
+    return (
+      <Tooltip text={label}>
+        <span tabIndex={0} className="empty-value inline-flex rounded">
+          <MinusIcon className="size-5" aria-hidden="true" />
+          <span className="sr-only">{label}</span>
+        </span>
+      </Tooltip>
+    );
+  }
+  return <PlayerPrice item={item} />;
+}
+
+/**
  * A mark at full strength in the main text color, for legends and guides.
  * In the table the marks are faded on purpose; the important modifiers
  * (the trailing "!") beat that styling for everything inside.
@@ -63,16 +112,15 @@ export function NpcBuyable({ item }) {
 }
 
 /**
- * A player price (avgVend or avgWhobuy). Three ways to show "no price":
+ * The vend price (avgVend), for admin mode (the public site shows a star,
+ * see VendStar). Two ways to show "no price":
  *   ✕     can't be sold this way: can't be traded (with a tooltip, since
- *         it's rare), NPCs sell it, or a card or equipment in the Whobuy
- *         column (@whobuy doesn't buy them)
- *   No sellers / No buyers  checked in game (saved as 0), and nobody was
- *         selling (Vend) or buying (Whobuy)
+ *         it's rare) or NPCs sell it
  *   ?     not checked yet (null), an icon like the ✕
+ * A price of 0 (checked, nobody selling) shows as "0z".
  * The column headers' tooltips and the About page explain these.
  */
-export function PlayerPrice({ item, field }) {
+export function PlayerPrice({ item }) {
   if (!isTradeable(item)) {
     return (
       <Tooltip text="Can't be traded">
@@ -83,14 +131,5 @@ export function PlayerPrice({ item, field }) {
     );
   }
   if (isSoldByNpc(item)) return <NoIcon label="None: NPCs sell this" />;
-  if (field === 'avgWhobuy' && !hasWhobuy(item)) return <NoIcon label="None: @whobuy doesn't buy cards or equipment" />;
-  if (item[field] === 0) {
-    return (
-      <span className="empty-value">
-        {field === 'avgWhobuy' ? 'No buyers' : 'No sellers'}
-        <span className="sr-only">: checked in game</span>
-      </span>
-    );
-  }
-  return item[field] == null ? <Unknown /> : formatZeny(item[field]);
+  return item.avgVend == null ? <Unknown /> : formatZeny(item.avgVend);
 }

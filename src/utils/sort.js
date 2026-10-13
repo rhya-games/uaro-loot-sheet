@@ -1,5 +1,5 @@
 import { ALL_ACTIONS } from './labels.js';
-import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
+import { bestSale, npcSellPrice } from './prices.js';
 
 /**
  * Table sorting. The sort state is either null (default order: A-Z, or best
@@ -25,12 +25,13 @@ export const SORT_VALUES = {
   categories: (item) => (item.categories.length ? [...item.categories].sort().join(', ') : null),
   // How many things the item is used for.
   uses: (item) => (item.uses.length ? item.uses.length : null),
-  // Items NPCs sell, or that can't be traded, have no player price (shown as ✕).
-  avgVend: (item) => (isSoldByNpc(item) || !isTradeable(item) ? null : item.avgVend),
-  avgWhobuy: (item) => (isSoldByNpc(item) || !isTradeable(item) || !hasWhobuy(item) ? null : item.avgWhobuy),
+  // The vend price isn't shown, only a star when vending pays the most, so
+  // that's what sorts: items where the NPC pays the most, then where vending
+  // does. Items with nothing to compare (NPC-sold, can't be traded, no
+  // price) go last.
+  avgVend: (item) => ({ npc: 0, vend: 1 })[bestSale(item)] ?? null,
   npcSellPrice: (item) => npcSellPrice(item),
   npcBuyable: (item) => NPC_BUYABLE_ORDER[item.npcBuyable] ?? null,
-  lastVerified: (item) => item.lastVerified, // "YYYY-MM-DD" sorts correctly as text.
 };
 
 /** Compares two non-empty values: numbers, text, or lists of numbers. */

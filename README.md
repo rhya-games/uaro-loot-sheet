@@ -29,10 +29,11 @@ Then open http://localhost:5173/uaro-loot-sheet/
 ### Admin mode
 
 While `npm run dev` is running, the loot page has an **Admin** button next
-to Share. Turn it on to type vend and @whobuy prices straight into the table: press Enter (or
-click away) to save to `src/data/loot.json`, which also marks the item as
-verified today. Shorthand works: `12k`, `1.5m`. Type `0` or `none` when
-nobody was buying or selling; the site shows it as "None". Escape puts the old price
+to Share. Turn it on to type vend prices straight into the table: press Enter (or
+click away) to save. The price goes to the private folder (`~/.uaro-loot-sheet`,
+not the repo) and the item's `vend` in `src/data/loot.json` follows; it is also
+marked as verified today. Shorthand works: `12k`, `1.5m`. Type `0` or `none` when
+nobody was selling it. Escape puts the old price
 back. Each item also shows the action suggested by its prices (hover it to
 see why). Saving a price also saves the suggested action. If a suggestion
 changes because of another item's price, click **Use** to take it. After
@@ -42,7 +43,7 @@ it. Run `npm run validate` and commit as usual when you're done.
 
 With admin mode on, **Targets** opens a list of hats, pet evolutions and
 other finished things that aren't loot, so they have no price of their own.
-Type what each sells for (saved to `src/data/use-targets.json`), or `0` when
+Type what each sells for (saved to the private `use-targets.json`), or `0` when
 no shops sell it. The suggestion then keeps their parts only when the
 finished thing is worth more than the parts sell for, or when no shops sell
 it. The ones that decide the most suggestions come first; click an item ID
@@ -97,4 +98,4 @@ scripts/              Data import and validation tools
 .github/              Data check on every PR, and the item report form
 ```
 
-Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? Point at an item's row and click the flag (Report Issue) in the Verified column, or see the site's Feedback page.
+Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? Point at an item's row and click the flag (Report Issue) at the end of the row, or see the site's Feedback page.

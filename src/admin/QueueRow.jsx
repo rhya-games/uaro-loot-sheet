@@ -1,19 +1,14 @@
-import { useState } from 'react';
-import { XCircleIcon } from '@heroicons/react/24/outline';
 import { PriceInput } from './PriceCell.jsx';
-import { useAdmin } from './useAdmin.js';
-import { priceChanges } from './verify.js';
-import Tooltip from '../components/Tooltip.jsx';
 import CopyItemId from '../components/CopyItemId.jsx';
 import { PlayerPrice } from '../components/StatusIcons.jsx';
 import { formatZeny } from '../utils/format.js';
 import { npcSellPrice } from '../utils/prices.js';
 import { canHavePrice } from './queues.js';
 
-/** The columns from tablet width up: item, Vend, Whobuy, and a button if the queue has one. */
-// 8rem fits the 6rem price box, the None button beside it, and a little air.
-const COLUMNS = 'md:grid-cols-[1fr_8rem_8rem]';
-const COLUMNS_WITH_ACTION = 'md:grid-cols-[1fr_8rem_8rem_6rem]';
+/** The columns from tablet width up: item, Vend, and a button if the queue has one. */
+// 8rem fits the 6rem price box and a little air.
+const COLUMNS = 'md:grid-cols-[1fr_8rem]';
+const COLUMNS_WITH_ACTION = 'md:grid-cols-[1fr_8rem_6rem]';
 
 /**
  * The parts the price queues (Needs a price, Verify prices) share: a search
@@ -42,7 +37,6 @@ export function QueueHeader({ action }) {
       <span>Item</span>
       {/* Left-aligned, like the boxes under them. */}
       <span>Vend</span>
-      <span>Whobuy</span>
       {action && <span className="text-right">{action}</span>}
     </div>
   );
@@ -54,7 +48,7 @@ export function QueueHeader({ action }) {
  *
  * Props:
  *   item    - one entry from loot.json
- *   fields  - which prices get a box ("avgVend", "avgWhobuy")
+ *   fields  - which prices get a box ("avgVend")
  *   onEnter - the cursor came into a box in the row
  *   onLeave - the cursor left the row (not just moved to another box in it)
  *   action  - a button for the last column (optional)
@@ -81,7 +75,6 @@ export default function QueueRow({ item, fields, onEnter, onLeave, action, detai
         {detail}
       </div>
       <PriceCell item={item} field="avgVend" label="Vend" command="@ws" editable={fields.includes('avgVend')} verify={verifyOnSave} />
-      <PriceCell item={item} field="avgWhobuy" label="Whobuy" command="@wb" editable={fields.includes('avgWhobuy')} verify={verifyOnSave} />
       {action && <div className="col-span-2 flex justify-end md:col-span-1">{action}</div>}
     </li>
   );
@@ -90,7 +83,7 @@ export default function QueueRow({ item, fields, onEnter, onLeave, action, detai
 /**
  * A price box (`editable`); otherwise the price as the loot sheet shows it.
  * Under it, a button that copies the in-game chat command for that price
- * ("@ws 969" looks up vendors, "@wb 969" buyers), for prices that can exist.
+ * ("@ws 969" looks up vendors), for prices that can exist.
  */
 function PriceCell({ item, field, label, command, editable, verify }) {
   return (
@@ -99,55 +92,14 @@ function PriceCell({ item, field, label, command, editable, verify }) {
     <div className="flex flex-col items-start gap-1">
       <span className="text-xs text-muted md:hidden">{label}</span>
       <div className="flex flex-col items-start gap-1">
-        {editable ? (
-          <div className="flex items-start gap-1">
-            <PriceInput item={item} field={field} advance verify={verify} />
-            {/* Whobuy only: most items nobody is buying, so it's one click instead of typing 0. */}
-            {field === 'avgWhobuy' && <NoneButton item={item} field={field} verify={verify} />}
-          </div>
-        ) : (
-          <PlayerPrice item={item} field={field} />
-        )}
-        {canHavePrice(item, field) && (
+        {editable ? <PriceInput item={item} field={field} advance verify={verify} /> : <PlayerPrice item={item} />}
+        {canHavePrice(item) && (
           <span className="text-xs text-muted">
             <CopyItemId itemId={item.itemId} command={command} />
           </span>
         )}
       </div>
     </div>
-  );
-}
-
-/**
- * Saves the price as 0, which the sheet shows as "None" (checked, and nobody
- * is buying). Not part of the Enter-key order: the box and Done are.
- */
-function NoneButton({ item, field, verify }) {
-  const { saveItem } = useAdmin();
-  const [saving, setSaving] = useState(false);
-  const isNone = item[field] === 0;
-
-  async function markNone() {
-    setSaving(true);
-    try {
-      await saveItem(item.id, verify ? priceChanges(item, { [field]: 0 }) : { [field]: 0 });
-    } finally {
-      setSaving(false);
-    }
-  }
-
-  return (
-    <Tooltip text={isNone ? 'Already None' : 'Mark as None: nobody is buying'}>
-      <button
-        type="button"
-        onClick={markNone}
-        disabled={saving || isNone}
-        aria-label={`Mark whobuy price for ${item.name} as None`}
-        className="mt-px rounded-md p-1 text-muted hover:text-fg disabled:opacity-40"
-      >
-        <XCircleIcon className="size-5" aria-hidden="true" />
-      </button>
-    </Tooltip>
   );
 }
 

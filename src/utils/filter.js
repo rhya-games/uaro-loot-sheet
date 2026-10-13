@@ -4,7 +4,7 @@
  *
  * Rules:
  *   - Inside one group, an item matches if it has ANY checked option
- *     (checking "Vend" and "Whobuy" shows items with either).
+ *     (checking "Vend" and "NPC" shows items with either).
  *   - Across groups, an item must match ALL groups.
  *   - An empty group means "don't filter by this".
  */

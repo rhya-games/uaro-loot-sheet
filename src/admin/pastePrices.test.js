@@ -16,29 +16,25 @@ const item = (fields) => ({
   npcBuyable: 'no',
   sellValue: 100, // NPC pays 124 with Overcharge
   avgVend: null,
-  avgWhobuy: null,
   lastVerified: null,
   verificationNotes: '',
   ...fields,
 });
 
 describe('parsePriceLines', () => {
-  it('reads the item ID and both prices, split by spaces', () => {
-    expect(parsePriceLines('7119 780 580')).toEqual([{ number: 1, raw: '7119 780 580', itemId: 7119, prices: { avgVend: 780, avgWhobuy: 580 } }]);
+  it('reads the item ID and the vend price, split by spaces', () => {
+    expect(parsePriceLines('7119 780')).toEqual([{ number: 1, raw: '7119 780', itemId: 7119, prices: { avgVend: 780 } }]);
   });
 
-  it('takes the same shorthand as the price boxes, and 0 or none for "nobody is buying"', () => {
-    const [line] = parsePriceLines('1550  1.2m  none');
-    expect(line.prices).toEqual({ avgVend: 1_200_000, avgWhobuy: 0 });
-    expect(parsePriceLines('1550 12,500 0')[0].prices).toEqual({ avgVend: 12500, avgWhobuy: 0 });
+  it('takes the same shorthand as the price boxes, and 0 or none for "nobody is selling"', () => {
+    expect(parsePriceLines('1550  1.2m')[0].prices).toEqual({ avgVend: 1_200_000 });
+    expect(parsePriceLines('1550 none')[0].prices).toEqual({ avgVend: 0 });
+    expect(parsePriceLines('1550 12,500')[0].prices).toEqual({ avgVend: 12500 });
   });
 
-  it('leaves a price alone with "-", an empty column, or no column', () => {
-    expect(parsePriceLines('1 500 -')[0].prices).toEqual({ avgVend: 500 });
-    expect(parsePriceLines('1 - 300')[0].prices).toEqual({ avgWhobuy: 300 });
-    expect(parsePriceLines('1 500')[0].prices).toEqual({ avgVend: 500 });
-    expect(parsePriceLines('1\t\t300')[0].prices).toEqual({ avgWhobuy: 300 }); // a spreadsheet paste
-    expect(parsePriceLines('1;;300')[0].prices).toEqual({ avgWhobuy: 300 });
+  it('reads a spreadsheet paste split by tabs or semicolons', () => {
+    expect(parsePriceLines('1\t300')[0].prices).toEqual({ avgVend: 300 });
+    expect(parsePriceLines('1;300')[0].prices).toEqual({ avgVend: 300 });
   });
 
   it('accepts #ID, blank lines and Windows line endings, and numbers lines from the text', () => {
@@ -50,8 +46,8 @@ describe('parsePriceLines', () => {
     expect(parsePriceLines('Bacillus 780')[0].error).toMatch(/isn't an item ID/);
     expect(parsePriceLines('7119 lots')[0].error).toMatch(/Can't read "lots"/);
     expect(parsePriceLines('7119')[0].error).toMatch(/No price/);
-    expect(parsePriceLines('7119 - -')[0].error).toMatch(/No price/);
-    expect(parsePriceLines('7119 1 2 3')[0].error).toMatch(/Too many columns/);
+    expect(parsePriceLines('7119 -')[0].error).toMatch(/No price/);
+    expect(parsePriceLines('7119 1 2')[0].error).toMatch(/Too many columns/);
   });
 });
 
@@ -59,13 +55,12 @@ describe('planPrices', () => {
   const plan = (text, items) => planPrices(parsePriceLines(text), items, TODAY);
 
   it('plans the prices with the verification changes', () => {
-    const [row] = plan('1 500 300', [item({})]);
+    const [row] = plan('1 500', [item({})]);
     expect(row.status).toBe('ok');
     expect(row.changes).toEqual({
       avgVend: 500,
-      avgWhobuy: 300,
       lastVerified: TODAY,
-      verificationNotes: `${CHECK_NOTES.avgVend}; ${CHECK_NOTES.avgWhobuy}`,
+      verificationNotes: CHECK_NOTES.avgVend,
     });
   });
 
@@ -75,13 +70,6 @@ describe('planPrices', () => {
 
   it('skips items NPCs sell', () => {
     expect(plan('1 500', [item({ npcBuyable: 'yes' })])[0]).toMatchObject({ status: 'skip', reason: expect.stringMatching(/NPCs sell it/) });
-  });
-
-  it('ignores @whobuy for cards and equipment, and skips the line if that was all it had', () => {
-    const card = item({ categories: ['Card'] });
-    expect(plan('1 500 300', [card])[0]).toMatchObject({ status: 'ok', prices: { avgVend: 500 }, notes: [expect.stringMatching(/cards or equipment/)] });
-    expect(plan('1 - 300', [card])[0]).toMatchObject({ status: 'skip' });
-    expect(plan('1 500 300', [item({ itemType: 'Equipment' })])[0].prices).toEqual({ avgVend: 500 });
   });
 
   it('uses the first line when an ID is listed twice', () => {
