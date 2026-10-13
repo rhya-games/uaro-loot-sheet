@@ -48,6 +48,20 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '1.1.0',
+    date: '2026-10-13',
+    title: 'Vend prices removed (sorry), and a star shows the best price',
+    changes: [
+      { type: 'Removed', text: 'Vend prices and the Verified column.' },
+      { type: 'Added', text: 'A green star shows the best way to sell: in Vend when players pay more than an NPC, next to the NPC price when the NPC pays the most.' },
+      { type: 'Removed', text: '@whobuy prices, the Whobuy column and the Whobuy action.' },
+      { type: 'Changed', text: 'Cards, food of +6 or more, cheap equipment and cheap taming items say Vend, until a price says otherwise.' },
+      { type: 'Changed', text: 'Actions updated for 131 items, including 3 pet accessories nobody sells, which are now Junk.' },
+      { type: 'Fixed', text: 'Items only needed for a job quest no longer say Keep (8 items).' },
+      { type: 'Fixed', text: 'Pet evolution materials now carry the Pet Evolution, Pet and uaRO categories (8 items).' },
+    ],
+  },
+  {
     version: '1.0.0',
     date: '2026-10-12',
     title: 'Version 1.0: the loot sheet, rebuilt as a site',

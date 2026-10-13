@@ -6,13 +6,11 @@ import QueueRow, { QueueHeader, QueueSearch } from './QueueRow.jsx';
 
 /** How many rows show at once. */
 const BATCH = 50;
-const PRICE_FIELDS = ['avgVend', 'avgWhobuy'];
-
 /** Every price the item can have gets a box, filled or not, so a price can be fixed in place. */
-const fieldsOf = (item) => PRICE_FIELDS.filter((field) => canHavePrice(item, field));
+const fieldsOf = (item) => (canHavePrice(item) ? ['avgVend'] : []);
 
 /**
- * Admin mode's "Needs a price" queue: items with a Vend or Whobuy
+ * Admin mode's "Needs a price" queue: items with the Vend
  * action, or no action yet, and no price (see queues.js). Type a price and
  * press Enter: it saves, marks the item verified today, updates its suggested
  * actions, and the cursor moves to the next box. Press Enter on an empty box
@@ -52,7 +50,7 @@ export default function NeedsPricePage() {
   return (
     <AdminLayout
       title="Needs a price"
-      intro="Items set to Vend or Whobuy, or with no action yet, that have no price yet. Type a price and press Enter to save it and move to the next box. Type 0 if nobody is buying. A row stays until you press Done, which turns green when every box has a price."
+      intro="Items set to Vend, or with no action yet, that have no price yet. Type a price and press Enter to save it and move to the next box. Type 0 if nobody is selling it. A row stays until you press Done, which turns green when every box has a price."
     >
       <QueueSearch
         value={query}

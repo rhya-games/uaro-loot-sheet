@@ -10,7 +10,7 @@ fits together, and the conventions to follow.
 
 A loot tracker for **uaRO**, a private game server. It's a static React
 site (GitHub Pages) that shows every loot item with what to do with it
-(Keep, Vend, Whobuy, NPC), what it's used for, and its prices. The data
+(Keep, Vend, NPC), what it's used for, and its prices. The data
 is JSON in the repo, so people who don't code can edit it.
 
 ## Hard rules
@@ -19,6 +19,12 @@ is JSON in the repo, so people who don't code can edit it.
   anything in the repo (code, comments, docs, data, commit messages). Say
   "Official" for the original, or "the game" in general. The GitHub org
   name in URLs is the one exception.
+- **Never commit player prices.** The server's rules don't allow publishing
+  vend prices. They (and the "Used For" target values) live in a private
+  folder outside the repo: see "Private data" below. `loot.json` only keeps
+  `vend`, how the price compares with the NPC price. Don't add `avgVend`,
+  `lastVerified` or `verificationNotes` back to it, and don't copy prices
+  into docs, PR descriptions, commit messages or data notes.
 - **Keep the maintainer's usernames out of any copy** (site text, docs,
   data). "Rhya" as the site owner's name is fine. Git history is fine.
 - uaRO is **pre-renewal**. Pre-renewal data is the default; renewal
@@ -39,6 +45,7 @@ npm test               # unit tests in src/**/*.test.js (Vitest; CI runs this)
 npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
+npm run sync:vend      # each item's `vend` (price vs NPC) from the private prices
 npm run sync:targets   # item IDs of "Used For" targets (admin Targets page)
 npm run sync:icons     # copy item icons (24x24 GIFs) from game-data-tools into public/items/
 npm run scan:quests    # items the emulators' quest scripts take or check for
@@ -61,7 +68,7 @@ lint` and `npm test` after code changes. There's no formatter yet.
     doesn't apply.
   - `customSellValues`: base prices checked by hand, including confirmed 0z.
   - `notSellableToNpc`: shown as ✕.
-  - `tradeRestrictions`: `notTradeable` (✕ in Vend/Whobuy) and `checked`
+  - `tradeRestrictions`: `notTradeable` (✕ in Vend) and `checked`
     (emulator trade flags confirmed on uaRO). Don't trust the emulators'
     Trade flags: every one checked so far was wrong for uaRO.
   - `npcShops`: `uaroShops` (shops checked in game or on the wiki, with
@@ -77,6 +84,25 @@ lint` and `npm test` after code changes. There's no formatter yet.
   why, decisions, how it was checked) goes in the PR description, which
   becomes the merge commit body and part of the GitHub release notes (see
   CONTRIBUTING.md, "Changelog").
+
+### Private data
+
+Vend prices, `lastVerified`, `verificationNotes` and the "Used For" target
+values are not in the repo. They are in `~/.uaro-loot-sheet/` (or the folder
+in the `UARO_PRIVATE_DIR` environment variable); `scripts/private-data.mjs`
+has the details:
+
+- `player-prices.json`: `{ "<item id>": { avgVend, lastVerified, verificationNotes } }`
+- `use-targets.json`: the target values (same shape as before)
+- `loot-sheet.csv`: the original sheet export, for `npm run import:csv`
+
+`npm run dev` loads them (admin mode edits them; saves also update `vend` in
+loot.json), and `npm run sync:vend` writes `vend` for every item. Without the
+folder (CI, other contributors) the site, validate, lint and tests all work:
+the stored `vend` is used as it is, and the checks that need prices are
+skipped. `npm run suggest` has no prices to go on then.
+
+Old values are still in git history; this only keeps new ones out.
 
 ### Where values come from (most important first)
 
@@ -95,8 +121,7 @@ lint` and `npm test` after code changes. There's no formatter yet.
 ### Data rules (enforced by `npm run validate`)
 
 - Items NPCs sell (`npcBuyable` "yes" or "npc-only") use the `NPC` action,
-  never `Vend`/`Whobuy`, and have `avgVend`/`avgWhobuy` set to null (the
-  site shows ✕).
+  never `Vend`, and have `vend` set to `"unknown"` (the site shows ✕).
 - Cards always have `npcBuyable: "no"`.
 - **Keep is never the only action** (validate errors). Items kept for a use
   also show how to sell the extras; with no player price yet the suggester
@@ -104,7 +129,9 @@ lint` and `npm test` after code changes. There's no formatter yet.
   hand-picked one.
 - Every entry in `uaro-overrides.json` must match an item's `itemId` and
   `name` in loot.json when that item is listed there.
-- `lastVerified` means the vend or @whobuy price was checked in game.
+- `vend` must match the private price (`npm run sync:vend` works it out;
+  validate checks it when the private prices are on this computer).
+- `lastVerified` (private) means the vend price was checked in game.
   Setting an NPC price doesn't count.
 
 ### Conventions when adding items
@@ -126,8 +153,8 @@ Match similar existing items. Look them up in loot.json first.
 - Pet evolution materials: `Keep` + `Vend`, categories `Pet Evolution`,
   `Pet`, `uaRO`. Cards add `Card`.
 - Taming items: `Vend`, category `Pet`, notes `"<Pet> Taming Item"`.
-- Pet accessories (IDs 10001-10038): item type `Equipment` (so no
-  @whobuy), category `Pet`, notes `"<Pet> Pet accessory"` with the uaRO pet
+- Pet accessories (IDs 10001-10038): item type `Equipment`,
+  category `Pet`, notes `"<Pet> Pet accessory"` with the uaRO pet
   name. Sold by price like anything else.
 - Headgear quest materials (Dimonka): category `Server Hat Quest` + `uaRO`.
 - After adding items: run `sync:prices`, `sync:shops`, then `validate`.
@@ -204,11 +231,11 @@ Match similar existing items. Look them up in loot.json first.
   `text-muted`, `bg-surface`, `bg-hover`, `border-line`, ...) with light and
   dark values. Don't use raw grays. Text uses only three grays: `fg`,
   `body`, `muted`. For anything quieter, lower the opacity.
-- Icons: Heroicons outline only, line weight 2 (set once in `index.css`).
-  `size-5` (20px) for icons on their own, `size-4` (16px) inside a line of text.
+- Icons: Heroicons outline only, line weight 2 (set once in `index.css`),
+  except the solid best-price star (`BestStar`). `size-5` (20px) for icons
+  on their own, `size-4` (16px) inside a line of text.
 - Empty values: `?` (`Unknown` in `components/StatusIcons.jsx`) means not
-  verified yet; ✕ means it can't be done; "None", "No sellers" and "No
-  buyers" mean checked and empty. The quiet ones use the `empty-value`
+  verified yet; ✕ means it can't be done; "None" means checked and empty. The quiet ones use the `empty-value`
   utility (muted at 60% opacity). In legends and guides wrap a mark in
   `Mark` so it shows at full strength. Words for players: say "verified",
   not "someone/nobody checked".
@@ -241,9 +268,9 @@ Match similar existing items. Look them up in loot.json first.
 ### Admin mode and suggested actions
 
 - `src/utils/suggest.js` works out actions from prices (margins, Keep when
-  a finished thing is worth more than its parts). `src/data/use-targets.json`
-  holds values for "Used For" targets that aren't loot (set them on admin
-  mode's Targets page, `#/targets`; its item IDs are in the generated
+  a finished thing is worth more than its parts). The private
+  `use-targets.json` holds values for "Used For" targets that aren't loot
+  (set them on admin mode's Targets page, `#/targets`; its item IDs are in the generated
   `src/data/target-ids.json`). A target value of 0 means "checked, no
   shops sell it": it can only be made, so its parts count as worth keeping.
   Quests ("... Quest(s)") have no value and are always a reason to Keep.
@@ -255,7 +282,8 @@ Match similar existing items. Look them up in loot.json first.
 - Admin mode (`src/admin/`) only exists under `npm run dev`
   (`import.meta.env.DEV`). Saves POST to the Vite plugin in
   `scripts/admin-server.mjs`, which writes loot.json; only the fields in its
-  `EDITABLE` list can change; target values go to use-targets.json. Saving
+  `EDITABLE` list can change. Price fields and target values go to the
+  private folder instead, and the item's `vend` in loot.json follows. Saving
   a price or a target value also saves the new suggested actions (except
   for items with no player price yet). The page swaps in the saved item itself, and
   the plugin skips Vite's reload for its own writes.
@@ -271,7 +299,7 @@ Markdown, usable by any agent):
 - `check-wiki-page`: compare "Used For" data with a uaRO wiki table and fix it.
 - `record-npc-shop`: record an NPC shop from screenshots or the wiki.
 - `scan-quests`: find items quest scripts ask for and add the missing quest uses.
-- `update-vend-prices`: set vend/@whobuy prices from screenshots or a list.
+- `update-vend-prices`: set vend prices from screenshots or a list.
 - `ship-release`: merge and deploy (PR, checks, merge, release). Only when asked.
 
 The maintainer's prices are facts from the game: **take them as given**.
@@ -288,9 +316,11 @@ Don't question a price or ask if a big drop is a one-off.
 - What the page remembers changes how it looks: `localStorage`
   (`uaro-loot-sheet:panelOpen`, `lastView`, `admin`) and a hash without
   a `?` restore the last view. Open a link with the filters you want.
-- **Admin-mode saves write the real files** (`loot.json`, `use-targets.json`).
-  Copy them before you test a save, and restore the copies afterwards
-  (`git checkout` is only safe when the files have no other changes).
+- **Admin-mode saves write the real files** (`loot.json`, and the private
+  `player-prices.json` and `use-targets.json`). Copy them before you test a
+  save, and restore the copies afterwards (`git checkout` is only safe when
+  the files have no other changes). Or point `UARO_PRIVATE_DIR` at a scratch
+  folder for the test.
   Typing into a price box that already shows "None" adds to the text; select
   it first.
 

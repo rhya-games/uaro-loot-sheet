@@ -1,4 +1,5 @@
-import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from '../utils/prices.js';
+import { isSoldByNpc, isTradeable, npcSellPrice } from '../utils/prices.js';
+import { isJobQuest } from '../utils/suggest.js';
 import { valueTargets } from '../utils/targets.js';
 
 /**
@@ -17,34 +18,29 @@ const byName = (a, b) => a.item.name.localeCompare(b.item.name);
 const sameActions = (a, b) => a.length === b.length && a.every((action) => b.includes(action));
 const actionsText = (actions) => (actions.length ? actions.join(' + ') : 'none');
 
-const hasPlayerPrice = (item) => item.avgVend != null || item.avgWhobuy != null;
+const hasPlayerPrice = (item) => item.avgVend != null;
 const isNoUse = (item) => item.categories.includes('No Use');
 
 /**
- * Whether this price ("avgVend" or "avgWhobuy") is set to be used (the
- * item has the Vend or Whobuy action) but is still empty. Items NPCs sell or
- * that can't be traded never have player prices, and @whobuy doesn't apply
- * to cards or equipment.
+ * Whether this price ("avgVend") is set to be used (the item has the Vend
+ * action) but is still empty. Items NPCs sell or that can't be traded never
+ * have player prices.
  *
- * An item with no action at all needs both: the suggester can't pick an
+ * An item with no action at all needs one: the suggester can't pick an
  * action without a player price, so without a box here these items would
  * wait in no queue. Saving a price sets the action (see AdminContext).
  */
 export function needsField(item, field) {
   if (isSoldByNpc(item) || !isTradeable(item) || item[field] != null) return false;
-  if (item.actions.length === 0) return field === 'avgVend' || hasWhobuy(item);
-  return field === 'avgVend' ? item.actions.includes('Vend') : item.actions.includes('Whobuy') && hasWhobuy(item);
+  return item.actions.length === 0 || item.actions.includes('Vend');
 }
 
 /**
- * Whether this price can be set at all for the item: it can be traded, NPCs
- * don't sell it, and (for @whobuy) it isn't a card or equipment. The queue
- * rows show a box for every such price, so Vend and Whobuy can both be
- * filled in before the row leaves the list.
+ * Whether a vend price can be set at all for the item: it can be traded and
+ * NPCs don't sell it. The queue rows show a box for every such item.
  */
-export function canHavePrice(item, field) {
-  if (isSoldByNpc(item) || !isTradeable(item)) return false;
-  return field === 'avgVend' || hasWhobuy(item);
+export function canHavePrice(item) {
+  return !isSoldByNpc(item) && isTradeable(item);
 }
 
 /**
@@ -114,12 +110,9 @@ export function targetPriority(targetName, partItems) {
 
 /**
  * Prices to fill in. Two kinds of item:
- *   - one price is set and another it can have is empty (started and left)
- *   - Vend or Whobuy is set (or no action yet), but there's no price
+ * Items with the Vend action (or no action yet) but no price.
  * Order: pricing priority by quest relevance (pricePriority), then the items
- * used in the most things, whichever kind: their price feeds the most Keep
- * decisions. Of two items used equally, the half-priced one goes first, since
- * it's quickest to finish.
+ * used in the most things: their price feeds the most Keep decisions.
  */
 function needsPrice(items) {
   const rows = [];
@@ -127,14 +120,9 @@ function needsPrice(items) {
     const reasons = [];
     const noAction = item.actions.length === 0;
     if (needsField(item, 'avgVend')) reasons.push(noAction ? 'No action yet, no vend price' : 'Vend action, no vend price');
-    if (needsField(item, 'avgWhobuy')) reasons.push(noAction ? 'No action yet, no @whobuy price' : 'Whobuy action, no @whobuy price');
-    const half = hasPlayerPrice(item) && (canHavePrice(item, 'avgVend') && item.avgVend == null || canHavePrice(item, 'avgWhobuy') && item.avgWhobuy == null);
-    if (half && !reasons.length) {
-      reasons.push(item.avgVend == null ? 'Has a @whobuy price, no vend price' : 'Has a vend price, no @whobuy price');
-    }
-    if (reasons.length) rows.push({ item, reasons, half, priority: pricePriority(item) });
+    if (reasons.length) rows.push({ item, reasons, priority: pricePriority(item) });
   }
-  return rows.sort((a, b) => a.priority - b.priority || b.item.uses.length - a.item.uses.length || b.half - a.half || byName(a, b));
+  return rows.sort((a, b) => a.priority - b.priority || b.item.uses.length - a.item.uses.length || byName(a, b));
 }
 
 /**
@@ -188,7 +176,7 @@ const hasPurposeCategory = (item) => item.categories.some((category) => PURPOSE_
  * nobody's buying" (see suggest.js). Nor is a vend price below the NPC
  * price: players do that, and it says nothing is wrong with the data. A
  * price without its action isn't listed when a better way to sell explains
- * it (the NPC pays more than vend, or vend pays more than @whobuy).
+ * it (the NPC pays more than vend).
  */
 function suspiciousValues(items) {
   const rows = [];
@@ -198,12 +186,11 @@ function suspiciousValues(items) {
     const npc = npcSellPrice(item);
     const npcPaysMore = npc != null && npc > item.avgVend;
     if (item.avgVend > 0 && !npcPaysMore && !item.actions.includes('Vend') && !isSoldByNpc(item)) reasons.push('Has a vend price but no Vend action');
-    // A vend price above the @whobuy price is why Whobuy is left out (see suggest.js), so it's not suspicious.
-    const vendPaysMore = item.avgVend != null && item.avgVend > item.avgWhobuy;
-    if (item.avgWhobuy > 0 && !vendPaysMore && !item.actions.includes('Whobuy') && !isSoldByNpc(item)) reasons.push('Has an @whobuy price but no Whobuy action');
     // Items in a purpose category are kept for it, which has no "Used For" line.
     if (item.actions.includes('Keep') && !item.uses.length && !hasPurposeCategory(item)) reasons.push('Keep, but nothing uses it');
     if (item.actions.includes('Keep') && isNoUse(item)) reasons.push('Keep, but the category is No Use');
+    // Job quests are done once, so they aren't a reason to keep an item (see suggest.js).
+    if (item.actions.includes('Keep') && item.uses.length && item.uses.every(isJobQuest)) reasons.push('Keep, but only a job quest uses it');
     if (reasons.length) rows.push({ item, reasons });
   }
   return rows.sort(byName);
@@ -223,7 +210,7 @@ function notReviewed(items) {
 }
 
 export const QUEUES = [
-  { id: 'needs-price', title: 'Needs a price', description: 'Vend or Whobuy is set (or no action yet), but there is no price yet.', select: needsPrice },
+  { id: 'needs-price', title: 'Needs a price', description: 'Vend is set (or no action yet), but there is no price yet.', select: needsPrice },
   { id: 'suggestion-differs', title: 'Suggestion differs', description: 'The suggested actions are not the ones set by hand.', select: suggestionDiffers },
   { id: 'unverified-prices', title: 'Verify prices', description: 'A price is set, but it was never checked in game.', select: unverifiedPrices },
   { id: 'suspicious-values', title: 'Suspicious values', description: 'Numbers or actions that do not fit together.', select: suspiciousValues },
@@ -238,7 +225,7 @@ export function queueCounts(items, ctx) {
 
 /**
  * How many "Used For" targets still need a value (the Targets page).
- * `values` is a Map of target name -> value, like use-targets.json.
+ * `values` is a Map of target name -> value, like the private use-targets.json.
  */
 export function targetsNeedingValue(items, values) {
   return [...valueTargets(items).keys()].filter((name) => !values.has(name)).length;

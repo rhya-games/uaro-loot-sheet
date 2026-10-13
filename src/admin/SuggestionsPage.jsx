@@ -138,7 +138,7 @@ function SuggestionRow({ item, suggested, reasons }) {
       <div className="min-w-0 space-y-1">
         <p className="font-medium text-fg">{item.name}</p>
         <p className="text-xs text-muted">
-          <CopyItemId itemId={item.itemId} /> · Vend {formatZeny(item.avgVend)} · Whobuy {formatZeny(item.avgWhobuy)} · NPC {formatZeny(npcSellPrice(item))}
+          <CopyItemId itemId={item.itemId} /> · Vend {formatZeny(item.avgVend)} · NPC {formatZeny(npcSellPrice(item))}
         </p>
         <p className="flex flex-wrap items-center gap-1">
           <ActionBadges actions={item.actions} />

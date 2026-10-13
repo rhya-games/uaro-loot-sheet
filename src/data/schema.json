@@ -16,7 +16,8 @@
         "name",
         "itemType",
         "actions",
-        "categories"
+        "categories",
+        "vend"
       ],
       "properties": {
         "id": {
@@ -117,21 +118,14 @@
             }
           }
         },
-        "avgVend": {
-          "description": "Average price (zeny) players sell this for in vending shops. null = no data yet (don't use 0).",
-          "type": [
-            "integer",
-            "null"
-          ],
-          "minimum": 0
-        },
-        "avgWhobuy": {
-          "description": "Average price (zeny) players pay when buying this through @whobuy. null = no data yet (don't use 0).",
-          "type": [
-            "integer",
-            "null"
-          ],
-          "minimum": 0
+        "vend": {
+          "description": "How the vend price compares with the NPC price: \"unknown\" (no vend price yet), \"none\" (checked, nobody was selling it), \"higher\" (players pay more than the NPC) or \"lower\" (the same or less). The prices themselves are private and not in the repo; `npm run sync:vend` works this out from them.",
+          "enum": [
+            "unknown",
+            "none",
+            "higher",
+            "lower"
+          ]
         },
         "sellValue": {
           "description": "Zeny an NPC pays for one, before any skills (the item's base sell price). Filled in by `npm run sync:prices`. The NPC column adds the Overcharge bonus from game-rules.json, unless uaro-overrides.json says otherwise.",
@@ -158,18 +152,6 @@
             "npc-only",
             null
           ]
-        },
-        "lastVerified": {
-          "description": "Date (YYYY-MM-DD) someone last checked this entry on the live server. null = never verified.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date"
-        },
-        "verificationNotes": {
-          "description": "Who verified it and how, e.g. \"Checked vend prices in Prontera, 3 shops\".",
-          "type": "string"
         }
       }
     },
@@ -178,7 +160,6 @@
       "enum": [
         "Keep",
         "Vend",
-        "Whobuy",
         "NPC",
         "Junk"
       ]

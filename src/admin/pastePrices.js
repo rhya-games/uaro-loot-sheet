@@ -1,35 +1,33 @@
 import { priceChanges } from './verify.js';
 import { createSuggester } from '../utils/suggest.js';
 import { parseZeny } from '../utils/format.js';
-import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
+import { isSoldByNpc, isTradeable } from '../utils/prices.js';
 
 /**
  * Pasting a list of prices into admin mode. One line per item:
  *
- *   <item ID>  <vend price>  <@whobuy price>
+ *   <item ID>  <vend price>
  *
  * The columns can be split by spaces, tabs (pasted from a spreadsheet) or
  * semicolons. Prices take the same shorthand as the price boxes ("12,500",
- * "1.5m", "200k"), and 0 or "none" means "checked, and nobody is buying".
- * "-" (or an empty column) leaves that price as it is, and the last column
- * can be left off.
+ * "1.5m", "200k"), and 0 or "none" means "checked, and nobody is selling".
  *
- *   7119  780  580      both prices
- *   1550  1.2m -        vend only
- *   5162  -    0        @whobuy only: nobody is buying
+ *   7119  780     a vend price
+ *   1550  1.2m    the same, in shorthand
+ *   5162  0       nobody is selling it
  *
  * Everything here is plain functions, so the tests can use it.
  */
 
 /** The prices' fields, in column order. */
-const FIELDS = ['avgVend', 'avgWhobuy'];
+const FIELDS = ['avgVend'];
 
 /** A column that means "leave this price as it is". */
 const isSkipColumn = (text) => text === '' || text === '-' || text === '—';
 
 /**
  * Reads the pasted text into one entry per non-blank line:
- *   { number, raw, itemId, prices }        prices is like { avgVend: 780, avgWhobuy: 0 }
+ *   { number, raw, itemId, prices }        prices is like { avgVend: 780 }
  *   { number, raw, error }                 when the line can't be read
  * `number` is the line's number in the pasted text (blank lines count).
  */
@@ -45,7 +43,7 @@ export function parsePriceLines(text) {
     const columns = /[\t;]/.test(line) ? line.split(/[\t;]/).map((column) => column.trim()) : line.split(/\s+/);
     const id = columns[0].replace(/^#/, '');
     if (!/^\d+$/.test(id)) return fail(`"${columns[0]}" isn't an item ID`);
-    if (columns.length > 1 + FIELDS.length) return fail('Too many columns: expected an item ID, a vend price and an @whobuy price');
+    if (columns.length > 1 + FIELDS.length) return fail('Too many columns: expected an item ID and a vend price');
 
     const prices = {};
     for (const [i, field] of FIELDS.entries()) {
@@ -67,13 +65,13 @@ export function parsePriceLines(text) {
  *   { number, raw, status: 'ok', item, prices, changes, notes }
  *       will be saved. `prices` are the ones that apply, `changes` is what
  *       gets saved (prices, date and note; see priceChanges), and `notes` are
- *       warnings ("@whobuy ignored").
+ *       warnings about the line (none at the moment).
  *   { number, raw, status: 'skip', reason, item? }   valid line, but not applied
  *   { number, raw, status: 'error', reason }         the line can't be read
  *
  * Items NPCs sell can't have player prices, and neither can items that can't
- * be traded (validate would fail). Cards and equipment have no @whobuy. An
- * ID that's listed twice uses its first line.
+ * be traded (validate would fail). An ID that's listed twice uses its first
+ * line.
  */
 export function planPrices(entries, items, today) {
   const byItemId = new Map();
@@ -94,14 +92,8 @@ export function planPrices(entries, items, today) {
     if (isSoldByNpc(item)) return skip('NPCs sell it, so it has no player prices', item);
     if (!isTradeable(item)) return skip("Can't be traded, so it has no player prices", item);
 
-    const prices = { ...entry.prices };
-    const notes = [];
-    if ('avgWhobuy' in prices && !hasWhobuy(item)) {
-      delete prices.avgWhobuy;
-      notes.push("@whobuy doesn't apply to cards or equipment, so that price is ignored");
-    }
-    if (!Object.keys(prices).length) return skip(notes[0], item);
-    return { number, raw, status: 'ok', item, prices, changes: priceChanges(item, prices, today), notes };
+    const { prices } = entry;
+    return { number, raw, status: 'ok', item, prices, changes: priceChanges(item, prices, today), notes: [] };
   });
 }
 

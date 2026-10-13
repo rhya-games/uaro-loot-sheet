@@ -1,24 +1,26 @@
 import { useAdmin } from './useAdmin.js';
 import ZenyInput from './ZenyInput.jsx';
 import { priceChanges } from './verify.js';
-import { PlayerPrice } from '../components/StatusIcons.jsx';
-import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
+import { PlayerPrice, VendStar } from '../components/StatusIcons.jsx';
+import { isSoldByNpc, isTradeable } from '../utils/prices.js';
 
 /**
- * A Vend or Whobuy price cell. In admin mode it's a text box: type a price
+ * A vend price cell. In admin mode it's a text box: type a price
  * and press Enter (or leave the box) to save it. That also marks the item
  * as verified today. Escape puts the old price back. 0 (or "none") means
- * "checked, and nobody was buying (or selling)", and shows as "None". Outside admin mode, and where there
- * can't be a price (see PlayerPrice), it's the normal read-only cell.
+ * "checked, and nobody was selling". Outside admin mode the cell is the star
+ * (see VendStar), and where there can't be a price (see PlayerPrice) it's the
+ * normal read-only cell.
  *
  * Props:
  *   item  - one entry from loot.json
- *   field - "avgVend" or "avgWhobuy"
+ *   field - "avgVend"
  */
 export default function PriceCell({ item, field }) {
   const { enabled } = useAdmin();
-  const noPrice = !isTradeable(item) || isSoldByNpc(item) || (field === 'avgWhobuy' && !hasWhobuy(item));
-  if (!enabled || noPrice) return <PlayerPrice item={item} field={field} />;
+  if (!enabled) return <VendStar item={item} />;
+  const noPrice = !isTradeable(item) || isSoldByNpc(item);
+  if (noPrice) return <PlayerPrice item={item} />;
   return <PriceInput item={item} field={field} />;
 }
 
@@ -37,8 +39,8 @@ export function PriceInput({ item, field, advance, verify = true }) {
     <ZenyInput
       value={item[field]}
       onSave={save}
-      label={`${field === 'avgVend' ? 'Vend' : 'Whobuy'} price for ${item.name}`}
-      noneHint={`nobody ${field === 'avgWhobuy' ? 'buying' : 'selling'}`}
+      label={`Vend price for ${item.name}`}
+      noneHint="nobody selling"
       advance={advance}
     />
   );

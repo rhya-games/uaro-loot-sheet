@@ -4,8 +4,8 @@ import { useCallback, useState } from 'react';
  * Keeps the row the cursor is in on screen, in place, with the boxes it had.
  *
  * Saving a price can take a row out of its queue, or change which prices it
- * needs (a Vend price with no @whobuy price drops Whobuy). Without this, the
- * box you are about to type in would vanish mid-typing. The row goes when the
+ * needs. Without this, the box you are about to type in would vanish
+ * mid-typing. The row goes when the
  * cursor leaves it.
  *
  * Arguments:

@@ -209,7 +209,7 @@
   "tradeRestrictions": {
     "about": "Items that can't be traded between players, and the emulator's trade flags we've checked. The emulators often flag items as bound when uaRO lets you trade them, so their flags are only a reminder to check: npm run sync:prices lists flagged items that aren't here.",
     "notTradeable": {
-      "about": "Items players can't trade or vend on uaRO. Vend and Whobuy show ✕ (\"Can't be traded\"). Items NPCs won't buy go in notSellableToNpc.",
+      "about": "Items players can't trade or vend on uaRO. Vend shows ✕ (\"Can't be traded\"). Items NPCs won't buy go in notSellableToNpc.",
       "items": []
     },
     "checked": {
