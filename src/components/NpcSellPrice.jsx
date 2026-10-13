@@ -19,7 +19,7 @@ import { OVERCHARGE_LEVEL, bestSale, isCard, npcSellInfo } from '../utils/prices
  */
 export default function NpcSellPrice({ item }) {
   const info = npcSellInfo(item);
-  const star = bestSale(item) === 'npc' && <BestStar label={BEST_NPC_LABEL} className="size-4" />;
+  const star = bestSale(item) === 'npc' && <BestStar label={BEST_NPC_LABEL} />;
 
   if (isCard(item)) {
     return (
