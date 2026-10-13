@@ -10,6 +10,8 @@ import { readFileSync } from 'node:fs';
 import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { CHANGELOG } from '../src/data/changelog.js';
+import { vendFlag } from '../src/utils/prices.js';
+import { hasPrivatePrices, readPrices, readTargets, withPrices } from './private-data.mjs';
 
 const DATA_FILE = 'src/data/loot.json';
 const SCHEMA_FILE = 'src/data/schema.json';
@@ -42,6 +44,22 @@ if (!ajv.validate(schema, items)) {
   for (const e of ajv.errors) {
     const allowed = e.params.allowedValues ? `: ${e.params.allowedValues.join(', ')}` : '';
     errors.push(`${describe(e.instancePath)} ${e.message}${allowed}`);
+  }
+}
+
+// 1b. The private prices (see scripts/private-data.mjs), when this computer
+// has them: each item's stored `vend` must be what its price works out to.
+// Without them (CI, other contributors) the stored values are taken as they are.
+if (hasPrivatePrices()) {
+  const prices = readPrices();
+  const ids = new Set(items.map((item) => item.id));
+  for (const item of withPrices(items, prices)) {
+    if (vendFlag(item) !== item.vend) {
+      errors.push(`${item.name}: "vend" is "${item.vend}" but its private price works out to "${vendFlag(item)}" (run npm run sync:vend)`);
+    }
+  }
+  for (const id of Object.keys(prices)) {
+    if (!ids.has(id)) warnings.push(`private player-prices.json: no item with id "${id}" in loot.json`);
   }
 }
 
@@ -93,8 +111,8 @@ for (const item of items) {
   if (item.actions?.includes('Junk') && item.actions.length > 1) {
     warnings.push(`${item.name}: Junk means "throw it away", so it shouldn't have other actions`);
   }
-  if (soldByNpc && item.avgVend != null) {
-    errors.push(`${item.name}: NPCs sell this, so avgVend should be null (the site shows ✕)`);
+  if (soldByNpc && item.vend !== 'unknown') {
+    errors.push(`${item.name}: NPCs sell this, so it has no vend price: "vend" should be "unknown" (the site shows ✕)`);
   }
   // Notes show under "Used For", so keep them about what the item does.
   if (/^dropped by/i.test(item.notes ?? '')) {
@@ -156,8 +174,8 @@ for (const item of items) {
     if (item.actions?.includes('Vend')) {
       errors.push(`${item.name}: it can't be traded (notTradeable), so it can't have Vend`);
     }
-    if (item.avgVend != null) {
-      errors.push(`${item.name}: it can't be traded (notTradeable), so avgVend should be null`);
+    if (item.vend !== 'unknown') {
+      errors.push(`${item.name}: it can't be traded (notTradeable), so it has no vend price: "vend" should be "unknown"`);
     }
   }
 }
@@ -212,12 +230,13 @@ if (noAction.length) warnings.push(`${noAction.length} items have no action yet:
 const isSorted = items.every((item, i) => i === 0 || items[i - 1].name.localeCompare(item.name) <= 0);
 if (!isSorted) warnings.push('Items are not in A-Z order by name. Keeping them sorted makes changes easier to review.');
 
-// use-targets.json: values for "Used For" targets. Each must still be a
-// target (a rename in loot.json would leave it behind), and quests don't
-// take values (they're always a reason to Keep; see src/utils/suggest.js).
-const TARGETS_FILE = 'src/data/use-targets.json';
+// The private use-targets.json (when this computer has it): values for
+// "Used For" targets. Each must still be a target (a rename in loot.json would
+// leave it behind), and quests don't take values (they're always a reason to
+// Keep; see src/utils/suggest.js).
+const TARGETS_FILE = 'private use-targets.json';
 const allTargets = new Set(items.flatMap((item) => item.uses.map((use) => use.for)));
-const targetEntries = JSON.parse(readFileSync(TARGETS_FILE, 'utf8')).items;
+const targetEntries = readTargets().items;
 const seenTargets = new Set();
 for (const entry of targetEntries) {
   if (typeof entry.for !== 'string' || !Number.isInteger(entry.value) || entry.value < 0) {

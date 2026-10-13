@@ -1,4 +1,3 @@
-import targetData from '../data/use-targets.json' with { type: 'json' };
 import { alwaysSoldToPlayers, isCard, isCheapUnpriced, isSoldByNpc, isTradeable, isUnsoldPetAccessory, npcSellPrice } from './prices.js';
 
 /**
@@ -28,7 +27,7 @@ import { alwaysSoldToPlayers, isCard, isCheapUnpriced, isSoldByNpc, isTradeable,
  *   - Skills (a Blue Gemstone for Safety Wall) aren't either: people who
  *     cast them buy or keep their own, so the item sells by price (see isSkill).
  *   - A target checked with no shops selling it (value 0 in
- *     use-targets.json) can only be made, so its parts are worth keeping.
+ *     private use-targets.json) can only be made, so its parts are worth keeping.
  *   - Cooking levels 1-3 don't count: those foods are too weak to be worth
  *     keeping ingredients for (see isLowLevelCooking).
  *   - A cooking kit (the "Cooking" use) is used up with every dish, and
@@ -68,8 +67,6 @@ export const isSkill = (use) => use.note === 'each cast';
 /** Uses that can be a reason to Keep (the rest never are). */
 const isKeepReason = (use) => !isLowLevelCooking(use) && !isNotUsedUp(use) && !isSkill(use) && !isJobQuest(use);
 
-/** use-targets.json as a Map: target name -> value. */
-export const TARGET_VALUES = new Map(targetData.items.map((entry) => [entry.for, entry.value]));
 const withoutSlots = (name) => name.replace(/\s*\[\d\]$/, '');
 
 /**
@@ -116,7 +113,9 @@ const fmt = (zeny) => `${zeny.toLocaleString('en-US')}z`;
 /**
  * Makes a function that suggests actions for any item in `items`. It
  * indexes every recipe once, so calling it for each item stays fast.
- * `targetValues` overrides use-targets.json (admin mode passes its edits).
+ * `targetValues` is a Map of target name -> value (the private
+ * use-targets.json; see scripts/private-data.mjs). Without it, targets have
+ * no value and count as worth keeping.
  *
  * The result is { actions, sale, uses, reasons }:
  *   actions  suggested actions, like ['Keep', 'Vend'] (empty when unsure)
@@ -124,7 +123,7 @@ const fmt = (zeny) => `${zeny.toLocaleString('en-US')}z`;
  *   uses     each use with { for, worthIt, value, partsValue, missingPrices }
  *   reasons  plain-language lines explaining the suggestion
  */
-export function createSuggester(items, targetValues = TARGET_VALUES) {
+export function createSuggester(items, targetValues = new Map()) {
   const byName = new Map(items.map((item) => [item.name, item]));
   const bySlotlessName = new Map();
   for (const item of items) {
@@ -154,7 +153,7 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
   function targetValue(target) {
     // 0 = checked, and no shops sell it: no price to compare, and it can only be made.
     if (targetValues.get(target) === 0) return { value: null, source: 'no shops' };
-    if (targetValues.has(target)) return { value: targetValues.get(target), source: 'use-targets.json' };
+    if (targetValues.has(target)) return { value: targetValues.get(target), source: 'private target values' };
     const item = findItem(target);
     if (!item) return { value: null, source: 'not loot' };
     // A finished item is worth the most players pay for it. The NPC price

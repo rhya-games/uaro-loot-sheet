@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ADMIN_AVAILABLE, AdminContext, NO_ITEMS, REVIEWED, loadItems } from './useAdmin.js';
-import { createSuggester, TARGET_VALUES } from '../utils/suggest.js';
+import { ADMIN_AVAILABLE, AdminContext, NO_ITEMS, REVIEWED, loadItems, loadPrivate } from './useAdmin.js';
+import { createSuggester } from '../utils/suggest.js';
 import { readPreference, writePreference } from '../utils/preferences.js';
 import UndoSnackbar from './UndoSnackbar.jsx';
 
@@ -8,7 +8,8 @@ import UndoSnackbar from './UndoSnackbar.jsx';
  * Admin mode: edit prices in the table and see suggested actions.
  *
  * It only exists while running `npm run dev`. Saving goes to the dev
- * server (scripts/admin-server.mjs), which writes src/data/loot.json, and
+ * server (scripts/admin-server.mjs), which writes src/data/loot.json (and
+ * the vend prices and target values to the private folder), and
  * the saved item replaces the old one in `items` here, so the page keeps
  * its search, filters and scroll position. The published site has no
  * server, so ADMIN_AVAILABLE is false there and none of this shows.
@@ -78,8 +79,8 @@ export function AdminProvider({ children }) {
   const [enabled, setEnabled] = useState(() => ADMIN_AVAILABLE && readPreference('admin', false));
   const [items, setItems] = useState(NO_ITEMS);
   const [status, setStatus] = useState('loading');
-  // What "Used For" targets are worth (use-targets.json), with this session's edits.
-  const [targets, setTargets] = useState(TARGET_VALUES);
+  // What "Used For" targets are worth (the private use-targets.json), with this session's edits.
+  const [targets, setTargets] = useState(() => new Map());
 
   // The latest items and targets, for saves that finish one after another
   // (tabbing from one price box to the next saves twice in a row).
@@ -88,11 +89,14 @@ export function AdminProvider({ children }) {
 
   useEffect(() => {
     let cancelled = false;
-    loadItems().then(
-      (loaded) => {
+    Promise.all([loadItems(), loadPrivate()]).then(
+      ([loaded, { targets: stored }]) => {
         if (cancelled) return;
         latest.current = loaded;
         setItems(loaded);
+        const values = new Map(stored.map((entry) => [entry.for, entry.value]));
+        latestTargets.current = values;
+        setTargets(values);
         setStatus('ready');
       },
       () => !cancelled && setStatus('failed'),

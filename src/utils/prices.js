@@ -59,6 +59,29 @@ export function isStrongFood(item) {
   return Boolean(stat) && Number(stat[1]) >= 6;
 }
 
+/**
+ * How an item's vend price compares with what an NPC pays, as one of:
+ *   "unknown"  no vend price yet
+ *   "none"     checked, and nobody was selling it (price 0)
+ *   "higher"   players pay more than the NPC
+ *   "lower"    players pay the same or less
+ * This is all the public site gets: the vend prices themselves are kept in
+ * a private file (see scripts/private-data.mjs) and loot.json only stores
+ * this result, in the item's `vend` field.
+ */
+export function vendFlag(item) {
+  if (item.avgVend == null) return 'unknown';
+  if (item.avgVend === 0) return 'none';
+  return item.avgVend > (npcSellPrice(item) ?? 0) ? 'higher' : 'lower';
+}
+
+/**
+ * The item's vend state. Worked out from the price while it's there (admin
+ * mode and the scripts load the private prices, so it's live while editing),
+ * and read from the stored `vend` flag otherwise (the published site).
+ */
+export const vendState = (item) => (item.avgVend !== undefined ? vendFlag(item) : (item.vend ?? 'unknown'));
+
 /** A pet taming item (notes "<Pet> Taming Item"). */
 export const isTamingItem = (item) => item.categories.includes('Pet') && /Taming Item$/.test(item.notes ?? '');
 
@@ -75,7 +98,7 @@ const CHEAP_TAMING_ITEM_LIMIT = 1000;
  * vend until a price says otherwise. A known price (even 0) ends this.
  */
 export function isCheapUnpriced(item) {
-  if (item.avgVend != null) return false;
+  if (vendState(item) !== 'unknown') return false;
   const npc = npcSellPrice(item) ?? Infinity;
   if (item.itemType === 'Equipment') return npc < CHEAP_EQUIPMENT_LIMIT;
   return isTamingItem(item) && npc < CHEAP_TAMING_ITEM_LIMIT;
@@ -92,7 +115,7 @@ export const alwaysSoldToPlayers = (item) => isCard(item) || isStrongFood(item) 
  * (vend price 0). Not worth anything to players, so it's Junk even though an
  * NPC would pay a few zeny.
  */
-export const isUnsoldPetAccessory = (item) => item.avgVend === 0 && /Pet accessory$/.test(item.notes ?? '');
+export const isUnsoldPetAccessory = (item) => vendState(item) === 'none' && /Pet accessory$/.test(item.notes ?? '');
 
 /**
  * Which way of selling pays more, when there's a vend price to go on:
@@ -103,17 +126,19 @@ export const isUnsoldPetAccessory = (item) => item.avgVend === 0 && /Pet accesso
  * price. An NPC that won't buy it counts as 0z, like the suggester does.
  *
  * Cards, strong food (+6 or more) and cheap equipment or taming items with no
- * vend price are "vend", even before they have a price (see alwaysSoldToPlayers). Pet accessories nobody is selling
- * are junk (see isUnsoldPetAccessory). Neither gets the NPC star.
+ * vend price are "vend", even before they have a price (see
+ * alwaysSoldToPlayers). Pet accessories nobody is selling are junk (see
+ * isUnsoldPetAccessory). Neither gets the NPC star.
+ *
+ * Only the vend state is used (see vendState), never the price itself.
  */
 export function bestSale(item) {
   if (isSoldByNpc(item) || !isTradeable(item)) return null;
   if (alwaysSoldToPlayers(item)) return 'vend';
-  if (item.avgVend == null) return null;
-  if (isUnsoldPetAccessory(item)) return null;
-  const npc = npcSellPrice(item) ?? 0;
-  if (item.avgVend > npc) return 'vend';
-  return npc > 0 ? 'npc' : null;
+  const state = vendState(item);
+  if (state === 'unknown' || isUnsoldPetAccessory(item)) return null;
+  if (state === 'higher') return 'vend';
+  return (npcSellPrice(item) ?? 0) > 0 ? 'npc' : null;
 }
 
 /** Just the number (for sorting). null when it can't be sold or is unknown. */

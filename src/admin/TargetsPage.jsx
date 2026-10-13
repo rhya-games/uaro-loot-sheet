@@ -12,7 +12,8 @@ import targetIds from '../data/target-ids.json' with { type: 'json' };
  * evolutions and other finished things that aren't loot in the sheet, so
  * they have no price of their own. What they're worth decides whether
  * their parts are worth keeping (see src/utils/suggest.js). Values save to
- * src/data/use-targets.json, and the parts' actions update right away.
+ * the private use-targets.json (see scripts/private-data.mjs), and the
+ * parts' actions update right away.
  *
  * Targets come in priority order by quest relevance (see targetPriority in
  * queues.js: the server's hat quests first, official hat quests last), then

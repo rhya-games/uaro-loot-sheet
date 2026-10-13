@@ -2,8 +2,11 @@
  * One-time import: converts the Google Sheet CSV export into src/data/loot.json.
  *
  * Usage:
- *   npm run import:csv                      (uses scripts/source/loot-sheet.csv)
+ *   npm run import:csv                      (uses loot-sheet.csv in the private folder)
  *   npm run import:csv -- path/to/file.csv  (uses a different export)
+ *
+ * The sheet's vend prices go to the private player-prices.json (see
+ * scripts/private-data.mjs), not into loot.json, which only keeps `vend`.
  *
  * Needs an internet connection the first time, to download item types
  * from the Hercules emulator (see scripts/hercules.mjs).
@@ -14,6 +17,8 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import Papa from 'papaparse';
 import { loadItemDb, loadOverchargePercent } from './hercules.mjs';
+import { vendFlag } from '../src/utils/prices.js';
+import { CSV_FILE, withoutPrices, writePrices } from './private-data.mjs';
 import {
   RENAMES,
   REMOVED,
@@ -25,7 +30,7 @@ import {
   ITEM_IDS,
 } from './source/sheet-corrections.mjs';
 
-const SOURCE = process.argv[2] ?? 'scripts/source/loot-sheet.csv';
+const SOURCE = process.argv[2] ?? CSV_FILE;
 const OUTPUT = 'src/data/loot.json';
 
 // The sheet has two banner rows before the real header row.
@@ -217,7 +222,14 @@ function mergeInto(target, extra) {
 }
 
 const items = [...itemsById.values()].sort((a, b) => a.name.localeCompare(b.name));
-writeFileSync(OUTPUT, JSON.stringify(items, null, 2) + '\n');
+// Prices go to the private file; loot.json only keeps how they compare with the NPC price.
+const prices = {};
+const stored = items.map((item) => {
+  if (item.avgVend != null) prices[item.id] = { avgVend: item.avgVend, lastVerified: null, verificationNotes: '' };
+  return { ...withoutPrices(item), vend: vendFlag(item) };
+});
+writePrices(prices);
+writeFileSync(OUTPUT, JSON.stringify(stored, null, 2) + '\n');
 
 console.log(`Wrote ${items.length} items to ${OUTPUT}`);
 if (merged.length) console.log(`Merged duplicate rows: ${merged.join(', ')}`);

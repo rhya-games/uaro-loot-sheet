@@ -42,8 +42,9 @@ CONTRIBUTING.md lists the fields).
 - `sellValue` and `sellSource`: the emulator's price (`Sell`, or `Buy` / 2)
   and `hercules` or `rathena-renewal`. `npm run sync:prices` checks them.
 - `npcBuyable`: `"no"` for now. `npm run sync:shops` corrects it.
-- `avgVend` / `lastVerified` / `verificationNotes`: only what
-  the maintainer checked in game (`null` and `""` otherwise).
+- `vend`: `"unknown"` unless the maintainer gave a vend price. Prices are
+  private (AGENTS.md, "Private data"): put the price in `player-prices.json`
+  and run `npm run sync:vend`.
 - `links` and `notes`: empty unless there's something worth saying. Notes
   are short and plain, with no "dropped by" and no period on a fragment.
 

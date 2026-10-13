@@ -29,12 +29,18 @@ that dropped a lot, or ask if it might be a one-off. They checked it in game.
 
 ## 2. Update items that are in the sheet
 
-For each item, in `src/data/loot.json`:
+The prices are private (never in the repo or in loot.json: see AGENTS.md,
+"Private data"). For each item, in `~/.uaro-loot-sheet/player-prices.json`
+(`{ "<item id>": { avgVend, lastVerified, verificationNotes } }`, keyed by the
+item's `id` in loot.json):
 
 - Set `avgVend` to the price, even if it's lower than before.
 - Set `lastVerified` to today (`YYYY-MM-DD`).
 - Set `verificationNotes` to where the price came from, for example
   `"Vend price from a player shop"`.
+
+Then run `npm run sync:vend`, which updates each item's `vend` in loot.json.
+Admin mode (and its Paste prices page) does all of this when you save.
 
 **Items NPCs sell** (`npcBuyable` "yes" or "npc-only") can't have player
 prices; validate fails if they do. Skip them and tell the maintainer.
@@ -79,7 +85,8 @@ to NPCs for 0z makes validate warn; ask whether it really is 0z (add it to
 
 - Add one line to today's changelog card (`src/data/changelog.js`) with a
   count ("Vend prices updated for 6 items"); name items only if three or
-  fewer and they matter. The full list goes in the PR description. One card
+  fewer and they matter. Never write the prices themselves in the changelog,
+  the PR description or the commit message. One card
   per day: add to it if today has one. Otherwise add a card with the next
   version and set the same one in `package.json` (validate checks).
 - Commit.

@@ -8,9 +8,14 @@
  */
 import { readFileSync } from 'node:fs';
 import { createSuggester } from '../src/utils/suggest.js';
+import { PRICES_FILE, hasPrivatePrices, readTargets, withPrices } from './private-data.mjs';
 
-const items = JSON.parse(readFileSync('src/data/loot.json', 'utf8'));
-const suggest = createSuggester(items);
+// The suggestions need the vend prices and target values, which are private
+// (see scripts/private-data.mjs). Without them everything is "unsure".
+if (!hasPrivatePrices()) console.warn(`No private prices at ${PRICES_FILE}: the suggestions have no prices to go on.\n`);
+const items = withPrices(JSON.parse(readFileSync('src/data/loot.json', 'utf8')));
+const targets = new Map(readTargets().items.map((entry) => [entry.for, entry.value]));
+const suggest = createSuggester(items, targets);
 const search = process.argv[2]?.toLowerCase();
 const same = (a, b) => a.length === b.length && a.every((action) => b.includes(action));
 

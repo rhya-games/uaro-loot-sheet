@@ -1,8 +1,13 @@
 /**
  * Admin mode's save endpoints, as a Vite plugin. It only runs with
  * `npm run dev` (never in the built site, which has no server):
- *   POST /__admin/item    { id, changes }  -> src/data/loot.json
- *   POST /__admin/target  { for, value }   -> src/data/use-targets.json
+ *   GET  /__admin/private                  -> { prices, targets }: the private
+ *                         vend prices and target values (see private-data.mjs)
+ *   POST /__admin/item    { id, changes }  -> src/data/loot.json, except the
+ *                         price fields (avgVend, lastVerified,
+ *                         verificationNotes), which go to the private
+ *                         player-prices.json; loot.json gets the item's `vend`
+ *   POST /__admin/target  { for, value }   -> the private use-targets.json
  *                         (value null removes the target)
  *   POST /__admin/reviewed { id, actions, suggested } -> src/data/reviewed-suggestions.json
  *                         ("Keep mine"; { id, remove: true } takes it back)
@@ -16,9 +21,10 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { vendFlag } from '../src/utils/prices.js';
+import { NO_PRICE, PRICE_FIELDS, readPrices, readTargets, withPrices, writePrices, writeTargets } from './private-data.mjs';
 
 const LOOT_FILE = resolve('src/data/loot.json');
-const TARGETS_FILE = resolve('src/data/use-targets.json');
 const REVIEWED_FILE = resolve('src/data/reviewed-suggestions.json');
 const ACTIONS = JSON.parse(readFileSync(resolve('src/data/schema.json'), 'utf8')).$defs.action.enum;
 const isPrice = (value) => value === null || (Number.isInteger(value) && value >= 0);
@@ -64,22 +70,25 @@ export default function lootAdminPlugin() {
     },
     configureServer(server) {
       server.middlewares.use(async (request, response, next) => {
-        if (request.method !== 'POST') return next();
         const reply = (status, data) => {
           response.statusCode = status;
           response.setHeader('Content-Type', 'application/json');
           response.end(JSON.stringify(data));
         };
+        if (request.method === 'GET' && request.url.endsWith('/__admin/private')) {
+          return reply(200, { prices: readPrices(), targets: readTargets().items });
+        }
+        if (request.method !== 'POST') return next();
         if (request.url.endsWith('/__admin/target')) {
           try {
             const { for: target, value } = await readBody(request);
             if (typeof target !== 'string' || !target) return reply(400, { error: 'No target name' });
             if (!isPrice(value)) return reply(400, { error: `Bad value: ${JSON.stringify(value)}` });
-            const data = JSON.parse(readFileSync(TARGETS_FILE, 'utf8'));
+            const data = readTargets();
             const items = data.items.filter((entry) => entry.for !== target);
             if (value !== null) items.push({ for: target, value });
             data.items = items.sort((a, b) => a.for.localeCompare(b.for));
-            write(TARGETS_FILE, data);
+            writeTargets(data);
             server.config.logger.info(`admin: target ${target} = ${value}`, { timestamp: true });
             return reply(200, { for: target, value });
           } catch (error) {
@@ -115,10 +124,21 @@ export default function lootAdminPlugin() {
             if (!EDITABLE[field]) return reply(400, { error: `${field} can't be edited here` });
             if (!EDITABLE[field](value)) return reply(400, { error: `Bad value for ${field}: ${JSON.stringify(value)}` });
           }
-          Object.assign(item, changes);
+          // Prices go to the private file; everything else to loot.json.
+          const priceChanges = Object.fromEntries(Object.entries(changes ?? {}).filter(([field]) => PRICE_FIELDS.includes(field)));
+          const lootChanges = Object.fromEntries(Object.entries(changes ?? {}).filter(([field]) => !PRICE_FIELDS.includes(field)));
+          const prices = readPrices();
+          Object.assign(item, lootChanges);
+          // The stored `vend` only changes with a price, so someone without the
+          // private prices can still edit actions without resetting it.
+          if (Object.keys(priceChanges).length) {
+            prices[id] = { ...NO_PRICE, ...prices[id], ...priceChanges };
+            item.vend = vendFlag({ ...item, ...prices[id] });
+            writePrices(prices);
+          }
           write(LOOT_FILE, items);
           server.config.logger.info(`admin: ${item.name} ${JSON.stringify(changes)}`, { timestamp: true });
-          reply(200, { item });
+          reply(200, { item: withPrices([item], prices)[0] });
         } catch (error) {
           reply(500, { error: error.message });
         }

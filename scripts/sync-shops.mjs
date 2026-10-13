@@ -11,7 +11,8 @@
  * it's sold. Items without an itemId are left as they are.
  *
  * NPC-sold items can't be vended, so when an item becomes sold by NPCs,
- * its Vend action becomes NPC and its player price is cleared. Everything that changes is listed.
+ * its Vend action becomes NPC and its vend price is cleared (the stored
+ * `vend` becomes "unknown", and the private price is removed). Everything that changes is listed.
  *
  * Usage:
  *   npm run sync:shops             (update loot.json)
@@ -21,6 +22,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { loadPreRenewalItemDb } from './hercules.mjs';
 import { loadRenewalItemDb } from './rathena.mjs';
 import { loadShopItems } from './npc-shops.mjs';
+import { hasPrivatePrices, readPrices, writePrices } from './private-data.mjs';
 
 const LOOT_FILE = 'src/data/loot.json';
 const OVERRIDES_FILE = 'src/data/uaro-overrides.json';
@@ -61,6 +63,7 @@ for (const shop of npcShops.uaroShops.shops) {
 const notSoldIds = new Set(npcShops.notSoldByNpc.items.map((entry) => entry.itemId));
 
 const changes = [];
+const clearedPrices = []; // ids whose private vend price goes too
 const noItemId = [];
 const updatedItems = items.map((item) => {
   if (item.itemId == null) {
@@ -88,9 +91,10 @@ const updatedItems = items.map((item) => {
       updated.actions = [...new Set(actions)];
       notes.push(`actions ${item.actions.join('+')} -> ${updated.actions.join('+')}`);
     }
-    if (item.avgVend != null) {
-      updated.avgVend = null;
-      notes.push(`cleared avgVend ${item.avgVend}`);
+    if (item.vend !== 'unknown') {
+      updated.vend = 'unknown';
+      clearedPrices.push(item.id);
+      notes.push('cleared the vend price');
     }
   }
   changes.push({ name: item.name, from: item.npcBuyable ?? 'blank', to: npcBuyable, reason, notes });
@@ -110,4 +114,12 @@ if (noItemId.length) console.log(`\nNo itemId, left as-is: ${noItemId.join(', ')
 if (!checkOnly) {
   writeFileSync(LOOT_FILE, JSON.stringify(updatedItems, null, 2) + '\n');
   console.log(`\nWrote ${LOOT_FILE}. Next: npm run validate`);
+  if (clearedPrices.length && hasPrivatePrices()) {
+    const prices = readPrices();
+    for (const id of clearedPrices) delete prices[id];
+    writePrices(prices);
+    console.log(`Cleared ${clearedPrices.length} private vend prices.`);
+  } else if (clearedPrices.length) {
+    console.log(`The private prices of ${clearedPrices.length} items should be cleared too (none on this computer).`);
+  }
 }
