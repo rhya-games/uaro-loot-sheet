@@ -225,7 +225,7 @@ export function queueCounts(items, ctx) {
 
 /**
  * How many "Used For" targets still need a value (the Targets page).
- * `values` is a Map of target name -> value, like use-targets.json.
+ * `values` is a Map of target name -> value, like the private use-targets.json.
  */
 export function targetsNeedingValue(items, values) {
   return [...valueTargets(items).keys()].filter((name) => !values.has(name)).length;

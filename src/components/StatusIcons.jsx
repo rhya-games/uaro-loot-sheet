@@ -3,7 +3,7 @@ import { CheckIcon, MinusIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { StarIcon } from '@heroicons/react/24/solid';
 import { formatZeny } from '../utils/format.js';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
-import { bestSale, isSoldByNpc, isTradeable } from '../utils/prices.js';
+import { bestSale, isSoldByNpc, isTradeable, vendState } from '../utils/prices.js';
 import Tooltip from './Tooltip.jsx';
 
 /**
@@ -77,7 +77,7 @@ export function VendStar({ item }) {
   const best = bestSale(item);
   if (best === 'vend') return <BestStar label={BEST_VEND_LABEL} />;
   const vendable = isTradeable(item) && !isSoldByNpc(item);
-  if (vendable && item.avgVend != null) {
+  if (vendable && vendState(item) !== 'unknown') {
     const label = best === 'npc' ? 'Not the best price: an NPC pays the same or more' : 'Not the best price: nobody was selling it';
     return (
       <Tooltip text={label}>

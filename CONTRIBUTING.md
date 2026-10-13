@@ -30,11 +30,9 @@ You only need a free GitHub account.
   "uses": [{ "for": "Mystic Rose", "qty": 10 }],
   "notes": "",
   "links": [{ "label": "Mystic Rose", "url": "https://wiki.uaro.net/..." }],
-  "avgVend": null,
+  "vend": "higher",
   "sellValue": 12500,
-  "npcBuyable": "no",
-  "lastVerified": "2026-09-23",
-  "verificationNotes": "Checked vending shops"
+  "npcBuyable": "no"
 }
 ```
 
@@ -49,17 +47,15 @@ You only need a free GitHub account.
 | `uses` | What it's needed for and how many: `{ "for": "Mystic Rose", "qty": 10 }`. Optional `"note"`, e.g. `"each try"`. |
 | `notes` | Anything else about what the item does, e.g. `Isis Taming Item` or `+4 INT for 20 minutes`. It shows under "Used For", so leave out who drops it, and skip the period unless there are several sentences. |
 | `links` | Helpful links (`label` + `url`). Can be empty: `[]`. |
-| `avgVend` | Average vending price in zeny, or `null` if unknown. |
+| `vend` | How the vend price compares with the NPC price: `unknown`, `none` (nobody was selling it), `higher` or `lower`. The prices are private and not in the repo; `npm run sync:vend` works this out from them, so leave it to the maintainer. |
 | `sellValue` | Zeny an NPC pays for one **before** Overcharge (the site adds the Overcharge bonus). Filled in by `npm run sync:prices`; only edit it for items neither emulator has. |
 | `sellSource` | Where `sellValue` came from: `hercules`, `rathena-renewal`, or `manual`. Set by the sync. |
 | `npcBuyable` | `"yes"`, `"no"`, `"npc-only"`, or `null` if unknown. Filled in by `npm run sync:shops`. |
-| `lastVerified` | Date you last checked its **vend price** on the live server (`YYYY-MM-DD`), or `null`. |
-| `verificationNotes` | How it was checked. |
 
 ## Rules the automatic check enforces
 
 - Numbers have no commas or quotes: `15500`, not `"15,500"`. Unknown values are `null`.
-- If an NPC sells the item (`npcBuyable` is `"yes"` or `"npc-only"`), use `NPC` instead of `Vend`, and leave `avgVend` as `null` (the site shows ✕).
+- If an NPC sells the item (`npcBuyable` is `"yes"` or `"npc-only"`), use `NPC` instead of `Vend`, and leave `vend` as `"unknown"` (the site shows ✕).
 - Cards can't be bought from NPCs (`npcBuyable` is always `"no"`).
 - Every item needs at least one category. Use `["Not Reviewed"]` until someone has checked what it's for, and `["No Use"]` once you've checked and nothing uses it (it can't have uses or other categories).
 - Spell each `uses` target (`for`) the same way on every item, so the "Used For" filter groups them.
@@ -68,7 +64,7 @@ You only need a free GitHub account.
 **Tips**
 - Every entry except the last one ends with a comma after its `}`.
 - Keep items in A–Z order by `name`.
-- When you check an item's vend price in game, update `lastVerified` to today's date. NPC prices come from the emulators and don't change, so updating those doesn't count.
+- Vend prices aren't kept in the repo (the server doesn't allow publishing them), so please don't add them to a pull request. Tell the maintainer what you saw instead.
 
 ## Working on your computer
 

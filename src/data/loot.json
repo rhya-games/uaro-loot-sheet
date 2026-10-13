@@ -20,6 +20,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -44,6 +45,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "lower",
     "sellValue": 12500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -71,6 +73,7 @@
     ],
     "notes": "Diamond Gambling",
     "links": [],
+    "vend": "unknown",
     "sellValue": 27500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -102,6 +105,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -131,6 +135,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -162,6 +167,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 49,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -180,6 +186,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -198,6 +205,7 @@
     "uses": [],
     "notes": "Stone Shooter Pet accessory",
     "links": [],
+    "vend": "none",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -253,6 +261,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -280,6 +289,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -306,6 +316,7 @@
     ],
     "notes": "Gremlin Taming Item",
     "links": [],
+    "vend": "higher",
     "sellValue": 5,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -324,6 +335,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -415,6 +427,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -442,6 +455,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -486,6 +500,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1212,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -513,6 +528,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -540,6 +556,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -567,6 +584,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -585,6 +603,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -621,6 +640,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -676,6 +696,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 180,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -723,6 +744,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -748,6 +770,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -778,6 +801,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -819,6 +843,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -837,6 +862,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -864,6 +890,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -889,6 +916,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 274,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -907,6 +935,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -925,6 +954,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -959,6 +989,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -984,6 +1015,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1002,6 +1034,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1020,6 +1053,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1038,6 +1072,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1063,6 +1098,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 225,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1089,6 +1125,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 18,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -1119,6 +1156,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1156,6 +1194,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 484,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1174,6 +1213,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1192,6 +1232,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 116,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1223,6 +1264,7 @@
     ],
     "notes": "NPCs sell it (Niflheim Tool Dealer). It can't be vended, and Discount doesn't work on it.",
     "links": [],
+    "vend": "unknown",
     "sellValue": 336,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -1241,6 +1283,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 378,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1259,6 +1302,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 400,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1277,6 +1321,7 @@
     "uses": [],
     "notes": "Raises the chance of forging a weapon. Not used up.",
     "links": [],
+    "vend": "none",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1308,6 +1353,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -1345,6 +1391,7 @@
     ],
     "notes": "Poring Pet Food",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1375,6 +1422,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1393,6 +1441,7 @@
     "uses": [],
     "notes": "Medusa Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -1411,6 +1460,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1442,6 +1492,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1460,6 +1511,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1486,6 +1538,7 @@
     ],
     "notes": "Isis Taming Item",
     "links": [],
+    "vend": "higher",
     "sellValue": 9000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1504,6 +1557,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1522,6 +1576,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 395,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1546,6 +1601,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -1564,6 +1620,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1582,6 +1639,7 @@
     "uses": [],
     "notes": "+9 VIT for 20 minutes",
     "links": [],
+    "vend": "none",
     "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1607,6 +1665,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1625,6 +1684,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1643,6 +1703,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1661,6 +1722,7 @@
     "uses": [],
     "notes": "+2 VIT for 20 minutes",
     "links": [],
+    "vend": "none",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1679,6 +1741,7 @@
     "uses": [],
     "notes": "+7 LUK for 20 minutes",
     "links": [],
+    "vend": "none",
     "sellValue": 20000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1697,6 +1760,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 725,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1715,6 +1779,7 @@
     "uses": [],
     "notes": "+2 INT for 20 minutes",
     "links": [],
+    "vend": "none",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1735,6 +1800,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "npcBuyable": "yes"
   },
   {
@@ -1751,6 +1817,7 @@
     "uses": [],
     "notes": "+6 VIT for 20 minutes",
     "links": [],
+    "vend": "none",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1775,6 +1842,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1807,6 +1875,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "lower",
     "sellValue": 512,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1825,6 +1894,7 @@
     "uses": [],
     "notes": "Poring, Drops, Poporing Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 750,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -1875,6 +1945,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -1899,6 +1970,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -1917,6 +1989,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1935,6 +2008,7 @@
     "uses": [],
     "notes": "Yoyo Pet Food",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -1967,6 +2041,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -1997,6 +2072,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 0,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2021,6 +2097,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 9000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2052,6 +2129,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2070,6 +2148,7 @@
     "uses": [],
     "notes": "Spore, Poison Spore Pet accessory",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2094,6 +2173,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2120,6 +2200,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 440,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2138,6 +2219,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 128,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2156,6 +2238,7 @@
     "uses": [],
     "notes": "Peco Peco Pet accessory",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2174,6 +2257,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 2700,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2192,6 +2276,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2218,6 +2303,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 87,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2236,6 +2322,7 @@
     "uses": [],
     "notes": "+8 STR for 20 minutes",
     "links": [],
+    "vend": "higher",
     "sellValue": 30000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2254,6 +2341,7 @@
     "uses": [],
     "notes": "Goblin Leader Pet accessory",
     "links": [],
+    "vend": "none",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2279,6 +2367,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 16,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2297,6 +2386,7 @@
     "uses": [],
     "notes": "Hornet Taming Item",
     "links": [],
+    "vend": "higher",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -2321,6 +2411,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2339,6 +2430,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2369,6 +2461,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -2387,6 +2480,7 @@
     "uses": [],
     "notes": "Goblin Leader Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -2411,6 +2505,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 7500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2443,6 +2538,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 32,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -2461,6 +2557,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2506,6 +2603,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2524,6 +2622,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 4500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2555,6 +2654,7 @@
     ],
     "notes": "Poporing Taming Item",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2579,6 +2679,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 192,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2597,6 +2698,7 @@
     "uses": [],
     "notes": "Succubus Pet accessory",
     "links": [],
+    "vend": "none",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2615,6 +2717,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2650,6 +2753,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 720,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2700,6 +2804,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2725,6 +2830,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -2755,6 +2861,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 6000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2795,6 +2902,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -2813,6 +2921,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2831,6 +2940,7 @@
     "uses": [],
     "notes": "+9 LUK for 20 minutes",
     "links": [],
+    "vend": "none",
     "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2849,6 +2959,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2875,6 +2986,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 340,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2905,6 +3017,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1008,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2923,6 +3036,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2951,6 +3065,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 443,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -2981,6 +3096,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 704,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3063,6 +3179,7 @@
     ],
     "notes": "Wizard Job Quest, Blacksmith Job Quest",
     "links": [],
+    "vend": "unknown",
     "sellValue": 300,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -3081,6 +3198,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 171,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3128,6 +3246,7 @@
     ],
     "notes": "Blue Unicorn Pet Food",
     "links": [],
+    "vend": "higher",
     "sellValue": 30,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3169,6 +3288,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -3187,6 +3307,7 @@
     "uses": [],
     "notes": "Succubus Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -3212,6 +3333,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3236,6 +3358,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3254,6 +3377,7 @@
     "uses": [],
     "notes": "+3 STR for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3279,6 +3403,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3297,6 +3422,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3321,6 +3447,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3339,6 +3466,7 @@
     "uses": [],
     "notes": "Baphomet Jr. Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 900,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3369,6 +3497,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3385,6 +3514,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 9000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3415,6 +3545,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3439,6 +3570,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -3457,6 +3589,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -3475,6 +3608,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3493,6 +3627,7 @@
     "uses": [],
     "notes": "Succubus Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3509,6 +3644,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3527,6 +3663,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3545,6 +3682,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3580,6 +3718,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -3606,6 +3745,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 373,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3624,6 +3764,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 165,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3640,6 +3781,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 450,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3665,6 +3807,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 294,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3683,6 +3826,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -3701,6 +3845,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3732,6 +3877,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 280,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3756,6 +3902,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3781,6 +3928,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 215,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3799,6 +3947,7 @@
     "uses": [],
     "notes": "Chung E Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -3817,6 +3966,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3833,6 +3983,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 487,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3857,6 +4008,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 462,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3888,6 +4040,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 411,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3912,6 +4065,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 361,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3928,6 +4082,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 17000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3944,6 +4099,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 65000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -3962,6 +4118,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 150,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -3980,6 +4137,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4012,6 +4170,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4052,6 +4211,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 41,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4076,6 +4236,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4107,6 +4268,7 @@
     ],
     "notes": "Christmas Snow Rabbit, Sweet Drops Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4138,6 +4300,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4162,6 +4325,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 6000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -4186,6 +4350,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 6000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4204,6 +4369,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4254,6 +4420,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -4279,6 +4446,7 @@
     ],
     "notes": "Lunatic Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4303,6 +4471,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 477,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4328,6 +4497,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4346,6 +4516,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4364,6 +4535,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4382,6 +4554,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4400,6 +4573,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 11500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4416,6 +4590,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 32500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4434,6 +4609,7 @@
     "uses": [],
     "notes": "Evil Nymph Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4452,6 +4628,7 @@
     "uses": [],
     "notes": "Gremlin Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -4502,6 +4679,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1400,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4532,6 +4710,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4550,6 +4729,7 @@
     "uses": [],
     "notes": "+6 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4574,6 +4754,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -4605,6 +4786,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4623,6 +4805,7 @@
     "uses": [],
     "notes": "+2 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4641,6 +4824,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4659,6 +4843,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -4677,6 +4862,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -4703,6 +4889,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4729,6 +4916,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4761,6 +4949,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 3750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4816,6 +5005,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4851,6 +5041,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 79,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4877,6 +5068,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 28,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -4895,6 +5087,7 @@
     "uses": [],
     "notes": "+3 VIT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4919,6 +5112,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 420,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4970,6 +5164,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 104,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -4986,6 +5181,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 37000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5002,6 +5198,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5039,6 +5236,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5057,6 +5255,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 60,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -5075,6 +5274,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 60,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5105,6 +5305,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -5150,6 +5351,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5166,6 +5368,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 11000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5206,6 +5409,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5230,6 +5434,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 92,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5248,6 +5453,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5266,6 +5472,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5291,6 +5498,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 400,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -5316,6 +5524,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 79,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5346,6 +5555,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5371,6 +5581,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 825,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5396,6 +5607,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 300,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5426,6 +5638,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -5452,6 +5665,7 @@
     ],
     "notes": "Deviruchi Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5470,6 +5684,7 @@
     "uses": [],
     "notes": "+10 LUK for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5496,6 +5711,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -5536,6 +5752,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -5561,6 +5778,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 386,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5579,6 +5797,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5609,6 +5828,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5634,6 +5854,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5652,6 +5873,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5670,6 +5892,7 @@
     "uses": [],
     "notes": "Teddy Bear Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "rathena-renewal",
     "npcBuyable": "npc-only"
@@ -5686,6 +5909,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 26000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5704,6 +5928,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 45,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -5742,6 +5967,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5760,6 +5986,7 @@
     "uses": [],
     "notes": "+4 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5778,6 +6005,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5803,6 +6031,7 @@
     ],
     "notes": "Piece 1 of 4",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5828,6 +6057,7 @@
     ],
     "notes": "Piece 2 of 4",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5853,6 +6083,7 @@
     ],
     "notes": "Piece 3 of 4",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5878,6 +6109,7 @@
     ],
     "notes": "Piece 4 of 4",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5894,6 +6126,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5919,6 +6152,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5949,6 +6183,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5967,6 +6202,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 276,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -5992,6 +6228,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -6017,6 +6254,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6035,6 +6273,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6060,6 +6299,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -6085,6 +6325,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 206,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6103,6 +6344,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6140,6 +6382,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 300,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6171,6 +6414,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 666,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6207,6 +6451,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6243,6 +6488,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6279,6 +6525,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6314,6 +6561,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6350,6 +6598,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6368,6 +6617,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 625,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6406,6 +6656,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 386,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6431,6 +6682,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 130,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6457,6 +6709,7 @@
     ],
     "notes": "Whisper Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -6481,6 +6734,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 211,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6497,6 +6751,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6521,6 +6776,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6539,6 +6795,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6557,6 +6814,7 @@
     "uses": [],
     "notes": "Poison Spore Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6588,6 +6846,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 41,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6614,6 +6873,7 @@
     ],
     "notes": "Skelion Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 700,
     "sellSource": "rathena-renewal",
     "npcBuyable": "yes"
@@ -6632,6 +6892,7 @@
     "uses": [],
     "notes": "Marionette Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -6650,6 +6911,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6677,6 +6939,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6701,6 +6964,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 521,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6719,6 +6983,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6744,6 +7009,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 225,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6769,6 +7035,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6796,6 +7063,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6814,6 +7082,7 @@
     "uses": [],
     "notes": "Spore Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6832,6 +7101,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6857,6 +7127,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 22500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -6875,6 +7146,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6907,6 +7179,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 146,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6925,6 +7198,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -6943,6 +7217,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6961,6 +7236,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6979,6 +7255,7 @@
     "uses": [],
     "notes": "+10 INT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -6997,6 +7274,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 242,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7015,6 +7293,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7048,6 +7327,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "lower",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7072,6 +7352,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 512,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7097,6 +7378,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 600,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7115,6 +7397,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -7133,6 +7416,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7160,6 +7444,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7185,6 +7470,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 125000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7212,6 +7498,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7230,6 +7517,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7248,6 +7536,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 128,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7266,6 +7555,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7293,6 +7583,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7319,6 +7610,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 98,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7337,6 +7629,7 @@
     "uses": [],
     "notes": "Picky Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7361,6 +7654,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 161,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7396,6 +7690,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 20,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -7426,6 +7721,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7453,6 +7749,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -7471,6 +7768,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7503,6 +7801,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 190,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7519,6 +7818,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7537,6 +7837,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 116,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7562,6 +7863,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7580,6 +7882,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7605,6 +7908,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7630,6 +7934,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7655,6 +7960,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7680,6 +7986,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7711,6 +8018,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 550,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7739,6 +8047,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7763,6 +8072,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7788,6 +8098,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7813,6 +8124,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -7891,6 +8203,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -7991,6 +8304,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 300000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8062,6 +8376,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -8122,6 +8437,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -8162,6 +8478,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -8192,6 +8509,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8218,6 +8536,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8245,6 +8564,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8286,6 +8606,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 600,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8310,6 +8631,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8335,6 +8657,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8361,6 +8684,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 0,
     "sellSource": "manual",
     "npcBuyable": "no"
@@ -8379,6 +8703,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8397,6 +8722,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8415,6 +8741,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8464,6 +8791,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 153,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8482,6 +8810,7 @@
     "uses": [],
     "notes": "Civil Servant Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8507,6 +8836,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8525,6 +8855,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 340,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8549,6 +8880,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8574,6 +8906,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8592,6 +8925,7 @@
     "uses": [],
     "notes": "Loli Ruri Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8624,6 +8958,7 @@
     ],
     "notes": "Peco Peco Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8672,6 +9007,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8705,6 +9041,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8735,6 +9072,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 269,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8759,6 +9097,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 206,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8777,6 +9116,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 60,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8807,6 +9147,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8831,6 +9172,7 @@
     ],
     "notes": "Willow Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8856,6 +9198,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 29000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8872,6 +9215,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 926,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8896,6 +9240,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8939,6 +9284,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 98,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -8957,6 +9303,7 @@
     "uses": [],
     "notes": "Leaf Cat Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -8975,6 +9322,7 @@
     "uses": [],
     "notes": "Flail Goblin Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -8993,6 +9341,7 @@
     "uses": [],
     "notes": "Imp Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -9030,6 +9379,7 @@
     ],
     "notes": "Adds the Fire element to a forged weapon (one element per weapon)",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9059,6 +9409,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -9077,6 +9428,7 @@
     "uses": [],
     "notes": "Civil Servant Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -9106,6 +9458,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 51,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9131,6 +9484,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -9166,6 +9520,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9191,6 +9546,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 356,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9209,6 +9565,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -9234,6 +9591,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9252,6 +9610,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -9277,6 +9636,7 @@
     ],
     "notes": "Zealotus Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9301,6 +9661,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9355,6 +9716,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9373,6 +9735,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 672,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9389,6 +9752,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 753,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9405,6 +9769,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 753,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9421,6 +9786,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 753,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9437,6 +9803,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 753,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9455,6 +9822,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9497,6 +9865,7 @@
     ],
     "notes": "Scatleton Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 125,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -9515,6 +9884,7 @@
     "uses": [],
     "notes": "Nightmare Terror Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -9531,6 +9901,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9547,6 +9918,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9565,6 +9937,7 @@
     "uses": [],
     "notes": "+1 STR for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9583,6 +9956,7 @@
     "uses": [],
     "notes": "+1 LUK for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9601,6 +9975,7 @@
     "uses": [],
     "notes": "+5 LUK for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9619,6 +9994,7 @@
     "uses": [],
     "notes": "+3 LUK for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9651,6 +10027,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 125,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9669,6 +10046,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9687,6 +10065,7 @@
     "uses": [],
     "notes": "+1 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9712,6 +10091,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9730,6 +10110,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9754,6 +10135,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 17500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9772,6 +10154,7 @@
     "uses": [],
     "notes": "+3 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9790,6 +10173,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -9806,6 +10190,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9835,6 +10220,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 352,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9851,6 +10237,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 21000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9876,6 +10263,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9902,6 +10290,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 20,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -9927,6 +10316,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9951,6 +10341,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9969,6 +10360,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -9999,6 +10391,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -10017,6 +10410,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10033,6 +10427,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10051,6 +10446,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 710,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10069,6 +10465,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10087,6 +10484,7 @@
     "uses": [],
     "notes": "Whisper Taming Item. The emulators call this item Fit Pipe.",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -10105,6 +10503,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -10136,6 +10535,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10154,6 +10554,7 @@
     "uses": [],
     "notes": "+8 VIT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10172,6 +10573,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 307,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10190,6 +10592,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10208,6 +10611,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10226,6 +10630,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10255,6 +10660,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 171,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10286,6 +10692,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10304,6 +10711,7 @@
     "uses": [],
     "notes": "Miyabi Doll Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10322,6 +10730,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -10353,6 +10762,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 303,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10369,6 +10779,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 21500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10387,6 +10798,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -10403,6 +10815,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10427,6 +10840,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 700,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -10452,6 +10866,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -10496,6 +10911,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10514,6 +10930,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10704,6 +11121,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 100000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10722,6 +11140,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10740,6 +11159,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10765,6 +11185,7 @@
     ],
     "notes": "Sohee Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10783,6 +11204,7 @@
     "uses": [],
     "notes": "Civil Servant Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10808,6 +11230,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 215,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10835,6 +11258,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10860,6 +11284,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -10895,6 +11320,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -10930,6 +11356,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 125,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10948,6 +11375,7 @@
     "uses": [],
     "notes": "+1 INT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10980,6 +11408,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 18,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -10998,6 +11427,7 @@
     "uses": [],
     "notes": "Bongun Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11014,6 +11444,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11045,6 +11476,7 @@
     ],
     "notes": "Adds the Earth element to a forged weapon (one element per weapon)",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11063,6 +11495,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11081,6 +11514,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11099,6 +11533,7 @@
     "uses": [],
     "notes": "Knife Goblin, Flail Goblin, Hammer Goblin Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -11127,6 +11562,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 443,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11145,6 +11581,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11163,6 +11600,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11226,6 +11664,7 @@
     ],
     "notes": "Poporing, Rice Cake Pet Food",
     "links": [],
+    "vend": "higher",
     "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11244,6 +11683,7 @@
     "uses": [],
     "notes": "Leaf Cat Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11269,6 +11709,7 @@
     ],
     "notes": "Savage Babe Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11299,6 +11740,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11336,6 +11778,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "npcBuyable": "yes"
   },
   {
@@ -11352,6 +11795,7 @@
     "uses": [],
     "notes": "+5 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11370,6 +11814,7 @@
     "uses": [],
     "notes": "Shinobi Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -11388,6 +11833,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 153,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11406,6 +11852,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11431,6 +11878,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11449,6 +11897,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 6500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -11465,6 +11914,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 6500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11489,6 +11939,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 23500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -11507,6 +11958,7 @@
     "uses": [],
     "notes": "Marionette Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11538,6 +11990,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11556,6 +12009,7 @@
     "uses": [],
     "notes": "Hammer Gobling Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -11656,6 +12110,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11692,6 +12147,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11717,6 +12173,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 362,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11735,6 +12192,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 285,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11753,6 +12211,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11771,6 +12230,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11796,6 +12256,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 571,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11812,6 +12273,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 605,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11840,6 +12302,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11858,6 +12321,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11882,6 +12346,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11906,6 +12371,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11942,6 +12408,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 132,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11960,6 +12427,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11978,6 +12446,7 @@
     "uses": [],
     "notes": "+9 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -11997,6 +12466,7 @@
     "uses": [],
     "notes": "Nightmare Terror Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12021,6 +12491,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12045,6 +12516,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 22000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12064,6 +12536,7 @@
     "uses": [],
     "notes": "Bongun Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12082,6 +12555,7 @@
     "uses": [],
     "notes": "+4 STR for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12128,6 +12602,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12146,6 +12621,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12170,6 +12646,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12221,6 +12698,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12239,6 +12717,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12270,6 +12749,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12315,6 +12795,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12339,6 +12820,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -12411,6 +12893,7 @@
     ],
     "notes": "Baphomet Jr. Pet Food",
     "links": [],
+    "vend": "higher",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12429,6 +12912,7 @@
     "uses": [],
     "notes": "+1 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12447,6 +12931,7 @@
     "uses": [],
     "notes": "+3 INT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12472,6 +12957,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 311,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12490,6 +12976,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12515,6 +13002,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 58,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12533,6 +13021,7 @@
     "uses": [],
     "notes": "Imp Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12551,6 +13040,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12569,6 +13059,7 @@
     "uses": [],
     "notes": "Nightmare Terror Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12594,6 +13085,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12612,6 +13104,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12639,6 +13132,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12667,6 +13161,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 400,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12704,6 +13199,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 195,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12729,6 +13225,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 294,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12772,6 +13269,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 305,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12788,6 +13286,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 45000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12806,6 +13305,7 @@
     "uses": [],
     "notes": "+10 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12832,6 +13332,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12850,6 +13351,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12876,6 +13378,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12894,6 +13397,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -12924,6 +13428,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 330,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12942,6 +13447,7 @@
     "uses": [],
     "notes": "Imp Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12967,6 +13473,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1510,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -12996,6 +13503,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -13014,6 +13522,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13032,6 +13541,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13056,6 +13566,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13074,6 +13585,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13195,6 +13707,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13227,6 +13740,7 @@
     ],
     "notes": "Zealotus Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 187,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13245,6 +13759,7 @@
     "uses": [],
     "notes": "+10 VIT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13263,6 +13778,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -13281,6 +13797,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -13299,6 +13816,7 @@
     "uses": [],
     "notes": "+8 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13323,6 +13841,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13347,6 +13866,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 28500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13365,6 +13885,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 57,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13383,6 +13904,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 329,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13401,6 +13923,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13510,6 +14033,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13526,6 +14050,7 @@
     "uses": [],
     "notes": "Used up to forge level 1 weapons",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13552,6 +14077,7 @@
     ],
     "notes": "Steel Chonchon Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13579,6 +14105,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13609,6 +14136,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13633,6 +14161,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 22500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -13694,6 +14223,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 187,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -13712,6 +14242,7 @@
     "uses": [],
     "notes": "Evil Nymph Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13730,6 +14261,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13777,6 +14309,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 3,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13802,6 +14335,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13829,6 +14363,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13853,6 +14388,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 16,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13871,6 +14407,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13897,6 +14434,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13915,6 +14453,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13939,6 +14478,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13957,6 +14497,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -13975,6 +14516,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 120000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14013,6 +14555,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14031,6 +14574,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14049,6 +14593,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -14067,6 +14612,7 @@
     "uses": [],
     "notes": "Shinobi Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14091,6 +14637,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 125,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14122,6 +14669,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 420,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14140,6 +14688,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14165,6 +14714,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 554,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14183,6 +14733,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14214,6 +14765,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14259,6 +14811,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 30,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14283,6 +14836,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14301,6 +14855,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14350,6 +14905,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -14399,6 +14955,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14448,6 +15005,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -14497,6 +15055,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -14513,6 +15072,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14529,6 +15089,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14545,6 +15106,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14594,6 +15156,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -14610,6 +15173,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14659,6 +15223,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -14675,6 +15240,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14693,6 +15259,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14709,6 +15276,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14758,6 +15326,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14807,6 +15376,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14856,6 +15426,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14905,6 +15476,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14923,6 +15495,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14947,6 +15520,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 264,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14973,6 +15547,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14998,6 +15573,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 319,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15035,6 +15611,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 125,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15061,6 +15638,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15088,6 +15666,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15106,6 +15685,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15124,6 +15704,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15140,6 +15721,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 68000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15156,6 +15738,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 68000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15174,6 +15757,7 @@
     "uses": [],
     "notes": "+6 LUK for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15192,6 +15776,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15210,6 +15795,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15237,6 +15823,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15255,6 +15842,7 @@
     "uses": [],
     "notes": "+4 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15273,6 +15861,7 @@
     "uses": [],
     "notes": "+5 STR for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15291,6 +15880,7 @@
     "uses": [],
     "notes": "Pet food for luxurious pets",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "rathena-renewal",
     "npcBuyable": "npc-only"
@@ -15309,6 +15899,7 @@
     "uses": [],
     "notes": "Dullahan Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15335,6 +15926,7 @@
     ],
     "notes": "Golem Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15364,6 +15956,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15382,6 +15975,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15398,6 +15992,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15422,6 +16017,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 20,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -15440,6 +16036,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15458,6 +16055,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1200,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -15485,6 +16083,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15516,6 +16115,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15538,6 +16138,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 329,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15556,6 +16157,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15586,6 +16188,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 98,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15616,6 +16219,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 98,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15651,6 +16255,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 104,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15667,6 +16272,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 16000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15694,6 +16300,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15712,6 +16319,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 98,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15728,6 +16336,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15755,6 +16364,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15781,6 +16391,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15806,6 +16417,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15839,6 +16451,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15857,6 +16470,7 @@
     "uses": [],
     "notes": "Incubus Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15875,6 +16489,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15917,6 +16532,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4250,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -15935,6 +16551,7 @@
     "uses": [],
     "notes": "+5 INT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -15965,6 +16582,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16048,6 +16666,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -16078,6 +16697,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -16096,6 +16716,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16121,6 +16742,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -16147,6 +16769,7 @@
     ],
     "notes": "Mummy Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 300,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -16183,6 +16806,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16201,6 +16825,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16219,6 +16844,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16246,6 +16872,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16264,6 +16891,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16282,6 +16910,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16327,6 +16956,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 12,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -16345,6 +16975,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16362,6 +16993,7 @@
     "uses": [],
     "notes": "Used up to make Iron, Steel and elemental stones (Iron Tempering, Steel Tempering, Enchanted Stone Craft)",
     "links": [],
+    "vend": "unknown",
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16380,6 +17012,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16406,6 +17039,7 @@
     ],
     "notes": "Mummy Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -16424,6 +17058,7 @@
     "uses": [],
     "notes": "+2 LUK for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16448,6 +17083,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 400,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16466,6 +17102,7 @@
     "uses": [],
     "notes": "New Year Doll Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -16490,6 +17127,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16515,6 +17153,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 53,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16533,6 +17172,7 @@
     "uses": [],
     "notes": "Yoyo Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16551,6 +17191,7 @@
     "uses": [],
     "notes": "Hunter Fly Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16569,6 +17210,7 @@
     "uses": [],
     "notes": "Chonchon, Steel Chonchon, Hunter Fly Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16587,6 +17229,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -16606,6 +17249,7 @@
     "uses": [],
     "notes": "Evil Nymph Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -16631,6 +17275,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -16647,6 +17292,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 20500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16663,6 +17309,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16679,6 +17326,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16695,6 +17343,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16711,6 +17360,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16729,6 +17379,7 @@
     "uses": [],
     "notes": "+4 INT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16754,6 +17405,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 69,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16772,6 +17424,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16796,6 +17449,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 233,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16826,6 +17480,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16856,6 +17511,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16872,6 +17528,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16890,6 +17547,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16917,6 +17575,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16943,6 +17602,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "lower",
     "sellValue": 4450,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -16961,6 +17621,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17011,6 +17672,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17052,6 +17714,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 18,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17089,6 +17752,7 @@
     ],
     "notes": "Adds the Water element to a forged weapon (one element per weapon)",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17114,6 +17778,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17132,6 +17797,7 @@
     "uses": [],
     "notes": "Golem Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -17162,6 +17828,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17189,6 +17856,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17213,6 +17881,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 273,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17242,6 +17911,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 416,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17260,6 +17930,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17278,6 +17949,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17305,6 +17977,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17336,6 +18009,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17382,6 +18056,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 325,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17406,6 +18081,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 57,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17425,6 +18101,7 @@
     "uses": [],
     "notes": "Munak Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17449,6 +18126,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 284,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17473,6 +18151,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 550,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17497,6 +18176,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17525,6 +18205,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 105,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17543,6 +18224,7 @@
     "uses": [],
     "notes": "Stone Shooter Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17561,6 +18243,7 @@
     "uses": [],
     "notes": "Open it, silly!",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17587,6 +18270,7 @@
     ],
     "notes": "Dokebi Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 175,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17603,6 +18287,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17660,6 +18345,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 98,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17691,6 +18377,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17709,6 +18396,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 256,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17740,6 +18428,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17758,6 +18447,7 @@
     "uses": [],
     "notes": "Open it, silly!",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17774,6 +18464,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 890,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17792,6 +18483,7 @@
     "uses": [],
     "notes": "Willow Pet Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1250,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -17829,6 +18521,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17859,6 +18552,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17883,6 +18577,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 27500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17923,6 +18618,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 150,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17947,6 +18643,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -17978,6 +18675,7 @@
     ],
     "notes": "Drops Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18002,6 +18700,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -18029,6 +18728,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18060,6 +18760,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 84,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18086,6 +18787,7 @@
     ],
     "notes": "Orc Warrior Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 150,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18117,6 +18819,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18142,6 +18845,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 110,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18168,6 +18872,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18199,6 +18904,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 71,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18314,6 +19020,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 550,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18332,6 +19039,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18356,6 +19064,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -18381,6 +19090,7 @@
     ],
     "notes": "Deviruchi Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18397,6 +19107,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 24000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18413,6 +19124,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18437,6 +19149,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18455,6 +19168,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18473,6 +19187,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 13500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -18491,6 +19206,7 @@
     "uses": [],
     "notes": "+6 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18516,6 +19232,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 216,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18552,6 +19269,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18579,6 +19297,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18597,6 +19316,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18633,6 +19353,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 227,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18658,6 +19379,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18703,6 +19425,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18721,6 +19444,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18739,6 +19463,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18775,6 +19500,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -18801,6 +19527,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18856,6 +19583,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18886,6 +19614,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18904,6 +19633,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18922,6 +19652,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18946,6 +19677,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 155,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -18964,6 +19696,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 263,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19007,6 +19740,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "lower",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19033,6 +19767,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 84,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19049,6 +19784,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 815,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19067,6 +19803,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19085,6 +19822,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1725,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19103,6 +19841,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 145,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19128,6 +19867,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -19146,6 +19886,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19171,6 +19912,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19196,6 +19938,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19214,6 +19957,7 @@
     "uses": [],
     "notes": "Stone Shooter Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -19232,6 +19976,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19257,6 +20002,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19275,6 +20021,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 34,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19300,6 +20047,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19336,6 +20084,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 57,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19354,6 +20103,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19380,6 +20130,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19405,6 +20156,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 140,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19423,6 +20175,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19441,6 +20194,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19467,6 +20221,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 79,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19485,6 +20240,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19503,6 +20259,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19746,6 +20503,7 @@
     ],
     "notes": "Used for Server Hats, Pet Evolutions, and more! Check the uaRO wiki for more details",
     "links": [],
+    "vend": "higher",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -19786,6 +20544,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -19822,6 +20581,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -19848,6 +20608,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 45,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19889,6 +20650,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 270,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19914,6 +20676,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19938,6 +20701,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -19963,6 +20727,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 243,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -19981,6 +20746,7 @@
     "uses": [],
     "notes": "Loli Ruri Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -20007,6 +20773,7 @@
     ],
     "notes": "Munak Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20025,6 +20792,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20043,6 +20811,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20072,6 +20841,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -20097,6 +20867,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20152,6 +20923,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20170,6 +20942,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -20188,6 +20961,7 @@
     "uses": [],
     "notes": "Medusa Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20219,6 +20993,7 @@
     ],
     "notes": "Isis Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20237,6 +21012,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20261,6 +21037,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20295,6 +21072,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 53,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20321,6 +21099,7 @@
     ],
     "notes": "Lunatic Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20346,6 +21125,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 45,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20362,6 +21142,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 411,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20386,6 +21167,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20414,6 +21196,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 443,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20451,6 +21234,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20481,6 +21265,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20514,6 +21299,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 667,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20532,6 +21318,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20556,6 +21343,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20609,6 +21397,7 @@
     ],
     "notes": "Wizard Job Quest; Hunter Fly Pet Food",
     "links": [],
+    "vend": "higher",
     "sellValue": 300,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20656,6 +21445,7 @@
     ],
     "notes": "Picky Pet Food",
     "links": [],
+    "vend": "higher",
     "sellValue": 9,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20680,6 +21470,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 330,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20698,6 +21489,7 @@
     "uses": [],
     "notes": "+6 INT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20740,6 +21532,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -20765,6 +21558,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 440,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20783,6 +21577,7 @@
     "uses": [],
     "notes": "Smokie Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20833,6 +21628,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -20858,6 +21654,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 550,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20888,6 +21685,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 401,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20906,6 +21704,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20931,6 +21730,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 70,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20956,6 +21756,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 420,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -20980,6 +21781,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 60,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21004,6 +21806,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 400,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21022,6 +21825,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21038,6 +21842,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21056,6 +21861,7 @@
     "uses": [],
     "notes": "Dullahan Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21074,6 +21880,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21092,6 +21899,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21110,6 +21918,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21139,6 +21948,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21157,6 +21967,7 @@
     "uses": [],
     "notes": "Rocker Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -21175,6 +21986,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21193,6 +22005,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21209,6 +22022,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21233,6 +22047,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21257,6 +22072,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21275,6 +22091,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21299,6 +22116,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21323,6 +22141,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -21339,6 +22158,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21400,6 +22220,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21430,6 +22251,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 175,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21455,6 +22277,7 @@
     ],
     "notes": "Chonchon Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21473,6 +22296,7 @@
     "uses": [],
     "notes": "Roween Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 51,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21498,6 +22322,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21533,6 +22358,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 325,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21568,6 +22394,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 275,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21605,6 +22432,7 @@
     ],
     "notes": "Adds the Wind element to a forged weapon (one element per weapon)",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21630,6 +22458,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21648,6 +22477,7 @@
     "uses": [],
     "notes": "+8 INT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21739,6 +22569,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "lower",
     "sellValue": 3500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21769,6 +22600,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -21800,6 +22632,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1263,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21818,6 +22651,7 @@
     "uses": [],
     "notes": "Steel Chonchon Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21858,6 +22692,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 267,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21874,6 +22709,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 24500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21898,6 +22734,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21914,6 +22751,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 27000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21938,6 +22776,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21956,6 +22795,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21974,6 +22814,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 353,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -21992,6 +22833,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22022,6 +22864,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22040,6 +22883,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -22066,6 +22910,7 @@
     ],
     "notes": "Nine Tail Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -22091,6 +22936,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -22115,6 +22961,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22133,6 +22980,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22188,6 +23036,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 350,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -22213,6 +23062,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 233,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22231,6 +23081,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22247,6 +23098,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22265,6 +23117,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -22315,6 +23168,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22341,6 +23195,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -22373,6 +23228,7 @@
     ],
     "notes": "Christmas Goblin Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 80,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -22391,6 +23247,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22416,6 +23273,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 353,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22434,6 +23292,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 307,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22476,6 +23335,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 62,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22494,6 +23354,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22531,6 +23392,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 410,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22549,6 +23411,7 @@
     "uses": [],
     "notes": "+4 VIT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22567,6 +23430,7 @@
     "uses": [],
     "notes": "+2 STR for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22592,6 +23456,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -22616,6 +23481,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 150,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -22653,6 +23519,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 403,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22678,6 +23545,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 125,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22704,6 +23572,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22722,6 +23591,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22763,6 +23633,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 233,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22794,6 +23665,7 @@
     ],
     "notes": "Petite Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22812,6 +23684,7 @@
     "uses": [],
     "notes": "+6 STR for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22830,6 +23703,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22862,6 +23736,7 @@
     ],
     "notes": "Deviruchi Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 8,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22886,6 +23761,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 139,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22904,6 +23780,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 115,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22929,6 +23806,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22961,6 +23839,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -22998,6 +23877,7 @@
     ],
     "notes": "Lunatic Pet accessory",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23016,6 +23896,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23034,6 +23915,7 @@
     "uses": [],
     "notes": "Sohee Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 6000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23050,6 +23932,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23068,6 +23951,7 @@
     "uses": [],
     "notes": "Rocker Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 150,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23105,6 +23989,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23123,6 +24008,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 23,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -23139,6 +24025,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 351,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23175,6 +24062,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 116,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23199,6 +24087,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23227,6 +24116,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 850,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23262,6 +24152,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 522,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23280,6 +24171,7 @@
     "uses": [],
     "notes": "Baphomet Jr. Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23298,6 +24190,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23314,6 +24207,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23342,6 +24236,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 353,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23367,6 +24262,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 162,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23393,6 +24289,7 @@
     ],
     "notes": "Teddy Bear Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -23411,6 +24308,7 @@
     "uses": [],
     "notes": "Marionette Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -23427,6 +24325,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 400,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23445,6 +24344,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23469,6 +24369,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23487,6 +24388,7 @@
     "uses": [],
     "notes": "+2 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23512,6 +24414,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 32,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23537,6 +24440,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 41,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23555,6 +24459,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23573,6 +24478,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23607,6 +24513,7 @@
     ],
     "notes": "Alice Taming Item",
     "links": [],
+    "vend": "higher",
     "sellValue": 10000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23642,6 +24549,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23684,6 +24592,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 140,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23722,6 +24631,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 600,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23749,6 +24659,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23773,6 +24684,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 70,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23791,6 +24703,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 421,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23816,6 +24729,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 200,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23844,6 +24758,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 224,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23868,6 +24783,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23886,6 +24802,7 @@
     "uses": [],
     "notes": "+7 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 20000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23904,6 +24821,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23928,6 +24846,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 70,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23946,6 +24865,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 850,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23964,6 +24884,7 @@
     "uses": [],
     "notes": "+9 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -23982,6 +24903,7 @@
     "uses": [],
     "notes": "+7 INT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 20000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24000,6 +24922,7 @@
     "uses": [],
     "notes": "+8 DEX for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24018,6 +24941,7 @@
     "uses": [],
     "notes": "+5 VIT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24093,6 +25017,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 350,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -24117,6 +25042,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24135,6 +25061,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24153,6 +25080,7 @@
     "uses": [],
     "notes": "Medusa Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24190,6 +25118,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 212,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24208,6 +25137,7 @@
     "uses": [],
     "notes": "Golem Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24234,6 +25164,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24252,6 +25183,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24270,6 +25202,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24288,6 +25221,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24333,6 +25267,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 132,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24349,6 +25284,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24367,6 +25303,7 @@
     "uses": [],
     "notes": "Goblin Leader Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24385,6 +25322,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24410,6 +25348,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24435,6 +25374,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24453,6 +25393,7 @@
     "uses": [],
     "notes": "+7 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 20000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24471,6 +25412,7 @@
     "uses": [],
     "notes": "+4 LUK for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24489,6 +25431,7 @@
     "uses": [],
     "notes": "+5 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24507,6 +25450,7 @@
     "uses": [],
     "notes": "+1 VIT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24525,6 +25469,7 @@
     "uses": [],
     "notes": "+10 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24543,6 +25488,7 @@
     "uses": [],
     "notes": "+10 STR for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24807,6 +25753,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24823,6 +25770,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24841,6 +25789,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24865,6 +25814,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24884,6 +25834,7 @@
     "uses": [],
     "notes": "Petite Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24915,6 +25866,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 23,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24933,6 +25885,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24951,6 +25904,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -24989,6 +25943,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 35,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25007,6 +25962,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 175,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25031,6 +25987,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25049,6 +26006,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 9750,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -25079,6 +26037,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 84,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25104,6 +26063,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -25120,6 +26080,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25136,6 +26097,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 320,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25163,6 +26125,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 92,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25179,6 +26142,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25197,6 +26161,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25221,6 +26186,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 215,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25239,6 +26205,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 316,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25263,6 +26230,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25308,6 +26276,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 100,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25326,6 +26295,7 @@
     "uses": [],
     "notes": "+8 LUK for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25350,6 +26320,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25375,6 +26346,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 15,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25393,6 +26365,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25411,6 +26384,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25435,6 +26409,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25453,6 +26428,7 @@
     "uses": [],
     "notes": "Miyabi Doll Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25471,6 +26447,7 @@
     "uses": [],
     "notes": "+7 VIT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 20000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25495,6 +26472,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25513,6 +26491,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25531,6 +26510,7 @@
     "uses": [],
     "notes": "Dullahan Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -25561,6 +26541,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25579,6 +26560,7 @@
     "uses": [],
     "notes": "Nine Tail Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "rathena-renewal",
     "npcBuyable": "yes"
@@ -25605,6 +26587,7 @@
     ],
     "notes": "Savage Babe Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25630,6 +26613,7 @@
     ],
     "notes": "Smokie Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25710,6 +26694,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 350,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -25736,6 +26721,7 @@
     ],
     "notes": "Item only drops seasonally",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -25754,6 +26740,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25770,6 +26757,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25793,6 +26781,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25817,6 +26806,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2709,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25835,6 +26825,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 370,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25853,6 +26844,7 @@
     "uses": [],
     "notes": "Green Maiden Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25871,6 +26863,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25895,6 +26888,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "none",
     "sellValue": 399,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25913,6 +26907,7 @@
     "uses": [],
     "notes": "Shinobi Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25931,6 +26926,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -25966,6 +26962,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26001,6 +26998,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -26032,6 +27030,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 110,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26050,6 +27049,7 @@
     "uses": [],
     "notes": "+9 STR for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26080,6 +27080,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 35,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26098,6 +27099,7 @@
     "uses": [],
     "notes": "+3 AGI for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26128,6 +27130,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26146,6 +27149,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 478,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26170,6 +27174,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 149,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26201,6 +27206,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 750,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26219,6 +27225,7 @@
     "uses": [],
     "notes": "Picky Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26254,6 +27261,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 264,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26279,6 +27287,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 17,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26315,6 +27324,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -26339,6 +27349,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 206,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26373,6 +27384,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 250,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26389,6 +27401,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 21000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26407,6 +27420,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 333,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26431,6 +27445,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 325,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26449,6 +27464,7 @@
     "uses": [],
     "notes": "Baby Desert Wolf Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26468,6 +27484,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26537,6 +27554,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -26553,6 +27571,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 150000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26571,6 +27590,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 6,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -26589,6 +27609,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26607,6 +27628,7 @@
     "uses": [],
     "notes": "+9 INT for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 40000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26639,6 +27661,7 @@
     ],
     "notes": "Yoyo Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26679,6 +27702,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 30,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26740,6 +27764,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26758,6 +27783,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 340,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26774,6 +27800,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 364,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26790,6 +27817,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 30000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26808,6 +27836,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26826,6 +27855,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26844,6 +27874,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -26886,6 +27917,7 @@
     ],
     "notes": "Poring Taming Item",
     "links": [],
+    "vend": "higher",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26910,6 +27942,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 512,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26928,6 +27961,7 @@
     "uses": [],
     "notes": "Wanderer Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -26953,6 +27987,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 100000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26978,6 +28013,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 74,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -26996,6 +28032,7 @@
     "uses": [],
     "notes": "Loli Ruri Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27014,6 +28051,7 @@
     "uses": [],
     "notes": "Leaf Cat Taming Item",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27030,6 +28068,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27046,6 +28085,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27062,6 +28102,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27093,6 +28134,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27111,6 +28153,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27129,6 +28172,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -27147,6 +28191,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 1250,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -27174,6 +28219,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27198,6 +28244,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 6000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -27216,6 +28263,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27234,6 +28282,7 @@
     "uses": [],
     "notes": "Miyabi Doll Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -27264,6 +28313,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27299,6 +28349,7 @@
     ],
     "notes": "Baby Desert Wolf Taming Item",
     "links": [],
+    "vend": "higher",
     "sellValue": 5000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27323,6 +28374,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 7500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27341,6 +28393,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27381,6 +28434,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 4000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27444,6 +28498,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 60,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27462,6 +28517,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 530,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27494,6 +28550,7 @@
     ],
     "notes": "Alice Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 600,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -27510,6 +28567,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 502,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27528,6 +28586,7 @@
     "uses": [],
     "notes": "+7 STR for 20 minutes",
     "links": [],
+    "vend": "unknown",
     "sellValue": 20000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27546,6 +28605,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27564,6 +28624,7 @@
     "uses": [],
     "notes": "Dokebi Pet accessory",
     "links": [],
+    "vend": "higher",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27582,6 +28643,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27600,6 +28662,7 @@
     "uses": [],
     "notes": "Orc Warrior Pet accessory",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27627,6 +28690,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27643,6 +28707,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 765,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27669,6 +28734,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 367,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27699,6 +28765,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27728,6 +28795,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 75,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -27744,6 +28812,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 9000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27774,6 +28843,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "higher",
     "sellValue": 260,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27800,6 +28870,7 @@
     ],
     "notes": "Knight Job Quest",
     "links": [],
+    "vend": "unknown",
     "sellValue": 84,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27818,6 +28889,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27849,6 +28921,7 @@
     ],
     "notes": "Used for creating Slim Potions",
     "links": [],
+    "vend": "unknown",
     "sellValue": 242,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27874,6 +28947,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 445,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27898,6 +28972,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 27500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -27926,6 +29001,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27951,6 +29027,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 29,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -27976,6 +29053,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 234,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28005,6 +29083,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 340,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28023,6 +29102,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28046,6 +29126,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 26,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28064,6 +29145,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 474,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28087,6 +29169,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28105,6 +29188,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 295,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28129,6 +29213,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 386,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28159,6 +29244,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 340,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28190,6 +29276,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28219,6 +29306,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 90,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28246,6 +29334,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28274,6 +29363,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 50,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28302,6 +29392,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 443,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28368,6 +29459,7 @@
     ],
     "notes": "Wizard Job Quest",
     "links": [],
+    "vend": "higher",
     "sellValue": 300,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28445,6 +29537,7 @@
     ],
     "notes": "Drops Pet Food",
     "links": [],
+    "vend": "higher",
     "sellValue": 20,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28489,6 +29582,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 275,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -28559,6 +29653,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -28577,6 +29672,7 @@
     "uses": [],
     "notes": "Incubus Pet Food",
     "links": [],
+    "vend": "unknown",
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
@@ -28607,6 +29703,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28664,6 +29761,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -28689,6 +29787,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 2500,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28715,6 +29814,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 25,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28742,6 +29842,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28773,6 +29874,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28797,6 +29899,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 57,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28846,6 +29949,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 240,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -28862,6 +29966,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
@@ -28880,6 +29985,7 @@
     "uses": [],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28905,6 +30011,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 132,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28932,6 +30039,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -28957,6 +30065,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 3000,
     "sellSource": "hercules",
     "npcBuyable": "yes"
@@ -28981,6 +30090,7 @@
     ],
     "notes": "",
     "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
