@@ -1,14 +1,14 @@
 ---
 name: update-vend-prices
-description: Update avgVend / avgWhobuy prices in the loot sheet from vending stall or @whobuy screenshots or a list of prices, add items that are missing, and mark everything verified today. Use when the maintainer shares vend/whobuy prices or a vending shop screenshot.
+description: Update avgVend prices in the loot sheet from vending stall screenshots or a list of prices, add items that are missing, and mark everything verified today. Use when the maintainer shares vend prices or a vending shop screenshot.
 ---
 
-# Update vend or @whobuy prices
+# Update vend prices
 
 Read AGENTS.md first. For a lot of prices typed by hand, admin mode
 (`npm run dev`, then the Admin link in the header) is faster and does steps 2
 and 4 for you: the Paste prices page takes one line per item ("item ID, vend
-price, @whobuy price") with a preview and one Undo, and the Needs a price
+price") with a preview and one Undo, and the Needs a price
 and Verify prices pages take prices one box at a time. This guide is for
 prices the maintainer sends to you.
 
@@ -19,9 +19,8 @@ that dropped a lot, or ask if it might be a one-off. They checked it in game.
 
 - A vending stall ("Opening a stall") shows each item's name, amount and
   **Price**. Use the Price (for one item), not the amount or the total.
-- Prices with no label are vend prices (`avgVend`). Only an @whobuy list, or
-  the maintainer saying so, makes them `avgWhobuy`. **Cards and equipment
-  have no @whobuy**, so their prices are always vend.
+- Every price is a vend price (`avgVend`). @whobuy prices aren't tracked
+  any more: if you get an @whobuy list, ask the maintainer what to do with it.
 - Names wrap across lines ("Expanded Token F / ragment"), and the game may
   spell them differently from the sheet ("Valhala's Flower" vs "Valhalla's
   Flower") or leave out the slots ("Celebrant's Mitten" is
@@ -32,12 +31,10 @@ that dropped a lot, or ask if it might be a one-off. They checked it in game.
 
 For each item, in `src/data/loot.json`:
 
-- Set `avgVend` (or `avgWhobuy`) to the price, even if it's lower than
-  before.
+- Set `avgVend` to the price, even if it's lower than before.
 - Set `lastVerified` to today (`YYYY-MM-DD`).
 - Set `verificationNotes` to where the price came from, for example
-  `"Vend price from a player shop"`. If it's already today's note for the
-  other price, join them with `; `.
+  `"Vend price from a player shop"`.
 
 **Items NPCs sell** (`npcBuyable` "yes" or "npc-only") can't have player
 prices; validate fails if they do. Skip them and tell the maintainer.

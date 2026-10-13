@@ -137,12 +137,13 @@ function fixCategories(name, categories) {
 
 /**
  * Applies ACTION_FIXES, then: if an NPC sells the item, players won't pay
- * more than the NPC price, so Vend/Whobuy become NPC.
+ * more than the NPC price, so Vend becomes NPC.
  */
 function fixActions(actions, npcBuyable) {
-  let fixed = splitList(actions).map((action) => ACTION_FIXES[action] ?? action);
+  // The sheet's Whobuy action is gone: it was always sold by vending too.
+  let fixed = splitList(actions).map((action) => ACTION_FIXES[action] ?? (action === 'Whobuy' ? 'Vend' : action));
   if (npcBuyable === 'yes' || npcBuyable === 'npc-only') {
-    fixed = fixed.map((action) => (action === 'Vend' || action === 'Whobuy' ? 'NPC' : action));
+    fixed = fixed.map((action) => (action === 'Vend' ? 'NPC' : action));
   }
   return [...new Set(fixed)];
 }
@@ -167,7 +168,8 @@ const itemsById = new Map();
 const merged = [];
 
 for (const row of rows.slice(headerIndex + 1)) {
-  const [sheetName, actions, categories, details, itemId, avgVend, avgWhobuy, npcSellPrice, npcBuyable] =
+  // The sheet's @whobuy column (between vend and NPC) isn't kept.
+  const [sheetName, actions, categories, details, itemId, avgVend, , npcSellPrice, npcBuyable] =
     row.map((cell) => (cell ?? '').trim());
   if (!sheetName || REMOVED.includes(sheetName)) continue;
   const name = RENAMES[sheetName] ?? sheetName;
@@ -187,7 +189,6 @@ for (const row of rows.slice(headerIndex + 1)) {
     ...parseDetails(details),
     links: [],
     avgVend: toPrice(avgVend),
-    avgWhobuy: toPrice(avgWhobuy),
     sellValue: toSellValue(npcSellPrice, overchargePercent),
     npcBuyable: finalNpcBuyable,
     lastVerified: null,
@@ -210,7 +211,7 @@ function mergeInto(target, extra) {
   if (target.categories.length > 1) target.categories = target.categories.filter((c) => c !== 'Not Reviewed');
   target.uses = [...target.uses, ...extra.uses];
   target.notes = [target.notes, extra.notes].filter(Boolean).join(', ');
-  for (const key of ['itemId', 'avgVend', 'avgWhobuy', 'sellValue', 'npcBuyable']) {
+  for (const key of ['itemId', 'avgVend', 'sellValue', 'npcBuyable']) {
     target[key] ??= extra[key];
   }
 }

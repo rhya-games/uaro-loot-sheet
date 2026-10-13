@@ -14,7 +14,6 @@ const item = (fields) => ({
   npcBuyable: 'no',
   sellValue: 100, // NPC pays 124 with Overcharge
   avgVend: null,
-  avgWhobuy: null,
   lastVerified: null,
   ...fields,
 });
@@ -24,14 +23,14 @@ const names = (rows) => rows.map((row) => row.item.name);
 const run = (id, items) => queue(id).select(items, { suggest: createSuggester(items, new Map()) });
 
 describe('needs-price', () => {
-  it('lists Vend and Whobuy items with no price, most-used first', () => {
+  it('lists Vend items with no price, most-used first', () => {
     const items = [
       item({ name: 'A', actions: ['Vend'] }),
       item({ name: 'B', actions: ['Vend'], uses: [{ for: 'X' }, { for: 'Y' }] }),
-      item({ name: 'Priced', actions: ['Vend'], avgVend: 500, avgWhobuy: 400 }),
-      item({ name: 'Whobuy only', actions: ['Whobuy'] }),
+      item({ name: 'Priced', actions: ['Vend'], avgVend: 500 }),
+      item({ name: 'NPC only', actions: ['NPC'] }),
     ];
-    expect(names(run('needs-price', items))).toEqual(['B', 'A', 'Whobuy only']);
+    expect(names(run('needs-price', items))).toEqual(['B', 'A']);
   });
 
   it('lists items with no action yet, so they can get a price (and then an action)', () => {
@@ -39,42 +38,15 @@ describe('needs-price', () => {
       item({ name: 'Unsure' }),
       item({ name: 'Equipment', itemType: 'Equipment' }),
       item({ name: 'Shop item', npcBuyable: 'yes' }),
-      item({ name: 'Priced', avgVend: 500, avgWhobuy: 400 }),
+      item({ name: 'Priced', avgVend: 500 }),
     ];
     expect(names(run('needs-price', items))).toEqual(['Equipment', 'Unsure']);
-    // Equipment has no @whobuy, so it only needs a vend price.
     expect(run('needs-price', items)[0].reasons).toEqual(['No action yet, no vend price']);
   });
 
-  it("skips items NPCs sell, and cards (there's no @whobuy for them)", () => {
-    const items = [
-      item({ name: 'Shop item', actions: ['Vend'], npcBuyable: 'yes' }),
-      item({ name: 'Card', actions: ['Whobuy'], categories: ['Card'] }),
-    ];
+  it('skips items NPCs sell', () => {
+    const items = [item({ name: 'Shop item', actions: ['Vend'], npcBuyable: 'yes' })];
     expect(run('needs-price', items)).toEqual([]);
-  });
-});
-
-describe('needs-price, half-priced items', () => {
-  it('lists an item with one price set and another empty', () => {
-    const items = [
-      item({ name: 'Untouched', actions: ['Vend'] }),
-      item({ name: 'Half', actions: ['Vend'], avgVend: 500 }),
-      item({ name: 'Half equipment', itemType: 'Equipment', avgVend: 500 }), // no @whobuy for equipment: complete
-      item({ name: 'Complete', actions: ['Vend'], avgVend: 500, avgWhobuy: 0 }),
-    ];
-    const rows = run('needs-price', items);
-    expect(names(rows)).toEqual(['Half', 'Untouched']); // equal uses: half-priced first
-    expect(rows[0].reasons).toEqual(['Has a vend price, no @whobuy price']);
-  });
-
-  it('puts the most-used items first, half-priced or not', () => {
-    const items = [
-      item({ name: 'Half, 1 use', actions: ['Vend'], avgVend: 500, uses: [{ for: 'X' }] }),
-      item({ name: 'Untouched, 3 uses', actions: ['Vend'], uses: [{ for: 'X' }, { for: 'Y' }, { for: 'Z' }] }),
-      item({ name: 'Untouched, 0 uses', actions: ['Vend'] }),
-    ];
-    expect(names(run('needs-price', items))).toEqual(['Untouched, 3 uses', 'Half, 1 use', 'Untouched, 0 uses']);
   });
 });
 
@@ -140,16 +112,14 @@ describe('targetPriority', () => {
 });
 
 describe('canHavePrice', () => {
-  it('lets a Vend-only item take a @whobuy price too, so both can be filled in a row', () => {
-    const vendOnly = item({ actions: ['Vend'] });
-    expect(canHavePrice(vendOnly, 'avgVend')).toBe(true);
-    expect(canHavePrice(vendOnly, 'avgWhobuy')).toBe(true);
+  it('has a vend box for any tradeable item, even equipment and cards', () => {
+    expect(canHavePrice(item({ actions: ['Vend'] }))).toBe(true);
+    expect(canHavePrice(item({ itemType: 'Equipment' }))).toBe(true);
+    expect(canHavePrice(item({ categories: ['Card'] }))).toBe(true);
   });
 
-  it('has no @whobuy box for equipment and cards, and none for NPC-sold items', () => {
-    expect(canHavePrice(item({ itemType: 'Equipment' }), 'avgWhobuy')).toBe(false);
-    expect(canHavePrice(item({ categories: ['Card'] }), 'avgWhobuy')).toBe(false);
-    expect(canHavePrice(item({ npcBuyable: 'yes' }), 'avgVend')).toBe(false);
+  it('has none for NPC-sold items', () => {
+    expect(canHavePrice(item({ npcBuyable: 'yes' }))).toBe(false);
   });
 });
 
@@ -190,7 +160,7 @@ describe('suggestion-differs', () => {
     });
 
     it('brings it back when the hand-set actions change', () => {
-      expect(names(select([{ ...mine, actions: ['Whobuy'] }], review()))).toEqual(['Mine']);
+      expect(names(select([{ ...mine, actions: ['Junk'] }], review()))).toEqual(['Mine']);
     });
 
     it('ignores reviews of other items', () => {
@@ -239,12 +209,6 @@ describe('suspicious-values', () => {
     const flagged = run('suspicious-values', [item({ actions: ['NPC'], avgVend: 5000 })]);
     expect(flagged[0].reasons).toEqual(['Has a vend price but no Vend action']);
     expect(run('suspicious-values', [item({ actions: ['NPC'], avgVend: 50 })])).toEqual([]);
-  });
-
-  it('flags an @whobuy price with no Whobuy action, unless vend pays more', () => {
-    const flagged = run('suspicious-values', [item({ actions: ['Vend'], avgVend: 1000, avgWhobuy: 2000 })]);
-    expect(flagged[0].reasons).toEqual(['Has an @whobuy price but no Whobuy action']);
-    expect(run('suspicious-values', [item({ actions: ['Vend'], avgVend: 2000, avgWhobuy: 1000 })])).toEqual([]);
   });
 
   it('does not flag Keep on a pet or dungeon quest item: it is kept for that', () => {

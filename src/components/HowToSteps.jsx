@@ -38,7 +38,7 @@ export default function HowToSteps() {
 
       <Step number={4} title="Check the prices">
         <ul className="space-y-1.5">
-          <li>Vend and Whobuy are what players pay. NPC is what an NPC pays you.</li>
+          <li>Vend is what players pay. NPC is what an NPC pays you.</li>
           <li className="flex items-center gap-2">
             <Mark>
               <Unknown />

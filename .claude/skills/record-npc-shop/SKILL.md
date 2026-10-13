@@ -64,7 +64,7 @@ npm run sync:shops
 npm run validate
 ```
 
-Items that become NPC-sold get the NPC action instead of Vend/Whobuy, and
+Items that become NPC-sold get the NPC action instead of Vend, and
 lose their player prices. Tell the maintainer about each one, because it
 changes what the site advises.
 

@@ -19,7 +19,7 @@ body:
       label: What's wrong?
       multiple: true
       options:
-        - Action (Keep / Vend / Whobuy / NPC)
+        - Action (Keep / Vend / NPC)
         - Category
         - Used For (quests, hats, pet evolutions)
         - Prices

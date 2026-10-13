@@ -42,7 +42,7 @@ CONTRIBUTING.md lists the fields).
 - `sellValue` and `sellSource`: the emulator's price (`Sell`, or `Buy` / 2)
   and `hercules` or `rathena-renewal`. `npm run sync:prices` checks them.
 - `npcBuyable`: `"no"` for now. `npm run sync:shops` corrects it.
-- `avgVend` / `avgWhobuy` / `lastVerified` / `verificationNotes`: only what
+- `avgVend` / `lastVerified` / `verificationNotes`: only what
   the maintainer checked in game (`null` and `""` otherwise).
 - `links` and `notes`: empty unless there's something worth saying. Notes
   are short and plain, with no "dropped by" and no period on a fragment.
@@ -57,7 +57,7 @@ CONTRIBUTING.md lists the fields).
 - **Actions:** from its prices (`createSuggester` in `src/utils/suggest.js`;
   see `update-vend-prices` step 4). With no player price yet, use the
   pattern of similar items: cards are always Vend, pet evolution materials
-  `Keep` + `Vend`, taming items `Vend`. Cards and equipment have no @whobuy.
+  `Keep` + `Vend`, taming items `Vend`.
 - New uses on other items: reuse the target's name exactly, and run
   `npm run sync:targets` so it gets an item ID for the Targets page.
 

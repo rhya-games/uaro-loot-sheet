@@ -91,13 +91,6 @@ const COLUMNS = [
     render: (item) => <PriceCell item={item} field="avgVend" />,
   },
   {
-    label: 'Whobuy',
-    sortKey: 'avgWhobuy',
-    title: 'Average price players pay through @whobuy\n✕ can’t be sold this way · No buyers: none when checked in game · ?: not verified yet',
-    numeric: true,
-    render: (item) => <PriceCell item={item} field="avgWhobuy" />,
-  },
-  {
     label: 'NPC',
     sortKey: 'npcSellPrice',
     title: `What an NPC pays you, with Overcharge ${OVERCHARGE_LEVEL} (+${OVERCHARGE_PERCENT}%)`,
@@ -116,7 +109,7 @@ const COLUMNS = [
     label: 'Verified',
     sortKey: 'lastVerified',
     nowrap: true,
-    title: 'When the vend or @whobuy price was last checked in game',
+    title: 'When the vend price was last checked in game',
     render: (item) => (
       <div className="flex items-center justify-between gap-2">
         <VerifiedText item={item} />

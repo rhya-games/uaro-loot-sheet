@@ -1,7 +1,7 @@
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { formatZeny } from '../utils/format.js';
 import { NPC_BUYABLE_LABELS } from '../utils/labels.js';
-import { hasWhobuy, isSoldByNpc, isTradeable } from '../utils/prices.js';
+import { isSoldByNpc, isTradeable } from '../utils/prices.js';
 import Tooltip from './Tooltip.jsx';
 
 /**
@@ -63,16 +63,15 @@ export function NpcBuyable({ item }) {
 }
 
 /**
- * A player price (avgVend or avgWhobuy). Three ways to show "no price":
+ * The vend price (avgVend). Three ways to show "no price":
  *   ✕     can't be sold this way: can't be traded (with a tooltip, since
- *         it's rare), NPCs sell it, or a card or equipment in the Whobuy
- *         column (@whobuy doesn't buy them)
- *   No sellers / No buyers  checked in game (saved as 0), and nobody was
- *         selling (Vend) or buying (Whobuy)
+ *         it's rare) or NPCs sell it
+ *   No sellers  checked in game (saved as 0), and no vending shop was
+ *         selling it
  *   ?     not checked yet (null), an icon like the ✕
  * The column headers' tooltips and the About page explain these.
  */
-export function PlayerPrice({ item, field }) {
+export function PlayerPrice({ item }) {
   if (!isTradeable(item)) {
     return (
       <Tooltip text="Can't be traded">
@@ -83,14 +82,13 @@ export function PlayerPrice({ item, field }) {
     );
   }
   if (isSoldByNpc(item)) return <NoIcon label="None: NPCs sell this" />;
-  if (field === 'avgWhobuy' && !hasWhobuy(item)) return <NoIcon label="None: @whobuy doesn't buy cards or equipment" />;
-  if (item[field] === 0) {
+  if (item.avgVend === 0) {
     return (
       <span className="empty-value">
-        {field === 'avgWhobuy' ? 'No buyers' : 'No sellers'}
+        No sellers
         <span className="sr-only">: checked in game</span>
       </span>
     );
   }
-  return item[field] == null ? <Unknown /> : formatZeny(item[field]);
+  return item.avgVend == null ? <Unknown /> : formatZeny(item.avgVend);
 }

@@ -29,7 +29,6 @@ const SORT_NAMES = {
   categories: 'category',
   uses: 'uses',
   avgVend: 'vend',
-  avgWhobuy: 'whobuy',
   npcSellPrice: 'npc',
   npcBuyable: 'shop',
   lastVerified: 'verified',

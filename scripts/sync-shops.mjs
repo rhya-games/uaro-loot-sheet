@@ -10,9 +10,8 @@
  * An item already marked "npc-only" (only NPCs have it) stays "npc-only" when
  * it's sold. Items without an itemId are left as they are.
  *
- * NPC-sold items can't be vended or @whobuy'd, so when an item becomes sold
- * by NPCs, its Vend/Whobuy actions become NPC and its player prices are
- * cleared. Everything that changes is listed.
+ * NPC-sold items can't be vended, so when an item becomes sold by NPCs,
+ * its Vend action becomes NPC and its player price is cleared. Everything that changes is listed.
  *
  * Usage:
  *   npm run sync:shops             (update loot.json)
@@ -84,16 +83,14 @@ const updatedItems = items.map((item) => {
   const notes = [];
   if (sold) {
     // NPC-sold items aren't traded between players.
-    if (item.actions.some((action) => action === 'Vend' || action === 'Whobuy')) {
-      const actions = item.actions.map((action) => (action === 'Vend' || action === 'Whobuy' ? 'NPC' : action));
+    if (item.actions.includes('Vend')) {
+      const actions = item.actions.map((action) => (action === 'Vend' ? 'NPC' : action));
       updated.actions = [...new Set(actions)];
       notes.push(`actions ${item.actions.join('+')} -> ${updated.actions.join('+')}`);
     }
-    for (const field of ['avgVend', 'avgWhobuy']) {
-      if (item[field] != null) {
-        updated[field] = null;
-        notes.push(`cleared ${field} ${item[field]}`);
-      }
+    if (item.avgVend != null) {
+      updated.avgVend = null;
+      notes.push(`cleared avgVend ${item.avgVend}`);
     }
   }
   changes.push({ name: item.name, from: item.npcBuyable ?? 'blank', to: npcBuyable, reason, notes });

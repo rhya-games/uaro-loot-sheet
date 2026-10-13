@@ -64,12 +64,12 @@ async function postReviewed(id, entry) {
 const sameActions = (a, b) => a.length === b.length && a.every((action) => b.includes(action));
 
 /** The fields a save can change, so undo can put them all back. */
-const SAVED_FIELDS = ['avgVend', 'avgWhobuy', 'lastVerified', 'verificationNotes', 'actions'];
+const SAVED_FIELDS = ['avgVend', 'lastVerified', 'verificationNotes', 'actions'];
 const savedFields = (item) => Object.fromEntries(SAVED_FIELDS.map((field) => [field, item[field]]));
 
 /** A price as the snackbar says it: 12000 -> "12,000z", 0 -> "None", null -> "no price". */
 const priceText = (zeny) => (zeny == null ? 'no price' : zeny === 0 ? 'None' : `${zeny.toLocaleString('en-US')}z`);
-const FIELD_NAMES = { avgVend: 'Vend', avgWhobuy: 'Whobuy' };
+const FIELD_NAMES = { avgVend: 'Vend' };
 
 /** " · actions updated on 2 items", or nothing. */
 const actionsNote = (count) => (count ? ` · actions updated on ${count} item${count === 1 ? '' : 's'}` : '');
@@ -82,7 +82,7 @@ export function AdminProvider({ children }) {
   const [targets, setTargets] = useState(TARGET_VALUES);
 
   // The latest items and targets, for saves that finish one after another
-  // (tabbing from Vend to Whobuy saves twice in a row).
+  // (tabbing from one price box to the next saves twice in a row).
   const latest = useRef(items);
   const latestTargets = useRef(targets);
 
@@ -153,7 +153,7 @@ export function AdminProvider({ children }) {
     const before = new Map();
     const replace = (saved) => replaceItem(saved, before);
     const saved = replace(await postItem(id, changes));
-    if ('avgVend' in changes || 'avgWhobuy' in changes) await applySuggestion(saved, replace);
+    if ('avgVend' in changes) await applySuggestion(saved, replace);
 
     const old = before.get(id);
     const prices = Object.keys(FIELD_NAMES).filter((field) => field in changes);

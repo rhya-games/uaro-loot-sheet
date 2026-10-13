@@ -84,17 +84,17 @@ for (const item of items) {
     errors.push(`${item.name}: cards can't be bought from NPCs, so npcBuyable must be "no"`);
   }
   const soldByNpc = item.npcBuyable === 'yes' || item.npcBuyable === 'npc-only';
-  if (soldByNpc && item.actions?.some((action) => action === 'Vend' || action === 'Whobuy')) {
-    errors.push(`${item.name}: NPCs sell this, so use the "NPC" action instead of "Vend" or "Whobuy"`);
+  if (soldByNpc && item.actions?.includes('Vend')) {
+    errors.push(`${item.name}: NPCs sell this, so use the "NPC" action instead of "Vend"`);
   }
   if (item.actions?.length === 1 && item.actions[0] === 'Keep') {
-    errors.push(`${item.name}: Keep can't be the only action; add how to sell the extras (Vend, Whobuy or NPC)`);
+    errors.push(`${item.name}: Keep can't be the only action; add how to sell the extras (Vend or NPC)`);
   }
   if (item.actions?.includes('Junk') && item.actions.length > 1) {
     warnings.push(`${item.name}: Junk means "throw it away", so it shouldn't have other actions`);
   }
-  if (soldByNpc && (item.avgVend != null || item.avgWhobuy != null)) {
-    errors.push(`${item.name}: NPCs sell this, so avgVend and avgWhobuy should be null (the site shows ✕)`);
+  if (soldByNpc && item.avgVend != null) {
+    errors.push(`${item.name}: NPCs sell this, so avgVend should be null (the site shows ✕)`);
   }
   // Notes show under "Used For", so keep them about what the item does.
   if (/^dropped by/i.test(item.notes ?? '')) {
@@ -111,10 +111,6 @@ for (const item of items) {
   }
   if (item.categories?.includes('Card') && item.actions?.includes('NPC')) {
     errors.push(`${item.name}: cards always sell to players, so use "Vend" instead of "NPC"`);
-  }
-  // Buying stores don't buy cards or equipment (see hasWhobuy in src/utils/prices.js).
-  if ((item.itemType === 'Equipment' || item.categories?.includes('Card')) && item.avgWhobuy != null) {
-    warnings.push(`${item.name}: @whobuy doesn't buy cards or equipment, so avgWhobuy should be null`);
   }
   if (item.categories?.length > 1 && item.categories.includes('Not Reviewed')) {
     warnings.push(`${item.name}: has categories, so "Not Reviewed" can be removed`);
@@ -150,11 +146,11 @@ for (const item of items) {
     errors.push(`${item.name}: NPCs won't buy it (notSellableToNpc), so it can't have the NPC action`);
   }
   if (notTradeableIds.has(item.itemId)) {
-    if (item.actions?.some((action) => action === 'Vend' || action === 'Whobuy')) {
-      errors.push(`${item.name}: it can't be traded (notTradeable), so it can't have Vend or Whobuy`);
+    if (item.actions?.includes('Vend')) {
+      errors.push(`${item.name}: it can't be traded (notTradeable), so it can't have Vend`);
     }
-    if (item.avgVend != null || item.avgWhobuy != null) {
-      errors.push(`${item.name}: it can't be traded (notTradeable), so avgVend and avgWhobuy should be null`);
+    if (item.avgVend != null) {
+      errors.push(`${item.name}: it can't be traded (notTradeable), so avgVend should be null`);
     }
   }
 }

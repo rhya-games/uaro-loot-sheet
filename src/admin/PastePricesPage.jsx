@@ -13,8 +13,8 @@ const priceText = (zeny) => (zeny == null ? 'no price' : zeny === 0 ? 'None' : `
 const actionsText = (actions) => (actions.length ? actions.join(' + ') : 'none');
 
 /**
- * Admin mode's "Paste prices": one line per item, "item ID, vend price,
- * @whobuy price" (see pastePrices.js for the format). The preview shows what
+ * Admin mode's "Paste prices": one line per item, "item ID, vend price"
+ * (see pastePrices.js for the format). The preview shows what
  * every line would do before anything is saved. Apply saves them all: each
  * price gets today's Verified date and note, the actions follow the new
  * prices, and one Undo puts the whole paste back.
@@ -52,7 +52,7 @@ export default function PastePricesPage() {
   return (
     <AdminLayout
       title="Paste prices"
-      intro="Add many prices at once. One line per item: the item ID, the vend price, then the @whobuy price."
+      intro="Add many prices at once. One line per item: the item ID, then the vend price."
     >
       <section className="panel space-y-3 p-4">
         <label htmlFor="pasted-prices" className="block text-sm font-medium text-fg">
@@ -128,7 +128,7 @@ function PreviewRow({ row, newActions }) {
             {Object.entries(row.prices).map(([field, price], index) => (
               <span key={field}>
                 {index > 0 && ' · '}
-                {field === 'avgVend' ? 'Vend' : 'Whobuy'} {item[field] === price ? `${priceText(price)} (same, verified)` : `${priceText(item[field])} → ${priceText(price)}`}
+                Vend {item[field] === price ? `${priceText(price)} (same, verified)` : `${priceText(item[field])} → ${priceText(price)}`}
               </span>
             ))}
           </p>
