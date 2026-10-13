@@ -18,7 +18,7 @@
  * To add an entry, copy this template to the TOP of the list:
  *
  *   {
- *     version: '0.3.0',
+ *     version: '1.3.0',
  *     date: 'YYYY-MM-DD',
  *     title: 'Short summary of this update',
  *     changes: [
@@ -34,11 +34,11 @@
  *
  * One entry per day: add to today's entry if there already is one.
  *
- * Versions follow Semantic Versioning (https://semver.org), except that the
- * site stays at 0.x until its first real release (1.0.0):
+ * Versions follow Semantic Versioning (https://semver.org):
  *   - something new or changed (a feature, new data): raise the middle
- *     number and reset the last (0.2.3 -> 0.3.0)
- *   - only fixes: raise the last number (0.3.0 -> 0.3.1)
+ *     number and reset the last (1.2.3 -> 1.3.0)
+ *   - only fixes: raise the last number (1.3.0 -> 1.3.1)
+ *   - a big change to how the site works: raise the first number
  * Set the same version in package.json (npm run validate checks). Deploying
  * (pushing main to the deploy branch) publishes a GitHub release with that
  * version, these lines, and the notes from the pull requests merged since
@@ -47,6 +47,21 @@
 export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
+  {
+    version: '1.0.0',
+    date: '2026-10-12',
+    title: 'Version 1.0: the loot sheet, rebuilt as a site',
+    changes: [
+      { type: 'Added', text: '1,110 items, up from 643 in the original sheet: drops, NPC-sold items, foods, pet items and headgear materials.' },
+      { type: 'Added', text: 'Every item shows its in-game icon, and its NPC price including the Overcharge bonus and uaRO’s own price changes.' },
+      { type: 'Added', text: '“Used For” lists quests, recipes, pet evolutions, pet food and cooking, with the amounts needed.' },
+      { type: 'Added', text: 'Vend and @whobuy prices checked in game for 240 items, with the date they were last verified.' },
+      { type: 'Added', text: 'Search from any page with Ctrl+K, filter by action, type, category and use, and share a link to the same view.' },
+      { type: 'Changed', text: 'Actions now follow the prices: Vend, Whobuy, NPC or Keep. Items you keep also show how to sell the extras.' },
+      { type: 'Changed', text: 'Empty values are clear: ? is not checked yet, ✕ can’t be done, and None means checked and empty.' },
+      { type: 'Added', text: 'Works on phones as cards, in light and dark mode, and is open source so anyone can help keep it up to date.' },
+    ],
+  },
   {
     version: '0.11.0',
     date: '2026-10-11',

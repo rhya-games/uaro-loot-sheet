@@ -130,8 +130,8 @@ There are two levels of notes, for two kinds of readers.
 **The pull request description** is the long version, for maintainers and agents. Fill in the template: what changed, why, things to know, how it was checked, and follow-ups. When the PR is merged, the description becomes the merge commit's message and is added to the GitHub release notes, under the short lines from the Changelog page.
 
 - **One entry per day.** If today already has an entry, add your change to it.
-- **Each day gets a version** ([Semantic Versioning](https://semver.org), staying at 0.x until the first real release): something new or changed raises the middle number (0.2.3 → 0.3.0); only fixes raise the last one (0.3.0 → 0.3.1). Put the same version in `package.json` (`npm version 0.3.0 --no-git-tag-version`). `npm run validate` checks that they match.
-- Merging to `main` does not deploy. The maintainer deploys by pushing `main` to the `deploy` branch, which publishes the site and a GitHub release (`v0.3.0`) with that day's short lines plus the notes from each pull request merged since the last release. The deploy run's page (Actions tab) shows the same notes.
+- **Each day gets a version** ([Semantic Versioning](https://semver.org)): something new or changed raises the middle number (1.2.3 → 1.3.0); only fixes raise the last one (1.3.0 → 1.3.1). Put the same version in `package.json` (`npm version 1.3.0 --no-git-tag-version`). `npm run validate` checks that they match.
+- Merging to `main` does not deploy. The maintainer deploys by pushing `main` to the `deploy` branch, which publishes the site and a GitHub release (`v1.3.0`) with that day's short lines plus the notes from each pull request merged since the last release. The deploy run's page (Actions tab) shows the same notes.
 
 ## Wording
 
