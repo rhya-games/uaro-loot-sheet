@@ -247,7 +247,7 @@ for (const entry of JSON.parse(readFileSync(REVIEWED_FILE, 'utf8')).items) {
   else if (item.name !== entry.name) errors.push(`${REVIEWED_FILE}: "${entry.id}" is named "${item.name}" in loot.json, not "${entry.name}"`);
 }
 
-// Changelog: one entry per day, newest first, with 0.x versions that go up,
+// Changelog: one entry per day, newest first, with versions that go up,
 // and the newest one matching package.json (the GitHub release uses it).
 const packageVersion = JSON.parse(readFileSync('package.json', 'utf8')).version;
 const versionParts = (version) => version.split('.').map(Number);
@@ -268,8 +268,8 @@ CHANGELOG.forEach((entry, i) => {
       warnings.push(`Changelog ${entry.date}: "${change.text.slice(0, 40)}…" is ${change.text.length} characters; keep it to one short sentence (${MAX_CHANGE_LENGTH} at most)`);
     }
   }
-  if (!/^0\.\d+\.\d+$/.test(entry.version ?? '')) {
-    errors.push(`Changelog ${entry.date}: version "${entry.version}" should look like 0.3.0 (0.x until the first real release)`);
+  if (!/^\d+\.\d+\.\d+$/.test(entry.version ?? '')) {
+    errors.push(`Changelog ${entry.date}: version "${entry.version}" should look like 1.2.3`);
   }
   const older = CHANGELOG[i + 1];
   if (older && entry.date === older.date) errors.push(`Changelog: two entries for ${entry.date}; merge them into one`);
