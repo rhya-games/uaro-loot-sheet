@@ -12,7 +12,6 @@ const item = (fields) => ({
   npcBuyable: 'no',
   sellValue: 100, // NPC pays 124 with Overcharge
   avgVend: null,
-  avgWhobuy: null,
   ...fields,
 });
 
@@ -30,16 +29,8 @@ describe('suggestSale', () => {
     expect(suggestSale(item({ avgVend: 125 })).action).toBe('Vend');
   });
 
-  it('picks Whobuy for any price above the NPC price', () => {
-    expect(suggestSale(item({ avgWhobuy: 125 })).action).toBe('Whobuy');
-  });
-
   it('picks Vend when it pays enough more', () => {
     expect(suggestSale(item({ avgVend: 1000 })).action).toBe('Vend');
-  });
-
-  it('picks Whobuy when it beats vending', () => {
-    expect(suggestSale(item({ avgVend: 500, avgWhobuy: 800 })).action).toBe('Whobuy');
   });
 
   it('always says Vend for cards, even without a price', () => {

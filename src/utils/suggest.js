@@ -1,14 +1,13 @@
 import targetData from '../data/use-targets.json' with { type: 'json' };
-import { hasWhobuy, isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
+import { isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
 
 /**
  * Suggested actions, worked out from prices instead of set by hand.
  *
- * Selling: NPC, @whobuy and vending take more and more effort, but a
- * player price that beats the NPC price by even 1z is worth it, so there's
- * no margin (a percentage rule left real vend prices as NPC):
- *   - Whobuy when it pays more than the NPC price.
- *   - Vend when it pays more than the NPC price, and more than @whobuy.
+ * Selling: vending takes more effort than an NPC, but a player price that
+ * beats the NPC price by even 1z is worth it, so there's no margin (a
+ * percentage rule left real vend prices as NPC):
+ *   - Vend when it pays more than the NPC price.
  *   - NPC otherwise, and always for items NPCs sell or that can't be traded.
  *   - Cards are always Vend, even with no price yet: players pay far more
  *     than NPCs for any card.
@@ -76,7 +75,6 @@ export function suggestSale(item) {
   const npc = npcSellPrice(item);
   if (isSoldByNpc(item)) return { action: 'NPC', price: npc, reason: 'NPCs sell it, so players won’t buy it' };
   const tradeable = isTradeable(item);
-  const whobuy = tradeable && hasWhobuy(item) ? item.avgWhobuy : null;
   const vend = tradeable ? item.avgVend : null;
   const floor = npc ?? 0;
 
@@ -84,16 +82,13 @@ export function suggestSale(item) {
     return { action: 'Vend', price: vend, reason: 'Cards always sell to players' + (vend != null ? ` (${fmt(vend)})` : '') };
   }
 
-  if (vend != null && vend > floor && vend > (whobuy ?? 0)) {
+  if (vend != null && vend > floor) {
     return { action: 'Vend', price: vend, reason: `Vending pays the most (${fmt(vend)})` };
   }
-  if (whobuy != null && whobuy > floor) {
-    return { action: 'Whobuy', price: whobuy, reason: `@whobuy pays ${fmt(whobuy)}, more than NPCs` };
-  }
-  // No vend price yet, and no @whobuy buyers to go on: we can't tell
-  // whether players pay more, so don't guess NPC (cards would all come out
-  // as NPC). A Whobuy of 0 means "checked, nobody's buying".
-  if (tradeable && vend == null && !(whobuy > 0)) return null;
+  // No vend price yet: we can't tell whether players pay more, so don't
+  // guess NPC (cards would all come out as NPC). A vend price of 0 means
+  // "checked, nobody's selling".
+  if (tradeable && vend == null) return null;
   if (npc > 0) {
     return { action: 'NPC', price: npc, reason: `NPCs pay the most (${fmt(npc)})` };
   }
@@ -151,8 +146,7 @@ export function createSuggester(items, targetValues = TARGET_VALUES) {
     // A finished item is worth the most players pay for it. The NPC price
     // doesn't count: it's the floor, not what the item is worth to use
     // (Elemental Converters sell to NPCs for 1z).
-    const prices = [item.avgWhobuy, item.avgVend].filter((price) => price != null);
-    return { value: prices.length ? Math.max(...prices) : null, source: 'sheet' };
+    return { value: item.avgVend, source: 'sheet' };
   }
 
   function judgeUse(use) {

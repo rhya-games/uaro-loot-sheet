@@ -125,14 +125,6 @@
           ],
           "minimum": 0
         },
-        "avgWhobuy": {
-          "description": "Average price (zeny) players pay when buying this through @whobuy. null = no data yet (don't use 0).",
-          "type": [
-            "integer",
-            "null"
-          ],
-          "minimum": 0
-        },
         "sellValue": {
           "description": "Zeny an NPC pays for one, before any skills (the item's base sell price). Filled in by `npm run sync:prices`. The NPC column adds the Overcharge bonus from game-rules.json, unless uaro-overrides.json says otherwise.",
           "type": [
@@ -178,7 +170,6 @@
       "enum": [
         "Keep",
         "Vend",
-        "Whobuy",
         "NPC",
         "Junk"
       ]

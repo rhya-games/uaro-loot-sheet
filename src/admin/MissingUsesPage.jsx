@@ -53,8 +53,8 @@ export default function MissingUsesPage() {
               <li key={item.id} className="space-y-1 border-t border-line px-4 py-3 text-sm first:border-t-0">
                 <p className="font-medium text-fg">{item.name}</p>
                 <p className="text-xs text-muted">
-                  <CopyItemId itemId={item.itemId} /> · {item.itemType} · Vend {formatZeny(item.avgVend)} · Whobuy{' '}
-                  {formatZeny(item.avgWhobuy)} · NPC {formatZeny(npcSellPrice(item))}
+                  <CopyItemId itemId={item.itemId} /> · {item.itemType} · Vend {formatZeny(item.avgVend)} · NPC{' '}
+                  {formatZeny(npcSellPrice(item))}
                 </p>
                 <p className="flex flex-wrap items-center gap-1">
                   <ActionBadges actions={item.actions} />

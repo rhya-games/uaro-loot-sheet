@@ -10,7 +10,7 @@ fits together, and the conventions to follow.
 
 A loot tracker for **uaRO**, a private game server. It's a static React
 site (GitHub Pages) that shows every loot item with what to do with it
-(Keep, Vend, Whobuy, NPC), what it's used for, and its prices. The data
+(Keep, Vend, NPC), what it's used for, and its prices. The data
 is JSON in the repo, so people who don't code can edit it.
 
 ## Hard rules
@@ -61,7 +61,7 @@ lint` and `npm test` after code changes. There's no formatter yet.
     doesn't apply.
   - `customSellValues`: base prices checked by hand, including confirmed 0z.
   - `notSellableToNpc`: shown as ✕.
-  - `tradeRestrictions`: `notTradeable` (✕ in Vend/Whobuy) and `checked`
+  - `tradeRestrictions`: `notTradeable` (✕ in Vend) and `checked`
     (emulator trade flags confirmed on uaRO). Don't trust the emulators'
     Trade flags: every one checked so far was wrong for uaRO.
   - `npcShops`: `uaroShops` (shops checked in game or on the wiki, with
@@ -95,8 +95,7 @@ lint` and `npm test` after code changes. There's no formatter yet.
 ### Data rules (enforced by `npm run validate`)
 
 - Items NPCs sell (`npcBuyable` "yes" or "npc-only") use the `NPC` action,
-  never `Vend`/`Whobuy`, and have `avgVend`/`avgWhobuy` set to null (the
-  site shows ✕).
+  never `Vend`, and have `avgVend` set to null (the site shows ✕).
 - Cards always have `npcBuyable: "no"`.
 - **Keep is never the only action** (validate errors). Items kept for a use
   also show how to sell the extras; with no player price yet the suggester
@@ -104,7 +103,7 @@ lint` and `npm test` after code changes. There's no formatter yet.
   hand-picked one.
 - Every entry in `uaro-overrides.json` must match an item's `itemId` and
   `name` in loot.json when that item is listed there.
-- `lastVerified` means the vend or @whobuy price was checked in game.
+- `lastVerified` means the vend price was checked in game.
   Setting an NPC price doesn't count.
 
 ### Conventions when adding items
@@ -126,8 +125,8 @@ Match similar existing items. Look them up in loot.json first.
 - Pet evolution materials: `Keep` + `Vend`, categories `Pet Evolution`,
   `Pet`, `uaRO`. Cards add `Card`.
 - Taming items: `Vend`, category `Pet`, notes `"<Pet> Taming Item"`.
-- Pet accessories (IDs 10001-10038): item type `Equipment` (so no
-  @whobuy), category `Pet`, notes `"<Pet> Pet accessory"` with the uaRO pet
+- Pet accessories (IDs 10001-10038): item type `Equipment`,
+  category `Pet`, notes `"<Pet> Pet accessory"` with the uaRO pet
   name. Sold by price like anything else.
 - Headgear quest materials (Dimonka): category `Server Hat Quest` + `uaRO`.
 - After adding items: run `sync:prices`, `sync:shops`, then `validate`.
@@ -271,7 +270,7 @@ Markdown, usable by any agent):
 - `check-wiki-page`: compare "Used For" data with a uaRO wiki table and fix it.
 - `record-npc-shop`: record an NPC shop from screenshots or the wiki.
 - `scan-quests`: find items quest scripts ask for and add the missing quest uses.
-- `update-vend-prices`: set vend/@whobuy prices from screenshots or a list.
+- `update-vend-prices`: set vend prices from screenshots or a list.
 - `ship-release`: merge and deploy (PR, checks, merge, release). Only when asked.
 
 The maintainer's prices are facts from the game: **take them as given**.

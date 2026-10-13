@@ -28,7 +28,6 @@ const isActionList = (value) =>
 /** Field -> check for its new value. */
 const EDITABLE = {
   avgVend: isPrice,
-  avgWhobuy: isPrice,
   lastVerified: (value) => value === null || /^\d{4}-\d{2}-\d{2}$/.test(value),
   verificationNotes: (value) => typeof value === 'string',
   actions: isActionList,

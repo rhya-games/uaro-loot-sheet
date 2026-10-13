@@ -11,15 +11,14 @@ const item = (name, fields = {}) => ({
   npcBuyable: 'no',
   sellValue: 10,
   avgVend: null,
-  avgWhobuy: null,
   lastVerified: null,
   ...fields,
 });
 
 describe('sorting', () => {
-  // Sorting by Whobuy once crashed the page (a missing import).
+  // Sorting by a column once crashed the page (a missing import).
   it('can sort by every column', () => {
-    const items = [item('A', { avgWhobuy: 5 }), item('B', { avgWhobuy: 9 })];
+    const items = [item('A', { avgVend: 5 }), item('B', { avgVend: 9 })];
     for (const key of Object.keys(SORT_VALUES)) {
       expect(() => sortItems(items, { key, direction: 'asc' })).not.toThrow();
     }
@@ -31,7 +30,7 @@ describe('sorting', () => {
     expect(sortItems(items, { key: 'avgVend', direction: 'desc' }).map((i) => i.name)).toEqual(['Dear', 'Cheap', 'None']);
   });
 
-  it('never shows a Whobuy price for cards or equipment', () => {
-    expect(SORT_VALUES.avgWhobuy(item('Card', { categories: ['Card'], avgWhobuy: 5 }))).toBeNull();
+  it('has no Whobuy column any more', () => {
+    expect(SORT_VALUES).not.toHaveProperty('avgWhobuy');
   });
 });

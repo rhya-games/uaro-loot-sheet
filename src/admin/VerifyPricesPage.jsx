@@ -6,7 +6,7 @@ import { confirmChanges } from './verify.js';
 import AdminLayout from './AdminLayout.jsx';
 import QueueRow, { QueueHeader, QueueSearch } from './QueueRow.jsx';
 
-const PRICE_FIELDS = ['avgVend', 'avgWhobuy'];
+const PRICE_FIELDS = ['avgVend'];
 
 /** The prices that are set, and can be changed. */
 const fieldsWithPrice = (item) => PRICE_FIELDS.filter((field) => item[field] != null);

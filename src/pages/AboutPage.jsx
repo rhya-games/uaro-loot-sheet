@@ -44,26 +44,21 @@ export default function AboutPage() {
           <Row term="Category">What kind of content it belongs to (below).</Row>
           <Row term="Used For">How many you need, and for what. Click one to see every item it needs.</Row>
           <Row term="Vend">Average price players sell it for in vending shops.</Row>
-          <Row term="Whobuy">Average price players pay for it through @whobuy.</Row>
           <Row term="NPC">
             Zeny an NPC pays for one, with Overcharge level {OVERCHARGE_LEVEL} (+{OVERCHARGE_PERCENT}%).
           </Row>
           <Row term="NPC Shop">Whether you can buy it from an NPC shop.</Row>
-          <Row term="Verified">When the vend or @whobuy price was last checked on the live server.</Row>
+          <Row term="Verified">When the vend price was last checked on the live server.</Row>
         </Legend>
 
         <SubHeading>Marks</SubHeading>
         <Legend>
           <Row term={<Mark><Unknown /></Mark>}>The price hasn’t been verified yet.</Row>
           <Row term={<Mark><NoIcon label="Can't be sold this way" /></Mark>}>
-            In Vend and Whobuy: it can’t be sold that way. NPCs sell it, it can’t be traded, or it’s a card or
-            equipment (@whobuy doesn’t buy those). In NPC: NPCs won’t buy it.
+            In Vend: it can’t be sold that way. NPCs sell it, or it can’t be traded. In NPC: NPCs won’t buy it.
           </Row>
           <Row term={<Mark>No sellers</Mark>}>
             In Vend: no vending shop was selling it when checked in game.
-          </Row>
-          <Row term={<Mark>No buyers</Mark>}>
-            In Whobuy: no player was buying it when checked in game.
           </Row>
           <Row term={<Mark>None</Mark>}>Nothing uses the item.</Row>
           <Row term={

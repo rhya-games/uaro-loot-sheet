@@ -22264,8 +22264,7 @@
     "itemId": 1046,
     "itemType": "Misc",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -27990,8 +27989,7 @@
     "itemId": 549,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "Whobuy"
+      "Vend"
     ],
     "categories": [
       "Cooking"

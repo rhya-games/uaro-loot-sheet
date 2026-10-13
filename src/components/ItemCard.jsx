@@ -56,9 +56,8 @@ export default memo(function ItemCard({ item, onSelectUse, highlightUses }) {
         <ItemUses item={item} onSelectUse={onSelectUse} highlight={highlightUses} />
       </div>
 
-      <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-5">
-        <Stat label="Avg. vend" value={<PlayerPrice item={item} field="avgVend" />} />
-        <Stat label="Avg. whobuy" value={<PlayerPrice item={item} field="avgWhobuy" />} />
+      <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-4">
+        <Stat label="Avg. vend" value={<PlayerPrice item={item} />} />
         <Stat label={`NPC (OC ${OVERCHARGE_LEVEL})`} value={<NpcSellPrice item={item} />} />
         <Stat label="NPC Shop" value={<NpcBuyable item={item} />} />
         <Stat label="Last verified" value={<VerifiedText item={item} />} />
