@@ -72,7 +72,7 @@ lint` and `npm test` after code changes. There's no formatter yet.
 - `src/data/changelog.js`: the site's Changelog page, for **players**: a few
   short lines per day (validate errors above 8), only what a player would
   notice, with data updates summed up as counts. One entry per day, each
-  with a version (SemVer, 0.x until 1.0; features raise the middle number,
+  with a version (SemVer; features raise the middle number,
   fixes the last) that matches `package.json`. The long version (what,
   why, decisions, how it was checked) goes in the PR description, which
   becomes the merge commit body and part of the GitHub release notes (see
