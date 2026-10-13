@@ -21,7 +21,7 @@ when `main`'s commit is pushed to the `deploy` branch (step 4). So:
 - Today's card in `src/data/changelog.js` is short: what a **player** needs
   to know, in up to 8 plain lines, with data updates summed up as counts
   (see the rules at the top of that file). One card per day, with a version
-  (0.x; new or changed things raise the middle number, only fixes the
+  (SemVer; new or changed things raise the middle number, only fixes the
   last). The same version is in `package.json`. Ask the maintainer to OK
   new changelog wording. Work only they see (admin mode, Targets, Undo,
   tests, docs) needs no line.
