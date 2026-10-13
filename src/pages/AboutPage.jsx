@@ -40,10 +40,10 @@ export default function AboutPage() {
       <Section id="prices" title="Why there are no vend prices">
         <p>
           This sheet used to show what players pay in vending shops. The server’s rules don’t allow those prices to be
-          published, so we had to remove them. We’re sorry: we know they were the most useful part.
+          published, so we had to remove them. We’re sorry for the change.
         </p>
         <p>
-          What’s left still tells you what to do. A <BestStar label={BEST_VEND_LABEL} /> in Vend means players pay
+          The sheet is still about what each item is for and what to do with it. A <BestStar label={BEST_VEND_LABEL} /> in Vend means players pay
           more than an NPC does. A <BestStar label={BEST_NPC_LABEL} /> next to the NPC price means the NPC pays the
           most. The NPC price is still shown in full.
         </p>
