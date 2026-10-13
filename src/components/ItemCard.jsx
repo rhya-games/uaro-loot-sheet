@@ -4,8 +4,7 @@ import ItemUses from './ItemUses.jsx';
 import CopyItemId from './CopyItemId.jsx';
 import ItemIcon from './ItemIcon.jsx';
 import RowActions from './RowActions.jsx';
-import { NpcBuyable, PlayerPrice } from './StatusIcons.jsx';
-import VerifiedText from './VerifiedText.jsx';
+import { NpcBuyable, VendStar } from './StatusIcons.jsx';
 import NpcSellPrice from './NpcSellPrice.jsx';
 import { OVERCHARGE_LEVEL } from '../utils/prices.js';
 
@@ -56,11 +55,10 @@ export default memo(function ItemCard({ item, onSelectUse, highlightUses }) {
         <ItemUses item={item} onSelectUse={onSelectUse} highlight={highlightUses} />
       </div>
 
-      <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-4">
-        <Stat label="Avg. vend" value={<PlayerPrice item={item} />} />
+      <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-3">
+        <Stat label="Vend" value={<VendStar item={item} />} />
         <Stat label={`NPC (OC ${OVERCHARGE_LEVEL})`} value={<NpcSellPrice item={item} />} />
         <Stat label="NPC Shop" value={<NpcBuyable item={item} />} />
-        <Stat label="Last verified" value={<VerifiedText item={item} />} />
       </dl>
     </article>
   );

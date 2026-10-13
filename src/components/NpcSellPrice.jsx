@@ -1,20 +1,36 @@
 import { LockClosedIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
-import { Unknown } from './StatusIcons.jsx';
+import { BEST_NPC_LABEL, BestStar, Unknown } from './StatusIcons.jsx';
 import { formatZeny } from '../utils/format.js';
-import { OVERCHARGE_LEVEL, npcSellInfo } from '../utils/prices.js';
+import { OVERCHARGE_LEVEL, bestSale, isCard, npcSellInfo } from '../utils/prices.js';
 
 /**
  * The NPC (sell price) value for one item (see utils/prices.js):
  *   normal price    "15,500z"
  *   uaRO fixed      "2,000z" + lock icon (tooltip explains Overcharge doesn't apply)
  *   can't be sold   ✕ icon (tooltip explains why)
+ *   card            ✕ icon: cards sell to players, so the NPC price isn't shown
  *   unknown         "?" icon
+ *
+ * A green star goes left of the value when selling to an NPC pays the most
+ * (see bestSale). Where vending pays the most the star is in the Vend column.
  *
  * The special cases can be focused (Tab) so their tooltip is reachable by keyboard.
  */
 export default function NpcSellPrice({ item }) {
   const info = npcSellInfo(item);
+  const star = bestSale(item) === 'npc' && <BestStar label={BEST_NPC_LABEL} className="size-4" />;
+
+  if (isCard(item)) {
+    return (
+      <Tooltip text="Cards sell to players, not NPCs">
+        <span tabIndex={0} className="inline-flex items-center rounded text-muted">
+          <XMarkIcon className="size-5" aria-hidden="true" />
+          <span className="sr-only">Cards sell to players, not NPCs</span>
+        </span>
+      </Tooltip>
+    );
+  }
 
   if (info.kind === 'not-sellable') {
     return (
@@ -29,15 +45,24 @@ export default function NpcSellPrice({ item }) {
 
   if (info.kind === 'modified') {
     return (
-      <Tooltip text={`uaRO price: the most an NPC pays. Overcharge ${OVERCHARGE_LEVEL} doesn't raise it.`}>
-        <span tabIndex={0} className="inline-flex items-center gap-1 rounded">
-          <LockClosedIcon className="size-4 text-muted" aria-hidden="true" />
-          {formatZeny(info.price)}
-          <span className="sr-only"> (fixed uaRO price)</span>
-        </span>
-      </Tooltip>
+      <span className="inline-flex items-center gap-1">
+        {star}
+        <Tooltip text={`uaRO price: the most an NPC pays. Overcharge ${OVERCHARGE_LEVEL} doesn't raise it.`}>
+          <span tabIndex={0} className="inline-flex items-center gap-1 rounded">
+            <LockClosedIcon className="size-4 text-muted" aria-hidden="true" />
+            {formatZeny(info.price)}
+            <span className="sr-only"> (fixed uaRO price)</span>
+          </span>
+        </Tooltip>
+      </span>
     );
   }
 
-  return info.kind === 'overcharge' ? formatZeny(info.price) : <Unknown />;
+  if (info.kind !== 'overcharge') return <Unknown />;
+  return (
+    <span className="inline-flex items-center gap-1">
+      {star}
+      {formatZeny(info.price)}
+    </span>
+  );
 }

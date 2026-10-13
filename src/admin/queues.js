@@ -1,4 +1,5 @@
 import { isSoldByNpc, isTradeable, npcSellPrice } from '../utils/prices.js';
+import { isJobQuest } from '../utils/suggest.js';
 import { valueTargets } from '../utils/targets.js';
 
 /**
@@ -188,6 +189,8 @@ function suspiciousValues(items) {
     // Items in a purpose category are kept for it, which has no "Used For" line.
     if (item.actions.includes('Keep') && !item.uses.length && !hasPurposeCategory(item)) reasons.push('Keep, but nothing uses it');
     if (item.actions.includes('Keep') && isNoUse(item)) reasons.push('Keep, but the category is No Use');
+    // Job quests are done once, so they aren't a reason to keep an item (see suggest.js).
+    if (item.actions.includes('Keep') && item.uses.length && item.uses.every(isJobQuest)) reasons.push('Keep, but only a job quest uses it');
     if (reasons.length) rows.push({ item, reasons });
   }
   return rows.sort(byName);

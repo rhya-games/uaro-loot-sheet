@@ -211,7 +211,7 @@
     "itemId": 10033,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Junk"
     ],
     "categories": [
       "Pet"
@@ -1630,7 +1630,9 @@
       "Vend"
     ],
     "categories": [
-      "Pet"
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
     ],
     "uses": [
       {
@@ -1743,7 +1745,7 @@
     "itemId": 12084,
     "itemType": "Consumable",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -1855,7 +1857,7 @@
     "itemId": 12097,
     "itemType": "Consumable",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -1939,7 +1941,7 @@
     "itemId": 12081,
     "itemType": "Consumable",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -2315,7 +2317,6 @@
     "itemId": 1068,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -2506,7 +2507,7 @@
     "itemId": 10028,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Junk"
     ],
     "categories": [
       "Pet"
@@ -2891,7 +2892,7 @@
     "itemId": 10037,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Junk"
     ],
     "categories": [
       "Pet"
@@ -3149,7 +3150,7 @@
     "itemId": 12099,
     "itemType": "Consumable",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Cooking"
@@ -3662,7 +3663,9 @@
     "name": "Bone Plate [1]",
     "itemId": 15000,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -3923,7 +3926,9 @@
     "name": "Bradium Brooch [1]",
     "itemId": 2790,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -3942,7 +3947,9 @@
     "name": "Bradium Shield [1]",
     "itemId": 2138,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -4248,7 +4255,9 @@
     "name": "Burning Bow [1]",
     "itemId": 1730,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -4318,6 +4327,9 @@
       "Vend"
     ],
     "categories": [
+      "Pet Evolution",
+      "Pet",
+      "uaRO",
       "Official Hat Quest"
     ],
     "uses": [
@@ -4561,7 +4573,9 @@
       "Vend"
     ],
     "categories": [
+      "Pet Evolution",
       "Pet",
+      "uaRO",
       "Official Hat Quest"
     ],
     "uses": [
@@ -4593,6 +4607,9 @@
       "Vend"
     ],
     "categories": [
+      "Pet Evolution",
+      "Pet",
+      "uaRO",
       "Official Hat Quest"
     ],
     "uses": [
@@ -4830,7 +4847,9 @@
     "name": "Cello [3]",
     "itemId": 1925,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -4931,7 +4950,9 @@
     "name": "Charming Lotus",
     "itemId": 12365,
     "itemType": "Consumable",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -5024,7 +5045,9 @@
     "name": "Chemeti Whip [0]",
     "itemId": 1964,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Other Quest",
       "Official Hat Quest"
@@ -5200,7 +5223,9 @@
     "name": "Chrome Metal Two-Handed Sword [0]",
     "itemId": 1196,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -5638,7 +5663,9 @@
     "name": "Club [4]",
     "itemId": 1502,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -5848,7 +5875,9 @@
     "name": "Cold Heart [0]",
     "itemId": 2746,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -6277,7 +6306,9 @@
     "name": "Cotton Shirt [1]",
     "itemId": 2302,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -6786,7 +6817,9 @@
     "name": "Cursed Lyre [1]",
     "itemId": 1741,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -7073,7 +7106,9 @@
     "name": "Cutter [4]",
     "itemId": 1205,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -7134,7 +7169,6 @@
     "itemId": 901,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "NPC"
     ],
     "categories": [
@@ -7286,7 +7320,7 @@
     "itemId": 631,
     "itemType": "Consumable",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -7576,7 +7610,7 @@
     "itemId": 630,
     "itemType": "Consumable",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -7722,7 +7756,9 @@
     "name": "Doom Slayer [0]",
     "itemId": 1370,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -7937,7 +7973,9 @@
     "name": "Drill Katar [1]",
     "itemId": 1270,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -8439,7 +8477,9 @@
     "name": "Electric Fist [3]",
     "itemId": 1820,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -9323,7 +9363,9 @@
     "name": "Eye Stone Ring [1]",
     "itemId": 2783,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -9541,7 +9583,7 @@
     "itemId": 10024,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -9798,7 +9840,6 @@
     "itemId": 1066,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -9872,7 +9913,9 @@
     "name": "Fireblend [0]",
     "itemId": 1133,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -10274,7 +10317,9 @@
     "name": "Forbidden Grimoire [1]",
     "itemId": 28628,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -10321,7 +10366,9 @@
     "name": "Fortune Sword [0]",
     "itemId": 1223,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -10814,7 +10861,9 @@
     "name": "Frozen Bow [1]",
     "itemId": 1731,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -11057,7 +11106,9 @@
     "name": "Gas Mask [0]",
     "itemId": 5005,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -11197,7 +11248,9 @@
     "name": "Gentle Breeze Guitar [0]",
     "itemId": 1917,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -11237,7 +11290,9 @@
     "name": "Ghost Whisper [1]",
     "itemId": 400396,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -11461,7 +11516,9 @@
     "name": "Girl's Doll",
     "itemId": 12366,
     "itemType": "Consumable",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -11980,7 +12037,9 @@
     "name": "Golden Earring",
     "itemId": 10022,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -12217,7 +12276,9 @@
     "name": "Grave Keeper's Sword",
     "itemId": 10020,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -12310,7 +12371,9 @@
     "name": "Green Acre Guitar [0]",
     "itemId": 1916,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -12381,7 +12444,9 @@
     "name": "Green Feeler [0]",
     "itemId": 2298,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -12487,7 +12552,9 @@
     "name": "Green Jewel Bag",
     "itemId": 10023,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -12784,7 +12851,9 @@
     "name": "Hairband of Stars",
     "itemId": 10025,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -13049,7 +13118,9 @@
     "name": "Harp of Nepenthes [2]",
     "itemId": 1926,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -13345,7 +13416,9 @@
     "name": "Hellfire [0]",
     "itemId": 1471,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -13866,7 +13939,9 @@
     "name": "Hood [1]",
     "itemId": 2502,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -13913,7 +13988,9 @@
     "name": "Horn Barrier",
     "itemId": 10038,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -13953,7 +14030,9 @@
     "name": "Horn of Hell",
     "itemId": 10036,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -14000,7 +14079,9 @@
     "name": "Horn of Hillslion [3]",
     "itemId": 1825,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -14469,7 +14550,9 @@
     "name": "Icicle Fist [3]",
     "itemId": 1819,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -14488,7 +14571,9 @@
     "name": "Icicle Whip [0]",
     "itemId": 1966,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Official Hat Quest"
     ],
@@ -14714,7 +14799,9 @@
     "name": "Imperial Guard [1]",
     "itemId": 2153,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -14733,7 +14820,9 @@
     "name": "Imperial Spear [1]",
     "itemId": 1433,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -14869,7 +14958,9 @@
     "name": "Inverse Scale [0]",
     "itemId": 1269,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -15203,7 +15294,7 @@
     "itemId": 10029,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -15223,7 +15314,9 @@
     "name": "Javelin [4]",
     "itemId": 1402,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -15448,7 +15541,9 @@
     "name": "Katzbalger [0]",
     "itemId": 1170,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -15556,7 +15651,9 @@
     "name": "Knife [4]",
     "itemId": 1202,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -15857,7 +15954,9 @@
     "name": "Lesser Elemental Ring [0]",
     "itemId": 2680,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -16735,7 +16834,9 @@
     "name": "Long Horn [1]",
     "itemId": 1420,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -16834,7 +16935,9 @@
     "name": "Luna Bow [2]",
     "itemId": 1723,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -16853,7 +16956,9 @@
     "name": "Lunakaligo [3]",
     "itemId": 1544,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -17047,7 +17152,9 @@
     "name": "Magma Fist [3]",
     "itemId": 1818,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -17189,8 +17296,10 @@
       "NPC"
     ],
     "categories": [
-      "Server Hat Quest",
-      "uaRO"
+      "Pet Evolution",
+      "Pet",
+      "uaRO",
+      "Server Hat Quest"
     ],
     "uses": [
       {
@@ -17241,7 +17350,9 @@
     "name": "Mandragora Cap [1]",
     "itemId": 5399,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -17576,7 +17687,9 @@
     "name": "Masked Ball",
     "itemId": 10034,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -17595,7 +17708,9 @@
     "name": "Masquerade [0]",
     "itemId": 2291,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -18021,7 +18136,9 @@
     "name": "Meteor Plate [1]",
     "itemId": 2364,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -18040,7 +18157,9 @@
     "name": "Mighty Staff [0]",
     "itemId": 1613,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -18148,7 +18267,9 @@
     "name": "Mink Coat [1]",
     "itemId": 2311,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -18172,7 +18293,9 @@
       "Vend"
     ],
     "categories": [
-      "Pet"
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
     ],
     "uses": [
       {
@@ -18319,7 +18442,7 @@
     "itemId": 10018,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -18340,8 +18463,7 @@
     "itemId": 626,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -18362,7 +18484,7 @@
     "itemId": 10002,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -18810,7 +18932,9 @@
     "name": "Muscle Cutter [2]",
     "itemId": 1176,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -19049,7 +19173,6 @@
     "itemId": 1007,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -19138,7 +19261,9 @@
     "name": "Nepenthes Bow [2]",
     "itemId": 1740,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -20319,7 +20444,9 @@
     "name": "Orleans's Glove [1]",
     "itemId": 2701,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -21139,7 +21266,9 @@
     "name": "Piercing Staff [0]",
     "itemId": 1626,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -21158,7 +21287,9 @@
     "name": "Pike [4]",
     "itemId": 1408,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -21226,7 +21357,9 @@
     "name": "Pinguicula Corsage [1]",
     "itemId": 2745,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -21322,7 +21455,9 @@
     "name": "Platinum Shield [0]",
     "itemId": 2122,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -21535,7 +21670,9 @@
     "name": "Pole Axe [1]",
     "itemId": 1417,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -22361,7 +22498,9 @@
     "name": "Queen's Coronet",
     "itemId": 10032,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -22763,7 +22902,9 @@
     "name": "Red Flame Whip [0]",
     "itemId": 1965,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Official Hat Quest"
     ],
@@ -23015,7 +23156,9 @@
     "name": "Red Scarf",
     "itemId": 10019,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -23279,7 +23422,9 @@
     "name": "Rider Insignia [1]",
     "itemId": 2530,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -23317,7 +23462,9 @@
     "name": "Ring of Death",
     "itemId": 10031,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -23336,7 +23483,9 @@
     "name": "Ring Of Flame Lord [0]",
     "itemId": 2678,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -23355,7 +23504,9 @@
     "name": "Ring Of Resonance [0]",
     "itemId": 2679,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -23448,7 +23599,9 @@
     "name": "Rod [4]",
     "itemId": 1602,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -23561,7 +23714,9 @@
     "name": "Romantic Leaf [0]",
     "itemId": 2270,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -23580,7 +23735,9 @@
     "name": "Rope [4]",
     "itemId": 1951,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Official Hat Quest"
     ],
@@ -24152,8 +24309,7 @@
     "itemId": 625,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -24350,7 +24506,9 @@
     "name": "Sandals [1]",
     "itemId": 2402,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -24428,7 +24586,9 @@
       "Vend"
     ],
     "categories": [
-      "Pet"
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
     ],
     "uses": [
       {
@@ -24612,7 +24772,9 @@
     "name": "Scalpel [3]",
     "itemId": 13027,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -24903,7 +25065,9 @@
     "name": "Sea Witch's Foot [1]",
     "itemId": 1973,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -25156,7 +25320,9 @@
     "name": "Shield of Naga [1]",
     "itemId": 2134,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -25274,7 +25440,9 @@
     "name": "Shoes [1]",
     "itemId": 2404,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -25680,7 +25848,9 @@
     "name": "Skipping Rope [0]",
     "itemId": 1968,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Official Hat Quest"
     ],
@@ -25774,7 +25944,9 @@
     "name": "Skull Helm",
     "itemId": 10001,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -25897,7 +26069,9 @@
       "Vend"
     ],
     "categories": [
-      "Pet"
+      "Pet Evolution",
+      "Pet",
+      "uaRO"
     ],
     "uses": [
       {
@@ -26084,7 +26258,9 @@
     "name": "Sniping Suit [1]",
     "itemId": 2367,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -26423,7 +26599,6 @@
     "itemId": 1067,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -26471,7 +26646,9 @@
     "name": "Soul Staff [0]",
     "itemId": 1472,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -26517,7 +26694,9 @@
     "name": "Spear [4]",
     "itemId": 1405,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -26698,7 +26877,9 @@
     "name": "Spike [0]",
     "itemId": 1523,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -26723,7 +26904,9 @@
     "name": "Spiritual Ring [0]",
     "itemId": 2677,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -26743,8 +26926,7 @@
     "itemId": 12368,
     "itemType": "Consumable",
     "actions": [
-      "Vend",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -26805,7 +26987,7 @@
     "itemId": 10035,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -26854,7 +27036,9 @@
     "name": "Sprint Mail [1]",
     "itemId": 2387,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -26873,7 +27057,9 @@
     "name": "Sprint Ring [0]",
     "itemId": 2744,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -26892,7 +27078,9 @@
     "name": "Sprint Shoes [1]",
     "itemId": 2440,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -27592,7 +27780,9 @@
     "name": "Stem of Nepenthes [2]",
     "itemId": 1979,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -27890,7 +28080,9 @@
     "name": "Stop Post [0]",
     "itemId": 2272,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -28129,7 +28321,9 @@
     "name": "Succubus Horn [0]",
     "itemId": 5066,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -28148,7 +28342,9 @@
     "name": "Sucsamad [0]",
     "itemId": 1236,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],
@@ -28173,7 +28369,9 @@
     "name": "Summer Fan",
     "itemId": 10030,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -28241,7 +28439,7 @@
     "itemId": 2253,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "No Use"
@@ -28546,7 +28744,6 @@
     "itemId": 917,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -28689,7 +28886,9 @@
     "name": "Tassel for Durumagi",
     "itemId": 10026,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -29030,7 +29229,7 @@
     "itemId": 10012,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -29287,7 +29486,7 @@
     "itemId": 10003,
     "itemType": "Equipment",
     "actions": [
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Pet"
@@ -29684,7 +29883,9 @@
     "name": "Unholy Touch [0]",
     "itemId": 1263,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -29703,7 +29904,9 @@
     "name": "Unicorn Horn [0]",
     "itemId": 2257,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -30145,7 +30348,9 @@
     "name": "Weihna [2]",
     "itemId": 13047,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -30283,7 +30488,9 @@
     "name": "Whip of Balance [3]",
     "itemId": 1980,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -30549,7 +30756,9 @@
     "name": "Wild Beast Claw [1]",
     "itemId": 1268,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -30568,7 +30777,9 @@
     "name": "Wild Flower",
     "itemId": 10009,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Pet"
     ],
@@ -30811,7 +31022,9 @@
     "name": "Wing Staff [0]",
     "itemId": 1616,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],
@@ -31060,7 +31273,6 @@
     "itemId": 955,
     "itemType": "Misc",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -31108,7 +31320,6 @@
     "itemId": 618,
     "itemType": "Consumable",
     "actions": [
-      "Keep",
       "Vend"
     ],
     "categories": [
@@ -32082,7 +32293,9 @@
     "name": "Zweihander [0]",
     "itemId": 1168,
     "itemType": "Equipment",
-    "actions": [],
+    "actions": [
+      "Vend"
+    ],
     "categories": [
       "Other Quest"
     ],

@@ -109,6 +109,13 @@ for (const item of items) {
   if (/ Card( \(.+\))?$/.test(item.name) && !item.categories?.includes('Card')) {
     warnings.push(`${item.name}: looks like a card, so it should have the "Card" category`);
   }
+  // Pet evolution materials carry "Pet Evolution", "Pet" and "uaRO" (see AGENTS.md).
+  if (item.uses?.some((use) => / Pet Evolution$/.test(use.for))) {
+    const missing = ['Pet Evolution', 'Pet', 'uaRO'].filter((category) => !item.categories?.includes(category));
+    if (missing.length) {
+      warnings.push(`${item.name}: it's a pet evolution material, so it should have the ${missing.map((c) => `"${c}"`).join(', ')} categor${missing.length > 1 ? 'ies' : 'y'}`);
+    }
+  }
   if (item.categories?.includes('Card') && item.actions?.includes('NPC')) {
     errors.push(`${item.name}: cards always sell to players, so use "Vend" instead of "NPC"`);
   }

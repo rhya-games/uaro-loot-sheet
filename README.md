@@ -32,7 +32,7 @@ While `npm run dev` is running, the loot page has an **Admin** button next
 to Share. Turn it on to type vend prices straight into the table: press Enter (or
 click away) to save to `src/data/loot.json`, which also marks the item as
 verified today. Shorthand works: `12k`, `1.5m`. Type `0` or `none` when
-nobody was selling it; the site shows it as "No sellers". Escape puts the old price
+nobody was selling it. Escape puts the old price
 back. Each item also shows the action suggested by its prices (hover it to
 see why). Saving a price also saves the suggested action. If a suggestion
 changes because of another item's price, click **Use** to take it. After
@@ -97,4 +97,4 @@ scripts/              Data import and validation tools
 .github/              Data check on every PR, and the item report form
 ```
 
-Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? Point at an item's row and click the flag (Report Issue) in the Verified column, or see the site's Feedback page.
+Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? Point at an item's row and click the flag (Report Issue) at the end of the row, or see the site's Feedback page.

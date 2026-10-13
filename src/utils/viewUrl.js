@@ -31,7 +31,6 @@ const SORT_NAMES = {
   avgVend: 'vend',
   npcSellPrice: 'npc',
   npcBuyable: 'shop',
-  lastVerified: 'verified',
 };
 const SORT_KEYS = Object.fromEntries(Object.entries(SORT_NAMES).map(([key, name]) => [name, key]));
 
