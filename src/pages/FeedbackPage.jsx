@@ -18,7 +18,7 @@ export default function FeedbackPage() {
       <Section id="item" title="Report a problem with one item">
         <p>
           On the <PageLink href={ROUTES.loot}>Loot Sheet</PageLink>, point at the item's row and click the <strong>flag</strong>
-          (Report Issue) that appears in the Verified column. It opens a short GitHub form with the item already filled in.
+          (Report Issue) that appears at the end of the row. It opens a short GitHub form with the item already filled in.
         </p>
         <p className="text-muted">Best for: wrong actions, categories, uses, or prices. Needs a free GitHub account.</p>
       </Section>

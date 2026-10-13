@@ -37,6 +37,32 @@ describe('suggestSale', () => {
     expect(suggestSale(item({ categories: ['Card'] })).action).toBe('Vend');
   });
 
+  it('always says Vend for food of +6 or more, even without a price', () => {
+    const strong = item({ categories: ['Cooking'], notes: '+6 INT for 20 minutes' });
+    expect(suggestSale(strong).action).toBe('Vend');
+    expect(suggestSale({ ...strong, avgVend: 10 }).action).toBe('Vend'); // below the NPC price
+    expect(suggestSale({ ...strong, notes: '+5 INT for 20 minutes' })).toBeNull();
+  });
+
+  it('says Vend for equipment NPCs pay under 3,000z for, until it has a vend price', () => {
+    const gear = { itemType: 'Equipment', sellValue: 1000 };
+    expect(suggestSale(item(gear)).action).toBe('Vend');
+    expect(suggestSale(item({ ...gear, avgVend: 500 })).action).toBe('NPC');
+    expect(suggestSale(item({ ...gear, sellValue: 3000 }))).toBeNull();
+  });
+
+  it('says Vend for a taming item NPCs pay under 1,000z for', () => {
+    const taming = { categories: ['Pet'], notes: 'Poring Taming Item', sellValue: 500 };
+    expect(suggestSale(item(taming)).action).toBe('Vend');
+    expect(suggestSale(item({ ...taming, sellValue: 1000 }))).toBeNull();
+  });
+
+  it('says Junk for a pet accessory nobody is selling, but not for other items with no sellers', () => {
+    const accessory = item({ notes: 'Poring Pet accessory', categories: ['Pet'], avgVend: 0 });
+    expect(createSuggester([accessory])(accessory).actions).toEqual(['Junk']);
+    expect(suggestSale(item({ avgVend: 0 })).action).toBe('NPC');
+  });
+
   it('says NPC for items NPCs sell', () => {
     expect(suggestSale(item({ npcBuyable: 'yes', avgVend: 9999 })).action).toBe('NPC');
   });

@@ -39,7 +39,7 @@ export function itemReportUrl(item) {
 }
 
 /**
- * Actions over the Verified column of each table row (shown on hover or focus) and at
+ * Actions in the last column of each table row (shown on hover or focus) and at
  * the top right of each card.
  * With one action it shows as its icon (with a tooltip); with two or more
  * they collapse into a ⋮ menu. To add one, add an entry:

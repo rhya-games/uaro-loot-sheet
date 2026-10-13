@@ -47,6 +47,75 @@ const NOT_TRADEABLE = new Set(overrides.tradeRestrictions.notTradeable.items.map
 /** Players can trade this item (uaro-overrides.json, tradeRestrictions.notTradeable). */
 export const isTradeable = (item) => !NOT_TRADEABLE.has(item.itemId);
 
+export const isCard = (item) => item.categories.includes('Card');
+
+/**
+ * Cooked food that gives +6 or more ("+9 INT for 20 minutes"). Players pay
+ * far more than NPCs for it, so, like cards, it always sells to players.
+ */
+export function isStrongFood(item) {
+  if (!item.categories.includes('Cooking')) return false;
+  const stat = /^\+(\d+) [A-Z]{3} for \d+ minutes$/.exec(item.notes ?? '');
+  return Boolean(stat) && Number(stat[1]) >= 6;
+}
+
+/** A pet taming item (notes "<Pet> Taming Item"). */
+export const isTamingItem = (item) => item.categories.includes('Pet') && /Taming Item$/.test(item.notes ?? '');
+
+/**
+ * What an NPC pays (with Overcharge, in zeny) below which an item is worth
+ * vending, for the kinds of item players are known to pay more for.
+ */
+const CHEAP_EQUIPMENT_LIMIT = 3000;
+const CHEAP_TAMING_ITEM_LIMIT = 1000;
+
+/**
+ * Equipment under 3,000z at NPCs, or a taming item under 1,000z, that has no
+ * vend price yet. A player price is very likely higher, so it's treated as
+ * vend until a price says otherwise. A known price (even 0) ends this.
+ */
+export function isCheapUnpriced(item) {
+  if (item.avgVend != null) return false;
+  const npc = npcSellPrice(item) ?? Infinity;
+  if (item.itemType === 'Equipment') return npc < CHEAP_EQUIPMENT_LIMIT;
+  return isTamingItem(item) && npc < CHEAP_TAMING_ITEM_LIMIT;
+}
+
+/**
+ * Items that sell to players without a price to go on: cards, strong food,
+ * and cheap equipment or taming items with no vend price yet.
+ */
+export const alwaysSoldToPlayers = (item) => isCard(item) || isStrongFood(item) || isCheapUnpriced(item);
+
+/**
+ * A pet accessory (notes "<Pet> Pet accessory") that nobody is selling
+ * (vend price 0). Not worth anything to players, so it's Junk even though an
+ * NPC would pay a few zeny.
+ */
+export const isUnsoldPetAccessory = (item) => item.avgVend === 0 && /Pet accessory$/.test(item.notes ?? '');
+
+/**
+ * Which way of selling pays more, when there's a vend price to go on:
+ * "vend" (players pay more than the NPC) or "npc" (the NPC pays the same or
+ * more, or nobody is selling it to players). null when it can't be told:
+ * NPCs sell it, it can't be traded, the vend price is unknown, or neither
+ * pays anything. The site shows a star on the winner instead of the vend
+ * price. An NPC that won't buy it counts as 0z, like the suggester does.
+ *
+ * Cards, strong food (+6 or more) and cheap equipment or taming items with no
+ * vend price are "vend", even before they have a price (see alwaysSoldToPlayers). Pet accessories nobody is selling
+ * are junk (see isUnsoldPetAccessory). Neither gets the NPC star.
+ */
+export function bestSale(item) {
+  if (isSoldByNpc(item) || !isTradeable(item)) return null;
+  if (alwaysSoldToPlayers(item)) return 'vend';
+  if (item.avgVend == null) return null;
+  if (isUnsoldPetAccessory(item)) return null;
+  const npc = npcSellPrice(item) ?? 0;
+  if (item.avgVend > npc) return 'vend';
+  return npc > 0 ? 'npc' : null;
+}
+
 /** Just the number (for sorting). null when it can't be sold or is unknown. */
 export function npcSellPrice(item) {
   const info = npcSellInfo(item);

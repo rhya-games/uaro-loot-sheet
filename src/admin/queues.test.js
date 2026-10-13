@@ -211,6 +211,13 @@ describe('suspicious-values', () => {
     expect(run('suspicious-values', [item({ actions: ['NPC'], avgVend: 50 })])).toEqual([]);
   });
 
+  it('flags Keep when only a job quest uses the item', () => {
+    const only = item({ actions: ['Keep', 'Vend'], uses: [{ for: 'Archer Job Quest' }] });
+    expect(run('suspicious-values', [only])[0].reasons).toEqual(['Keep, but only a job quest uses it']);
+    const more = item({ actions: ['Keep', 'Vend'], uses: [{ for: 'Archer Job Quest' }, { for: 'Some Hat' }] });
+    expect(run('suspicious-values', [more])).toEqual([]);
+  });
+
   it('does not flag Keep on a pet or dungeon quest item: it is kept for that', () => {
     const tame = item({ actions: ['Keep', 'Vend'], categories: ['Pet'], notes: 'Bongun Taming Item' });
     const plate = item({ actions: ['Keep', 'Vend'], categories: ['Dungeon Quest'] });

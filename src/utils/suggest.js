@@ -1,5 +1,5 @@
 import targetData from '../data/use-targets.json' with { type: 'json' };
-import { isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
+import { alwaysSoldToPlayers, isCard, isCheapUnpriced, isSoldByNpc, isTradeable, isUnsoldPetAccessory, npcSellPrice } from './prices.js';
 
 /**
  * Suggested actions, worked out from prices instead of set by hand.
@@ -9,8 +9,11 @@ import { isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  * percentage rule left real vend prices as NPC):
  *   - Vend when it pays more than the NPC price.
  *   - NPC otherwise, and always for items NPCs sell or that can't be traded.
- *   - Cards are always Vend, even with no price yet: players pay far more
- *     than NPCs for any card.
+ *   - Cards and cooked food of +6 or more are always Vend, even with no
+ *     price yet: players pay far more than NPCs for them.
+ *   - Equipment an NPC pays under 3,000z for, and taming items under 1,000z,
+ *     with no vend price yet, are Vend too: players almost always pay more.
+ *     A vend price replaces this.
  *
  * Keeping: for each "Used For" target, compare what the finished thing is
  * worth with what all its parts would sell for. If the finished thing is
@@ -35,7 +38,9 @@ import { isSoldByNpc, isTradeable, npcSellPrice } from './prices.js';
  *     the item sells by price. They're still listed under "Used For" (see
  *     isJobQuest).
  *
- * Junk: nothing uses it, and nobody pays anything for it.
+ * Junk: nothing uses it, and nobody pays anything for it. Pet accessories
+ * nobody is selling (vend price 0) are Junk too, even though an NPC pays a
+ * few zeny for them.
  */
 
 /**
@@ -78,8 +83,17 @@ export function suggestSale(item) {
   const vend = tradeable ? item.avgVend : null;
   const floor = npc ?? 0;
 
-  if (tradeable && item.categories.includes('Card')) {
-    return { action: 'Vend', price: vend, reason: 'Cards always sell to players' + (vend != null ? ` (${fmt(vend)})` : '') };
+  if (tradeable && isUnsoldPetAccessory(item)) {
+    return { action: null, price: 0, reason: 'No one is selling this pet accessory, so it’s junk' };
+  }
+
+  if (tradeable && alwaysSoldToPlayers(item)) {
+    const what = isCard(item)
+      ? 'Cards always sell to players'
+      : isCheapUnpriced(item)
+      ? 'NPCs pay very little for it, so it sells to players until a vend price says otherwise'
+      : 'Food of +6 or more always sells to players';
+    return { action: 'Vend', price: vend, reason: what + (vend != null ? ` (${fmt(vend)})` : '') };
   }
 
   if (vend != null && vend > floor) {

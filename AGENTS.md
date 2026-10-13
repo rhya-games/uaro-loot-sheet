@@ -203,11 +203,11 @@ Match similar existing items. Look them up in loot.json first.
   `text-muted`, `bg-surface`, `bg-hover`, `border-line`, ...) with light and
   dark values. Don't use raw grays. Text uses only three grays: `fg`,
   `body`, `muted`. For anything quieter, lower the opacity.
-- Icons: Heroicons outline only, line weight 2 (set once in `index.css`).
-  `size-5` (20px) for icons on their own, `size-4` (16px) inside a line of text.
+- Icons: Heroicons outline only, line weight 2 (set once in `index.css`),
+  except the solid best-price star (`BestStar`). `size-5` (20px) for icons
+  on their own, `size-4` (16px) inside a line of text.
 - Empty values: `?` (`Unknown` in `components/StatusIcons.jsx`) means not
-  verified yet; ✕ means it can't be done; "None", "No sellers" and "No
-  buyers" mean checked and empty. The quiet ones use the `empty-value`
+  verified yet; ✕ means it can't be done; "None" means checked and empty. The quiet ones use the `empty-value`
   utility (muted at 60% opacity). In legends and guides wrap a mark in
   `Mark` so it shows at full strength. Words for players: say "verified",
   not "someone/nobody checked".
