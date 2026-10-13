@@ -52,7 +52,7 @@ export const CHANGELOG = [
     date: '2026-10-13',
     title: 'Vend prices removed (sorry), and a star shows the best price',
     changes: [
-      { type: 'Removed', text: 'Vend prices and the Verified column. The server’s rules don’t allow us to publish them, and we’re sorry.' },
+      { type: 'Removed', text: 'Vend prices and the Verified column. The server’s rules don’t allow me to publish them, and I’m sorry.' },
       { type: 'Added', text: 'A green star shows the best way to sell: in Vend when players pay more than an NPC, next to the NPC price when the NPC pays the most.' },
       { type: 'Removed', text: '@whobuy prices, the Whobuy column and the Whobuy action.' },
       { type: 'Changed', text: 'Cards, food of +6 or more, cheap equipment and cheap taming items say Vend, until a price says otherwise.' },

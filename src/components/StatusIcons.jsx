@@ -49,14 +49,16 @@ export function Unknown() {
 /**
  * A green star on whichever way of selling pays the most (see bestSale in
  * utils/prices.js). It stands in for the vend price, which isn't shown.
- * `label` is the tooltip and what screen readers say. `className` sets the
- * icon size (size-5 on its own, size-4 beside a value).
+ * `label` is the tooltip and what screen readers say. It's the same size
+ * (20px) in the Vend column, beside the NPC price and in text. Set `inText`
+ * when it sits inside a sentence, so it's centered on the line (in a table
+ * cell the default lines up with the other icons).
  */
-export function BestStar({ label, className = 'size-5' }) {
+export function BestStar({ label, inText = false }) {
   return (
-    <Tooltip text={label}>
+    <Tooltip text={label} className={inText ? 'inline-flex align-middle' : 'inline-flex'}>
       <span tabIndex={0} className="inline-flex rounded text-emerald-700 dark:text-emerald-400">
-        <StarIcon className={className} aria-hidden="true" />
+        <StarIcon className="size-5" aria-hidden="true" />
         <span className="sr-only">{label}</span>
       </span>
     </Tooltip>
