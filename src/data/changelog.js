@@ -59,6 +59,7 @@ export const CHANGELOG = [
       { type: 'Changed', text: 'Actions updated for 131 items, including 3 pet accessories nobody sells, which are now Junk.' },
       { type: 'Fixed', text: 'Items only needed for a job quest no longer say Keep (8 items).' },
       { type: 'Fixed', text: 'Pet evolution materials now carry the Pet Evolution, Pet and uaRO categories (8 items).' },
+      { type: 'Fixed', text: 'Assassin Mask was listed twice. The Advanced Assassin Mask quest now points to the one that drops.' },
     ],
   },
   {

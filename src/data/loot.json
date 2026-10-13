@@ -1645,13 +1645,13 @@
     "npcBuyable": "no"
   },
   {
-    "id": "assassin-mask",
-    "name": "Assassin Mask",
-    "itemId": 5054,
+    "id": "assassin-mask-0",
+    "name": "Assassin Mask [0]",
+    "itemId": 5096,
     "itemType": "Equipment",
     "actions": [
       "Keep",
-      "NPC"
+      "Vend"
     ],
     "categories": [
       "Server Hat Quest",
@@ -1663,25 +1663,6 @@
         "qty": 1
       }
     ],
-    "notes": "",
-    "links": [],
-    "vend": "none",
-    "sellValue": 10,
-    "sellSource": "hercules",
-    "npcBuyable": "no"
-  },
-  {
-    "id": "assassin-mask-0",
-    "name": "Assassin Mask [0]",
-    "itemId": 5096,
-    "itemType": "Equipment",
-    "actions": [
-      "Vend"
-    ],
-    "categories": [
-      "No Use"
-    ],
-    "uses": [],
     "notes": "",
     "links": [],
     "vend": "higher",
