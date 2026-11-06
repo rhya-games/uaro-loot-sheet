@@ -11,11 +11,11 @@
  *                        the old src/data/use-targets.json)
  *   loot-sheet.csv       the original sheet export, for `npm run import:csv`
  *
- * loot.json only keeps `vend`, how the vend price compares with the NPC
- * price (see vendFlag in src/utils/prices.js). `npm run sync:vend` works it
- * out again from the private prices. Without these files (CI, other
- * contributors) everything still works; the checks that need prices are
- * skipped and the stored `vend` values are used as they are.
+ * loot.json only keeps `vend`, how vending compares with the NPC price. It is
+ * set by hand: prices are supplementary and only fill it in while it's
+ * "unknown" (see vendFlag in src/utils/prices.js, `npm run sync:vend`).
+ * Without these files (CI, other contributors) everything still works; the
+ * checks that need prices are skipped and the stored `vend` values are used.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';

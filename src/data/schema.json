@@ -119,7 +119,7 @@
           }
         },
         "vend": {
-          "description": "How the vend price compares with the NPC price: \"unknown\" (no vend price yet), \"none\" (checked, nobody was selling it), \"higher\" (players pay more than the NPC) or \"lower\" (the same or less). The prices themselves are private and not in the repo; `npm run sync:vend` works this out from them.",
+          "description": "How the vend price compares with the NPC price: \"unknown\" (no vend price yet), \"none\" (checked, nobody was selling it), \"higher\" (players pay more than the NPC) or \"lower\" (the same or less). The maintainer sets it by hand; prices are private and only fill it in while it is \"unknown\" (`npm run sync:vend`).",
           "enum": [
             "unknown",
             "none",
@@ -128,7 +128,7 @@
           ]
         },
         "sellValue": {
-          "description": "Zeny an NPC pays for one, before any skills (the item's base sell price). Filled in by `npm run sync:prices`. The NPC column adds the Overcharge bonus from game-rules.json, unless uaro-overrides.json says otherwise.",
+          "description": "Zeny an NPC pays for one, before any skills (the item's base sell price). Filled in by `npm run sync:prices`. The Sell to NPC column adds the Overcharge bonus from game-rules.json, unless uaro-overrides.json says otherwise.",
           "type": [
             "integer",
             "null"

@@ -60,14 +60,16 @@ export function isStrongFood(item) {
 }
 
 /**
- * How an item's vend price compares with what an NPC pays, as one of:
+ * How a vend price compares with what an NPC pays, as one of:
  *   "unknown"  no vend price yet
  *   "none"     checked, and nobody was selling it (price 0)
  *   "higher"   players pay more than the NPC
  *   "lower"    players pay the same or less
- * This is all the public site gets: the vend prices themselves are kept in
- * a private file (see scripts/private-data.mjs) and loot.json only stores
- * this result, in the item's `vend` field.
+ * Only a hint: the item's `vend` field in loot.json is what counts, and it's
+ * set by hand (prices are supplementary; see vendState). The scripts use this
+ * to fill in `vend` where it's still "unknown", and to report differences.
+ * The vend prices themselves are kept in a private file (see
+ * scripts/private-data.mjs).
  */
 export function vendFlag(item) {
   if (item.avgVend == null) return 'unknown';
@@ -76,11 +78,11 @@ export function vendFlag(item) {
 }
 
 /**
- * The item's vend state. Worked out from the price while it's there (admin
- * mode and the scripts load the private prices, so it's live while editing),
- * and read from the stored `vend` flag otherwise (the published site).
+ * The item's vend state: the stored `vend` flag, set by hand. A private price
+ * never changes it (prices are extra information, not what decides), so the
+ * site, admin mode and the scripts all agree.
  */
-export const vendState = (item) => (item.avgVend !== undefined ? vendFlag(item) : (item.vend ?? 'unknown'));
+export const vendState = (item) => item.vend ?? 'unknown';
 
 /** A pet taming item (notes "<Pet> Taming Item"). */
 export const isTamingItem = (item) => item.categories.includes('Pet') && /Taming Item$/.test(item.notes ?? '');
@@ -105,10 +107,20 @@ export function isCheapUnpriced(item) {
 }
 
 /**
- * Items that sell to players without a price to go on: cards, strong food,
- * and cheap equipment or taming items with no vend price yet.
+ * An item something uses, with no vend verdict yet. An item with a purpose is
+ * bought by players, so it's treated as vend until `vend` says otherwise
+ * ("lower": the NPC pays the same or more; "none": nobody buys it).
  */
-export const alwaysSoldToPlayers = (item) => isCard(item) || isStrongFood(item) || isCheapUnpriced(item);
+export const isUsedUnrated = (item) =>
+  vendState(item) === 'unknown' && item.uses.length > 0 && !item.categories.includes('No Use');
+
+/**
+ * Items that sell to players without a price to go on: cards, strong food,
+ * cheap equipment or taming items, and items with a use, while `vend` is
+ * still "unknown".
+ */
+export const alwaysSoldToPlayers = (item) =>
+  isCard(item) || isStrongFood(item) || isCheapUnpriced(item) || isUsedUnrated(item);
 
 /**
  * A pet accessory (notes "<Pet> Pet accessory") that nobody is selling

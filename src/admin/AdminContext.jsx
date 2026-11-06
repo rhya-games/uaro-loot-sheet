@@ -65,7 +65,7 @@ async function postReviewed(id, entry) {
 const sameActions = (a, b) => a.length === b.length && a.every((action) => b.includes(action));
 
 /** The fields a save can change, so undo can put them all back. */
-const SAVED_FIELDS = ['avgVend', 'lastVerified', 'verificationNotes', 'actions'];
+const SAVED_FIELDS = ['avgVend', 'lastVerified', 'verificationNotes', 'actions', 'vend'];
 const savedFields = (item) => Object.fromEntries(SAVED_FIELDS.map((field) => [field, item[field]]));
 
 /** A price as the snackbar says it: 12000 -> "12,000z", 0 -> "None", null -> "no price". */
@@ -157,7 +157,8 @@ export function AdminProvider({ children }) {
     const before = new Map();
     const replace = (saved) => replaceItem(saved, before);
     const saved = replace(await postItem(id, changes));
-    if ('avgVend' in changes) await applySuggestion(saved, replace);
+    // A new price or a new yes/no on Vend can change the suggested actions.
+    if ('avgVend' in changes || 'vend' in changes) await applySuggestion(saved, replace);
 
     const old = before.get(id);
     const prices = Object.keys(FIELD_NAMES).filter((field) => field in changes);
@@ -167,7 +168,7 @@ export function AdminProvider({ children }) {
     const actionsChanged = !sameActions(old.actions, latest.current.find((item) => item.id === id).actions);
     setLastChange({
       id: Date.now(),
-      message: `${saved.name}: ${what}${prices.length && actionsChanged ? ' · actions updated' : ''}`,
+      message: `${saved.name}: ${what}${(prices.length || 'vend' in changes) && actionsChanged ? ' · actions updated' : ''}`,
       undo: () => restoreItems(before),
     });
   }, [applySuggestion, replaceItem, restoreItems]);

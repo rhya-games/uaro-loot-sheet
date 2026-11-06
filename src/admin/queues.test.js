@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { createSuggester } from '../utils/suggest.js';
 import { QUEUES, canHavePrice, isReviewed, pricePriority, targetPriority, queueCounts, targetsNeedingValue } from './queues.js';
+import { withVend } from '../utils/testing.js';
 
 /** A made-up item; itemId 1 isn't in any uaRO override list. */
-const item = (fields) => ({
+const item = (fields) => withVend({
   name: 'Test Item',
   itemId: 1,
   itemType: 'Misc',
