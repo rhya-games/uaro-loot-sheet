@@ -4,13 +4,11 @@ import { highlightFor } from '../utils/highlight.js';
 import ItemUses from './ItemUses.jsx';
 import CopyItemId from './CopyItemId.jsx';
 import ItemIcon from './ItemIcon.jsx';
-import RowActions from './RowActions.jsx';
 import Tooltip from './Tooltip.jsx';
 import { NpcBuyable } from './StatusIcons.jsx';
 import NpcSellPrice from './NpcSellPrice.jsx';
 import PriceCell from '../admin/PriceCell.jsx';
 import SuggestedActions from '../admin/SuggestedActions.jsx';
-import { useAdmin } from '../admin/useAdmin.js';
 import { OVERCHARGE_LEVEL, OVERCHARGE_PERCENT } from '../utils/prices.js';
 
 /**
@@ -85,49 +83,26 @@ const COLUMNS = [
   {
     label: 'Vend',
     sortKey: 'avgVend',
-    title: 'Star: vending pays more than an NPC · –: it doesn’t\n✕ can’t be vended · ?: not checked yet\nVend prices aren’t shown because of server rules (see About)',
+    title: 'Star: vending pays more than an NPC · –: it doesn’t\n✕ can’t be vended, or not checked yet\nVend prices aren’t shown because of server rules (see About)',
     numeric: true,
-    render: (item) => <PriceCell item={item} field="avgVend" />,
+    render: (item) => <PriceCell item={item} />,
   },
   {
-    label: 'NPC',
+    label: 'Sell to NPC',
     sortKey: 'npcSellPrice',
     title: `What an NPC pays you, with Overcharge ${OVERCHARGE_LEVEL} (+${OVERCHARGE_PERCENT}%)\nStar: an NPC pays the most`,
     numeric: true,
     render: (item) => <NpcSellPrice item={item} />,
   },
   {
-    label: 'NPC Shop',
+    label: 'Buy at NPC',
     sortKey: 'npcBuyable',
     numeric: true, // right-aligned, like the price columns
     className: 'w-px', // as narrow as the header text allows
     title: 'Whether NPC shops sell the item',
     render: (item) => <NpcBuyable item={item} />,
   },
-  {
-    label: 'Report issue',
-    hideLabel: true,
-    className: 'w-px', // as narrow as the flag allows
-    render: (item) => <QuietRowActions item={item} />,
-  },
 ];
-
-/**
- * Report Issue, in its own narrow column at the end of the row. It's always
- * there but quiet (faded, like the "?" mark) and comes to full strength under the
- * pointer or keyboard focus. The negative margin keeps it from making the
- * row taller. Hidden in admin mode, where you fix things instead of
- * reporting them.
- */
-function QuietRowActions({ item }) {
-  const { enabled } = useAdmin();
-  if (enabled) return null;
-  return (
-    <div className="-my-1.5 opacity-50 transition-opacity duration-150 hover:opacity-100 focus-within:opacity-100 motion-reduce:transition-none">
-      <RowActions item={item} />
-    </div>
-  );
-}
 
 /**
  * Items shown as a table, like the original Google Sheet.
@@ -247,7 +222,7 @@ function SortButton({ column, direction, onSort }) {
 
   // Headers stick to the top of the window, so their tooltips open below.
   return column.title ? (
-    <Tooltip text={column.title} placement="bottom" className="flex w-full">
+    <Tooltip text={column.title} className="flex w-full">
       {button}
     </Tooltip>
   ) : (

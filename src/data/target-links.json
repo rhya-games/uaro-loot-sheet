@@ -1,0 +1,13 @@
+{
+  "about": "A page with more about a \"Used For\" target, keyed by the exact target name. The loot table shows a small link icon after the name. Hand-edited.",
+  "links": {
+    "Doll Quest": {
+      "label": "Elin's doll trades (Alberta page)",
+      "url": "https://irowiki.org/wiki/Alberta#Trade_NPCs"
+    },
+    "Peace for Arunafeltz Quest": {
+      "label": "Peace for Arunafeltz Quest page",
+      "url": "https://irowiki.org/wiki/Peace_for_Arunafeltz_Quest"
+    }
+  }
+}

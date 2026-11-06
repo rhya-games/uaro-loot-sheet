@@ -2074,6 +2074,10 @@
       {
         "for": "Sign Quest",
         "qty": null
+      },
+      {
+        "for": "Doll Quest",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -4816,12 +4820,18 @@
     "itemId": 742,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "NPC"
     ],
     "categories": [
-      "Dungeon Quest"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Doll Quest",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "vend": "unknown",
@@ -20815,9 +20825,8 @@
         "qty": 1
       },
       {
-        "for": "Alberta Quests",
-        "qty": 1,
-        "note": "Elin"
+        "for": "Doll Quest",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -20985,12 +20994,18 @@
     "itemId": 754,
     "itemType": "Misc",
     "actions": [
+      "Keep",
       "Vend"
     ],
     "categories": [
-      "Dungeon Quest"
+      "Other Quest"
     ],
-    "uses": [],
+    "uses": [
+      {
+        "for": "Doll Quest",
+        "qty": 1
+      }
+    ],
     "notes": "",
     "links": [],
     "vend": "unknown",
@@ -21922,9 +21937,8 @@
         "qty": 1
       },
       {
-        "for": "Alberta Quests",
-        "qty": 1,
-        "note": "Elin"
+        "for": "Doll Quest",
+        "qty": 1
       }
     ],
     "notes": "",
@@ -22936,7 +22950,7 @@
     ],
     "uses": [
       {
-        "for": "New World Quest",
+        "for": "Peace for Arunafeltz Quest",
         "qty": 1
       }
     ],
@@ -29851,6 +29865,10 @@
       {
         "for": "Sign Quest",
         "qty": null
+      },
+      {
+        "for": "Doll Quest",
+        "qty": 1
       }
     ],
     "notes": "",

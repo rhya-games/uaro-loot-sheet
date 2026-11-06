@@ -182,7 +182,7 @@
     ]
   },
   "notSellableToNpc": {
-    "about": "Items NPCs won't buy on purpose (currencies, event coins). The NPC column shows ✕ instead of a price.",
+    "about": "Items NPCs won't buy on purpose (currencies, event coins). The Sell to NPC column shows ✕ instead of a price.",
     "items": [
       {
         "itemId": 11605,

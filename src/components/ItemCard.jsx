@@ -3,7 +3,6 @@ import { ActionBadges, CategoryBadges } from './ItemBadges.jsx';
 import ItemUses from './ItemUses.jsx';
 import CopyItemId from './CopyItemId.jsx';
 import ItemIcon from './ItemIcon.jsx';
-import RowActions from './RowActions.jsx';
 import { NpcBuyable, VendStar } from './StatusIcons.jsx';
 import NpcSellPrice from './NpcSellPrice.jsx';
 import { OVERCHARGE_LEVEL } from '../utils/prices.js';
@@ -39,9 +38,6 @@ export default memo(function ItemCard({ item, onSelectUse, highlightUses }) {
         </div>
         <div className="flex flex-wrap items-center gap-1">
           <ActionBadges actions={item.actions} />
-          <span className="ml-2">
-            <RowActions item={item} />
-          </span>
         </div>
       </header>
 
@@ -57,8 +53,8 @@ export default memo(function ItemCard({ item, onSelectUse, highlightUses }) {
 
       <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line-faint pt-3 text-xs sm:grid-cols-3">
         <Stat label="Vend" value={<VendStar item={item} />} />
-        <Stat label={`NPC (OC ${OVERCHARGE_LEVEL})`} value={<NpcSellPrice item={item} />} />
-        <Stat label="NPC Shop" value={<NpcBuyable item={item} />} />
+        <Stat label={`Sell to NPC (OC ${OVERCHARGE_LEVEL})`} value={<NpcSellPrice item={item} />} />
+        <Stat label="Buy at NPC" value={<NpcBuyable item={item} />} />
       </dl>
     </article>
   );

@@ -108,7 +108,7 @@ export function categoryChip(category) {
 
 /** Human-friendly text for the npcBuyable field. */
 export const NPC_BUYABLE_LABELS = {
-  yes: 'Yes',
+  yes: 'Can be bought from NPC',
   no: 'No',
-  'npc-only': 'NPC Only',
+  'npc-only': 'Can be bought from NPC (NPC only)',
 };

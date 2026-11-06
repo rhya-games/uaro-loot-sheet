@@ -13,7 +13,7 @@ export default function ThemeToggle() {
   const Icon = dark ? SunIcon : MoonIcon;
 
   return (
-    <Tooltip text={label} placement="bottom">
+    <Tooltip text={label}>
       <button
         type="button"
         onClick={() => {

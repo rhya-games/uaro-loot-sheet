@@ -1,6 +1,6 @@
-import { LockClosedIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { LockClosedIcon } from '@heroicons/react/24/outline';
 import Tooltip from './Tooltip.jsx';
-import { BEST_NPC_LABEL, BestStar, Unknown } from './StatusIcons.jsx';
+import { BEST_NPC_LABEL, BestStar, NoIcon, Unknown } from './StatusIcons.jsx';
 import { formatZeny } from '../utils/format.js';
 import { OVERCHARGE_LEVEL, bestSale, isCard, npcSellInfo } from '../utils/prices.js';
 
@@ -10,9 +10,9 @@ import { OVERCHARGE_LEVEL, bestSale, isCard, npcSellInfo } from '../utils/prices
  *   uaRO fixed      "2,000z" + lock icon (tooltip explains Overcharge doesn't apply)
  *   can't be sold   ✕ icon (tooltip explains why)
  *   card            ✕ icon: cards sell to players, so the NPC price isn't shown
- *   unknown         "?" icon
+ *   unknown         ✕ icon ("Not verified yet" tooltip)
  *
- * A green star goes left of the value when selling to an NPC pays the most
+ * A gold star goes left of the value when selling to an NPC pays the most
  * (see bestSale). Where vending pays the most the star is in the Vend column.
  *
  * The special cases can be focused (Tab) so their tooltip is reachable by keyboard.
@@ -22,25 +22,11 @@ export default function NpcSellPrice({ item }) {
   const star = bestSale(item) === 'npc' && <BestStar label={BEST_NPC_LABEL} />;
 
   if (isCard(item)) {
-    return (
-      <Tooltip text="Cards sell to players, not NPCs">
-        <span tabIndex={0} className="inline-flex items-center rounded text-muted">
-          <XMarkIcon className="size-5" aria-hidden="true" />
-          <span className="sr-only">Cards sell to players, not NPCs</span>
-        </span>
-      </Tooltip>
-    );
+    return <NoIcon label="Cards sell to players, not NPCs" tooltip="Cards sell to players, not NPCs" />;
   }
 
   if (info.kind === 'not-sellable') {
-    return (
-      <Tooltip text={`Can't be sold to NPCs (${info.reason})`}>
-        <span tabIndex={0} className="inline-flex items-center rounded text-muted">
-          <XMarkIcon className="size-5" aria-hidden="true" />
-          <span className="sr-only">Can't be sold to NPCs</span>
-        </span>
-      </Tooltip>
-    );
+    return <NoIcon label="Can't be sold to NPCs" tooltip={`Can't be sold to NPCs (${info.reason})`} />;
   }
 
   if (info.kind === 'modified') {

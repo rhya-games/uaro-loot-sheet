@@ -17,11 +17,13 @@ import { ACTIVITIES } from '../utils/activities.js';
  *   filters    - current filter state (see EMPTY_FILTERS in utils/filter.js)
  *   onChange   - called with the new filter state
  *   keepFor - activity ids the player keeps items for (see utils/activities.js)
+ *   keepOn  - "I keep items" is on (off hides the list; nothing is kept for)
  *   keepForDisabled - true in admin mode, where every activity counts
  *   onKeepForChange - called with the new list of activity ids
+ *   onKeepOnChange  - called with true or false from the "I keep items" switch
  *   onClose    - optional: shows a close (×) button that calls this
  *   resultCount, totalCount - items shown, and all items ("709 of 1,094 items")
- *   activeCount - how many filters are on, counting "I keep items for" (shown
+ *   activeCount - how many filters are on, counting "I keep items" (shown
  *                 next to the title, like on the Filters button; >0 shows Clear all)
  *   onClearAll - called when "Clear all" is clicked
  *   closeButtonRef - optional ref for that button (so it can be focused)
@@ -36,8 +38,10 @@ export default memo(function FilterSidebar({
   filters,
   onChange,
   keepFor,
+  keepOn,
   keepForDisabled,
   onKeepForChange,
+  onKeepOnChange,
   onClose,
   resultCount,
   totalCount,
@@ -74,7 +78,7 @@ export default memo(function FilterSidebar({
         </h2>
           {onClose && (
             <span className="ml-auto">
-              <Tooltip text="Close filters" placement="bottom">
+              <Tooltip text="Close filters">
                 <button
                   ref={closeButtonRef}
                   type="button"
@@ -104,34 +108,68 @@ export default memo(function FilterSidebar({
         </div>
       </div>
 
-      {/* A setting about the player rather than a filter: which activities
-          Keep applies to. Items only kept for unticked ones show how to sell them. */}
+      {/* A setting about the player rather than a filter: whether Keep applies
+          at all, and to which activities. Items only kept for things that are
+          off show how to sell them. Turning it off folds the list away. */}
       <fieldset
         disabled={keepForDisabled}
         aria-describedby="keep-for-hint"
         className={`my-2 rounded-lg bg-subtle p-2 text-sm ${keepForDisabled ? 'opacity-60' : ''}`}
       >
-        <legend className="float-left font-medium text-fg">I keep items for</legend>
-        <p id="keep-for-hint" className="clear-left text-muted">
+        <legend className="sr-only">I keep items</legend>
+        <div className="flex items-center justify-between gap-2">
+          <span id="keep-on-label" className="font-medium text-fg">
+            I keep items
+          </span>
+          <button
+            type="button"
+            role="switch"
+            aria-checked={keepOn}
+            aria-labelledby="keep-on-label"
+            aria-describedby="keep-for-hint"
+            onClick={() => onKeepOnChange(!keepOn)}
+            className={`relative h-6 w-11 shrink-0 rounded-full transition-colors duration-200 motion-reduce:transition-none
+              ${keepForDisabled ? '' : 'cursor-pointer'} ${keepOn ? 'bg-control' : 'bg-line-strong'}`}
+          >
+            <span
+              aria-hidden="true"
+              className={`absolute top-0.5 left-0.5 size-5 rounded-full bg-white shadow-sm transition-transform duration-200
+                motion-reduce:transition-none ${keepOn ? 'translate-x-5' : 'translate-x-0'}`}
+            />
+          </button>
+        </div>
+        <p id="keep-for-hint" className="mt-1 text-muted">
           {keepForDisabled
             ? 'Off in admin mode, so you see every action.'
-            : 'Untick what you don’t do, and those items show how to sell them instead.'}
+            : keepOn
+              ? 'Untick what you don’t do, and those items show how to sell them instead.'
+              : 'Items show how to sell them, not to keep them.'}
         </p>
-        <div className="mt-1 flex flex-col">
-          {ACTIVITIES.map((activity) => (
-            <label
-              key={activity.id}
-              className={`-mx-1 flex items-center gap-2 rounded px-1 py-0.5 ${keepForDisabled ? '' : 'cursor-pointer hover:bg-hover'}`}
-            >
-              <input
-                type="checkbox"
-                checked={keepFor.includes(activity.id)}
-                onChange={() => onKeepForChange(toggleValue(keepFor, activity.id))}
-                className="checkbox"
-              />
-              <span className="text-body">{activity.label}</span>
-            </label>
-          ))}
+        {/* The list folds away when it's off (a grid row that goes from 1fr to 0fr
+            animates the height). `inert` keeps its checkboxes out of Tab order and
+            away from screen readers while it's hidden. */}
+        <div
+          className={`grid transition-[grid-template-rows] duration-200 ease-in-out motion-reduce:transition-none
+            ${keepOn ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+        >
+          <div className="min-h-0 overflow-hidden" inert={!keepOn}>
+            <div className="flex flex-col pt-1">
+              {ACTIVITIES.map((activity) => (
+                <label
+                  key={activity.id}
+                  className={`-mx-1 flex items-center gap-2 rounded px-1 py-0.5 ${keepForDisabled ? '' : 'cursor-pointer hover:bg-hover'}`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={keepFor.includes(activity.id)}
+                    onChange={() => onKeepForChange(toggleValue(keepFor, activity.id))}
+                    className="checkbox"
+                  />
+                  <span className="text-body">{activity.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
         </div>
       </fieldset>
 

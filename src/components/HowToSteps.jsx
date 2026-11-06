@@ -1,5 +1,5 @@
 import { ActionBadge } from './ItemBadges.jsx';
-import { BEST_VEND_LABEL, BestStar, Mark, NoIcon, Unknown } from './StatusIcons.jsx';
+import { BEST_VEND_LABEL, BestStar, Mark, NoIcon } from './StatusIcons.jsx';
 import { ACTIONS, ALL_ACTIONS } from '../utils/labels.js';
 
 /**
@@ -31,7 +31,7 @@ export default function HowToSteps() {
 
       <Step number={3} title="Say what you keep items for">
         <p>
-          Open “Show filters”, and under “I keep items for” untick what you don’t do. Items only needed for those
+          Open “Show filters”, and under “I keep items” untick what you don’t do. Items only needed for those
           show how to sell them instead.
         </p>
       </Step>
@@ -45,15 +45,9 @@ export default function HowToSteps() {
           </li>
           <li className="flex items-center gap-2">
             <Mark>
-              <Unknown />
-            </Mark>{' '}
-            The price hasn’t been verified yet.
-          </li>
-          <li className="flex items-center gap-2">
-            <Mark>
               <NoIcon label="Can't be sold this way" />
             </Mark>{' '}
-            It can’t be sold that way.
+            It can’t be sold that way, or hasn’t been verified yet. Point at it to see which.
           </li>
         </ul>
       </Step>

@@ -77,7 +77,7 @@ npm run sync:prices && npm run sync:shops && npm run validate
 ```
 
 Run them every time, even when you only added two items: new items get
-their NPC price and NPC Shop value from the syncs. A new item that sells
+their NPC price and Buy at NPC value from the syncs. A new item that sells
 to NPCs for 0z makes validate warn; ask whether it really is 0z (add it to
 `customSellValues`), can't be sold (`notSellableToNpc`), or has a price.
 

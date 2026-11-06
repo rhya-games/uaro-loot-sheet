@@ -45,7 +45,7 @@ npm test               # unit tests in src/**/*.test.js (Vitest; CI runs this)
 npm run build          # validate + production build
 npm run sync:prices    # NPC sell prices + Overcharge % from the emulators
 npm run sync:shops     # npcBuyable from emulator shops + uaRO's own shops
-npm run sync:vend      # each item's `vend` (price vs NPC) from the private prices
+npm run sync:vend      # fill `vend` where it's still unknown, from the private prices
 npm run sync:targets   # item IDs of "Used For" targets (admin Targets page)
 npm run sync:icons     # copy item icons (24x24 GIFs) from game-data-tools into public/items/
 npm run scan:quests    # items the emulators' quest scripts take or check for
@@ -96,11 +96,13 @@ has the details:
 - `use-targets.json`: the target values (same shape as before)
 - `loot-sheet.csv`: the original sheet export, for `npm run import:csv`
 
-`npm run dev` loads them (admin mode edits them; saves also update `vend` in
-loot.json), and `npm run sync:vend` writes `vend` for every item. Without the
-folder (CI, other contributors) the site, validate, lint and tests all work:
-the stored `vend` is used as it is, and the checks that need prices are
-skipped. `npm run suggest` has no prices to go on then.
+`npm run dev` loads them (admin mode edits them). **Prices are supplementary:**
+each item's `vend` in loot.json (does vending beat the NPC: `higher`, `lower`,
+`none` or `unknown`) is set by hand and is what decides the star and the
+suggested action. A price never changes a `vend` that is already set; it only
+fills one in while it's `unknown` (admin saves and `npm run sync:vend`), and
+validate and `sync:vend` list items where the price says something else.
+Without the folder (CI, other contributors) everything works the same.
 
 Old values are still in git history; this only keeps new ones out.
 
@@ -129,8 +131,9 @@ Old values are still in git history; this only keeps new ones out.
   hand-picked one.
 - Every entry in `uaro-overrides.json` must match an item's `itemId` and
   `name` in loot.json when that item is listed there.
-- `vend` must match the private price (`npm run sync:vend` works it out;
-  validate checks it when the private prices are on this computer).
+- `vend` is the maintainer's yes/no call, not worked out from prices. An item
+  something uses is treated as vend while `vend` is `unknown`; set `lower` or
+  `none` for the exceptions.
 - `lastVerified` (private) means the vend price was checked in game.
   Setting an NPC price doesn't count.
 
@@ -234,9 +237,14 @@ Match similar existing items. Look them up in loot.json first.
 - Icons: Heroicons outline only, line weight 2 (set once in `index.css`),
   except the solid best-price star (`BestStar`). `size-5` (20px) for icons
   on their own, `size-4` (16px) inside a line of text.
-- Empty values: `?` (`Unknown` in `components/StatusIcons.jsx`) means not
-  verified yet; ✕ means it can't be done; "None" means checked and empty. The quiet ones use the `empty-value`
-  utility (muted at 60% opacity). In legends and guides wrap a mark in
+  The status marks in the tables and cards have a 28px box: the gold star
+  fills it (`STAR_SIZE` in `StatusIcons.jsx`), and ✓ ✕ – are 24px inside it
+  (`MARK_SIZE`, `MARK_BOX`). The ✕ and – are half strength and shift
+  color on hover or focus (`MARK_TONES`).
+- Empty values: ✕ means it can't be done, or (`Unknown` in
+  `components/StatusIcons.jsx`, tooltip "Not verified yet") not verified yet;
+  "None" means checked and empty. "None" uses the `empty-value` utility (muted
+  at 60% opacity); the ✕ and – use `MARK_TONES.quiet` (50%). In legends and guides wrap a mark in
   `Mark` so it shows at full strength. Words for players: say "verified",
   not "someone/nobody checked".
 - The filter panel and the table box are the same `panel` with the search field's `shadow-sm`; nothing may clip it (the grid around them has -mx-2/px-2 room for that). Focus is kept in view with `scroll-padding` on `html`, below the sticky header. The loot table uses the full window width (pages have 24px side padding), and rows
@@ -267,8 +275,10 @@ Match similar existing items. Look them up in loot.json first.
 
 ### Admin mode and suggested actions
 
-- `src/utils/suggest.js` works out actions from prices (margins, Keep when
-  a finished thing is worth more than its parts). The private
+- `src/utils/suggest.js` works out actions from each item's `vend` setting
+  (Vend when players pay more than the NPC, or when something uses it and it's
+  still `unknown`) and, for Keep, from prices (a finished thing worth more than
+  its parts). The private
   `use-targets.json` holds values for "Used For" targets that aren't loot
   (set them on admin mode's Targets page, `#/targets`; its item IDs are in the generated
   `src/data/target-ids.json`). A target value of 0 means "checked, no
@@ -283,7 +293,8 @@ Match similar existing items. Look them up in loot.json first.
   (`import.meta.env.DEV`). Saves POST to the Vite plugin in
   `scripts/admin-server.mjs`, which writes loot.json; only the fields in its
   `EDITABLE` list can change. Price fields and target values go to the
-  private folder instead, and the item's `vend` in loot.json follows. Saving
+  private folder instead (a price only fills in the item's `vend` while it's
+  unknown). Saving
   a price or a target value also saves the new suggested actions (except
   for items with no player price yet). The page swaps in the saved item itself, and
   the plugin skips Vite's reload for its own writes.

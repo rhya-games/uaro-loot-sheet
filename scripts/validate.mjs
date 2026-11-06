@@ -48,15 +48,15 @@ if (!ajv.validate(schema, items)) {
 }
 
 // 1b. The private prices (see scripts/private-data.mjs), when this computer
-// has them: each item's stored `vend` must be what its price works out to.
-// Without them (CI, other contributors) the stored values are taken as they are.
+// has them. `vend` is set by hand and prices are only extra information, so a
+// price that points the other way is a warning, never an error. Without the
+// prices (CI, other contributors) the stored values are taken as they are.
 if (hasPrivatePrices()) {
   const prices = readPrices();
   const ids = new Set(items.map((item) => item.id));
-  for (const item of withPrices(items, prices)) {
-    if (vendFlag(item) !== item.vend) {
-      errors.push(`${item.name}: "vend" is "${item.vend}" but its private price works out to "${vendFlag(item)}" (run npm run sync:vend)`);
-    }
+  const differs = withPrices(items, prices).filter((item) => vendFlag(item) !== 'unknown' && vendFlag(item) !== item.vend);
+  if (differs.length) {
+    warnings.push(`${differs.length} items have a private price that says something other than their "vend" setting (npm run sync:vend lists them): ${differs.map((item) => item.name).join(', ')}`);
   }
   for (const id of Object.keys(prices)) {
     if (!ids.has(id)) warnings.push(`private player-prices.json: no item with id "${id}" in loot.json`);
@@ -247,6 +247,18 @@ for (const entry of targetEntries) {
   seenTargets.add(entry.for);
   if (!allTargets.has(entry.for)) errors.push(`${TARGETS_FILE}: nothing in loot.json is used for "${entry.for}"`);
   if (/\bQuests?\b/.test(entry.for)) warnings.push(`${TARGETS_FILE}: "${entry.for}" is a quest, so its value is ignored`);
+}
+
+// target-links.json: a page with more about a "Used For" target. Each key must
+// still be a target (a rename in loot.json would leave it behind) and each
+// link needs a label and an https address.
+const TARGET_LINKS_FILE = 'src/data/target-links.json';
+const targetLinks = JSON.parse(readFileSync(TARGET_LINKS_FILE, 'utf8')).links;
+for (const [target, link] of Object.entries(targetLinks)) {
+  if (!allTargets.has(target)) errors.push(`${TARGET_LINKS_FILE}: nothing in loot.json is used for "${target}"`);
+  if (typeof link.label !== 'string' || !link.label || !/^https:\/\//.test(link.url ?? '')) {
+    errors.push(`${TARGET_LINKS_FILE}: "${target}" needs a "label" and an https "url"`);
+  }
 }
 
 // reviewed-suggestions.json: "Keep mine" reviews from admin mode. Each must

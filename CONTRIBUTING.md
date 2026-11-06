@@ -6,7 +6,7 @@ Thanks for helping keep the loot sheet accurate! Most contributions are **data e
 
 - **Check prices in game** and update Vend and the Verified date.
 - **Fill in gaps**: items with no action, missing item IDs, or uses that aren't listed yet.
-- **Report problems** if you'd rather not edit anything yourself: point at an item's row on the site and click the flag (Report Issue) at the end of the row, or see the site's **Feedback** page.
+- **Report problems** if you'd rather not edit anything yourself: see the site's **Feedback** page.
 
 ## Edit the data on GitHub (no coding needed)
 
@@ -47,7 +47,7 @@ You only need a free GitHub account.
 | `uses` | What it's needed for and how many: `{ "for": "Mystic Rose", "qty": 10 }`. Optional `"note"`, e.g. `"each try"`. |
 | `notes` | Anything else about what the item does, e.g. `Isis Taming Item` or `+4 INT for 20 minutes`. It shows under "Used For", so leave out who drops it, and skip the period unless there are several sentences. |
 | `links` | Helpful links (`label` + `url`). Can be empty: `[]`. |
-| `vend` | How the vend price compares with the NPC price: `unknown`, `none` (nobody was selling it), `higher` or `lower`. The prices are private and not in the repo; `npm run sync:vend` works this out from them, so leave it to the maintainer. |
+| `vend` | How the vend price compares with the NPC price: `unknown`, `none` (nobody was selling it), `higher` or `lower`. The maintainer sets this by hand (no prices needed); an item something uses counts as vend while it's `unknown`. |
 | `sellValue` | Zeny an NPC pays for one **before** Overcharge (the site adds the Overcharge bonus). Filled in by `npm run sync:prices`; only edit it for items neither emulator has. |
 | `sellSource` | Where `sellValue` came from: `hercules`, `rathena-renewal`, or `manual`. Set by the sync. |
 | `npcBuyable` | `"yes"`, `"no"`, `"npc-only"`, or `null` if unknown. Filled in by `npm run sync:shops`. |
