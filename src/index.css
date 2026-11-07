@@ -109,6 +109,11 @@
   --breakpoint-wide: 91.875rem; /* 1470px */
   --container-table-fit: 73.125rem; /* 1170px */
 
+  /* No text is smaller than 14px: the smallest size, `text-xs`, is the same as
+     `text-sm`. Smaller text is still quieter through `text-muted` and weight. */
+  --text-xs: 0.875rem;
+  --text-xs--line-height: calc(1.25 / 0.875);
+
   /* Soft "ease out" curve used by every animation: quick start, gentle stop. */
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 

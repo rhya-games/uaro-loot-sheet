@@ -252,7 +252,9 @@ Match similar existing items. Look them up in loot.json first.
 - Reuse the utilities: `panel` (cards and popovers), `button-small`
   (secondary buttons like "Clear all").
 - Type: headings are `font-semibold`, body `text-sm`, secondary `text-xs`
-  or `text-sm text-muted`. No all-caps, letter-spacing or italics.
+  or `text-sm text-muted`. Nothing is smaller than 14px: `text-xs` is set to
+  14px in `index.css`, so it looks the same as `text-sm`; use `text-muted` for
+  quieter text. No all-caps, letter-spacing or italics.
 - Every interactive element gets a visible focus ring (rounded, from
   `index.css`): a 2px ring with the gap filled by `--focus-gap` (set it where
   the background isn't the surface color), raised to z-20 so neighbors can't
