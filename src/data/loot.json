@@ -19036,6 +19036,31 @@
     "npcBuyable": "no"
   },
   {
+    "id": "osiris-doll",
+    "name": "Osiris Doll",
+    "itemId": 751,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "Doll Quest",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 7000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "outdoor-cooking-kit",
     "name": "Outdoor Cooking Kit",
     "itemId": 12125,
@@ -20498,6 +20523,31 @@
     "sellValue": 0,
     "sellSource": "rathena-renewal",
     "npcBuyable": "no"
+  },
+  {
+    "id": "poring-doll",
+    "name": "Poring Doll",
+    "itemId": 741,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "NPC"
+    ],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "Doll Quest",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 900,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "pot",
@@ -25115,6 +25165,31 @@
     "links": [],
     "vend": "higher",
     "sellValue": 212,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "spore-doll",
+    "name": "Spore Doll",
+    "itemId": 743,
+    "itemType": "Misc",
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
+    "categories": [
+      "Other Quest"
+    ],
+    "uses": [
+      {
+        "for": "Doll Quest",
+        "qty": 1
+      }
+    ],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 2750,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
