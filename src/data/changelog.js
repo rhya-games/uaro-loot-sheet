@@ -48,6 +48,19 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '1.3.0',
+    date: '2026-11-07',
+    title: 'Clearer marks, a keep switch and the Doll Quest',
+    changes: [
+      { type: 'Added', text: 'An "I keep items" switch in the filters. Turn it off to see how to sell everything.' },
+      { type: 'Added', text: '3 new dolls for the Doll Quest in Alberta: Poring, Spore and Osiris Doll. Quests can now link to their wiki page.' },
+      { type: 'Changed', text: 'Items something uses now get the gold Vend star until their vend setting says otherwise.' },
+      { type: 'Changed', text: 'New marks: a gold star, and bigger ✓, ✕ and – with tooltips. The "?" is now a ✕ that says "Not verified yet".' },
+      { type: 'Changed', text: 'The columns are now "Sell to NPC" and "Buy at NPC". Text is never smaller than 14px.' },
+      { type: 'Removed', text: 'The Report Issue button on each row. Use the Feedback page instead.' },
+    ],
+  },
+  {
     version: '1.1.0',
     date: '2026-10-13',
     title: 'Vend prices removed (sorry), and a star shows the best price',
