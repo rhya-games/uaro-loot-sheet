@@ -1078,6 +1078,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "angry-snarl-0",
+    "name": "Angry Snarl [0]",
+    "itemId": 5113,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "animal-gore",
     "name": "Animal Gore",
     "itemId": 702,
@@ -2950,6 +2969,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "bloody-murderer-card",
+    "name": "Bloody Murderer Card",
+    "itemId": 4214,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "bloody-page",
     "name": "Bloody Page",
     "itemId": 7449,
@@ -3622,7 +3660,9 @@
     "name": "Bradium",
     "itemId": 6224,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -3755,11 +3795,32 @@
     "npcBuyable": "no"
   },
   {
+    "id": "broken-needle",
+    "name": "Broken Needle",
+    "itemId": 7215,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 345,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "broken-shell",
     "name": "Broken Shell",
     "itemId": 7070,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -3961,7 +4022,9 @@
     "name": "Burning Hair",
     "itemId": 7122,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -5635,6 +5698,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "contorted-self-portrait",
+    "name": "Contorted Self-Portrait",
+    "itemId": 7223,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 1016,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "contract-in-shadow",
     "name": "Contract in Shadow",
     "itemId": 641,
@@ -6735,7 +6817,9 @@
     "name": "Dark Piece",
     "itemId": 6089,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -6839,6 +6923,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 41,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "decomposed-rope",
+    "name": "Decomposed Rope",
+    "itemId": 7218,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 195,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -7122,6 +7225,25 @@
     "sellValue": 22500,
     "sellSource": "hercules",
     "npcBuyable": "yes"
+  },
+  {
+    "id": "disguise-card",
+    "name": "Disguise Card",
+    "itemId": 4181,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "dokebi-card",
@@ -7514,6 +7636,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "dullahan-card",
+    "name": "Dullahan Card",
+    "itemId": 4176,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "dust-pollutant",
     "name": "Dust Pollutant",
     "itemId": 7320,
@@ -7802,7 +7943,9 @@
     "name": "Elder Branch",
     "itemId": 7939,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -8700,6 +8843,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "eye-of-dullahan-0",
+    "name": "Eye of Dullahan [0]",
+    "itemId": 2614,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 45000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "eye-stone-ring-1",
     "name": "Eye Stone Ring [1]",
     "itemId": 2783,
@@ -9199,7 +9361,9 @@
     "name": "Fire Dragon Scale",
     "itemId": 7451,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -9736,7 +9900,9 @@
     "name": "Fragment of Agony",
     "itemId": 7436,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -9753,7 +9919,9 @@
     "name": "Fragment of Despair",
     "itemId": 7439,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -9770,7 +9938,9 @@
     "name": "Fragment of Hatred",
     "itemId": 7438,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -9787,7 +9957,9 @@
     "name": "Fragment of Misery",
     "itemId": 7437,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -10570,6 +10742,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "gibbet-card",
+    "name": "Gibbet Card",
+    "itemId": 4278,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "giearth-card",
     "name": "Giearth Card",
     "itemId": 4087,
@@ -10653,6 +10844,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 171,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "ginnungagap-0",
+    "name": "Ginnungagap [0]",
+    "itemId": 13002,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -12257,7 +12467,9 @@
     "name": "Harpy Talon",
     "itemId": 7116,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -12509,6 +12721,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 22000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "helm-of-dullahan",
+    "name": "Helm of Dullahan",
+    "itemId": 7209,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 675,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -13266,6 +13497,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "hung-doll",
+    "name": "Hung Doll",
+    "itemId": 7212,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 510,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "huuma-wing-shuriken-0",
     "name": "Huuma Wing Shuriken [0]",
     "itemId": 13300,
@@ -13370,6 +13620,25 @@
     "notes": "",
     "links": [],
     "vend": "higher",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "hylozoist-card",
+    "name": "Hylozoist Card",
+    "itemId": 4321,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
@@ -14513,6 +14782,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "kitchen-knife-0",
+    "name": "Kitchen Knife [0]",
+    "itemId": 1229,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "kitty-band-0",
     "name": "Kitty Band [0]",
     "itemId": 2213,
@@ -15082,6 +15370,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 500,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "level-3-heal",
+    "name": "Level 3 Heal",
+    "itemId": 12001,
+    "itemType": "Consumable",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 1000,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -15754,6 +16061,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "lude-card",
+    "name": "Lude Card",
+    "itemId": 4193,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "luna-bow-2",
     "name": "Luna Bow [2]",
     "itemId": 1723,
@@ -15776,6 +16102,25 @@
     "id": "lunakaligo-3",
     "name": "Lunakaligo [3]",
     "itemId": 1544,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lunatic-brooch-1",
+    "name": "Lunatic Brooch [1]",
+    "itemId": 2718,
     "itemType": "Equipment",
     "actions": [
       "Vend"
@@ -16250,6 +16595,25 @@
     "sellValue": 104,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "manteau-0",
+    "name": "Manteau [0]",
+    "itemId": 2505,
+    "itemType": "Equipment",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 16000,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "manteau-1",
@@ -18374,6 +18738,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "old-manteau",
+    "name": "Old Manteau",
+    "itemId": 7207,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 525,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "old-pick",
     "name": "Old Pick",
     "itemId": 7318,
@@ -18448,7 +18831,9 @@
     "name": "Old Shuriken",
     "itemId": 7072,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -19793,7 +20178,9 @@
     "name": "Piece of Queen's Wing",
     "itemId": 6326,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -20123,6 +20510,25 @@
     "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
+  },
+  {
+    "id": "poisonous-powder",
+    "name": "Poisonous Powder",
+    "itemId": 7154,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 80,
+    "sellSource": "hercules",
+    "npcBuyable": "yes"
   },
   {
     "id": "poisonous-toad-card",
@@ -21039,6 +21445,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "quve-card",
+    "name": "Quve Card",
+    "itemId": 4294,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "raccoon-doll",
     "name": "Raccoon Doll",
     "itemId": 754,
@@ -21124,6 +21549,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "ragamuffin-manteau-0",
+    "name": "Ragamuffin Manteau [0]",
+    "itemId": 2508,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 28000,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "rainbow-carrot",
     "name": "Rainbow Carrot",
     "itemId": 622,
@@ -21181,7 +21625,9 @@
     "name": "Rake Horn Helm",
     "itemId": 6321,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -21854,6 +22300,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 400,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "rider-insignia-0",
+    "name": "Rider Insignia [0]",
+    "itemId": 2529,
+    "itemType": "Equipment",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -22698,6 +23163,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 50,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "rusty-kitchen-knife",
+    "name": "Rusty Kitchen Knife",
+    "itemId": 7208,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 890,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -24063,7 +24547,9 @@
     "name": "Single Horn Helm",
     "itemId": 6324,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -26160,7 +26646,9 @@
     "name": "Stone Fragment",
     "itemId": 7067,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -26392,6 +26880,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "striped-sock",
+    "name": "Striped Sock",
+    "itemId": 7219,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 460,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -27211,7 +27718,7 @@
     "itemId": 7443,
     "itemType": "Misc",
     "actions": [
-      "Vend"
+      "NPC"
     ],
     "categories": [
       "No Use"
@@ -27634,7 +28141,9 @@
     "name": "Treasure Box",
     "itemId": 7444,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -27863,7 +28372,9 @@
     "name": "Twin Horn Helm",
     "itemId": 6323,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -28630,7 +29141,9 @@
     "name": "White Spider Limb",
     "itemId": 6325,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -28770,7 +29283,9 @@
     "name": "Will of Red Darkness",
     "itemId": 7566,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "NPC"
+    ],
     "categories": [
       "No Use"
     ],
@@ -30033,7 +30548,10 @@
     "name": "Zelunium",
     "itemId": 25731,
     "itemType": "Misc",
-    "actions": [],
+    "actions": [
+      "Keep",
+      "Vend"
+    ],
     "categories": [
       "No Use"
     ],

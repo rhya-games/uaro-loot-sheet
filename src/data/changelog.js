@@ -61,6 +61,15 @@ export const CHANGELOG = [
     ],
   },
   {
+    version: '1.2.0',
+    date: '2026-11-05',
+    title: 'Niflheim field drops added',
+    changes: [
+      { type: 'Added', text: '25 new items from the monsters in Niflheim fields 1 and 2 (nif_fild01, nif_fild02).' },
+      { type: 'Changed', text: 'Items that do nothing and have no use now say NPC, not Vend (29 items).' },
+    ],
+  },
+  {
     version: '1.1.0',
     date: '2026-10-13',
     title: 'Vend prices removed (sorry), and a star shows the best price',

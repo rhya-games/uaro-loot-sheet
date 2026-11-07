@@ -107,6 +107,14 @@ export function isCheapUnpriced(item) {
 }
 
 /**
+ * Plain loot: a Misc item with no use at all. It does nothing on its own, so
+ * players have no reason to buy it. (Cards and equipment do something by
+ * themselves; items with a use are bought for that use.)
+ */
+export const isUselessLoot = (item) =>
+  item.itemType === 'Misc' && item.categories.length === 1 && item.categories[0] === 'No Use';
+
+/**
  * An item something uses, with no vend verdict yet. An item with a purpose is
  * bought by players, so it's treated as vend until `vend` says otherwise
  * ("lower": the NPC pays the same or more; "none": nobody buys it).

@@ -1,4 +1,4 @@
-import { alwaysSoldToPlayers, isCard, isCheapUnpriced, isSoldByNpc, isTradeable, isUnsoldPetAccessory, isUsedUnrated, npcSellPrice, vendState } from './prices.js';
+import { alwaysSoldToPlayers, isCard, isCheapUnpriced, isSoldByNpc, isTradeable, isUnsoldPetAccessory, isUselessLoot, isUsedUnrated, npcSellPrice, vendState } from './prices.js';
 
 /**
  * Suggested actions, worked out from each item's vend setting instead of set by hand.
@@ -13,6 +13,8 @@ import { alwaysSoldToPlayers, isCard, isCheapUnpriced, isSoldByNpc, isTradeable,
  *   - NPC otherwise, and always for items NPCs sell or that can't be traded.
  *   - Cards and cooked food of +6 or more are always Vend, even with no
  *     price yet: players pay far more than NPCs for them.
+ *   - Plain loot (a Misc item with no use) is always NPC, even with a vend
+ *     price: it does nothing on its own, so players don't buy it.
  *   - Equipment an NPC pays under 3,000z for, and taming items under 1,000z,
  *     with no vend price yet, are Vend too: players almost always pay more.
  *     A vend price replaces this.
@@ -87,6 +89,10 @@ export function suggestSale(item) {
 
   if (tradeable && isUnsoldPetAccessory(item)) {
     return { action: null, price: 0, reason: 'No one is selling this pet accessory, so it’s junk' };
+  }
+
+  if (tradeable && npc > 0 && isUselessLoot(item)) {
+    return { action: 'NPC', price: npc, reason: `Nothing uses it and it does nothing on its own, so players won’t buy it; NPCs pay ${fmt(npc)}` };
   }
 
   if (tradeable && alwaysSoldToPlayers(item)) {

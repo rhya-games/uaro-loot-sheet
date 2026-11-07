@@ -59,7 +59,10 @@ export default function App() {
   const page = PAGES[route];
 
   // The welcome box opens by itself, once, on a first visit to the loot page.
-  const [welcomeOpen, setWelcomeOpen] = useState(() => route === 'loot' && !readPreference('welcomeSeen', false));
+  // Never under `npm run dev`: it would cover the page on every fresh browser.
+  const [welcomeOpen, setWelcomeOpen] = useState(
+    () => !import.meta.env.DEV && route === 'loot' && !readPreference('welcomeSeen', false),
+  );
   const closeWelcome = useCallback(() => {
     writePreference('welcomeSeen', true);
     setWelcomeOpen(false);

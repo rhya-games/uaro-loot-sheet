@@ -58,6 +58,14 @@ describe('suggestSale', () => {
     expect(suggestSale(item({ ...taming, sellValue: 1000 }))).toBeNull();
   });
 
+  it('says NPC for plain loot (Misc, no use) whatever its vend price, but cards and equipment still say Vend', () => {
+    const loot = { categories: ['No Use'] };
+    expect(suggestSale(item(loot)).action).toBe('NPC');
+    expect(suggestSale(item({ ...loot, avgVend: 500 })).action).toBe('NPC');
+    expect(suggestSale(item({ ...loot, itemType: 'Equipment' })).action).toBe('Vend');
+    expect(suggestSale(item({ categories: ['Card'] })).action).toBe('Vend');
+  });
+
   it('says Junk for a pet accessory nobody is selling, but not for other items with no sellers', () => {
     const accessory = item({ notes: 'Poring Pet accessory', categories: ['Pet'], avgVend: 0 });
     expect(createSuggester([accessory])(accessory).actions).toEqual(['Junk']);
