@@ -38,7 +38,7 @@ export default function BackToTop({ textPage = false, raised = false }) {
       // Hidden from keyboard and screen readers until it shows.
       inert={!show}
     >
-      <Tooltip text="Back to top" placement="top">
+      <Tooltip text="Back to top">
         <button
           type="button"
           onClick={goToTop}

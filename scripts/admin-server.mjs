@@ -27,6 +27,7 @@ import { NO_PRICE, PRICE_FIELDS, readPrices, readTargets, withPrices, writePrice
 const LOOT_FILE = resolve('src/data/loot.json');
 const REVIEWED_FILE = resolve('src/data/reviewed-suggestions.json');
 const ACTIONS = JSON.parse(readFileSync(resolve('src/data/schema.json'), 'utf8')).$defs.action.enum;
+const VEND_FLAGS = ['unknown', 'none', 'higher', 'lower'];
 const isPrice = (value) => value === null || (Number.isInteger(value) && value >= 0);
 const isActionList = (value) =>
   Array.isArray(value) && value.every((action) => ACTIONS.includes(action)) && new Set(value).size === value.length;
@@ -37,6 +38,7 @@ const EDITABLE = {
   lastVerified: (value) => value === null || /^\d{4}-\d{2}-\d{2}$/.test(value),
   verificationNotes: (value) => typeof value === 'string',
   actions: isActionList,
+  vend: (value) => VEND_FLAGS.includes(value), // the yes/no on the Vend column; no price involved
 };
 
 /** Reads a request's JSON body. */
@@ -129,11 +131,11 @@ export default function lootAdminPlugin() {
           const lootChanges = Object.fromEntries(Object.entries(changes ?? {}).filter(([field]) => !PRICE_FIELDS.includes(field)));
           const prices = readPrices();
           Object.assign(item, lootChanges);
-          // The stored `vend` only changes with a price, so someone without the
-          // private prices can still edit actions without resetting it.
+          // A price only fills in `vend` while it's unknown: `vend` is set by
+          // hand, and prices are extra information that never override it.
           if (Object.keys(priceChanges).length) {
             prices[id] = { ...NO_PRICE, ...prices[id], ...priceChanges };
-            item.vend = vendFlag({ ...item, ...prices[id] });
+            if (!item.vend || item.vend === 'unknown') item.vend = vendFlag({ ...item, ...prices[id] });
             writePrices(prices);
           }
           write(LOOT_FILE, items);

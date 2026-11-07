@@ -43,7 +43,7 @@ export const REMOVED = ['Torn Paper Piece'];
  */
 export const USE_TARGET_FIXES = {
   'for Little Isis Pet Evolution': 'Little Isis Pet Evolution',
-  'new world quest': 'New World Quest',
+  'new world quest': 'Peace for Arunafeltz Quest',
   'Baophomet Jr Pet Evolution': 'Baphomet Jr Pet Evolution',
   'Diabloic Pet Evolution': 'Diabolic Pet Evolution',
   'Bascojin Pet Evolution': 'Bacsojin Pet Evolution',

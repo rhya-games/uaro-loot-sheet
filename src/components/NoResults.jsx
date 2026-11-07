@@ -4,7 +4,7 @@
  *
  * Props:
  *   query          - the search text ('' if none)
- *   filterCount    - how many filters are on (including "I keep items for")
+ *   filterCount    - how many filters are on (including "I keep items")
  *   onClearSearch  - clears the search box
  *   onClearFilters - clears every filter (the search stays)
  */

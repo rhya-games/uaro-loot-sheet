@@ -4,7 +4,6 @@ import { ROUTES } from '../utils/route.js';
 
 /** Jump links beside the page. The Discord entry only exists when the thread link is set. */
 const CONTENTS = [
-  { id: 'item', title: 'Report an item problem' },
   { id: 'discord', title: 'Discord' },
   { id: 'github', title: 'GitHub issues' },
   { id: 'fix', title: 'Fix it yourself' },
@@ -15,14 +14,6 @@ const CONTENTS = [
 export default function FeedbackPage() {
   return (
     <Page contents={CONTENTS} title="Feedback" intro="Spotted a wrong action, a missing item, or have an idea? Here's how to tell us.">
-      <Section id="item" title="Report a problem with one item">
-        <p>
-          On the <PageLink href={ROUTES.loot}>Loot Sheet</PageLink>, point at the item's row and click the <strong>flag</strong>
-          (Report Issue) that appears at the end of the row. It opens a short GitHub form with the item already filled in.
-        </p>
-        <p className="text-muted">Best for: wrong actions, categories, uses, or NPC prices. Needs a free GitHub account. Please don’t post vend prices: the server’s rules don’t allow publishing them.</p>
-      </Section>
-
       {DISCORD_FEEDBACK_THREAD_URL && (
         <Section id="discord" title="Discord feedback thread">
           <p>
@@ -35,10 +26,10 @@ export default function FeedbackPage() {
 
       <Section id="github" title="GitHub issues">
         <p>
-          <ExternalLink href={GENERAL_ISSUE_URL}>Open an issue on GitHub</ExternalLink> for bugs in the site itself or
-          ideas for new features.
+          <ExternalLink href={GENERAL_ISSUE_URL}>Open an issue on GitHub</ExternalLink> for a problem with an item
+          (a wrong action, category, use or NPC price), bugs in the site itself, or ideas for new features.
         </p>
-        <p className="text-muted">Best for: things that aren't about one item. Needs a free GitHub account.</p>
+        <p className="text-muted">Needs a free GitHub account. Please don’t post vend prices: the server’s rules don’t allow publishing them.</p>
       </Section>
 
       <Section id="fix" title="Help fix it yourself">

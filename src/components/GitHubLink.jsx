@@ -13,7 +13,7 @@ export function GitHubIcon({ className }) {
 /** Icon button in the header that opens the project on GitHub. */
 export default function GitHubLink() {
   return (
-    <Tooltip text="View on GitHub" placement="bottom">
+    <Tooltip text="View on GitHub">
       <a
         href={GITHUB_REPO_URL}
         target="_blank"

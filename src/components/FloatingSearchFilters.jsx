@@ -47,7 +47,7 @@ export default function FloatingSearchFilters({ filtersOpen, activeCount, onFilt
       // Hidden from keyboard and screen readers until it shows.
       inert={!show}
     >
-      <Tooltip text={filtersOpen ? 'Hide filters' : 'Show filters'} placement="top">
+      <Tooltip text={filtersOpen ? 'Hide filters' : 'Show filters'}>
         <button
           type="button"
           onClick={onFilters}
@@ -64,7 +64,7 @@ export default function FloatingSearchFilters({ filtersOpen, activeCount, onFilt
           )}
         </button>
       </Tooltip>
-      <Tooltip text="Search" placement="top">
+      <Tooltip text="Search">
         <button type="button" onClick={onSearch} aria-label="Search items" aria-keyshortcuts="Control+K Meta+K" className={ROUND_BUTTON}>
           <MagnifyingGlassIcon className="size-5" aria-hidden="true" />
         </button>

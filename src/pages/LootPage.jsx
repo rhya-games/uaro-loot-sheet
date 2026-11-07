@@ -20,6 +20,7 @@ import { useMediaQuery } from '../utils/useMediaQuery.js';
 import { useAdmin } from '../admin/useAdmin.js';
 import { EMPTY_VIEW, cleanView, hashToView, isLootHash, viewToHash } from '../utils/viewUrl.js';
 import { track } from '../utils/analytics.js';
+import { SharedUsesContext, sharedUseTargets } from '../utils/sharedUses.js';
 
 
 /** How long the panel takes to slide in or out (ms). Matches `duration-200` below. */
@@ -54,6 +55,9 @@ function startingView() {
   return hashToView(window.location.hash) ?? cleanView(readPreference('lastView', EMPTY_VIEW));
 }
 
+/** "I keep items" is off: nothing is kept for. One shared array, so it doesn't look like a change each draw. */
+const KEEP_NOTHING = [];
+
 /**
  * The main page: search box, filter sidebar, and the item table.
  *
@@ -75,32 +79,55 @@ export default function LootPage({ onOpenSearch }) {
   const resultsRef = useRef(null);
   const resultsLeftBefore = useRef(null);
   const [sort, setSort] = useState(start.sort);
-  // What the player keeps items for (hats, pets, ...). Everything by default.
-  // Older visits saved "I don't keep items" instead; that means nothing picked.
-  const [keepForSetting, setKeepFor] = useState(
-    () => readPreference('keepFor', null) ?? (readPreference('ignoreKeep', false) ? [] : ALL_ACTIVITY_IDS),
-  );
+  // Whether the player keeps items at all ("I keep items", on by default), and
+  // what for (hats, pets, ...; everything by default). Off means the same as
+  // nothing picked, but the picks are remembered for when it's turned back on.
+  // Older visits saved "I don't keep items" as nothing picked: that's off.
+  const [keepOn, setKeepOn] = useState(() => {
+    const saved = readPreference('keepOn', null);
+    if (saved != null) return saved;
+    const picked = readPreference('keepFor', null);
+    return !(readPreference('ignoreKeep', false) || (Array.isArray(picked) && picked.length === 0));
+  });
+  const [keepForSetting, setKeepFor] = useState(() => {
+    const picked = readPreference('keepFor', null);
+    return Array.isArray(picked) && picked.length > 0 ? picked : ALL_ACTIVITY_IDS;
+  });
   // loot.json, plus any prices saved in admin mode since the page loaded.
   const { items: loot, status, enabled: adminOn } = useAdmin();
   // Admin mode needs the real actions (to compare with suggestions), so it
   // shows everything. The player's setting is remembered for afterwards.
-  const keepFor = adminOn ? ALL_ACTIVITY_IDS : keepForSetting;
+  const playerKeepFor = useMemo(() => (keepOn ? keepForSetting : KEEP_NOTHING), [keepOn, keepForSetting]);
+  const keepFor = adminOn ? ALL_ACTIVITY_IDS : playerKeepFor;
 
   // This changes the items themselves (Keep removed where it doesn't apply),
   // so every count, chip and sort below sees the same thing the table shows.
   const baseItems = useMemo(() => keepOnlyFor(loot, keepFor), [loot, keepFor]);
 
+  // Only targets with 2+ items get a filter link (see ItemUses). Counted over
+  // everything, so the link doesn't come and go with the filters.
+  const sharedUses = useMemo(() => sharedUseTargets(loot), [loot]);
+
   const changeKeepFor = useCallback((activityIds) => {
     setKeepFor(activityIds);
     writePreference('keepFor', activityIds);
   }, []);
+  const changeKeepOn = useCallback((on) => {
+    setKeepOn(on);
+    writePreference('keepOn', on);
+  }, []);
+  /** Back to keeping items for everything. */
+  const resetKeepFor = useCallback(() => {
+    changeKeepOn(true);
+    changeKeepFor(ALL_ACTIVITY_IDS);
+  }, [changeKeepFor, changeKeepOn]);
 
   /** Clear all: every filter, and back to keeping items for everything. The search stays. */
   const clearAll = useCallback(() => {
     track('clear-filters');
     setFilters(EMPTY_FILTERS);
-    changeKeepFor(ALL_ACTIVITY_IDS);
-  }, [changeKeepFor]);
+    resetKeepFor();
+  }, [resetKeepFor]);
 
   // Build the search index, then: search box, then sidebar filters, then sorting.
   const search = useMemo(() => createSearch(baseItems), [baseItems]);
@@ -148,12 +175,12 @@ export default function LootPage({ onOpenSearch }) {
     lastSort.current = sort;
     if (sort) track('sort', { column: sort.key, direction: sort.direction });
   }, [sort]);
-  const lastKeepFor = useRef(keepForSetting);
+  const lastKeepFor = useRef(playerKeepFor);
   useEffect(() => {
-    if (keepForSetting === lastKeepFor.current) return;
-    lastKeepFor.current = keepForSetting;
-    track('keep-for', { activities: keepForSetting.join(', ') || 'nothing' });
-  }, [keepForSetting]);
+    if (playerKeepFor === lastKeepFor.current) return;
+    lastKeepFor.current = playerKeepFor;
+    track('keep-for', { activities: playerKeepFor.join(', ') || 'nothing' });
+  }, [playerKeepFor]);
 
   const activeFilterCount = countActiveFilters(filters) + (keepsEverything(keepFor) ? 0 : 1);
 
@@ -329,7 +356,7 @@ export default function LootPage({ onOpenSearch }) {
         {/* Small screens: filter icon only, so it gets a tooltip. Larger: icon and text (no tooltip needed). */}
         {showFiltersButton &&
           (smallScreen ? (
-            <Tooltip text={sidebarOpen ? 'Hide filters' : 'Show filters'} placement="bottom">
+            <Tooltip text={sidebarOpen ? 'Hide filters' : 'Show filters'}>
               {filtersButton}
             </Tooltip>
           ) : (
@@ -339,7 +366,7 @@ export default function LootPage({ onOpenSearch }) {
           <SearchBar value={query} onChange={setQuery} />
         </div>
         {smallScreen ? (
-          <Tooltip text="Share" placement="bottom">
+          <Tooltip text="Share">
             <ShareButton iconOnly className={TOOLBAR_BUTTON} />
           </Tooltip>
         ) : (
@@ -380,7 +407,7 @@ export default function LootPage({ onOpenSearch }) {
           <ActiveFilters
             filters={filters}
             keepFor={keepFor}
-            onClearKeepFor={() => changeKeepFor(ALL_ACTIVITY_IDS)}
+            onClearKeepFor={resetKeepFor}
             onRemove={(key, value) => setFilters({ ...filters, [key]: toggleValue(filters[key], value) })}
             onRemoveGroup={(key) => setFilters({ ...filters, [key]: [] })}
             onClearAll={clearAll}
@@ -391,104 +418,108 @@ export default function LootPage({ onOpenSearch }) {
   );
 
   return (
-    <div>
-      <h1 className="sr-only">Loot items</h1>
-      {/* Fixed in the corner: the filter panel and search, when the toolbar has scrolled away. */}
-      <FloatingSearchFilters filtersOpen={sidebarOpen} activeCount={activeFilterCount} onFilters={toggleFilters} onSearch={onOpenSearch} />
+    <SharedUsesContext.Provider value={sharedUses}>
+      <div>
+        <h1 className="sr-only">Loot items</h1>
+        {/* Fixed in the corner: the filter panel and search, when the toolbar has scrolled away. */}
+        <FloatingSearchFilters filtersOpen={sidebarOpen} activeCount={activeFilterCount} onFilters={toggleFilters} onSearch={onOpenSearch} />
 
-      {/* Panel and table share one grid cell (so the panel floats over the table)
-          until 1470px (`wide:`), where the grid gets a second column for the panel.
-          overflow-x-clip hides the table's edge while it slides (see the FLIP effect above)
-          without breaking the sticky header. Browsers ignore overflow-clip-margin when
-          only one direction clips, so -mx-2/px-2 widen the clip box instead: that room
-          keeps focus rings at the edges (like the Admin button's) from being cut off. */}
-      <div
-        className={`md:grid md:items-start wide:-mx-2 wide:overflow-x-clip wide:px-2 ${
-          panelTakesSpace ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''
-        }`}
-      >
-        {/* The panel and scrim are always on the page; closing just hides them.
-            Building the panel's ~250 checkboxes on every open was a big part of
-            the delay, so now opening and closing only switch a few classes.
-            `inert` makes the closed panel unreachable (no Tab, no screen reader).
-            Visibility turns on instantly when opening (so focus can move in), and
-            only turns off after the fade-out when closing: that's why `visibility`
-            is in the transition list only for the closed state. */}
-
-        {/* Small screens only: dims the page behind the sheet; clicking it closes the panel. */}
+        {/* Panel and table share one grid cell (so the panel floats over the table)
+            until 1470px (`wide:`), where the grid gets a second column for the panel.
+            overflow-x-clip hides the table's edge while it slides (see the FLIP effect above)
+            without breaking the sticky header. Browsers ignore overflow-clip-margin when
+            only one direction clips, so -mx-2/px-2 widen the clip box instead: that room
+            keeps focus rings at the edges (like the Admin button's) from being cut off. */}
         <div
-          aria-hidden="true"
-          onClick={closePanel}
-          className={`fixed inset-0 z-40 cursor-pointer bg-black/50 duration-200 ease-smooth
-            motion-reduce:transition-none md:hidden dark:bg-black/70 ${
-              sidebarOpen
-                ? 'visible opacity-100 transition-opacity'
-                : 'pointer-events-none invisible opacity-0 transition-[opacity,visibility]'
-            }`}
-        />
-        <aside
-          id="filter-sidebar"
-          aria-label="Filters"
-          inert={!sidebarOpen}
-          // Slides and fades in from the left, and back out when closed
-          // (instant when the system asks for reduced motion).
-          className={`fixed inset-y-0 right-12 left-0 z-50 overflow-y-auto bg-surface px-4 pb-4 shadow-xl
-            duration-200 ease-smooth motion-reduce:transition-none ${
-              sidebarOpen
-                ? 'visible translate-x-0 opacity-100 transition-[opacity,translate]'
-                : 'pointer-events-none invisible -translate-x-4 opacity-0 transition-[opacity,translate,visibility]'
-            }
-            md:panel md:sticky md:inset-auto md:top-4 md:z-30 md:col-start-1 md:row-start-1 md:max-h-[calc(100vh-2rem)]
-            md:w-60 md:justify-self-start md:pb-3 md:shadow-sm`}
+          className={`md:grid md:items-start wide:-mx-2 wide:overflow-x-clip wide:px-2 ${
+            panelTakesSpace ? 'wide:grid-cols-[15rem_minmax(0,1fr)] wide:gap-6' : ''
+          }`}
         >
-          <div className="hidden md:block">
-            <SkipLink targetId="results" className="focus:absolute focus:top-2 focus:left-2 focus:z-20">
-              Skip to results
-            </SkipLink>
-          </div>
-          <FilterSidebar
-            onClose={closePanel}
-            resultCount={panelView.count}
-            totalCount={loot.length}
-            activeCount={activeFilterCount}
-            onClearAll={clearAll}
-            closeButtonRef={closeButtonRef}
-            allItems={baseItems}
-            keepFor={keepFor}
-            keepForDisabled={adminOn}
-            onKeepForChange={changeKeepFor}
-            items={panelView.searched}
-            filters={filters}
-            onChange={setFilters}
+          {/* The panel and scrim are always on the page; closing just hides them.
+              Building the panel's ~250 checkboxes on every open was a big part of
+              the delay, so now opening and closing only switch a few classes.
+              `inert` makes the closed panel unreachable (no Tab, no screen reader).
+              Visibility turns on instantly when opening (so focus can move in), and
+              only turns off after the fade-out when closing: that's why `visibility`
+              is in the transition list only for the closed state. */}
+
+          {/* Small screens only: dims the page behind the sheet; clicking it closes the panel. */}
+          <div
+            aria-hidden="true"
+            onClick={closePanel}
+            className={`fixed inset-0 z-40 cursor-pointer bg-black/50 duration-200 ease-smooth
+              motion-reduce:transition-none md:hidden dark:bg-black/70 ${
+                sidebarOpen
+                  ? 'visible opacity-100 transition-opacity'
+                  : 'pointer-events-none invisible opacity-0 transition-[opacity,visibility]'
+              }`}
           />
-        </aside>
-        <div
-          ref={resultsRef}
-          id="results"
-          tabIndex={-1}
-          className={`min-w-0 space-y-4 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
-        >
-          {toolbar}
-          {status !== 'ready' ? (
-            <LoadingItems failed={status === 'failed'} />
-          ) : results.length === 0 ? (
-            <NoResults
-              query={query}
-              filterCount={activeFilterCount}
-              onClearSearch={() => setQuery('')}
-              onClearFilters={clearAll}
+          <aside
+            id="filter-sidebar"
+            aria-label="Filters"
+            inert={!sidebarOpen}
+            // Slides and fades in from the left, and back out when closed
+            // (instant when the system asks for reduced motion).
+            className={`fixed inset-y-0 right-12 left-0 z-50 overflow-y-auto bg-surface px-4 pb-4 shadow-xl
+              duration-200 ease-smooth motion-reduce:transition-none ${
+                sidebarOpen
+                  ? 'visible translate-x-0 opacity-100 transition-[opacity,translate]'
+                  : 'pointer-events-none invisible -translate-x-4 opacity-0 transition-[opacity,translate,visibility]'
+              }
+              md:panel md:sticky md:inset-auto md:top-4 md:z-30 md:col-start-1 md:row-start-1 md:max-h-[calc(100vh-2rem)]
+              md:w-60 md:justify-self-start md:pb-3 md:shadow-sm`}
+          >
+            <div className="hidden md:block">
+              <SkipLink targetId="results" className="focus:absolute focus:top-2 focus:left-2 focus:z-20">
+                Skip to results
+              </SkipLink>
+            </div>
+            <FilterSidebar
+              onClose={closePanel}
+              resultCount={panelView.count}
+              totalCount={loot.length}
+              activeCount={activeFilterCount}
+              onClearAll={clearAll}
+              closeButtonRef={closeButtonRef}
+              allItems={baseItems}
+              keepFor={adminOn ? ALL_ACTIVITY_IDS : keepForSetting}
+              keepOn={adminOn || keepOn}
+              keepForDisabled={adminOn}
+              onKeepForChange={changeKeepFor}
+              onKeepOnChange={changeKeepOn}
+              items={panelView.searched}
+              filters={filters}
+              onChange={setFilters}
             />
-          ) : (
-            <ItemList
-              items={results}
-              sort={sort}
-              onSort={changeSort}
-              onSelectUse={showItemsUsedFor}
-              highlightUses={highlightUses}
-            />
-          )}
+          </aside>
+          <div
+            ref={resultsRef}
+            id="results"
+            tabIndex={-1}
+            className={`min-w-0 space-y-4 focus:outline-none md:col-start-1 md:row-start-1 ${panelTakesSpace ? 'wide:col-start-2' : ''}`}
+          >
+            {toolbar}
+            {status !== 'ready' ? (
+              <LoadingItems failed={status === 'failed'} />
+            ) : results.length === 0 ? (
+              <NoResults
+                query={query}
+                filterCount={activeFilterCount}
+                onClearSearch={() => setQuery('')}
+                onClearFilters={clearAll}
+              />
+            ) : (
+              <ItemList
+                items={results}
+                sort={sort}
+                onSort={changeSort}
+                onSelectUse={showItemsUsedFor}
+                highlightUses={highlightUses}
+              />
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </SharedUsesContext.Provider>
   );
 }

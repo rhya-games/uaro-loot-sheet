@@ -1,12 +1,15 @@
-import { alwaysSoldToPlayers, isCard, isCheapUnpriced, isSoldByNpc, isTradeable, isUnsoldPetAccessory, isUselessLoot, npcSellPrice } from './prices.js';
+import { alwaysSoldToPlayers, isCard, isCheapUnpriced, isSoldByNpc, isTradeable, isUnsoldPetAccessory, isUselessLoot, isUsedUnrated, npcSellPrice, vendState } from './prices.js';
 
 /**
- * Suggested actions, worked out from prices instead of set by hand.
+ * Suggested actions, worked out from each item's vend setting instead of set by hand.
  *
  * Selling: vending takes more effort than an NPC, but a player price that
  * beats the NPC price by even 1z is worth it, so there's no margin (a
  * percentage rule left real vend prices as NPC):
- *   - Vend when it pays more than the NPC price.
+ *   - Vend when the item's `vend` is "higher" (players pay more than the
+ *     NPC). That setting is made by hand; a private price never decides it.
+ *   - Items something uses are Vend too while `vend` is still "unknown":
+ *     an item with a purpose is bought by players.
  *   - NPC otherwise, and always for items NPCs sell or that can't be traded.
  *   - Cards and cooked food of +6 or more are always Vend, even with no
  *     price yet: players pay far more than NPCs for them.
@@ -79,8 +82,10 @@ export function suggestSale(item) {
   const npc = npcSellPrice(item);
   if (isSoldByNpc(item)) return { action: 'NPC', price: npc, reason: 'NPCs sell it, so players won’t buy it' };
   const tradeable = isTradeable(item);
-  const vend = tradeable ? item.avgVend : null;
-  const floor = npc ?? 0;
+  // The private price, when there is one, is only shown and used to compare
+  // recipes. Whether to vend comes from the item's `vend` flag.
+  const vend = tradeable ? (item.avgVend ?? null) : null;
+  const state = vendState(item);
 
   if (tradeable && isUnsoldPetAccessory(item)) {
     return { action: null, price: 0, reason: 'No one is selling this pet accessory, so it’s junk' };
@@ -95,17 +100,18 @@ export function suggestSale(item) {
       ? 'Cards always sell to players'
       : isCheapUnpriced(item)
       ? 'NPCs pay very little for it, so it sells to players until a vend price says otherwise'
+      : isUsedUnrated(item)
+      ? 'Something uses it, so players buy it, until its vend setting says otherwise'
       : 'Food of +6 or more always sells to players';
     return { action: 'Vend', price: vend, reason: what + (vend != null ? ` (${fmt(vend)})` : '') };
   }
 
-  if (vend != null && vend > floor) {
-    return { action: 'Vend', price: vend, reason: `Vending pays the most (${fmt(vend)})` };
+  if (tradeable && state === 'higher') {
+    return { action: 'Vend', price: vend, reason: 'Players pay more than the NPC' + (vend != null ? ` (${fmt(vend)})` : '') };
   }
-  // No vend price yet: we can't tell whether players pay more, so don't
-  // guess NPC (cards would all come out as NPC). A vend price of 0 means
-  // "checked, nobody's selling".
-  if (tradeable && vend == null) return null;
+  // No verdict yet and nothing uses it: we can't tell whether players pay
+  // more, so don't guess NPC. "none" means "checked, nobody's selling".
+  if (tradeable && state === 'unknown') return null;
   if (npc > 0) {
     return { action: 'NPC', price: npc, reason: `NPCs pay the most (${fmt(npc)})` };
   }

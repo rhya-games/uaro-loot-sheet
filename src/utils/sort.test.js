@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { SORT_VALUES, sortItems } from './sort.js';
+import { withVend } from './testing.js';
 
-const item = (name, fields = {}) => ({
+const item = (name, fields = {}) => withVend({
   name,
   itemId: 1,
   itemType: 'Misc',

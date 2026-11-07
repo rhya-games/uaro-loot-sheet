@@ -4,7 +4,10 @@ import { autoUpdate, flip, offset, shift, useFloating } from '@floating-ui/react
 import { usePresence } from '../utils/usePresence.js';
 
 /** How long the mouse has to rest on something before its tooltip shows. */
-const HOVER_DELAY_MS = 300;
+const HOVER_DELAY_MS = 120;
+
+/** How long the fade in and out takes. The CSS duration below must match. */
+const FADE_MS = 200;
 
 /**
  * A small label that appears on hover AND on keyboard focus (unlike the
@@ -25,7 +28,9 @@ const HOVER_DELAY_MS = 300;
  *
  * Props:
  *   text      - tooltip text ("\n" starts a new line)
- *   placement - preferred side: "top" (default) or "bottom"
+ *   placement - preferred side: "top" (default) or "bottom". Tooltips sit above
+ *               unless there isn't room, then they flip below (Floating UI's
+ *               `flip`), so leave it out unless a tooltip must start below.
  *   className - layout of the wrapper around the element (default "inline-flex").
  *               Use "" for text that should wrap like a sentence, "flex w-full"
  *               to fill a table cell.
@@ -33,7 +38,7 @@ const HOVER_DELAY_MS = 300;
  */
 export default function Tooltip({ text, placement = 'top', className = 'inline-flex', children }) {
   const [open, setOpen] = useState(false);
-  const { mounted, visible } = usePresence(open, 150);
+  const { mounted, visible } = usePresence(open, FADE_MS);
   const id = useId();
   // The wrapper element, kept in state (not a ref) because the floating label reads it while drawing.
   const [reference, setReference] = useState(null);
@@ -86,7 +91,7 @@ function FloatingLabel({ reference, text, placement, visible }) {
     elements: { reference, floating },
     placement,
     strategy: 'fixed',
-    middleware: [offset(8), flip({ padding: 8 }), shift({ padding: 8 })],
+    middleware: [offset(12), flip({ padding: 8 }), shift({ padding: 8 })],
     whileElementsMounted: autoUpdate,
   });
 
@@ -95,8 +100,8 @@ function FloatingLabel({ reference, text, placement, visible }) {
       ref={setFloating}
       style={floatingStyles}
       aria-hidden="true"
-      className={`pointer-events-none z-[60] rounded-md bg-gray-900 px-2 py-1 text-xs font-medium whitespace-pre
-        text-white shadow-md transition-opacity duration-150 ease-smooth dark:border dark:border-line-strong
+      className={`pointer-events-none z-[60] rounded-md bg-gray-900 px-3 py-1.5 text-base font-medium whitespace-pre
+        text-white shadow-md transition-opacity duration-200 ease-in-out dark:border dark:border-line-strong
         dark:bg-hover dark:text-fg motion-reduce:transition-none ${visible ? 'opacity-100' : 'opacity-0'}`}
     >
       {text}

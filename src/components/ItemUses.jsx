@@ -1,9 +1,14 @@
-import { useEffect, useId, useRef, useState } from 'react';
+import { useContext, useEffect, useId, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { autoUpdate, flip, offset, shift, size, useFloating } from '@floating-ui/react-dom';
-import { XMarkIcon } from '@heroicons/react/24/outline';
+import { ArrowTopRightOnSquareIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { usePresence } from '../utils/usePresence.js';
 import { NO_HIGHLIGHT, highlightedUseTest } from '../utils/highlight.js';
+import { SharedUsesContext } from '../utils/sharedUses.js';
+import targetLinksData from '../data/target-links.json' with { type: 'json' };
+
+/** Pages with more about a "Used For" target: { "<target>": { label, url } }. */
+const TARGET_LINKS = targetLinksData.links;
 
 /** How many uses to show before the rest go behind "+N more". */
 const MAX_USES_SHOWN = 6;
@@ -15,7 +20,8 @@ const MAX_USES_SHOWN = 6;
  *
  * Each use reads as one line of text ("x500 Sweet Drops Pet Evolution") that
  * wraps like a normal sentence. Clicking the target shows every item used
- * for it (via the "Used For" filter).
+ * for it (via the "Used For" filter), unless only one item uses it: then
+ * there's nothing to filter to, so it's plain text (see SharedUsesContext).
  *
  * Uses are listed A-Z. Long lists (Poring Coin is used for 40+ things) show
  * the first few, then a "+N more" button that opens the rest in a popover.
@@ -64,12 +70,33 @@ export default function ItemUses({ item, onSelectUse, highlight = NO_HIGHLIGHT }
   );
 }
 
-/** One use: "x10 Mystic Rose (note)". */
+/**
+ * One use: "x10 Mystic Rose (note)". Targets with a page in target-links.json
+ * get a small link icon after the name, so it's one click from the row.
+ */
 function UseText({ use, onSelectUse }) {
+  const pageLink = TARGET_LINKS[use.for];
+  // A target only one item uses has nothing to filter to, so it's plain text.
+  const sharedUses = useContext(SharedUsesContext);
+  const canFilter = !sharedUses || sharedUses.has(use.for);
   return (
     <>
       <span className="text-muted tabular-nums">x{use.qty?.toLocaleString('en-US') ?? '?'}</span>{' '}
-      <InlineButton onClick={() => onSelectUse(use.for)}>{use.for}</InlineButton>
+      {canFilter ? <InlineButton onClick={() => onSelectUse(use.for)}>{use.for}</InlineButton> : use.for}
+      {pageLink && (
+        <>
+          {' '}
+          <a
+            href={pageLink.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded align-text-bottom text-muted hover:text-accent"
+          >
+            <ArrowTopRightOnSquareIcon className="size-4" aria-hidden="true" />
+            <span className="sr-only">{pageLink.label} (opens in a new tab)</span>
+          </a>
+        </>
+      )}
       {use.note && <span className="text-muted"> ({use.note})</span>}
     </>
   );

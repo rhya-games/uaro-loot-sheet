@@ -1,7 +1,7 @@
 import { priceChanges } from './verify.js';
 import { createSuggester } from '../utils/suggest.js';
 import { parseZeny } from '../utils/format.js';
-import { isSoldByNpc, isTradeable } from '../utils/prices.js';
+import { isSoldByNpc, isTradeable, vendFlag } from '../utils/prices.js';
 
 /**
  * Pasting a list of prices into admin mode. One line per item:
@@ -106,7 +106,13 @@ export function planPrices(entries, items, today) {
 export function actionsAfter(rows, items, targets) {
   const ready = rows.filter((row) => row.status === 'ok');
   const changes = new Map(ready.map((row) => [row.item.id, row.changes]));
-  const next = items.map((item) => (changes.has(item.id) ? { ...item, ...changes.get(item.id) } : item));
+  // A new price only fills in `vend` while it's unknown (as the admin server
+  // does); a vend setting made by hand stays.
+  const withChanges = (item) => {
+    const next = { ...item, ...changes.get(item.id) };
+    return item.vend && item.vend !== 'unknown' ? next : { ...next, vend: vendFlag(next) };
+  };
+  const next = items.map((item) => (changes.has(item.id) ? withChanges(item) : item));
   const suggest = createSuggester(next, targets);
   const result = new Map();
   for (const item of next.filter((candidate) => changes.has(candidate.id))) {
