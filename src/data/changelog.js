@@ -48,6 +48,14 @@ export const CHANGE_TYPES = ['Added', 'Changed', 'Fixed', 'Removed'];
 
 export const CHANGELOG = [
   {
+    version: '1.4.0',
+    date: '2026-11-11',
+    title: 'More monster loot added',
+    changes: [
+      { type: 'Added', text: '387 more loot items that monsters drop: cards, loot, potions and scrolls.' },
+    ],
+  },
+  {
     version: '1.3.0',
     date: '2026-11-07',
     title: 'Clearer marks, a keep switch and the Doll Quest',

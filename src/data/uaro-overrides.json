@@ -178,6 +178,12 @@
         "name": "Zelunium",
         "sellValue": 0,
         "note": "0z for now. Not confirmed whether NPCs buy it."
+      },
+      {
+        "itemId": 7337,
+        "name": "Eye of Hellion",
+        "sellValue": 0,
+        "note": "0z, confirmed by the maintainer."
       }
     ]
   },
