@@ -3022,6 +3022,25 @@
     "npcBuyable": "yes"
   },
   {
+    "id": "berzebub-card",
+    "name": "Berzebub Card",
+    "itemId": 4145,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "big-cell",
     "name": "Big Cell",
     "itemId": 6104,
@@ -4477,6 +4496,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "broken-crown",
+    "name": "Broken Crown",
+    "itemId": 7754,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 1500,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },

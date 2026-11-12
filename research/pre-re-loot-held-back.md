@@ -19,7 +19,6 @@ Non-equipment items that Hercules pre-renewal lists as monster drops, but whose 
 | 1069 | Orange Net Mushroom | Thief Mushroom | Event monster |
 | 1070 | Orange Gooey Mushroom | Thief Mushroom | Event monster |
 | 4005 | Santa Poring Card | Santa Poring, Pori Pori | Event monster |
-| 4145 | Berzebub Card | Beelzebub | Renewal-era or instance monster |
 | 4243 | Antonio Card | Antonio | Event monster |
 | 4399 | Memory of Thanatos Card | Thanatos | Renewal-era or instance monster |
 | 4419 | Ktullanux Card | Ktullanux | Renewal-era or instance monster |
@@ -89,7 +88,6 @@ Non-equipment items that Hercules pre-renewal lists as monster drops, but whose 
 | 7748 | Sweet Beans | Coco | Event monster |
 | 7749 | Sweet Bananas | Choco | Event monster |
 | 7750 | Macapuno | Martin | Event monster |
-| 7754 | Broken Crown | Beelzebub, Tristan III | Renewal-era or instance monster |
 | 7781 | Engrave Treasure Box | Condor | Renewal-era or instance monster |
 | 7782 | Episode 13.1 Poporing Key | Treasure Box | Treasure chest loot |
 | 7783 | Episode 13.2 Poring Key | Treasure Box | Treasure chest loot |

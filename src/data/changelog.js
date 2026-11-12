@@ -52,7 +52,7 @@ export const CHANGELOG = [
     date: '2026-11-11',
     title: 'More monster loot added',
     changes: [
-      { type: 'Added', text: '383 more loot items that monsters drop: cards, loot, potions and scrolls.' },
+      { type: 'Added', text: '385 more loot items that monsters drop: cards, loot, potions and scrolls.' },
     ],
   },
   {
