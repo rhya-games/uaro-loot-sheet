@@ -1968,6 +1968,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "assassin-cross-card",
+    "name": "Assassin Cross Card",
+    "itemId": 4359,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "assassin-mask-0",
     "name": "Assassin Mask [0]",
     "itemId": 5096,
@@ -8142,6 +8161,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "dark-priest-card",
+    "name": "Dark Priest Card",
+    "itemId": 4171,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "darkgreen-dyestuffs",
     "name": "Darkgreen Dyestuffs",
     "itemId": 979,
@@ -10546,6 +10584,25 @@
     "links": [],
     "vend": "higher",
     "sellValue": 600,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "evil-mind",
+    "name": "Evil Mind",
+    "itemId": 7583,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 5,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -15583,6 +15640,44 @@
     "npcBuyable": "no"
   },
   {
+    "id": "high-priest-card",
+    "name": "High Priest Card",
+    "itemId": 4363,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "high-wizard-card",
+    "name": "High Wizard Card",
+    "itemId": 4365,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "hill-wind-card",
     "name": "Hill Wind Card",
     "itemId": 4345,
@@ -17259,6 +17354,25 @@
     "links": [],
     "vend": "higher",
     "sellValue": 50,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "iron-fist-card",
+    "name": "Iron Fist Card",
+    "itemId": 4239,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -19575,6 +19689,44 @@
     "npcBuyable": "no"
   },
   {
+    "id": "lord-knight-card",
+    "name": "Lord Knight Card",
+    "itemId": 4357,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "lord-of-the-dead-card",
+    "name": "Lord of The Dead Card",
+    "itemId": 4276,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "luciola-vespa-card",
     "name": "Luciola Vespa Card",
     "itemId": 4445,
@@ -20779,6 +20931,25 @@
     "id": "mastering-card",
     "name": "Mastering Card",
     "itemId": 4197,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "mastersmith-card",
+    "name": "MasterSmith Card",
+    "itemId": 4361,
     "itemType": "Misc",
     "actions": [
       "Vend"
@@ -25137,6 +25308,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 815,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "piece-of-shield",
+    "name": "Piece of Shield",
+    "itemId": 7108,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 840,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
@@ -29793,6 +29983,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "shining-spear-blade",
+    "name": "Shining Spear Blade",
+    "itemId": 7109,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 420,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "shining-stone",
     "name": "Shining Stone",
     "itemId": 640,
@@ -30836,6 +31045,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "sniper-card",
+    "name": "Sniper Card",
+    "itemId": 4367,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "sniping-suit-1",
     "name": "Sniping Suit [1]",
     "itemId": 2367,
@@ -31047,6 +31275,25 @@
         "qty": 10
       }
     ],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "soldier-andre-card",
+    "name": "Soldier Andre Card",
+    "itemId": 4059,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
     "notes": "",
     "links": [],
     "vend": "unknown",
@@ -33490,6 +33737,25 @@
     "links": [],
     "vend": "unknown",
     "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
+    "id": "tail-of-steel-scorpion",
+    "name": "Tail of Steel Scorpion",
+    "itemId": 7010,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 274,
     "sellSource": "hercules",
     "npcBuyable": "no"
   },
