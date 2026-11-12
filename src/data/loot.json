@@ -1479,6 +1479,25 @@
     "npcBuyable": "no"
   },
   {
+    "id": "antonio-card",
+    "name": "Antonio Card",
+    "itemId": 4243,
+    "itemType": "Misc",
+    "actions": [
+      "Vend"
+    ],
+    "categories": [
+      "Card"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 10,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
+  },
+  {
     "id": "anubis-card",
     "name": "Anubis Card",
     "itemId": 4138,
@@ -27604,6 +27623,25 @@
     "sellValue": 500,
     "sellSource": "hercules",
     "npcBuyable": "npc-only"
+  },
+  {
+    "id": "red-stocking",
+    "name": "Red Stocking",
+    "itemId": 7034,
+    "itemType": "Misc",
+    "actions": [
+      "NPC"
+    ],
+    "categories": [
+      "No Use"
+    ],
+    "uses": [],
+    "notes": "",
+    "links": [],
+    "vend": "unknown",
+    "sellValue": 50,
+    "sellSource": "hercules",
+    "npcBuyable": "no"
   },
   {
     "id": "refined-bradium",

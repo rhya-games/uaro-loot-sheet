@@ -19,7 +19,6 @@ Non-equipment items that Hercules pre-renewal lists as monster drops, but whose 
 | 1069 | Orange Net Mushroom | Thief Mushroom | Event monster |
 | 1070 | Orange Gooey Mushroom | Thief Mushroom | Event monster |
 | 4005 | Santa Poring Card | Santa Poring, Pori Pori | Event monster |
-| 4243 | Antonio Card | Antonio | Event monster |
 | 4399 | Memory of Thanatos Card | Thanatos | Renewal-era or instance monster |
 | 4419 | Ktullanux Card | Ktullanux | Renewal-era or instance monster |
 | 4449 | Dark Shadow Card | Dark Shadow | Renewal-era or instance monster |
@@ -38,7 +37,6 @@ Non-equipment items that Hercules pre-renewal lists as monster drops, but whose 
 | 6088 | Spiritual Crystal | Phylla | Renewal-era or instance monster |
 | 6091 | Dark Red Scale | Nidhoggr's Shadow | Renewal-era or instance monster |
 | 6154 | Broken Horn Pipe | Valkyrie Randgris | Renewal-era or instance monster |
-| 7034 | Red Stocking | Antonio | Event monster |
 | 7073 | Freya's Jewel | Treasure Chest | Treasure chest loot |
 | 7074 | Thor's Gauntlets | Treasure Chest | Treasure chest loot |
 | 7075 | Iron Maiden | Treasure Chest | Treasure chest loot |
