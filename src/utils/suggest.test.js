@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { createSuggester, suggestSale } from './suggest.js';
+import { withVend } from './testing.js';
 
 /** A made-up item; itemId 1 isn't in any uaRO override list. */
-const item = (fields) => ({
+const item = (fields) => withVend({
   name: 'Test Item',
   itemId: 1,
   itemType: 'Misc',
@@ -104,7 +105,7 @@ describe('createSuggester', () => {
   it("doesn't keep extras of something that isn't used up, and it isn't Junk", () => {
     const whip = item({ name: 'Whip', sellValue: 0, avgVend: 0, uses: [{ for: 'Mask', note: 'any whip; not used up' }] });
     expect(createSuggester([whip])(whip).actions).toEqual([]);
-    const sold = { ...whip, avgVend: 5000 };
+    const sold = { ...whip, avgVend: 5000, vend: 'higher' };
     expect(createSuggester([sold])(sold).actions).toEqual(['Vend']);
   });
 

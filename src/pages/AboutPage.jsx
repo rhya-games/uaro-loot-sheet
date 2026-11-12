@@ -2,7 +2,7 @@ import { LockClosedIcon, MinusIcon } from '@heroicons/react/24/outline';
 import HowToSteps from '../components/HowToSteps.jsx';
 import { CategoryBadge } from '../components/ItemBadges.jsx';
 import { BulletList, ExternalLink, Page, PageLink, Section, SubHeading } from '../components/Page.jsx';
-import { BEST_NPC_LABEL, BEST_VEND_LABEL, BestStar, Mark, NoIcon, Unknown, YesIcon } from '../components/StatusIcons.jsx';
+import { BEST_NPC_LABEL, BEST_VEND_LABEL, BestStar, DashIcon, Mark, NoIcon, YesIcon } from '../components/StatusIcons.jsx';
 import { ALL_CATEGORIES, ALL_ITEM_TYPES, CATEGORY_DESCRIPTIONS, CATEGORY_LINKS } from '../utils/labels.js';
 import { ROUTES } from '../utils/route.js';
 import { CONTRIBUTING_URL } from '../config.js';
@@ -57,10 +57,10 @@ export default function AboutPage() {
           <Row term="Category">What kind of content it belongs to (below).</Row>
           <Row term="Used For">How many you need, and for what. Click one to see every item it needs.</Row>
           <Row term="Vend">A star when players pay more than an NPC for it in vending shops. The price itself isn’t shown.</Row>
-          <Row term="NPC">
+          <Row term="Sell to NPC">
             Zeny an NPC pays for one, with Overcharge level {OVERCHARGE_LEVEL} (+{OVERCHARGE_PERCENT}%).
           </Row>
-          <Row term="NPC Shop">Whether you can buy it from an NPC shop.</Row>
+          <Row term="Buy at NPC">Whether you can buy it from an NPC shop.</Row>
         </Legend>
 
         <SubHeading>Marks</SubHeading>
@@ -69,13 +69,13 @@ export default function AboutPage() {
             The best way to sell it. In Vend: players pay more than an NPC. Next to an NPC price: the NPC pays the
             most.
           </Row>
-          <Row term={<Mark><MinusIcon className="size-5" aria-hidden="true" /></Mark>}>
+          <Row term={<Mark><DashIcon label="Not the best price" /></Mark>}>
             In Vend: vending isn’t the best price. An NPC pays the same or more, or nobody was selling it.
           </Row>
-          <Row term={<Mark><Unknown /></Mark>}>The price hasn’t been verified yet.</Row>
           <Row term={<Mark><NoIcon label="Can't be sold this way" /></Mark>}>
-            In Vend: it can’t be sold that way. NPCs sell it, or it can’t be traded. In NPC: NPCs won’t buy it, or
-            it’s a card (cards sell to players).
+            In Vend: it can’t be sold that way. NPCs sell it, or it can’t be traded. In Sell to NPC: NPCs won’t buy
+            it, or it’s a card (cards sell to players). Anywhere: the value hasn’t been verified yet. Point at a ✕ to
+            see which.
           </Row>
           <Row term={<Mark>None</Mark>}>Nothing uses the item.</Row>
           <Row term={
@@ -85,7 +85,7 @@ export default function AboutPage() {
           }>
             uaRO set a fixed NPC price that Overcharge doesn’t raise.
           </Row>
-          <Row term={<Mark><YesIcon label="Yes" /></Mark>}>NPC Shop: an NPC shop sells it.</Row>
+          <Row term={<Mark><YesIcon label="Can be bought from NPC" /></Mark>}>Buy at NPC: an NPC shop sells it.</Row>
         </Legend>
 
         <SubHeading>Categories</SubHeading>
@@ -111,7 +111,7 @@ export default function AboutPage() {
             <strong>Sort:</strong> click a column header. Click again to reverse, and a third time to reset.
           </li>
           <li>
-            <strong>Zeny only:</strong> untick everything under “I keep items for” in the filters.
+            <strong>Zeny only:</strong> turn off “I keep items” in the filters.
           </li>
           <li>
             <strong>Categories:</strong> use “Select all” under Category, then untick the ones you don’t care about.

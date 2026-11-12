@@ -1,11 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import { bestSale } from './prices.js';
+import { withVend } from './testing.js';
 
 /** A made-up item; itemId 1 isn't in any uaRO override list. */
-const item = (fields) => ({
+const item = (fields) => withVend({
   itemId: 1,
   itemType: 'Misc',
   categories: [],
+  uses: [],
   npcBuyable: 'no',
   sellValue: 100, // NPC pays 124 with Overcharge
   avgVend: null,

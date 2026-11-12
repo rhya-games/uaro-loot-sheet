@@ -1,11 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { actionsAfter, parsePriceLines, planPrices } from './pastePrices.js';
 import { CHECK_NOTES } from './verify.js';
+import { withVend } from '../utils/testing.js';
 
 const TODAY = '2026-09-26';
 
 /** A made-up item; itemId 1 isn't in any uaRO override list. */
-const item = (fields) => ({
+const item = (fields) => withVend({
   id: 'test-item',
   name: 'Test Item',
   itemId: 1,

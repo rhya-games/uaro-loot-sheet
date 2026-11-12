@@ -1,7 +1,7 @@
 /**
  * What a player keeps items for. Each activity is a group of categories:
  * an item's Keep counts for an activity when the item has one of its
- * categories. The filter panel lists these as "I keep items for".
+ * categories. The filter panel lists these under "I keep items".
  *
  * Categories that aren't here (Card, uaRO, No Use, Not Reviewed) aren't an
  * activity by themselves. Cards are kept for pets or hats, and carry those

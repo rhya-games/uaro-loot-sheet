@@ -85,7 +85,7 @@ Then open http://localhost:4173/uaro-loot-sheet/
 
 ```
 src/
-  config.js           Site links (GitHub, Discord) and the per-row actions (Report Issue)
+  config.js           Site links (GitHub, Discord)
   index.css           Color roles for light/dark mode, screen sizes
   data/loot.json      All items (edit this to update the sheet)
   data/schema.json    Rules for what an item looks like
@@ -98,4 +98,4 @@ scripts/              Data import and validation tools
 .github/              Data check on every PR, and the item report form
 ```
 
-Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? Point at an item's row and click the flag (Report Issue) at the end of the row, or see the site's Feedback page.
+Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md). Found a mistake? See the site's Feedback page.
